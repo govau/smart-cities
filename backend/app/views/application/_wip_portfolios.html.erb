@@ -1,0 +1,12 @@
+<script>
+  window.__DASHBOARD_STATE__.session = {  // @todo Josh !
+    token: ''
+  };
+</script>
+<h4>Portfolios</h4>
+<p>These are the portfolios currently on the system:</p>
+<ul>
+  <% portfolios.each do |p| %>
+    <li><%= p.name %></li>
+  <% end %>
+</ul>

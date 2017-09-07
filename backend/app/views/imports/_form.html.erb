@@ -1,0 +1,4 @@
+<%= form_for :import, url: import_path do |f| %>
+  <%= f.file_field :spreadsheet %>
+  <%= f.submit 'Import data'  %>
+<% end  %>

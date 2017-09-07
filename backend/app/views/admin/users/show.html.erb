@@ -1,0 +1,31 @@
+<h1>User ID <%= @user.id %></h1>
+<h2>User details</h2>
+<h3>Name</h3>
+<p><%= @user.name %></p>
+<h3>Email</h3>
+<p><%= @user.email %></p>
+<h3>Mobile</h3>
+<p><%= @user.phone_number %></p>
+<h3>Roles</h3>
+<p><%= @user.roles.collect(&:name).join(', ') %></p>
+<h2>Actions</h3>
+<% if flash[:cert_pass] %>  
+  <p><%= link_to 'Download certificate', admin_user_path(@user, format: :p12) %></p>
+  <p>Certificate password: <strong><%= flash[:cert_pass] %></strong></p>
+  <p><small>Note that this is your only opportunity to access the certificate.<br />
+    So download it before leaving this screen, and also copy the password:<br />
+    the user will need that to install the certificate to their device(s).<br />
+    If the certificate or password is lost, you will need to generate a new one.</small></p>
+<% else %>
+  <p><%= link_to 'Regenerate certificate', regenerate_admin_user_path(@user), method: :put %></p>
+  <p><small>Note: if you generate a new certificate, it will invalidate the
+    certificate already issued for this user. Only generate a new certificate
+    if you have lost the certificate and/or the certificate password.</small></p>
+<% end %>
+<p><%= link_to 'Edit user details', edit_admin_user_path(@user) %></p>
+<% if @user.invitation_sent_at.present? %>
+  <p>User was invited <%= @user.invitation_sent_at.strftime('at %H:%M:%S, on %d %B %Y') %> by <%= @user.invited_by.try(:name) %></p>
+<% else %>
+  <p><%= link_to 'Invite user', invite_admin_user_path(@user), method: :put %></p>
+<% end %>
+<p><%= link_to 'Back to list of users', admin_users_path %></p>

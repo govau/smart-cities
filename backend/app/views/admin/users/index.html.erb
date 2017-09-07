@@ -1,0 +1,10 @@
+<h1>Users</h1>
+<%= render partial: 'alert', locals: { alert_type: 'notice', message: flash[:notice] } %>
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user, admin_user_path(user) %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Create a new user', new_admin_user_path %>

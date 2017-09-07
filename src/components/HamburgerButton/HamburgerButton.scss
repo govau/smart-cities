@@ -1,0 +1,22 @@
+
+@import '~style/helper';
+
+.hamburgerButton {
+  width: $app_header_height_mobile;
+  height: $app_header_height_mobile;
+  background: $color-primary--600;
+  border: none;
+  border-radius: 0;
+}
+
+.hamburgerButton__hamburger_icon {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburgerButton__hamburger_icon_bar {
+  background: white;
+  height: 4px;
+  border-radius: 2px;
+  margin: 3px;
+}

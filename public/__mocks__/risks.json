@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "project_id": 21,
+    "description": "Negative public campaigns reducing public cooperation.",
+    "dimo_uid": "ABS_001_R_04"
+  },
+  {
+    "id": 2,
+    "project_id": 22,
+    "description": "Phishing or man-in-the-middle attacks on responding public",
+    "dimo_uid": "ABS_001_R_05"
+  },
+  {
+    "id": 3,
+    "project_id": 23,
+    "description": "Systems/hardware failure",
+    "dimo_uid": "ABS_001_R_06"
+  },
+  {
+    "id": 4,
+    "project_id": 24,
+    "description": "Increased reliance on technology, including mobile technologies, and associated security issues",
+    "dimo_uid": "ABS_001_R_07"
+  },
+  {
+    "id": 5,
+    "project_id": 25,
+    "description": "Reliance on Mail as the main mechanism for seeking participation in the Census - potential for significant price increase or change in service",
+    "dimo_uid": "ABS_001_R_09"
+  },
+  {
+    "id": 6,
+    "project_id": 26,
+    "description": "Other Government activities e.g. other Government organisations provide support solutions that differ considerably to ABS', leading to the publiuc expectation not being met by ABS.",
+    "dimo_uid": "ABS_001_R_10"
+  },
+  {
+    "id": 7,
+    "project_id": 27,
+    "description": "There is a risk that the expectations of key external ABS stakeholders (e.g., the Minister, ANAO, Finance, the public, and media) are not adequately managed with respect to SBTP deliverables and expectations, such that stakeholders are sufficiently engaged and satisfied with the program and ABS.  \r\nImpact: Support for and/or cooperation with ABS is reduced. \r\nConsequences:\r\n• reduce ability to produce reliable statistics\r\n• reputational damage.",
+    "dimo_uid": "ABS_002_R_08"
+  },
+  {
+    "id": 8,
+    "project_id": 28,
+    "description": "There is the risk the new technologies delivered by the program may have vulnerabilities which may make it more susceptible to a cyber security attack. \r\nImpact: The potential loss of data or compromised systems. \r\nConsequence:\r\nsignificant reputational damage to both the program and ABS.",
+    "dimo_uid": "ABS_002_R_09"
+  },
+  {
+    "id": 9,
+    "project_id": 29,
+    "description": "Interdependency between other programs not understood.",
+    "dimo_uid": "AFP_001_R_01"
+  },
+  {
+    "id": 10,
+    "project_id": 30,
+    "description": "Lack of alignment between the Citadel and IIE Program Roadmaps",
+    "dimo_uid": "AFP_001_R_02"
+  },
+  {
+    "id": 11,
+    "project_id": 31,
+    "description": "Solution not acceptable or unlawful or user access either too restricted or too open",
+    "dimo_uid": "AFP_001_R_03"
+  },
+  {
+    "id": 12,
+    "project_id": 32,
+    "description": "Lack of understanding of Executive roles, responsibilities, accountabilities and insufficient business buy-in",
+    "dimo_uid": "AFP_001_R_04"
+  },
+  {
+    "id": 13,
+    "project_id": 33,
+    "description": "Delays to work committed by the program",
+    "dimo_uid": "AFP_001_R_05"
+  },
+  {
+    "id": 14,
+    "project_id": 34,
+    "description": "Interdependency between IIE and ISCS/Rampart Programs not agreed",
+    "dimo_uid": "AFP_001_R_06"
+  },
+  {
+    "id": 15,
+    "project_id": 35,
+    "description": "Resourcing Contraints",
+    "dimo_uid": "AFP_002_R_01"
+  },
+  {
+    "id": 16,
+    "project_id": 36,
+    "description": "Acceptance of the change",
+    "dimo_uid": "AFP_002_R_02"
+  },
+  {
+    "id": 17,
+    "project_id": 37,
+    "description": "EOL Equipment fails before replacement",
+    "dimo_uid": "AFP_002_R_03"
+  },
+  {
+    "id": 18,
+    "project_id": 38,
+    "description": "Impacts of other projects on program deliverables",
+    "dimo_uid": "AFP_002_R_04"
+  },
+  {
+    "id": 19,
+    "project_id": 39,
+    "description": "Impacts of other projects on program deliverables",
+    "dimo_uid": "AFP_004_R_01"
+  },
+  {
+    "id": 20,
+    "project_id": 40,
+    "description": "Lack of Data Centre Governance",
+    "dimo_uid": "AFP_004_R_02"
+  }
+]

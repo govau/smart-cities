@@ -1,0 +1,36 @@
+<%= form_for(resource,
+    as: resource_name,
+    url: session_path(resource_name),
+    html: { class: 'sign-in-page__form' }) do |f| %>
+  <h2 class="sign-in-page__form-title">Please sign in</h2>
+  <% if flash[:notice] %>
+    <p>
+      <small><%= flash[:notice] %></small>
+    </p>
+  <% end %>
+  <div class="sign-in-page__input-wrapper">
+    <%= f.label :email, class: 'sr-only' %>
+    <%= f.email_field :email, autofocus: true, placeholder: 'Enter your email address', class: 'sign-in-page__text-input sign-in-page__text-input--top' %>
+    <%= f.label :password, class: 'sr-only' %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: 'Enter your password', class: 'sign-in-page__text-input sign-in-page__text-input--bottom' %>
+  </div>
+
+  <%= f.submit "Sign in", class: 'sign-in-page__submit-button' %>
+
+  <div class="sign-in-page__problems">
+    <span>Having problems? </span>
+
+    <a
+      class="sign-in-page__problems-link"
+      href="mailto:performance-dashboard@digital.gov.au"
+      rel="external noopener noreferrer"
+      target="_blank"
+    >
+      Contact us
+    </a>
+  </div>
+
+  <%= render "devise/shared/links" %>
+<% end %>
+
+

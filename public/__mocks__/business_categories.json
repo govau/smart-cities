@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Regulate Non-Government Activity"
+  },
+  {
+    "id": 2,
+    "name": "Service Delivery"
+  },
+  {
+    "id": 3,
+    "name": "Invest in National Capability and Assets"
+  },
+  {
+    "id": 4,
+    "name": "Payments Management"
+  },
+  {
+    "id": 5,
+    "name": "Grants and Loans Management"
+  },
+  {
+    "id": 6,
+    "name": "Protect and Secure the Nation"
+  },
+  {
+    "id": 7,
+    "name": "Internal Government Resource Management"
+  },
+  {
+    "id": 8,
+    "name": "Collection of Revenue"
+  }
+]

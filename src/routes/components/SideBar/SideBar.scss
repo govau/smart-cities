@@ -1,0 +1,19 @@
+@import '~style/helper';
+
+.SideBar {
+    border: 1px solid blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $sidebar_width;
+    bottom: 0;
+    background: $color-primary--400;
+}
+
+.AppLayout__sideBar {
+  transform: translateX(0);
+
+  &_open {
+    transform: translateX(0);
+  }
+}

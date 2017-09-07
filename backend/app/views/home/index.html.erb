@@ -1,0 +1,7 @@
+<% if current_user %>
+<script>
+  window.__SESSION__ = {
+    email: '<%= current_user.email %>',
+  };
+</script>
+<% end %>

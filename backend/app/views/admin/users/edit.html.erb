@@ -1,0 +1,19 @@
+<h2>Edit <%= @user.name %></h2>
+
+<%= form_for @user, as: :user, url: admin_user_path(@user.id) do |f| %>
+  <p><%= f.label 'name', 'Name' %><br />
+    <%= f.text_field :name %></p>
+  <p><%= f.label 'email', 'Email (cannot be changed)' %><br />
+    <%= f.text_field :email, readonly: true, disabled: true %>
+  <p><%= f.label 'phone_number', 'Mobile phone number' %><br />
+    <%= f.text_field :phone_number %></p>
+
+  <h3>Roles:</h3>
+
+  <% current_user.roles.each do |role| %>    
+    <p><%= check_box_tag("user[roles][#{role.name}]", '1', @user.has_role?(role.name)) %>
+    <%= f.label role.name.capitalize %></p>
+  <% end %>
+
+  <p><%= f.submit 'Save' %></p>
+<% end %>

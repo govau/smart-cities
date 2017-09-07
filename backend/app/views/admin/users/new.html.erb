@@ -1,0 +1,19 @@
+<h2>Create new user</h2>
+
+<%= form_for @user, url: { action: :create } do |f| %>
+  <p><%= f.label 'name', 'Name' %><br />
+    <%= f.text_field :name %></p>
+  <p><%= f.label 'email', 'Email (must end in .gov.au)' %><br />
+    <%= f.text_field :email %>
+  <p><%= f.label 'phone_number', 'Mobile phone number' %><br />
+    <%= f.text_field :phone_number %></p>
+
+  <h3>Roles:</h3>
+
+  <% current_user.roles.each do |role| %>    
+    <p><%= check_box_tag("user[roles][#{role.name}]", '1', @user.has_role?(role.name)) %>
+    <%= f.label role.name.capitalize %></p>
+  <% end %>
+
+  <p><%= f.submit 'Save' %></p>
+<% end %>

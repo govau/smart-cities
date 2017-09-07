@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#0579c7">
+    <meta name="theme-color" content="#0579c7">
+    <title>Australian Government ICT Dashboard</title>
+
+    <%= csrf_meta_tags %>
+
+    <%= get_stylesheet('main.css') %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <div class="simple-page">
+      <div class="simple-page__container">
+        <header class="simple-page__header">
+          <div class="simple-page__logo-wrapper"></div>
+
+          <div class="simple-page__header-text">
+            <div>
+              <span class="simple-page__version-badge">V1.0</span>
+            </div>
+
+            <h1 class="simple-page__header-title">
+              ICT Performance Dashboard
+            </h1>
+          </div>
+        </header>
+
+        <main class="simple-page__body">
+            <%= yield %>
+        </main>
+
+        <footer class="simple-page__footer">
+          <a
+            class="simple-page__feedback-link"
+            href="mailto:performance-dashboard@digital.gov.au"
+            rel="external noopener noreferrer"
+            target="_blank"
+          >
+            Please give feedback
+          </a>
+
+          <p class="simple-page__copyright">© Commonwealth of Australia</p>
+
+          <p>
+            <span>This work is licensed under a Creative Commons Attribution 3.0 International </span>
+
+            <a
+              href="https://creativecommons.org/licenses/by/3.0/au/deed.en"
+              class="simple-page__licence-link"
+              rel="external noopener noreferrer"
+              target="_blank"
+            >
+              License
+            </a>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

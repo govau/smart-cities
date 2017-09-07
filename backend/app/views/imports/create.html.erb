@@ -1,0 +1,14 @@
+<h1>Import#create</h1>
+
+<% if @errors&.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@errors.count, "error") %> occured, halting import:</h2>
+    <ul>
+      <% @errors.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= render partial: 'form' %>

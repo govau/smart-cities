@@ -1,0 +1,14 @@
+[
+  {
+    "id": 2,
+    "dimo_period_name": "Q2_2017",
+    "begins_at": "2017-04-01",
+    "ends_at": "2017-06-30"
+  },
+  {
+    "id": 3,
+    "dimo_period_name": "Q3_2017",
+    "begins_at": "2017-07-01",
+    "ends_at": "2017-09-30"
+  }
+]

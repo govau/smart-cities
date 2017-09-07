@@ -1,0 +1,59 @@
+<%= form_tag([resource_name, :two_factor_authentication], :method => :put, class: 'sign-in-page__form') do %>
+  <p class="sign-in-page__form-sub-title"><%= flash[:notice] %></p>
+
+  <h2 class="sign-in-page__form-title">Enter the code that was sent to your phone</h2>
+
+  <div class="sign-in-page__input-wrapper">
+    <%= text_field_tag :code, '', class: 'sign-in-page__text-input', placeholder: 'Enter your 6 digit code' %>
+  </div>
+
+  <%= submit_tag "Submit", class: 'sign-in-page__submit-button' %>
+
+  <div class="sign-in-page__problems">
+    <p>
+      <span id="timeout-message">You have <span id="allowed-otp-drift-seconds"><%= Devise.allowed_otp_drift_seconds %></span> seconds to enter the code or you will need to </span>
+
+      <%= link_to "resend code",
+        send("resend_code_#{resource_name}_two_factor_authentication_path"),
+        action: :get, class: 'sign-in-page__problems-link' %>
+    </p>
+
+    <p>
+      <span>Having problems? </span>
+
+      <a
+        class="sign-in-page__problems-link"
+        href="mailto:performance-dashboard@digital.gov.au"
+        rel="external noopener noreferrer"
+        target="_blank"
+      >
+        Contact us
+      </a>
+    </p>
+  </div>
+<% end %>
+
+<script>
+  (function() {
+    var seconds = Number('<%= Devise.allowed_otp_drift_seconds %>');
+
+    if (isNaN(seconds)) return;
+
+    var expirySecondsEl = document.getElementById('allowed-otp-drift-seconds');
+
+    // Count down the seconds, and disable the input when there is no time left
+    // This ignores the difference between the code being sent
+    // and the browser executing this JavaScript, but close enough
+    var interval = setInterval(function() {
+      expirySecondsEl.textContent = seconds;
+
+      if (seconds < 1) {
+        clearInterval(interval);
+        document.getElementById('code').setAttribute('disabled', 'true');
+        document.getElementById('timeout-message').textContent = 'Your code has expired, click to ';
+      }
+
+      seconds--;
+    }, 1000);
+  })();
+</script>

@@ -1,0 +1,400 @@
+swagger: "2.0"
+info:
+  description: API docs for ICT Dashboard
+  version: "0.0.1"
+  title: ICT Dashboard API
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: josh.mostafa@digital.gov.au
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+host: localhost
+basePath: /api
+schemes:
+  - https
+paths:
+  /portfolios:
+    get:
+      summary: List portfolios
+      description: Get a list of all portfolios
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+      responses:
+        200:
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Portfolio"
+  /agencies:
+    get:
+      summary: List agencies
+      description: Get a list of all agencies
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+      responses:
+        200:
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Agency"
+  /benefits:
+    get:
+      summary: List benefits
+      description: Get a list of all benefits
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+      responses:
+        200:
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Benefit"
+  /risks:
+    get:
+      summary: List risks
+      description: Get a list of all risks
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+      responses:
+        200:
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Risk"
+  /assessment_collections:
+    get:
+      summary: List assessment collections
+      description: Get a list of all collectiomns of assessments
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+      responses:
+        200:
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/AssessmentCollection"
+  /project_assessments:            
+    get:
+      summary: List project assessments
+      description: Get a list of all project assessments
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+      responses:
+        200:
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/ProjectAssessment"
+  /benefit_assessments:
+    get:
+      summary: List benefit assessments
+      description: Get a list of all benefit assessments
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+      responses:
+        200:
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/BenefitAssessment"
+  /risk_assessments:
+    get:
+      summary: List risk assessments
+      description: Get a list of all risk assessments
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+      responses:
+        200:
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/RiskAssessment"
+definitions:
+  Portfolio:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+  Agency:
+    type: object
+    properties: 
+      id: 
+        type: integer
+        format: int64
+      portfolio_id:
+        type: integer
+        format: int64
+      name:
+        type: string
+      short_name: 
+        type: string
+  Project: 
+    type: object
+    properties:
+      id: 
+        type: integer
+      name: 
+        type: string
+      start_date:
+        type: string
+        format: date-time
+      completion_date: 
+        type: string
+        format: date-time
+      kind: 
+        type: string
+        enum: 
+          - "project"
+          - "program"
+      objectives: 
+        type: string
+      budget_funded:
+        type: boolean
+      total_budget:
+        type: integer
+        format: int64
+      ict_budget:
+        type: integer
+        format: int64
+      agency_coordinator_email:
+        type: string
+      agency_sro_email:
+        type: string
+      # age_year:
+      #   type: number 
+      #   description: 'TODO: find out what this number means'
+      # year:
+      #   type: integer
+      # week_of_year:
+      #   type: integer
+  Benefit:
+    type: object
+    properties: 
+      id: 
+        type: string # ID comes from DIR data
+      start_date: 
+        type: string
+        format: date-time
+  Risk:
+    type: object
+    properties: 
+      id: 
+        type: string # ID comes from DIR data
+      description:
+        type: string
+  AssessmentCollection: # group assessments chronologically
+    type: object
+    properties: 
+      id: 
+        type: integer
+        format: int64
+      date: 
+        type: string
+        format: date-time
+  ProjectAssessment:
+    type: object 
+    properties: 
+      id:
+        type: integer
+        format: int64
+      project_id: 
+        type: integer
+      assessment_collection_id: 
+        type: integer
+      total_spend_to_date:
+        type: integer
+        format: int64
+      time_score:
+        type: string
+        enum:
+          - "<20%"
+          - "20-50%"
+          - "50-70%"
+          - "70-90%"
+          - ">90%"
+      time_score_note:
+        type: string
+      spend_time_deviation:
+        type: string # TODO values like '<>25-50%', not sure if there is an enum of valid ones
+      ict_cost_score:
+        type: string
+        enum:
+          - "<$20m"
+          - "$20m-$100m"
+      spend_percentage: 
+        type: integer
+        format: double
+      time_percentage: 
+        type: number
+        format: double
+      overall_benefit_viability_assessor:
+        type: integer
+        minimum: 1
+        maximum: 5
+      overall_benefit_status_assessor:
+        type: integer
+        minimum: 1
+        maximum: 5
+      overall_benefit_rating:
+        type: integer
+        minimum: 1
+        maximum: 5
+      overall_benefit_assessor_note:
+        type: string
+      overall_risk_logical_complete_current:
+        type: string 
+        description: "Verbose description: is the risk logical, complete and/or current over all"
+      overall_risk_residual_risks:
+        type: string 
+        description: "Verbose description: worst risks for this project - TODO: maybe we can calculate this ourselves?"
+      overall_risk_assessor: 
+        type: integer
+        minimum: 1
+        maximum: 5
+      overall_risk_assessor_note: 
+        type: string
+      delivery_confidence_assessor_note:
+        type: string
+      public_impact_population: 
+        type: string
+        enum: 
+          - high
+          - medium
+          - low
+      public_impact_quantum:
+        type: string
+        enum: 
+          - high
+          - medium
+          - low
+      public_impact_score: 
+        type: integer 
+        minimum: 1
+        maximum: 5
+      public_impact_score_note:
+        type: string
+      general_note:
+        type: string
+      recommendations: 
+        type: string
+      duration: 
+        type: integer 
+        description: "Number of days from project start date to completion date"
+      assessment_priority:
+        type: string
+        enum: 
+          - Involve
+          - Engage
+          - Monitor
+      delivery_confidence_assessor_score:
+        type: integer
+        minimum: 1
+        maximum: 5
+      overall_residual_risk_score:
+        type: integer
+        minimum: 1
+        maximum: 5
+      delivery_confidence_dimo:
+        type: string
+        enum:
+          - Red
+          - Amber-Red
+          - Amber
+          - Green-Amber
+          - Green
+      delivery_confidence_agency:
+        type: string
+        enum:
+          - Red
+          - Amber-Red
+          - Amber
+          - Green-Amber
+          - Green
+      status_commentary_agency:
+        type: string
+  BenefitAssessment:
+    type: object
+    properties: 
+      benefit_id:
+        type: integer
+      project_assessment_id: 
+        type: integer
+      date_of_last_update: 
+        type: string
+        format: date-time
+      assessor_note: 
+        type: string
+      viability_assessor: 
+        type: integer
+        minimum: 1
+        maximum: 5
+      status_assessor:
+        type: integer
+        minimum: 1
+        maximum: 5
+      rating:
+        type: integer
+        minimum: 1
+        maximum: 5
+      status_rating:
+        type: integer
+        minimum: 1
+        maximum: 5
+      age_year:
+        type: number
+        description: 'TODO what is this?'
+  RiskAssessment:
+    type: object
+    properties: 
+      risk_id:
+        type: integer
+      project_assessment_id: 
+        type: integer      
+      date_of_last_update: 
+        type: string
+        format: date-time
+      rating_before_mitigation:
+        type: string
+      mitigation_strategy:
+        type: string
+      rating_after_mitigation:
+        type: string
+      assessor_note:
+        type: string
+      logical_complete_current:
+        type: string 
+        description: "Verbose description: is the risk logical, complete and/or current"
+      residual_risks:
+        type: string
+      residual_risks_score:
+        type: integer
+        minimum: 1
+        maximum: 5

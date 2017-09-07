@@ -1,0 +1,17 @@
+@import 'globalStyles';
+@import '~style/helper';
+
+body {
+  margin: 0;
+  min-width: $app_min_width;
+  overflow-x: hidden; // if a chart goes too wide, don't break the whole page
+}
+
+.AppLayout {
+  border: 2px solid red;
+  padding-left: $sidebar_width;
+}
+
+.AppLayout__body {
+  min-height: 100vh; // stop the footer creeping up the page
+}
