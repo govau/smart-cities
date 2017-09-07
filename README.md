@@ -1,17 +1,25 @@
 # Smart Cities
 
-# Setting up the site locally
+# Developing locally
+## First time
 Download and install Node, the version used by this site is listed in `package.json`
 or if you use `nvm` on macOS, just type `nvm use`.
 
-Run `npm install` to install all dependencies.
+Clone this repository with `git clone https://github.com/govau/smart-cities`
 
+Change into that directory `cd smart-cities` and run `npm install` (or `npm i`) to install all the dependencies.
+
+## Each time
 Type `npm start` to run the site in 'development mode'. This will
-reload the page as you make changes.
+reload the page as you make changes to the code.
 
+## Testing
+To run tests, type `npm test` (or `npm t`).
+
+On macOS you will want to install [Watchman](https://facebook.github.io/watchman/) first.
+
+## Building the static files for deployment
 To build the files for deployment, type `npm build`.
-
-To run tests, type `npm test`. On macOS you will want to install watchman first.
 
 # Code Structure
 Components are self-contained units, each in their own directory.
