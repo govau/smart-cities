@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render consistently 1`] = `
+<button
+  aria-label="open menu"
+  className=""
+  onClick={[Function]}
+>
+  <div
+    className={undefined}
+  >
+    <div
+      className={undefined}
+    />
+    <div
+      className={undefined}
+    />
+    <div
+      className={undefined}
+    />
+  </div>
+</button>
+`;
