@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+<div
+  className="SideBar"
+>
+  <button
+    aria-label="close navigation menu"
+    className="sideNav_close_button"
+    onClick={[Function]}
+  >
+    ✕
+  </button>
+  <h1>
+    SideBar
+  </h1>
+</div>
+`;

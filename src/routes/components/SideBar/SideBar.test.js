@@ -18,12 +18,25 @@ it('should match Snapshot', () => {
   expect(component.toJSON()).toMatchSnapshot();
 });
 
+it('should apply a class to open the component', () => {
+  const component = shallow(
+    <SideBar
+      {...defaultProps}
+      isOpen={true}
+    />
+  );
+
+  const sideBar = component.find('.SideBar');
+
+  expect(sideBar.hasClass('SideBar_open')).toBe(true);
+});
+
 it('should close the nav when the button is clicked', () => {
   const component = shallow(
     <SideBar {...defaultProps} />
   );
 
-  component.find('button').simulate('click');
+  component.find('.close_button').simulate('click');
 
   expect(closeNavMock).toHaveBeenCalledTimes(1);
 });

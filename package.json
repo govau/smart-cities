@@ -27,6 +27,7 @@
     "core-js": "^2.5.0",
     "date-fns": "^1.28.5",
     "freactal": "^1.1.1",
+    "identity-obj-proxy": "3.0.0",
     "lodash": "4.17.4",
     "numeral": "^1.5.6",
     "polished": "^1.4.0",
@@ -136,7 +137,8 @@
       "(.story)\\.(js)$"
     ],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web"
+      "^react-native$": "react-native-web",
+      "\\.scss$": "identity-obj-proxy"
     },
     "globals": {
       "__DEV__": true

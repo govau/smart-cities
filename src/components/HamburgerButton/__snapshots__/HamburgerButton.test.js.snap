@@ -3,20 +3,20 @@
 exports[`should render consistently 1`] = `
 <button
   aria-label="open menu"
-  className=""
+  className="hamburgerButton"
   onClick={[Function]}
 >
   <div
-    className={undefined}
+    className="hamburgerButton__hamburger_icon"
   >
     <div
-      className={undefined}
+      className="hamburgerButton__hamburger_icon_bar"
     />
     <div
-      className={undefined}
+      className="hamburgerButton__hamburger_icon_bar"
     />
     <div
-      className={undefined}
+      className="hamburgerButton__hamburger_icon_bar"
     />
   </div>
 </button>

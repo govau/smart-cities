@@ -4,7 +4,7 @@ import Header from './Header';
 
 it('should match Snapshot', () => {
   const component = renderer.create(
-    <Header openNav={() => {}}/>
+    <Header />
   );
 
   expect(component.toJSON()).toMatchSnapshot();
