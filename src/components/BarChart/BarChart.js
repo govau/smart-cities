@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {AbstractWidget} from '@gov.au/datavizkit';
 
 const BarChart = ({series, xAxisCategories, yAxisText, width = null, height = null}) => {
@@ -54,13 +55,7 @@ const BarChart = ({series, xAxisCategories, yAxisText, width = null, height = nu
         fontSize: 12,
       },
       formatter: function() {
-        return `
-          <div class="dta-tooltip">
-            <div class="tooltip-body">
-              <p><strong>${this.series.name}</strong>&nbsp;&nbsp;${formatBigNumber(this.point.y)}</p>
-            </div>
-          </div>
-        `;
+        return '<div>Tooltip</div>';
       }
     },
     legend: {
@@ -76,6 +71,10 @@ const BarChart = ({series, xAxisCategories, yAxisText, width = null, height = nu
   return (
     <AbstractWidget config={config} />
   )
+};
+
+BarChart.propTypes = {
+  series: PropTypes.array.isRequired,
 };
 
 export default BarChart;
