@@ -188,7 +188,10 @@ module.exports = {
               sourceMap: true,
               modules: true,
               importLoaders: true,
-              localIdentName: '[local]'
+              // hash the localIdentName here to force use of it
+              // but still include the local name so we can see what's going on during development
+              // but in prod use the hash only
+              localIdentName: '[local]___[hash:base64:4]'
             },
           },
           {
