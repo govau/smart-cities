@@ -53,10 +53,10 @@ class AppLayout extends Component {
             <SideBar closeNav={() => this.toggleNav(false)} isOpen={this.state.isOpen} />
           </div>
 
-          <div className={style.AppLayout}>
+          <div className={style.body}>
             <Header openNav={() => this.toggleNav(true)}/>
 
-            <main className={style.AppLayout__body}>
+            <main className={style.main}>
               {/*<Switch>*/}
 
                 {/*<Redirect from="/" to={routesMap.projectsOverview} exact/>*/}

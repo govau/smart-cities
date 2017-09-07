@@ -14,9 +14,9 @@ class SideBar extends Component {
 
   render() {
     const className = classNames(
-      style.SideBar,
+      style.wrapper,
       {
-        [style.SideBar_open]: this.props.isOpen
+        [style.showOpen]: this.props.isOpen
       },
     );
 
@@ -25,7 +25,7 @@ class SideBar extends Component {
     return (
       <div className={className}>
         <button
-          className="sideNav_close_button"
+          className={style.button}
           onClick={closeNav}
           aria-label="close navigation menu"
         >✕</button>

@@ -2,11 +2,11 @@
 @import 'globalStyles';
 @import '~style/helper';
 
-.AppLayout {
+.body {
   border: 2px solid red;
   padding-left: $sidebar_width;
 }
 
-.AppLayout__body {
+.main {
   min-height: 100vh; // stop the footer creeping up the page
 }

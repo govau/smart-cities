@@ -6,7 +6,7 @@ import style from './HamburgerButton.scss';
 
 const HamburgerButton = ({onClick, _className, label}) => {
   const className = classNames(
-    style.hamburgerButton,
+    style.wrapper,
     _className,
   );
 
@@ -16,10 +16,10 @@ const HamburgerButton = ({onClick, _className, label}) => {
       onClick={onClick}
       aria-label={label}
     >
-      <div className={style.hamburgerButton__hamburger_icon}>
-        <div className={style.hamburgerButton__hamburger_icon_bar} />
-        <div className={style.hamburgerButton__hamburger_icon_bar} />
-        <div className={style.hamburgerButton__hamburger_icon_bar} />
+      <div className={style.icon}>
+        <div className={style.bar} />
+        <div className={style.bar} />
+        <div className={style.bar} />
       </div>
     </button>
   )
