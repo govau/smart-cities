@@ -2,7 +2,7 @@
 
 exports[`should match Snapshot 1`] = `
 <header
-  className="Header"
+  className="wrapper"
 >
   <h1>
     Header

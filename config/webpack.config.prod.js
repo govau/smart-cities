@@ -190,7 +190,7 @@ module.exports = {
                     importLoaders: 1,
                     minimize: true,
                     modules: true,
-                    localIdentName: '[local]'
+                    localIdentName: '[name]-[local]--[hash:base64:5]'
                   },
                 },
                 {

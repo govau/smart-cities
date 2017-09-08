@@ -40,6 +40,18 @@ or a mixin (for example a typography style that is used in many different CSS cl
 Components that should connect to a data source should do so using the Redux `connect`
 function in a parent container component.
 
+# CSS
+This project uses CSS modules, which enforce scoping of classes to a particular component.
+So, when writing a CSS class for, say, the text in a `<Header>` component, you
+can name the class relative to that component. That is, `.title` rather than `.header-title`.
+
+In the generated HTML, the `class` will be a concatenation of the component name and the class
+name you defined, followed by a hash. E.g. `Header-title--2yh4t`.
+
+This means there is no way to use that `.title` class from the `<Header>` component in
+another component. This is a very good thing :)
+
+
 # Data
 The data received from the API is not in the exact format required for the front end.
 So, at the point when we fetch the data, we parse it so that it *is* in the correct format,

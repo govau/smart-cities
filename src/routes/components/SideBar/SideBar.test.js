@@ -26,9 +26,9 @@ it('should apply a class to open the component', () => {
     />
   );
 
-  const sideBar = component.find('.SideBar');
+  const sideBar = component.find('.wrapper');
 
-  expect(sideBar.hasClass('SideBar_open')).toBe(true);
+  expect(sideBar.hasClass('showOpen')).toBe(true);
 });
 
 it('should close the nav when the button is clicked', () => {
@@ -36,7 +36,7 @@ it('should close the nav when the button is clicked', () => {
     <SideBar {...defaultProps} />
   );
 
-  component.find('.close_button').simulate('click');
+  component.find('.button').simulate('click');
 
   expect(closeNavMock).toHaveBeenCalledTimes(1);
 });

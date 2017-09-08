@@ -2,7 +2,7 @@
 
 exports[`(Components) Footer - footer  should match Snapshot 1`] = `
 <footer
-  className="Footer"
+  className="wrapper"
 >
   <h1>
     Footer

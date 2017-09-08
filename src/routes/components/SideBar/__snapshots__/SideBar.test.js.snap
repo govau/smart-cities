@@ -2,11 +2,11 @@
 
 exports[`should match Snapshot 1`] = `
 <div
-  className="SideBar"
+  className="wrapper"
 >
   <button
     aria-label="close navigation menu"
-    className="sideNav_close_button"
+    className="button"
     onClick={[Function]}
   >
     ✕
