@@ -19,7 +19,7 @@ To run tests, type `npm test` (or `npm t`).
 On macOS you will want to install [Watchman](https://facebook.github.io/watchman/) first.
 
 ## Building the static files for deployment
-To build the files for deployment, type `npm build`.
+To build the files for deployment, type `npm run build`.
 
 # Code Structure
 Components are self-contained units, each in their own directory.
@@ -50,6 +50,10 @@ name you defined, followed by a hash. E.g. `Header-title--2yh4t`.
 
 This means there is no way to use that `.title` class from the `<Header>` component in
 another component. This is a very good thing :)
+
+[Stylelint](https://github.com/stylelint/stylelint) is used to lint the CSS, we're using the
+default settings from [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard).
+Lint errors will display in the console as you work.
 
 
 # Data
