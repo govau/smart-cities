@@ -4,7 +4,9 @@ exports[`should match Snapshot 1`] = `
 <header
   className="wrapper"
 >
-  <h1>
+  <h1
+    className="title"
+  >
     Header
   </h1>
 </header>
