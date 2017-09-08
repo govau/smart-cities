@@ -16,11 +16,11 @@ class SideBar extends Component {
     const className = classNames(
       style.wrapper,
       {
-        [style.showOpen]: this.props.isOpen
+        [style.showOpen]: this.props.isOpen,
       },
     );
 
-    const {closeNav} = this.props;
+    const { closeNav } = this.props;
 
     return (
       <div className={className}>
@@ -39,6 +39,11 @@ class SideBar extends Component {
 SideBar.propTypes = {
   closeNav: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
+  location: PropTypes.string,
+};
+
+SideBar.defaultProps = {
+  location: '',
 };
 
 export default SideBar;

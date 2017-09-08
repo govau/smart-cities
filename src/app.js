@@ -1,18 +1,18 @@
+/* eslint-disable no-underscore-dangle */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import merge from 'lodash/merge';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 
 import config from './config';
 import initialState from './redux/initialState';
 import configureStore from './redux/configureStore';
-import {checkStatus, parseBody} from './helpers/fetch';
+import { checkStatus, parseBody } from './helpers/fetch';
 
 import './style/helper.scss';
 
 import AppRouter from './routes/components/AppLayout/AppLayout';
-
-const SIGN_OUT_URL = '/users/sign_out';
 
 const win = typeof global === 'undefined' ? window : global;
 
@@ -30,25 +30,27 @@ const urlSet = {
 };
 
 const promises = Object.values(urlSet).map(url => fetch(url, {
-    credentials: 'same-origin',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    }
-  })
+  credentials: 'same-origin',
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
+})
   .then(checkStatus)
   .then(parseBody)
-  .catch(e => {
+  .catch((e) => {
     if (__DEV__) {
       console.error('error details:', e);
     // } else {
-    //   win.alert('There was an issue loading some of the data and we are unable to load the app. Please try logging in again or contact the Dashboard Team at performance-dashboard@digital.gov.au');
+    //   win.alert('There was an issue loading some of the data
+      // and we are unable to load the app. Please try logging in again
+      // or contact the Dashboard Team at performance-dashboard@digital.gov.au');
     //   win.location = SIGN_OUT_URL;
     }
-  })
+  }),
 );
 
-Promise.all(promises).then(data => {
+Promise.all(promises).then((data) => {
   const staticState = {};
 
   data.forEach((r, idx) => {
@@ -70,7 +72,7 @@ Promise.all(promises).then(data => {
     <Provider store={store}>
       <AppRouter />
     </Provider>,
-    document.getElementById('root')
+    document.getElementById('root'),
   );
 
   // for Highcharts, we need to trigger a resize after the DOM is created
@@ -79,8 +81,7 @@ Promise.all(promises).then(data => {
   window.dispatchEvent(new Event('resize'));
 
   return true;
-
-}).catch(e => {
+}).catch((e) => {
   // catches all application errors
   console.error('error details:', e);
 });

@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
-  Switch,
-  Route,
+  // Switch,
+  // Route,
   BrowserRouter,
-  Redirect,
+  // Redirect,
 } from 'react-router-dom';
 
 // import NoMatchPage from '../../noMatch';
@@ -18,7 +18,7 @@ class AppLayout extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {isOpen: false};
+    this.state = { isOpen: false };
 
     this.handleWindowClick = this.handleWindowClick.bind(this);
   }
@@ -31,7 +31,7 @@ class AppLayout extends Component {
   }
 
   toggleNav(isOpen) {
-    this.setState({isOpen});
+    this.setState({ isOpen });
 
     // bind these events on the next tick so that they don't capture the current click
     // (because React delegates events)
@@ -45,33 +45,32 @@ class AppLayout extends Component {
   }
 
   render() {
-
     return (
       <BrowserRouter>
         <div>
-          <div ref={el => { this.sideBarEl = el }}>
+          <div ref={(el) => { this.sideBarEl = el; }}>
             <SideBar closeNav={() => this.toggleNav(false)} isOpen={this.state.isOpen} />
           </div>
 
           <div className={style.body}>
-            <Header openNav={() => this.toggleNav(true)}/>
+            <Header openNav={() => this.toggleNav(true)} />
 
             <main className={style.main}>
-              {/*<Switch>*/}
+              {/* <Switch> */}
 
-                {/*<Redirect from="/" to={routesMap.projectsOverview} exact/>*/}
+              {/* <Redirect from="/" to={routesMap.projectsOverview} exact/> */}
 
-                {/*<Route path={routesMap.projects} component={ProjectsRoute}/>*/}
+              {/* <Route path={routesMap.projects} component={ProjectsRoute}/> */}
 
-                {/*<Route path={routesMap.portfolios} component={PortfoliosRoute}/>*/}
+              {/* <Route path={routesMap.portfolios} component={PortfoliosRoute}/> */}
 
-                {/*<Route component={NoMatchPage}/>*/}
+              {/* <Route component={NoMatchPage}/> */}
 
-              {/*</Switch>*/}
+              {/* </Switch> */}
 
             </main>
 
-            <Footer/>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>

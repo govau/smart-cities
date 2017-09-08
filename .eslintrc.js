@@ -1,7 +1,22 @@
 module.exports = {
-  "extends": "react-app",
-  "globals": {
-    "__DEV__": true
+  extends: 'airbnb',
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
   },
-  "rules": {}
+  globals: {
+    '__DEV__': true
+  },
+  rules: {
+    'react/jsx-filename-extension': 'off',
+    'import/prefer-default-export': 'off',
+    'no-console': [
+      'error', {
+        allow: [
+          'warn',
+          'error',
+        ],
+      }],
+  }
 };

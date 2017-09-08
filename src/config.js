@@ -1,9 +1,6 @@
-
-/* global __DEV__ */
-
 const isDev = (() => {
   if (typeof __DEV__ === 'undefined') {
-    return false
+    return false;
   }
   return __DEV__;
 })();

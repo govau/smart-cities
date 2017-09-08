@@ -1,12 +1,11 @@
+/* eslint-disable no-underscore-dangle */
 
-/* global module */
-
-import {createStore, applyMiddleware, compose} from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
 import rootReducer from './reducers';
 
-let win = typeof global === 'undefined' ? window : global;
+const win = typeof global === 'undefined' ? window : global;
 
 const configureStore = (bootState) => {
   const middlewares = [
@@ -25,9 +24,9 @@ const configureStore = (bootState) => {
   );
 
   const store = createStore(
-    rootReducer,                    // reducer
-    bootState,                      // preloaded state
-    enhancer
+    rootReducer, // reducer
+    bootState, // preloaded state
+    enhancer,
   );
 
   // make reducers HMRable
@@ -37,7 +36,7 @@ const configureStore = (bootState) => {
       store.replaceReducer(nextRootReducer);
     });
   }
-  
+
   return store;
 };
 
