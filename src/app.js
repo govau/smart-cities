@@ -41,9 +41,9 @@ const promises = Object.values(urlSet).map(url => fetch(url, {
   .catch(e => {
     if (__DEV__) {
       console.error('error details:', e);
-    } else {
-      win.alert('There was an issue loading some of the data and we are unable to load the app. Please try logging in again or contact the Dashboard Team at performance-dashboard@digital.gov.au');
-      win.location = SIGN_OUT_URL;
+    // } else {
+    //   win.alert('There was an issue loading some of the data and we are unable to load the app. Please try logging in again or contact the Dashboard Team at performance-dashboard@digital.gov.au');
+    //   win.location = SIGN_OUT_URL;
     }
   })
 );
