@@ -55,6 +55,9 @@ another component. This is a very good thing :)
 default settings from [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard).
 Lint errors will display in the console as you work.
 
+## Colors
+We use UI Kit's Sass variables for colors. You can find the variable names and their
+HEX codes here: http://uikit.apps.staging.digital.gov.au/packages/core/tests/site/
 
 # Data
 The data received from the API is not in the exact format required for the front end.

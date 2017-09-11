@@ -168,13 +168,13 @@
         "ie 9",
         "ie 10"
       ],
-      "location": "pancake/css/",
-      "name": "pancake.min.css"
+      "location": "uiKit/css/",
+      "name": "uiKit.min.css"
     },
     "sass": {
       "modules": false,
-      "location": "pancake/sass/",
-      "name": "pancake.scss"
+      "location": "uiKit/sass/",
+      "name": "uiKit.scss"
     }
   }
 }

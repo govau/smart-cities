@@ -176,5 +176,5 @@ typings/
 /backend/.env
 #/backend/bin
 
-# UIKit adds a top-level directory that it will update periodically
-pancake
+# UI Kit adds a top-level directory that it will update periodically
+uiKit
