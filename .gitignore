@@ -175,3 +175,6 @@ typings/
 /backend/.byebug_history
 /backend/.env
 #/backend/bin
+
+# UIKit adds a top-level directory that it will update periodically
+pancake

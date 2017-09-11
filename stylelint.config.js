@@ -1,4 +1,7 @@
 module.exports = {
   extends: 'stylelint-config-standard',
-  ignoreFiles: '**/_normalize.scss',
+  ignoreFiles: [
+    '**/_normalize.scss',
+    '**/pancake.scss',
+  ],
 };
