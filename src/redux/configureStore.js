@@ -1,7 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunkMiddleware from 'redux-thunk';
+import { createStore, compose } from 'redux';
 
 import rootReducer from './reducers';
 
@@ -10,7 +9,7 @@ const configureStore = (bootState) => {
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
     : compose;
 
-  const enhancer = composeEnhancers(applyMiddleware(thunkMiddleware));
+  const enhancer = composeEnhancers();
 
   const store = createStore(
     rootReducer, // reducer

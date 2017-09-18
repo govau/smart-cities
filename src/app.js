@@ -7,7 +7,7 @@ import { checkStatus, parseBody } from './helpers/fetch';
 
 import { DATA_URL } from './constants';
 
-import AppLayout from './routes/components/AppLayout/AppLayout';
+import AppLayout from './components/AppLayout/AppLayout';
 
 fetch(DATA_URL)
   .then(checkStatus)

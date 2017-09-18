@@ -1,6 +1,0 @@
----
-applications:
-  - buildpack: https://github.com/cloudfoundry/ruby-buildpack.git
-    memory: 512M
-    instances: 1
-    command: bundle exec rake db:migrate && bundle exec rake db:seed && bundle exec rails s -p $PORT -e $RAILS_ENV

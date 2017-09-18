@@ -2,9 +2,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import {getProjectsOverviewUrl} from './routesMap';
-
-
+// TODO (davidg): style this page
 const NoMatchPage = ({location}) => (
   <div className="container">
     <div className="row">
@@ -16,7 +14,7 @@ const NoMatchPage = ({location}) => (
 
         <br/>
         <br/>
-        <Link to={getProjectsOverviewUrl()} className="uikit-link">&lt; Back to Home</Link>
+        <Link to="/" className="uikit-link">&lt; Back to Home</Link>
       </div>
     </div>
   </div>
