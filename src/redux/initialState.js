@@ -1,8 +1,5 @@
 export default {
-  config: {},
-  ui: {},
-  session: {},
-
-  cities: [],
   categories: [],
+  cities: [],
+  indices: {},
 };

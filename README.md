@@ -40,6 +40,12 @@ or a mixin (for example a typography style that is used in many different CSS cl
 Components that should connect to a data source should do so using the Redux `connect`
 function in a parent container component.
 
+## Container components
+All components are 'presentational' components; there are no container components. Reasons:
+* There is only one data source
+* That data source is never updated
+* There is a relatively flat component structure
+
 # CSS
 This project uses CSS modules, which enforce scoping of classes to a particular component.
 So, when writing a CSS class for, say, the text in a `<Header>` component, you

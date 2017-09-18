@@ -1,12 +1,3 @@
-export const postData = (url, data) => fetch(url, {
-  method: 'POST',
-  credentials: 'same-origin',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(data),
-});
-
 // presumes JSON response
 export const checkStatus = (response) => {
   if (!response.ok) {
@@ -23,6 +14,5 @@ export const checkStatus = (response) => {
   // continue to next then()
   return response;
 };
-
 
 export const parseBody = response => response.json();

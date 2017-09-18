@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "version": 1
+  },
+  "data": {
+    "cities": [
+      {
+        "name": "Greater Perth",
+        "indices": {
+          "population": 12,
+          "growthRate": 0.2,
+          "dependencyRatio": 0.3,
+          "weightedDensity": 12,
+          "homeLanguage": 0.02
+        }
+      },
+      {
+        "name": "Greater Sydney",
+        "indices": {
+          "population": 122,
+          "growthRate": 0.3,
+          "dependencyRatio": 1.2,
+          "weightedDensity": 0.4,
+          "homeLanguage": 0.01
+        }
+      }
+    ],
+    "indices": {
+      "population": {
+        "name": "The population",
+        "description": "The population index is all about population",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "people",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual"
+      },
+      "growthRate": {
+        "name": "The growthRate",
+        "description": "The growthRate index is all about growthRate",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "%",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual"
+      },
+      "dependencyRatio": {
+        "name": "The dependencyRatio",
+        "description": "The dependencyRatio index is all about dependencyRatio",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "Ratio",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual"
+      },
+      "weightedDensity": {
+        "name": "The weightedDensity",
+        "description": "The weightedDensity index is all about weightedDensity",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "Ratio",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual"
+      },
+      "homeLanguage": {
+        "name": "The homeLanguage",
+        "description": "The homeLanguage index is all about homeLanguage",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "text",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual"
+      }
+    }
+  }
+}
