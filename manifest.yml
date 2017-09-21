@@ -1,0 +1,5 @@
+applications:
+  - buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+    memory: 128M
+    instances: 1
+    path: build
