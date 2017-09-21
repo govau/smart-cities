@@ -1,9 +1,7 @@
-@import 'normalize';
-@import 'globalStyles';
 @import '~style/variables';
 
-.body {
-  border: 2px solid red;
+.wrapper {
+  border: 1px solid blue;
   padding-left: $sidebar_width;
 }
 

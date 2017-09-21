@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<PageWrapper cityId=\\"perth\\" categoryId=\\"mock\\">
+  <div className=\\"main\\">
+    <h1>
+      I am the &quot;Mock category&quot; page for &quot;Perth&quot;
+    </h1>
+    <pre>
+      {
+        &quot;name&quot;: &quot;Mock category&quot;,
+        &quot;id&quot;: &quot;mock&quot;
+      }
+    </pre>
+    <pre>
+      {
+        &quot;name&quot;: &quot;Perth&quot;,
+        &quot;id&quot;: &quot;perth&quot;
+      }
+    </pre>
+  </div>
+</PageWrapper>"
+`;

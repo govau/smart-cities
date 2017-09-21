@@ -1,18 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-<div
-  className="wrapper"
->
-  <button
-    aria-label="close navigation menu"
-    className="button"
-    onClick={[Function]}
-  >
+"<div className=\\"wrapper\\">
+  <button className=\\"button\\" onClick={[Function]} aria-label=\\"close navigation menu\\">
     ✕
   </button>
   <h1>
     SideBar
   </h1>
-</div>
+  <Connect(CityNav) categoryId=\\"jobs\\" cityId=\\"perth\\" />
+</div>"
 `;

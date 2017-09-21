@@ -41,10 +41,8 @@ Components that should connect to a data source should do so using the Redux `co
 function in a parent container component.
 
 ## Container components
-All components are 'presentational' components; there are no container components. Reasons:
-* There is only one data source
-* That data source is never updated
-* There is a relatively flat component structure
+Each page type has its own container to connect it to the store and
+provide data. The city and category nav components each also have their own container
 
 # CSS
 This project uses CSS modules, which enforce scoping of classes to a particular component.

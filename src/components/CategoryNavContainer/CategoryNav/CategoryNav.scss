@@ -1,0 +1,12 @@
+@import '~style/variables';
+
+.link {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.link__active {
+  background: grey;
+  color: white;
+}

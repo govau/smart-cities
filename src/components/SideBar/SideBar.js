@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
+import CityNavContainer from '../CityNavContainer/CityNavContainer';
 import style from './SideBar.scss';
 
 class SideBar extends Component {
@@ -13,24 +13,30 @@ class SideBar extends Component {
   }
 
   render() {
+    const { props } = this;
+
     const className = classNames(
       style.wrapper,
       {
-        [style.showOpen]: this.props.isOpen,
+        [style.showOpen]: props.isOpen,
       },
     );
-
-    const { closeNav } = this.props;
 
     return (
       <div className={className}>
         <button
           className={style.button}
-          onClick={closeNav}
+          onClick={props.closeNav}
           aria-label="close navigation menu"
         >✕</button>
 
         <h1>SideBar</h1>
+
+        <CityNavContainer
+          categoryId={props.categoryId}
+          // pass in cityId so the nav updates when the city changes
+          cityId={props.cityId}
+        />
       </div>
     );
   }
@@ -39,11 +45,15 @@ class SideBar extends Component {
 SideBar.propTypes = {
   closeNav: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
-  location: PropTypes.string,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }),
+  categoryId: PropTypes.string.isRequired,
+  cityId: PropTypes.string.isRequired,
 };
 
 SideBar.defaultProps = {
-  location: '',
+  location: {},
 };
 
 export default SideBar;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<div>
+  <div>
+    <SideBar closeNav={[Function]} isOpen={false} categoryId=\\"jobs\\" cityId=\\"perth\\" location={{...}} />
+  </div>
+  <div className=\\"wrapper\\">
+    <Header openNav={[Function]} cityId=\\"perth\\" categoryId=\\"jobs\\" />
+    <main className=\\"main\\">
+      <div>
+        render me
+      </div>
+    </main>
+    <Footer />
+  </div>
+</div>"
+`;

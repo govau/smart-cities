@@ -1,15 +1,21 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header from './Header';
+import CityCategory from './CityCategory';
 
 const defaultProps = {
-  cityId: 'perth',
-  categoryId: 'jobs',
+  category: {
+    name: 'Mock category',
+    id: 'mock',
+  },
+  city: {
+    name: 'Perth',
+    id: 'perth',
+  },
 };
 
 it('should match Snapshot', () => {
   const component = shallow(
-    <Header {...defaultProps} />
+    <CityCategory {...defaultProps} />
   );
 
   expect(component.debug()).toMatchSnapshot();

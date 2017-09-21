@@ -1,13 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-<header
-  className="wrapper"
->
-  <h1
-    className="title"
-  >
+"<header className=\\"wrapper\\">
+  <h1 className=\\"title\\">
     Header
   </h1>
-</header>
+  <Connect(CategoryNav) categoryId=\\"jobs\\" cityId=\\"perth\\" />
+</header>"
 `;

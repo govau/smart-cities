@@ -7,7 +7,7 @@ import { checkStatus, parseBody } from './helpers/fetch';
 
 import { DATA_URL } from './constants';
 
-import AppLayout from './components/AppLayout/AppLayout';
+import App from './components/App/App';
 
 fetch(DATA_URL)
   .then(checkStatus)
@@ -17,7 +17,7 @@ fetch(DATA_URL)
 
     ReactDOM.render(
       <Provider store={store}>
-        <AppLayout />
+        <App />
       </Provider>,
       document.getElementById('root'),
     );

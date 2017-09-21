@@ -3,9 +3,42 @@
     "version": 1
   },
   "data": {
+    "categories": [
+      {
+        "id": "jobs",
+        "name": "Jobs & Skills",
+        "description": "A description of the Jobs & Skills category"
+      },
+      {
+        "id": "infrastructure",
+        "name": "Infrastructure & Other Things",
+        "description": "A description of the Infrastructure & Other Things category"
+      },
+      {
+        "id": "housing",
+        "name": "Housing",
+        "description": "A description of the Housing category"
+      },
+      {
+        "id": "liveablility",
+        "name": "Liveability",
+        "description": "A description of the Liveability category"
+      },
+      {
+        "id": "innovation",
+        "name": "Innovation",
+        "description": "A description of the Innovation category"
+      },
+      {
+        "id": "governance",
+        "name": "Governance",
+        "description": "A description of the Governance category"
+      }
+    ],
     "cities": [
       {
         "name": "Greater Perth",
+        "id": "greater-perth",
         "indices": {
           "population": 12,
           "growthRate": 0.2,
@@ -16,6 +49,18 @@
       },
       {
         "name": "Greater Sydney",
+        "id": "greater-sydney",
+        "indices": {
+          "population": 122,
+          "growthRate": 0.3,
+          "dependencyRatio": 1.2,
+          "weightedDensity": 0.4,
+          "homeLanguage": 0.01
+        }
+      },
+      {
+        "name": "Melbourne",
+        "id": "melbourne",
         "indices": {
           "population": 122,
           "growthRate": 0.3,
@@ -30,7 +75,8 @@
         "name": "The population",
         "description": "The population index is all about population",
         "type": "contextual",
-        "category": "Population",
+        "categoryName": "Population",
+        "categoryId": "jobs",
         "categoryColor": "#232323",
         "units": "people",
         "lastUpdated": 1505694930897,
@@ -40,7 +86,8 @@
         "name": "The growthRate",
         "description": "The growthRate index is all about growthRate",
         "type": "contextual",
-        "category": "Population",
+        "categoryName": "Population",
+        "categoryId": "innovation",
         "categoryColor": "#232323",
         "units": "%",
         "lastUpdated": 1505694930897,
@@ -50,7 +97,8 @@
         "name": "The dependencyRatio",
         "description": "The dependencyRatio index is all about dependencyRatio",
         "type": "contextual",
-        "category": "Population",
+        "categoryName": "Population",
+        "categoryId": "infrastructure",
         "categoryColor": "#232323",
         "units": "Ratio",
         "lastUpdated": 1505694930897,
@@ -60,7 +108,8 @@
         "name": "The weightedDensity",
         "description": "The weightedDensity index is all about weightedDensity",
         "type": "contextual",
-        "category": "Population",
+        "categoryName": "Population",
+        "categoryId": "housing",
         "categoryColor": "#232323",
         "units": "Ratio",
         "lastUpdated": 1505694930897,
@@ -70,7 +119,8 @@
         "name": "The homeLanguage",
         "description": "The homeLanguage index is all about homeLanguage",
         "type": "contextual",
-        "category": "Population",
+        "categoryName": "Population",
+        "categoryId": "liveability",
         "categoryColor": "#232323",
         "units": "text",
         "lastUpdated": 1505694930897,

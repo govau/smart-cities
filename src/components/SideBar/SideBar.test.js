@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import SideBar from './SideBar';
 
@@ -8,14 +7,16 @@ const closeNavMock = jest.fn();
 const defaultProps = {
   closeNav: closeNavMock,
   isOpen: false,
+  categoryId: 'jobs',
+  cityId: 'perth',
 };
 
 it('should match Snapshot', () => {
-  const component = renderer.create(
+  const component = shallow(
     <SideBar {...defaultProps} />
   );
 
-  expect(component.toJSON()).toMatchSnapshot();
+  expect(component.debug()).toMatchSnapshot();
 });
 
 it('should apply a class to open the component', () => {
