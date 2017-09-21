@@ -5,7 +5,15 @@ import CategoryNavContainer from '../CategoryNavContainer/CategoryNavContainer';
 import style from './Header.scss';
 
 const Header = props => (
-  <header className={style.wrapper}>
+  <header className={style.header}>
+    <div className={style.header_govau_container}>
+      <span>*STAR*</span>
+      <strong>GOV.AU</strong>
+      <span>Official Australian Government Website</span>
+    </div>
+    <div className={style.header_project_status_container}>
+      <div className={style.header_project_status}>BETA</div>
+    </div>
     <h1 className={style.title}>Header</h1>
 
     <CategoryNavContainer
