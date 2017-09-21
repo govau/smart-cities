@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Albury - Wodonga",
+    "indices": {
+      "population": "88900",
+      "growthRate": "0.013",
+      "dependencyRatio": "0.713",
+      "weightedDensity": "251",
+      "homeLanguage": "0.026"
+    }
+  },
+  {
+    "name": "Australian Capital Territory",
+    "indices": {
+      "population": "390000",
+      "growthRate": "0.0131",
+      "dependencyRatio": "0.753",
+      "weightedDensity": "1610",
+      "homeLanguage": "0.0924"
+    }
+  },
+  {
+    "name": "Ballarat",
+    "indices": {
+      "population": "99800",
+      "growthRate": "0.0133",
+      "dependencyRatio": "0.71",
+      "weightedDensity": "450",
+      "homeLanguage": "0.0212"
+    }
+  },
+  {
+    "name": "Bendigo",
+    "indices": {
+      "population": "92900",
+      "growthRate": "0.0121",
+      "dependencyRatio": "0.704",
+      "weightedDensity": "520",
+      "homeLanguage": "0.0168"
+    }
+  },
+  {
+    "name": "Cairns",
+    "indices": {
+      "population": "148000",
+      "growthRate": "0.00918",
+      "dependencyRatio": "0.746",
+      "weightedDensity": "943",
+      "homeLanguage": "0.0608"
+    }
+  },
+  {
+    "name": "Geelong",
+    "indices": {
+      "population": "187000",
+      "growthRate": "0.0173",
+      "dependencyRatio": "0.71",
+      "weightedDensity": "618",
+      "homeLanguage": "0.0555"
+    }
+  },
+  {
+    "name": "Gold Coast - Tweed Heads",
+    "indices": {
+      "population": "625000",
+      "growthRate": "0.0173",
+      "dependencyRatio": "0.713",
+      "weightedDensity": "1320",
+      "homeLanguage": "0.0489"
+    }
+  },
+  {
+    "name": "Greater Adelaide",
+    "indices": {
+      "population": "1320000",
+      "growthRate": "0.00922",
+      "dependencyRatio": "0.719",
+      "weightedDensity": "1590",
+      "homeLanguage": "0.0882"
+    }
+  },
+  {
+    "name": "Greater Brisbane",
+    "indices": {
+      "population": "2310000",
+      "growthRate": "0.0153",
+      "dependencyRatio": "0.743",
+      "weightedDensity": "1590",
+      "homeLanguage": "0.0678"
+    }
+  },
+  {
+    "name": "Greater Darwin",
+    "indices": {
+      "population": "142000",
+      "growthRate": "0.0185",
+      "dependencyRatio": "0.788",
+      "weightedDensity": "1480",
+      "homeLanguage": "0.0837"
+    }
+  },
+  {
+    "name": "Greater Hobart",
+    "indices": {
+      "population": "221000",
+      "growthRate": "0.00775",
+      "dependencyRatio": "0.71",
+      "weightedDensity": "666",
+      "homeLanguage": "0.0329"
+    }
+  },
+  {
+    "name": "Greater Melbourne",
+    "indices": {
+      "population": "4530000",
+      "growthRate": "0.0202",
+      "dependencyRatio": "0.743",
+      "weightedDensity": "2290",
+      "homeLanguage": "0.149"
+    }
+  },
+  {
+    "name": "Greater Perth",
+    "indices": {
+      "population": "2040000",
+      "growthRate": "0.0153",
+      "dependencyRatio": "0.743",
+      "weightedDensity": "1590",
+      "homeLanguage": "0.0857"
+    }
+  },
+  {
+    "name": "Greater Sydney",
+    "indices": {
+      "population": "4920000",
+      "growthRate": "0.0169",
+      "dependencyRatio": "0.739",
+      "weightedDensity": "3210",
+      "homeLanguage": "0.167"
+    }
+  },
+  {
+    "name": "Launceston",
+    "indices": {
+      "population": "86600",
+      "growthRate": "0.00304",
+      "dependencyRatio": "0.709",
+      "weightedDensity": "607",
+      "homeLanguage": "0.0265"
+    }
+  },
+  {
+    "name": "Mackay",
+    "indices": {
+      "population": "85500",
+      "growthRate": "0.00524",
+      "dependencyRatio": "0.748",
+      "weightedDensity": "688",
+      "homeLanguage": "0.0289"
+    }
+  },
+  {
+    "name": "Newcastle - Maitland",
+    "indices": {
+      "population": "434000",
+      "growthRate": "0.00912",
+      "dependencyRatio": "0.711",
+      "weightedDensity": "1050",
+      "homeLanguage": "0.0271"
+    }
+  },
+  {
+    "name": "Sunshine Coast",
+    "indices": {
+      "population": "302000",
+      "growthRate": "0.0161",
+      "dependencyRatio": "0.682",
+      "weightedDensity": "799",
+      "homeLanguage": "0.0215"
+    }
+  },
+  {
+    "name": "Toowoomba",
+    "indices": {
+      "population": "115000",
+      "growthRate": "0.00911",
+      "dependencyRatio": "0.702",
+      "weightedDensity": "851",
+      "homeLanguage": "0.0293"
+    }
+  },
+  {
+    "name": "Townsville",
+    "indices": {
+      "population": "180000",
+      "growthRate": "0.00973",
+      "dependencyRatio": "0.754",
+      "weightedDensity": "898",
+      "homeLanguage": "0.032"
+    }
+  },
+  {
+    "name": "Western Sydney",
+    "indices": {
+      "population": "1030000",
+      "growthRate": "0.0189",
+      "dependencyRatio": "0.74",
+      "weightedDensity": "1590",
+      "homeLanguage": "0.164"
+    }
+  },
+  {
+    "name": "Wollongong",
+    "indices": {
+      "population": "292000",
+      "growthRate": "0.0114",
+      "dependencyRatio": "0.709",
+      "weightedDensity": "1220",
+      "homeLanguage": "0.0748"
+    }
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "version": 1
+  },
+  "data": {
+    "cities": [],
+    "indices": {
+      "population": {
+        "name": "The population",
+        "description": "The population index is all about population",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "people",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual",
+        "source": "Population, All persons, People"
+      },
+      "growthRate": {
+        "name": "The growthRate",
+        "description": "The growthRate index is all about growthRate",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "%",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual",
+        "source": "Population growth rate, All persons, % per year"
+      },
+      "dependencyRatio": {
+        "name": "The dependencyRatio",
+        "description": "The dependencyRatio index is all about dependencyRatio",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "Ratio",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual",
+        "source": "Dependency ratio, Of working age, All persons, % of population"
+      },
+      "weightedDensity": {
+        "name": "The weightedDensity",
+        "description": "The weightedDensity index is all about weightedDensity",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "Ratio",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual",
+        "source": "Population-weighted density, Persons per square kilometre"
+      },
+      "homeLanguage": {
+        "name": "The homeLanguage",
+        "description": "The homeLanguage index is all about homeLanguage",
+        "type": "contextual",
+        "category": "Population",
+        "categoryColor": "#232323",
+        "units": "text",
+        "lastUpdated": 1505694930897,
+        "updateFrequency": "Annual",
+        "source": "Language other than English spoken at home, All persons, % of population"
+      }
+    }
+  }
+}
