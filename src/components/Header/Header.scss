@@ -1,36 +1,5 @@
 @import '~style/variables';
 
-.header {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-
-  > * {
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: $color-primary--400;
-  }
-}
-
-.header_govau_container {
-  display: flex;
-  background-color: $color-primary--200;
-
-  > * {
-    margin-right: 8px;
-  }
-}
-
-.header_project_status_container {
-  display: flex;
-}
-
-.header_project_status {
-}
-
 .wrapper {
   border: 1px solid blue;
 }
