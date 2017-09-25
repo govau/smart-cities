@@ -1,0 +1,77 @@
+@mixin type-detail-text {
+  font-size: 12px;
+}
+
+@mixin type-detail-text--bold {
+  @include type-detail-text;
+
+  font-weight: 700;
+}
+
+@mixin type-badge-text {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@mixin type-h1 {
+  font-size: 44px;
+}
+
+@mixin type-h3 {
+  font-size: 36px;
+}
+
+@mixin type-nav-horizontal {
+  font-size: 18px;
+}
+
+@mixin type-nav-horizontal--selected {
+  @include type-nav-horizontal;
+
+  font-weight: 700;
+}
+
+@mixin type-nav-vertical {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+@mixin type-intro-text {
+  font-size: 22px;
+}
+
+@mixin type-indicator-card-title--large {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@mixin type-indicator-card-header--large {
+  font-size: 14px;
+}
+
+@mixin type-indicator-card-header--small {
+  font-size: 12px;
+}
+
+@mixin type-indicator-card-number--large {
+  font-size: 90px;
+}
+
+@mixin type-indicator-card-number--small {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+@mixin type-indicator-card-symbol--large {
+  font-size: 45px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+@mixin type-indicator-card-symbol--small {
+  font-size: 24px;
+}
+
+@mixin type-section-button {
+  font-size: 12px;
+}

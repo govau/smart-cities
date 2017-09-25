@@ -1,19 +1,14 @@
 @import '~style/variables';
 
 .wrapper {
-  border: 1px solid blue;
   position: fixed;
   top: 0;
   left: 0;
-  width: $sidebar_width;
+  width: $sidebar-width;
   bottom: 0;
-  background: $color-primary--400;
+  background: $color-primary--600;
 }
 
 .showOpen {
   transform: translateX(0);
-}
-
-.button {
-  color: red;
 }

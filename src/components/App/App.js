@@ -9,6 +9,7 @@ import AllCitiesOverviewContainer from '../AllCitiesOverviewContainer/AllCitiesO
 import CityOverviewContainer from '../CityOverviewContainer/CityOverviewContainer';
 import AllCitiesCategoryContainer from '../AllCitiesCategoryContainer/AllCitiesCategoryContainer';
 import CityCategoryContainer from '../CityCategoryContainer/CityCategoryContainer';
+import StyleGuide from '../StyleGuide/StyleGuide';
 import './_normalize.scss';
 import './_globalStyles.scss';
 import {
@@ -23,6 +24,9 @@ const App = () => (
       <Route path={`/:cityId/${NO_CATEGORY}`} component={CityOverviewContainer} />
       <Route path={`/${NO_CITY}/:categoryId`} component={AllCitiesCategoryContainer} />
       <Route path="/:cityId/:categoryId" component={CityCategoryContainer} />
+
+      <Route path="/style-guide" component={StyleGuide} />
+      <Redirect from="/styleguide" to="/style-guide" />
 
       <Redirect to={`/${NO_CITY}/${NO_CATEGORY}`} />
     </Switch>

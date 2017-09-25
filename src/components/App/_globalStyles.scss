@@ -4,6 +4,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
-  min-width: $app_min_width;
+  min-width: $app-min-width;
   overflow-x: hidden; // if a chart goes too wide, don't break the whole page
+  background: $color-primary--050;
+  color: $color-grey--700;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
 }

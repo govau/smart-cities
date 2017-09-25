@@ -45,6 +45,7 @@ Each page type has its own container to connect it to the store and
 provide data. The city and category nav components each also have their own container
 
 # CSS
+## CSS modules
 This project uses CSS modules, which enforce scoping of classes to a particular component.
 So, when writing a CSS class for, say, the text in a `<Header>` component, you
 can name the class relative to that component. That is, `.title` rather than `.header-title`.
@@ -55,10 +56,55 @@ name you defined, followed by a hash. E.g. `Header-title--2yh4t`.
 This means there is no way to use that `.title` class from the `<Header>` component in
 another component. This is a very good thing :)
 
+## Naming conventions
+Class names should be camelCase for the base class. E.g. `subTitle`. "modifiers" should be proceeded by
+two underscores. E.g. `sideBar__open`, `sideBar__closed`.
+
+Sass variables and mixins should be kebab case, with dashes for modifiers. E.g `indicator-card-number--small`.
+
+## Typography
+We have a complete set of typography mixins in `_typography.scss`,
+which means you will never need to set `font-size`, `font-weight`, `letter-spacing` etc.
+directly in a CSS class. Instead, use the appropriate mixin. Note that the typography styles do *not* contain
+color information, so if you want something other than the current color, you need to define this, e.g.
+```scss
+
+.nav-item {
+  @include type-nav-vertical;
+
+  &--selected {
+    background: $color-background;
+    color: $color-navigation;
+  }
+}
+```
+
+You can view all of the styles in the style guide (see below).
+
+If a design contains text that doesn't appear to be covered by any of the mixins, speak to the designer and adjust
+the design, adjust the mixin, or add another mixin.
+
+## Breakpoints
+We have a set of mixins for media query ranges defined in `_breakpoints.scss`. Use them like so:
+
+```scss
+.my-box {
+  padding: 10px;
+
+  @include for-tablet-landscape-up {
+    padding: 20px;
+  }
+}
+```
+
+## Linting
 [Stylelint](https://github.com/stylelint/stylelint) is used to lint the CSS, we're using the
 default settings from [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard).
 Lint errors will display in the console as you work.
 
+# Style Guide
+We have a style guide, visible at `/style-guide`. This displays each of the color variables and
+typography mixins.
 
 # Data
 The data received from the API is not in the exact format required for the front end.
@@ -72,9 +118,7 @@ being merged back into `master`. Branch names should contain the issues number
 and start with either `fix/` or `feature/`. E.g. a branch name for adding
 the navigation menu might be `feature/324-nav-menu`.
 
-# Deployment 
-
-## Manual deployment
+# Deployment ## Manual deployment
 For deployment to a CloudFoundry server simply [install the CLI](https://github.com/cloudfoundry/cli), log in and then `cf push`. The `manifest.yml` file
 can be tweaked if needed. Currently we are using a 'static file' buildpack. Note that
 only the `build` directory is deployed, so you should `npm build` before deploying.

@@ -1,0 +1,30 @@
+@import '~style/variables';
+
+.row {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 0 -8px 8px;
+}
+
+.swatchWrapper {
+  flex: 1 0 0;
+  margin: 0 8px;
+  min-width: 0;
+  text-align: center;
+}
+
+.colorSample {
+  height: 64px;
+  margin-bottom: 4px;
+
+  @include for-desktop-up {
+    height: 128px;
+  }
+}
+
+.variableName {
+  font-size: 14px;
+  word-wrap: break-word;
+  line-height: 1.4;
+}

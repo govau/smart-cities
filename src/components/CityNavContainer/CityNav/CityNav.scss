@@ -2,12 +2,12 @@
 
 .link {
   display: block;
-  color: white;
+  color: $color-white;
   padding: 10px;
   text-decoration: none;
 }
 
 .link__active {
-  background: white;
-  color: teal;
+  background: $color-white;
+  color: $color-primary--600;
 }

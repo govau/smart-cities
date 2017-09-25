@@ -1,9 +1,8 @@
 @import '~style/variables';
 
 .wrapper {
-  width: $app_header_height_mobile;
-  height: $app_header_height_mobile;
-  background: $color-primary--600;
+  width: $app-header-height-mobile;
+  height: $app-header-height-mobile;
   border: none;
   border-radius: 0;
 }
@@ -14,7 +13,7 @@
 }
 
 .bar {
-  background: white;
+  background: $color-white;
   height: 4px;
   border-radius: 2px;
   margin: 3px;

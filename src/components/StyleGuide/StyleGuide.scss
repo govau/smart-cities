@@ -1,0 +1,101 @@
+@import '~style/variables';
+
+.pageWrapper {
+  font-size: 5px; // to ensure font-sizes are set on each mixin
+  padding: 25px 25px 200px;
+  background: $color-white;
+}
+
+.colorsWrapper {
+  margin-bottom: 100px;
+}
+
+.sectionText {
+  @include type-h1;
+}
+
+.subSectionText {
+  @include type-h3;
+}
+
+.color-primary--050 { background: $color-primary--050; }
+.color-primary--100 { background: $color-primary--100; }
+.color-primary--400 { background: $color-primary--400; }
+.color-primary--500 { background: $color-primary--500; }
+.color-primary--600 { background: $color-primary--600; }
+.color-primary--700 { background: $color-primary--700; }
+
+.color-jobs--050 { background: $color-jobs--050; }
+.color-jobs--100 { background: $color-jobs--100; }
+.color-jobs--400 { background: $color-jobs--400; }
+.color-jobs--500 { background: $color-jobs--500; }
+.color-jobs--600 { background: $color-jobs--600; }
+.color-jobs--700 { background: $color-jobs--700; }
+
+.color-housing--050 { background: $color-housing--050; }
+.color-housing--100 { background: $color-housing--100; }
+.color-housing--400 { background: $color-housing--400; }
+.color-housing--500 { background: $color-housing--500; }
+.color-housing--600 { background: $color-housing--600; }
+.color-housing--700 { background: $color-housing--700; }
+
+.color-infrastructure--050 { background: $color-infrastructure--050; }
+.color-infrastructure--100 { background: $color-infrastructure--100; }
+.color-infrastructure--400 { background: $color-infrastructure--400; }
+.color-infrastructure--500 { background: $color-infrastructure--500; }
+.color-infrastructure--600 { background: $color-infrastructure--600; }
+.color-infrastructure--700 { background: $color-infrastructure--700; }
+
+.color-liveability--050 { background: $color-liveability--050; }
+.color-liveability--100 { background: $color-liveability--100; }
+.color-liveability--400 { background: $color-liveability--400; }
+.color-liveability--500 { background: $color-liveability--500; }
+.color-liveability--600 { background: $color-liveability--600; }
+.color-liveability--700 { background: $color-liveability--700; }
+
+.color-innovation--050 { background: $color-innovation--050; }
+.color-innovation--100 { background: $color-innovation--100; }
+.color-innovation--400 { background: $color-innovation--400; }
+.color-innovation--500 { background: $color-innovation--500; }
+.color-innovation--600 { background: $color-innovation--600; }
+.color-innovation--700 { background: $color-innovation--700; }
+
+.color-planning--050 { background: $color-planning--050; }
+.color-planning--100 { background: $color-planning--100; }
+.color-planning--400 { background: $color-planning--400; }
+.color-planning--500 { background: $color-planning--500; }
+.color-planning--600 { background: $color-planning--600; }
+.color-planning--700 { background: $color-planning--700; }
+
+.color-extra--050 { background: $color-extra--050; }
+.color-extra--100 { background: $color-extra--100; }
+.color-extra--400 { background: $color-extra--400; }
+.color-extra--500 { background: $color-extra--500; }
+.color-extra--600 { background: $color-extra--600; }
+.color-extra--700 { background: $color-extra--700; }
+
+.color-white { background: $color-white; }
+.color-grey--500 { background: $color-grey--500; }
+.color-grey--700 { background: $color-grey--700; }
+.color-black { background: $color-black; }
+
+.color-highlight { background: $color-highlight; }
+.color-badge { background: $color-badge; }
+
+.type-detail-text { @include type-detail-text; }
+.type-detail-text--bold { @include type-detail-text--bold; }
+.type-badge-text { @include type-badge-text; }
+.type-h1 { @include type-h1; }
+.type-h3 { @include type-h3; }
+.type-nav-horizontal { @include type-nav-horizontal; }
+.type-nav-horizontal--selected { @include type-nav-horizontal--selected; }
+.type-nav-vertical { @include type-nav-vertical; }
+.type-intro-text { @include type-intro-text; }
+.type-indicator-card-title--large { @include type-indicator-card-title--large; }
+.type-indicator-card-header--large { @include type-indicator-card-header--large; }
+.type-indicator-card-header--small { @include type-indicator-card-header--small; }
+.type-indicator-card-number--large { @include type-indicator-card-number--large; }
+.type-indicator-card-number--small { @include type-indicator-card-number--small; }
+.type-indicator-card-symbol--large { @include type-indicator-card-symbol--large; }
+.type-indicator-card-symbol--small { @include type-indicator-card-symbol--small; }
+.type-section-button { @include type-section-button; }

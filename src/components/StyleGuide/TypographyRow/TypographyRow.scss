@@ -1,0 +1,25 @@
+@import '~style/variables';
+
+.row {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $color-primary--100;
+  padding: 20px 0;
+}
+
+.code {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-left: auto; // push right
+  border-radius: 4px;
+  background: $color-primary--050;
+  font-size: 14px;
+  color: $color-grey--700;
+  font-weight: 700;
+
+  &::before {
+    content: "@include ";
+    color: $color-grey--500;
+    font-weight: initial;
+  }
+}
