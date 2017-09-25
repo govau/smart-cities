@@ -1,131 +1,244 @@
-{
-  "metadata": {
-    "version": 1
-  },
-  "data": {
-    "categories": [
-      {
-        "id": "jobs",
-        "name": "Jobs & Skills",
-        "description": "A description of the Jobs & Skills category"
-      },
-      {
-        "id": "infrastructure",
-        "name": "Infrastructure & Other Things",
-        "description": "A description of the Infrastructure & Other Things category"
-      },
-      {
-        "id": "housing",
-        "name": "Housing",
-        "description": "A description of the Housing category"
-      },
-      {
-        "id": "liveablility",
-        "name": "Liveability",
-        "description": "A description of the Liveability category"
-      },
-      {
-        "id": "innovation",
-        "name": "Innovation",
-        "description": "A description of the Innovation category"
-      },
-      {
-        "id": "governance",
-        "name": "Governance",
-        "description": "A description of the Governance category"
-      }
-    ],
-    "cities": [
-      {
-        "name": "Greater Perth",
-        "id": "greater-perth",
-        "indices": {
-          "population": 12,
-          "growthRate": 0.2,
-          "dependencyRatio": 0.3,
-          "weightedDensity": 12,
-          "homeLanguage": 0.02
-        }
-      },
-      {
-        "name": "Greater Sydney",
-        "id": "greater-sydney",
-        "indices": {
-          "population": 122,
-          "growthRate": 0.3,
-          "dependencyRatio": 1.2,
-          "weightedDensity": 0.4,
-          "homeLanguage": 0.01
-        }
-      },
-      {
-        "name": "Melbourne",
-        "id": "melbourne",
-        "indices": {
-          "population": 122,
-          "growthRate": 0.3,
-          "dependencyRatio": 1.2,
-          "weightedDensity": 0.4,
-          "homeLanguage": 0.01
-        }
-      }
-    ],
+[
+  {
+    "name": "Albury - Wodonga",
+    "id": "albury-wodonga",
     "indices": {
-      "population": {
-        "name": "The population",
-        "description": "The population index is all about population",
-        "type": "contextual",
-        "categoryName": "Population",
-        "categoryId": "jobs",
-        "categoryColor": "#232323",
-        "units": "people",
-        "lastUpdated": 1505694930897,
-        "updateFrequency": "Annual"
-      },
-      "growthRate": {
-        "name": "The growthRate",
-        "description": "The growthRate index is all about growthRate",
-        "type": "contextual",
-        "categoryName": "Population",
-        "categoryId": "innovation",
-        "categoryColor": "#232323",
-        "units": "%",
-        "lastUpdated": 1505694930897,
-        "updateFrequency": "Annual"
-      },
-      "dependencyRatio": {
-        "name": "The dependencyRatio",
-        "description": "The dependencyRatio index is all about dependencyRatio",
-        "type": "contextual",
-        "categoryName": "Population",
-        "categoryId": "infrastructure",
-        "categoryColor": "#232323",
-        "units": "Ratio",
-        "lastUpdated": 1505694930897,
-        "updateFrequency": "Annual"
-      },
-      "weightedDensity": {
-        "name": "The weightedDensity",
-        "description": "The weightedDensity index is all about weightedDensity",
-        "type": "contextual",
-        "categoryName": "Population",
-        "categoryId": "housing",
-        "categoryColor": "#232323",
-        "units": "Ratio",
-        "lastUpdated": 1505694930897,
-        "updateFrequency": "Annual"
-      },
-      "homeLanguage": {
-        "name": "The homeLanguage",
-        "description": "The homeLanguage index is all about homeLanguage",
-        "type": "contextual",
-        "categoryName": "Population",
-        "categoryId": "liveability",
-        "categoryColor": "#232323",
-        "units": "text",
-        "lastUpdated": 1505694930897,
-        "updateFrequency": "Annual"
-      }
+      "population": "88900",
+      "growthRate": "0.013",
+      "dependencyRatio": "0.713",
+      "weightedDensity": "251",
+      "homeLanguage": "0.026"
+    }
+  },
+  {
+    "name": "Australian Capital Territory",
+    "id": "australian-capital-territory",
+    "indices": {
+      "population": "390000",
+      "growthRate": "0.0131",
+      "dependencyRatio": "0.753",
+      "weightedDensity": "1610",
+      "homeLanguage": "0.0924"
+    }
+  },
+  {
+    "name": "Ballarat",
+    "id": "ballarat",
+    "indices": {
+      "population": "99800",
+      "growthRate": "0.0133",
+      "dependencyRatio": "0.71",
+      "weightedDensity": "450",
+      "homeLanguage": "0.0212"
+    }
+  },
+  {
+    "name": "Bendigo",
+    "id": "bendigo",
+    "indices": {
+      "population": "92900",
+      "growthRate": "0.0121",
+      "dependencyRatio": "0.704",
+      "weightedDensity": "520",
+      "homeLanguage": "0.0168"
+    }
+  },
+  {
+    "name": "Cairns",
+    "id": "cairns",
+    "indices": {
+      "population": "148000",
+      "growthRate": "0.00918",
+      "dependencyRatio": "0.746",
+      "weightedDensity": "943",
+      "homeLanguage": "0.0608"
+    }
+  },
+  {
+    "name": "Geelong",
+    "id": "geelong",
+    "indices": {
+      "population": "187000",
+      "growthRate": "0.0173",
+      "dependencyRatio": "0.71",
+      "weightedDensity": "618",
+      "homeLanguage": "0.0555"
+    }
+  },
+  {
+    "name": "Gold Coast - Tweed Heads",
+    "id": "gold-coast-tweed-heads",
+    "indices": {
+      "population": "625000",
+      "growthRate": "0.0173",
+      "dependencyRatio": "0.713",
+      "weightedDensity": "1320",
+      "homeLanguage": "0.0489"
+    }
+  },
+  {
+    "name": "Greater Adelaide",
+    "id": "greater-adelaide",
+    "indices": {
+      "population": "1320000",
+      "growthRate": "0.00922",
+      "dependencyRatio": "0.719",
+      "weightedDensity": "1590",
+      "homeLanguage": "0.0882"
+    }
+  },
+  {
+    "name": "Greater Brisbane",
+    "id": "greater-brisbane",
+    "indices": {
+      "population": "2310000",
+      "growthRate": "0.0153",
+      "dependencyRatio": "0.743",
+      "weightedDensity": "1590",
+      "homeLanguage": "0.0678"
+    }
+  },
+  {
+    "name": "Greater Darwin",
+    "id": "greater-darwin",
+    "indices": {
+      "population": "142000",
+      "growthRate": "0.0185",
+      "dependencyRatio": "0.788",
+      "weightedDensity": "1480",
+      "homeLanguage": "0.0837"
+    }
+  },
+  {
+    "name": "Greater Hobart",
+    "id": "greater-hobart",
+    "indices": {
+      "population": "221000",
+      "growthRate": "0.00775",
+      "dependencyRatio": "0.71",
+      "weightedDensity": "666",
+      "homeLanguage": "0.0329"
+    }
+  },
+  {
+    "name": "Greater Melbourne",
+    "id": "greater-melbourne",
+    "indices": {
+      "population": "4530000",
+      "growthRate": "0.0202",
+      "dependencyRatio": "0.743",
+      "weightedDensity": "2290",
+      "homeLanguage": "0.149"
+    }
+  },
+  {
+    "name": "Greater Perth",
+    "id": "greater-perth",
+    "indices": {
+      "population": "2040000",
+      "growthRate": "0.0153",
+      "dependencyRatio": "0.743",
+      "weightedDensity": "1590",
+      "homeLanguage": "0.0857"
+    }
+  },
+  {
+    "name": "Greater Sydney",
+    "id": "greater-sydney",
+    "indices": {
+      "population": "4920000",
+      "growthRate": "0.0169",
+      "dependencyRatio": "0.739",
+      "weightedDensity": "3210",
+      "homeLanguage": "0.167"
+    }
+  },
+  {
+    "name": "Launceston",
+    "id": "launceston",
+    "indices": {
+      "population": "86600",
+      "growthRate": "0.00304",
+      "dependencyRatio": "0.709",
+      "weightedDensity": "607",
+      "homeLanguage": "0.0265"
+    }
+  },
+  {
+    "name": "Mackay",
+    "id": "mackay",
+    "indices": {
+      "population": "85500",
+      "growthRate": "0.00524",
+      "dependencyRatio": "0.748",
+      "weightedDensity": "688",
+      "homeLanguage": "0.0289"
+    }
+  },
+  {
+    "name": "Newcastle - Maitland",
+    "id": "newcastle-maitland",
+    "indices": {
+      "population": "434000",
+      "growthRate": "0.00912",
+      "dependencyRatio": "0.711",
+      "weightedDensity": "1050",
+      "homeLanguage": "0.0271"
+    }
+  },
+  {
+    "name": "Sunshine Coast",
+    "id": "sunshine-coast",
+    "indices": {
+      "population": "302000",
+      "growthRate": "0.0161",
+      "dependencyRatio": "0.682",
+      "weightedDensity": "799",
+      "homeLanguage": "0.0215"
+    }
+  },
+  {
+    "name": "Toowoomba",
+    "id": "toowoomba",
+    "indices": {
+      "population": "115000",
+      "growthRate": "0.00911",
+      "dependencyRatio": "0.702",
+      "weightedDensity": "851",
+      "homeLanguage": "0.0293"
+    }
+  },
+  {
+    "name": "Townsville",
+    "id": "townsville",
+    "indices": {
+      "population": "180000",
+      "growthRate": "0.00973",
+      "dependencyRatio": "0.754",
+      "weightedDensity": "898",
+      "homeLanguage": "0.032"
+    }
+  },
+  {
+    "name": "Western Sydney",
+    "id": "western-sydney",
+    "indices": {
+      "population": "1030000",
+      "growthRate": "0.0189",
+      "dependencyRatio": "0.74",
+      "weightedDensity": "1590",
+      "homeLanguage": "0.164"
+    }
+  },
+  {
+    "name": "Wollongong",
+    "id": "wollongong",
+    "indices": {
+      "population": "292000",
+      "growthRate": "0.0114",
+      "dependencyRatio": "0.709",
+      "weightedDensity": "1220",
+      "homeLanguage": "0.0748"
     }
   }
-}
+]

@@ -9,11 +9,14 @@ import { DATA_URL } from './constants';
 
 import App from './components/App/App';
 
+const dataShell = require('./constants/data-shell.json');
+
 fetch(DATA_URL)
   .then(checkStatus)
   .then(parseBody)
-  .then((data) => {
-    const store = configureStore(data.data);
+  .then((cities) => {
+    dataShell.data.cities = cities;
+    const store = configureStore(dataShell.data);
 
     ReactDOM.render(
       <Provider store={store}>
