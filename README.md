@@ -73,6 +73,14 @@ and start with either `fix/` or `feature/`. E.g. a branch name for adding
 the navigation menu might be `feature/324-nav-menu`.
 
 # Deployment 
+
+## Manual deployment
 For deployment to a CloudFoundry server simply [install the CLI](https://github.com/cloudfoundry/cli), log in and then `cf push`. The `manifest.yml` file
 can be tweaked if needed. Currently we are using a 'static file' buildpack. Note that
 only the `build` directory is deployed, so you should `npm build` before deploying.
+
+## CI/CD
+CircleCI will test all commits pushed to the repo. As soon as a branch is merged
+to the `master` branch, it will (assuming tests pass) additionally deploy to the
+`smart-cities-dev` instance. To deploy to the `smart-cities-staging` instance,
+simply push to the `staging` branch.
