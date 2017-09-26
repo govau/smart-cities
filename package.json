@@ -21,6 +21,7 @@
   "dependencies": {
     "@atlaskit/tooltip": "^6.0.0",
     "@gov.au/datavizkit": "^1.0.32-development",
+    "@std/esm": "^0.11.0",
     "classnames": "^2.2.5",
     "core-js": "^2.5.0",
     "csv": "^1.1.1",
@@ -89,7 +90,7 @@
     "test": "node scripts/test.js --env=jsdom --colors",
     "test:update": "npm run test -- --updateSnapshot",
     "test:ci": "CI=true npm run test -- --coverage --runInBand --colors",
-    "generate-city-data": "node scripts/convert.js < resources/cities.csv > public/data/smartCitiesData.json"
+    "generate-city-data": "node -r @std/esm scripts/convert.js < resources/cities.csv > public/data/smartCitiesData.json"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -128,5 +129,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "@std/esm": {
+    "esm": "js"
   }
 }

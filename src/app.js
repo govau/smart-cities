@@ -5,18 +5,23 @@ import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
 import { checkStatus, parseBody } from './helpers/fetch';
 
-import { DATA_URL } from './constants';
+import {
+  DATA_URL,
+  INDICATORS,
+  CATEGORIES,
+} from './constants';
 
 import App from './components/App/App';
-
-const dataShell = require('./constants/data-shell.json');
 
 fetch(DATA_URL)
   .then(checkStatus)
   .then(parseBody)
   .then((cities) => {
-    dataShell.data.cities = cities;
-    const store = configureStore(dataShell.data);
+    const store = configureStore({
+      cities,
+      indices: INDICATORS,
+      categories: CATEGORIES,
+    });
 
     ReactDOM.render(
       <Provider store={store}>

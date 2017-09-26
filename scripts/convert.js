@@ -1,14 +1,15 @@
-#!/usr/bin/env node
+#!/usr/bin/env node -r @std/esm
 
-// Usage: `convert.js < /path/to/cities.csv > cities.json`
+// This file relies on ES6 modules
+// so must be run via "npm run convert" which uses @std/esm
 
-const csv = require('csv');
-const mapValues = require('lodash/mapValues');
-const kebabCase = require('lodash/kebabCase');
-const getStdin = require('get-stdin');
-const dataShell = require('../src/constants/data-shell.json');
+import csv from 'csv';
+import mapValues from 'lodash/mapValues';
+import kebabCase from 'lodash/kebabCase';
+import getStdin from 'get-stdin';
+import { INDICATORS } from '../src/constants';
 
-const dict = mapValues(dataShell.data.indices, atts => atts.source);
+const dict = mapValues(INDICATORS, atts => atts.source);
 
 getStdin().then((rawCsv) => {
   csv.parse(rawCsv, { columns: true }, (err, data) => {
