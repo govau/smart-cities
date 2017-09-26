@@ -51,7 +51,7 @@ class PageWrapper extends Component {
           />
         </div>
 
-        <div className={style.wrapper}>
+        <div>
           <Header
             openNav={() => this.toggleNav(true)}
             cityId={this.props.cityId}

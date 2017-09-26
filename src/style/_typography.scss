@@ -42,7 +42,7 @@
 
 @mixin type-indicator-card-title--large {
   font-size: 24px;
-  font-weight: 700;
+  line-height: 1;
 }
 
 @mixin type-indicator-card-header--large {
@@ -59,7 +59,6 @@
 
 @mixin type-indicator-card-number--small {
   font-size: 48px;
-  font-weight: 300;
 }
 
 @mixin type-indicator-card-symbol--large {

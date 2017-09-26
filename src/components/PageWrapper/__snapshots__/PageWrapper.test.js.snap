@@ -5,7 +5,7 @@ exports[`should match Snapshot 1`] = `
   <div>
     <SideBar closeNav={[Function]} isOpen={false} categoryId=\\"jobs\\" cityId=\\"perth\\" location={{...}} />
   </div>
-  <div className=\\"wrapper\\">
+  <div>
     <Header openNav={[Function]} cityId=\\"perth\\" categoryId=\\"jobs\\" />
     <main className=\\"main\\">
       <div>

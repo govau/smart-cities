@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+<div
+  className="card card__small card__primary_color wrapper wrapper__small"
+>
+  <p
+    className="header"
+  />
+  <div
+    className="indicatorWrapper"
+  >
+    <span
+      className="number"
+    />
+  </div>
+</div>
+`;

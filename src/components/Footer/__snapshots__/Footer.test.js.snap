@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`(Components) Footer - footer  should match Snapshot 1`] = `
+exports[`should match Snapshot 1`] = `
 <footer
   className="wrapper"
 >
