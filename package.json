@@ -88,7 +88,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom --colors",
     "test:update": "npm run test -- --updateSnapshot",
-    "test:ci": "CI=true npm run test -- --coverage --runInBand --colors"
+    "test:ci": "CI=true npm run test -- --coverage --runInBand --colors",
+    "generate-city-data": "node scripts/convert.js < resources/cities.csv > public/data/smartCitiesData.json"
   },
   "jest": {
     "collectCoverageFrom": [

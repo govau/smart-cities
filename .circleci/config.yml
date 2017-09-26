@@ -32,16 +32,10 @@ jobs:
           name: Deploy app
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              cf api $CF_STAGING_API &> /dev/null
-              cf auth $CF_STAGING_USER $CF_STAGING_PASSWORD &> /dev/null
-              cf target -o $CF_STAGING_ORG &> /dev/null
-              cf target -s $CF_STAGING_SPACE &> /dev/null
+              ./scripts/prepare_cf.sh
               cf push smart-cities-dev
             fi
             if [ "${CIRCLE_BRANCH}" == "staging" ]; then
-              cf api $CF_STAGING_API &> /dev/null
-              cf auth $CF_STAGING_USER $CF_STAGING_PASSWORD &> /dev/null
-              cf target -o $CF_STAGING_ORG &> /dev/null
-              cf target -s $CF_STAGING_SPACE &> /dev/null
+              ./scripts/prepare_cf.sh
               cf push smart-cities-staging
             fi
