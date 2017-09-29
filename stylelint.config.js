@@ -2,6 +2,28 @@ module.exports = {
   extends: 'stylelint-config-standard',
   ignoreFiles: '**/_normalize.scss',
   rules: {
-    'at-rule-no-unknown': null,
+    // Sass syntax
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: [
+          'include',
+          'mixin',
+          'content',
+        ],
+      },
+    ],
+    // CSS modules syntax
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: [
+          'export',
+          'import',
+          'global',
+          'local',
+        ],
+      },
+    ],
   },
 };

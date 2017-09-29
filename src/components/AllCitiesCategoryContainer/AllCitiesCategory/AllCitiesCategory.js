@@ -20,9 +20,11 @@ const AllCitiesCategory = (props) => {
 AllCitiesCategory.propTypes = {
   category: PropTypes.shape({
     name: PropTypes.string.isRequired,
+    colorName: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
   }).isRequired,
   cities: PropTypes.arrayOf(PropTypes.shape({
+    indices: PropTypes.object.isRequired,
     name: PropTypes.string.isRequired,
   })).isRequired,
 };

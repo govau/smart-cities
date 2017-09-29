@@ -55,9 +55,82 @@ $color-extra--600: #26888d;
 $color-extra--700: #005f64;
 
 $color-white: #fff;
+$color-grid: rgba(202, 200, 202, 0.25); // highcharts can't set opacity on a line, so we need rgba()
 $color-grey--500: #9b9b9b;
 $color-grey--700: #4a4a4a;
 $color-black: #000;
 
 $color-highlight: #00bfe9;
 $color-badge: #f69900;
+
+// export these colours to make them available in javascript
+// this is CSS module syntax so we disable a few rules
+
+/* stylelint-disable property-no-unknown, property-case, declaration-empty-line-before */
+:export {
+  PRIMARY_050: $color-primary--050;
+  PRIMARY_100: $color-primary--100;
+  PRIMARY_400: $color-primary--400;
+  PRIMARY_500: $color-primary--500;
+  PRIMARY_600: $color-primary--600;
+  PRIMARY_700: $color-primary--700;
+
+  JOBS_050: $color-jobs--050;
+  JOBS_100: $color-jobs--100;
+  JOBS_400: $color-jobs--400;
+  JOBS_500: $color-jobs--500;
+  JOBS_600: $color-jobs--600;
+  JOBS_700: $color-jobs--700;
+
+  HOUSING_050: $color-housing--050;
+  HOUSING_100: $color-housing--100;
+  HOUSING_400: $color-housing--400;
+  HOUSING_500: $color-housing--500;
+  HOUSING_600: $color-housing--600;
+  HOUSING_700: $color-housing--700;
+
+  INFRASTRUCTURE_050: $color-infrastructure--050;
+  INFRASTRUCTURE_100: $color-infrastructure--100;
+  INFRASTRUCTURE_400: $color-infrastructure--400;
+  INFRASTRUCTURE_500: $color-infrastructure--500;
+  INFRASTRUCTURE_600: $color-infrastructure--600;
+  INFRASTRUCTURE_700: $color-infrastructure--700;
+
+  LIVEABILITY_050: $color-liveability--050;
+  LIVEABILITY_100: $color-liveability--100;
+  LIVEABILITY_400: $color-liveability--400;
+  LIVEABILITY_500: $color-liveability--500;
+  LIVEABILITY_600: $color-liveability--600;
+  LIVEABILITY_700: $color-liveability--700;
+
+  INNOVATION_050: $color-innovation--050;
+  INNOVATION_100: $color-innovation--100;
+  INNOVATION_400: $color-innovation--400;
+  INNOVATION_500: $color-innovation--500;
+  INNOVATION_600: $color-innovation--600;
+  INNOVATION_700: $color-innovation--700;
+
+  PLANNING_050: $color-planning--050;
+  PLANNING_100: $color-planning--100;
+  PLANNING_400: $color-planning--400;
+  PLANNING_500: $color-planning--500;
+  PLANNING_600: $color-planning--600;
+  PLANNING_700: $color-planning--700;
+
+  EXTRA_050: $color-extra--050;
+  EXTRA_100: $color-extra--100;
+  EXTRA_400: $color-extra--400;
+  EXTRA_500: $color-extra--500;
+  EXTRA_600: $color-extra--600;
+  EXTRA_700: $color-extra--700;
+
+  WHITE: $color-white;
+  GRID: $color-grid;
+  GREY_500: $color-grey--500;
+  GREY_700: $color-grey--700;
+  BLACK: $color-black;
+  HIGHLIGHT: $color-highlight;
+  BADGE: $color-badge;
+}
+
+/* stylelint-enable */

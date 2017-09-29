@@ -7,7 +7,12 @@
       "growthRate": "0.013",
       "dependencyRatio": "0.713",
       "weightedDensity": "251",
-      "homeLanguage": "0.026"
+      "homeLanguage": "0.026",
+      "dwellingHouse": "0.801",
+      "dwellingSemi": "0.156",
+      "dwellingApartment": "0.0315",
+      "dwellingOther": "0.0118",
+      "jobsBike": "0.0732"
     }
   },
   {
@@ -18,7 +23,12 @@
       "growthRate": "0.0131",
       "dependencyRatio": "0.753",
       "weightedDensity": "1610",
-      "homeLanguage": "0.0924"
+      "homeLanguage": "0.0924",
+      "dwellingHouse": "0.647",
+      "dwellingSemi": "0.181",
+      "dwellingApartment": "0.167",
+      "dwellingOther": "0.00594",
+      "jobsBike": "0.126"
     }
   },
   {
@@ -29,7 +39,12 @@
       "growthRate": "0.0133",
       "dependencyRatio": "0.71",
       "weightedDensity": "450",
-      "homeLanguage": "0.0212"
+      "homeLanguage": "0.0212",
+      "dwellingHouse": "0.806",
+      "dwellingSemi": "0.145",
+      "dwellingApartment": "0.0398",
+      "dwellingOther": "0.00893",
+      "jobsBike": "0.252"
     }
   },
   {
@@ -40,7 +55,12 @@
       "growthRate": "0.0121",
       "dependencyRatio": "0.704",
       "weightedDensity": "520",
-      "homeLanguage": "0.0168"
+      "homeLanguage": "0.0168",
+      "dwellingHouse": "0.868",
+      "dwellingSemi": "0.0993",
+      "dwellingApartment": "0.0221",
+      "dwellingOther": "0.0104",
+      "jobsBike": "0.257"
     }
   },
   {
@@ -51,7 +71,12 @@
       "growthRate": "0.00918",
       "dependencyRatio": "0.746",
       "weightedDensity": "943",
-      "homeLanguage": "0.0608"
+      "homeLanguage": "0.0608",
+      "dwellingHouse": "0.653",
+      "dwellingSemi": "0.103",
+      "dwellingApartment": "0.208",
+      "dwellingOther": "0.0362",
+      "jobsBike": "0.252"
     }
   },
   {
@@ -62,7 +87,12 @@
       "growthRate": "0.0173",
       "dependencyRatio": "0.71",
       "weightedDensity": "618",
-      "homeLanguage": "0.0555"
+      "homeLanguage": "0.0555",
+      "dwellingHouse": "0.822",
+      "dwellingSemi": "0.126",
+      "dwellingApartment": "0.042",
+      "dwellingOther": "0.0101",
+      "jobsBike": "0.251"
     }
   },
   {
@@ -73,7 +103,12 @@
       "growthRate": "0.0173",
       "dependencyRatio": "0.713",
       "weightedDensity": "1320",
-      "homeLanguage": "0.0489"
+      "homeLanguage": "0.0489",
+      "dwellingHouse": "0.543",
+      "dwellingSemi": "0.203",
+      "dwellingApartment": "0.227",
+      "dwellingOther": "0.0264",
+      "jobsBike": "0.0788"
     }
   },
   {
@@ -84,7 +119,12 @@
       "growthRate": "0.00922",
       "dependencyRatio": "0.719",
       "weightedDensity": "1590",
-      "homeLanguage": "0.0882"
+      "homeLanguage": "0.0882",
+      "dwellingHouse": "0.73",
+      "dwellingSemi": "0.176",
+      "dwellingApartment": "0.0875",
+      "dwellingOther": "0.00694",
+      "jobsBike": "0.0962"
     }
   },
   {
@@ -95,7 +135,12 @@
       "growthRate": "0.0153",
       "dependencyRatio": "0.743",
       "weightedDensity": "1590",
-      "homeLanguage": "0.0678"
+      "homeLanguage": "0.0678",
+      "dwellingHouse": "0.744",
+      "dwellingSemi": "0.104",
+      "dwellingApartment": "0.14",
+      "dwellingOther": "0.012",
+      "jobsBike": "0.0648"
     }
   },
   {
@@ -106,7 +151,12 @@
       "growthRate": "0.0185",
       "dependencyRatio": "0.788",
       "weightedDensity": "1480",
-      "homeLanguage": "0.0837"
+      "homeLanguage": "0.0837",
+      "dwellingHouse": "0.585",
+      "dwellingSemi": "0.109",
+      "dwellingApartment": "0.25",
+      "dwellingOther": "0.0556",
+      "jobsBike": "0.178"
     }
   },
   {
@@ -117,7 +167,12 @@
       "growthRate": "0.00775",
       "dependencyRatio": "0.71",
       "weightedDensity": "666",
-      "homeLanguage": "0.0329"
+      "homeLanguage": "0.0329",
+      "dwellingHouse": "0.83",
+      "dwellingSemi": "0.0633",
+      "dwellingApartment": "0.0967",
+      "dwellingOther": "0.0106",
+      "jobsBike": "0.192"
     }
   },
   {
@@ -128,7 +183,12 @@
       "growthRate": "0.0202",
       "dependencyRatio": "0.743",
       "weightedDensity": "2290",
-      "homeLanguage": "0.149"
+      "homeLanguage": "0.149",
+      "dwellingHouse": "0.661",
+      "dwellingSemi": "0.169",
+      "dwellingApartment": "0.164",
+      "dwellingOther": "0.00685",
+      "jobsBike": "0.049"
     }
   },
   {
@@ -139,7 +199,12 @@
       "growthRate": "0.0153",
       "dependencyRatio": "0.743",
       "weightedDensity": "1590",
-      "homeLanguage": "0.0857"
+      "homeLanguage": "0.0857",
+      "dwellingHouse": "0.745",
+      "dwellingSemi": "0.167",
+      "dwellingApartment": "0.0808",
+      "dwellingOther": "0.00713",
+      "jobsBike": "0.0642"
     }
   },
   {
@@ -150,7 +215,12 @@
       "growthRate": "0.0169",
       "dependencyRatio": "0.739",
       "weightedDensity": "3210",
-      "homeLanguage": "0.167"
+      "homeLanguage": "0.167",
+      "dwellingHouse": "0.55",
+      "dwellingSemi": "0.14",
+      "dwellingApartment": "0.302",
+      "dwellingOther": "0.0096",
+      "jobsBike": "0.0487"
     }
   },
   {
@@ -161,7 +231,12 @@
       "growthRate": "0.00304",
       "dependencyRatio": "0.709",
       "weightedDensity": "607",
-      "homeLanguage": "0.0265"
+      "homeLanguage": "0.0265",
+      "dwellingHouse": "0.799",
+      "dwellingSemi": "0.0955",
+      "dwellingApartment": "0.0961",
+      "dwellingOther": "0.0117",
+      "jobsBike": "0.372"
     }
   },
   {
@@ -172,7 +247,12 @@
       "growthRate": "0.00524",
       "dependencyRatio": "0.748",
       "weightedDensity": "688",
-      "homeLanguage": "0.0289"
+      "homeLanguage": "0.0289",
+      "dwellingHouse": "0.771",
+      "dwellingSemi": "0.128",
+      "dwellingApartment": "0.0725",
+      "dwellingOther": "0.0286",
+      "jobsBike": "0.257"
     }
   },
   {
@@ -183,7 +263,12 @@
       "growthRate": "0.00912",
       "dependencyRatio": "0.711",
       "weightedDensity": "1050",
-      "homeLanguage": "0.0271"
+      "homeLanguage": "0.0271",
+      "dwellingHouse": "0.782",
+      "dwellingSemi": "0.123",
+      "dwellingApartment": "0.0822",
+      "dwellingOther": "0.0143",
+      "jobsBike": "0.0901"
     }
   },
   {
@@ -194,7 +279,12 @@
       "growthRate": "0.0161",
       "dependencyRatio": "0.682",
       "weightedDensity": "799",
-      "homeLanguage": "0.0215"
+      "homeLanguage": "0.0215",
+      "dwellingHouse": "0.676",
+      "dwellingSemi": "0.136",
+      "dwellingApartment": "0.154",
+      "dwellingOther": "0.0342",
+      "jobsBike": "0.094"
     }
   },
   {
@@ -205,7 +295,12 @@
       "growthRate": "0.00911",
       "dependencyRatio": "0.702",
       "weightedDensity": "851",
-      "homeLanguage": "0.0293"
+      "homeLanguage": "0.0293",
+      "dwellingHouse": "0.758",
+      "dwellingSemi": "0.159",
+      "dwellingApartment": "0.0691",
+      "dwellingOther": "0.0134",
+      "jobsBike": "0.387"
     }
   },
   {
@@ -216,7 +311,12 @@
       "growthRate": "0.00973",
       "dependencyRatio": "0.754",
       "weightedDensity": "898",
-      "homeLanguage": "0.032"
+      "homeLanguage": "0.032",
+      "dwellingHouse": "0.767",
+      "dwellingSemi": "0.119",
+      "dwellingApartment": "0.0971",
+      "dwellingOther": "0.0171",
+      "jobsBike": "0.181"
     }
   },
   {
@@ -227,7 +327,12 @@
       "growthRate": "0.0189",
       "dependencyRatio": "0.74",
       "weightedDensity": "1590",
-      "homeLanguage": "0.164"
+      "homeLanguage": "0.164",
+      "dwellingHouse": "0.798",
+      "dwellingSemi": "0.113",
+      "dwellingApartment": "0.0815",
+      "dwellingOther": "0.00895",
+      "jobsBike": "0.0094"
     }
   },
   {
@@ -238,7 +343,12 @@
       "growthRate": "0.0114",
       "dependencyRatio": "0.709",
       "weightedDensity": "1220",
-      "homeLanguage": "0.0748"
+      "homeLanguage": "0.0748",
+      "dwellingHouse": "0.7",
+      "dwellingSemi": "0.132",
+      "dwellingApartment": "0.152",
+      "dwellingOther": "0.0167",
+      "jobsBike": "0.191"
     }
   }
 ]

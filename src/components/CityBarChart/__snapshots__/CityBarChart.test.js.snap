@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<div className=\\"wrapper\\">
+  <div className=\\"titleWrapper\\">
+    <h2 className=\\"title\\" style={{...}}>
+      Population
+    </h2>
+    <AboutTooltip description=\\"The population index is all about population and event more!!\\" position=\\"bottom\\" size={18} />
+  </div>
+  <AbstractWidget config={{...}} />
+</div>"
+`;

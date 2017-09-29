@@ -9,6 +9,7 @@ exports[`should match Snapshot 1`] = `
     <pre>
       {
         &quot;name&quot;: &quot;Mock category&quot;,
+        &quot;colorName&quot;: &quot;jobs&quot;,
         &quot;id&quot;: &quot;mock&quot;
       }
     </pre>

@@ -88,7 +88,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom --colors",
-    "test:update": "npm run test -- --updateSnapshot",
+    "test:coverage": "npm run test -- --coverage",
     "test:ci": "CI=true npm run test -- --coverage --runInBand --colors",
     "generate-city-data": "node -r @std/esm scripts/convert.js < resources/cities.csv > public/data/smartCitiesData.json"
   },

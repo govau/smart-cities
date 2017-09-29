@@ -1,0 +1,18 @@
+@import '~style/variables';
+
+.legendItem {
+  margin-right: 24px;
+}
+
+.legendItemMarker {
+  display: inline-block;
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  margin-right: 5px;
+  vertical-align: -2px;
+}
+
+.legendItemText {
+  @include type-detail-text--bold;
+}

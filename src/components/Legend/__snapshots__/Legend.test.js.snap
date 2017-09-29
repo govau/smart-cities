@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<div className={[undefined]}>
+  <div className=\\"legendItem\\">
+    <span style={{...}} className=\\"legendItemMarker\\" />
+    <span className=\\"legendItemText\\">
+      House
+    </span>
+  </div>
+  <div className=\\"legendItem\\">
+    <span style={{...}} className=\\"legendItemMarker\\" />
+    <span className=\\"legendItemText\\">
+      Apartment
+    </span>
+  </div>
+  <div className=\\"legendItem\\">
+    <span style={{...}} className=\\"legendItemMarker\\" />
+    <span className=\\"legendItemText\\">
+      Other
+    </span>
+  </div>
+</div>"
+`;

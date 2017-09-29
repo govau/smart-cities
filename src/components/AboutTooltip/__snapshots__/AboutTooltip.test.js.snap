@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<Tooltip description=\\"This is the content of the tooltip\\" position=\\"left\\">
+  <img className=\\"icon\\" width={16} height={16} src=\\"Question.svg\\" alt=\\"about this indicator\\" />
+</Tooltip>"
+`;
