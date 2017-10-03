@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<div style={{...}}>
+  <div className=\\"container\\">
+    <div className=\\"titleText\\">
+      <h1 className=\\"title\\">
+        Mock category
+      </h1>
+      <p className=\\"description\\">
+        This is the mock category
+      </p>
+    </div>
+    <IndicatorCard size=\\"large\\" className=\\"card\\" indicator={{...}} value={NaN} />
+  </div>
+</div>"
+`;

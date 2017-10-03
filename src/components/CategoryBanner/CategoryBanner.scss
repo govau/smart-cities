@@ -1,0 +1,42 @@
+@import '~style/variables';
+
+.container {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+  }
+}
+
+.titleText {
+  margin-bottom: 32px;
+
+  @include for-tablet-portrait-up {
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
+}
+
+.title {
+  @include type-h1;
+
+  margin-bottom: 16px;
+}
+
+.description {
+  @include type-intro-text;
+}
+
+.card {
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    flex: none;
+    width: 300px; // TODO (davidg): should allow for the widest value
+    margin-left: auto; // push to the right
+  }
+}

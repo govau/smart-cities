@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import AllCitiesCategory from './AllCitiesCategory';
+import CategoryBanner from './CategoryBanner';
 
-jest.mock('../../CategoryBanner/CategoryBanner', () => 'CategoryBanner');
+jest.mock('../Card/IndicatorCard/IndicatorCard', () => 'IndicatorCard');
 
 const defaultProps = {
   category: {
@@ -29,7 +29,7 @@ const defaultProps = {
 
 it('should match Snapshot', () => {
   const component = shallow(
-    <AllCitiesCategory {...defaultProps} />
+    <CategoryBanner {...defaultProps} />
   );
 
   expect(component.debug()).toMatchSnapshot();

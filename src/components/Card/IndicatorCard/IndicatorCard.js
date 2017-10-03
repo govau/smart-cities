@@ -1,20 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import numeral from 'numeral';
 import Card from '../Card';
 import style from './IndicatorCard.scss';
 import {
   CARD_SIZES,
   INDICATOR_CARD_TYPES,
 } from '../../../constants';
+import stripPrefixAndSuffix from '../../../helpers/stripPrefixAndSuffix';
 
 const classnames = require('classnames/bind').bind(style);
 
 const IndicatorCard = (props) => {
+  const { indicator } = props;
   const className = classnames(
     style.wrapper,
     `wrapper__${props.size}`,
     props.className,
   );
+
+  // Most indicators define a format. If supplied, this format is applied to the number here
+  const formattedNumber = indicator.format
+    ? numeral(props.value).format(indicator.format)
+    : props.value;
+
+  // The prefix and suffix are rendered in different spans, so we split them out here
+  const [formatPrefix, value, formatSuffix] = stripPrefixAndSuffix(formattedNumber);
+
+  // In addition to the format prefix/suffix (e.g. "%")
+  // a card specific prefix/suffix can be added (e.g. "per year")
+  const displayPrefix = `${indicator.cardPrefix || ''}${formatPrefix}`;
+  const displaySuffix = `${formatSuffix}${indicator.cardSuffix || ''}`;
 
   return (
     <Card
@@ -22,17 +38,17 @@ const IndicatorCard = (props) => {
       type={INDICATOR_CARD_TYPES.INDICATOR}
       className={className}
     >
-      <p className={style.header}>{props.header}</p>
+      <p className={style.header}>{indicator.name}</p>
 
       <div className={style.indicatorWrapper}>
-        {!!props.prefix && (
-          <span className={classnames(style.prefix, style.symbol)}>{props.prefix}</span>
+        {!!displayPrefix && (
+          <span className={classnames(style.prefix, style.symbol)}>{displayPrefix}</span>
         )}
 
-        <span className={style.number}>{props.number}</span>
+        <span className={style.number}>{value}</span>
 
-        {!!props.suffix && (
-          <span className={classnames(style.suffix, style.symbol)}>{props.suffix}</span>
+        {!!displaySuffix && (
+          <span className={classnames(style.suffix, style.symbol)}>{displaySuffix}</span>
         )}
       </div>
     </Card>
@@ -41,11 +57,17 @@ const IndicatorCard = (props) => {
 
 IndicatorCard.propTypes = {
   className: PropTypes.string,
-  header: PropTypes.string,
-  number: PropTypes.string,
-  prefix: PropTypes.string,
+  indicator: PropTypes.shape({
+    cardPrefix: PropTypes.string,
+    cardSuffix: PropTypes.string,
+    format: PropTypes.string,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]).isRequired,
   size: PropTypes.oneOf(Object.values(CARD_SIZES)),
-  suffix: PropTypes.string,
 };
 
 IndicatorCard.defaultProps = {

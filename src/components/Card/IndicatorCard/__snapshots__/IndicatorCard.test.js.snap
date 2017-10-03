@@ -6,13 +6,27 @@ exports[`should match Snapshot 1`] = `
 >
   <p
     className="header"
-  />
+  >
+    The population growth
+  </p>
   <div
     className="indicatorWrapper"
   >
     <span
+      className="prefix symbol"
+    >
+      The
+    </span>
+    <span
       className="number"
-    />
+    >
+      7700
+    </span>
+    <span
+      className="suffix symbol"
+    >
+      %per annum
+    </span>
   </div>
 </div>
 `;

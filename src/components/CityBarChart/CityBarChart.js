@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { AbstractWidget } from '@gov.au/datavizkit';
 import merge from 'lodash/merge';
+import numeral from 'numeral';
 import AboutTooltip from '../AboutTooltip/AboutTooltip';
 import Legend from '../Legend/Legend';
 import baseChartConfig from '../../helpers/baseChartConfig';
 import getColorVariant from '../../helpers/getColorVariant';
 import {
   COLOR_NAMES,
-  CHART_UNITS,
+  DATA_TYPES,
   INDICATORS,
 } from '../../constants';
 import style from './CityBarChart.scss';
@@ -22,10 +23,10 @@ const SERIES_SHADES = [
   '050',
 ];
 
-function getSeriesDataForIndicator(cities, indicator, multiplier) {
+function getSeriesDataForIndicator(cities, indicator) {
   return cities.map((city) => {
     if (indicator in city.indices) {
-      return Number(city.indices[indicator]) * multiplier;
+      return city.indices[indicator];
     }
 
     console.warn(`${indicator} is not a recognised indicator for ${city.name}`);
@@ -53,18 +54,22 @@ const CityBarChart = (props) => {
   // also be passed in explicitly (e.g. for stacked charts where there are more than one indicator)
   // so here we take the passed in value, or the value from the first indicator otherwise.
   const firstIndicator = INDICATORS[props.indicators[0]];
+
+  // check for indicators that don't have a numeric data type
+  const hasNonNumericIndicators = props.indicators.find(
+    indicator => INDICATORS[indicator].dataType !== DATA_TYPES.NUMBER,
+  );
+
+  if (hasNonNumericIndicators) {
+    console.warn(`All indicators passed to a bar chart must be numeric. Check ${props.indicators}`);
+    return null;
+  }
+
   const title = props.title || firstIndicator.name;
   const shortDescription = props.shortDescription || firstIndicator.shortDescription;
   const longDescription = props.longDescription || firstIndicator.longDescription;
 
   const data = sortChartData(props.cities, props.indicators[0]);
-
-  // We assume that if there is more than one indicator, they will all have the same units
-  const isPercentages = firstIndicator.units === CHART_UNITS.PERCENT;
-  const yAxisLabelFormat = isPercentages ? '{value}%' : '{value}';
-
-  // if the data represents percentages, multiply everything by 100
-  const multiplier = isPercentages ? 100 : 1;
 
   // series is an array even if there is only one indicator
   // so this works for a normal or a stacked chart
@@ -72,7 +77,7 @@ const CityBarChart = (props) => {
     index: props.indicators.length - i, // reverse sort the series (to counteract Highcharts)
     name: INDICATORS[indicator].name,
     color: getColorVariant(props.colorBase, SERIES_SHADES[i]),
-    data: getSeriesDataForIndicator(data, indicator, multiplier),
+    data: getSeriesDataForIndicator(data, indicator),
   }));
 
   // we set a left margin on the chart explicitly
@@ -104,9 +109,14 @@ const CityBarChart = (props) => {
       categories: data.map(city => city.name),
     },
     yAxis: {
-      ceiling: Math.round(props.ceiling ? props.ceiling * multiplier : undefined),
+      ceiling: props.ceiling,
       labels: {
-        format: yAxisLabelFormat,
+        formatter() {
+          // format the number using the indicator's defined format, if available
+          return firstIndicator.format
+            ? numeral(this.value).format(firstIndicator.format)
+            : this.value;
+        },
       },
       title: {
         text: shortDescription,

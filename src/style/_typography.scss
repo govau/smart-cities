@@ -14,7 +14,16 @@
 }
 
 @mixin type-h1 {
-  font-size: 44px;
+  font-size: 33px;
+  line-height: 1.2;
+
+  @include for-tablet-portrait-up {
+    font-size: 38px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 44px;
+  }
 }
 
 @mixin type-h3 {
@@ -37,7 +46,12 @@
 }
 
 @mixin type-intro-text {
-  font-size: 22px;
+  font-size: 20px;
+  line-height: 1.4;
+
+  @include for-tablet-landscape-up {
+    font-size: 22px;
+  }
 }
 
 @mixin type-indicator-card-title--large {

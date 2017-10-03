@@ -25,6 +25,17 @@ export const COLOR_NAMES = {
   EXTRA: 'extra',
 };
 
+export const AGGREGATION_METHODS = {
+  AVERAGE: 'AVERAGE',
+  MEDIAN: 'MEDIAN',
+  SUM: 'SUM',
+};
+
+export const DATA_TYPES = {
+  NUMBER: 'NUMBER',
+  TEXT: 'TEXT',
+};
+
 export const CHART_UNITS = {
   PERCENT: 'PERCENT',
   NUMBER: 'NUMBER',
