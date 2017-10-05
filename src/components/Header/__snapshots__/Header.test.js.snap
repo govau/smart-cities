@@ -1,10 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<header className=\\"wrapper\\">
-  <h1 className=\\"title\\">
-    Header
-  </h1>
+"<header>
+  <div className=\\"govContainer\\">
+    <img className=\\"star\\" src=\\"star-white.svg\\" alt=\\"star icon\\" />
+    <span className=\\"govAu\\">
+      GOV.AU
+    </span>
+    <span className=\\"govWebsite\\">
+      Official Australian Government Website
+    </span>
+    <div className=\\"compactTitle\\">
+      Smart Cities
+    </div>
+    <div className=\\"compactSubtitle\\">
+      Performance Dashboard
+    </div>
+  </div>
+  <div className=\\"mainContainer\\">
+    <div className=\\"titleContainer\\">
+      <div className=\\"projectStatus\\">
+        ALPHA
+      </div>
+      <h1 className=\\"title\\">
+        Smart Cities Performance Dashboard
+      </h1>
+      <div className=\\"subtitle\\">
+        Smart Cities Performance Framework
+      </div>
+    </div>
+    <div className=\\"orgContainer\\">
+      <a className=\\"orgLink\\" href=\\"https://dta.gov.au/\\">
+        <img className=\\"orgLogo\\" src=\\"dta-logo.svg\\" alt=\\"DTA logo\\" />
+      </a>
+      <a className=\\"contactLink\\" href=\\"mailto:performance-dashboard@digital.gov.au\\">
+        Contact us
+      </a>
+    </div>
+  </div>
   <Connect(CategoryNav) categoryId=\\"jobs\\" cityId=\\"perth\\" />
 </header>"
 `;

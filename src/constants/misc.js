@@ -41,3 +41,8 @@ export const CHART_UNITS = {
   NUMBER: 'NUMBER',
   DOLLARS: 'DOLLARS',
 };
+
+export const LINKS = {
+  ORG: 'https://dta.gov.au/',
+  CONTACT_US: 'mailto:performance-dashboard@digital.gov.au',
+};

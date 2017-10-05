@@ -31,7 +31,11 @@
 }
 
 @mixin type-nav-horizontal {
-  font-size: 18px;
+  font-size: 12px;
+
+  @include for-desktop-up {
+    font-size: 16px;
+  }
 }
 
 @mixin type-nav-horizontal--selected {

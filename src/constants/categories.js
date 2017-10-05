@@ -28,6 +28,7 @@ export default [
     id: 'infrastructure',
     colorName: COLOR_NAMES.INFRASTRUCTURE,
     name: 'Infrastructure & Other Things',
+    navName: 'Infrastructure',
     description: 'Infrastructure and Investment encompasses all key dimensions of the city’s investment environment, with a particular focus on the quality, efficiency and effectiveness of infrastructure.',
     heroIndicator: {
       id: 'population',

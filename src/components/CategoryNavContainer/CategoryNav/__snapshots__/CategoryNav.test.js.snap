@@ -1,19 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<div>
+"<div className=\\"categoryNav\\">
   <NavLink className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/mock/overview\\" ariaCurrent=\\"true\\">
-    Overview
+    <div className=\\"overview\\">
+      Overview
+    </div>
   </NavLink>
   <NavLink className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/mock/perth\\" ariaCurrent=\\"true\\">
-     
-    Perth
-     
+    <div className=\\"undefined\\">
+      Perth
+    </div>
   </NavLink>
   <NavLink className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/mock/sydney\\" ariaCurrent=\\"true\\">
-     
-    Sydney
-     
+    <div className=\\"undefined\\">
+      Sydney
+    </div>
   </NavLink>
 </div>"
 `;
