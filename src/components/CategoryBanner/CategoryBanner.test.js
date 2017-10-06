@@ -8,10 +8,7 @@ const defaultProps = {
   category: {
     colorName: 'jobs',
     description: 'This is the mock category',
-    heroIndicator: {
-      id: 'population',
-      aggregationMethod: 'SUM',
-    },
+    heroIndicatorId: 'population',
     id: 'mock',
     name: 'Mock category',
   },
@@ -33,4 +30,16 @@ it('should match Snapshot', () => {
   );
 
   expect(component.debug()).toMatchSnapshot();
+});
+
+it('should set the background color', () => {
+  const component = shallow(
+    <CategoryBanner {...defaultProps} />
+  );
+
+  const componentStyle = component.find('div').at(0).prop('style');
+  // note, here the color is the string 'JOBS_100' because of the way
+  // styles are imported during tests, but in reality
+  // this will be the hex color
+  expect(componentStyle.backgroundColor).toBe('JOBS_100');
 });

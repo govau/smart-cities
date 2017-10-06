@@ -48,20 +48,20 @@ function sortChartData(cities, indicator) {
 
 const CityBarChart = (props) => {
   // If more than one indicator is passed in, this becomes a stacked bar chart
-  const isStacked = props.indicators.length > 1;
+  const isStacked = props.indicatorIds.length > 1;
 
   // The indicator data contains things like titles and descriptions. But these can
   // also be passed in explicitly (e.g. for stacked charts where there are more than one indicator)
   // so here we take the passed in value, or the value from the first indicator otherwise.
-  const firstIndicator = INDICATORS[props.indicators[0]];
+  const firstIndicator = INDICATORS[props.indicatorIds[0]];
 
   // check for indicators that don't have a numeric data type
-  const hasNonNumericIndicators = props.indicators.find(
+  const hasNonNumericIndicators = props.indicatorIds.find(
     indicator => INDICATORS[indicator].dataType !== DATA_TYPES.NUMBER,
   );
 
   if (hasNonNumericIndicators) {
-    console.warn(`All indicators passed to a bar chart must be numeric. Check ${props.indicators}`);
+    console.warn(`All indicators passed to a bar chart must be numeric. Check ${props.indicatorIds}`);
     return null;
   }
 
@@ -69,12 +69,12 @@ const CityBarChart = (props) => {
   const shortDescription = props.shortDescription || firstIndicator.shortDescription;
   const longDescription = props.longDescription || firstIndicator.longDescription;
 
-  const data = sortChartData(props.cities, props.indicators[0]);
+  const data = sortChartData(props.cities, props.indicatorIds[0]);
 
   // series is an array even if there is only one indicator
   // so this works for a normal or a stacked chart
-  const series = props.indicators.map((indicator, i) => ({
-    index: props.indicators.length - i, // reverse sort the series (to counteract Highcharts)
+  const series = props.indicatorIds.map((indicator, i) => ({
+    index: props.indicatorIds.length - i, // reverse sort the series (to counteract Highcharts)
     name: INDICATORS[indicator].name,
     color: getColorVariant(props.colorBase, SERIES_SHADES[i]),
     data: getSeriesDataForIndicator(data, indicator),
@@ -176,7 +176,7 @@ CityBarChart.propTypes = {
   })).isRequired,
   className: PropTypes.string,
   colorBase: PropTypes.oneOf(Object.values(COLOR_NAMES)).isRequired,
-  indicators: PropTypes.arrayOf(
+  indicatorIds: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(INDICATORS)),
   ).isRequired,
   longDescription: PropTypes.string,

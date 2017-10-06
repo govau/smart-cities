@@ -3,374 +3,484 @@
     "name": "Albury - Wodonga",
     "id": "albury-wodonga",
     "indices": {
+      "participationRate": 0.615,
+      "gdp": 52600000000,
+      "educationalAttainmentYr12": 0.446,
       "population": 88900,
       "growthRate": 0.013,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "industry.nsw.gov.au/invest-in-nsw/, invest.vic.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.801,
       "dwellingSemi": 0.156,
       "dwellingApartment": 0.0315,
       "dwellingOther": 0.0118,
-      "jobsBike": 0.0732
+      "jobsWalk": 0,
+      "jobsBike": 0.0732,
+      "jobsCar": 0.979,
+      "activeJourneys": 0.0501,
+      "publicJourneys": 0.00705
     }
   },
   {
     "name": "Australian Capital Territory",
     "id": "australian-capital-territory",
     "indices": {
+      "participationRate": 0.709,
+      "gdp": 0,
+      "educationalAttainmentYr12": 0.744,
       "population": 390000,
       "growthRate": 0.0131,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "investcanberra.com/",
-      "travelTimeIncrease": 32,
       "dwellingHouse": 0.647,
       "dwellingSemi": 0.181,
       "dwellingApartment": 0.167,
       "dwellingOther": 0.00594,
-      "jobsBike": 0.126
+      "jobsWalk": 0.0103,
+      "jobsBike": 0.126,
+      "jobsCar": 0.98,
+      "activeJourneys": 0.0668,
+      "publicJourneys": 0.0639
     }
   },
   {
     "name": "Ballarat",
     "id": "ballarat",
     "indices": {
+      "participationRate": 0.627,
+      "gdp": 49900000000,
+      "educationalAttainmentYr12": 0.497,
       "population": 99800,
       "growthRate": 0.0133,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "invest.vic.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.806,
       "dwellingSemi": 0.145,
       "dwellingApartment": 0.0398,
       "dwellingOther": 0.00893,
-      "jobsBike": 0.252
+      "jobsWalk": 0,
+      "jobsBike": 0.252,
+      "jobsCar": 1,
+      "activeJourneys": 0.0414,
+      "publicJourneys": 0.0144
     }
   },
   {
     "name": "Bendigo",
     "id": "bendigo",
     "indices": {
+      "participationRate": 0.574,
+      "gdp": 48800000000,
+      "educationalAttainmentYr12": 0.464,
       "population": 92900,
       "growthRate": 0.0121,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "invest.vic.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.868,
       "dwellingSemi": 0.0993,
       "dwellingApartment": 0.0221,
       "dwellingOther": 0.0104,
-      "jobsBike": 0.257
+      "jobsWalk": 0,
+      "jobsBike": 0.257,
+      "jobsCar": 1,
+      "activeJourneys": 0.0465,
+      "publicJourneys": 0.0164
     }
   },
   {
     "name": "Cairns",
     "id": "cairns",
     "indices": {
+      "participationRate": 0.628,
+      "gdp": 62300000000,
+      "educationalAttainmentYr12": 0.562,
       "population": 148000,
       "growthRate": 0.00918,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "tiq.qld.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.653,
       "dwellingSemi": 0.103,
       "dwellingApartment": 0.208,
       "dwellingOther": 0.0362,
-      "jobsBike": 0.252
+      "jobsWalk": 0.0472,
+      "jobsBike": 0.252,
+      "jobsCar": 1,
+      "activeJourneys": 0.0583,
+      "publicJourneys": 0.0187
     }
   },
   {
     "name": "Geelong",
     "id": "geelong",
     "indices": {
+      "participationRate": 0.618,
+      "gdp": 49300000000,
+      "educationalAttainmentYr12": 0.507,
       "population": 187000,
       "growthRate": 0.0173,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "invest.vic.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.822,
       "dwellingSemi": 0.126,
       "dwellingApartment": 0.042,
       "dwellingOther": 0.0101,
-      "jobsBike": 0.251
+      "jobsWalk": 0.0076,
+      "jobsBike": 0.251,
+      "jobsCar": 1,
+      "activeJourneys": 0.0416,
+      "publicJourneys": 0.0233
     }
   },
   {
     "name": "Gold Coast - Tweed Heads",
     "id": "gold-coast-tweed-heads",
     "indices": {
+      "participationRate": 0.634,
+      "gdp": 57200000000,
+      "educationalAttainmentYr12": 0.556,
       "population": 625000,
       "growthRate": 0.0173,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "tiq.qld.gov.au/",
-      "travelTimeIncrease": 43,
       "dwellingHouse": 0.543,
       "dwellingSemi": 0.203,
       "dwellingApartment": 0.227,
       "dwellingOther": 0.0264,
-      "jobsBike": 0.0788
+      "jobsWalk": 0.0082,
+      "jobsBike": 0.0788,
+      "jobsCar": 0.766,
+      "activeJourneys": 0.0417,
+      "publicJourneys": 0.0229
     }
   },
   {
     "name": "Greater Adelaide",
     "id": "greater-adelaide",
     "indices": {
+      "participationRate": 0.634,
+      "gdp": 58600000000,
+      "educationalAttainmentYr12": 0.553,
       "population": 1320000,
       "growthRate": 0.00922,
       "dispersion": 0.18,
       "roadCongestionCost": 1.11,
-      "investmentPlanLink": "invest.sa.gov.au/",
-      "travelTimeIncrease": 45,
       "dwellingHouse": 0.73,
       "dwellingSemi": 0.176,
       "dwellingApartment": 0.0875,
       "dwellingOther": 0.00694,
-      "jobsBike": 0.0962
+      "jobsWalk": 0.00935,
+      "jobsBike": 0.0962,
+      "jobsCar": 0.77,
+      "activeJourneys": 0.0386,
+      "publicJourneys": 0.089
     }
   },
   {
     "name": "Greater Brisbane",
     "id": "greater-brisbane",
     "indices": {
+      "participationRate": 0.672,
+      "gdp": 68300000000,
+      "educationalAttainmentYr12": 0.617,
       "population": 2310000,
       "growthRate": 0.0153,
       "dispersion": 0,
       "roadCongestionCost": 2.29,
-      "investmentPlanLink": "tiq.qld.gov.au/",
-      "travelTimeIncrease": 47,
       "dwellingHouse": 0.744,
       "dwellingSemi": 0.104,
       "dwellingApartment": 0.14,
       "dwellingOther": 0.012,
-      "jobsBike": 0.0648
+      "jobsWalk": 0.00564,
+      "jobsBike": 0.0648,
+      "jobsCar": 0.64,
+      "activeJourneys": 0.0446,
+      "publicJourneys": 0.134
     }
   },
   {
     "name": "Greater Darwin",
     "id": "greater-darwin",
     "indices": {
+      "participationRate": 0.759,
+      "gdp": 94300000000,
+      "educationalAttainmentYr12": 0.584,
       "population": 142000,
       "growthRate": 0.0185,
       "dispersion": 0,
       "roadCongestionCost": 0.03,
-      "investmentPlanLink": "investnt.nt.gov.au/about/index.shtml/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.585,
       "dwellingSemi": 0.109,
       "dwellingApartment": 0.25,
       "dwellingOther": 0.0556,
-      "jobsBike": 0.178
+      "jobsWalk": 0.03,
+      "jobsBike": 0.178,
+      "jobsCar": 0.868,
+      "activeJourneys": 0.0813,
+      "publicJourneys": 0.0353
     }
   },
   {
     "name": "Greater Hobart",
     "id": "greater-hobart",
     "indices": {
+      "participationRate": 0.641,
+      "gdp": 51900000000,
+      "educationalAttainmentYr12": 0.504,
       "population": 221000,
       "growthRate": 0.00775,
       "dispersion": 0.43,
       "roadCongestionCost": 0.086,
-      "investmentPlanLink": "cg.tas.gov.au/",
-      "travelTimeIncrease": 51,
       "dwellingHouse": 0.83,
       "dwellingSemi": 0.0633,
       "dwellingApartment": 0.0967,
       "dwellingOther": 0.0106,
-      "jobsBike": 0.192
+      "jobsWalk": 0.0274,
+      "jobsBike": 0.192,
+      "jobsCar": 0.849,
+      "activeJourneys": 0.0643,
+      "publicJourneys": 0.0536
     }
   },
   {
     "name": "Greater Melbourne",
     "id": "greater-melbourne",
     "indices": {
+      "participationRate": 0.673,
+      "gdp": 66400000000,
+      "educationalAttainmentYr12": 0.642,
       "population": 4530000,
       "growthRate": 0.0202,
       "dispersion": 0,
       "roadCongestionCost": 4.62,
-      "investmentPlanLink": "invest.vic.gov.au/",
-      "travelTimeIncrease": 58,
       "dwellingHouse": 0.661,
       "dwellingSemi": 0.169,
       "dwellingApartment": 0.164,
       "dwellingOther": 0.00685,
-      "jobsBike": 0.049
+      "jobsWalk": 0.00362,
+      "jobsBike": 0.049,
+      "jobsCar": 0.589,
+      "activeJourneys": 0.047,
+      "publicJourneys": 0.146
     }
   },
   {
     "name": "Greater Perth",
     "id": "greater-perth",
     "indices": {
+      "participationRate": 0.67,
+      "gdp": 70700000000,
+      "educationalAttainmentYr12": 0.603,
       "population": 2040000,
       "growthRate": 0.0153,
       "dispersion": 0.28,
       "roadCongestionCost": 1.99,
-      "investmentPlanLink": "mra.wa.gov.au/investment-opportunities/",
-      "travelTimeIncrease": 40,
       "dwellingHouse": 0.745,
       "dwellingSemi": 0.167,
       "dwellingApartment": 0.0808,
       "dwellingOther": 0.00713,
-      "jobsBike": 0.0642
+      "jobsWalk": 0.00612,
+      "jobsBike": 0.0642,
+      "jobsCar": 0.682,
+      "activeJourneys": 0.0371,
+      "publicJourneys": 0.11
     }
   },
   {
     "name": "Greater Sydney",
     "id": "greater-sydney",
     "indices": {
+      "participationRate": 0.662,
+      "gdp": 81200000000,
+      "educationalAttainmentYr12": 0.649,
       "population": 4920000,
       "growthRate": 0.0169,
       "dispersion": 0.03,
       "roadCongestionCost": 6.12,
-      "investmentPlanLink": "industry.nsw.gov.au/invest-in-nsw",
-      "travelTimeIncrease": 68,
       "dwellingHouse": 0.55,
       "dwellingSemi": 0.14,
       "dwellingApartment": 0.302,
       "dwellingOther": 0.0096,
-      "jobsBike": 0.0487
+      "jobsWalk": 0.00481,
+      "jobsBike": 0.0487,
+      "jobsCar": 0.561,
+      "activeJourneys": 0.0521,
+      "publicJourneys": 0.207
     }
   },
   {
     "name": "Launceston",
     "id": "launceston",
     "indices": {
+      "participationRate": 0.608,
+      "gdp": 49100000000,
+      "educationalAttainmentYr12": 0.43,
       "population": 86600,
       "growthRate": 0.00304,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "cg.tas.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.799,
       "dwellingSemi": 0.0955,
       "dwellingApartment": 0.0961,
       "dwellingOther": 0.0117,
-      "jobsBike": 0.372
+      "jobsWalk": 0.0663,
+      "jobsBike": 0.372,
+      "jobsCar": 1,
+      "activeJourneys": 0.0508,
+      "publicJourneys": 0.0175
     }
   },
   {
     "name": "Mackay",
     "id": "mackay",
     "indices": {
+      "participationRate": 0.757,
+      "gdp": 83400000000,
+      "educationalAttainmentYr12": 0.477,
       "population": 85500,
       "growthRate": 0.00524,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "tiq.qld.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.771,
       "dwellingSemi": 0.128,
       "dwellingApartment": 0.0725,
       "dwellingOther": 0.0286,
-      "jobsBike": 0.257
+      "jobsWalk": 0.0326,
+      "jobsBike": 0.257,
+      "jobsCar": 0.989,
+      "activeJourneys": 0.0387,
+      "publicJourneys": 0.00921
     }
   },
   {
     "name": "Newcastle - Maitland",
     "id": "newcastle-maitland",
     "indices": {
+      "participationRate": 0.633,
+      "gdp": 57000000000,
+      "educationalAttainmentYr12": 0.458,
       "population": 434000,
       "growthRate": 0.00912,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "industry.nsw.gov.au/invest-in-nsw/",
-      "travelTimeIncrease": 34,
       "dwellingHouse": 0.782,
       "dwellingSemi": 0.123,
       "dwellingApartment": 0.0822,
       "dwellingOther": 0.0143,
-      "jobsBike": 0.0901
+      "jobsWalk": 0.012,
+      "jobsBike": 0.0901,
+      "jobsCar": 0.795,
+      "activeJourneys": 0.0345,
+      "publicJourneys": 0.0284
     }
   },
   {
     "name": "Sunshine Coast",
     "id": "sunshine-coast",
     "indices": {
+      "participationRate": 0.615,
+      "gdp": 47500000000,
+      "educationalAttainmentYr12": 0.534,
       "population": 302000,
       "growthRate": 0.0161,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "tiq.qld.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.676,
       "dwellingSemi": 0.136,
       "dwellingApartment": 0.154,
       "dwellingOther": 0.0342,
-      "jobsBike": 0.094
+      "jobsWalk": 0.0075,
+      "jobsBike": 0.094,
+      "jobsCar": 0.7,
+      "activeJourneys": 0.0413,
+      "publicJourneys": 0.0109
     }
   },
   {
     "name": "Toowoomba",
     "id": "toowoomba",
     "indices": {
+      "participationRate": 0.65,
+      "gdp": 62800000000,
+      "educationalAttainmentYr12": 0.516,
       "population": 115000,
       "growthRate": 0.00911,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "tiq.qld.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.758,
       "dwellingSemi": 0.159,
       "dwellingApartment": 0.0691,
       "dwellingOther": 0.0134,
-      "jobsBike": 0.387
+      "jobsWalk": 0.054,
+      "jobsBike": 0.387,
+      "jobsCar": 1,
+      "activeJourneys": 0.043,
+      "publicJourneys": 0.00511
     }
   },
   {
     "name": "Townsville",
     "id": "townsville",
     "indices": {
+      "participationRate": 0.597,
+      "gdp": 62600000000,
+      "educationalAttainmentYr12": 0.553,
       "population": 180000,
       "growthRate": 0.00973,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "tiq.qld.gov.au/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.767,
       "dwellingSemi": 0.119,
       "dwellingApartment": 0.0971,
       "dwellingOther": 0.0171,
-      "jobsBike": 0.181
+      "jobsWalk": 0.0216,
+      "jobsBike": 0.181,
+      "jobsCar": 0.862,
+      "activeJourneys": 0.05,
+      "publicJourneys": 0.013
     }
   },
   {
     "name": "Western Sydney",
     "id": "western-sydney",
     "indices": {
+      "participationRate": 0.626,
+      "gdp": 41900000000,
+      "educationalAttainmentYr12": 0.511,
       "population": 1030000,
       "growthRate": 0.0189,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "industry.nsw.gov.au/invest-in-nsw/",
-      "travelTimeIncrease": 0,
       "dwellingHouse": 0.798,
       "dwellingSemi": 0.113,
       "dwellingApartment": 0.0815,
       "dwellingOther": 0.00895,
-      "jobsBike": 0.0094
+      "jobsWalk": 0.000853,
+      "jobsBike": 0.0094,
+      "jobsCar": 0.336,
+      "activeJourneys": 0.0303,
+      "publicJourneys": 0.0405
     }
   },
   {
     "name": "Wollongong",
     "id": "wollongong",
     "indices": {
+      "participationRate": 0.603,
+      "gdp": 44700000000,
+      "educationalAttainmentYr12": 0.472,
       "population": 292000,
       "growthRate": 0.0114,
       "dispersion": 0,
       "roadCongestionCost": 0,
-      "investmentPlanLink": "industry.nsw.gov.au/invest-in-nsw/",
-      "travelTimeIncrease": 25,
       "dwellingHouse": 0.7,
       "dwellingSemi": 0.132,
       "dwellingApartment": 0.152,
       "dwellingOther": 0.0167,
-      "jobsBike": 0.191
+      "jobsWalk": 0.00528,
+      "jobsBike": 0.191,
+      "jobsCar": 0.992,
+      "activeJourneys": 0.0408,
+      "publicJourneys": 0.03
     }
   }
 ]

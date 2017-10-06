@@ -6,7 +6,7 @@ exports[`should match Snapshot 1`] = `
     <h2 className=\\"title\\" style={{...}}>
       The population
     </h2>
-    <AboutTooltip description=\\"The population index is all about population\\" position=\\"bottom\\" size={18} />
+    <AboutTooltip description=\\"TODO\\" position=\\"bottom\\" size={18} />
   </div>
   <AbstractWidget config={{...}} />
 </div>"

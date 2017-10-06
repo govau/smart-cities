@@ -1,0 +1,102 @@
+@import '~style/variables';
+
+.container {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @include for-tablet-landscape-up {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.textWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 0;
+    width: 25%;
+    flex: none;
+  }
+}
+
+.iconWrapper {
+  // TODO (davidg): implement real icons
+  border: 1px dashed $color-grey--500;
+  width: 80px;
+  height: 80px;
+  flex: none;
+  margin-right: 8px;
+}
+
+.title {
+  @include type-nav-horizontal;
+
+  margin-left: 6px;
+}
+
+.cardRow {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 8px;
+
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+    margin: 0 -8px 8px;
+    align-items: flex-start;
+  }
+
+  @include for-tablet-landscape-up {
+    width: 75%;
+    margin: 0 0 16px;
+  }
+}
+
+.cardWrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 0 16px;
+
+  @include for-tablet-portrait-up {
+    width: calc(33.333% - 16px);
+    margin: 0 8px;
+  }
+
+  @include for-tablet-landscape-up {
+    margin: 0 0 0 16px;
+  }
+}
+
+.card {
+  width: 100%;
+}
+
+// We don't want the link to affect
+// the vertical alignment of the cards
+// so we make it absolute
+.linkWrapper {
+  @include type-detail-text--bold;
+
+  position: absolute;
+  bottom: -27px;
+  right: 0;
+}
+
+.linkText {
+  margin-right: 8px;
+}
+
+.linkIcon {
+  // TODO (davidg): implement real icons
+  display: inline;
+  padding: 0 9px;
+  border: 1px dashed $color-grey--500;
+  height: 20px;
+}

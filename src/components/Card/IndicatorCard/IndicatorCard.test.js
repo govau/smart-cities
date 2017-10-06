@@ -30,6 +30,17 @@ it('should apply the correct size class', () => {
   expect(component.hasClass('wrapper__large')).toBe(true);
 });
 
+it('should handle an indicator being passed as a string', () => {
+  const component =  shallow(
+    <IndicatorCard
+      {...defaultProps}
+      indicator="population"
+    />
+  );
+
+  expect(component.find('.header').text()).toBe('The population');
+});
+
 it('should render no prefix or suffix when none are available', () => {
   const component =  shallow(
     <IndicatorCard

@@ -8,12 +8,22 @@ const defaultProps = {
   category: {
     colorName: 'jobs',
     description: 'This is the mock category',
-    heroIndicator: {
-      id: 'population',
-      aggregationMethod: 'SUM',
-    },
+    heroIndicatorId: 'population',
     id: 'mock',
     name: 'Mock category',
+    subCategories: [
+      {
+        name: 'Buying houses',
+        colorVariation: '100',
+        indicatorIds: [],
+      },
+      {
+        name: 'Living in houses',
+        colorVariation: '050',
+        indicatorIds: [
+        ],
+      },
+    ],
   },
   cities: [
     {

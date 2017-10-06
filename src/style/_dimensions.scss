@@ -1,5 +1,5 @@
 $app-min-width: 320px;
-$app-max-width: 1100px; // the max width of content within the page
+$app-max-width: 1140px; // the max width of content within the page
 
 $app-header-height-mobile: 50px;
 $app-header-height-desktop: 140px;
@@ -14,4 +14,9 @@ $z-index-left-nav: 2;
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+
+  @include for-tablet-landscape-up {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }

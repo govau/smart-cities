@@ -22,7 +22,7 @@ const defaultProps = {
       }
     },
   ],
-  indicators: [
+  indicatorIds: [
     'population'
   ]
 };
@@ -39,7 +39,7 @@ it('should render a legend when there is more than one indicator', () => {
   const component = shallow(
     <CityBarChart
       {...defaultProps}
-      indicators={['population', 'growthRate']}
+      indicatorIds={['population', 'growthRate']}
     />
   );
 
@@ -50,23 +50,9 @@ it('should not render a legend when there is only one indicator', () => {
   const component = shallow(
     <CityBarChart
       {...defaultProps}
-      indicators={['population']}
+      indicatorIds={['population']}
     />
   );
 
   expect(component.find('Legend').length).toBe(0);
-});
-
-it('should warn and render render nothing if a non-numeric indicator is passed in', () => {
-  const component = shallow(
-    <CityBarChart
-      {...defaultProps}
-      indicators={['investmentPlanLink']}
-    />
-  );
-
-  expect(console.warn).toHaveBeenCalledWith(
-    'All indicators passed to a bar chart must be numeric. Check investmentPlanLink'
-  );
-  expect(component.html()).toBe(null);
 });

@@ -26,7 +26,6 @@ export const COLOR_NAMES = {
 };
 
 export const AGGREGATION_METHODS = {
-  AVERAGE: 'AVERAGE',
   MEDIAN: 'MEDIAN',
   SUM: 'SUM',
 };
@@ -34,12 +33,6 @@ export const AGGREGATION_METHODS = {
 export const DATA_TYPES = {
   NUMBER: 'NUMBER',
   TEXT: 'TEXT',
-};
-
-export const CHART_UNITS = {
-  PERCENT: 'PERCENT',
-  NUMBER: 'NUMBER',
-  DOLLARS: 'DOLLARS',
 };
 
 export const LINKS = {

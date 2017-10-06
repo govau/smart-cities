@@ -5,6 +5,7 @@ import Card from '../Card';
 import style from './IndicatorCard.scss';
 import {
   CARD_SIZES,
+  INDICATORS,
   INDICATOR_CARD_TYPES,
 } from '../../../constants';
 import stripPrefixAndSuffix from '../../../helpers/stripPrefixAndSuffix';
@@ -12,7 +13,10 @@ import stripPrefixAndSuffix from '../../../helpers/stripPrefixAndSuffix';
 const classnames = require('classnames/bind').bind(style);
 
 const IndicatorCard = (props) => {
-  const { indicator } = props;
+  const indicator = typeof props.indicator === 'string'
+    ? INDICATORS[props.indicator]
+    : props.indicator;
+
   const className = classnames(
     style.wrapper,
     `wrapper__${props.size}`,
@@ -57,12 +61,15 @@ const IndicatorCard = (props) => {
 
 IndicatorCard.propTypes = {
   className: PropTypes.string,
-  indicator: PropTypes.shape({
-    cardPrefix: PropTypes.string,
-    cardSuffix: PropTypes.string,
-    format: PropTypes.string,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  indicator: PropTypes.oneOfType([ // accepts an indicator object or a string
+    PropTypes.shape({
+      cardPrefix: PropTypes.string,
+      cardSuffix: PropTypes.string,
+      format: PropTypes.string,
+      name: PropTypes.string.isRequired,
+    }),
+    PropTypes.string,
+  ]).isRequired,
   value: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,

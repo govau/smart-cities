@@ -3,5 +3,15 @@
 exports[`should match Snapshot 1`] = `
 "<PageWrapper categoryId=\\"mock\\" cityId=\\"all-cities\\">
   <CategoryBanner category={{...}} cities={{...}} />
+  <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" indicatorIds={{...}} colorName=\\"jobs\\" cities={{...}} />
+  <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" indicatorIds={{...}} colorName=\\"jobs\\" cities={{...}} />
+  <div id=\\"sc-buying-houses\\">
+    Buying houses
+     chart section placeholder
+  </div>
+  <div id=\\"sc-living-in-houses\\">
+    Living in houses
+     chart section placeholder
+  </div>
 </PageWrapper>"
 `;

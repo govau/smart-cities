@@ -27,3 +27,12 @@ h2 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}

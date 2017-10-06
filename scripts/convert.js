@@ -1,7 +1,7 @@
 #!/usr/bin/env node -r @std/esm
 
-// This file relies on ES6 modules
-// so must be run via "npm run generate-city-data" which uses @std/esm
+// This file relies on ES6 modules so must be run through @std/esm
+// You can use "npm run generate-city-data" to do this
 
 import csv from 'csv';
 import kebabCase from 'lodash/kebabCase';

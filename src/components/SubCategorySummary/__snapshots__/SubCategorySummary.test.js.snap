@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<div style={{...}}>
+  <div className=\\"container\\">
+    <div className=\\"textWrapper\\">
+      <span className=\\"iconWrapper\\" />
+      <h3 className=\\"title\\">
+        Mock sub category
+      </h3>
+    </div>
+    <div className=\\"cardRow\\">
+      <div className=\\"cardWrapper\\">
+        <IndicatorCard className=\\"card\\" indicator=\\"population\\" value={0} />
+        <a className=\\"linkWrapper\\" href=\\"#sc-mock-sub-category\\">
+          <span className=\\"linkText\\">
+            View all 
+            Mock sub category
+             charts
+          </span>
+          <span className=\\"linkIcon\\" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
