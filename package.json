@@ -12,7 +12,7 @@
     "url": "https://github.com/govau/smart-cities/issues"
   },
   "engines": {
-    "node": "8.1.2"
+    "node": "^8.5.0"
   },
   "config": {
     "exportSrc": "'build/**/!(index.html)' '!build/__mocks__/*'",
@@ -25,17 +25,21 @@
     "classnames": "^2.2.5",
     "core-js": "^2.5.0",
     "csv": "^1.1.1",
-    "date-fns": "^1.28.5",
     "get-stdin": "^5.0.1",
+    "html-entities": "^1.2.1",
     "identity-obj-proxy": "3.0.0",
     "lodash": "4.17.4",
     "numeral": "^2.0.6",
+    "promise": "^8.0.1",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "5.0.6",
+    "react-router": "^4.2.0",
     "react-router-dom": "4.2.2",
     "redux": "3.7.2",
+    "sockjs-client": "^1.1.4",
+    "strip-ansi": "^4.0.0",
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
