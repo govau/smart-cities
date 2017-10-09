@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CityBarChart from './CityBarChart';
+import CityColumnChart from './CityColumnChart';
 
 console.warn = jest.fn();
 
@@ -29,7 +29,7 @@ const defaultProps = {
 
 it('should match Snapshot', () => {
   const component = shallow(
-    <CityBarChart {...defaultProps} />
+    <CityColumnChart {...defaultProps} />
   );
 
   expect(component.debug()).toMatchSnapshot();
@@ -37,7 +37,7 @@ it('should match Snapshot', () => {
 
 it('should render a legend when there is more than one indicator', () => {
   const component = shallow(
-    <CityBarChart
+    <CityColumnChart
       {...defaultProps}
       indicatorIds={['population', 'growthRate']}
     />
@@ -48,7 +48,7 @@ it('should render a legend when there is more than one indicator', () => {
 
 it('should not render a legend when there is only one indicator', () => {
   const component = shallow(
-    <CityBarChart
+    <CityColumnChart
       {...defaultProps}
       indicatorIds={['population']}
     />

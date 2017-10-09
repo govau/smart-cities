@@ -26,3 +26,23 @@
     flex-direction: row;
   }
 }
+
+.descriptionLabel {
+  display: none;
+
+  @include for-phone-only {
+    display: block;
+
+    @include type-detail-text;
+  }
+}
+
+.title,
+.legendWrapper,
+.descriptionLabel {
+  margin-left: 120px;
+
+  @include for-phone-only {
+    margin-left: 15px;
+  }
+}

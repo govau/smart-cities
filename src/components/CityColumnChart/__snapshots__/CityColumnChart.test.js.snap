@@ -3,10 +3,13 @@
 exports[`should match Snapshot 1`] = `
 "<div className=\\"wrapper\\">
   <div className=\\"titleWrapper\\">
-    <h2 className=\\"title\\" style={{...}}>
+    <h2 className=\\"title\\">
       The population
     </h2>
     <AboutTooltip description=\\"TODO\\" position=\\"bottom\\" size={18} />
+  </div>
+  <div className=\\"descriptionLabel\\">
+    TODO
   </div>
   <AbstractWidget config={{...}} />
 </div>"

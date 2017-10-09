@@ -13,7 +13,7 @@ import {
   DATA_TYPES,
   INDICATORS,
 } from '../../constants';
-import style from './CityBarChart.scss';
+import style from './CityColumnChart.scss';
 
 const SERIES_SHADES = [
   '700',
@@ -34,7 +34,7 @@ function getSeriesDataForIndicator(cities, indicator) {
   });
 }
 
-// Bar charts are always sorted by descending value
+// Column charts are always sorted by descending value
 // if there is more than one indicator the first is used
 function sortChartData(cities, indicator) {
   const sortedCities = cities.slice(); // clone so we're not mutating state
@@ -46,8 +46,8 @@ function sortChartData(cities, indicator) {
   return sortedCities;
 }
 
-const CityBarChart = (props) => {
-  // If more than one indicator is passed in, this becomes a stacked bar chart
+const CityColumnChart = (props) => {
+  // If more than one indicator is passed in, this becomes a stacked column chart
   const isStacked = props.indicatorIds.length > 1;
 
   // The indicator data contains things like titles and descriptions. But these can
@@ -57,11 +57,11 @@ const CityBarChart = (props) => {
 
   // check for indicators that don't have a numeric data type
   const hasNonNumericIndicators = props.indicatorIds.find(
-    indicator => INDICATORS[indicator].dataType !== DATA_TYPES.NUMBER,
+    indicatorId => INDICATORS[indicatorId].dataType !== DATA_TYPES.NUMBER,
   );
 
   if (hasNonNumericIndicators) {
-    console.warn(`All indicators passed to a bar chart must be numeric. Check ${props.indicatorIds}`);
+    console.warn(`All indicators passed to a column chart must be numeric. Check ${props.indicatorIds}`);
     return null;
   }
 
@@ -73,26 +73,27 @@ const CityBarChart = (props) => {
 
   // series is an array even if there is only one indicator
   // so this works for a normal or a stacked chart
-  const series = props.indicatorIds.map((indicator, i) => ({
+  const series = props.indicatorIds.map((indicatorId, i) => ({
     index: props.indicatorIds.length - i, // reverse sort the series (to counteract Highcharts)
-    name: INDICATORS[indicator].name,
+    name: INDICATORS[indicatorId].name,
     color: getColorVariant(props.colorBase, SERIES_SHADES[i]),
-    data: getSeriesDataForIndicator(data, indicator),
+    data: getSeriesDataForIndicator(data, indicatorId),
   }));
 
-  // we set a left margin on the chart explicitly
-  // this means we can left align the title and the legend with the y axis
-  const marginLeft = 120;
+  // We only want to show the short description as the chart title 
+  // if the chart is not stacked
+  const yAxisTitle = isStacked ? {} : { text: shortDescription };
 
   // The below config will be merged with the base config.
   // colors, sizes, etc. that are shared across all charts belong in the base config
-  // Anything specific to BAR charts belongs here.
-  const barChartConfig = {
+  // Anything specific to *column* charts belongs here.
+  const columnChartConfig = {
     series,
     chart: {
-      type: 'bar',
+      type: 'column',
       height: 500,
-      marginLeft,
+      marginLeft: 120,
+      marginRight: 0,
     },
     plotOptions: {
       bar: {
@@ -107,10 +108,16 @@ const CityBarChart = (props) => {
     xAxis: {
       type: 'category',
       categories: data.map(city => city.name),
+      labels: {
+        rotation: -45,
+      },
     },
     yAxis: {
       ceiling: props.ceiling,
       labels: {
+        padding: 0,
+        x: 0,
+        y: 3,
         formatter() {
           // format the number using the indicator's defined format, if available
           return firstIndicator.format
@@ -118,9 +125,7 @@ const CityBarChart = (props) => {
             : this.value;
         },
       },
-      title: {
-        text: shortDescription,
-      },
+      title: yAxisTitle,
       gridZIndex: 1, // grid lines are in front of the bars
     },
     title: {
@@ -132,17 +137,34 @@ const CityBarChart = (props) => {
     legend: {
       enabled: false,
     },
+    responsive: {
+      rules: [{
+        condition: {
+          maxWidth: 650,
+        },
+        chartOptions: {
+          chart: {
+            height: 400,
+            marginLeft: 15,
+          },
+          xAxis: {
+            labels: {
+              rotation: -90,
+              padding: 0,
+              style: { fontSize: '9px' },
+            },
+          },
+        },
+      }],
+    },
   };
 
-  const config = merge({}, baseChartConfig, barChartConfig);
+  const config = merge({}, baseChartConfig, columnChartConfig);
 
   return (
     <div className={classnames(style.wrapper, props.className)}>
       <div className={style.titleWrapper}>
-        <h2
-          className={style.title}
-          style={{ marginLeft }}
-        >
+        <h2 className={style.title}>
           {title}
         </h2>
 
@@ -153,22 +175,27 @@ const CityBarChart = (props) => {
         />
       </div>
 
-      <AbstractWidget config={config} />
-
       {isStacked && (
-        <div style={{ marginLeft }}>
-          <Legend
-            // Legend is our own HTML so we can style and position it with CSS
-            className={style.legendWrapper}
-            series={series}
-          />
+        <Legend
+          // Legend is our own HTML so we can style and position it with CSS
+          className={style.legendWrapper}
+          title={shortDescription}
+          series={series}
+        />
+      )}
+
+      {isStacked || (
+        <div className={style.descriptionLabel}>
+          {shortDescription}
         </div>
       )}
+
+      <AbstractWidget config={config} />
     </div>
   );
 };
 
-CityBarChart.propTypes = {
+CityColumnChart.propTypes = {
   ceiling: PropTypes.number,
   cities: PropTypes.arrayOf(PropTypes.shape({
     indices: PropTypes.object.isRequired,
@@ -184,4 +211,4 @@ CityBarChart.propTypes = {
   title: PropTypes.string,
 };
 
-export default CityBarChart;
+export default CityColumnChart;
