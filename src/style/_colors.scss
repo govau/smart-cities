@@ -1,136 +1,156 @@
-$color-primary--050: #e8f1f4;
-$color-primary--100: #d1e4e9;
-$color-primary--400: #4994a7;
-$color-primary--500: #32869c;
-$color-primary--600: #115361;
-$color-primary--700: #003a45;
+$color-jobs--020: #f5f6f9;
+$color-jobs--040: #e8eaf6;
+$color-jobs--060: #e3e5ef;
+$color-jobs--080: #c5cae9;
+$color-jobs--100: #c5cae9;
+$color-jobs--500: #3f51b5;
+$color-jobs--600: #3949ab;
+$color-jobs--700: #303f9f;
+$color-jobs--800: #283693;
+$color-jobs--900: #1a237e;
 
-$color-jobs--050: #f4f5fb;
-$color-jobs--100: #e8ebf6;
-$color-jobs--400: #8793c6;
-$color-jobs--500: #5872dd;
-$color-jobs--600: #6473b2;
-$color-jobs--700: #415195;
+$color-housing--020: #fef9f0;
+$color-housing--040: #fdf3e0;
+$color-housing--060: #fbecd1;
+$color-housing--080: #fae6c1;
+$color-housing--100: #f9e0b2;
+$color-housing--500: #f29802;
+$color-housing--600: #f18c05;
+$color-housing--700: #f17c02;
+$color-housing--800: #ef6c01;
+$color-housing--900: #e65200;
 
-$color-housing--050: #f8f6f5;
-$color-housing--100: #f0ece9;
-$color-housing--400: #ad8b81;
-$color-housing--500: #c07a62;
-$color-housing--600: #8c6a5e;
-$color-housing--700: #704d41;
+$color-infrastructure--020: #f0faff;
+$color-infrastructure--040: #e0f5fe;
+$color-infrastructure--060: #d1effe;
+$color-infrastructure--080: #c1eafd;
+$color-infrastructure--100: #b2e5fd;
+$color-infrastructure--500: #4fa8f4;
+$color-infrastructure--600: #009be3;
+$color-infrastructure--700: #4087d0;
+$color-infrastructure--800: #3977bd;
+$color-infrastructure--900: #2b579b;
 
-$color-infrastructure--050: #fbf2f0;
-$color-infrastructure--100: #f8e4e0;
-$color-infrastructure--400: #e86f61;
-$color-infrastructure--500: #e9402c;
-$color-infrastructure--600: #d14d3d;
-$color-infrastructure--700: #a12e20;
+$color-liveability--020: #f2f7f7;
+$color-liveability--040: #e5efef;
+$color-liveability--060: #d9e7e8;
+$color-liveability--080: #ccdfe0;
+$color-liveability--100: #bfd7d8;
+$color-liveability--500: #399588;
+$color-liveability--600: #34887b;
+$color-liveability--700: #2d796b;
+$color-liveability--800: #194d40;
+$color-liveability--900: #194d40;
 
-$color-liveability--050: #f0f6f4;
-$color-liveability--100: #e2eee6;
-$color-liveability--400: #61a183;
-$color-liveability--500: #26ae6e;
-$color-liveability--600: #2b865b;
-$color-liveability--700: #186641;
+$color-innovation--020: #fdf1f6;
+$color-innovation--040: #fce3ec;
+$color-innovation--060: #fad6e3;
+$color-innovation--080: #f9c8d9;
+$color-innovation--100: #f7bad0;
+$color-innovation--500: #e91e64;
+$color-innovation--600: #d81b60;
+$color-innovation--700: #c2185b;
+$color-innovation--800: #ac1457;
+$color-innovation--900: #880e4f;
 
-$color-innovation--050: #f9f3f6;
-$color-innovation--100: #f3e5ef;
-$color-innovation--400: #cd79a1;
-$color-innovation--500: #d9467c;
-$color-innovation--600: #ba5284;
-$color-innovation--700: #952e60;
-
-$color-planning--050: #f7f4f6;
-$color-planning--100: #ede7ef;
-$color-planning--400: #9e85a7;
-$color-planning--500: #a75ec3;
-$color-planning--600: #8e61a0;
-$color-planning--700: #6e3b87;
-
-$color-extra--050: #eef6f8;
-$color-extra--100: #dceeee;
-$color-extra--400: #3fa3a8;
-$color-extra--500: #34c3ca;
-$color-extra--600: #26888d;
-$color-extra--700: #005f64;
+$color-planning--020: #f9f2fa;
+$color-planning--040: #f3e5f5;
+$color-planning--060: #edd8f1;
+$color-planning--080: #e7cbec;
+$color-planning--100: #e1bee7;
+$color-planning--500: #9c27af;
+$color-planning--600: #8d24aa;
+$color-planning--700: #7b20a2;
+$color-planning--800: #6a1c9a;
+$color-planning--900: #4a158b;
 
 $color-white: #fff;
 $color-grid: rgba(202, 200, 202, 0.25); // highcharts can't set opacity on a line, so we need rgba()
 $color-grey--500: #9b9b9b;
 $color-grey--700: #4a4a4a;
 $color-black: #000;
-
-$color-highlight: #00bfe9;
 $color-badge: #f69900;
+$color-highlight: #00c3ef;
+$color-blue: #3d76b7;
+
+$color-primary--020: #e8f1f4;
+$color-primary--040: #d1e4e9;
+$color-primary--500: #4994a7;
+$color-primary--600: #32869c;
+$color-primary--700: #115361;
+$color-primary--800: #084653;
+$color-primary--900: #003a45;
 
 // export these colours to make them available in javascript
 // this is CSS module syntax so we disable a few rules
 
 /* stylelint-disable property-no-unknown, property-case, declaration-empty-line-before */
 :export {
-  PRIMARY_050: $color-primary--050;
-  PRIMARY_100: $color-primary--100;
-  PRIMARY_400: $color-primary--400;
-  PRIMARY_500: $color-primary--500;
-  PRIMARY_600: $color-primary--600;
-  PRIMARY_700: $color-primary--700;
-
-  JOBS_050: $color-jobs--050;
+  JOBS_020: $color-jobs--020;
+  JOBS_040: $color-jobs--040;
+  JOBS_060: $color-jobs--060;
+  JOBS_080: $color-jobs--080;
   JOBS_100: $color-jobs--100;
-  JOBS_400: $color-jobs--400;
   JOBS_500: $color-jobs--500;
   JOBS_600: $color-jobs--600;
   JOBS_700: $color-jobs--700;
+  JOBS_800: $color-jobs--800;
+  JOBS_900: $color-jobs--900;
 
-  HOUSING_050: $color-housing--050;
+  HOUSING_020: $color-housing--020;
+  HOUSING_040: $color-housing--040;
+  HOUSING_060: $color-housing--060;
+  HOUSING_080: $color-housing--080;
   HOUSING_100: $color-housing--100;
-  HOUSING_400: $color-housing--400;
   HOUSING_500: $color-housing--500;
   HOUSING_600: $color-housing--600;
   HOUSING_700: $color-housing--700;
+  HOUSING_800: $color-housing--800;
+  HOUSING_900: $color-housing--900;
 
-  INFRASTRUCTURE_050: $color-infrastructure--050;
+  INFRASTRUCTURE_020: $color-infrastructure--020;
+  INFRASTRUCTURE_040: $color-infrastructure--040;
+  INFRASTRUCTURE_060: $color-infrastructure--060;
+  INFRASTRUCTURE_080: $color-infrastructure--080;
   INFRASTRUCTURE_100: $color-infrastructure--100;
-  INFRASTRUCTURE_400: $color-infrastructure--400;
   INFRASTRUCTURE_500: $color-infrastructure--500;
   INFRASTRUCTURE_600: $color-infrastructure--600;
   INFRASTRUCTURE_700: $color-infrastructure--700;
+  INFRASTRUCTURE_800: $color-infrastructure--800;
+  INFRASTRUCTURE_900: $color-infrastructure--900;
 
-  LIVEABILITY_050: $color-liveability--050;
+  LIVEABILITY_020: $color-liveability--020;
+  LIVEABILITY_040: $color-liveability--040;
+  LIVEABILITY_060: $color-liveability--060;
+  LIVEABILITY_080: $color-liveability--080;
   LIVEABILITY_100: $color-liveability--100;
-  LIVEABILITY_400: $color-liveability--400;
   LIVEABILITY_500: $color-liveability--500;
   LIVEABILITY_600: $color-liveability--600;
   LIVEABILITY_700: $color-liveability--700;
+  LIVEABILITY_800: $color-liveability--800;
+  LIVEABILITY_900: $color-liveability--900;
 
-  INNOVATION_050: $color-innovation--050;
+  INNOVATION_020: $color-innovation--020;
+  INNOVATION_040: $color-innovation--040;
+  INNOVATION_060: $color-innovation--060;
+  INNOVATION_080: $color-innovation--080;
   INNOVATION_100: $color-innovation--100;
-  INNOVATION_400: $color-innovation--400;
   INNOVATION_500: $color-innovation--500;
   INNOVATION_600: $color-innovation--600;
   INNOVATION_700: $color-innovation--700;
+  INNOVATION_800: $color-innovation--800;
+  INNOVATION_900: $color-innovation--900;
 
-  PLANNING_050: $color-planning--050;
+  PLANNING_020: $color-planning--020;
+  PLANNING_040: $color-planning--040;
+  PLANNING_060: $color-planning--060;
+  PLANNING_080: $color-planning--080;
   PLANNING_100: $color-planning--100;
-  PLANNING_400: $color-planning--400;
   PLANNING_500: $color-planning--500;
   PLANNING_600: $color-planning--600;
   PLANNING_700: $color-planning--700;
-
-  EXTRA_050: $color-extra--050;
-  EXTRA_100: $color-extra--100;
-  EXTRA_400: $color-extra--400;
-  EXTRA_500: $color-extra--500;
-  EXTRA_600: $color-extra--600;
-  EXTRA_700: $color-extra--700;
-
-  WHITE: $color-white;
-  GRID: $color-grid;
-  GREY_500: $color-grey--500;
-  GREY_700: $color-grey--700;
-  BLACK: $color-black;
-  HIGHLIGHT: $color-highlight;
-  BADGE: $color-badge;
+  PLANNING_800: $color-planning--800;
+  PLANNING_900: $color-planning--900;
 }
 
 /* stylelint-enable */

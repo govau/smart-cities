@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<div className=\\"card card__large card__primary_color\\">
+"<div className=\\"card card__large\\" style={{...}}>
   <div>
     Render me
   </div>

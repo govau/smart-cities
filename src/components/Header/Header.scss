@@ -1,11 +1,10 @@
 @import '~style/variables';
 
 header {
-  background: $color-primary--500;
+  background: $color-primary--600;
   color: $color-white;
 
   a {
-    color: $color-white;
     text-decoration: underline;
     text-decoration-color: $color-highlight;
   }
@@ -26,7 +25,7 @@ header {
     align-items: center;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    background: $color-primary--400;
+    background: $color-primary--500;
 
     > * {
       margin-right: 8px;

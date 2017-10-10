@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
 import { INDICATORS } from '../../constants';
 import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
+import getColorVariant from '../../helpers/getColorVariant';
 import style from './CategoryBanner.scss';
-import COLORS from '../../style/_colors.scss';
 
 const CategoryBanner = (props) => {
-  const backgroundColor = COLORS[`${props.category.colorName.toUpperCase()}_100`];
+  const backgroundColor = getColorVariant(props.category.colorName, '020');
+  const cardHighlightColor = getColorVariant(props.category.colorName, '500');
 
   return (
     <div style={{ backgroundColor }}>
@@ -21,6 +22,7 @@ const CategoryBanner = (props) => {
         <IndicatorCard
           size="large"
           className={style.card}
+          color={cardHighlightColor}
           indicator={props.category.heroIndicatorId}
           value={aggregateIndicatorForCities(
             props.category.heroIndicatorId,

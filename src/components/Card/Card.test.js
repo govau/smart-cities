@@ -3,13 +3,13 @@ import { shallow } from 'enzyme';
 import Card from './Card';
 import {
   CARD_SIZES,
-  COLOR_NAMES,
   INDICATOR_CARD_TYPES,
 } from '../../constants';
 
 const defaultProps = {
   size: CARD_SIZES.LARGE,
   type: INDICATOR_CARD_TYPES.INDICATOR,
+  color: '#fff',
 };
 
 it('should match Snapshot', () => {
@@ -35,17 +35,18 @@ it('should apply the correct size class', () => {
   expect(component.hasClass('card__small')).toBe(true);
 });
 
-it('should apply the correct color class', () => {
+it('should apply the correct color', () => {
   const component =  shallow(
     <Card
       {...defaultProps}
-      color={COLOR_NAMES.JOBS}
+      color="#a11"
     >
       <div>Render me</div>
     </Card>
   );
 
-  expect(component.hasClass('card__jobs_color')).toBe(true);
+  const componentStyle = component.prop('style');
+  expect(componentStyle.borderBottomColor).toBe('#a11');
 });
 
 it('should apply the category class when the type is category', () => {

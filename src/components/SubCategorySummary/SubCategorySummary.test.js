@@ -6,7 +6,8 @@ jest.mock('../Card/IndicatorCard/IndicatorCard', () => 'IndicatorCard');
 
 const defaultProps = {
   colorName: 'jobs',
-  colorVariation: '400',
+  tint: '020',
+  shade: '600',
   name: 'Mock sub category',
   indicatorIds: [
     'population',

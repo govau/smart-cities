@@ -2,7 +2,12 @@
 
 exports[`should match Snapshot 1`] = `
 <div
-  className="card card__large card__primary_color card__category wrapper"
+  className="card card__large card__category wrapper"
+  style={
+    Object {
+      "borderBottomColor": "#eee",
+    }
+  }
 >
   <div
     className="iconWrapper"

@@ -9,7 +9,8 @@ export default [
     subCategories: [
       {
         name: 'Employment',
-        colorVariation: '100',
+        tint: '040',
+        shade: '600',
         indicatorIds: [
           'participationRate',
           'gdp',
@@ -17,7 +18,8 @@ export default [
       },
       {
         name: 'Education',
-        colorVariation: '050',
+        tint: '060',
+        shade: '700',
         indicatorIds: [
           'educationalAttainmentYr12',
         ],
@@ -33,12 +35,14 @@ export default [
     subCategories: [
       {
         name: 'Buying houses',
-        colorVariation: '100',
+        tint: '040',
+        shade: '600',
         indicatorIds: [],
       },
       {
         name: 'Living in houses',
-        colorVariation: '050',
+        tint: '060',
+        shade: '700',
         indicatorIds: [],
       },
     ],
@@ -53,7 +57,8 @@ export default [
     subCategories: [
       {
         name: 'Getting to work',
-        colorVariation: '400',
+        tint: '040',
+        shade: '600',
         indicatorIds: [
           'jobsWalk',
           'jobsBike',
@@ -62,7 +67,8 @@ export default [
       },
       {
         name: 'Getting around',
-        colorVariation: '100',
+        tint: '060',
+        shade: '700',
         indicatorIds: [
           'activeJourneys',
           'publicJourneys',
@@ -70,7 +76,8 @@ export default [
       },
       {
         name: 'Infrastructure',
-        colorVariation: '050',
+        tint: '080',
+        shade: '800',
         indicatorIds: [],
       },
     ],
@@ -84,22 +91,26 @@ export default [
     subCategories: [
       {
         name: 'Environment',
-        colorVariation: '500',
+        tint: '040',
+        shade: '600',
         indicatorIds: [],
       },
       {
         name: 'Public safety',
-        colorVariation: '400',
+        tint: '060',
+        shade: '700',
         indicatorIds: [],
       },
       {
         name: 'Life and death',
-        colorVariation: '100',
+        tint: '080',
+        shade: '800',
         indicatorIds: [],
       },
       {
         name: 'Socioeconomic disadvantage',
-        colorVariation: '050',
+        tint: '100',
+        shade: '900',
         indicatorIds: [],
       },
     ],
@@ -113,12 +124,14 @@ export default [
     subCategories: [
       {
         name: 'Data',
-        colorVariation: '100',
+        tint: '040',
+        shade: '600',
         indicatorIds: [],
       },
       {
         name: 'Working in digital',
-        colorVariation: '050',
+        tint: '060',
+        shade: '700',
         indicatorIds: [],
       },
     ],
@@ -132,12 +145,14 @@ export default [
     subCategories: [
       {
         name: 'Development',
-        colorVariation: '100',
+        tint: '040',
+        shade: '600',
         indicatorIds: [],
       },
       {
         name: 'Population',
-        colorVariation: '050',
+        tint: '060',
+        shade: '700',
         indicatorIds: [],
       },
     ],

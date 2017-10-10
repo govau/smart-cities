@@ -12,6 +12,7 @@ const defaultProps = {
     cardSuffix: 'per annum',
     format: '0[.]0%'
   },
+  color: '#fff',
 };
 
 it('should match Snapshot', () => {

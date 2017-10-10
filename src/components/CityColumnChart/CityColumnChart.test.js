@@ -4,8 +4,15 @@ import CityColumnChart from './CityColumnChart';
 
 console.warn = jest.fn();
 
+jest.mock('../../helpers/getColorRange', () => () => [
+  'red',
+  'yellow',
+  'blue',
+]);
+
 const defaultProps = {
   colorBase: 'jobs',
+  colorVariation: '600',
   cities: [
     {
       name: 'Perth',

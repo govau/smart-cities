@@ -61,6 +61,7 @@ const IndicatorCard = (props) => {
 
 IndicatorCard.propTypes = {
   className: PropTypes.string,
+  color: PropTypes.string.isRequired,
   indicator: PropTypes.oneOfType([ // accepts an indicator object or a string
     PropTypes.shape({
       cardPrefix: PropTypes.string,

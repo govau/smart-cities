@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import style from './Card.scss';
 import {
   CARD_SIZES,
-  COLOR_NAMES,
   INDICATOR_CARD_TYPES,
 } from '../../constants';
 
@@ -15,13 +14,15 @@ const Card = (props) => {
   const className = classnames(
     'card',
     `card__${props.size}`,
-    `card__${props.color}_color`,
     { card__category: props.type === INDICATOR_CARD_TYPES.CATEGORY },
     props.className,
   );
 
   return (
-    <div className={className}>
+    <div
+      className={className}
+      style={{ borderBottomColor: props.color }}
+    >
       {props.children}
     </div>
   );
@@ -33,13 +34,9 @@ Card.propTypes = {
     PropTypes.array,
   ]).isRequired,
   className: PropTypes.string,
-  color: PropTypes.oneOf(Object.values(COLOR_NAMES)),
+  color: PropTypes.string.isRequired,
   size: PropTypes.oneOf(Object.values(CARD_SIZES)).isRequired,
   type: PropTypes.oneOf(Object.values(INDICATOR_CARD_TYPES)).isRequired,
-};
-
-Card.defaultProps = {
-  color: COLOR_NAMES.PRIMARY,
 };
 
 export default Card;

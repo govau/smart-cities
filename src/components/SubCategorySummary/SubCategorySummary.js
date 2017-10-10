@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
 import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
+import getColorVariant from '../../helpers/getColorVariant';
 import { INDICATORS } from '../../constants';
 import style from './SubCategorySummary.scss';
-import COLORS from '../../style/_colors.scss';
 
 const SubCategorySummary = (props) => {
-  const backgroundColor = COLORS[`${props.colorName.toUpperCase()}_${props.colorVariation}`];
+  const backgroundColor = getColorVariant(props.colorName, props.tint);
+  const cardHighlightColor = getColorVariant(props.colorName, props.shade);
 
   const firstThreeIndicators = props.indicatorIds.slice(0, 3);
 
@@ -23,6 +24,7 @@ const SubCategorySummary = (props) => {
         <IndicatorCard
           className={style.card}
           indicator={indicatorId}
+          color={cardHighlightColor}
           value={aggregateIndicatorForCities(
             indicatorId,
             props.cities,
@@ -64,7 +66,8 @@ SubCategorySummary.propTypes = {
     indices: PropTypes.object.isRequired,
   })).isRequired,
   colorName: PropTypes.string.isRequired,
-  colorVariation: PropTypes.string.isRequired,
+  tint: PropTypes.string.isRequired,
+  shade: PropTypes.string.isRequired,
   indicatorIds: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(INDICATORS)),
   ).isRequired,

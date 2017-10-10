@@ -4,23 +4,25 @@ import TypographyRow from './TypographyRow/TypographyRow';
 import style from './StyleGuide.scss';
 
 const COLOR_GROUPS = [
-  'primary',
   'jobs',
   'housing',
   'infrastructure',
   'liveability',
   'innovation',
   'planning',
-  'extra',
 ];
 
 const TINTS = [
-  '700',
-  '600',
-  '500',
-  '400',
+  '020',
+  '040',
+  '060',
+  '080',
   '100',
-  '050',
+  '500',
+  '600',
+  '700',
+  '800',
+  '900',
 ];
 
 const COLORS = COLOR_GROUPS.map(group => (
@@ -34,14 +36,30 @@ const COLORS = COLOR_GROUPS.map(group => (
   })
 ));
 
+const PRIMARY_COLORS = [
+  'primary--020',
+  'primary--040',
+  'primary--500',
+  'primary--600',
+  'primary--700',
+  'primary--800',
+  'primary--900',
+];
+
+COLORS.push(PRIMARY_COLORS.map(primary => ({
+  className: style[`color-${primary}`],
+  variableName: primary,
+})));
+
 const SPECIAL_COLORS = [
-  'black',
-  'grey--700',
-  'grey--500',
-  'grid',
   'white',
+  'grid',
+  'grey--500',
+  'grey--700',
+  'black',
   'badge',
   'highlight',
+  'blue',
 ];
 
 COLORS.push(SPECIAL_COLORS.map(special => ({

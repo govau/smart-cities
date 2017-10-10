@@ -15,14 +15,12 @@ export const INDICATOR_CARD_TYPES = {
 
 // note, the values are lowercase because they're used in CSS class names
 export const COLOR_NAMES = {
-  PRIMARY: 'primary',
   JOBS: 'jobs',
   HOUSING: 'housing',
   INFRASTRUCTURE: 'infrastructure',
   LIVEABILITY: 'liveability',
   INNOVATION: 'innovation',
   PLANNING: 'planning',
-  EXTRA: 'extra',
 };
 
 export const AGGREGATION_METHODS = {

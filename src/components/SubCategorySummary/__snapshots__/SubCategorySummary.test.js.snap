@@ -11,7 +11,7 @@ exports[`should match Snapshot 1`] = `
     </div>
     <div className=\\"cardRow\\">
       <div className=\\"cardWrapper\\">
-        <IndicatorCard className=\\"card\\" indicator=\\"population\\" value={0} />
+        <IndicatorCard className=\\"card\\" indicator=\\"population\\" color=\\"JOBS_600\\" value={0} />
         <a className=\\"linkWrapper\\" href=\\"#sc-mock-sub-category\\">
           <span className=\\"linkText\\">
             View all 

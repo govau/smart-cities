@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import AllCitiesCategory from './AllCitiesCategory';
 
 jest.mock('../../CategoryBanner/CategoryBanner', () => 'CategoryBanner');
+jest.mock('../../SubCategorySummary/SubCategorySummary', () => 'SubCategorySummary');
 
 const defaultProps = {
   category: {

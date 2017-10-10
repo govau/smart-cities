@@ -38,8 +38,8 @@ it('should set the background color', () => {
   );
 
   const componentStyle = component.find('div').at(0).prop('style');
-  // note, here the color is the string 'JOBS_100' because of the way
+  // note, here the color is the string 'JOBS_020' because of the way
   // styles are imported during tests, but in reality
   // this will be the hex color
-  expect(componentStyle.backgroundColor).toBe('JOBS_100');
+  expect(componentStyle.backgroundColor).toBe('JOBS_020');
 });

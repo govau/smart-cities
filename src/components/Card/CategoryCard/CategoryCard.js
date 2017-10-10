@@ -30,6 +30,7 @@ const CategoryCard = (props) => {
 
 CategoryCard.propTypes = {
   className: PropTypes.string,
+  color: PropTypes.string.isRequired,
   header: PropTypes.string,
   number: PropTypes.string,
   prefix: PropTypes.string,
