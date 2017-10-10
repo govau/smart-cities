@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<div>
+"<div className=\\"pageWrapper\\">
   <div>
-    <SideBar closeNav={[Function]} isOpen={false} categoryId=\\"jobs\\" cityId=\\"perth\\" location={{...}} />
+    <withRouter(SideBar) closeNav={[Function]} isOpen={false} categoryId=\\"jobs\\" cityId=\\"perth\\" />
   </div>
   <div>
     <Header openNav={[Function]} cityId=\\"perth\\" categoryId=\\"jobs\\" />

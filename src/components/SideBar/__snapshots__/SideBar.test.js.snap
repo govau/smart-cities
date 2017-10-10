@@ -2,12 +2,12 @@
 
 exports[`should match Snapshot 1`] = `
 "<div className=\\"wrapper\\">
-  <button className=\\"button\\" onClick={[Function]} aria-label=\\"close navigation menu\\">
+  <button className=\\"closeButton\\" onClick={[Function]} aria-label=\\"close navigation menu\\">
     ✕
   </button>
-  <h1>
-    SideBar
-  </h1>
+  <div className=\\"coaWrapper\\">
+    <img className=\\"coa\\" src=\\"coa-white.svg\\" alt=\\"coat of arms\\" />
+  </div>
   <Connect(CityNav) categoryId=\\"jobs\\" cityId=\\"perth\\" />
 </div>"
 `;

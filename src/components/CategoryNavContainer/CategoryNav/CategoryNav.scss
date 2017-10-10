@@ -5,12 +5,14 @@
   display: flex;
   padding-left: 20px;
   width: 100%;
+  height: $top-nav-height-mobile;
   white-space: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 
   @include for-desktop-up {
+    height: $top-nav-height-desktop;
     padding-left: 30px;
   }
 }
@@ -31,17 +33,15 @@
 
   div {
     @include type-nav-horizontal;
+    @include shadow;
 
     padding: 0 24px;
     border-radius: 100px;
     color: $color-grey--700;
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
 
     @include for-desktop-up {
-      box-shadow: none;
-
-      &:hover {
-        box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+      &:not(:hover) {
+        box-shadow: none;
       }
     }
   }

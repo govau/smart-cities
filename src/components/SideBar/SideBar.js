@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
 import classNames from 'classnames';
 import CityNavContainer from '../CityNavContainer/CityNavContainer';
 import style from './SideBar.scss';
+import coaWhite from './coa-white.svg';
 
 class SideBar extends Component {
   componentWillReceiveProps(nextProps) {
@@ -25,12 +27,18 @@ class SideBar extends Component {
     return (
       <div className={className}>
         <button
-          className={style.button}
+          className={style.closeButton}
           onClick={props.closeNav}
           aria-label="close navigation menu"
         >✕</button>
 
-        <h1>SideBar</h1>
+        <div className={style.coaWrapper}>
+          <img
+            className={style.coa}
+            src={coaWhite}
+            alt="coat of arms"
+          />
+        </div>
 
         <CityNavContainer
           categoryId={props.categoryId}
@@ -56,4 +64,9 @@ SideBar.defaultProps = {
   location: {},
 };
 
-export default SideBar;
+
+// withRouter makes location available to we can test when to close the SideBar
+// but it breaks unit tests, so we also export the 'raw' sidebar just for testing
+export const UnwrappedSideBar = SideBar;
+
+export default withRouter(SideBar);

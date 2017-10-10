@@ -20,6 +20,13 @@ body {
   color: $color-grey--700;
 }
 
+:global(.block-scroll) {
+  overflow: hidden;
+  overflow-y: scroll !important;
+  position: fixed;
+  width: 100%;
+}
+
 p,
 h1,
 h2 {
@@ -35,4 +42,8 @@ a {
   &:hover {
     color: inherit;
   }
+}
+
+button {
+  cursor: pointer;
 }

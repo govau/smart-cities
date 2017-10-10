@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SideBar from './SideBar';
+import { UnwrappedSideBar as SideBar } from './SideBar';
 
 const closeNavMock = jest.fn();
 
@@ -37,7 +37,7 @@ it('should close the nav when the button is clicked', () => {
     <SideBar {...defaultProps} />
   );
 
-  component.find('.button').simulate('click');
+  component.find('.closeButton').simulate('click');
 
   expect(closeNavMock).toHaveBeenCalledTimes(1);
 });

@@ -1,10 +1,11 @@
 @import '~style/variables';
 
-.wrapper {
-  width: $app-header-height-mobile;
-  height: $app-header-height-mobile;
+.button {
+  width: $main-header-height-mobile;
+  height: $main-header-height-mobile;
   border: none;
   border-radius: 0;
+  background: transparent;
 }
 
 .icon {

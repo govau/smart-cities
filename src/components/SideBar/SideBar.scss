@@ -1,15 +1,60 @@
 @import '~style/variables';
 
 .wrapper {
-  display: none;
+  @include shadow;
+
   position: fixed;
   top: 0;
   left: 0;
-  width: $sidebar-width;
   bottom: 0;
+  width: $sidebar-width;
+  padding: $main-header-height-mobile 0; // padding bottom is because iOS Safari blocks taps near bottom of page
+  transform: translateX(-$sidebar-width);
+  transition: transform $animation-duration;
   background: $color-primary--700;
+  overflow-y: auto;
+  color: $color-white;
+  z-index: $z-index-left-nav;
+
+  @include for-desktop-up {
+    box-shadow: none;
+    padding-top: 0;
+    transform: translate(0);
+  }
+}
+
+.coaWrapper {
+  display: none;
+
+  @include for-desktop-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $main-header-height-desktop + $gov-header-height;
+  }
+}
+
+.coa {
+  width: 140px;
+  height: auto;
 }
 
 .showOpen {
   transform: translateX(0);
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  color: $color-white;
+  font-size: 33px;
+  line-height: 1;
+
+  @include for-desktop-up {
+    display: none;
+  }
 }

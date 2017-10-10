@@ -39,6 +39,8 @@ const COLORS = COLOR_GROUPS.map(group => (
 const PRIMARY_COLORS = [
   'primary--020',
   'primary--040',
+  'primary--060',
+  'primary--080',
   'primary--500',
   'primary--600',
   'primary--700',

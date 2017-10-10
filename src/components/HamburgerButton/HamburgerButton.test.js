@@ -3,22 +3,26 @@ import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import HamburgerButton from './HamburgerButton';
 
+const onClickMock = jest.fn();
+
+const defaultProps = {
+  onClick: onClickMock,
+};
+
 it('should render consistently', () => {
-  const tree = renderer.create(
-    <HamburgerButton onClick={() => {}}/>
+  const component = renderer.create(
+    <HamburgerButton {...defaultProps} />
   );
 
-  expect(tree.toJSON()).toMatchSnapshot();
+  expect(component.toJSON()).toMatchSnapshot();
 });
 
 it('should call onClick when clicked', () => {
-  const onClickMock = jest.fn();
-
-  const tree = shallow(
-    <HamburgerButton onClick={onClickMock}/>
+  const component = shallow(
+    <HamburgerButton {...defaultProps} />
   );
 
-  tree.find('button').simulate('click');
+  component.find('button').simulate('click');
 
   expect(onClickMock).toHaveBeenCalledTimes(1);
 });

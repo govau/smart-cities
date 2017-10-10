@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CategoryNavContainer from '../CategoryNavContainer/CategoryNavContainer';
+import HamburgerButton from '../HamburgerButton/HamburgerButton';
 import { LINKS } from '../../constants';
 import dtaLogo from './dta-logo.svg';
 import star from './star-white.svg';
@@ -10,6 +11,12 @@ import style from './Header.scss';
 const Header = props => (
   <header>
     <div className={style.govContainer}>
+      <HamburgerButton
+        className={style.hamburger}
+        onClick={props.openNav}
+        label="open navigation menu"
+      />
+
       <img className={style.star} src={star} alt="star icon" />
       <span className={style.govAu}>GOV.AU</span>
       <span className={style.govWebsite}>Official Australian Government Website</span>
@@ -40,6 +47,7 @@ const Header = props => (
 Header.propTypes = {
   cityId: PropTypes.string.isRequired,
   categoryId: PropTypes.string.isRequired,
+  openNav: PropTypes.func.isRequired,
 };
 
 export default Header;

@@ -10,10 +10,11 @@ header {
   }
 }
 
+// this is the minor header on desktop size
+// and the only header on mobile/tablet
 .govContainer {
   display: flex;
-  height: 48px;
-  padding-left: 14px;
+  height: $main-header-height-mobile;
   flex-flow: column wrap;
   align-items: flex-start;
   align-content: flex-start;
@@ -21,7 +22,7 @@ header {
 
   @include for-desktop-up {
     padding-left: 30px;
-    height: 32px;
+    height: $gov-header-height;
     align-items: center;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -65,6 +66,7 @@ header {
   @include for-desktop-up {
     display: flex;
     width: 100%;
+    height: $main-header-height-desktop;
     justify-content: space-between;
   }
 }
@@ -72,11 +74,8 @@ header {
 .titleContainer,
 .orgContainer {
   padding: 0 32px;
-  max-height: 176px;
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 24px;
 }
 
 .star {
@@ -93,11 +92,20 @@ header {
   }
 }
 
+.hamburger {
+  margin-right: 14px;
+
+  @include for-desktop-up {
+    display: none;
+  }
+}
+
 .projectStatus {
+  @include type-badge-text;
+
   margin-top: 24px;
   text-align: center;
   width: 80px;
-  font-weight: 600;
   border: 1px solid $color-badge;
   border-radius: 17px;
   background: $color-badge;

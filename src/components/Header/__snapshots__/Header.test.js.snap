@@ -3,6 +3,7 @@
 exports[`should match Snapshot 1`] = `
 "<header>
   <div className=\\"govContainer\\">
+    <HamburgerButton className=\\"hamburger\\" onClick={[Function]} label=\\"open navigation menu\\" />
     <img className=\\"star\\" src=\\"star-white.svg\\" alt=\\"star icon\\" />
     <span className=\\"govAu\\">
       GOV.AU

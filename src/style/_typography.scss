@@ -44,9 +44,19 @@
   font-weight: 700;
 }
 
+@mixin type-nav-vertical-large {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+
+  @include for-tablet-landscape-up {
+    font-size: 23px;
+  }
+}
+
 @mixin type-nav-vertical {
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: -0.3px;
 }
 
 @mixin type-intro-text {

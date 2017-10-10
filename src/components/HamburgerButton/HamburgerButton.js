@@ -4,17 +4,17 @@ import classNames from 'classnames';
 
 import style from './HamburgerButton.scss';
 
-const HamburgerButton = ({onClick, _className, label}) => {
+const HamburgerButton = (props) => {
   const className = classNames(
-    style.wrapper,
-    _className,
+    style.button,
+    props.className,
   );
 
   return (
     <button
       className={className}
-      onClick={onClick}
-      aria-label={label}
+      onClick={props.onClick}
+      aria-label={props.label}
     >
       <div className={style.icon}>
         <div className={style.bar} />
@@ -22,7 +22,7 @@ const HamburgerButton = ({onClick, _className, label}) => {
         <div className={style.bar} />
       </div>
     </button>
-  )
+  );
 };
 
 HamburgerButton.propTypes = {

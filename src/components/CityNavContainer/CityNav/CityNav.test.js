@@ -4,6 +4,7 @@ import CityNav from './CityNav';
 
 const defaultProps = {
   categoryId: 'mock',
+  cityId: 'perth',
   cities: [
     {
       id: 'perth',
@@ -22,4 +23,12 @@ it('should match Snapshot', () => {
   );
 
   expect(component.debug()).toMatchSnapshot();
+});
+
+it('should render the number of cities', () => {
+  const component = shallow(
+    <CityNav {...defaultProps} />
+  );
+
+  expect(component.find('.cityCount').text()).toBe('2');
 });

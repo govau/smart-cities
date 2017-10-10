@@ -1,5 +1,13 @@
 @import '~style/variables';
 
+.pageWrapper {
+  z-index: $z-index-page-wrapper;
+
+  @include for-desktop-up {
+    padding-left: $sidebar-width;
+  }
+}
+
 .main {
   min-height: 100vh; // stop the footer creeping up the page
 }

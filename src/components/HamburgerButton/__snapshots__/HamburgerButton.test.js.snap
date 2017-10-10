@@ -3,7 +3,7 @@
 exports[`should render consistently 1`] = `
 <button
   aria-label="open menu"
-  className="wrapper"
+  className="button"
   onClick={[Function]}
 >
   <div

@@ -1,12 +1,13 @@
 $app-min-width: 320px;
 $app-max-width: 1140px; // the max width of content within the page
 
-$app-header-height-mobile: 50px;
-$app-header-height-desktop: 140px;
-$sidebar-width: 286px;
+$gov-header-height: 32px; // the small top header section, doesn't show on mobile
+$main-header-height-mobile: 48px;
+$main-header-height-desktop: 150px;
 
-$z-index-main-app: 1;
-$z-index-left-nav: 2;
+$sidebar-width: 260px;
+$top-nav-height-mobile: 45px;
+$top-nav-height-desktop: 75px;
 
 @mixin container {
   max-width: $app-max-width;
