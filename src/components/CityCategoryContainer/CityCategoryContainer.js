@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import CityCategory from './CityCategory/CityCategory';
+import { toggleCitySelected } from '../../redux/ducks/cities';
 
 const mapStateToProps = (state, ownProps) => ({
   category: state.categories.find(item => (
@@ -8,6 +9,10 @@ const mapStateToProps = (state, ownProps) => ({
   city: state.cities.find(item => (
     item.id === ownProps.match.params.cityId
   )),
+  cities: state.cities,
 });
 
-export default connect(mapStateToProps)(CityCategory);
+export default connect(
+  mapStateToProps,
+  { toggleCitySelected },
+)(CityCategory);

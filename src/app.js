@@ -38,3 +38,15 @@ fetch(DATA_URL)
   .catch((err) => {
     console.error(err);
   });
+
+// we want to apply some special CSS only for users who are
+// using the keyboard to navigate (e.g. focus state for custom check boxes)
+// so we add a class to the body
+function handleFirstTab(e) {
+  if (e.keyCode === 9) { // the tab key
+    document.body.classList.add('user-is-tabbing');
+    window.removeEventListener('keydown', handleFirstTab);
+  }
+}
+
+window.addEventListener('keydown', handleFirstTab);

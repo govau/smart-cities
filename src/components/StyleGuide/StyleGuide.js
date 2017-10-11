@@ -56,6 +56,8 @@ COLORS.push(PRIMARY_COLORS.map(primary => ({
 const SPECIAL_COLORS = [
   'white',
   'grid',
+  'grey--100',
+  'grey--200',
   'grey--500',
   'grey--700',
   'black',

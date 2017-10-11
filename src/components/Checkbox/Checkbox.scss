@@ -1,0 +1,64 @@
+@import '~style/variables';
+
+$box-size: 16px;
+
+.wrapper {
+  position: relative;
+}
+
+.input {
+  position: absolute;
+  left: -9999px;
+}
+
+.label {
+  padding-left: 25px;
+  line-height: $box-size;
+  cursor: pointer;
+}
+
+// the square for an empty checkbox
+.checkbox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid $color-grey--500;
+  background: $color-white;
+  width: $box-size;
+  height: $box-size;
+  border-radius: 2px;
+  margin: 2px; // allow for the focus ring
+}
+
+// we need to set the color in JavaScript, so we set 'color' on a span
+// and apply it here using currentColor
+.input:checked + .label .checkbox::before {
+  background: currentColor;
+  border: currentColor;
+}
+
+// the tick symbol
+.input:checked + .label .checkbox::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 7px;
+  width: 6px;
+  height: 12px;
+  border: 2px solid $color-white;
+  transform: rotate(45deg);
+  border-left: transparent;
+  border-top: transparent;
+}
+
+.input:checked + .label {
+  font-weight: 700;
+}
+
+:global(body.user-is-tabbing) {
+  .input:focus + .label .checkbox::before {
+    outline: 2px solid $color-highlight; /* for non-webkit browsers */
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+}
