@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@atlaskit/tooltip": "^6.0.0",
-    "@gov.au/datavizkit": "^1.0.32-development",
+    "@gov.au/datavizkit": "^1.0.34",
     "@std/esm": "^0.11.0",
     "classnames": "^2.2.5",
     "color": "^2.0.0",
