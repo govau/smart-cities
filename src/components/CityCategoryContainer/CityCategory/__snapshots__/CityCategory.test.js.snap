@@ -1,7 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<PageWrapper cityId=\\"perth\\" categoryId=\\"mock\\">
+"<PageWrapper cityId=\\"perth\\" categoryId=\\"mock\\" cityName=\\"Perth\\" categoryColorName=\\"jobs\\">
+  <CategoryBanner category={{...}} city={{...}} cities={{...}} toggleCitySelected={[Function]} />
+  <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" indicatorIds={{...}} colorName=\\"jobs\\" city={{...}} />
+  <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" indicatorIds={{...}} colorName=\\"jobs\\" city={{...}} />
   <div className=\\"main\\">
     <h1>
       I am the &quot;Mock category&quot; page for &quot;Perth&quot;
@@ -10,7 +13,19 @@ exports[`should match Snapshot 1`] = `
       {
         &quot;name&quot;: &quot;Mock category&quot;,
         &quot;colorName&quot;: &quot;jobs&quot;,
-        &quot;id&quot;: &quot;mock&quot;
+        &quot;id&quot;: &quot;mock&quot;,
+        &quot;subCategories&quot;: [
+          {
+            &quot;name&quot;: &quot;Buying houses&quot;,
+            &quot;colorVariation&quot;: &quot;100&quot;,
+            &quot;indicatorIds&quot;: []
+          },
+          {
+            &quot;name&quot;: &quot;Living in houses&quot;,
+            &quot;colorVariation&quot;: &quot;050&quot;,
+            &quot;indicatorIds&quot;: []
+          }
+        ]
       }
     </pre>
     <pre>

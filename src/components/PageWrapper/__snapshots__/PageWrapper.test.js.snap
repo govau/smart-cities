@@ -6,7 +6,7 @@ exports[`should match Snapshot 1`] = `
     <withRouter(SideBar) closeNav={[Function]} isOpen={false} categoryId=\\"jobs\\" cityId=\\"perth\\" />
   </div>
   <div>
-    <Header openNav={[Function]} cityId=\\"perth\\" categoryId=\\"jobs\\" />
+    <Header openNav={[Function]} cityId=\\"perth\\" categoryId=\\"jobs\\" cityName={[undefined]} categoryColorName={[undefined]} />
     <main className=\\"main\\">
       <div>
         render me

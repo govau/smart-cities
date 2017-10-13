@@ -23,30 +23,32 @@ class CategoryNav extends Component {
 
   render() {
     return (
-      <div ref={(el) => { this.el = el; }} className={style.categoryNav}>
-        <NavLink
-          className={style.link}
-          activeClassName={style.link__active}
-          to={`/${this.props.cityId}/${NO_CATEGORY}`}
-        >
-          <div className={style.overview}>Overview</div>
-        </NavLink>
-
-        {this.props.categories.map(category => (
+      <div className={style.wrapper}>
+        <div ref={(el) => { this.el = el; }} className={style.categoryNav}>
           <NavLink
             className={style.link}
             activeClassName={style.link__active}
-            key={category.id}
-            to={`/${this.props.cityId}/${category.id}`}
+            to={`/${this.props.cityId}/${NO_CATEGORY}`}
           >
-            <div
-              className={style[category.colorName]}
-              ref={(el) => {
-                if (this.props.categoryId === category.id) this.activeCategoryEl = el;
-              }}
-            >{ category.navName || category.name }</div>
+            <div className={style.overview}>Overview</div>
           </NavLink>
-        ))}
+
+          {this.props.categories.map(category => (
+            <NavLink
+              className={style.link}
+              activeClassName={style.link__active}
+              key={category.id}
+              to={`/${this.props.cityId}/${category.id}`}
+            >
+              <div
+                className={style[category.colorName]}
+                ref={(el) => {
+                  if (this.props.categoryId === category.id) this.activeCategoryEl = el;
+                }}
+              >{ category.navName || category.name }</div>
+            </NavLink>
+          ))}
+        </div>
       </div>
     );
   }

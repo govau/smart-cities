@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PageWrapper from '../../PageWrapper/PageWrapper';
+import CategoryBanner from '../../CategoryBanner/CategoryBanner';
+import SubCategorySummary from '../../SubCategorySummary/SubCategorySummary';
 import style from './CityCategory.scss';
 
 const CityCategory = (props) => {
@@ -10,7 +12,20 @@ const CityCategory = (props) => {
     <PageWrapper
       cityId={props.city.id}
       categoryId={props.category.id}
+      cityName={props.city.name}
+      categoryColorName={props.category.colorName}
     >
+      <CategoryBanner {...props} />
+
+      {props.category.subCategories.map(subCategory => (
+        <SubCategorySummary
+          key={subCategory.name}
+          {...subCategory}
+          colorName={props.category.colorName}
+          city={props.city}
+        />
+      ))}
+
       <div className={style.main}>
         <h1>{title}</h1>
 
@@ -23,9 +38,13 @@ const CityCategory = (props) => {
 
 CityCategory.propTypes = {
   category: PropTypes.shape({
-    name: PropTypes.string.isRequired,
     colorName: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    subCategories: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      indicatorIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    })).isRequired,
   }).isRequired,
   city: PropTypes.shape({
     name: PropTypes.string.isRequired,

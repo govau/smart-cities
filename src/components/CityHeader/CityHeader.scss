@@ -1,0 +1,96 @@
+@import '~style/variables';
+
+.wrapper {
+  position: relative;
+  height: 130px;
+
+  @include for-tablet-portrait-up {
+    height: 230px;
+  }
+
+  @include for-tablet-landscape-up {
+    height: 250px;
+  }
+
+  @include for-desktop-up {
+    height: 290px;
+  }
+}
+
+.container {
+  @include container;
+
+  position: relative; // above the absolute background panels
+  display: flex;
+  align-items: flex-end;
+  padding: 24px 16px;
+  height: 100%;
+
+  @include for-tablet-portrait-up {
+    padding: 20px;
+  }
+
+  @include for-tablet-landscape-up {
+    padding: 32px;
+  }
+
+  @include for-desktop-up {
+    padding: 46px 32px;
+  }
+}
+
+.backgroundPanelWrapper {
+  position: absolute;
+  display: flex;
+  flex-basis: 0;
+  align-items: stretch;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.backgroundPanel {
+  flex: auto;
+
+  @include for-tablet-portrait-up {
+    &:last-child {
+      flex: 2;
+    }
+  }
+}
+
+.title {
+  position: relative;
+  font-size: 40px;
+  bottom: -8px; // to bottom-align the text
+  line-height: 1.2; // it wraps on small screens
+  letter-spacing: 0.7px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+  @include for-tablet-portrait-up {
+    margin-right: 32px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 50px;
+    bottom: -11px;
+  }
+
+  @include for-desktop-up {
+    font-size: 70px;
+    bottom: -14px;
+  }
+}
+
+.iconWrapper {
+  // TODO (davidg): implement real icons
+  margin-left: auto; // push right
+  border: 1px dashed $color-white;
+  width: 180px;
+  height: 180px;
+
+  @include for-phone-only {
+    display: none;
+  }
+}

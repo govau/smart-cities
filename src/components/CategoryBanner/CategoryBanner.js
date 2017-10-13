@@ -9,6 +9,12 @@ import style from './CategoryBanner.scss';
 const CategoryBanner = (props) => {
   const backgroundColor = getColorVariant(props.category.colorName, '020');
   const cardHighlightColor = getColorVariant(props.category.colorName, '500');
+  const indicatorValue = props.city
+    ? props.city.indices[props.category.heroIndicatorId]
+    : aggregateIndicatorForCities(
+      props.category.heroIndicatorId,
+      props.cities,
+    );
 
   return (
     <div style={{ backgroundColor }}>
@@ -24,14 +30,17 @@ const CategoryBanner = (props) => {
           className={style.card}
           color={cardHighlightColor}
           indicator={props.category.heroIndicatorId}
-          value={aggregateIndicatorForCities(
-            props.category.heroIndicatorId,
-            props.cities,
-          )}
+          value={indicatorValue}
         />
       </div>
     </div>
   );
+};
+
+const cityPropShape = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  indices: PropTypes.object.isRequired,
 };
 
 CategoryBanner.propTypes = {
@@ -42,10 +51,8 @@ CategoryBanner.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
-  cities: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    indices: PropTypes.object.isRequired,
-  })).isRequired,
+  city: PropTypes.shape(cityPropShape),
+  cities: PropTypes.arrayOf(PropTypes.shape(cityPropShape)),
 };
 
 export default CategoryBanner;

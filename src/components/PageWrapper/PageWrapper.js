@@ -64,6 +64,8 @@ class PageWrapper extends Component {
             openNav={() => this.setNavState(true)}
             cityId={this.props.cityId}
             categoryId={this.props.categoryId}
+            cityName={this.props.cityName}
+            categoryColorName={this.props.categoryColorName}
           />
 
           <main className={style.main}>
@@ -84,6 +86,8 @@ PageWrapper.propTypes = {
     PropTypes.array,
   ]).isRequired,
   cityId: PropTypes.string,
+  cityName: PropTypes.string,
+  categoryColorName: PropTypes.string,
 };
 
 PageWrapper.defaultProps = {

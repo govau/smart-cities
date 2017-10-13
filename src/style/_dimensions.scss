@@ -5,7 +5,7 @@ $gov-header-height: 32px; // the small top header section, doesn't show on mobil
 $main-header-height-mobile: 48px;
 $main-header-height-desktop: 150px;
 
-$sidebar-width: 260px;
+$sidebar-width: 280px;
 $top-nav-height-mobile: 45px;
 $top-nav-height-desktop: 75px;
 
@@ -15,6 +15,7 @@ $top-nav-height-desktop: 75px;
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+  overflow: hidden;
 
   @include for-tablet-landscape-up {
     padding-left: 32px;

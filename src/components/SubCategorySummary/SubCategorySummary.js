@@ -15,6 +15,12 @@ const SubCategorySummary = (props) => {
 
   const indicatorCardWrappers = firstThreeIndicators.map((indicatorId, i) => {
     const lastOne = i === (firstThreeIndicators.length - 1);
+    const indicatorValue = props.city
+      ? props.city.indices[indicatorId]
+      : aggregateIndicatorForCities(
+        indicatorId,
+        props.cities,
+      );
 
     return (
       <div
@@ -25,10 +31,7 @@ const SubCategorySummary = (props) => {
           className={style.card}
           indicator={indicatorId}
           color={cardHighlightColor}
-          value={aggregateIndicatorForCities(
-            indicatorId,
-            props.cities,
-          )}
+          value={indicatorValue}
         />
         {lastOne && (
           <a
@@ -60,11 +63,15 @@ const SubCategorySummary = (props) => {
   );
 };
 
+const cityPropShape = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  indices: PropTypes.object.isRequired,
+};
+
 SubCategorySummary.propTypes = {
-  cities: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    indices: PropTypes.object.isRequired,
-  })).isRequired,
+  city: PropTypes.shape(cityPropShape),
+  cities: PropTypes.arrayOf(PropTypes.shape(cityPropShape)),
   colorName: PropTypes.string.isRequired,
   tint: PropTypes.string.isRequired,
   shade: PropTypes.string.isRequired,

@@ -13,6 +13,10 @@ header {
 // this is the minor header on desktop size
 // and the only header on mobile/tablet
 .govContainer {
+  @include shadow;
+
+  position: relative;
+  z-index: 1; // so the shadow is above the panel below
   display: flex;
   height: $main-header-height-mobile;
   flex-flow: column wrap;
@@ -21,6 +25,7 @@ header {
   justify-content: center;
 
   @include for-desktop-up {
+    box-shadow: none;
     padding-left: 30px;
     height: $gov-header-height;
     align-items: center;
@@ -64,6 +69,10 @@ header {
   display: none;
 
   @include for-desktop-up {
+    @include shadow;
+
+    position: relative;
+    z-index: 1; // so the shadow is above the panel below
     display: flex;
     width: 100%;
     height: $main-header-height-desktop;

@@ -14,10 +14,12 @@ const defaultProps = {
   },
   cities: [
     {
+      id: 'perth',
       name: 'Perth',
       indices: {}
     },
     {
+      id: 'sydney',
       name: 'Sydney',
       indices: {}
     },

@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CategoryNavContainer from '../CategoryNavContainer/CategoryNavContainer';
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
+import CityHeader from '../CityHeader/CityHeader';
 import { LINKS } from '../../constants';
 import dtaLogo from './dta-logo.svg';
 import star from './star-white.svg';
-
 import style from './Header.scss';
 
 const Header = props => (
@@ -36,6 +36,14 @@ const Header = props => (
         <a className={style.contactLink} href={LINKS.CONTACT_US}>Contact us</a>
       </div>
     </div>
+
+    {props.cityName && (
+      <CityHeader
+        cityName={props.cityName}
+        categoryColorName={props.categoryColorName}
+      />
+    )}
+
     <CategoryNavContainer
       // pass in categoryId so the nav updates when the category changes
       categoryId={props.categoryId}
@@ -46,6 +54,8 @@ const Header = props => (
 
 Header.propTypes = {
   cityId: PropTypes.string.isRequired,
+  cityName: PropTypes.string,
+  categoryColorName: PropTypes.string,
   categoryId: PropTypes.string.isRequired,
   openNav: PropTypes.func.isRequired,
 };
