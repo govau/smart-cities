@@ -2,20 +2,6 @@
 
 exports[`should match Snapshot 1`] = `
 "<PageWrapper categoryId=\\"overview\\" cityId=\\"all-cities\\">
-  <div className=\\"main\\">
-    <h1>
-      I am the overview page for all cities
-    </h1>
-    <pre>
-      [
-        {
-          &quot;name&quot;: &quot;Perth&quot;
-        },
-        {
-          &quot;name&quot;: &quot;Sydney&quot;
-        }
-      ]
-    </pre>
-  </div>
+  <OverviewSection cities={{...}} />
 </PageWrapper>"
 `;

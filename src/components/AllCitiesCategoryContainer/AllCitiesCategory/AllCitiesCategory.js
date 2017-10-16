@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PageWrapper from '../../PageWrapper/PageWrapper';
-import CategoryBanner from '../../CategoryBanner/CategoryBanner';
+import PageBanner from '../../PageBanner/PageBanner';
 import SubCategorySummary from '../../SubCategorySummary/SubCategorySummary';
 import getSubCategorySectionId from '../../../helpers/getSubCategorySectionId';
 import { INDICATORS } from '../../../constants';
 
 const AllCitiesCategory = props => (
   <PageWrapper categoryId={props.category.id}>
-    <CategoryBanner {...props} />
+    <PageBanner
+      colorName={props.category.colorName}
+      description={props.category.description}
+      indicator={props.category.heroIndicatorId}
+      title={props.category.name}
+      cities={props.cities}
+    />
 
     {props.category.subCategories.map(subCategory => (
       <SubCategorySummary

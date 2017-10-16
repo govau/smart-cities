@@ -1,7 +1,9 @@
 [
   {
-    "name": "Albury - Wodonga",
     "id": "albury-wodonga",
+    "shortName": "Albury/Wodonga",
+    "description": "TODO enter in a description for Albury - Wodonga",
+    "name": "Albury - Wodonga",
     "indices": {
       "participationRate": 0.615,
       "gdp": 52600000000,
@@ -22,8 +24,10 @@
     }
   },
   {
+    "id": "act",
+    "shortName": "ACT",
+    "description": "TODO enter in a description for Australian Capital Territory",
     "name": "Australian Capital Territory",
-    "id": "australian-capital-territory",
     "indices": {
       "participationRate": 0.709,
       "gdp": 0,
@@ -44,8 +48,10 @@
     }
   },
   {
-    "name": "Ballarat",
     "id": "ballarat",
+    "shortName": "Ballarat",
+    "description": "TODO enter in a description for Ballarat",
+    "name": "Ballarat",
     "indices": {
       "participationRate": 0.627,
       "gdp": 49900000000,
@@ -66,8 +72,10 @@
     }
   },
   {
-    "name": "Bendigo",
     "id": "bendigo",
+    "shortName": "Bendigo",
+    "description": "TODO enter in a description for Bendigo",
+    "name": "Bendigo",
     "indices": {
       "participationRate": 0.574,
       "gdp": 48800000000,
@@ -88,8 +96,10 @@
     }
   },
   {
-    "name": "Cairns",
     "id": "cairns",
+    "shortName": "Cairns",
+    "description": "TODO enter in a description for Cairns",
+    "name": "Cairns",
     "indices": {
       "participationRate": 0.628,
       "gdp": 62300000000,
@@ -110,8 +120,10 @@
     }
   },
   {
-    "name": "Geelong",
     "id": "geelong",
+    "shortName": "Geelong",
+    "description": "TODO enter in a description for Geelong",
+    "name": "Geelong",
     "indices": {
       "participationRate": 0.618,
       "gdp": 49300000000,
@@ -132,8 +144,10 @@
     }
   },
   {
-    "name": "Gold Coast - Tweed Heads",
     "id": "gold-coast-tweed-heads",
+    "shortName": "Gold Coast/Tweed Heads",
+    "description": "TODO enter in a description for Gold Coast - Tweed Heads",
+    "name": "Gold Coast - Tweed Heads",
     "indices": {
       "participationRate": 0.634,
       "gdp": 57200000000,
@@ -154,8 +168,10 @@
     }
   },
   {
-    "name": "Greater Adelaide",
     "id": "greater-adelaide",
+    "shortName": "Adelaide",
+    "description": "TODO enter in a description for Greater Adelaide",
+    "name": "Greater Adelaide",
     "indices": {
       "participationRate": 0.634,
       "gdp": 58600000000,
@@ -176,8 +192,10 @@
     }
   },
   {
-    "name": "Greater Brisbane",
     "id": "greater-brisbane",
+    "shortName": "Brisbane",
+    "description": "TODO enter in a description for Greater Brisbane",
+    "name": "Greater Brisbane",
     "indices": {
       "participationRate": 0.672,
       "gdp": 68300000000,
@@ -198,8 +216,10 @@
     }
   },
   {
-    "name": "Greater Darwin",
     "id": "greater-darwin",
+    "shortName": "Darwin",
+    "description": "TODO enter in a description for Greater Darwin",
+    "name": "Greater Darwin",
     "indices": {
       "participationRate": 0.759,
       "gdp": 94300000000,
@@ -220,8 +240,10 @@
     }
   },
   {
-    "name": "Greater Hobart",
     "id": "greater-hobart",
+    "shortName": "Hobart",
+    "description": "TODO enter in a description for Greater Hobart",
+    "name": "Greater Hobart",
     "indices": {
       "participationRate": 0.641,
       "gdp": 51900000000,
@@ -242,8 +264,10 @@
     }
   },
   {
-    "name": "Greater Melbourne",
     "id": "greater-melbourne",
+    "shortName": "Melbourne",
+    "description": "TODO enter in a description for Greater Melbourne",
+    "name": "Greater Melbourne",
     "indices": {
       "participationRate": 0.673,
       "gdp": 66400000000,
@@ -264,8 +288,10 @@
     }
   },
   {
-    "name": "Greater Perth",
     "id": "greater-perth",
+    "shortName": "Perth",
+    "description": "Perth is Western Australia’s state capital city. Perth has an estimated population of over 2.04 million people, which account for 8.58% of the national population. Perth is Australia 4th largest city in population size. Perth is part of the South West Land Division of Western Australia, with the majority of the metropolitan area of Perth located on the Swan Coastal Plain.",
+    "name": "Greater Perth",
     "indices": {
       "participationRate": 0.67,
       "gdp": 70700000000,
@@ -286,8 +312,10 @@
     }
   },
   {
-    "name": "Greater Sydney",
     "id": "greater-sydney",
+    "shortName": "Sydney",
+    "description": "TODO enter in a description for Greater Sydney",
+    "name": "Greater Sydney",
     "indices": {
       "participationRate": 0.662,
       "gdp": 81200000000,
@@ -308,8 +336,10 @@
     }
   },
   {
-    "name": "Launceston",
     "id": "launceston",
+    "shortName": "Launceston",
+    "description": "TODO enter in a description for Launceston",
+    "name": "Launceston",
     "indices": {
       "participationRate": 0.608,
       "gdp": 49100000000,
@@ -330,8 +360,10 @@
     }
   },
   {
-    "name": "Mackay",
     "id": "mackay",
+    "shortName": "Mackay",
+    "description": "TODO enter in a description for Mackay",
+    "name": "Mackay",
     "indices": {
       "participationRate": 0.757,
       "gdp": 83400000000,
@@ -352,8 +384,10 @@
     }
   },
   {
-    "name": "Newcastle - Maitland",
     "id": "newcastle-maitland",
+    "shortName": "Newcastle/Maitland",
+    "description": "TODO enter in a description for Newcastle - Maitland",
+    "name": "Newcastle - Maitland",
     "indices": {
       "participationRate": 0.633,
       "gdp": 57000000000,
@@ -374,8 +408,10 @@
     }
   },
   {
-    "name": "Sunshine Coast",
     "id": "sunshine-coast",
+    "shortName": "Sunshine Coast",
+    "description": "TODO enter in a description for Sunshine Coast",
+    "name": "Sunshine Coast",
     "indices": {
       "participationRate": 0.615,
       "gdp": 47500000000,
@@ -396,8 +432,10 @@
     }
   },
   {
-    "name": "Toowoomba",
     "id": "toowoomba",
+    "shortName": "Toowoomba",
+    "description": "TODO enter in a description for Toowoomba",
+    "name": "Toowoomba",
     "indices": {
       "participationRate": 0.65,
       "gdp": 62800000000,
@@ -418,8 +456,10 @@
     }
   },
   {
-    "name": "Townsville",
     "id": "townsville",
+    "shortName": "Townsville",
+    "description": "TODO enter in a description for Townsville",
+    "name": "Townsville",
     "indices": {
       "participationRate": 0.597,
       "gdp": 62600000000,
@@ -440,8 +480,10 @@
     }
   },
   {
-    "name": "Western Sydney",
     "id": "western-sydney",
+    "shortName": "Western Sydney",
+    "description": "TODO enter in a description for Western Sydney",
+    "name": "Western Sydney",
     "indices": {
       "participationRate": 0.626,
       "gdp": 41900000000,
@@ -462,8 +504,10 @@
     }
   },
   {
-    "name": "Wollongong",
     "id": "wollongong",
+    "shortName": "Wollongong",
+    "description": "TODO enter in a description for Wollongong",
+    "name": "Wollongong",
     "indices": {
       "participationRate": 0.603,
       "gdp": 44700000000,

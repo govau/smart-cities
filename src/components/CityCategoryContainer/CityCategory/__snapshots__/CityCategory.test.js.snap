@@ -2,7 +2,7 @@
 
 exports[`should match Snapshot 1`] = `
 "<PageWrapper cityId=\\"perth\\" categoryId=\\"mock\\" cityName=\\"Perth\\" categoryColorName=\\"jobs\\">
-  <CategoryBanner category={{...}} city={{...}} cities={{...}} toggleCitySelected={[Function]} />
+  <PageBanner colorName=\\"jobs\\" description=\\"The description of the category\\" indicator=\\"population\\" title=\\"Mock category\\" cities={{...}} />
   <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" indicatorIds={{...}} colorName=\\"jobs\\" city={{...}} />
   <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" indicatorIds={{...}} colorName=\\"jobs\\" city={{...}} />
   <div className=\\"main\\">
@@ -12,7 +12,9 @@ exports[`should match Snapshot 1`] = `
     <pre>
       {
         &quot;name&quot;: &quot;Mock category&quot;,
+        &quot;description&quot;: &quot;The description of the category&quot;,
         &quot;colorName&quot;: &quot;jobs&quot;,
+        &quot;heroIndicatorId&quot;: &quot;population&quot;,
         &quot;id&quot;: &quot;mock&quot;,
         &quot;subCategories&quot;: [
           {
@@ -32,14 +34,17 @@ exports[`should match Snapshot 1`] = `
       [
         {
           &quot;id&quot;: &quot;perth&quot;,
+          &quot;description&quot;: &quot;description of Perth&quot;,
           &quot;name&quot;: &quot;Perth&quot;
         },
         {
           &quot;id&quot;: &quot;sydney&quot;,
+          &quot;description&quot;: &quot;description of Sydney&quot;,
           &quot;name&quot;: &quot;Sydney&quot;
         },
         {
           &quot;id&quot;: &quot;melbourne&quot;,
+          &quot;description&quot;: &quot;description of Melbourne&quot;,
           &quot;name&quot;: &quot;Melbourne&quot;
         }
       ]

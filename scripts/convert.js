@@ -4,11 +4,11 @@
 // You can use "npm run generate-city-data" to do this
 
 import csv from 'csv';
-import kebabCase from 'lodash/kebabCase';
 import getStdin from 'get-stdin';
 import {
   INDICATORS,
   DATA_TYPES,
+  CITIES,
 } from '../src/constants';
 
 // convert from an object to an array with a key for each indicator
@@ -21,11 +21,12 @@ const indicators = Object.entries(INDICATORS).map(([key, indicator]) => ({
 getStdin().then((rawCsv) => {
   csv.parse(rawCsv, { columns: true }, (err, data) => {
     const cities = data.map((row) => {
-      const city = {
-        name: row.Cities,
-        id: kebabCase(row.Cities),
-        indices: {},
-      };
+      const city = CITIES[row.Cities];
+
+      if (!city) throw new Error(`${row.Cities} is not a known smart city`);
+
+      city.name = row.Cities;
+      city.indices = {};
 
       // generate key/value pairs for each indicator
       indicators.forEach((indicator) => {

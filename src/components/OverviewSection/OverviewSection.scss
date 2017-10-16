@@ -1,0 +1,72 @@
+@import '~style/variables';
+
+.wrapper {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.indicatorCards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.indicatorCardWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 4px solid $color-white;
+
+  &:first-of-type {
+    border-top: 4px solid $color-white;
+  }
+
+  @include for-tablet-landscape-up {
+    width: 50%;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    // left ones
+    &:nth-of-type(odd) {
+      justify-content: flex-end;
+      border-right: 4px solid $color-white;
+    }
+
+    // first two
+    &:nth-child(-n+2) {
+      border-top: 4px solid $color-white;
+    }
+  }
+}
+
+.categoryIndicator {
+  padding: 15px 16px 10px;
+  width: 100%;
+  border: none;
+
+  @include for-tablet-landscape-up {
+    padding: 25px 16px 10px;
+  }
+
+  @include for-tablet-landscape-up {
+    // there's two side-by-side, so halve the usual container width
+    // and allow for the fat border in the middle
+    width: ($app-max-width / 2) - 2px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include for-desktop-up {
+    // add more padding to the right of the left side
+    // and left of the right side
+    .indicatorCardWrapper:nth-of-type(odd) & {
+      padding-right: 50px;
+    }
+
+    .indicatorCardWrapper:nth-of-type(even) & {
+      padding-left: 50px;
+    }
+  }
+}

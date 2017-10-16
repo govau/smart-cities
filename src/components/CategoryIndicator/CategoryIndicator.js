@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
-import { INDICATORS } from '../../constants';
 import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
 import getColorVariant from '../../helpers/getColorVariant';
-import style from './CategoryBanner.scss';
+import {
+  INDICATORS,
+  NO_CITY,
+} from '../../constants';
+import style from './CategoryIndicator.scss';
 
-const CategoryBanner = (props) => {
-  const backgroundColor = getColorVariant(props.category.colorName, '020');
-  const cardHighlightColor = getColorVariant(props.category.colorName, '500');
+const CategoryIndicator = (props) => {
+  const categoryColor = getColorVariant(props.category.colorName, '500');
+  const cityIdForUrl = props.city ? props.city.id : NO_CITY;
   const indicatorValue = props.city
     ? props.city.indices[props.category.heroIndicatorId]
     : aggregateIndicatorForCities(
@@ -17,42 +21,56 @@ const CategoryBanner = (props) => {
     );
 
   return (
-    <div style={{ backgroundColor }}>
-      <div className={style.container}>
-        <div className={style.titleText}>
-          <h1 className={style.title}>{props.category.name}</h1>
+    <div className={props.className}>
+      <div className={style.iconAndCard}>
+        <div
+          className={style.categoryIcon}
+          style={{ color: categoryColor }}
+        >
+          icon
+        </div>
 
-          <p className={style.description}>{props.category.description}</p>
+        <div className={style.categoryName}>
+          {props.category.name}
         </div>
 
         <IndicatorCard
-          size="large"
           className={style.card}
-          color={cardHighlightColor}
           indicator={props.category.heroIndicatorId}
+          color={categoryColor}
           value={indicatorValue}
         />
       </div>
+
+      <NavLink
+        to={`/${cityIdForUrl}/${props.category.id}`}
+        className={style.viewLink}
+      >
+        View {props.category.name}
+        <span
+          className={style.viewIcon}
+          style={{ background: categoryColor }}
+        />
+      </NavLink>
     </div>
   );
 };
 
 const cityPropShape = {
   id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
   indices: PropTypes.object.isRequired,
 };
 
-CategoryBanner.propTypes = {
+CategoryIndicator.propTypes = {
   category: PropTypes.shape({
     colorName: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
     heroIndicatorId: PropTypes.oneOf(Object.keys(INDICATORS)).isRequired,
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
   city: PropTypes.shape(cityPropShape),
   cities: PropTypes.arrayOf(PropTypes.shape(cityPropShape)),
+  className: PropTypes.string,
 };
 
-export default CategoryBanner;
+export default CategoryIndicator;

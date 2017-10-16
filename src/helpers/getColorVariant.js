@@ -5,5 +5,12 @@ export default function getColorVariant(colorBase, shade) {
 
   if (!shade) return COLORS[upperColorBase];
 
-  return COLORS[`${upperColorBase}_${shade}`];
+  const colorKey = `${upperColorBase}_${shade}`;
+  const color = COLORS[colorKey];
+
+  if (!color) {
+    console.warn(`${colorKey} is not a known color`);
+  }
+
+  return color;
 }

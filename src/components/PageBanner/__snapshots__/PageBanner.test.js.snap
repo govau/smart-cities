@@ -5,13 +5,13 @@ exports[`should match Snapshot 1`] = `
   <div className=\\"container\\">
     <div className=\\"titleText\\">
       <h1 className=\\"title\\">
-        Mock category
+        Banner title
       </h1>
       <p className=\\"description\\">
         This is the mock category
       </p>
     </div>
-    <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"JOBS_500\\" indicator=\\"population\\" value={0} />
+    <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"JOBS_500\\" indicator=\\"population\\" value={100} />
   </div>
 </div>"
 `;

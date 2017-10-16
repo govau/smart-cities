@@ -2,13 +2,15 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import CityCategory from './CityCategory';
 
-jest.mock('../../CategoryBanner/CategoryBanner', () => 'CategoryBanner');
+jest.mock('../../PageBanner/PageBanner', () => 'PageBanner');
 jest.mock('../../SubCategorySummary/SubCategorySummary', () => 'SubCategorySummary');
 
 const defaultProps = {
   category: {
     name: 'Mock category',
+    description: 'The description of the category',
     colorName: 'jobs',
+    heroIndicatorId: 'population',
     id: 'mock',
     subCategories: [
       {
@@ -31,14 +33,17 @@ const defaultProps = {
   cities: [
     {
       id: 'perth',
+      description: 'description of Perth',
       name: 'Perth',
     },
     {
       id: 'sydney',
+      description: 'description of Sydney',
       name: 'Sydney',
     },
     {
       id: 'melbourne',
+      description: 'description of Melbourne',
       name: 'Melbourne',
     },
   ],

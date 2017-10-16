@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import AllCitiesCategory from './AllCitiesCategory';
 
-jest.mock('../../CategoryBanner/CategoryBanner', () => 'CategoryBanner');
+jest.mock('../../PageBanner/PageBanner', () => 'PageBanner');
 jest.mock('../../SubCategorySummary/SubCategorySummary', () => 'SubCategorySummary');
 
 const defaultProps = {
