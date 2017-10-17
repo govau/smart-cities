@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import classNames from 'classnames';
 import CityNavContainer from '../CityNavContainer/CityNavContainer';
 import style from './SideBar.scss';
-import coaWhite from './coa-white.svg';
+import coaWhite from '../../images/coa-white.svg';
 
 class SideBar extends Component {
   componentWillReceiveProps(nextProps) {

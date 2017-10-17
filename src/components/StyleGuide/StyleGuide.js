@@ -60,6 +60,7 @@ const SPECIAL_COLORS = [
   'grey--200',
   'grey--500',
   'grey--700',
+  'grey--800',
   'black',
   'badge',
   'highlight',

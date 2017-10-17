@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<footer className=\\"wrapper\\">
+  <div className=\\"container\\">
+    <div className=\\"logosWrapper\\">
+      <div className=\\"coaWrapper\\">
+        <img className=\\"coaLogo\\" src=\\"coa-white.svg\\" alt=\\"coat of arms\\" />
+      </div>
+      <div className=\\"logoDivider\\" />
+      <img className=\\"dtaLogo\\" src=\\"dta-logo-placeholder.svg\\" alt=\\"dta\\" />
+    </div>
+    <div className=\\"wordsWrapper\\">
+      <div className=\\"staticLinksWrapper\\">
+        <a href=\\"http://www.TODO.GLOSSARY.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+          Glossary
+        </a>
+        <a href=\\"http://www.TODO.FEEDBACK.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+          Give feedback
+        </a>
+        <a href=\\"http://www.TODO.PRIVACY.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+          Privacy policy
+        </a>
+        <a href=\\"http://www.TODO.TERMS.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+          Terms and conditions
+        </a>
+        <a href=\\"http://www.TODO.HELP.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+          Need help?
+        </a>
+        <a href=\\"http://www.TODO.ACCESSIBILITY.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+          Accessibility
+        </a>
+        <a href=\\"http://www.TODO.SECURITY.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+          Security
+        </a>
+      </div>
+      <div className=\\"copyright\\">
+        © Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.
+      </div>
+    </div>
+  </div>
+</footer>"
+`;

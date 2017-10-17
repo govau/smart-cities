@@ -4,6 +4,9 @@ import PageWrapper from './PageWrapper';
 import blockScroll from '../../helpers/blockScroll';
 
 jest.mock('../../helpers/blockScroll', () => jest.fn());
+jest.mock('../FooterContainer/FooterContainer', () => 'FooterContainer');
+jest.mock('../Header/Header', () => 'Header');
+jest.mock('../SideBar/SideBar', () => 'SideBar');
 
 const defaultProps = {
   categoryId: 'jobs',
