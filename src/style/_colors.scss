@@ -1,3 +1,10 @@
+$color-overview--020: #edf8fb;
+$color-overview--500: #32869c;
+$color-overview--600: #2b7588;
+$color-overview--700: #256778;
+$color-overview--800: #205a69;
+$color-overview--900: #1a4854;
+
 $color-jobs--020: #f5f6f9;
 $color-jobs--040: #e8eaf6;
 $color-jobs--060: #e3e5ef;
@@ -90,6 +97,13 @@ $color-primary--900: #003a45;
 
 /* stylelint-disable property-no-unknown, property-case, declaration-empty-line-before */
 :export {
+  OVERVIEW_020: $color-overview--020;
+  OVERVIEW_500: $color-overview--500;
+  OVERVIEW_600: $color-overview--600;
+  OVERVIEW_700: $color-overview--700;
+  OVERVIEW_800: $color-overview--800;
+  OVERVIEW_900: $color-overview--900;
+
   PRIMARY_020: $color-primary--020;
   PRIMARY_040: $color-primary--040;
   PRIMARY_060: $color-primary--060;
@@ -165,6 +179,9 @@ $color-primary--900: #003a45;
   PLANNING_700: $color-planning--700;
   PLANNING_800: $color-planning--800;
   PLANNING_900: $color-planning--900;
+
+  GREY_700: $color-grey--700;
+  WHITE: $color-white;
 }
 
 /* stylelint-enable */

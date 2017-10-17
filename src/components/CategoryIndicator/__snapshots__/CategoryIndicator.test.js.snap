@@ -9,7 +9,7 @@ exports[`should match Snapshot 1`] = `
     <div className=\\"categoryName\\">
       Jobs and Skills
     </div>
-    <IndicatorCard className=\\"card\\" indicator=\\"population\\" color=\\"JOBS_500\\" value={100} size=\\"small\\" />
+    <IndicatorCard className=\\"card\\" indicator=\\"population\\" color=\\"JOBS_500\\" colorName=\\"jobs\\" value={100} size=\\"small\\" />
   </div>
   <NavLink to=\\"/all-cities/jobs\\" className=\\"viewLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
     View 

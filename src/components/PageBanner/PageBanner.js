@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
+import IndicatorTypeMark from '../IndicatorTypeMark/IndicatorTypeMark';
 import { INDICATORS } from '../../constants';
 import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
 import getColorVariant from '../../helpers/getColorVariant';
@@ -19,19 +20,34 @@ const PageBanner = (props) => {
   return (
     <div style={{ backgroundColor }}>
       <div className={style.container}>
-        <div className={style.titleText}>
-          <h1 className={style.title}>{props.title}</h1>
+        <div className={style.textAndIndicator}>
+          <div className={style.titleText}>
+            <h1 className={style.title}>{props.title}</h1>
 
-          <p className={style.description}>{props.description}</p>
+            <p className={style.description}>{props.description}</p>
+          </div>
+
+          <IndicatorCard
+            size="large"
+            className={style.card}
+            color={cardHighlightColor}
+            colorName={props.colorName}
+            indicator={props.indicator}
+            value={indicatorValue}
+            isCategoryPage={props.isCategoryPage}
+          />
         </div>
 
-        <IndicatorCard
-          size="large"
-          className={style.card}
-          color={cardHighlightColor}
-          indicator={props.indicator}
-          value={indicatorValue}
-        />
+        <div className={style.indicatorTypeMarkWrapper}>
+          <IndicatorTypeMark
+            className={style.indicatorTypeMark}
+            colorName={props.colorName}
+            isCategoryPage={props.isCategoryPage}
+            size="LARGE"
+          />
+
+          Performance indicators
+        </div>
       </div>
     </div>
   );
@@ -50,6 +66,7 @@ PageBanner.propTypes = {
   description: PropTypes.string.isRequired,
   indicator: PropTypes.oneOf(Object.keys(INDICATORS)).isRequired,
   title: PropTypes.string.isRequired,
+  isCategoryPage: PropTypes.bool,
 };
 
 export default PageBanner;

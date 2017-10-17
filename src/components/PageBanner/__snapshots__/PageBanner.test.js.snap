@@ -3,15 +3,21 @@
 exports[`should match Snapshot 1`] = `
 "<div style={{...}}>
   <div className=\\"container\\">
-    <div className=\\"titleText\\">
-      <h1 className=\\"title\\">
-        Banner title
-      </h1>
-      <p className=\\"description\\">
-        This is the mock category
-      </p>
+    <div className=\\"textAndIndicator\\">
+      <div className=\\"titleText\\">
+        <h1 className=\\"title\\">
+          Banner title
+        </h1>
+        <p className=\\"description\\">
+          This is the mock category
+        </p>
+      </div>
+      <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"JOBS_500\\" colorName=\\"jobs\\" indicator=\\"population\\" value={100} isCategoryPage={[undefined]} />
     </div>
-    <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"JOBS_500\\" indicator=\\"population\\" value={100} />
+    <div className=\\"indicatorTypeMarkWrapper\\">
+      <IndicatorTypeMark className=\\"indicatorTypeMark\\" colorName=\\"jobs\\" isCategoryPage={[undefined]} size=\\"LARGE\\" />
+      Performance indicators
+    </div>
   </div>
 </div>"
 `;

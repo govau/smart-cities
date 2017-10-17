@@ -16,6 +16,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Participation rate, % of population aged over 15 years',
   },
   gdp: {
@@ -25,6 +26,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '$0,0.0a',
+    contextual: false,
     source: 'Gross domestic product, AUD per capita per year',
   },
   educationalAttainmentYr12: {
@@ -34,6 +36,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Education attainment - school completion rate, Year 12 or equivalent, % of population',
   },
   population: {
@@ -43,6 +46,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.SUM,
     format: '0[.]0a',
+    contextual: true,
     source: 'Population, All persons, People',
   },
   growthRate: {
@@ -53,6 +57,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Population growth rate, All persons, % per year',
   },
   dispersion: {
@@ -62,6 +67,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Local government dispersion, Share of LGAs in bottom 10% by population',
   },
   roadCongestionCost: {
@@ -73,6 +79,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.SUM,
     format: '$0,0[.]0a',
+    contextual: false,
     source: 'Annual cost of road congestion , AUD Billions per year, indexed to 2010',
   },
   dwellingHouse: {
@@ -82,6 +89,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Dwelling type ratio, Separate house, Percentage of Dwellings',
   },
   dwellingSemi: {
@@ -91,6 +99,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Dwelling type ratio, Semi-detached, Percentage of Dwellings',
   },
   dwellingApartment: {
@@ -100,6 +109,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Dwelling type ratio, Flat or Apartment, Percentage of Dwellings',
   },
   dwellingOther: {
@@ -109,6 +119,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Dwelling type ratio, Other, Percentage of Dwellings',
   },
   jobsWalk: {
@@ -118,6 +129,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Proportion of jobs accessible within 30 minutes, Walking, % of all jobs in city',
   },
   jobsBike: {
@@ -127,6 +139,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Proportion of jobs accessible within 30 minutes, By Bicycle, % of all jobs in city',
   },
   jobsCar: {
@@ -136,6 +149,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Proportion of jobs accessible within 30 minutes, By Car, % of all jobs in city',
   },
   activeJourneys: {
@@ -145,6 +159,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Active transport use, % of journeys to work',
   },
   publicJourneys: {
@@ -154,6 +169,7 @@ export default {
     dataType: DATA_TYPES.NUMBER,
     aggregationMethod: AGGREGATION_METHODS.MEDIAN,
     format: '0[.]0%',
+    contextual: false,
     source: 'Public transport use, % of journeys to work',
   },
 };

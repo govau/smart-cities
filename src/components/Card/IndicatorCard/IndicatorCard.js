@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
 import Card from '../Card';
-import style from './IndicatorCard.scss';
+import IndicatorTypeMark from '../../IndicatorTypeMark/IndicatorTypeMark';
 import {
   CARD_SIZES,
   INDICATORS,
   INDICATOR_CARD_TYPES,
 } from '../../../constants';
 import stripPrefixAndSuffix from '../../../helpers/stripPrefixAndSuffix';
+import style from './IndicatorCard.scss';
 
 const classnames = require('classnames/bind').bind(style);
 
@@ -44,6 +45,15 @@ const IndicatorCard = (props) => {
     >
       <p className={style.header}>{indicator.name}</p>
 
+      {!indicator.contextual && (
+        <IndicatorTypeMark
+          className={style.indicatorTypeMark}
+          colorName={props.colorName}
+          isCategoryPage={props.isCategoryPage}
+          size="SMALL"
+        />
+      )}
+
       <div className={style.indicatorWrapper}>
         {!!displayPrefix && (
           <span className={classnames(style.prefix, style.symbol)}>{displayPrefix}</span>
@@ -61,16 +71,19 @@ const IndicatorCard = (props) => {
 
 IndicatorCard.propTypes = {
   className: PropTypes.string,
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired, // a hex code
+  colorName: PropTypes.string.isRequired, // a color base name, e.g. 'jobs'
   indicator: PropTypes.oneOfType([ // accepts an indicator object or a string
     PropTypes.shape({
       cardPrefix: PropTypes.string,
       cardSuffix: PropTypes.string,
       format: PropTypes.string,
       name: PropTypes.string.isRequired,
+      contextual: PropTypes.bool.isRequired,
     }),
     PropTypes.string,
   ]).isRequired,
+  isCategoryPage: PropTypes.bool,
   value: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,

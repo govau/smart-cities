@@ -4,13 +4,17 @@ import renderer from 'react-test-renderer';
 import IndicatorCard from './IndicatorCard';
 import { CARD_SIZES } from '../../../constants';
 
+jest.mock('../../IndicatorTypeMark/IndicatorTypeMark', () => 'IndicatorTypeMark');
+
 const defaultProps = {
   value: 77,
+  colorName: 'jobs',
   indicator: {
     name: 'The population growth',
     cardPrefix: 'The',
     cardSuffix: 'per annum',
-    format: '0[.]0%'
+    format: '0[.]0%',
+    contextual: false,
   },
   color: '#fff',
 };
@@ -50,7 +54,8 @@ it('should render no prefix or suffix when none are available', () => {
         name: 'The number of cats',
         cardPrefix: '',
         cardSuffix: '',
-        format: '0[.]0'
+        format: '0[.]0',
+        contextual: false,
       }}
     />
   );
@@ -67,7 +72,8 @@ it('should render the format prefix', () => {
         name: 'The cost of things',
         cardPrefix: '',
         cardSuffix: '',
-        format: '$0[.]0'
+        format: '$0[.]0',
+        contextual: false,
       }}
     />
   );
@@ -83,7 +89,8 @@ it('should render the card prefix', () => {
         name: 'The cost of things',
         cardPrefix: 'AUD ',
         cardSuffix: '',
-        format: '$0[.]0'
+        format: '$0[.]0',
+        contextual: false,
       }}
     />
   );
@@ -99,7 +106,8 @@ it('should render the format suffix', () => {
         name: 'Population growth',
         cardPrefix: '',
         cardSuffix: '',
-        format: '0[.]0%'
+        format: '0[.]0%',
+        contextual: false,
       }}
     />
   );
@@ -115,10 +123,45 @@ it('should render the card suffix', () => {
         name: 'Population growth',
         cardPrefix: '',
         cardSuffix: '/year',
-        format: '0[.]0%'
+        format: '0[.]0%',
+        contextual: false,
       }}
     />
   );
 
   expect(component.find('.suffix').text()).toBe('%/year');
+});
+
+it('should render an IndicatorTypeMark if the indicator is not contextual', () => {
+  const component =  shallow(
+    <IndicatorCard
+      {...defaultProps}
+      indicator={{
+        name: 'Population growth',
+        cardPrefix: '',
+        cardSuffix: '/year',
+        format: '0[.]0%',
+        contextual: false,
+      }}
+    />
+  );
+
+  expect(component.find('IndicatorTypeMark').length).toBe(1);
+});
+
+it('should not render an IndicatorTypeMark if the indicator is contextual', () => {
+  const component =  shallow(
+    <IndicatorCard
+      {...defaultProps}
+      indicator={{
+        name: 'Population growth',
+        cardPrefix: '',
+        cardSuffix: '/year',
+        format: '0[.]0%',
+        contextual: true,
+      }}
+    />
+  );
+
+  expect(component.find('IndicatorTypeMark').length).toBe(0);
 });

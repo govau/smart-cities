@@ -2,7 +2,7 @@
 
 exports[`should match Snapshot 1`] = `
 "<PageWrapper categoryId=\\"mock\\" cityId=\\"all-cities\\">
-  <PageBanner colorName=\\"jobs\\" description=\\"This is the mock category\\" indicator=\\"population\\" title=\\"Mock category\\" cities={{...}} />
+  <PageBanner colorName=\\"jobs\\" description=\\"This is the mock category\\" indicator=\\"population\\" title=\\"Mock category\\" cities={{...}} isCategoryPage={true} />
   <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" indicatorIds={{...}} colorName=\\"jobs\\" cities={{...}} />
   <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" indicatorIds={{...}} colorName=\\"jobs\\" cities={{...}} />
   <div id=\\"sc-buying-houses\\">

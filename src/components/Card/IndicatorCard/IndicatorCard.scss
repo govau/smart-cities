@@ -3,6 +3,7 @@
 .wrapper {
   display: flex;
   align-items: stretch;
+  position: relative; // the P is absolute, relative to this
 
   &.wrapper__large {
     flex-direction: column;
@@ -19,6 +20,12 @@
   .wrapper__large & {
     @include type-indicator-card-header--large;
   }
+}
+
+.indicatorTypeMark {
+  position: absolute;
+  top: 7px;
+  right: 7px;
 }
 
 .indicatorWrapper {

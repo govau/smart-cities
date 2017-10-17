@@ -14,6 +14,7 @@ const AllCitiesCategory = props => (
       indicator={props.category.heroIndicatorId}
       title={props.category.name}
       cities={props.cities}
+      isCategoryPage
     />
 
     {props.category.subCategories.map(subCategory => (

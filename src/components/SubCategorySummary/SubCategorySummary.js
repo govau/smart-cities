@@ -31,7 +31,9 @@ const SubCategorySummary = (props) => {
           className={style.card}
           indicator={indicatorId}
           color={cardHighlightColor}
+          colorName={props.colorName}
           value={indicatorValue}
+          isCategoryPage
         />
         {lastOne && (
           <a

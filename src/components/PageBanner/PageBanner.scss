@@ -3,18 +3,23 @@
 .container {
   @include container;
 
-  display: flex;
-  flex-direction: column;
   padding-top: 16px;
   padding-bottom: 16px;
 
   @include for-tablet-portrait-up {
-    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 32px;
   }
+}
+
+.textAndIndicator {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
 
   @include for-tablet-portrait-up {
-    padding-top: 40px;
-    padding-bottom: 72px;
+    flex-direction: row;
+    margin-bottom: 32px;
   }
 }
 
@@ -45,4 +50,13 @@
     width: 300px; // TODO (davidg): should allow for the widest value
     margin-left: auto; // push to the right
   }
+}
+
+.indicatorTypeMarkWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.indicatorTypeMark {
+  margin-right: 8px;
 }

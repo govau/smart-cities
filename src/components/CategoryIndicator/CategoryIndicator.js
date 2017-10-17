@@ -38,6 +38,7 @@ const CategoryIndicator = (props) => {
           className={style.card}
           indicator={props.category.heroIndicatorId}
           color={categoryColor}
+          colorName={props.category.colorName}
           value={indicatorValue}
         />
       </div>
