@@ -12,8 +12,7 @@ export default [
         tint: '040',
         shade: '600',
         indicatorIds: [
-          'participationRate',
-          'gdp',
+          'participationRateGeneral',
         ],
       },
       {
@@ -38,8 +37,6 @@ export default [
         tint: '040',
         shade: '600',
         indicatorIds: [
-          'jobsWalk',
-          'jobsBike',
           'jobsCar',
         ],
       },
@@ -48,8 +45,6 @@ export default [
         tint: '060',
         shade: '700',
         indicatorIds: [
-          'jobsWalk',
-          'jobsBike',
           'jobsCar',
         ],
       },
@@ -68,8 +63,6 @@ export default [
         tint: '040',
         shade: '600',
         indicatorIds: [
-          'jobsWalk',
-          'jobsBike',
           'jobsCar',
         ],
       },
@@ -155,19 +148,13 @@ export default [
         name: 'Development',
         tint: '040',
         shade: '600',
-        indicatorIds: [
-          'jobsWalk',
-          'jobsBike',
-          'jobsCar',
-        ],
+        indicatorIds: [],
       },
       {
         name: 'Population',
         tint: '060',
         shade: '700',
         indicatorIds: [
-          'jobsWalk',
-          'jobsBike',
           'jobsCar',
         ],
       },
