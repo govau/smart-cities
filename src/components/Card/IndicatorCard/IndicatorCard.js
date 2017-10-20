@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
 import Card from '../Card';
-import IndicatorTypeMark from '../../IndicatorTypeMark/IndicatorTypeMark';
+import Icon from '../../Icon/Icon';
 import {
   CARD_SIZES,
   INDICATORS,
   INDICATOR_CARD_TYPES,
 } from '../../../constants';
 import stripPrefixAndSuffix from '../../../helpers/stripPrefixAndSuffix';
+import getColorVariant from '../../../helpers/getColorVariant';
 import style from './IndicatorCard.scss';
 
 const classnames = require('classnames/bind').bind(style);
@@ -46,11 +47,11 @@ const IndicatorCard = (props) => {
       <p className={style.header}>{indicator.name}</p>
 
       {!indicator.contextual && (
-        <IndicatorTypeMark
+        <Icon
           className={style.indicatorTypeMark}
-          colorName={props.colorName}
-          isCategoryPage={props.isCategoryPage}
-          size="SMALL"
+          color={getColorVariant(props.colorName, '900')}
+          icon={props.isCategoryPage ? 'indicatorTypeMarkSolid' : 'indicatorTypeMarkBorder'}
+          size={14}
         />
       )}
 

@@ -1,0 +1,51 @@
+@import '~style/variables';
+
+.svg {
+  display: inline-block;
+  vertical-align: middle;
+
+  * {
+    fill: currentColor;
+  }
+}
+
+// Some classes that will be applied on the <g> surrounding an icon
+.indicatorTypeMarkSolid {
+  path { // the "P"
+    fill: $color-white;
+  }
+
+  circle {
+    fill: currentColor;
+  }
+}
+
+.indicatorTypeMarkBorder {
+  path { // the "P"
+    fill: $color-grey--700;
+  }
+
+  circle {
+    stroke: currentColor;
+    fill: none;
+  }
+}
+
+.arrowInCircle {
+  path {
+    fill: none;
+    stroke: $color-white;
+  }
+}
+
+// This will be applied to the SVG element itself
+:global(.circleWithShadow) {
+  @include shadow(2);
+
+  border-radius: 50%;
+  transition: box-shadow $animation-duration;
+
+  &:hover {
+    @include shadow(3);
+  }
+}

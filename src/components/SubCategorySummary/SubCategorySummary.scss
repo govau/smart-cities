@@ -32,7 +32,8 @@
 }
 
 .iconWrapper {
-  @include iconWrapper;
+  flex: none;
+  margin-right: 8px;
 }
 
 .title {
@@ -90,12 +91,4 @@
 
 .linkText {
   margin-right: 8px;
-}
-
-.linkIcon {
-  // TODO (davidg): implement real icons
-  display: inline;
-  padding: 0 9px;
-  border: 1px dashed $color-grey--500;
-  height: 20px;
 }

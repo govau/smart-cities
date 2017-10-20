@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
-import IndicatorTypeMark from '../IndicatorTypeMark/IndicatorTypeMark';
+import Icon from '../Icon/Icon';
 import { INDICATORS } from '../../constants';
 import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
 import getColorVariant from '../../helpers/getColorVariant';
@@ -10,6 +10,7 @@ import style from './PageBanner.scss';
 const PageBanner = (props) => {
   const backgroundColor = getColorVariant(props.colorName, '020');
   const cardHighlightColor = getColorVariant(props.colorName, '500');
+  const pColor = getColorVariant(props.colorName, '900');
   const indicatorValue = props.city
     ? props.city.indices[props.indicator]
     : aggregateIndicatorForCities(
@@ -40,11 +41,11 @@ const PageBanner = (props) => {
 
         {!props.isContextPage && (
           <div className={style.indicatorTypeMarkWrapper}>
-            <IndicatorTypeMark
+            <Icon
               className={style.indicatorTypeMark}
-              colorName={props.colorName}
-              isCategoryPage={props.isCategoryPage}
-              size="LARGE"
+              color={pColor}
+              icon={props.isCategoryPage ? 'indicatorTypeMarkSolid' : 'indicatorTypeMarkBorder'}
+              size={22}
             />
 
             Performance indicators

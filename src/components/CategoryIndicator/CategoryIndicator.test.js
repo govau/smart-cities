@@ -2,10 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import CategoryIndicator from './CategoryIndicator';
 
+jest.mock('../Icon/Icon', () => 'Icon');
+
 const defaultProps = {
   category: {
     colorName: 'jobs',
     heroIndicatorId: 'population',
+    iconId: 'infrastructureGettingToWork',
     id: 'jobs',
     name: 'Jobs and Skills',
   },
@@ -94,7 +97,6 @@ it('should use the appropriate color', () => {
     />
   );
 
-  expect(component.find('.categoryIcon').prop('style').color).toBe('JOBS_500');
   expect(component.find('IndicatorCard').prop('color')).toBe('JOBS_500');
-  expect(component.find('.viewIcon').prop('style').background).toBe('JOBS_500');
+  expect(component.find('Icon').prop('color')).toBe('JOBS_500');
 });

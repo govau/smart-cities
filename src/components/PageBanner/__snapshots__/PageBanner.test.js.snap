@@ -15,7 +15,7 @@ exports[`should match Snapshot 1`] = `
       <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"JOBS_500\\" colorName=\\"jobs\\" indicator=\\"population\\" value={100} isCategoryPage={[undefined]} />
     </div>
     <div className=\\"indicatorTypeMarkWrapper\\">
-      <IndicatorTypeMark className=\\"indicatorTypeMark\\" colorName=\\"jobs\\" isCategoryPage={[undefined]} size=\\"LARGE\\" />
+      <Icon className=\\"indicatorTypeMark\\" color=\\"JOBS_900\\" icon=\\"indicatorTypeMarkBorder\\" size={22} />
       Performance indicators
     </div>
   </div>

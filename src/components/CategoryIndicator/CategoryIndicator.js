@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
+import Icon from '../Icon/Icon';
 import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
 import getColorVariant from '../../helpers/getColorVariant';
 import {
@@ -23,12 +24,12 @@ const CategoryIndicator = (props) => {
   return (
     <div className={props.className}>
       <div className={style.iconAndCard}>
-        <div
+        <Icon
           className={style.categoryIcon}
-          style={{ color: categoryColor }}
-        >
-          icon
-        </div>
+          color={categoryColor}
+          icon={props.category.iconId}
+          size={70}
+        />
 
         <div className={style.categoryName}>
           {props.category.name}
@@ -48,10 +49,6 @@ const CategoryIndicator = (props) => {
         className={style.viewLink}
       >
         View {props.category.name}
-        <span
-          className={style.viewIcon}
-          style={{ background: categoryColor }}
-        />
       </NavLink>
     </div>
   );
@@ -67,6 +64,7 @@ CategoryIndicator.propTypes = {
     colorName: PropTypes.string.isRequired,
     heroIndicatorId: PropTypes.oneOf(Object.keys(INDICATORS)).isRequired,
     id: PropTypes.string.isRequired,
+    iconId: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
   city: PropTypes.shape(cityPropShape),

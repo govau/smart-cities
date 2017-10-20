@@ -4,7 +4,7 @@ exports[`should match Snapshot 1`] = `
 "<div style={{...}} className=\\"wrapper\\">
   <div className=\\"container\\">
     <div className=\\"textWrapper\\">
-      <span className=\\"iconWrapper\\" />
+      <Icon className=\\"iconWrapper\\" icon=\\"infrastructureGettingToWork\\" color=\\"JOBS_600\\" size={80} />
       <h3 className=\\"title\\">
         Mock sub category
       </h3>
@@ -16,7 +16,6 @@ exports[`should match Snapshot 1`] = `
           <span className=\\"linkText\\">
             View all Mock sub category charts
           </span>
-          <span className=\\"linkIcon\\" />
         </a>
       </div>
     </div>

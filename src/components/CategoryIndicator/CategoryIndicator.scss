@@ -14,16 +14,10 @@
 .categoryIcon {
   display: none;
   flex: none;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
   margin-right: 16px;
-  border-radius: 100%;
-  border: 2px dashed currentColor;
 
   @include for-tablet-portrait-up {
-    display: flex;
+    display: block;
   }
 
   @include for-desktop-up {
@@ -31,7 +25,7 @@
   }
 
   @include for-big-desktop-up {
-    display: flex;
+    display: block;
   }
 }
 
@@ -75,14 +69,4 @@
   float: right;
   font-size: 12px;
   font-weight: 700;
-}
-
-.viewIcon {
-  // TODO (davidg): icon and combine all icons
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  margin-left: 9px;
-  vertical-align: -5px;
 }

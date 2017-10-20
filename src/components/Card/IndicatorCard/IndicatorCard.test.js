@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import IndicatorCard from './IndicatorCard';
 import { CARD_SIZES } from '../../../constants';
 
-jest.mock('../../IndicatorTypeMark/IndicatorTypeMark', () => 'IndicatorTypeMark');
+jest.mock('../../Icon/Icon', () => 'Icon');
 
 const defaultProps = {
   value: 77,
@@ -132,7 +132,7 @@ it('should render the card suffix', () => {
   expect(component.find('.suffix').text()).toBe('%/year');
 });
 
-it('should render an IndicatorTypeMark if the indicator is not contextual', () => {
+it('should render an Icon if the indicator is not contextual', () => {
   const component =  shallow(
     <IndicatorCard
       {...defaultProps}
@@ -146,10 +146,10 @@ it('should render an IndicatorTypeMark if the indicator is not contextual', () =
     />
   );
 
-  expect(component.find('IndicatorTypeMark').length).toBe(1);
+  expect(component.find('Icon').length).toBe(1);
 });
 
-it('should not render an IndicatorTypeMark if the indicator is contextual', () => {
+it('should not render an Icon if the indicator is contextual', () => {
   const component =  shallow(
     <IndicatorCard
       {...defaultProps}
@@ -163,5 +163,5 @@ it('should not render an IndicatorTypeMark if the indicator is contextual', () =
     />
   );
 
-  expect(component.find('IndicatorTypeMark').length).toBe(0);
+  expect(component.find('Icon').length).toBe(0);
 });

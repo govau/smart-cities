@@ -7,6 +7,7 @@ module.exports = {
       true,
       {
         ignoreAtRules: [
+          'if',
           'include',
           'mixin',
           'content',

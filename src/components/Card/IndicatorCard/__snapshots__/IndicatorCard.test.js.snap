@@ -14,11 +14,11 @@ exports[`should match Snapshot 1`] = `
   >
     The population growth
   </p>
-  <IndicatorTypeMark
+  <Icon
     className="indicatorTypeMark"
-    colorName="jobs"
-    isCategoryPage={undefined}
-    size="SMALL"
+    color="JOBS_900"
+    icon="indicatorTypeMarkBorder"
+    size={14}
   />
   <div
     className="indicatorWrapper"

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import PageBanner from './PageBanner';
 
 jest.mock('../Card/IndicatorCard/IndicatorCard', () => 'IndicatorCard');
-jest.mock('../IndicatorTypeMark/IndicatorTypeMark', () => 'IndicatorTypeMark');
+jest.mock('../Icon/Icon', () => 'Icon');
 
 const defaultProps = {
   colorName: 'jobs',

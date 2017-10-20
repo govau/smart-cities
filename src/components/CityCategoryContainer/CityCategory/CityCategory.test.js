@@ -11,6 +11,7 @@ const defaultProps = {
     description: 'The description of the category',
     colorName: 'jobs',
     heroIndicatorId: 'population',
+    iconId: 'infrastructureGettingToWork',
     id: 'mock',
     subCategories: [
       {

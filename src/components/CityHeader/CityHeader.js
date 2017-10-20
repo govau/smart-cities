@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getColorVariant from '../../helpers/getColorVariant';
+import Icon from '../Icon/Icon';
 import style from './CityHeader.scss';
 
 const shades = [
@@ -33,7 +34,14 @@ const CityHeader = (props) => {
           {props.cityName}
         </h1>
 
-        <span className={style.iconWrapper} />
+        {props.categoryIconId && (
+          <Icon
+            className={style.iconWrapper}
+            color={getColorVariant(props.categoryColorName, '500')}
+            icon={props.categoryIconId}
+            size={180}
+          />
+        )}
       </div>
     </div>
   );
@@ -41,6 +49,7 @@ const CityHeader = (props) => {
 
 CityHeader.propTypes = {
   cityName: PropTypes.string.isRequired,
+  categoryIconId: PropTypes.string,
   categoryColorName: PropTypes.string.isRequired,
 };
 

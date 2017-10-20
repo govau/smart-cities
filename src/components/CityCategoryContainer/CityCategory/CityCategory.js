@@ -11,6 +11,7 @@ const CityCategory = props => (
     categoryId={props.category.id}
     cityName={props.city.name}
     categoryColorName={props.category.colorName}
+    categoryIconId={props.category.iconId}
   >
     <PageBanner
       colorName={props.category.colorName}
@@ -37,6 +38,7 @@ CityCategory.propTypes = {
   category: PropTypes.shape({
     colorName: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
+    iconId: PropTypes.string,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     heroIndicatorId: PropTypes.string.isRequired,

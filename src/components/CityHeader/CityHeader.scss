@@ -84,11 +84,7 @@
 }
 
 .iconWrapper {
-  // TODO (davidg): implement real icons
   margin-left: auto; // push right
-  border: 1px dashed $color-white;
-  width: 180px;
-  height: 180px;
 
   @include for-phone-only {
     display: none;

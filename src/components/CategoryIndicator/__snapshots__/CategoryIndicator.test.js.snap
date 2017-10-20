@@ -3,9 +3,7 @@
 exports[`should match Snapshot 1`] = `
 "<div className={[undefined]}>
   <div className=\\"iconAndCard\\">
-    <div className=\\"categoryIcon\\" style={{...}}>
-      icon
-    </div>
+    <Icon className=\\"categoryIcon\\" color=\\"JOBS_500\\" icon=\\"infrastructureGettingToWork\\" size={70} />
     <div className=\\"categoryName\\">
       Jobs and Skills
     </div>
@@ -14,7 +12,6 @@ exports[`should match Snapshot 1`] = `
   <NavLink to=\\"/all-cities/jobs\\" className=\\"viewLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
     View 
     Jobs and Skills
-    <span className=\\"viewIcon\\" style={{...}} />
   </NavLink>
 </div>"
 `;

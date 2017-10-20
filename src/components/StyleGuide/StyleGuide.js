@@ -1,6 +1,8 @@
 import React from 'react';
 import ColorRow from './ColorRow/ColorRow';
 import TypographyRow from './TypographyRow/TypographyRow';
+import Icon from '../Icon/Icon';
+import iconDefinitions from '../Icon/iconDefinitions';
 import style from './StyleGuide.scss';
 
 const COLOR_GROUPS = [
@@ -153,15 +155,29 @@ const StyleGuide = () => (
       <h1 className={style.sectionText}>Colours</h1>
 
       {COLORS.map(colorRow => (
-        <ColorRow colors={colorRow} />
+        <ColorRow key={colorRow[0].variableName} colors={colorRow} />
       ))}
     </div>
 
+    <h1 className={style.sectionText}>Icons</h1>
+
+    <div className={style.iconsWrapper}>
+      {Object.keys(iconDefinitions).map(iconKey => (
+        <div className={style.iconWrapper} key={iconKey}>
+          <Icon
+            icon={iconKey}
+            size={64}
+          />
+          <p className={style.code}>{iconKey}</p>
+        </div>
+      ))}
+    </div>
 
     <h1 className={style.sectionText}>Typography</h1>
 
     {TYPES.map(typeRow => (
       <TypographyRow
+        key={typeRow.className}
         className={typeRow.className}
         variableName={typeRow.variableName}
         sampleText={typeRow.sampleText}

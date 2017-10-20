@@ -4,12 +4,14 @@ import CategoryBanner from './SubCategorySummary';
 import { CATEGORY_IDS } from '../../constants';
 
 jest.mock('../Card/IndicatorCard/IndicatorCard', () => 'IndicatorCard');
+jest.mock('../Icon/Icon', () => 'Icon');
 
 const defaultProps = {
   categoryId: 'jobs',
   highlightColorLight: 'JOBS_020',
   highlightColorDark: 'JOBS_600',
   name: 'Mock sub category',
+  iconId: 'infrastructureGettingToWork',
   summaryIndicatorIds: [
     'population',
   ],

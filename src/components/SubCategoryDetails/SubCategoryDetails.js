@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import CityColumnChart from '../CityColumnChart/CityColumnChart';
+import Icon from '../Icon/Icon';
 import { INDICATORS } from '../../constants';
 import style from './SubCategoryDetails.scss';
 
@@ -23,7 +24,12 @@ const SubCategoryDetails = (props) => {
     >
       <div className={style.container}>
         <div className={style.heading}>
-          <span className={style.iconWrapper} />
+          <Icon
+            className={style.iconWrapper}
+            size={70}
+            icon={subCategory.iconId}
+          />
+
           <h3>{subCategory.name}</h3>
         </div>
         <div className={style.chartGrid}>

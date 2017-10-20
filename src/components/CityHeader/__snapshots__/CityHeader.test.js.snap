@@ -13,7 +13,7 @@ exports[`should match Snapshot 1`] = `
     <h1 className=\\"title\\">
       Greater perth
     </h1>
-    <span className=\\"iconWrapper\\" />
+    <../Icon/Icon className=\\"iconWrapper\\" color=\\"JOBS_500\\" icon=\\"infrastructureGettingToWork\\" size={180} />
   </div>
 </div>"
 `;

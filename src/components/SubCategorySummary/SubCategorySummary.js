@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
+import Icon from '../Icon/Icon';
 import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import getColorVariant from '../../helpers/getColorVariant';
@@ -46,7 +47,6 @@ const SubCategorySummary = (props) => {
             href={`#${getSubCategorySectionId(props.name)}`}
           >
             <span className={style.linkText}>{linkText}</span>
-            <span className={style.linkIcon} />
           </a>
         )}
       </div>
@@ -57,7 +57,12 @@ const SubCategorySummary = (props) => {
     <div style={{ backgroundColor }} className={style.wrapper}>
       <div className={style.container}>
         <div className={style.textWrapper}>
-          <span className={style.iconWrapper} />
+          <Icon
+            className={style.iconWrapper}
+            icon={props.iconId}
+            color={cardHighlightColor}
+            size={80}
+          />
 
           <h3 className={style.title}>{props.name}</h3>
         </div>
@@ -82,6 +87,7 @@ SubCategorySummary.propTypes = {
   categoryId: PropTypes.string.isRequired,
   highlightColorLight: PropTypes.string.isRequired,
   highlightColorDark: PropTypes.string.isRequired,
+  iconId: PropTypes.string.isRequired,
   summaryIndicatorIds: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(INDICATORS)),
   ).isRequired,
