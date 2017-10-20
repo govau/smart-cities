@@ -16,13 +16,12 @@ const defaultProps = {
       {
         name: 'Buying houses',
         colorVariation: '100',
-        indicatorIds: [],
+        summaryIndicatorIds: [],
       },
       {
         name: 'Living in houses',
         colorVariation: '050',
-        indicatorIds: [
-        ],
+        summaryIndicatorIds: [],
       },
     ],
   },

@@ -1,7 +1,6 @@
 @import '~style/variables';
 
 .wrapper {
-  padding-left: 20px;
   width: 100%;
   height: $top-nav-height-mobile;
   background: $color-white;
@@ -13,6 +12,7 @@
 }
 
 .categoryNav {
+  padding-left: 16px;
   display: flex;
   white-space: nowrap;
   overflow-x: auto;
@@ -27,12 +27,21 @@
 .link {
   height: 100%;
   display: inline-block;
-  padding: 12px 0;
+  padding: 8px 0;
   margin-right: 10px;
   text-decoration: none;
 
   @include for-desktop-up {
-    padding: 24px 0;
+    margin-right: 1px;
+    padding: 20px 0;
+  }
+
+  @include for-big-desktop-up {
+    margin-right: 10px;
+  }
+
+  &:last-child {
+    padding-right: 16px;
   }
 
   &:hover div {
@@ -46,23 +55,35 @@
     padding: 0 24px;
     border-radius: 100px;
     color: $color-grey--700;
+    border: 2px solid transparent;
 
     @include for-desktop-up {
+      padding: 0 15px;
+
       &:not(:hover) {
         box-shadow: none;
       }
+    }
+
+    @include for-big-desktop-up {
+      padding: 0 24px;
     }
   }
 
   &:hover,
   &.link__active {
     .overview {
-      border: 1px solid $color-grey--500;
+      border: 2px solid $color-grey--500;
       color: $color-grey--700;
     }
   }
 
   &:hover {
+    .context {
+      border: 2px solid $color-primary--500;
+      color: $color-grey--700;
+    }
+
     .jobs {
       background: $color-jobs--500;
     }
@@ -89,6 +110,11 @@
   }
 
   &.link__active {
+    .context {
+      border: 2px solid $color-primary--600;
+      color: $color-grey--700;
+    }
+
     .jobs {
       background: $color-jobs--600;
     }

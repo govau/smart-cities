@@ -4,12 +4,15 @@ import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
 import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import getColorVariant from '../../helpers/getColorVariant';
-import { INDICATORS } from '../../constants';
+import {
+  INDICATORS,
+  CATEGORY_IDS,
+} from '../../constants';
 import style from './SubCategorySummary.scss';
 
 const SubCategorySummary = (props) => {
-  const backgroundColor = getColorVariant(props.colorName, props.tint);
-  const cardHighlightColor = getColorVariant(props.colorName, props.shade);
+  const backgroundColor = getColorVariant(props.highlightColorLight);
+  const cardHighlightColor = getColorVariant(props.highlightColorDark);
 
   const indicatorCardWrappers = props.summaryIndicatorIds.map((indicatorId, i) => {
     const lastOne = i === (props.summaryIndicatorIds.length - 1);
@@ -20,6 +23,10 @@ const SubCategorySummary = (props) => {
         props.cities,
       );
 
+    const linkText = props.categoryId === CATEGORY_IDS.CONTEXT
+      ? 'View contextual charts'
+      : `View all ${props.name} charts`;
+
     return (
       <div
         key={indicatorId}
@@ -29,7 +36,7 @@ const SubCategorySummary = (props) => {
           className={style.card}
           indicator={indicatorId}
           color={cardHighlightColor}
-          colorName={props.colorName}
+          colorName={props.categoryId}
           value={indicatorValue}
           isCategoryPage
         />
@@ -38,7 +45,7 @@ const SubCategorySummary = (props) => {
             className={style.linkWrapper}
             href={`#${getSubCategorySectionId(props.name)}`}
           >
-            <span className={style.linkText}>View all {props.name} charts</span>
+            <span className={style.linkText}>{linkText}</span>
             <span className={style.linkIcon} />
           </a>
         )}
@@ -47,7 +54,7 @@ const SubCategorySummary = (props) => {
   });
 
   return (
-    <div style={{ backgroundColor }}>
+    <div style={{ backgroundColor }} className={style.wrapper}>
       <div className={style.container}>
         <div className={style.textWrapper}>
           <span className={style.iconWrapper} />
@@ -72,9 +79,9 @@ const cityPropShape = {
 SubCategorySummary.propTypes = {
   city: PropTypes.shape(cityPropShape),
   cities: PropTypes.arrayOf(PropTypes.shape(cityPropShape)),
-  colorName: PropTypes.string.isRequired,
-  tint: PropTypes.string.isRequired,
-  shade: PropTypes.string.isRequired,
+  categoryId: PropTypes.string.isRequired,
+  highlightColorLight: PropTypes.string.isRequired,
+  highlightColorDark: PropTypes.string.isRequired,
   summaryIndicatorIds: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(INDICATORS)),
   ).isRequired,

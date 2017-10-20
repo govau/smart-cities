@@ -5,7 +5,10 @@ import PageBanner from '../../PageBanner/PageBanner';
 import SubCategorySummary from '../../SubCategorySummary/SubCategorySummary';
 import SubCategoryDetails from '../../SubCategoryDetails/SubCategoryDetails';
 import CityColumnChart from '../../CityColumnChart/CityColumnChart';
-import { INDICATORS } from '../../../constants';
+import {
+  INDICATORS,
+  CATEGORY_IDS,
+} from '../../../constants';
 import style from './AllCitiesCategory.scss';
 
 const AllCitiesCategory = (props) => {
@@ -24,13 +27,14 @@ const AllCitiesCategory = (props) => {
         title={props.category.name}
         cities={props.cities}
         isCategoryPage
+        isContextPage={props.category.id === CATEGORY_IDS.CONTEXT}
       />
 
       {props.category.subCategories.map(subCategory => (
         <SubCategorySummary
-          key={subCategory.name.replace(' ', '-')}
+          key={subCategory.name}
           {...subCategory}
-          colorName={props.category.colorName}
+          categoryId={props.category.id}
           cities={props.cities}
         />
       ))}
@@ -40,7 +44,7 @@ const AllCitiesCategory = (props) => {
           <CityColumnChart
             cities={props.cities}
             colorBase={props.category.colorName}
-            colorVariation="500"
+            highlightColorDark={`${props.category.id.toUpperCase()}_500`}
             indicatorIds={[props.category.heroIndicatorId]}
           />
         </div>

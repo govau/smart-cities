@@ -1,4 +1,4 @@
-import CATEGORIES from './categories.js';
+import { CATEGORIES } from './categories.js';
 import INDICATORS from './indicators.js';
 
 // since the categories tree only refers to indicators by string, it is brittle

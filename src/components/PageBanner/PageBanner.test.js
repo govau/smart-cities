@@ -48,6 +48,28 @@ it('should set the background color', () => {
   expect(componentStyle.backgroundColor).toBe('JOBS_020');
 });
 
+it('should show the "performance indicators" text when not on the context page', () => {
+  const component = shallow(
+    <PageBanner
+      {...defaultProps}
+      isContextPage={false}
+    />
+  );
+
+  expect(component.find('.indicatorTypeMarkWrapper').length).toBe(1);
+});
+
+it('should not show the "performance indicators" text when on the context page', () => {
+  const component = shallow(
+    <PageBanner
+      {...defaultProps}
+      isContextPage
+    />
+  );
+
+  expect(component.find('.indicatorTypeMarkWrapper').length).toBe(0);
+});
+
 it('should aggregate data for all cities', () => {
   const component = shallow(
     <PageBanner {...defaultProps} />

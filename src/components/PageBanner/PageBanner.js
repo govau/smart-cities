@@ -38,16 +38,18 @@ const PageBanner = (props) => {
           />
         </div>
 
-        <div className={style.indicatorTypeMarkWrapper}>
-          <IndicatorTypeMark
-            className={style.indicatorTypeMark}
-            colorName={props.colorName}
-            isCategoryPage={props.isCategoryPage}
-            size="LARGE"
-          />
+        {!props.isContextPage && (
+          <div className={style.indicatorTypeMarkWrapper}>
+            <IndicatorTypeMark
+              className={style.indicatorTypeMark}
+              colorName={props.colorName}
+              isCategoryPage={props.isCategoryPage}
+              size="LARGE"
+            />
 
-          Performance indicators
-        </div>
+            Performance indicators
+          </div>
+        )}
       </div>
     </div>
   );
@@ -67,6 +69,7 @@ PageBanner.propTypes = {
   indicator: PropTypes.oneOf(Object.keys(INDICATORS)).isRequired,
   title: PropTypes.string.isRequired,
   isCategoryPage: PropTypes.bool,
+  isContextPage: PropTypes.bool,
 };
 
 export default PageBanner;

@@ -1,5 +1,9 @@
 @import '~style/variables';
 
+.wrapper {
+  border-top: 4px solid $color-white;
+}
+
 .container {
   @include container;
 

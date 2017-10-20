@@ -2,53 +2,8 @@
 
 exports[`should match Snapshot 1`] = `
 "<PageWrapper cityId=\\"perth\\" categoryId=\\"mock\\" cityName=\\"Perth\\" categoryColorName=\\"jobs\\">
-  <PageBanner colorName=\\"jobs\\" description=\\"The description of the category\\" indicator=\\"population\\" title=\\"Mock category\\" cities={{...}} isCategoryPage={true} />
-  <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" indicatorIds={{...}} colorName=\\"jobs\\" city={{...}} />
-  <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" indicatorIds={{...}} colorName=\\"jobs\\" city={{...}} />
-  <div className=\\"main\\">
-    <h1>
-      I am the &quot;Mock category&quot; page for &quot;Perth&quot;
-    </h1>
-    <pre>
-      {
-        &quot;name&quot;: &quot;Mock category&quot;,
-        &quot;description&quot;: &quot;The description of the category&quot;,
-        &quot;colorName&quot;: &quot;jobs&quot;,
-        &quot;heroIndicatorId&quot;: &quot;population&quot;,
-        &quot;id&quot;: &quot;mock&quot;,
-        &quot;subCategories&quot;: [
-          {
-            &quot;name&quot;: &quot;Buying houses&quot;,
-            &quot;colorVariation&quot;: &quot;100&quot;,
-            &quot;indicatorIds&quot;: []
-          },
-          {
-            &quot;name&quot;: &quot;Living in houses&quot;,
-            &quot;colorVariation&quot;: &quot;050&quot;,
-            &quot;indicatorIds&quot;: []
-          }
-        ]
-      }
-    </pre>
-    <pre>
-      [
-        {
-          &quot;id&quot;: &quot;perth&quot;,
-          &quot;description&quot;: &quot;description of Perth&quot;,
-          &quot;name&quot;: &quot;Perth&quot;
-        },
-        {
-          &quot;id&quot;: &quot;sydney&quot;,
-          &quot;description&quot;: &quot;description of Sydney&quot;,
-          &quot;name&quot;: &quot;Sydney&quot;
-        },
-        {
-          &quot;id&quot;: &quot;melbourne&quot;,
-          &quot;description&quot;: &quot;description of Melbourne&quot;,
-          &quot;name&quot;: &quot;Melbourne&quot;
-        }
-      ]
-    </pre>
-  </div>
+  <PageBanner colorName=\\"jobs\\" description=\\"The description of the category\\" indicator=\\"population\\" title=\\"Mock category\\" cities={{...}} isCategoryPage={true} isContextPage={false} />
+  <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" summaryIndicatorIds={{...}} categoryId=\\"mock\\" city={{...}} />
+  <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" summaryIndicatorIds={{...}} categoryId=\\"mock\\" city={{...}} />
 </PageWrapper>"
 `;

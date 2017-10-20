@@ -3,9 +3,10 @@ import COLORS from '../style/_colors.scss';
 export default function getColorVariant(colorBase, shade) {
   const upperColorBase = colorBase.toUpperCase();
 
-  if (!shade) return COLORS[upperColorBase];
+  const colorKey = shade
+    ? `${upperColorBase}_${shade}`
+    : upperColorBase;
 
-  const colorKey = `${upperColorBase}_${shade}`;
   const color = COLORS[colorKey];
 
   if (!color) {

@@ -42,7 +42,7 @@ function sortChartData(cities, indicator) {
 const CityColumnChart = (props) => {
   // If more than one indicator is passed in, this becomes a stacked column chart
   const isStacked = props.indicatorIds.length > 1;
-  const baseColor = getColorVariant(props.colorBase, props.colorVariation);
+  const baseColor = getColorVariant(props.highlightColorDark);
   const chartColors = getColorRange(baseColor, props.indicatorIds.length);
 
   // The indicator data contains things like titles and descriptions. But these can
@@ -210,7 +210,7 @@ CityColumnChart.propTypes = {
   })).isRequired,
   className: PropTypes.string,
   colorBase: PropTypes.oneOf(Object.values(COLOR_NAMES)).isRequired,
-  colorVariation: PropTypes.string.isRequired,
+  highlightColorDark: PropTypes.string.isRequired,
   indicatorIds: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(INDICATORS)),
   ).isRequired,

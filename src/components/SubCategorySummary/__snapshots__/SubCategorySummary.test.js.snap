@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<div style={{...}}>
+"<div style={{...}} className=\\"wrapper\\">
   <div className=\\"container\\">
     <div className=\\"textWrapper\\">
       <span className=\\"iconWrapper\\" />
@@ -14,9 +14,7 @@ exports[`should match Snapshot 1`] = `
         <IndicatorCard className=\\"card\\" indicator=\\"population\\" color=\\"JOBS_600\\" colorName=\\"jobs\\" value={0} isCategoryPage={true} />
         <a className=\\"linkWrapper\\" href=\\"#sc-mock-sub-category\\">
           <span className=\\"linkText\\">
-            View all 
-            Mock sub category
-             charts
+            View all Mock sub category charts
           </span>
           <span className=\\"linkIcon\\" />
         </a>

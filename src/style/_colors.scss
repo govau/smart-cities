@@ -97,12 +97,13 @@ $color-primary--900: #003a45;
 
 /* stylelint-disable property-no-unknown, property-case, declaration-empty-line-before */
 :export {
-  OVERVIEW_020: $color-overview--020;
-  OVERVIEW_500: $color-overview--500;
-  OVERVIEW_600: $color-overview--600;
-  OVERVIEW_700: $color-overview--700;
-  OVERVIEW_800: $color-overview--800;
-  OVERVIEW_900: $color-overview--900;
+  // note that these CONTEXT colours use the 'overview' variables
+  CONTEXT_020: $color-overview--020;
+  CONTEXT_500: $color-overview--500;
+  CONTEXT_600: $color-overview--600;
+  CONTEXT_700: $color-overview--700;
+  CONTEXT_800: $color-overview--800;
+  CONTEXT_900: $color-overview--900;
 
   PRIMARY_020: $color-primary--020;
   PRIMARY_040: $color-primary--040;

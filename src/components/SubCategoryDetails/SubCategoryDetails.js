@@ -34,7 +34,7 @@ const SubCategoryDetails = (props) => {
                 longDescription={heroChart.longDescription}
                 cities={props.cities}
                 colorBase={props.colorName}
-                colorVariation={subCategory.shade}
+                highlightColorDark={subCategory.highlightColorDark}
                 indicatorIds={heroChart.indicatorIds}
               />
             </div>
@@ -50,7 +50,7 @@ const SubCategoryDetails = (props) => {
                 longDescription={chart.longDescription}
                 cities={props.cities}
                 colorBase={props.colorName}
-                colorVariation={subCategory.shade}
+                highlightColorDark={subCategory.highlightColorDark}
                 indicatorIds={chart.indicatorIds}
               />
             </div>

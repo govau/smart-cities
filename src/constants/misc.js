@@ -15,6 +15,7 @@ export const INDICATOR_CARD_TYPES = {
 
 // note, the values are lowercase because they're used in CSS class names
 export const COLOR_NAMES = {
+  CONTEXT: 'context',
   JOBS: 'jobs',
   HOUSING: 'housing',
   INFRASTRUCTURE: 'infrastructure',

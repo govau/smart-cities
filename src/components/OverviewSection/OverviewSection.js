@@ -4,6 +4,7 @@ import PageBanner from '../PageBanner/PageBanner';
 import CategoryIndicator from '../CategoryIndicator/CategoryIndicator';
 import {
   CATEGORIES,
+  CATEGORY_IDS,
   STRINGS,
 } from '../../constants/index';
 import getColorVariant from '../../helpers/getColorVariant';
@@ -32,22 +33,24 @@ const OverviewSection = (props) => {
       />
 
       <div className={style.indicatorCards}>
-        {CATEGORIES.map(category => (
-          <div
-            key={category.id}
-            className={style.indicatorCardWrapper}
-            style={{
-              background: getColorVariant(category.colorName, '040'),
-            }}
-          >
-            <CategoryIndicator
-              className={style.categoryIndicator}
-              city={props.city}
-              cities={props.cities}
-              category={category}
-            />
-          </div>
-        ))}
+        {CATEGORIES
+          .filter(category => category.id !== CATEGORY_IDS.CONTEXT)
+          .map(category => (
+            <div
+              key={category.id}
+              className={style.indicatorCardWrapper}
+              style={{
+                background: getColorVariant(category.colorName, '040'),
+              }}
+            >
+              <CategoryIndicator
+                className={style.categoryIndicator}
+                city={props.city}
+                cities={props.cities}
+                category={category}
+              />
+            </div>
+          ))}
       </div>
     </div>
   );

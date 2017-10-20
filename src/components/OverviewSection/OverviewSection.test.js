@@ -19,6 +19,9 @@ jest.mock('../../constants/index', () => ({
       colorName: 'dogs',
     },
   ],
+  CATEGORY_IDS: {
+    CONTEXT: 'context',
+  },
   STRINGS: {
     OVERVIEW_DESCRIPTION: 'OVERVIEW_DESCRIPTION',
     OVERVIEW_TITLE: 'OVERVIEW_TITLE',
