@@ -9,7 +9,7 @@ const defaultProps = {
   tint: '020',
   shade: '600',
   name: 'Mock sub category',
-  indicatorIds: [
+  summaryIndicatorIds: [
     'population',
   ],
   cities: [

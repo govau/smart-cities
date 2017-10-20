@@ -11,10 +11,8 @@ const SubCategorySummary = (props) => {
   const backgroundColor = getColorVariant(props.colorName, props.tint);
   const cardHighlightColor = getColorVariant(props.colorName, props.shade);
 
-  const firstThreeIndicators = props.indicatorIds.slice(0, 3);
-
-  const indicatorCardWrappers = firstThreeIndicators.map((indicatorId, i) => {
-    const lastOne = i === (firstThreeIndicators.length - 1);
+  const indicatorCardWrappers = props.summaryIndicatorIds.map((indicatorId, i) => {
+    const lastOne = i === (props.summaryIndicatorIds.length - 1);
     const indicatorValue = props.city
       ? props.city.indices[indicatorId]
       : aggregateIndicatorForCities(
@@ -77,7 +75,7 @@ SubCategorySummary.propTypes = {
   colorName: PropTypes.string.isRequired,
   tint: PropTypes.string.isRequired,
   shade: PropTypes.string.isRequired,
-  indicatorIds: PropTypes.arrayOf(
+  summaryIndicatorIds: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(INDICATORS)),
   ).isRequired,
   name: PropTypes.string.isRequired,

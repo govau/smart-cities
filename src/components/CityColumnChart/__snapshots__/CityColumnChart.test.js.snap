@@ -3,9 +3,9 @@
 exports[`should match Snapshot 1`] = `
 "<div className=\\"wrapper\\">
   <div className=\\"titleWrapper\\">
-    <h2 className=\\"title\\">
+    <h4 className=\\"title\\">
       The population
-    </h2>
+    </h4>
     <AboutTooltip description=\\"TODO\\" position=\\"bottom\\" size={18} />
   </div>
   <div className=\\"descriptionLabel\\">

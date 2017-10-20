@@ -28,12 +28,7 @@
 }
 
 .iconWrapper {
-  // TODO (davidg): implement real icons
-  border: 1px dashed $color-grey--500;
-  width: 80px;
-  height: 80px;
-  flex: none;
-  margin-right: 8px;
+  @include iconWrapper;
 }
 
 .title {

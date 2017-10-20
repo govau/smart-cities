@@ -15,14 +15,15 @@ const defaultProps = {
     subCategories: [
       {
         name: 'Buying houses',
-        colorVariation: '100',
-        indicatorIds: [],
+        tint: '100',
+        summaryIndicatorIds: [],
+        charts: [],
       },
       {
         name: 'Living in houses',
-        colorVariation: '050',
-        indicatorIds: [
-        ],
+        tint: '050',
+        summaryIndicatorIds: [],
+        charts: [],
       },
     ],
   },

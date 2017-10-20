@@ -7,20 +7,33 @@
 .titleWrapper {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  line-height: 1;
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 24px;
+  }
+}
+
+.stacked {
+  .titleWrapper {
+    margin-bottom: 0;
+  }
 }
 
 .title {
-  @include type-intro-text;
-
+  font-size: 22px;
+  font-weight: 400;
   margin-right: 7px;
-  line-height: 1;
+
+  @include for-tablet-landscape-up {
+    font-size: 24px;
+  }
 }
 
 .legendWrapper {
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  justify-content: flex-end;
 
   @include for-tablet-landscape-up {
     flex-direction: row;
@@ -37,12 +50,11 @@
   }
 }
 
-.title,
-.legendWrapper,
-.descriptionLabel {
-  margin-left: 120px;
+// .title,
+// .descriptionLabel {
+//   margin-left: 120px;
 
-  @include for-phone-only {
-    margin-left: 15px;
-  }
-}
+//   @include for-phone-only {
+//     margin-left: 15px;
+//   }
+// }

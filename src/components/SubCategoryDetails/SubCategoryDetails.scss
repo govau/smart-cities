@@ -1,0 +1,46 @@
+@import '~style/variables';
+
+.wrapper {
+  background: $color-white;
+  padding-top: 64px;
+}
+
+.container {
+  @include container;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border-top: 1px solid $color-grey--200;
+  padding-top: 16px;
+
+  h3 {
+    font-size: 44px;
+    font-weight: 400;
+  }
+}
+
+.chartGrid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.chartWrapper {
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    width: 50%;
+  }
+}
+
+.heroChartWrapper {
+  width: 100%;
+}
+
+.iconWrapper {
+  @include iconWrapper;
+
+  margin-right: 20px;
+}

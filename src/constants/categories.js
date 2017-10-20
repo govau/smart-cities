@@ -11,20 +11,62 @@ export default [
         name: 'Employment',
         tint: '040',
         shade: '600',
-        indicatorIds: [
-          'participationRateGeneral',
+        summaryIndicatorIds: [
+          'unemploymentRateGeneral',
+          'unemploymentRateIndigenous',
+          'employmentGrowth',
+        ],
+        charts: [
+          {
+            name: 'Youth unemployment',
+            longDescription: 'TODO',
+            indicatorIds: [
+              'unemploymentRateYouth',
+            ],
+          },
+          {
+            name: 'Unemployment rate',
+            longDescription: 'TODO',
+            indicatorIds: [
+              'unemploymentRateGeneral',
+            ],
+          },
+          {
+            name: 'Indigenous unemployment',
+            longDescription: 'TODO',
+            indicatorIds: [
+              'unemploymentRateIndigenous',
+            ],
+          },
+          {
+            name: 'Participation rate',
+            longDescription: 'TODO',
+            indicatorIds: [
+              'participationRateGeneral',
+              'participationRateFemale',
+              'participationRateMale',
+            ],
+          },
+          {
+            name: 'Employment growth',
+            longDescription: 'TODO',
+            indicatorIds: [
+              'employmentGrowth',
+            ],
+          },
         ],
       },
       {
         name: 'Education',
         tint: '060',
         shade: '700',
-        indicatorIds: [
+        summaryIndicatorIds: [
           'educationalAttainmentYr12',
         ],
+        charts: [],
       },
     ],
-    heroIndicatorId: 'population',
+    heroIndicatorId: 'unemploymentRateYouth',
   },
   {
     id: 'housing',
@@ -36,17 +78,15 @@ export default [
         name: 'Buying houses',
         tint: '040',
         shade: '600',
-        indicatorIds: [
-          'jobsCar',
-        ],
+        summaryIndicatorIds: [],
+        charts: [],
       },
       {
         name: 'Living in houses',
         tint: '060',
         shade: '700',
-        indicatorIds: [
-          'jobsCar',
-        ],
+        summaryIndicatorIds: [],
+        charts: [],
       },
     ],
     heroIndicatorId: 'growthRate',
@@ -62,24 +102,27 @@ export default [
         name: 'Getting to work',
         tint: '040',
         shade: '600',
-        indicatorIds: [
+        summaryIndicatorIds: [
           'jobsCar',
         ],
+        charts: [],
       },
       {
         name: 'Getting around',
         tint: '060',
         shade: '700',
-        indicatorIds: [
+        summaryIndicatorIds: [
           'activeJourneys',
           'publicJourneys',
         ],
+        charts: [],
       },
       {
         name: 'Infrastructure',
         tint: '080',
         shade: '800',
-        indicatorIds: [],
+        summaryIndicatorIds: [],
+        charts: [],
       },
     ],
     heroIndicatorId: 'population',
@@ -94,25 +137,29 @@ export default [
         name: 'Environment',
         tint: '040',
         shade: '600',
-        indicatorIds: [],
+        summaryIndicatorIds: [],
+        charts: [],
       },
       {
         name: 'Public safety',
         tint: '060',
         shade: '700',
-        indicatorIds: [],
+        summaryIndicatorIds: [],
+        charts: [],
       },
       {
         name: 'Life and death',
         tint: '080',
         shade: '800',
-        indicatorIds: [],
+        summaryIndicatorIds: [],
+        charts: [],
       },
       {
         name: 'Socioeconomic disadvantage',
         tint: '100',
         shade: '900',
-        indicatorIds: [],
+        summaryIndicatorIds: [],
+        charts: [],
       },
     ],
     heroIndicatorId: 'dispersion',
@@ -127,13 +174,15 @@ export default [
         name: 'Data',
         tint: '040',
         shade: '600',
-        indicatorIds: [],
+        summaryIndicatorIds: [],
+        charts: [],
       },
       {
         name: 'Working in digital',
         tint: '060',
         shade: '700',
-        indicatorIds: [],
+        summaryIndicatorIds: [],
+        charts: [],
       },
     ],
     heroIndicatorId: 'population',
@@ -148,15 +197,15 @@ export default [
         name: 'Development',
         tint: '040',
         shade: '600',
-        indicatorIds: [],
+        summaryIndicatorIds: [],
+        charts: [],
       },
       {
         name: 'Population',
         tint: '060',
         shade: '700',
-        indicatorIds: [
-          'jobsCar',
-        ],
+        summaryIndicatorIds: [],
+        charts: [],
       },
     ],
     heroIndicatorId: 'population',

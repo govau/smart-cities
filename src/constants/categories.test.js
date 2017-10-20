@@ -11,10 +11,20 @@ CATEGORIES.forEach((category) => {
 
   // test the sub-category indicator IDs
   category.subCategories.forEach((subCategory) => {
-    subCategory.indicatorIds.forEach((indicator) => {
-      it(`The sub category indicator '${indicator}' should be a valid indicator`, () => {
+    subCategory.summaryIndicatorIds.forEach((indicator) => {
+      it(`The sub category summary indicator '${indicator}' should be a valid indicator`, () => {
         expect(INDICATORS[indicator]).toBeDefined();
       });
     });
+
+    if (subCategory.charts) {
+      subCategory.charts.forEach((chart) => {
+        chart.indicatorIds.forEach((indicator) => {
+          it(`The sub category chart indicator '${indicator}' should be a valid indicator`, () => {
+            expect(INDICATORS[indicator]).toBeDefined();
+          });
+        });
+      });
+    }
   });
 });

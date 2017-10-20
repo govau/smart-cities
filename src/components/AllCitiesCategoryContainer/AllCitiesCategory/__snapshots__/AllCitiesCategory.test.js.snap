@@ -3,15 +3,12 @@
 exports[`should match Snapshot 1`] = `
 "<PageWrapper categoryId=\\"mock\\" cityId=\\"all-cities\\">
   <PageBanner colorName=\\"jobs\\" description=\\"This is the mock category\\" indicator=\\"population\\" title=\\"Mock category\\" cities={{...}} isCategoryPage={true} />
-  <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" indicatorIds={{...}} colorName=\\"jobs\\" cities={{...}} />
-  <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" indicatorIds={{...}} colorName=\\"jobs\\" cities={{...}} />
-  <div id=\\"sc-buying-houses\\">
-    Buying houses
-     chart section placeholder
+  <SubCategorySummary name=\\"Buying houses\\" tint=\\"100\\" summaryIndicatorIds={{...}} charts={{...}} colorName=\\"jobs\\" cities={{...}} />
+  <SubCategorySummary name=\\"Living in houses\\" tint=\\"050\\" summaryIndicatorIds={{...}} charts={{...}} colorName=\\"jobs\\" cities={{...}} />
+  <div className=\\"heroWrapper\\">
+    <CityColumnChart cities={{...}} colorBase=\\"jobs\\" colorVariation=\\"500\\" indicatorIds={{...}} />
   </div>
-  <div id=\\"sc-living-in-houses\\">
-    Living in houses
-     chart section placeholder
-  </div>
+  <SubCategoryDetails subCategory={{...}} colorName=\\"jobs\\" cities={{...}} heroIndicatorId=\\"population\\" />
+  <SubCategoryDetails subCategory={{...}} colorName=\\"jobs\\" cities={{...}} heroIndicatorId=\\"population\\" />
 </PageWrapper>"
 `;

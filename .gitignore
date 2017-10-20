@@ -177,3 +177,4 @@ typings/
 /backend/.byebug_history
 /backend/.env
 #/backend/bin
+tmp
