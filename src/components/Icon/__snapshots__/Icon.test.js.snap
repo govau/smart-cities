@@ -3,14 +3,14 @@
 exports[`should match Snapshot 1`] = `
 <svg
   className="circleWithShadow svg"
-  height="16px"
+  height={null}
   style={
     Object {
       "color": undefined,
     }
   }
   viewBox="0 .5 25 25"
-  width="16px"
+  width={null}
 >
   <title>
     Question mark

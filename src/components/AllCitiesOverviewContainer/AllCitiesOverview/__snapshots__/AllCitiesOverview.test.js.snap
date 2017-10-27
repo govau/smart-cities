@@ -2,6 +2,57 @@
 
 exports[`should match Snapshot 1`] = `
 "<PageWrapper categoryId=\\"overview\\" cityId=\\"all-cities\\">
-  <OverviewSection cities={{...}} />
+  <div className=\\"heroWrapper\\">
+    <p className=\\"heroText\\">
+      Creating the foundations for success across all 
+      <span className=\\"heroTextCityCount\\">
+        2
+      </span>
+       cities
+    </p>
+  </div>
+  <div className=\\"infoWrapper\\">
+    <div className=\\"infoContainer\\">
+      <div className=\\"infoTextWrapper\\">
+        <h1 className=\\"infoTitle\\">
+          About
+        </h1>
+        <p className=\\"infoBodyText\\">
+          The Australian Government is committed to the continual improvement of our cities. Governments need to track and compare cities’ performance in order to make the best policy and investment decisions for Australia’s future.
+        </p>
+        <p className=\\"infoBodyText\\">
+          <a className=\\"cpnLink\\" href=\\"https://cities.dpmc.gov.au/\\" target=\\"_blank\\" rel=\\"noopener\\">
+            The National Cities Performance Framework
+          </a>
+           will support greater awareness and understanding of Australia’s cities among policy makers and interested Australians.
+        </p>
+      </div>
+      <figure className=\\"ministerPhotoWrapper\\">
+        <div className=\\"ministerPhotoClip\\">
+          <img className=\\"ministerPhoto\\" src=\\"taylorAngus.png\\" alt=\\"The Honorable Angus Taylor MP\\" />
+        </div>
+        <figcaption>
+          <p className=\\"ministerTitle\\">
+            The Hon Angus Taylor MP
+          </p>
+          <p>
+            Assistant Minister for Cities &amp; Digital Transformation
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+  <div className=\\"subInfoContainer\\">
+    <div className=\\"subInfoTextWrapper\\">
+      <h1 className=\\"infoTitle\\">
+        Policy priorities &amp; context
+      </h1>
+      <p className=\\"subInfoBodyText\\">
+        The National Cities Performance Framework is designed to measure how well our cities are performing against the Australian Government’s 6 Smart Cities policy priorities areas:
+      </p>
+    </div>
+    <Icon className=\\"subInfoIcon\\" icon=\\"city\\" size={120} color=\\"PRIMARY_600\\" />
+  </div>
+  <CategoryOverviews cities={{...}} />
 </PageWrapper>"
 `;

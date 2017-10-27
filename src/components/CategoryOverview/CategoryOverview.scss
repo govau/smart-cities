@@ -1,0 +1,198 @@
+@import '~style/variables';
+
+.categoryWrapper {
+  border-top: 8px solid $color-white;
+}
+
+.category {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include for-tablet-portrait-up {
+    padding-bottom: 38px;
+    flex-direction: row;
+  }
+}
+
+.categoryIcon {
+  display: none;
+
+  @include for-tablet-portrait-up {
+    flex: none;
+    width: 80px;
+    margin-right: 32px;
+    align-self: center;
+    display: block;
+  }
+
+  @include for-tablet-landscape-up {
+    width: 115px;
+    margin-right: 40px;
+  }
+}
+
+.textAndIndicatorWrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+  }
+}
+
+.categoryTextWrapper {
+  margin-bottom: 16px;
+
+  @include for-tablet-portrait-up {
+    margin-bottom: 32px;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+}
+
+.categoryTitle {
+  font-size: 34px;
+  line-height: 1;
+  margin-bottom: 16px;
+
+  .category__context & {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 44px;
+
+    .category__context & {
+      font-size: 22px;
+    }
+  }
+}
+
+.categoryDescription {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.5;
+
+  @include for-tablet-landscape-up {
+    font-size: 22px;
+  }
+}
+
+.subCategoryWrapperText {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.subCategoryLink {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 0 16px;
+  font-size: 14px;
+  background: $color-white;
+
+  &:hover {
+    @include shadow(2);
+  }
+
+  @include for-tablet-portrait-up {
+    padding: 0 24px;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+
+  @include for-big-desktop-up {
+    padding: 0 40px;
+  }
+}
+
+.indicatorCardAndLink {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include for-tablet-landscape-up {
+    flex-direction: column;
+    width: 256px;
+    margin-left: auto;
+  }
+}
+
+.indicatorCard {
+  margin-bottom: 16px;
+
+  @include for-tablet-portrait-up {
+    flex: 1;
+    max-width: 256px;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 16px;
+  }
+
+  @include for-tablet-landscape-up {
+    flex: none;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 48px;
+  }
+}
+
+.categoryLinkWrapper {
+  flex: 1;
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    max-width: 256px;
+  }
+
+  @include for-tablet-landscape-up {
+    flex: none;
+    justify-self: flex-end;
+  }
+}
+
+.categoryLinkPill {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 3px 4px 0;
+  border-radius: 10px;
+
+  @include for-tablet-portrait-up {
+    width: 100%;
+    max-width: 256px;
+  }
+
+  @include for-tablet-landscape-up {
+    width: 100%;
+  }
+
+  &:hover {
+    @include shadow(2);
+  }
+}
+
+.categoryLinkText {
+  flex: auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+.categoryLinkIcon {
+  flex: none;
+}

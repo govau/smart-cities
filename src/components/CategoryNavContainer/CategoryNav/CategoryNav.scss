@@ -1,9 +1,16 @@
 @import '~style/variables';
 
 .wrapper {
+  position: relative;
   width: 100%;
   height: $top-nav-height-mobile;
   background: $color-white;
+  z-index: $z-index-cat-nav;
+
+  // Colors are all inverted on the overview page
+  &.wrapper__overview {
+    background: transparent;
+  }
 
   @include for-desktop-up {
     height: $top-nav-height-desktop;
@@ -44,46 +51,36 @@
     padding-right: 16px;
   }
 
-  &:hover div {
-    color: $color-white;
-  }
-
-  div {
-    @include type-nav-horizontal;
-    @include shadow;
-
-    padding: 0 24px;
-    border-radius: 100px;
-    color: $color-grey--700;
-    border: 2px solid transparent;
-
-    @include for-desktop-up {
-      padding: 0 15px;
-
-      &:not(:hover) {
-        box-shadow: none;
-      }
-    }
-
-    @include for-big-desktop-up {
-      padding: 0 24px;
-    }
-  }
-
   &:hover,
   &.link__active {
+    .linkText {
+      color: $color-white;
+    }
+
+    // overview and context have the same style for hover and active
+    // the other links are different for hover and active
     .overview {
       border: 2px solid $color-grey--500;
       color: $color-grey--700;
+
+      .wrapper__overview & {
+        color: $color-white;
+        border-color: $color-overview--500;
+      }
+    }
+
+    .context {
+      border: 2px solid $color-primary--600;
+      color: $color-grey--700;
+
+      .wrapper__overview & {
+        color: $color-white;
+        border-color: $color-white;
+      }
     }
   }
 
   &:hover {
-    .context {
-      border: 2px solid $color-primary--500;
-      color: $color-grey--700;
-    }
-
     .jobs {
       background: $color-jobs--500;
     }
@@ -110,11 +107,6 @@
   }
 
   &.link__active {
-    .context {
-      border: 2px solid $color-primary--600;
-      color: $color-grey--700;
-    }
-
     .jobs {
       background: $color-jobs--600;
     }
@@ -141,10 +133,29 @@
   }
 }
 
-.overview {
-  border: 1px solid $color-white;
-}
+.linkText {
+  @include type-nav-horizontal;
+  @include shadow;
 
-.link__active div {
-  color: $color-white;
+  padding: 0 24px;
+  border-radius: 100px;
+  color: $color-grey--700;
+  border: 2px solid transparent;
+
+  .wrapper__overview & {
+    color: $color-white;
+    box-shadow: none;
+  }
+
+  @include for-desktop-up {
+    padding: 0 15px;
+
+    &:not(:hover) {
+      box-shadow: none;
+    }
+  }
+
+  @include for-big-desktop-up {
+    padding: 0 24px;
+  }
 }

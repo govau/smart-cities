@@ -54,9 +54,7 @@
   @include type-nav-vertical-large;
 
   margin-left: auto; // push right
-  line-height: 30px;
   padding: 0 16px;
-  border-radius: 15px;
   background: $color-primary--700;
 
   .citySelected & {

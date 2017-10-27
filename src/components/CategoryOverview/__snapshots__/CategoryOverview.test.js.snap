@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<div className=\\"categoryWrapper\\" style={{...}}>
+  <div className=\\"category\\">
+    <div className=\\"categoryIcon\\">
+      <Icon icon=\\"infrastructureGettingToWork\\" color=\\"JOBS_500\\" />
+    </div>
+    <div className=\\"textAndIndicatorWrapper\\">
+      <div className=\\"categoryTextWrapper\\">
+        <h2 className=\\"categoryTitle\\">
+          Jobs and Skills
+        </h2>
+        <p className=\\"categoryDescription\\">
+          The short description
+        </p>
+        <p className=\\"subCategoryWrapperText\\">
+          Sub categories include:
+        </p>
+        <div>
+          <NavLink to=\\"/perth/jobs#sc-employment\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+            <Pill className=\\"subCategoryLink\\" shadow={true}>
+              Employment
+            </Pill>
+          </NavLink>
+          <NavLink to=\\"/perth/jobs#sc-education\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+            <Pill className=\\"subCategoryLink\\" shadow={true}>
+              Education
+            </Pill>
+          </NavLink>
+        </div>
+      </div>
+      <div className=\\"indicatorCardAndLink\\">
+        <IndicatorCard className=\\"indicatorCard\\" color=\\"JOBS_500\\" colorName=\\"jobs\\" indicator=\\"population\\" value={77} showPerformanceIndicator={false} />
+        <NavLink to=\\"/perth/jobs\\" className=\\"categoryLinkWrapper\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          <Pill className=\\"categoryLinkPill\\" style={{...}} height={30}>
+            <span className=\\"categoryLinkText\\">
+              Jobs and Skills
+               section
+            </span>
+            <Icon icon=\\"rightArrowInCircleInverted\\" size={20} color=\\"JOBS_500\\" />
+          </Pill>
+        </NavLink>
+      </div>
+    </div>
+  </div>
+</div>"
+`;

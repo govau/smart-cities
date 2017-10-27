@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CategoryNavContainer from '../CategoryNavContainer/CategoryNavContainer';
-import HamburgerButton from '../HamburgerButton/HamburgerButton';
 import CityHeader from '../CityHeader/CityHeader';
+import HamburgerButton from '../HamburgerButton/HamburgerButton';
+import Pill from '../Pill/Pill';
 import { LINKS } from '../../constants';
 import dtaLogo from './dta-logo.svg';
 import star from './star-white.svg';
@@ -25,7 +26,7 @@ const Header = props => (
     </div>
     <div className={style.mainContainer}>
       <div className={style.titleContainer}>
-        <div className={style.projectStatus}>ALPHA</div>
+        <Pill className={style.projectStatus}>ALPHA</Pill>
         <h1 className={style.title}>Smart Cities Performance Dashboard</h1>
         <div className={style.subtitle}>Smart Cities Performance Framework</div>
       </div>

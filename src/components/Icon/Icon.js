@@ -12,11 +12,13 @@ const Icon = (props) => {
     style.svg,
   );
 
+  const size = props.size ? `${props.size}px` : null;
+
   return (
     <svg
       className={className}
-      width={`${props.size}px`}
-      height={`${props.size}px`}
+      width={size}
+      height={size}
       viewBox={icon.viewBox}
       style={{ color: props.color }}
     >
@@ -32,10 +34,6 @@ Icon.propTypes = {
   size: PropTypes.number,
   className: PropTypes.string,
   color: PropTypes.string,
-};
-
-Icon.defaultProps = {
-  size: 16,
 };
 
 export default Icon;

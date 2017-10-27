@@ -4,9 +4,9 @@ exports[`should match Snapshot 1`] = `
 "<div className=\\"citySelected\\">
   <NavLink className=\\"link allCitiesLink\\" activeClassName=\\"link__active\\" to=\\"/all-cities/mock\\" ariaCurrent=\\"true\\">
     All Cities
-    <span className=\\"cityCount\\">
+    <Pill className=\\"cityCount\\">
       2
-    </span>
+    </Pill>
   </NavLink>
   <NavLink className=\\"link cityLink\\" activeClassName=\\"link__active\\" to=\\"/perth/mock\\" ariaCurrent=\\"true\\">
     Perth

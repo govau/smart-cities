@@ -2,6 +2,7 @@
 
 exports[`should match Snapshot 1`] = `
 "<PageWrapper cityId=\\"perth\\" categoryId=\\"overview\\">
-  <OverviewSection city={{...}} />
+  <PageBanner colorName=\\"overview\\" description=\\"Perth\\" indicator=\\"population\\" title=\\"Perth\\" city={{...}} />
+  <CategoryOverviews city={{...}} />
 </PageWrapper>"
 `;

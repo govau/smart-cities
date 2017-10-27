@@ -1,0 +1,176 @@
+@import '~style/variables';
+
+$minister-image-width: 214px;
+
+.heroWrapper {
+  display: flex;
+  align-items: flex-end;
+  height: 350px;
+  // this needs to sit up behind the category nav
+  margin-top: -$top-nav-height-mobile;
+  background: url('./heroImage.jpg') center/cover no-repeat;
+
+  @include for-tablet-portrait-up {
+    height: 450px;
+  }
+
+  @include for-desktop-up {
+    height: 550px;
+    margin-top: -$top-nav-height-desktop;
+  }
+}
+
+.heroText {
+  @include container;
+
+  width: 100%;
+  margin-bottom: 32px;
+  line-height: 1.2;
+  font-size: 27px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: $color-white;
+
+  @include for-tablet-portrait-up {
+    padding-right: 20%;
+    margin-bottom: 40px;
+    font-size: 36px;
+    letter-spacing: 0;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 50px;
+    font-size: 46px;
+  }
+
+  @include for-desktop-up {
+    margin-bottom: 60px;
+    font-size: 66px;
+    letter-spacing: -2.6px;
+  }
+}
+
+.heroTextCityCount {
+  font-weight: 700;
+}
+
+.infoWrapper {
+  background: $color-primary--600;
+  color: $color-white;
+}
+
+.infoContainer {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 42px;
+  padding-bottom: 32px;
+
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+    padding-bottom: 118px;
+  }
+}
+
+.infoTextWrapper {
+  margin-bottom: 32px;
+
+  @include for-tablet-landscape-up {
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+}
+
+.ministerPhotoWrapper {
+  align-self: center;
+  color: $color-white;
+  font-size: 14px;
+  text-align: center;
+
+  @include for-tablet-landscape-up {
+    flex: none;
+    width: $minister-image-width;
+  }
+}
+
+.ministerPhotoClip {
+  @include shadow;
+
+  width: $minister-image-width;
+  height: $minister-image-width;
+  margin: 0 auto 16px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.ministerPhoto {
+  width: 100%;
+  height: 100%;
+  transition: transform $animation-duration;
+  transform-origin: 50% 50%;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.ministerTitle {
+  font-weight: 700;
+}
+
+.subInfoContainer {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 42px;
+  padding-bottom: 42px;
+
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+  }
+}
+
+.subInfoTextWrapper {
+  flex: auto;
+  margin-bottom: 32px;
+
+  @include for-tablet-portrait-up {
+    margin-bottom: 0;
+    margin-right: 64px;
+  }
+}
+
+.subInfoIcon {
+  margin: 0 auto;
+
+  @include for-tablet-portrait-up {
+    flex: none;
+    width: 140px;
+    margin: 14px 0 0; // visually align the top with the title text
+  }
+}
+
+.infoTitle,
+.subInfoTitle {
+  margin-bottom: 32px;
+  font-size: 44px;
+  line-height: 1.2;
+  letter-spacing: -1.8px;
+}
+
+.subInfoBodyText,
+.infoBodyText {
+  font-size: 22px;
+  line-height: 37px;
+  letter-spacing: -0.7px;
+}
+
+.infoBodyText:not(:first-of-type) {
+  padding-top: 38px;
+}
+
+.cpnLink {
+  text-decoration: $color-highlight underline;
+}

@@ -39,7 +39,7 @@ const PageBanner = (props) => {
           />
         </div>
 
-        {!props.isContextPage && (
+        {props.isCategoryPage && (
           <div className={style.indicatorTypeMarkWrapper}>
             <Icon
               className={style.indicatorTypeMark}

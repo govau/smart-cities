@@ -1,6 +1,8 @@
 @import '~style/variables';
 
 .card {
+  @include shadow;
+
   background: $color-white;
   border-bottom-style: solid;
   border-radius: 4px;

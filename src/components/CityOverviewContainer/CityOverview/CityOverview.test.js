@@ -2,11 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import CityOverview from './CityOverview';
 
-jest.mock('../../OverviewSection/OverviewSection', () => 'OverviewSection');
+jest.mock('../../CategoryOverviews/CategoryOverviews', () => 'CategoryOverviews');
+jest.mock('../../PageBanner/PageBanner', () => 'PageBanner');
 
 const defaultProps = {
   city: {
-    name: 'Perth',
+    shortName: 'Perth',
+    description: 'Perth',
     id: 'perth',
   },
 };

@@ -1,0 +1,52 @@
+@import '~style/variables';
+
+.indicatorTypeMarkWrapper {
+  padding: 32px 0;
+  background: $color-overview--020;
+}
+
+.indicatorTypeMarkContainer {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @include for-tablet-portrait-up {
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+}
+
+.indicatorTypeMark {
+  margin-right: 8px;
+}
+
+.footerSpacerWrapper {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: $color-white;
+
+  @include for-tablet-portrait-up {
+    padding-top: 68px;
+    padding-bottom: 62px;
+  }
+}
+
+.footerSpacerContainer {
+  @include container;
+}
+
+.footerSpacerLine {
+  background: $color-grey--200;
+  height: 1px;
+}
+
+.footerSpacerShade {
+  height: 32px;
+  background: $color-overview--020;
+
+  @include for-tablet-portrait-up {
+    height: 64px;
+  }
+}

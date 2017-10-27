@@ -1,51 +1,73 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import Pill from '../../Pill/Pill';
 import style from './CategoryNav.scss';
-import { NO_CATEGORY } from '../../../constants';
+import {
+  CATEGORY_IDS,
+  NO_CATEGORY,
+  NO_CITY,
+} from '../../../constants';
+
+const classnames = require('classnames/bind').bind(style);
+
+function scrollElementIntoView(el) {
+  el.parentElement.scrollLeft = el.offsetLeft - 40; // eslint-disable-line no-param-reassign
+}
 
 class CategoryNav extends Component {
+  constructor(props) {
+    super(props);
+
+    this.activeElementClassName = style.link__active;
+  }
+
   componentDidMount() {
-    this.scrollToActiveNavLink();
-  }
-
-  componentDidUpdate() {
-    this.scrollToActiveNavLink();
-  }
-
-  scrollToActiveNavLink() {
-    if (this.activeCategoryEl) {
-      setTimeout(() => {
-        this.el.scrollLeft = this.activeCategoryEl.parentElement.offsetLeft - 20;
-      });
-    }
+    const activeEl = document.querySelector(`.${this.activeElementClassName}`);
+    scrollElementIntoView(activeEl);
   }
 
   render() {
+    const isAllCitiesOverview = (
+      this.props.cityId === NO_CITY &&
+      this.props.categoryId === CATEGORY_IDS.OVERVIEW
+    );
+
+    const className = classnames(
+      style.wrapper,
+      { wrapper__overview: isAllCitiesOverview },
+    );
+
     return (
-      <div className={style.wrapper}>
-        <div ref={(el) => { this.el = el; }} className={style.categoryNav}>
+      <div className={className}>
+        <div className={style.categoryNav}>
           <NavLink
             className={style.link}
-            activeClassName={style.link__active}
+            activeClassName={this.activeElementClassName}
             to={`/${this.props.cityId}/${NO_CATEGORY}`}
           >
-            <div className={style.overview}>Overview</div>
+            <Pill
+              className={classnames(style.linkText, style.overview)}
+              height={28}
+            >
+              Overview
+            </Pill>
           </NavLink>
 
           {this.props.categories.map(category => (
             <NavLink
               className={style.link}
-              activeClassName={style.link__active}
+              activeClassName={this.activeElementClassName}
               key={category.id}
               to={`/${this.props.cityId}/${category.id}`}
+              onClick={(e) => {
+                scrollElementIntoView(e.target.parentElement);
+              }}
             >
-              <div
-                className={style[category.colorName]}
-                ref={(el) => {
-                  if (this.props.categoryId === category.id) this.activeCategoryEl = el;
-                }}
-              >{ category.navName || category.name }</div>
+              <Pill
+                className={classnames(style.linkText, style[category.colorName])}
+                height={28}
+              >{ category.navName || category.name }</Pill>
             </NavLink>
           ))}
         </div>

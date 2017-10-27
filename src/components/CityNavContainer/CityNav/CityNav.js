@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import style from './CityNav.scss';
+import Pill from '../../Pill/Pill';
 import { NO_CITY } from '../../../constants';
+import style from './CityNav.scss';
 
 const classnames = require('classnames/bind').bind(style);
 
@@ -20,9 +21,9 @@ const CityNav = (props) => {
       >
         All Cities
 
-        <span className={style.cityCount}>
+        <Pill className={style.cityCount}>
           {props.cities.length}
-        </span>
+        </Pill>
       </NavLink>
 
       {props.cities.map(city => (
