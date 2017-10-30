@@ -43,7 +43,7 @@ it('should handle an indicator being passed as a string', () => {
     />
   );
 
-  expect(component.find('.header').text()).toBe('The population');
+  expect(component.find('.header').text()).toBe('Population');
 });
 
 it('should render no prefix or suffix when none are available', () => {

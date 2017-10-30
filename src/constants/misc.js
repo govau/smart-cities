@@ -30,11 +30,6 @@ export const AGGREGATION_METHODS = {
   SUM: 'SUM',
 };
 
-export const DATA_TYPES = {
-  NUMBER: 'NUMBER',
-  TEXT: 'TEXT',
-};
-
 export const LINKS = {
   ORG: 'https://dta.gov.au/',
   CONTACT_US: 'mailto:performance-dashboard@digital.gov.au',

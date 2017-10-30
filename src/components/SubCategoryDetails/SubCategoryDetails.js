@@ -42,6 +42,7 @@ const SubCategoryDetails = (props) => {
                 colorBase={props.colorName}
                 highlightColorDark={subCategory.highlightColorDark}
                 indicatorIds={heroChart.indicatorIds}
+                stacked={heroChart.stacked}
               />
             </div>
           }
@@ -58,6 +59,7 @@ const SubCategoryDetails = (props) => {
                 colorBase={props.colorName}
                 highlightColorDark={subCategory.highlightColorDark}
                 indicatorIds={chart.indicatorIds}
+                stacked={chart.stacked}
               />
             </div>
           ))}

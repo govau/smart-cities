@@ -5,7 +5,7 @@ import style from './Legend.scss';
 const Legend = props => (
   <div className={props.className}>
     {props.title && <div className={style.title}>{props.title}</div>}
-    {props.series.map(item => (
+    {props.series.slice().reverse().map(item => (
       <div
         key={item.name}
         className={style.legendItem}

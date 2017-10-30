@@ -4,12 +4,12 @@ exports[`should match Snapshot 1`] = `
 "<div className=\\"wrapper\\">
   <div className=\\"titleWrapper\\">
     <h4 className=\\"title\\">
-      The population
+      Population
     </h4>
-    <AboutTooltip description=\\"TODO\\" position=\\"bottom\\" size={18} />
+    <AboutTooltip description=\\"Total population\\" position=\\"bottom\\" size={18} />
   </div>
   <div className=\\"descriptionLabel\\">
-    TODO
+    Total population
   </div>
   <AbstractWidget config={{...}} />
 </div>"

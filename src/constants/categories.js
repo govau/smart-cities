@@ -30,7 +30,60 @@ export const CATEGORIES = [
           'growthRate',
           'population10yr',
         ],
-        charts: [],
+        charts: [
+          {
+            name: 'Total population',
+            indicatorIds: [
+              'population',
+            ],
+          },
+          {
+            name: 'Population growth',
+            indicatorIds: [
+              'growthRate',
+              'population10yr',
+            ],
+          },
+          {
+            name: 'Indigenous population',
+            indicatorIds: [
+              'indigenousPopulation',
+            ],
+          },
+          {
+            name: 'Population density',
+            indicatorIds: [
+              'populationDensity',
+            ],
+          },
+          {
+            name: 'Age dependency ratio',
+            stacked: true,
+            indicatorIds: [
+              'dependencyRatio14OrYounger',
+              'dependencyRatio15To64',
+              'dependencyRatio65OrOlder',
+            ],
+          },
+          {
+            name: 'Dependency, not of working age',
+            indicatorIds: [
+              'dependencyRatioNotWorkingAge',
+            ],
+          },
+          {
+            name: 'Dependency ratio median age',
+            indicatorIds: [
+              'dependencyRatioMedianAge',
+            ],
+          },
+          {
+            name: 'Disability rate',
+            indicatorIds: [
+              'disabilityRate',
+            ],
+          },
+        ],
       },
       {
         name: 'Housing',
@@ -38,11 +91,44 @@ export const CATEGORIES = [
         highlightColorDark: 'HOUSING_500',
         iconId: 'housingHousingAffordability',
         summaryIndicatorIds: [
-          'householdSize',
-          'medianHousePrice',
-          'householdIncome',
+          'tenureRatioOwnedOutright',
+          'tenureRatioMortgage',
+          'tenureRatioRented',
         ],
-        charts: [],
+        charts: [
+          {
+            name: 'Dwelling type ratio',
+            stacked: true,
+            indicatorIds: [
+              'dwellingApartment',
+              'dwellingSemi',
+              'dwellingHouse',
+              'dwellingOther',
+            ],
+          },
+          {
+            name: 'Average household size',
+            indicatorIds: [
+              'householdSize',
+            ],
+          },
+          {
+            name: 'Housing tenure',
+            stacked: 'true',
+            indicatorIds: [
+              'tenureRatioOwnedOutright',
+              'tenureRatioMortgage',
+              'tenureRatioRented',
+              'tenureRatioOther',
+            ],
+          },
+          {
+            name: 'Median house price',
+            indicatorIds: [
+              'medianHousePrice',
+            ],
+          },
+        ],
       },
       {
         name: 'Liveability',
@@ -54,7 +140,32 @@ export const CATEGORIES = [
           'shareInBottomIncomeQuintile',
           'socioEconomicIndex',
         ],
-        charts: [],
+        charts: [
+          {
+            name: 'Life expectancy at birth',
+            indicatorIds: [
+              'lifeExpectancy',
+            ],
+          },
+          {
+            name: 'Households in bottom 20% income',
+            indicatorIds: [
+              'shareInBottomIncomeQuintile',
+            ],
+          },
+          {
+            name: 'Socio-economic indexes for areas',
+            indicatorIds: [
+              'socioEconomicIndex',
+            ],
+          },
+          {
+            name: 'Languages other than English',
+            indicatorIds: [
+              'languagesOtherThanEnglish',
+            ],
+          },
+        ],
       },
       {
         name: 'Jobs & Skills',
@@ -66,7 +177,17 @@ export const CATEGORIES = [
           'marketServices',
           'nonMarketServices',
         ],
-        charts: [],
+        charts: [
+          {
+            name: 'Industry share of employment',
+            stacked: true,
+            indicatorIds: [
+              'goodsProducingSector',
+              'marketServices',
+              'nonMarketServices',
+            ],
+          },
+        ],
       },
     ],
     heroIndicatorId: 'population',
@@ -91,38 +212,33 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Youth unemployment',
-            longDescription: 'TODO',
-            indicatorIds: [
-              'unemploymentRateYouth',
-            ],
-          },
-          {
-            name: 'Unemployment rate',
-            longDescription: 'TODO',
+            name: 'Unemployment',
             indicatorIds: [
               'unemploymentRateGeneral',
             ],
           },
           {
-            name: 'Indigenous unemployment',
-            longDescription: 'TODO',
+            name: 'Unemployment ratios',
             indicatorIds: [
+              'unemploymentRateYouth',
               'unemploymentRateIndigenous',
             ],
           },
           {
             name: 'Participation rate',
-            longDescription: 'TODO',
             indicatorIds: [
               'participationRateGeneral',
+            ],
+          },
+          {
+            name: 'Participation by gender',
+            indicatorIds: [
               'participationRateFemale',
               'participationRateMale',
             ],
           },
           {
             name: 'Employment growth',
-            longDescription: 'TODO',
             indicatorIds: [
               'employmentGrowth',
             ],
@@ -137,7 +253,26 @@ export const CATEGORIES = [
         summaryIndicatorIds: [
           'educationalAttainmentYr12',
         ],
-        charts: [],
+        charts: [
+          {
+            name: 'Education Year 12',
+            indicatorIds: [
+              'educationalAttainmentYr12',
+            ],
+          },
+          {
+            name: 'Education Certificate',
+            indicatorIds: [
+              'educationalAttainmentCertificate',
+            ],
+          },
+          {
+            name: 'Education Tertiary',
+            indicatorIds: [
+              'educationalAttainmentTertiary',
+            ],
+          },
+        ],
       },
     ],
     heroIndicatorId: 'unemploymentRateYouth',
@@ -151,29 +286,87 @@ export const CATEGORIES = [
     shortDescription: 'Improve housing supply and affordability, & encourage appropriate densities & diversity of housing options.',
     subCategories: [
       {
-        name: 'Buying houses',
+        name: 'Housing affordability',
         highlightColorLight: 'HOUSING_040',
         highlightColorDark: 'HOUSING_600',
         iconId: 'housingHousingAffordability',
-        summaryIndicatorIds: [],
-        charts: [],
+        summaryIndicatorIds: [
+          'residentialBuildingApprovalsTotal',
+          'mortgageStress',
+          'medianHousePrice',
+        ],
+        charts: [
+          {
+            name: 'Public housing units',
+            indicatorIds: [
+              'publicHousingUnits',
+            ],
+          },
+          {
+            name: 'Housing construction costs',
+            indicatorIds: [
+              'housingConstructionCosts',
+            ],
+          },
+          {
+            name: 'Mortgage stress',
+            indicatorIds: [
+              'mortgageStress',
+            ],
+          },
+          {
+            name: 'Dwelling price to income ratio',
+            indicatorIds: [
+              'dwellingPriceToIncomeRatio',
+            ],
+          },
+          {
+            name: 'Total residential building approvals',
+            indicatorIds: [
+              'residentialBuildingApprovalsTotal',
+            ],
+          },
+          {
+            name: 'Residential building approvals and growth',
+            indicatorIds: [
+              'residentialBuildingApprovalsGrowth',
+            ],
+          },
+        ],
       },
       {
-        name: 'Living in houses',
+        name: 'Living affordability',
         highlightColorLight: 'HOUSING_060',
         highlightColorDark: 'HOUSING_700',
         iconId: 'housingLivingAffordability',
-        summaryIndicatorIds: [],
-        charts: [],
+        summaryIndicatorIds: [
+          'rentStress',
+          'homelessnessRate',
+          'householdSize',
+        ],
+        charts: [
+          {
+            name: 'Homelessness rate',
+            indicatorIds: [
+              'homelessnessRate',
+            ],
+          },
+          {
+            name: 'Rent stress',
+            indicatorIds: [
+              'rentStress',
+            ],
+          },
+        ],
       },
     ],
-    heroIndicatorId: 'growthRate',
+    heroIndicatorId: 'dwellingPriceToIncomeRatio',
   },
   {
     id: CATEGORY_IDS.INFRASTRUCTURE,
     colorName: COLOR_NAMES.INFRASTRUCTURE,
     iconId: 'infrastructureGettingToWork',
-    name: 'Infrastructure',
+    name: 'Infrastructure and Investment',
     navName: 'Infrastructure',
     description: 'Infrastructure and Investment encompasses all key dimensions of the city’s investment environment, with a particular focus on the quality, efficiency and effectiveness of infrastructure.',
     shortDescription: 'Improve accessibility & productivity in cities with high quality, efficient and effective infrastructure & transport solutions.',
@@ -185,11 +378,38 @@ export const CATEGORIES = [
         iconId: 'infrastructureGettingToWork',
         summaryIndicatorIds: [
           'jobsCar',
+          'activeJourneys',
+          'peakDelay',
         ],
-        charts: [],
+        charts: [
+          {
+            name: 'Jobs accessible within 30 minutes by car',
+            indicatorIds: [
+              'jobsCar',
+            ],
+          },
+          {
+            name: 'Share of work trips by public transport',
+            indicatorIds: [
+              'publicJourneys',
+            ],
+          },
+          {
+            name: 'Share of work trips by active transport',
+            indicatorIds: [
+              'activeJourneys',
+            ],
+          },
+          {
+            name: 'Peak travel delay',
+            indicatorIds: [
+              'peakDelay',
+            ],
+          },
+        ],
       },
     ],
-    heroIndicatorId: 'population',
+    heroIndicatorId: 'jobsCar',
   },
   {
     id: CATEGORY_IDS.LIVEABILITY,
@@ -204,25 +424,139 @@ export const CATEGORIES = [
         highlightColorLight: 'LIVEABILITY_040',
         highlightColorDark: 'LIVEABILITY_600',
         iconId: 'liveabilityEnvironment',
-        summaryIndicatorIds: [],
-        charts: [],
+        summaryIndicatorIds: [
+          'accessToPublicTransport',
+          'grossParklandArea',
+          'greenhouseGasEmissions',
+        ],
+        charts: [
+          {
+            name: 'Access to green space',
+            indicatorIds: [
+              'accessToGreenSpace',
+            ],
+          },
+          {
+            name: 'Gross parkland area',
+            indicatorIds: [
+              'grossParklandArea',
+            ],
+          },
+          {
+            name: 'Air pollution, more than 10 parts per million',
+            indicatorIds: [
+              'airPollutionPm10',
+            ],
+          },
+          {
+            name: 'Air pollution, less than 2.5 parts per million',
+            indicatorIds: [
+              'airPollutionPm2point5',
+            ],
+          },
+          {
+            name: 'Climate emissions',
+            indicatorIds: [
+              'greenhouseGasEmissions',
+            ],
+          },
+          {
+            name: 'Energy efficiency of buildings',
+            indicatorIds: [
+              'energyEfficiencyOfBuildings',
+            ],
+          },
+          {
+            name: 'Access to public transport',
+            indicatorIds: [
+              'accessToPublicTransport',
+            ],
+          },
+        ],
       },
       {
         name: 'Liveability',
         highlightColorLight: 'LIVEABILITY_060',
         highlightColorDark: 'LIVEABILITY_700',
         iconId: 'liveabilityLiveability',
-        summaryIndicatorIds: [],
-        charts: [],
+        summaryIndicatorIds: [
+          'volunteeringRate',
+          // 'perceivedSafety',
+          'adultObesity',
+        ],
+        charts: [
+          {
+            name: 'Volunteering',
+            indicatorIds: [
+              'volunteeringRate',
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Public safety',
+        highlightColorLight: 'LIVEABILITY_080',
+        highlightColorDark: 'LIVEABILITY_800',
+        iconId: 'liveabilityPublicSafety',
+        summaryIndicatorIds: [
+          // 'perceivedSafety',
+          'homicideRate',
+          'crisisSupport',
+        ],
+        charts: [
+          {
+            name: 'Homicide rate',
+            indicatorIds: [
+              'homicideRate',
+            ],
+          },
+          // {
+          //   name: 'Perceived safety',
+          //   indicatorIds: [
+          //     'perceivedSafety',
+          //   ],
+          // },
+          {
+            name: 'Support in times of crisis',
+            indicatorIds: [
+              'crisisSupport',
+            ],
+          },
+        ],
+      },
+      {
+        name: 'Life and death',
+        highlightColorLight: 'LIVEABILITY_100',
+        highlightColorDark: 'LIVEABILITY_900',
+        iconId: 'liveabilityLifeAndDeath',
+        summaryIndicatorIds: [
+          'adultObesity',
+          'suicideRate',
+        ],
+        charts: [
+          {
+            name: 'Adult obesity rate',
+            indicatorIds: [
+              'adultObesity',
+            ],
+          },
+          {
+            name: 'Suicide rate',
+            indicatorIds: [
+              'suicideRate',
+            ],
+          },
+        ],
       },
     ],
-    heroIndicatorId: 'dispersion',
+    heroIndicatorId: 'accessToGreenSpace',
   },
   {
     id: CATEGORY_IDS.INNOVATION,
     colorName: COLOR_NAMES.INNOVATION,
     iconId: 'innovationInnovation',
-    name: 'Innovation',
+    name: 'Innovation and Digital Opportunities',
+    navName: 'Innovation',
     description: 'Innovation and Digital Opportunities encompasses three broad dimensions: city productivity; innovation and entrepreneurship; and access to public data',
     shortDescription: 'Aims to harness the productive potential of information and communications technologies & the digital economy, and to make data publicly available where practical.',
     subCategories: [
@@ -231,19 +565,62 @@ export const CATEGORIES = [
         highlightColorLight: 'INNOVATION_040',
         highlightColorDark: 'INNOVATION_600',
         iconId: 'innovationInnovation',
-        summaryIndicatorIds: [],
-        charts: [],
+        summaryIndicatorIds: [
+          'householdsWithBroadband',
+          'patentApplications',
+        ],
+        charts: [
+          {
+            name: 'Households with broadband',
+            indicatorIds: [
+              'householdsWithBroadband',
+            ],
+          },
+          {
+            name: 'Patent applications',
+            indicatorIds: [
+              'patentApplications',
+            ],
+          },
+        ],
       },
       {
-        name: 'Digital',
+        name: 'Digital business',
         highlightColorLight: 'INNOVATION_060',
         highlightColorDark: 'INNOVATION_700',
         iconId: 'innovationDigital',
-        summaryIndicatorIds: [],
-        charts: [],
+        summaryIndicatorIds: [
+          'newBusinessEntrants',
+          'knowledgeWorkersRatio',
+          'linkedInConnectivityLocal',
+        ],
+        charts: [
+          {
+            name: 'Knowledge workers ratio',
+            indicatorIds: [
+              'knowledgeWorkersRatio',
+            ],
+          },
+          {
+            name: 'New business entrants and exits',
+            indicatorIds: [
+              'newBusinessEntrants',
+              'newBusinessExits',
+            ],
+          },
+          {
+            name: 'LinkedIn connectivity',
+            stacked: true,
+            indicatorIds: [
+              'linkedInConnectivityLocal',
+              'linkedInConnectivityRestOfNation',
+              'linkedInConnectivityInternational',
+            ],
+          },
+        ],
       },
     ],
-    heroIndicatorId: 'population',
+    heroIndicatorId: 'newBusinessEntrants',
   },
   {
     id: CATEGORY_IDS.PLANNING,
@@ -254,20 +631,86 @@ export const CATEGORIES = [
     shortDescription: 'Aims to deliver coordinated and integrated policy, planning and investment across all levels of government.',
     subCategories: [
       {
+        name: 'Planning',
+        highlightColorLight: 'PLANNING_020',
+        highlightColorDark: 'PLANNING_500',
+        iconId: 'planningLocalGovernment',
+        summaryIndicatorIds: [
+          'indigenousPopulation',
+          'growthRate',
+          'population10yr',
+        ],
+        charts: [
+          {
+            name: 'Total population',
+            indicatorIds: [
+              'population',
+            ],
+          },
+          {
+            name: 'Population growth',
+            indicatorIds: [
+              'growthRate',
+              'population10yr',
+            ],
+          },
+          {
+            name: 'Indigenous population',
+            indicatorIds: [
+              'indigenousPopulation',
+            ],
+          },
+          {
+            name: 'Population density',
+            indicatorIds: [
+              'populationDensity',
+            ],
+          },
+          {
+            name: 'Age dependency ratio',
+            stacked: true,
+            indicatorIds: [
+              'dependencyRatio14OrYounger',
+              'dependencyRatio15To64',
+              'dependencyRatio65OrOlder',
+            ],
+          },
+          {
+            name: 'Dependency, not of working age',
+            indicatorIds: [
+              'dependencyRatioNotWorkingAge',
+            ],
+          },
+          {
+            name: 'Dependency ratio median age',
+            indicatorIds: [
+              'dependencyRatioMedianAge',
+            ],
+          },
+          {
+            name: 'Disability rate',
+            indicatorIds: [
+              'disabilityRate',
+            ],
+          },
+        ],
+      },
+      {
         name: 'Local government',
         highlightColorLight: 'PLANNING_040',
         highlightColorDark: 'PLANNING_600',
         iconId: 'planningLocalGovernment',
-        summaryIndicatorIds: [],
-        charts: [],
-      },
-      {
-        name: 'Population',
-        highlightColorLight: 'PLANNING_060',
-        highlightColorDark: 'PLANNING_700',
-        iconId: 'planningPopulation',
-        summaryIndicatorIds: [],
-        charts: [],
+        summaryIndicatorIds: [
+          'dispersion',
+        ],
+        charts: [
+          {
+            name: 'Local government dispersion',
+            indicatorIds: [
+              'dispersion',
+            ],
+          },
+        ],
       },
     ],
     heroIndicatorId: 'population',
