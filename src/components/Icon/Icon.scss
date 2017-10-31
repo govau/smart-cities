@@ -9,25 +9,22 @@
   }
 }
 
-// Some classes that will be applied on the <g> surrounding an icon
-.indicatorTypeMarkSolid {
-  path { // the "P"
-    fill: $color-white;
-  }
-
-  circle {
-    fill: currentColor;
-  }
-}
-
-.indicatorTypeMarkBorder {
-  path { // the "P"
-    fill: $color-grey--700;
-  }
-
+.contextualIndicator {
   circle {
     stroke: currentColor;
     fill: none;
+  }
+}
+
+.performanceIndicator {
+  path { // the "P"
+    fill: $color-white;
+  }
+}
+
+.barsInCircle {
+  rect {
+    fill: $color-white;
   }
 }
 

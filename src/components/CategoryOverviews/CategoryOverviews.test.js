@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import CategoryOverviews from './CategoryOverviews';
 import { CATEGORIES } from '../../constants';
 
-jest.mock('../Icon/Icon', () => 'Icon');
 jest.mock('../CategoryOverview/CategoryOverview', () => 'CategoryOverview');
 
 const defaultProps = {

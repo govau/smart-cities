@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Icon from '../Icon/Icon';
 import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
 import Pill from '../Pill/Pill';
-import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
+import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
 import getColorVariant from '../../helpers/getColorVariant';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import {
@@ -22,7 +22,7 @@ const CategoryOverview = (props) => {
   const isContextCategory = props.category.id === CATEGORY_IDS.CONTEXT;
   const indicatorValue = props.city
     ? props.city.indices[props.category.heroIndicatorId]
-    : aggregateIndicatorForCities(
+    : getMinAndMaxForIndicator(
       props.category.heroIndicatorId,
       props.cities,
     );
@@ -101,7 +101,6 @@ const CategoryOverview = (props) => {
               colorName={props.category.colorName}
               indicator={props.category.heroIndicatorId}
               value={indicatorValue}
-              showPerformanceIndicator={false}
             />
 
             <NavLink

@@ -6,8 +6,8 @@ exports[`should match Snapshot 1`] = `
   style={
     Object {
       "borderRadius": 15,
-      "height": 30,
       "lineHeight": "26px",
+      "minHeight": 30,
     }
   }
 />

@@ -25,11 +25,6 @@ export const COLOR_NAMES = {
   PLANNING: 'planning',
 };
 
-export const AGGREGATION_METHODS = {
-  MEDIAN: 'MEDIAN',
-  SUM: 'SUM',
-};
-
 export const LINKS = {
   ORG: 'https://dta.gov.au/',
   CONTACT_US: 'mailto:performance-dashboard@digital.gov.au',

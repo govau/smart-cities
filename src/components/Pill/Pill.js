@@ -18,7 +18,7 @@ const Pill = (props) => {
       className={className}
       style={{
         ...props.style,
-        height: props.height,
+        minHeight: props.height,
         lineHeight: `${props.height - 4}px`, // allow for 2px border
         borderRadius: props.height / 2,
       }}

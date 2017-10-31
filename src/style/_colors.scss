@@ -1,4 +1,15 @@
+$color-primary--020: #e8f1f4;
+$color-primary--040: #d1e4e9;
+$color-primary--060: #bbcbcf;
+$color-primary--080: #a0b5ba;
+$color-primary--500: #4994a7;
+$color-primary--600: #32869c;
+$color-primary--700: #115361;
+$color-primary--800: #084653;
+$color-primary--900: #003a45;
+
 $color-overview--020: #edf8fb;
+$color-overview--080: #cadfe5;
 $color-overview--500: #32869c;
 $color-overview--600: #2b7588;
 $color-overview--700: #256778;
@@ -82,16 +93,6 @@ $color-badge: #f69900;
 $color-highlight: #00c3ef;
 $color-blue: #3d76b7;
 
-$color-primary--020: #e8f1f4;
-$color-primary--040: #d1e4e9;
-$color-primary--060: #bbcbcf;
-$color-primary--080: #a0b5ba;
-$color-primary--500: #4994a7;
-$color-primary--600: #32869c;
-$color-primary--700: #115361;
-$color-primary--800: #084653;
-$color-primary--900: #003a45;
-
 // export these colours to make them available in javascript
 // this is CSS module syntax so we disable a few rules
 
@@ -99,6 +100,7 @@ $color-primary--900: #003a45;
 :export {
   // note that these CONTEXT colours use the 'overview' variables
   CONTEXT_020: $color-overview--020;
+  CONTEXT_080: $color-overview--080;
   CONTEXT_500: $color-overview--500;
   CONTEXT_600: $color-overview--600;
   CONTEXT_700: $color-overview--700;
@@ -106,6 +108,7 @@ $color-primary--900: #003a45;
   CONTEXT_900: $color-overview--900;
 
   OVERVIEW_020: $color-overview--020;
+  OVERVIEW_080: $color-overview--080;
   OVERVIEW_500: $color-overview--500;
   OVERVIEW_900: $color-overview--900;
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PageWrapper from '../../PageWrapper/PageWrapper';
+import PageLegend from '../../PageLegend/PageLegend';
 import CategoryOverviews from '../../CategoryOverviews/CategoryOverviews';
 import Icon from '../../Icon/Icon';
 import { LINKS } from '../../../constants';
@@ -77,6 +78,12 @@ const AllCitiesOverview = props => (
         color={COLORS.PRIMARY_600}
       />
     </div>
+
+    <PageLegend
+      colorName="overview"
+      cities={props.cities}
+      isAllCitiesPage
+    />
 
     <CategoryOverviews cities={props.cities} />
   </PageWrapper>

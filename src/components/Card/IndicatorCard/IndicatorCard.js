@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
+import classnames from 'classnames';
 import Card from '../Card';
 import Icon from '../../Icon/Icon';
 import {
@@ -12,23 +13,16 @@ import stripPrefixAndSuffix from '../../../helpers/stripPrefixAndSuffix';
 import getColorVariant from '../../../helpers/getColorVariant';
 import style from './IndicatorCard.scss';
 
-const classnames = require('classnames/bind').bind(style);
+// we don't create a new component here because the number styles are
+// tightly bound to the styles of the card they're in
+function renderIndicatorNumber(numberProps) {
+  const indicator = typeof numberProps.indicator === 'string'
+    ? INDICATORS[numberProps.indicator]
+    : numberProps.indicator;
 
-const IndicatorCard = (props) => {
-  const indicator = typeof props.indicator === 'string'
-    ? INDICATORS[props.indicator]
-    : props.indicator;
-
-  const className = classnames(
-    style.wrapper,
-    `wrapper__${props.size}`,
-    props.className,
-  );
-
-  // Most indicators define a format. If supplied, this format is applied to the number here
   const formattedNumber = indicator.format
-    ? numeral(props.value).format(indicator.format)
-    : props.value;
+    ? numeral(numberProps.value).format(indicator.format)
+    : numberProps.value;
 
   // The prefix and suffix are rendered in different spans, so we split them out here
   const [formatPrefix, value, formatSuffix] = stripPrefixAndSuffix(formattedNumber);
@@ -38,6 +32,69 @@ const IndicatorCard = (props) => {
   const displayPrefix = `${indicator.cardPrefix || ''}${formatPrefix}`;
   const displaySuffix = `${formatSuffix}${indicator.cardSuffix || ''}`;
 
+  let numberType;
+  if (numberProps.showDualNumbers) {
+    if (numberProps.isSecondNumber) {
+      numberType = style.secondNumber;
+    } else {
+      numberType = style.firstNumber;
+    }
+  } else {
+    numberType = style.onlyNumber;
+  }
+
+  const className = classnames(
+    style.indicatorNumberWrapper,
+    numberType,
+  );
+
+  return (
+    <div className={className}>
+      {numberProps.showDualNumbers && (
+        <Icon
+          icon={numberProps.isSecondNumber ? 'minBars' : 'maxBars'}
+          className={style.minMaxIcon}
+          color={numberProps.color}
+        />
+      )}
+
+      {!!displayPrefix && (
+        <span className={classnames(style.prefix, style.symbol)}>{displayPrefix}</span>
+      )}
+
+      <span className={style.number}>{value}</span>
+
+      {!!displaySuffix && (
+        <span className={classnames(style.suffix, style.symbol)}>{displaySuffix}</span>
+      )}
+    </div>
+  );
+}
+
+const IndicatorCard = (props) => {
+  const showDualNumbers = Array.isArray(props.value);
+
+  if (showDualNumbers && props.value.length !== 2) {
+    console.warn(`Exactly 2 numbers must be passed to an IndicatorCard, you passed ${props.value.length}`);
+
+    return null;
+  }
+
+  const indicator = typeof props.indicator === 'string'
+    ? INDICATORS[props.indicator]
+    : props.indicator;
+
+  const darkColor = getColorVariant(props.colorName, '900');
+  const cardSizeClassName = props.size === CARD_SIZES.LARGE ? style.largeCard : style.smallCard;
+  const dualOrSingleClassName = showDualNumbers ? style.dualNumber : style.singleNumber;
+
+  const className = classnames(
+    style.wrapper,
+    cardSizeClassName,
+    dualOrSingleClassName,
+    props.className,
+  );
+
   return (
     <Card
       {...props}
@@ -46,24 +103,31 @@ const IndicatorCard = (props) => {
     >
       <p className={style.header}>{indicator.name}</p>
 
-      {!indicator.contextual && (
+      {!props.isContextPage && (
         <Icon
           className={style.indicatorTypeMark}
-          color={getColorVariant(props.colorName, '900')}
-          icon={props.isCategoryPage ? 'indicatorTypeMarkSolid' : 'indicatorTypeMarkBorder'}
+          color={darkColor}
+          icon={indicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
           size={14}
         />
       )}
 
-      <div className={style.indicatorWrapper}>
-        {!!displayPrefix && (
-          <span className={classnames(style.prefix, style.symbol)}>{displayPrefix}</span>
-        )}
+      <div className={style.indicatorNumbers}>
+        {renderIndicatorNumber({
+          indicator,
+          value: showDualNumbers ? props.value[1] : props.value,
+          showDualNumbers,
+          color: darkColor,
+        })}
 
-        <span className={style.number}>{value}</span>
-
-        {!!displaySuffix && (
-          <span className={classnames(style.suffix, style.symbol)}>{displaySuffix}</span>
+        {showDualNumbers && (
+          renderIndicatorNumber({
+            indicator,
+            value: props.value[0],
+            showDualNumbers,
+            color: darkColor,
+            isSecondNumber: true,
+          })
         )}
       </div>
     </Card>
@@ -84,10 +148,10 @@ IndicatorCard.propTypes = {
     }),
     PropTypes.string,
   ]).isRequired,
-  isCategoryPage: PropTypes.bool,
+  isContextPage: PropTypes.bool,
   value: PropTypes.oneOfType([
     PropTypes.number,
-    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.number),
   ]).isRequired,
   size: PropTypes.oneOf(Object.values(CARD_SIZES)),
 };

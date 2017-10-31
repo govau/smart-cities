@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<div className=\\"wrapper\\" style={{...}}>
+  <div className=\\"container\\">
+    <div className=\\"indicatorTypesWrapper\\">
+      <div className=\\"indicatorTypeWrapper\\">
+        <Icon className=\\"icon\\" color=\\"JOBS_900\\" icon=\\"contextualIndicator\\" size={24} />
+        <span className=\\"text\\">
+          Contextual indicators
+        </span>
+      </div>
+      <div className=\\"indicatorTypeWrapper\\">
+        <Icon className=\\"icon\\" color=\\"JOBS_900\\" icon=\\"performanceIndicator\\" size={24} />
+        <span className=\\"text\\">
+          Performance indicators
+        </span>
+      </div>
+    </div>
+  </div>
+</div>"
+`;

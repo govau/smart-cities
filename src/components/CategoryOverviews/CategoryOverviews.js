@@ -1,26 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CategoryOverview from '../CategoryOverview/CategoryOverview';
-import Icon from '../Icon/Icon';
 import { CATEGORIES } from '../../constants';
-import COLORS from '../../style/_colors.scss';
 import style from './CategoryOverviews.scss';
 
 const CategoryOverviews = props => (
   <div>
-    <div className={style.indicatorTypeMarkWrapper}>
-      <div className={style.indicatorTypeMarkContainer}>
-        <Icon
-          className={style.indicatorTypeMark}
-          color={COLORS.OVERVIEW_900}
-          icon="indicatorTypeMarkSolid"
-          size={22}
-        />
-
-        Performance indicators
-      </div>
-    </div>
-
     {CATEGORIES.map(category => (
       <CategoryOverview
         key={category.id}
@@ -35,6 +20,7 @@ const CategoryOverviews = props => (
         <div className={style.footerSpacerLine} />
       </div>
     </div>
+
     <div className={style.footerSpacerShade} />
   </div>
 );

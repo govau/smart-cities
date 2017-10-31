@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
 import Icon from '../Icon/Icon';
-import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
+import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import getColorVariant from '../../helpers/getColorVariant';
 import {
@@ -12,6 +12,7 @@ import {
 import style from './SubCategorySummary.scss';
 
 const SubCategorySummary = (props) => {
+  const isContextPage = props.categoryId === CATEGORY_IDS.CONTEXT;
   const backgroundColor = getColorVariant(props.highlightColorLight);
   const cardHighlightColor = getColorVariant(props.highlightColorDark);
 
@@ -19,12 +20,12 @@ const SubCategorySummary = (props) => {
     const lastOne = i === (props.summaryIndicatorIds.length - 1);
     const indicatorValue = props.city
       ? props.city.indices[indicatorId]
-      : aggregateIndicatorForCities(
+      : getMinAndMaxForIndicator(
         indicatorId,
         props.cities,
       );
 
-    const linkText = props.categoryId === CATEGORY_IDS.CONTEXT
+    const linkText = isContextPage
       ? 'View contextual charts'
       : `View all ${props.name} charts`;
 
@@ -39,7 +40,7 @@ const SubCategorySummary = (props) => {
           color={cardHighlightColor}
           colorName={props.categoryId}
           value={indicatorValue}
-          isCategoryPage
+          isContextPage={isContextPage}
         />
         {lastOne && (
           <a

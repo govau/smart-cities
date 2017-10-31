@@ -2,7 +2,7 @@
 
 exports[`should match Snapshot 1`] = `
 <div
-  className="card card__small wrapper wrapper__small"
+  className="card card__small wrapper smallCard singleNumber"
   style={
     Object {
       "borderBottomColor": "#fff",
@@ -17,27 +17,31 @@ exports[`should match Snapshot 1`] = `
   <Icon
     className="indicatorTypeMark"
     color="JOBS_900"
-    icon="indicatorTypeMarkBorder"
+    icon="performanceIndicator"
     size={14}
   />
   <div
-    className="indicatorWrapper"
+    className="indicatorNumbers"
   >
-    <span
-      className="prefix symbol"
+    <div
+      className="indicatorNumberWrapper onlyNumber"
     >
-      The
-    </span>
-    <span
-      className="number"
-    >
-      7700
-    </span>
-    <span
-      className="suffix symbol"
-    >
-      %per annum
-    </span>
+      <span
+        className="prefix symbol"
+      >
+        The
+      </span>
+      <span
+        className="number"
+      >
+        7700
+      </span>
+      <span
+        className="suffix symbol"
+      >
+        %per annum
+      </span>
+    </div>
   </div>
 </div>
 `;

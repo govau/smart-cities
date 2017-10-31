@@ -145,7 +145,7 @@ describe('when an array of cities is passed in', () => {
   );
 
   it('should aggregate data for all cities', () => {
-    expect(component.find('IndicatorCard').prop('value')).toBe(100); // 77 + 23
+    expect(component.find('IndicatorCard').prop('value')).toEqual([23, 77]);
   });
 
   it('should create a link to the all cities category page', () => {

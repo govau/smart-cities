@@ -2,12 +2,6 @@
 
 exports[`should match Snapshot 1`] = `
 "<div>
-  <div className=\\"indicatorTypeMarkWrapper\\">
-    <div className=\\"indicatorTypeMarkContainer\\">
-      <Icon className=\\"indicatorTypeMark\\" color=\\"OVERVIEW_900\\" icon=\\"indicatorTypeMarkSolid\\" size={22} />
-      Performance indicators
-    </div>
-  </div>
   <CategoryOverview category={{...}} cities={[undefined]} city={{...}} />
   <CategoryOverview category={{...}} cities={[undefined]} city={{...}} />
   <CategoryOverview category={{...}} cities={[undefined]} city={{...}} />

@@ -1,11 +1,18 @@
 @import '~style/variables';
 
+/**
+  Indicator cards can:
+   - be small or large. This class is applied to the wrapper.
+   - show one number (for a city page) or two (for all cities). This class is applied to the wrapper
+   - have a small, large, or 'only' number. This class is applied to the number wrapper
+ */
+
 .wrapper {
   display: flex;
   align-items: stretch;
   position: relative; // the P is absolute, relative to this
 
-  &.wrapper__large {
+  &.largeCard {
     flex-direction: column;
   }
 }
@@ -13,12 +20,13 @@
 .header {
   flex: 1;
 
-  .wrapper__small & {
-    @include type-indicator-card-header--small;
+  .smallCard & {
+    font-size: 12px;
+    margin-right: 4px;
   }
 
-  .wrapper__large & {
-    @include type-indicator-card-header--large;
+  .largeCard & {
+    font-size: 16px;
   }
 }
 
@@ -28,38 +36,108 @@
   right: 7px;
 }
 
-.indicatorWrapper {
+.indicatorNumbers {
   margin-left: auto; // push right
   align-self: flex-end; // push down
   line-height: 1;
 }
 
-.symbol {
-  color: $color-grey--500;
+.indicatorNumberWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
 
-  .wrapper__small & {
-    @include type-indicator-card-symbol--small;
+.minMaxIcon {
+  margin-right: 4px;
+
+  .smallCard .firstNumber & {
+    width: 13px;
+    height: 13px;
+    margin-bottom: 3px;
   }
 
-  .wrapper__large & {
-    @include type-indicator-card-symbol--large;
+  .smallCard .secondNumber & {
+    width: 8px;
+    height: 8px;
+    margin-bottom: 1px;
+  }
+
+  .largeCard .firstNumber & {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;
+  }
+
+  .largeCard .secondNumber & {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 2px;
+  }
+}
+
+.firstNumber {
+  margin-bottom: 3px;
+}
+
+.number {
+  .smallCard.singleNumber .onlyNumber & {
+    font-size: 44px;
+  }
+
+  .smallCard.dualNumber .firstNumber & {
+    font-size: 30px;
+  }
+
+  .smallCard.dualNumber .secondNumber & {
+    font-size: 12px;
+  }
+
+  .largeCard.singleNumber .onlyNumber & {
+    font-size: 90px;
+  }
+
+  .largeCard.dualNumber .firstNumber & {
+    font-size: 48px;
+  }
+
+  .largeCard.dualNumber .secondNumber & {
+    font-size: 24px;
+  }
+}
+
+.symbol {
+  .smallCard.singleNumber .onlyNumber & {
+    font-size: 23px;
+    margin-bottom: 2px;
+  }
+
+  .smallCard.dualNumber .firstNumber & {
+    font-size: 18px;
+  }
+
+  .smallCard.dualNumber .secondNumber & {
+    font-size: 12px;
+  }
+
+  .largeCard.singleNumber .onlyNumber & {
+    font-size: 42px;
+    margin-bottom: 4px;
+  }
+
+  .largeCard.dualNumber .firstNumber & {
+    font-size: 24px;
+  }
+
+  .largeCard.dualNumber .secondNumber & {
+    font-size: 18px;
   }
 }
 
 .prefix {
-  margin-right: 5px;
-}
-
-.number {
-  .wrapper__small & {
-    @include type-indicator-card-number--small;
-  }
-
-  .wrapper__large & {
-    @include type-indicator-card-number--large;
-  }
+  margin-right: 1px;
 }
 
 .suffix {
-  margin-left: 5px;
+  margin-left: 1px;
 }

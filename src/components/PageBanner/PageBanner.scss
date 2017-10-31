@@ -4,11 +4,9 @@
   @include container;
 
   padding-top: 16px;
-  padding-bottom: 16px;
 
   @include for-tablet-portrait-up {
     padding-top: 40px;
-    padding-bottom: 32px;
   }
 }
 
@@ -47,7 +45,7 @@
 
   @include for-tablet-portrait-up {
     flex: none;
-    width: 300px; // TODO (davidg): should allow for the widest value
+    width: 256px;
     margin-left: auto; // push to the right
   }
 }

@@ -53,6 +53,7 @@ exports[`should match Snapshot 1`] = `
     </div>
     <Icon className=\\"subInfoIcon\\" icon=\\"city\\" size={120} color=\\"PRIMARY_600\\" />
   </div>
+  <PageLegend colorName=\\"overview\\" cities={{...}} isAllCitiesPage={true} />
   <CategoryOverviews cities={{...}} />
 </PageWrapper>"
 `;
