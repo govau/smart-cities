@@ -22,7 +22,7 @@ export const CATEGORIES = [
     subCategories: [
       {
         name: 'Planning',
-        highlightColorLight: 'PLANNING_020',
+        highlightColorLight: 'PLANNING_040',
         highlightColorDark: 'PLANNING_500',
         iconId: 'planningLocalGovernment',
         summaryIndicatorIds: [
@@ -87,7 +87,7 @@ export const CATEGORIES = [
       },
       {
         name: 'Housing',
-        highlightColorLight: 'HOUSING_020',
+        highlightColorLight: 'HOUSING_040',
         highlightColorDark: 'HOUSING_500',
         iconId: 'housingHousingAffordability',
         summaryIndicatorIds: [
@@ -132,7 +132,7 @@ export const CATEGORIES = [
       },
       {
         name: 'Liveability',
-        highlightColorLight: 'LIVEABILITY_020',
+        highlightColorLight: 'LIVEABILITY_040',
         highlightColorDark: 'LIVEABILITY_500',
         iconId: 'liveabilityLiveability',
         summaryIndicatorIds: [
@@ -169,7 +169,7 @@ export const CATEGORIES = [
       },
       {
         name: 'Jobs & Skills',
-        highlightColorLight: 'JOBS_020',
+        highlightColorLight: 'JOBS_040',
         highlightColorDark: 'JOBS_500',
         iconId: 'jobsEmployment',
         summaryIndicatorIds: [
@@ -632,7 +632,7 @@ export const CATEGORIES = [
     subCategories: [
       {
         name: 'Planning',
-        highlightColorLight: 'PLANNING_020',
+        highlightColorLight: 'PLANNING_040',
         highlightColorDark: 'PLANNING_500',
         iconId: 'planningLocalGovernment',
         summaryIndicatorIds: [
@@ -697,7 +697,7 @@ export const CATEGORIES = [
       },
       {
         name: 'Local government',
-        highlightColorLight: 'PLANNING_040',
+        highlightColorLight: 'PLANNING_060',
         highlightColorDark: 'PLANNING_600',
         iconId: 'planningLocalGovernment',
         summaryIndicatorIds: [

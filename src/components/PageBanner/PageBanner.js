@@ -62,7 +62,6 @@ PageBanner.propTypes = {
   description: PropTypes.string.isRequired,
   indicator: PropTypes.oneOf(Object.keys(INDICATORS)).isRequired,
   title: PropTypes.string.isRequired,
-  isCategoryPage: PropTypes.bool,
   isContextPage: PropTypes.bool,
 };
 

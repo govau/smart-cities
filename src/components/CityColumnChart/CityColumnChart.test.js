@@ -12,6 +12,7 @@ jest.mock('../../helpers/getColorRange', () => () => [
 
 const defaultProps = {
   colorBase: 'jobs',
+  highlightColorLight: 'JOBS_040',
   highlightColorDark: 'JOBS_600',
   cities: [
     {

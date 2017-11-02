@@ -50,11 +50,38 @@
   }
 }
 
-// .title,
-// .descriptionLabel {
-//   margin-left: 120px;
+:global(.cityColumnChartTooltipHeader) {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 6px;
+  font-size: 10px;
 
-//   @include for-phone-only {
-//     margin-left: 15px;
-//   }
-// }
+  @include for-tablet-portrait-up {
+    font-size: 12px;
+  }
+}
+
+:global(.cityColumnChartTooltipRow) {
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 10px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 4px;
+  }
+
+  @include for-tablet-portrait-up {
+    font-size: 12px;
+  }
+}
+
+:global(.cityColumnChartTooltipDot) {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
+
+:global(.cityColumnChartTooltipValue) {
+  font-weight: 700;
+}

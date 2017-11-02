@@ -48,7 +48,7 @@ export default {
     name: 'Median house price',
     shortDescription: 'Median house price',
     longDescription: 'Median house price',
-    format: '$0,0[.]0a',
+    format: '$0,0[.]00a',
     contextual: true,
     source: 'Median housing price, AUD',
   },

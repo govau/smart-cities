@@ -26,7 +26,6 @@ const AllCitiesCategory = (props) => {
         indicator={props.category.heroIndicatorId}
         title={props.category.name}
         cities={props.cities}
-        isCategoryPage
         isContextPage={props.category.id === CATEGORY_IDS.CONTEXT}
       />
 
@@ -44,6 +43,7 @@ const AllCitiesCategory = (props) => {
           <CityColumnChart
             cities={props.cities}
             colorBase={props.category.colorName}
+            highlightColorLight={`${props.category.id.toUpperCase()}_040`}
             highlightColorDark={`${props.category.id.toUpperCase()}_500`}
             indicatorIds={[props.category.heroIndicatorId]}
           />

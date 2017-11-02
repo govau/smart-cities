@@ -20,9 +20,7 @@ function renderIndicatorNumber(numberProps) {
     ? INDICATORS[numberProps.indicator]
     : numberProps.indicator;
 
-  const formattedNumber = indicator.format
-    ? numeral(numberProps.value).format(indicator.format)
-    : numberProps.value;
+  const formattedNumber = numeral(numberProps.value).format(indicator.format);
 
   // The prefix and suffix are rendered in different spans, so we split them out here
   const [formatPrefix, value, formatSuffix] = stripPrefixAndSuffix(formattedNumber);

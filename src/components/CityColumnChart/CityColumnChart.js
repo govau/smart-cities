@@ -40,8 +40,10 @@ function sortChartData(cities, indicator) {
 
 const CityColumnChart = (props) => {
   const isMultiple = props.indicatorIds.length > 1;
-  const baseColor = getColorVariant(props.highlightColorDark);
-  const chartColors = getColorRange(baseColor, props.indicatorIds.length);
+  const colorLight = getColorVariant(props.highlightColorLight);
+  const colorMedium = getColorVariant(props.highlightColorDark);
+  const colorDark = getColorVariant(props.colorBase, '900');
+  const chartColors = getColorRange(colorMedium, props.indicatorIds.length);
 
   // The indicator data contains things like titles and descriptions. But these can
   // also be passed in explicitly (e.g. for charts where there are more than one indicator)
@@ -77,17 +79,21 @@ const CityColumnChart = (props) => {
       height: 500,
       marginLeft: 60,
       marginRight: 0,
+      style: {
+        fontFamily: 'inherit', // to pick up the body font
+      },
     },
     plotOptions: {
-      bar: {
-        animation: false,
-        borderRadius: 4,
-        pointWidth: 6,
-      },
       series: {
         stacking: props.stacked ? 'normal' : null,
         pointWidth: 8,
         borderRadius: 4,
+        borderWidth: 0,
+        states: {
+          hover: {
+            brightness: 0,
+          },
+        },
       },
     },
     xAxis: {
@@ -99,6 +105,9 @@ const CityColumnChart = (props) => {
           fontSize: '10px',
         },
       },
+      crosshair: {
+        color: colorLight,
+      },
     },
     yAxis: {
       ceiling,
@@ -108,9 +117,7 @@ const CityColumnChart = (props) => {
         y: 3,
         formatter() {
           // format the number using the indicator's defined format, if available
-          return firstIndicator.format
-            ? numeral(this.value).format(firstIndicator.format)
-            : this.value;
+          return numeral(this.value).format(firstIndicator.format);
         },
       },
       title: yAxisTitle,
@@ -120,7 +127,33 @@ const CityColumnChart = (props) => {
       enabled: false,
     },
     tooltip: {
-      enabled: false,
+      backgroundColor: '#fff',
+      borderColor: colorDark,
+      borderRadius: 4,
+      // shared puts multiple series in the same tooltip
+      // but also means you can hover anywhere on the chart to get the tooltip
+      // (even for single series)
+      shared: true,
+      useHTML: true,
+      headerFormat: '<div class="cityColumnChartTooltipHeader">{point.key}</div>',
+      pointFormatter() {
+        const formattedValue = numeral(this.y).format(firstIndicator.format);
+        const seriesName = isMultiple ? `<span>${this.series.name}</span>` : '';
+
+        return `
+          <div class="cityColumnChartTooltipRow">
+            <span class="cityColumnChartTooltipDot" style="background: ${this.color}"></span>
+            
+            ${seriesName}
+            
+            <span class="cityColumnChartTooltipValue">${formattedValue}</span>
+          </div>
+        `;
+      },
+      style: {
+        fontFamily: 'inherit',
+        color: 'inherit',
+      },
     },
     legend: {
       enabled: false,
@@ -197,6 +230,7 @@ CityColumnChart.propTypes = {
   })).isRequired,
   className: PropTypes.string,
   colorBase: PropTypes.oneOf(Object.values(COLOR_NAMES)).isRequired,
+  highlightColorLight: PropTypes.string.isRequired,
   highlightColorDark: PropTypes.string.isRequired,
   indicatorIds: PropTypes.arrayOf(
     PropTypes.oneOf(Object.keys(INDICATORS)),
