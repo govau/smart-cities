@@ -14,7 +14,9 @@ const defaultProps = {
     name: 'Jobs and Skills',
     shortDescription: 'The short description',
     colorName: 'jobs',
-    heroIndicatorId: 'population',
+    overviewIndicatorIds: [
+      'population'
+    ],
     iconId: 'infrastructureGettingToWork',
     subCategories: [
       { name: 'Employment' },

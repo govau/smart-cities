@@ -113,7 +113,8 @@
   }
 }
 
-.indicatorCardAndLink {
+.indicatorCardAndLink,
+.indicatorCards {
   flex: none;
   display: flex;
   flex-direction: column;
@@ -132,6 +133,14 @@
   }
 }
 
+.indicatorCards {
+  justify-content: center;
+
+  @include for-tablet-landscape-up {
+    flex: auto;
+  }
+}
+
 .indicatorCard {
   margin-bottom: 16px;
 
@@ -147,7 +156,7 @@
     flex: none;
     width: 100%;
     margin-right: 0;
-    margin-top: 48px;
+    margin-top: 8px;
   }
 }
 
@@ -161,6 +170,7 @@
 
   @include for-tablet-landscape-up {
     flex: none;
+    margin-top: 16px;
     justify-self: flex-end;
   }
 }

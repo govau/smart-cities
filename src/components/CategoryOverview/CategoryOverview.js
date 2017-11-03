@@ -20,12 +20,14 @@ const classnames = require('classnames/bind').bind(style);
 
 const CategoryOverview = (props) => {
   const isContextCategory = props.category.id === CATEGORY_IDS.CONTEXT;
-  const indicatorValue = props.city
-    ? props.city.indices[props.category.heroIndicatorId]
-    : getMinAndMaxForIndicator(
-      props.category.heroIndicatorId,
-      props.cities,
-    );
+
+  const indicators = props.category.overviewIndicatorIds.map((indicatorId) => {
+    const value = props.city
+      ? props.city.indices[indicatorId]
+      : getMinAndMaxForIndicator(indicatorId, props.cities);
+
+    return { id: indicatorId, value };
+  });
 
   const categoryDarkColor = getColorVariant(props.category.colorName, '500');
   const categoryLightColor = isContextCategory
@@ -95,13 +97,18 @@ const CategoryOverview = (props) => {
           </div>
 
           <div className={style.indicatorCardAndLink}>
-            <IndicatorCard
-              className={style.indicatorCard}
-              color={categoryDarkColor}
-              colorName={props.category.colorName}
-              indicator={props.category.heroIndicatorId}
-              value={indicatorValue}
-            />
+            <div className={style.indicatorCards}>
+              {indicators.map(indicator => (
+                <IndicatorCard
+                  key={indicator.id}
+                  className={style.indicatorCard}
+                  color={categoryDarkColor}
+                  colorName={props.category.colorName}
+                  indicator={indicator.id}
+                  value={indicator.value}
+                />
+              ))}
+            </div>
 
             <NavLink
               to={categoryUrl}
@@ -113,7 +120,7 @@ const CategoryOverview = (props) => {
                 height={30}
               >
                 <span className={style.categoryLinkText}>
-                  {props.category.name} section
+                  {props.category.navName || props.category.name} section
                 </span>
 
                 <Icon
@@ -139,10 +146,11 @@ CategoryOverview.propTypes = {
   category: PropTypes.shape({
     colorName: PropTypes.string.isRequired,
     shortDescription: PropTypes.string.isRequired,
-    heroIndicatorId: PropTypes.oneOf(Object.keys(INDICATORS)).isRequired,
+    overviewIndicatorIds: PropTypes.arrayOf(PropTypes.oneOf(Object.keys(INDICATORS))).isRequired,
     id: PropTypes.string.isRequired,
     iconId: PropTypes.string,
     name: PropTypes.string.isRequired,
+    navName: PropTypes.string,
     subCategories: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
     })),

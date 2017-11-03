@@ -19,6 +19,10 @@ export const CATEGORIES = [
     name: 'Cities Context',
     description: 'Contextual indicators can help to understand why a city performs the way it does and what policies may be effective for improving economic performance and quality of life.',
     shortDescription: 'Contextual indicators can help to understand why a city performs the way it does and what policies may be effective for improving economic performance and quality of life.',
+    heroIndicatorId: 'population',
+    overviewIndicatorIds: [
+      'population',
+    ],
     subCategories: [
       {
         name: 'Planning',
@@ -190,7 +194,6 @@ export const CATEGORIES = [
         ],
       },
     ],
-    heroIndicatorId: 'population',
   },
   {
     id: CATEGORY_IDS.JOBS,
@@ -199,6 +202,11 @@ export const CATEGORIES = [
     name: 'Jobs & Skills',
     description: 'Jobs and Skills encompasses all key elements of employment and training in our cities, including the performance of the employment market and the skill level of the workforce.',
     shortDescription: 'Boost employment by supporting skills & industry development, & diverse economic growth.',
+    heroIndicatorId: 'unemploymentRateYouth',
+    overviewIndicatorIds: [
+      'employmentGrowth',
+      'unemploymentRateYouth',
+    ],
     subCategories: [
       {
         name: 'Employment',
@@ -275,7 +283,6 @@ export const CATEGORIES = [
         ],
       },
     ],
-    heroIndicatorId: 'unemploymentRateYouth',
   },
   {
     id: CATEGORY_IDS.HOUSING,
@@ -284,6 +291,10 @@ export const CATEGORIES = [
     name: 'Housing',
     description: 'Housing encompasses three broad dimensions: the affordability of housing in our cities; the supply and diversity of new housing stock; and where housing is located, including how accessible it is to jobs and services.',
     shortDescription: 'Improve housing supply and affordability, & encourage appropriate densities & diversity of housing options.',
+    heroIndicatorId: 'dwellingPriceToIncomeRatio',
+    overviewIndicatorIds: [
+      'dwellingPriceToIncomeRatio',
+    ],
     subCategories: [
       {
         name: 'Housing affordability',
@@ -360,7 +371,6 @@ export const CATEGORIES = [
         ],
       },
     ],
-    heroIndicatorId: 'dwellingPriceToIncomeRatio',
   },
   {
     id: CATEGORY_IDS.INFRASTRUCTURE,
@@ -370,6 +380,10 @@ export const CATEGORIES = [
     navName: 'Infrastructure',
     description: 'Infrastructure and Investment encompasses all key dimensions of the city’s investment environment, with a particular focus on the quality, efficiency and effectiveness of infrastructure.',
     shortDescription: 'Improve accessibility & productivity in cities with high quality, efficient and effective infrastructure & transport solutions.',
+    heroIndicatorId: 'jobsCar',
+    overviewIndicatorIds: [
+      'jobsCar',
+    ],
     subCategories: [
       {
         name: 'Getting to work',
@@ -409,7 +423,6 @@ export const CATEGORIES = [
         ],
       },
     ],
-    heroIndicatorId: 'jobsCar',
   },
   {
     id: CATEGORY_IDS.LIVEABILITY,
@@ -418,6 +431,10 @@ export const CATEGORIES = [
     name: 'Liveability',
     description: 'Liveability and Sustainability encompasses three broad dimensions: the health and wellbeing of residents; the attractiveness and amenity of the city; and the state of the environment and the local response to climate change.',
     shortDescription: 'Aims to improve safety, social cohesion and health in our cities. The Government also aims to improve air quality, access to green space and active transport, while acting to reduce carbon emissions.',
+    heroIndicatorId: 'accessToGreenSpace',
+    overviewIndicatorIds: [
+      'accessToGreenSpace',
+    ],
     subCategories: [
       {
         name: 'Environment',
@@ -549,7 +566,6 @@ export const CATEGORIES = [
         ],
       },
     ],
-    heroIndicatorId: 'accessToGreenSpace',
   },
   {
     id: CATEGORY_IDS.INNOVATION,
@@ -559,6 +575,10 @@ export const CATEGORIES = [
     navName: 'Innovation',
     description: 'Innovation and Digital Opportunities encompasses three broad dimensions: city productivity; innovation and entrepreneurship; and access to public data',
     shortDescription: 'Aims to harness the productive potential of information and communications technologies & the digital economy, and to make data publicly available where practical.',
+    heroIndicatorId: 'newBusinessEntrants',
+    overviewIndicatorIds: [
+      'newBusinessEntrants',
+    ],
     subCategories: [
       {
         name: 'Innovation',
@@ -620,7 +640,6 @@ export const CATEGORIES = [
         ],
       },
     ],
-    heroIndicatorId: 'newBusinessEntrants',
   },
   {
     id: CATEGORY_IDS.PLANNING,
@@ -629,6 +648,8 @@ export const CATEGORIES = [
     name: 'Planning',
     description: 'Governance, Planning and Regulation encompasses land use planning in cities and its administration, as well as how effectively local governance and regulation support economic, social and environmental outcomes.',
     shortDescription: 'Aims to deliver coordinated and integrated policy, planning and investment across all levels of government.',
+    heroIndicatorId: 'population',
+    overviewIndicatorIds: [],
     subCategories: [
       {
         name: 'Planning',
@@ -713,6 +734,5 @@ export const CATEGORIES = [
         ],
       },
     ],
-    heroIndicatorId: 'population',
   },
 ];
