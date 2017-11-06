@@ -542,7 +542,7 @@ export const CATEGORIES = [
         ],
       },
       {
-        name: 'Life and death',
+        name: 'Wellbeing',
         highlightColorLight: 'LIVEABILITY_100',
         highlightColorDark: 'LIVEABILITY_900',
         iconId: 'liveabilityLifeAndDeath',
