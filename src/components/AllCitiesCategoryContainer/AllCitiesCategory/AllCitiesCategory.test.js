@@ -4,6 +4,7 @@ import AllCitiesCategory from './AllCitiesCategory';
 
 jest.mock('../../PageBanner/PageBanner', () => 'PageBanner');
 jest.mock('../../SubCategorySummary/SubCategorySummary', () => 'SubCategorySummary');
+jest.mock('../../CityColumnChart/CityColumnChart', () => 'CityColumnChart');
 
 const defaultProps = {
   category: {

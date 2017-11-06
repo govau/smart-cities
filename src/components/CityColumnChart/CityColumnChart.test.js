@@ -6,7 +6,25 @@ console.warn = jest.fn();
 
 jest.mock('../AboutTooltip/AboutTooltip', () => 'AboutTooltip');
 jest.mock('../Legend/Legend', () => 'Legend');
-
+jest.mock('../../constants', () => ({
+  COLOR_NAMES: {
+    JOBS: 'jobs',
+  },
+  INDICATORS: {
+    population: {
+      name: 'The population indicator name',
+      shortDescription: 'The population indicator short description',
+      longDescription: 'The population indicator long description',
+      format: '0[.]0a',
+    },
+    growthRate: {
+      name: 'The growthRate indicator name',
+      shortDescription: 'The growthRate indicator short description',
+      longDescription: 'The growthRate indicator long description',
+      format: '0[.]0a',
+    },
+  }
+}));
 jest.mock('../../helpers/getColorRange', () => () => [
   'red',
   'yellow',

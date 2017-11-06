@@ -5,6 +5,24 @@ import IndicatorCard from './IndicatorCard';
 import { CARD_SIZES } from '../../../constants';
 
 jest.mock('../../Icon/Icon', () => 'Icon');
+jest.mock('../../../constants', () => ({
+  INDICATOR_CARD_TYPES: {
+    CATEGORY: 'CATEGORY',
+    INDICATOR: 'INDICATOR',
+  },
+  CARD_SIZES: {
+    SMALL: 'small',
+    LARGE: 'large',
+  },
+  INDICATORS: {
+    population: {
+      name: 'The population indicator name',
+      shortDescription: 'The population indicator short description',
+      longDescription: 'The population indicator long description',
+      format: '0[.]0a',
+    },
+  }
+}));
 
 const defaultProps = {
   value: 77,
@@ -43,7 +61,7 @@ it('should handle an indicator being passed as a string', () => {
     />
   );
 
-  expect(component.find('.header').text()).toBe('Population');
+  expect(component.find('.header').text()).toBe('The population indicator name');
 });
 
 it('should render no prefix or suffix when none are available', () => {
