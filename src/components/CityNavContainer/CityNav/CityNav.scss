@@ -1,11 +1,11 @@
 @import '~style/variables';
 
 .link {
-  @include type-nav-vertical;
-
   display: block;
   transition: $animation-duration;
   color: $color-white;
+  font-size: 16px;
+  letter-spacing: -0.3px;
 
   .citySelected & {
     color: $color-primary--060;
@@ -23,17 +23,27 @@
 }
 
 .allCitiesLink {
-  @include type-nav-vertical-large;
-
   display: flex;
   align-items: center;
   height: $top-nav-height-mobile;
   margin-bottom: 6px;
   padding: 0 16px;
   background: $color-primary--800;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 
   .citySelected & {
     color: $color-primary--080;
+  }
+
+  &.link__active {
+    font-weight: 500;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 24px;
+    font-weight: 300;
   }
 
   @include for-desktop-up {
@@ -46,19 +56,25 @@
   line-height: 40px; // height is set because when selected this turns bold
 
   &.link__active {
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
 .cityCount {
-  @include type-nav-vertical-large;
-
   margin-left: auto; // push right
   padding: 0 16px;
   background: $color-primary--700;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
 
   .citySelected & {
     color: $color-primary--080;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 24px;
+    //font-weight: 300;
   }
 }
 

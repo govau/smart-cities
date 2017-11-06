@@ -62,23 +62,25 @@
 
 .title {
   position: relative;
-  font-size: 40px;
   bottom: -8px; // to bottom-align the text
   line-height: 1.2; // it wraps on small screens
+  font-size: 36px;
+  font-weight: 300;
   letter-spacing: 0.7px;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 
   @include for-tablet-portrait-up {
     margin-right: 32px;
   }
 
   @include for-tablet-landscape-up {
-    font-size: 50px;
+    font-size: 48px;
+    font-weight: 200;
     bottom: -11px;
   }
 
   @include for-desktop-up {
-    font-size: 70px;
+    font-size: 72px;
+    font-weight: 300;
     bottom: -14px;
   }
 }

@@ -63,26 +63,15 @@ two underscores. E.g. `sideBar__open`, `sideBar__closed`.
 Sass variables and mixins should be kebab case, with dashes for modifiers. E.g `indicator-card-number--small`.
 
 ## Typography
-We have a complete set of typography mixins in `_typography.scss`,
-which means you will never need to set `font-size`, `font-weight`, `letter-spacing` etc.
-directly in a CSS class. Instead, use the appropriate mixin. Note that the typography styles do *not* contain
-color information, so if you want something other than the current color, you need to define this, e.g.
-```scss
+The design of the site contains a limited set of types that should be adhered to.
+Since there are quite a few of these and many are only used in one place, there is no
+typography 'system' in place; font sizes and weights are set directly in a component's Sass file.
 
-.nav-item {
-  @include type-nav-vertical;
+font-size/font-weight combinations should still adhere to the set of types as listed
+in the style guide (see below).
 
-  &--selected {
-    background: $color-background;
-    color: $color-navigation;
-  }
-}
-```
-
-You can view all of the styles in the style guide (see below).
-
-If a design contains text that doesn't appear to be covered by any of the mixins, speak to the designer and adjust
-the design, adjust the mixin, or add another mixin.
+If a design contains text that doesn't appear to be covered by any of the styles,
+speak to the designer and adjust the design, or add the new style to the style guide
 
 ## Breakpoints
 We have a set of mixins for media query ranges defined in `_breakpoints.scss`. Use them like so:

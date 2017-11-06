@@ -58,21 +58,19 @@
 }
 
 .categoryTitle {
-  font-size: 34px;
+  font-size: 36px;
+  font-weight: 300;
   line-height: 1;
   margin-bottom: 16px;
 
   .category__context & {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
+    letter-spacing: 1.6px;
   }
 
   @include for-tablet-landscape-up {
     font-size: 44px;
-
-    .category__context & {
-      font-size: 22px;
-    }
   }
 }
 
@@ -83,12 +81,13 @@
 
   @include for-tablet-landscape-up {
     font-size: 22px;
+    font-weight: 300;
   }
 }
 
 .subCategoryWrapperText {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 16px;
 }
 
@@ -179,7 +178,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 4px 3px 4px 0;
+  padding: 1px 3px 1px 0;
   border-radius: 10px;
 
   @include for-tablet-portrait-up {

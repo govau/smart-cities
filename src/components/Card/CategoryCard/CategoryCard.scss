@@ -14,7 +14,8 @@
 }
 
 .text {
-  @include type-indicator-card-title--large;
-
   margin-top: auto; // push to bottom
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
 }

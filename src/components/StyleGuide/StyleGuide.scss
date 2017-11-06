@@ -1,7 +1,6 @@
 @import '~style/variables';
 
 .pageWrapper {
-  font-size: 5px; // to ensure font-sizes are set on each mixin
   padding: 25px 25px 200px;
   background: $color-white;
 }
@@ -11,13 +10,23 @@
 }
 
 .sectionText {
-  @include type-h1;
-
   margin-bottom: 16px;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2;
+
+  @include for-tablet-portrait-up {
+    font-size: 36px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 44px;
+  }
 }
 
 .subSectionText {
-  @include type-h3;
+  font-size: 36px;
+  font-weight: 300;
 }
 
 .iconsWrapper {
@@ -128,21 +137,3 @@
 .color-badge { background: $color-badge; }
 .color-highlight { background: $color-highlight; }
 .color-blue { background: $color-blue; }
-
-.type-detail-text { @include type-detail-text; }
-.type-detail-text--bold { @include type-detail-text--bold; }
-.type-badge-text { @include type-badge-text; }
-.type-h1 { @include type-h1; }
-.type-h3 { @include type-h3; }
-.type-nav-horizontal { @include type-nav-horizontal; }
-.type-nav-horizontal--selected { @include type-nav-horizontal--selected; }
-.type-nav-vertical { @include type-nav-vertical; }
-.type-intro-text { @include type-intro-text; }
-.type-indicator-card-title--large { @include type-indicator-card-title--large; }
-.type-indicator-card-header--large { @include type-indicator-card-header--large; }
-.type-indicator-card-header--small { @include type-indicator-card-header--small; }
-.type-indicator-card-number--large { @include type-indicator-card-number--large; }
-.type-indicator-card-number--small { @include type-indicator-card-number--small; }
-.type-indicator-card-symbol--large { @include type-indicator-card-symbol--large; }
-.type-indicator-card-symbol--small { @include type-indicator-card-symbol--small; }
-.type-section-button { @include type-section-button; }

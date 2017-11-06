@@ -37,9 +37,12 @@
 }
 
 .title {
-  @include type-nav-horizontal;
-
   margin-left: 6px;
+  font-size: 12px;
+
+  @include for-desktop-up {
+    font-size: 16px;
+  }
 }
 
 .cardRow {
@@ -82,11 +85,11 @@
 // the vertical alignment of the cards
 // so we make it absolute
 .linkWrapper {
-  @include type-detail-text--bold;
-
   position: absolute;
   bottom: -27px;
   right: 0;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .linkText {

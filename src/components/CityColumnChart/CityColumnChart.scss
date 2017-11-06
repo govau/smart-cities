@@ -22,7 +22,7 @@
 
 .title {
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 300;
   margin-right: 7px;
 
   @include for-tablet-landscape-up {
@@ -45,8 +45,7 @@
 
   @include for-phone-only {
     display: block;
-
-    @include type-detail-text;
+    font-size: 12px;
   }
 }
 
@@ -58,24 +57,17 @@
   margin-left: 8px;
   margin-right: 8px;
   margin-bottom: 6px;
-  font-size: 10px;
-
-  @include for-tablet-portrait-up {
-    font-size: 12px;
-  }
+  font-size: 12px;
+  font-weight: 500;
 }
 
 :global(.cityColumnChartTooltipRow) {
   margin-left: 8px;
   margin-right: 8px;
-  font-size: 10px;
+  font-size: 12px;
 
   &:not(:last-of-type) {
     margin-bottom: 4px;
-  }
-
-  @include for-tablet-portrait-up {
-    font-size: 12px;
   }
 }
 

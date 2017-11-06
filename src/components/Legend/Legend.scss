@@ -1,9 +1,9 @@
 @import '~style/variables';
 
 .title {
-  @include type-detail-text--bold;
-
   padding: 4px 24px 0 0;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .legendItem {
@@ -20,5 +20,6 @@
 }
 
 .legendItemText {
-  @include type-detail-text--bold;
+  font-size: 12px;
+  font-weight: 500;
 }

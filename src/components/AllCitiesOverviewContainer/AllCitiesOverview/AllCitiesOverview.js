@@ -9,12 +9,22 @@ import taylorAngus from './taylorAngus.png';
 import COLORS from '../../../style/_colors.scss';
 import style from './AllCitiesOverview.scss';
 
+const ncpLink = (
+  <a
+    className={style.cpnLink}
+    href={LINKS.CITIES_PERFORMANCE_NETWORK}
+    target="_blank"
+    rel="noopener"
+  >
+    The National Cities Performance Framework
+  </a>
+);
+
 const AllCitiesOverview = props => (
   <PageWrapper>
     <div className={style.heroWrapper}>
       <p className={style.heroText}>
-        Creating the foundations for success across
-        all <span className={style.heroTextCityCount}>{props.cities.length}</span> cities
+        Measuring success and opportunities across Australia’s largest cities
       </p>
     </div>
 
@@ -24,21 +34,18 @@ const AllCitiesOverview = props => (
           <h1 className={style.infoTitle}>About</h1>
 
           <p className={style.infoBodyText}>
-            The Australian Government is committed to the continual improvement of our cities.
-            Governments need to track and compare cities’ performance in order to
-            make the best policy and investment decisions for Australia’s future.
+            Australian cities have long been an important economic and social
+            asset and will be more important than ever in the 21st century.
+            Our cities provide great opportunities for innovation and productivity
+            in the global knowledge-based economy and are recognised as great places
+            to live, work and study.
           </p>
 
           <p className={style.infoBodyText}>
-            <a
-              className={style.cpnLink}
-              href={LINKS.CITIES_PERFORMANCE_NETWORK}
-              target="_blank"
-              rel="noopener"
-            >
-              The National Cities Performance Framework
-            </a> will support greater awareness and understanding of Australia’s cities
-            among policy makers and interested Australians.
+            The Australian Government is committed to the continual improvement of our
+            cities. {ncpLink} will assist in this goal by providing data to help all
+            levels of government, industry and the community to make the best policy
+            and investment decisions for Australia’s future.
           </p>
         </div>
 

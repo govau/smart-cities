@@ -54,13 +54,13 @@
   .smallCard .firstNumber & {
     width: 13px;
     height: 13px;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
   .smallCard .secondNumber & {
     width: 8px;
     height: 8px;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
   }
 
   .largeCard .firstNumber & {
@@ -81,6 +81,8 @@
 }
 
 .number {
+  font-weight: 300;
+
   .smallCard.singleNumber .onlyNumber & {
     font-size: 44px;
   }
@@ -91,14 +93,17 @@
 
   .smallCard.dualNumber .secondNumber & {
     font-size: 12px;
+    font-weight: 400;
   }
 
   .largeCard.singleNumber .onlyNumber & {
     font-size: 90px;
+    font-weight: 200;
   }
 
   .largeCard.dualNumber .firstNumber & {
     font-size: 48px;
+    font-weight: 200;
   }
 
   .largeCard.dualNumber .secondNumber & {
@@ -107,8 +112,10 @@
 }
 
 .symbol {
+  font-weight: 300;
+
   .smallCard.singleNumber .onlyNumber & {
-    font-size: 23px;
+    font-size: 24px;
     margin-bottom: 2px;
   }
 
@@ -121,7 +128,7 @@
   }
 
   .largeCard.singleNumber .onlyNumber & {
-    font-size: 42px;
+    font-size: 44px;
     margin-bottom: 4px;
   }
 

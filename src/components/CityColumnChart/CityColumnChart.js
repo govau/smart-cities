@@ -103,7 +103,7 @@ const CityColumnChart = (props) => {
       labels: {
         rotation: -45,
         style: {
-          fontSize: '10px',
+          fontSize: '11px',
         },
       },
       crosshair: {
