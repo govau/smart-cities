@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
+import Tooltip from '../Tooltip/Tooltip';
 import getColorVariant from '../../helpers/getColorVariant';
+import { STRINGS } from '../../constants';
 import style from './PageLegend.scss';
 
 const PageLegend = (props) => {
@@ -24,25 +26,35 @@ const PageLegend = (props) => {
         {!props.isContextPage && (
           <div className={style.indicatorTypesWrapper}>
             <div className={style.indicatorTypeWrapper}>
-              <Icon
-                className={style.icon}
-                color={darkColor}
-                icon="contextualIndicator"
-                size={24}
-              />
+              <Tooltip
+                text={STRINGS.CONTEXTUAL_DEFINITION}
+                borderColor={darkColor}
+              >
+                <Icon
+                  className={style.icon}
+                  color={darkColor}
+                  icon="contextualIndicator"
+                  size={24}
+                />
 
-              <span className={style.text}>Contextual indicators</span>
+                <span className={style.text}>Contextual indicators</span>
+              </Tooltip>
             </div>
 
             <div className={style.indicatorTypeWrapper}>
-              <Icon
-                className={style.icon}
-                color={darkColor}
-                icon="performanceIndicator"
-                size={24}
-              />
+              <Tooltip
+                text={STRINGS.PERFORMANCE_DEFINITION}
+                borderColor={darkColor}
+              >
+                <Icon
+                  className={style.icon}
+                  color={darkColor}
+                  icon="performanceIndicator"
+                  size={24}
+                />
 
-              <span className={style.text}>Performance indicators</span>
+                <span className={style.text}>Performance indicators</span>
+              </Tooltip>
             </div>
           </div>
         )}

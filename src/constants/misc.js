@@ -33,4 +33,6 @@ export const LINKS = {
 
 export const STRINGS = {
   SUB_CATS_INCLUDE: 'Sub categories include:',
+  CONTEXTUAL_DEFINITION: 'Contextual indicators highlight the characteristics of a city that are not amenable to or potentially appropriate for local policy intervention but they can help to explain why a city performs the way it does.',
+  PERFORMANCE_DEFINITION: 'A performance indicator is a measurable value that demonstrates how effectively cities are performing against the Australian Government’s Smart Cities policy priorities.',
 };

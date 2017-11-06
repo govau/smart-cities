@@ -58,12 +58,12 @@
 
 // This will be applied to the SVG element itself
 :global(.circleWithShadow) {
-  @include shadow(2);
+  @include shadow(1);
 
   border-radius: 50%;
   transition: box-shadow $animation-duration;
 
   &:hover {
-    @include shadow(3);
+    @include shadow(2);
   }
 }

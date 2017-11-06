@@ -11,3 +11,8 @@ Enzyme.configure({ adapter: new Adapter() });
 window.matchMedia = () => ({
   addListener: () => {},
 });
+
+// document.body only has a getter so we add clientWidth as a settable property the hard way
+Object.defineProperty(document.body, 'clientWidth', {
+  writable: true,
+});

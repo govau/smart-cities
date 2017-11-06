@@ -4,6 +4,9 @@ import CityColumnChart from './CityColumnChart';
 
 console.warn = jest.fn();
 
+jest.mock('../AboutTooltip/AboutTooltip', () => 'AboutTooltip');
+jest.mock('../Legend/Legend', () => 'Legend');
+
 jest.mock('../../helpers/getColorRange', () => () => [
   'red',
   'yellow',

@@ -6,7 +6,7 @@ exports[`should match Snapshot 1`] = `
     <h4 className=\\"title\\">
       Population
     </h4>
-    <AboutTooltip description=\\"Total population\\" position=\\"bottom\\" size={18} />
+    <AboutTooltip text=\\"Total population\\" color=\\"JOBS_600\\" className=\\"aboutChartIcon\\" />
   </div>
   <div className=\\"descriptionLabel\\">
     Total population

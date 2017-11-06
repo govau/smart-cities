@@ -1,0 +1,17 @@
+@import '~style/variables';
+
+.tooltipTarget {
+  display: inline-block; // so that it inherits the height of child elements
+}
+
+.tooltipWrapper {
+  @include shadow(2);
+
+  position: fixed;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: $color-white;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid $color-grey--500;
+}

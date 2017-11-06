@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import PageLegend from './PageLegend';
 
 jest.mock('../Icon/Icon', () => 'Icon');
+jest.mock('../Tooltip/Tooltip', () => 'Tooltip');
 
 const defaultProps = {
   colorName: 'jobs',

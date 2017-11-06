@@ -22,7 +22,7 @@ const Icon = (props) => {
       viewBox={icon.viewBox}
       style={{ color: props.color }}
     >
-      <title>{icon.title}</title>
+      <title>{props.title || icon.title}</title>
 
       {icon.body}
     </svg>
@@ -34,6 +34,7 @@ Icon.propTypes = {
   size: PropTypes.number,
   className: PropTypes.string,
   color: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Icon;

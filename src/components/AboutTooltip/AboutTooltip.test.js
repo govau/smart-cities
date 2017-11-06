@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import AboutTooltip from './AboutTooltip';
 
 const defaultProps = {
-  description: 'This is the content of the tooltip',
+  text: 'This is the content of the tooltip',
 };
 
 it('should match Snapshot', () => {
@@ -14,18 +14,14 @@ it('should match Snapshot', () => {
   expect(component.debug()).toMatchSnapshot();
 });
 
-it('should pass descriptions and position to the tooltip component', () => {
+it('should pass text to the tooltip component', () => {
   const component = shallow(
-    <AboutTooltip
-      description="the description"
-      position="right"
-    />
+    <AboutTooltip text="the description" />
   );
 
   const tooltipProps = component.find('Tooltip').props();
 
   expect(tooltipProps).toEqual(expect.objectContaining({
-    description: 'the description',
-    position: 'right',
+    text: 'the description',
   }));
 });

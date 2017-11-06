@@ -118,7 +118,7 @@ export const CATEGORIES = [
           },
           {
             name: 'Housing tenure',
-            stacked: 'true',
+            stacked: true,
             indicatorIds: [
               'tenureRatioOwnedOutright',
               'tenureRatioMortgage',
