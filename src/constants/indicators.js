@@ -7,7 +7,7 @@ export default {
   population: {
     name: 'Population',
     shortDescription: 'Total population',
-    longDescription: 'Total population',
+    longDescription: 'This shows the population size',
     format: '0[.]0a',
     contextual: true,
     source: 'Population, All persons, People',
@@ -15,7 +15,7 @@ export default {
   growthRate: {
     name: 'Annual population growth rate',
     shortDescription: 'Annual growth',
-    longDescription: 'Annual population growth rate',
+    longDescription: 'This shows the percentage change in the level of the population on the preceding year',
     format: '0[.]0%',
     contextual: true,
     source: 'Population, persons, Annual Growth %',
