@@ -7,7 +7,7 @@ export default {
   population: {
     name: 'Population',
     shortDescription: 'Total population',
-    longDescription: 'This shows the population size',
+    longDescription: 'This shows the population size. Source: ABS - Regional Population Growth',
     format: '0[.]0a',
     contextual: true,
     source: 'Population, All persons, People',
@@ -15,7 +15,7 @@ export default {
   growthRate: {
     name: 'Annual population growth rate',
     shortDescription: 'Annual growth',
-    longDescription: 'This shows the percentage change in the level of the population on the preceding year',
+    longDescription: 'This shows the percentage change in the level of the population on the preceding year. Source: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: true,
     source: 'Population, persons, Annual Growth %',
@@ -23,7 +23,7 @@ export default {
   indigenousPopulation: {
     name: 'Indigenous population',
     shortDescription: 'Indigenous status, percentage of total population',
-    longDescription: 'Indigenous status, percentage of total population',
+    longDescription: 'This shows the proportion of the population that identifies as Aboriginal or Torres Strait Islander. Source: ABS - Census 2016',
     format: '0[.]0%',
     contextual: true,
     source: 'Indigenous status, % of population',
@@ -31,7 +31,7 @@ export default {
   population10yr: {
     name: 'Average annual population growth over 10 years',
     shortDescription: 'Average growth over 10 years',
-    longDescription: 'Average annual population growth over 10 years',
+    longDescription: 'This shows the average annual percentage change in the size of the population over the past ten years. Source: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: true,
     source: 'Population, persons, 10-year Growth %',
@@ -39,7 +39,7 @@ export default {
   householdSize: {
     name: 'Average household size',
     shortDescription: 'Household size',
-    longDescription: 'Average household size',
+    longDescription: 'This shows the average number of people per occupied dwelling.Source: ABS - Census 2016',
     format: '0[.]0',
     contextual: true,
     source: 'Average Household Size, People per household',
@@ -47,7 +47,7 @@ export default {
   medianHousePrice: {
     name: 'Median house price',
     shortDescription: 'Median house price',
-    longDescription: 'Median house price',
+    longDescription: 'This shows the median price over 12 months for detached dwellings. Source: CoreLogic ',
     format: '$0,0[.]00a',
     contextual: true,
     source: 'Median housing price, AUD',
@@ -55,7 +55,7 @@ export default {
   householdIncome: {
     name: 'Median annual household income',
     shortDescription: 'Median annual household income',
-    longDescription: 'Median annual household income',
+    longDescription: 'THis shows the median annual household income. Source: ABS - Census 2016',
     format: '$0,0a',
     contextual: true,
     source: 'Median Household Income, AUD per year',
@@ -63,7 +63,7 @@ export default {
   lifeExpectancy: {
     name: 'Life expectancy at birth',
     shortDescription: 'Life expectancy',
-    longDescription: 'Life expectancy at birth',
+    longDescription: 'This shows the number of years a person born today is expected to live. Source: ABS - Life Tables, States, Territories and Australia',
     format: '0,0a',
     contextual: true,
     source: 'Life expectancy, All persons, years',
@@ -71,7 +71,7 @@ export default {
   shareInBottomIncomeQuintile: {
     name: 'Share in bottom household income quintile',
     shortDescription: 'Share in bottom household income quintile',
-    longDescription: 'Share in bottom household income quintile',
+    longDescription: 'This shows the share of households in bottom 20% of the national household income distribution. Source: ABS - Census 2016',
     format: '0[.]0%',
     contextual: true,
     source: 'Share of households in lowest national income quintile, % of households',
@@ -79,7 +79,7 @@ export default {
   socioEconomicIndex: {
     name: 'Socio economic indexes for areas',
     shortDescription: 'Socio economic indexes for areas',
-    longDescription: 'Socio economic indexes for areas',
+    longDescription: 'This shows an index of relative socio-economic disadvantage. A low score indicates relatively greater disadvantage. Source: ABS - Census 2011',
     format: '$0,0[.]0a',
     contextual: true,
     source: 'Socio-Economic Indexes for Areas, Index of Relative Socio-economic Disadvantage, Index',
@@ -87,7 +87,7 @@ export default {
   goodsProducingSector: {
     name: 'Goods producing sector',
     shortDescription: 'Goods producing sector',
-    longDescription: 'Goods producing sector',
+    longDescription: 'This shows the proportion of employed persons that work in goods producing industries. Source: ABS - Labour Force',
     format: '0[.]%',
     contextual: true,
     source: 'Goods Producing Sector, % of jobs in city',
@@ -95,7 +95,7 @@ export default {
   marketServices: {
     name: 'Market services',
     shortDescription: 'Market services',
-    longDescription: 'Market services',
+    longDescription: 'This shows the proportion of employed persons that work in market services industries. Source: ABS - Labour Force',
     format: '0[.]%',
     contextual: true,
     source: 'Market Services, % of jobs in city',
@@ -103,7 +103,7 @@ export default {
   nonMarketServices: {
     name: 'Non-market services',
     shortDescription: 'Non-market services',
-    longDescription: 'Non-market services',
+    longDescription: 'This shows the proportion of employed persons that work in non-market service industries. Source: ABS: Labour Force ',
     format: '0[.]%',
     contextual: true,
     source: 'Non-market Services, % of jobs in city',
