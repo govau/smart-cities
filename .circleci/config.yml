@@ -34,9 +34,9 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               ./scripts/prepare_cf.sh
-              cf push smart-cities-dev
+              cf zero-downtime-push smart-cities-dev -f manifest.yml -p build
             fi
             if [ "${CIRCLE_BRANCH}" == "staging" ]; then
               ./scripts/prepare_cf.sh
-              cf push smart-cities-staging
+              cf zero-downtime-push smart-cities-staging -f manifest.yml -p build
             fi
