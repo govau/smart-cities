@@ -2,7 +2,7 @@
 
 .wrapper {
   background: $color-white;
-  padding-top: 64px;
+  padding-top: 24px;
 }
 
 .container {
@@ -12,13 +12,13 @@
 .heading {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
   border-top: 1px solid $color-grey--200;
-  padding-top: 16px;
+  padding-top: 24px;
 
-  h3 {
+  .headingText {
     font-size: 44px;
     font-weight: 300;
+    line-height: 1.2;
   }
 }
 

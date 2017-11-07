@@ -16,12 +16,14 @@ jest.mock('../../constants', () => ({
       shortDescription: 'The population indicator short description',
       longDescription: 'The population indicator long description',
       format: '0[.]0a',
+      contextual: true,
     },
     growthRate: {
       name: 'The growthRate indicator name',
       shortDescription: 'The growthRate indicator short description',
       longDescription: 'The growthRate indicator long description',
       format: '0[.]0a',
+      contextual: false,
     },
   }
 }));

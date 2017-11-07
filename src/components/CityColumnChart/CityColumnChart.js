@@ -6,6 +6,7 @@ import merge from 'lodash/merge';
 import numeral from 'numeral';
 import AboutTooltip from '../AboutTooltip/AboutTooltip';
 import Legend from '../Legend/Legend';
+import Icon from '../Icon/Icon';
 import baseChartConfig from '../../helpers/baseChartConfig';
 import getColorRange from '../../helpers/getColorRange';
 import getColorVariant from '../../helpers/getColorVariant';
@@ -15,10 +16,19 @@ import {
 } from '../../constants';
 import style from './CityColumnChart.scss';
 
-function getSeriesDataForIndicator(cities, indicator) {
+function getSeriesDataForIndicator(cities, indicator, mainCity) {
   return cities.map((city) => {
     if (indicator in city.indices) {
-      return city.indices[indicator];
+      const val = city.indices[indicator];
+
+      // If we are on a city page, and this is neither the main city
+      // nor one of the cities selected by the user for comparison,
+      // then make the column grey.
+      if (mainCity && !city.selected && mainCity.id !== city.id) {
+        return { y: val, color: getColorVariant('GREY', '200') };
+      }
+
+      return val;
     }
 
     console.warn(`${indicator} is not a recognised indicator for ${city.name}`);
@@ -38,6 +48,20 @@ function sortChartData(cities, indicator) {
   return sortedCities;
 }
 
+function getPlotBands(cities, city, color) {
+  if (city) {
+    const idx = cities.findIndex(el => el.name === city.name);
+
+    return [{
+      color,
+      from: idx - 0.5,
+      to: idx + 0.5,
+    }];
+  }
+
+  return [];
+}
+
 const CityColumnChart = (props) => {
   const isMultiple = props.indicatorIds.length > 1;
   const colorLight = getColorVariant(props.highlightColorLight);
@@ -52,22 +76,24 @@ const CityColumnChart = (props) => {
   const title = props.title || firstIndicator.name;
   const shortDescription = props.shortDescription || firstIndicator.shortDescription;
   const longDescription = props.longDescription || firstIndicator.longDescription;
+  const mainCity = props.city;
 
   const data = sortChartData(props.cities, props.indicatorIds[0]);
 
   // series is an array even if there is only one indicator
   // so this works for a normal or a stacked chart
   const series = props.indicatorIds.map((indicatorId, i) => ({
-    index: props.indicatorIds.length - i, // reverse sort the series (to counteract Highcharts)
+    index: props.indicatorIds.length - i, // reverse sort series (to counteract Highcharts)
     name: INDICATORS[indicatorId].shortDescription,
     color: chartColors[i],
-    data: getSeriesDataForIndicator(data, indicatorId),
+    data: getSeriesDataForIndicator(data, indicatorId, mainCity),
   }));
 
   // We only want to show the short description as the chart title
   // if the chart is not stacked
   const yAxisTitle = isMultiple ? {} : { text: shortDescription };
   const ceiling = props.stacked ? 1 : null;
+  const plotBands = getPlotBands(data, mainCity, getColorVariant(props.colorBase, '060'));
 
   // The below config will be merged with the base config.
   // colors, sizes, etc. that are shared across all charts belong in the base config
@@ -92,6 +118,7 @@ const CityColumnChart = (props) => {
         borderWidth: 0,
         states: {
           hover: {
+            color: null,
             brightness: 0,
           },
         },
@@ -105,7 +132,16 @@ const CityColumnChart = (props) => {
         style: {
           fontSize: '11px',
         },
+        formatter() {
+          // on the city page, show the current city name in bold
+          if (mainCity && this.value === mainCity.name) {
+            return `<span style="font-weight: 700; font-size: 12px">${this.value}</span>`;
+          }
+
+          return this.value;
+        },
       },
+      plotBands,
       crosshair: {
         color: colorLight,
       },
@@ -167,7 +203,7 @@ const CityColumnChart = (props) => {
         chartOptions: {
           chart: {
             height: 400,
-            marginLeft: 20,
+            marginLeft: 25,
           },
           plotOptions: {
             series: {
@@ -190,9 +226,13 @@ const CityColumnChart = (props) => {
   };
 
   const config = merge({}, baseChartConfig, columnChartConfig);
+  const className = classnames(
+    style.wrapper,
+    props.className,
+    { [style.stacked]: isMultiple });
 
   return (
-    <div className={classnames(style.wrapper, props.className, { [style.stacked]: isMultiple })}>
+    <div className={className}>
       <div className={style.titleWrapper}>
         <h4 className={style.title}>
           {title}
@@ -203,6 +243,16 @@ const CityColumnChart = (props) => {
           color={colorMedium}
           className={style.aboutChartIcon}
         />
+      </div>
+
+      <div className={style.metaWrapper}>
+        <Icon
+          className={style.indicatorTypeMark}
+          color={colorDark}
+          icon={firstIndicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
+          size={14}
+        />
+        {firstIndicator.contextual ? 'Contextual' : 'Performance'} indicator
       </div>
 
       {isMultiple && (
@@ -219,16 +269,21 @@ const CityColumnChart = (props) => {
         </div>
       )}
 
-      <AbstractWidget config={config} />
+      <div className={style.chartWrapper}>
+        <AbstractWidget config={config} />
+      </div>
     </div>
   );
 };
 
+const cityType = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  indices: PropTypes.object.isRequired,
+});
+
 CityColumnChart.propTypes = {
-  cities: PropTypes.arrayOf(PropTypes.shape({
-    indices: PropTypes.object.isRequired,
-    name: PropTypes.string.isRequired,
-  })).isRequired,
+  cities: PropTypes.arrayOf(cityType).isRequired,
+  city: cityType,
   className: PropTypes.string,
   colorBase: PropTypes.oneOf(Object.values(COLOR_NAMES)).isRequired,
   highlightColorLight: PropTypes.string.isRequired,

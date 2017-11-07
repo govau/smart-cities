@@ -4,9 +4,10 @@ import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import CityColumnChart from '../CityColumnChart/CityColumnChart';
 import Icon from '../Icon/Icon';
 import { INDICATORS } from '../../constants';
-import style from './SubCategoryDetails.scss';
+import getColorVariant from '../../helpers/getColorVariant';
+import style from './SubCategoryCharts.scss';
 
-const SubCategoryDetails = (props) => {
+const SubCategoryCharts = (props) => {
   const subCategory = props.subCategory;
 
   const heroChart = subCategory.charts.find(chart => (
@@ -16,6 +17,8 @@ const SubCategoryDetails = (props) => {
   const otherCharts = subCategory.charts.filter(chart => (
     !chart.indicatorIds.includes(props.heroIndicatorId)),
   );
+
+  const cardHighlightColor = getColorVariant(props.highlightColorDark);
 
   return (
     <div
@@ -28,9 +31,10 @@ const SubCategoryDetails = (props) => {
             className={style.iconWrapper}
             size={70}
             icon={subCategory.iconId}
+            color={cardHighlightColor}
           />
 
-          <h3>{subCategory.name}</h3>
+          <h3 className={style.headingText}>{subCategory.name}</h3>
         </div>
         <div className={style.chartGrid}>
           {heroChart &&
@@ -39,6 +43,7 @@ const SubCategoryDetails = (props) => {
                 title={heroChart.name}
                 longDescription={heroChart.longDescription}
                 cities={props.cities}
+                city={props.city}
                 colorBase={props.colorName}
                 highlightColorLight={subCategory.highlightColorLight}
                 highlightColorDark={subCategory.highlightColorDark}
@@ -57,6 +62,7 @@ const SubCategoryDetails = (props) => {
                 title={chart.name}
                 longDescription={chart.longDescription}
                 cities={props.cities}
+                city={props.city}
                 colorBase={props.colorName}
                 highlightColorLight={subCategory.highlightColorLight}
                 highlightColorDark={subCategory.highlightColorDark}
@@ -71,7 +77,12 @@ const SubCategoryDetails = (props) => {
   );
 };
 
-SubCategoryDetails.propTypes = {
+const cityType = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  indices: PropTypes.object.isRequired,
+});
+
+SubCategoryCharts.propTypes = {
   subCategory: PropTypes.shape({
     name: PropTypes.string.isRequired,
     charts: PropTypes.arrayOf(PropTypes.shape({
@@ -82,11 +93,10 @@ SubCategoryDetails.propTypes = {
     })),
   }),
   colorName: PropTypes.string.isRequired,
-  cities: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    indices: PropTypes.object.isRequired,
-  })).isRequired,
+  cities: PropTypes.arrayOf(cityType).isRequired,
+  city: cityType,
   heroIndicatorId: PropTypes.string.isRequired,
+  highlightColorDark: PropTypes.string.isRequired,
 };
 
-export default SubCategoryDetails;
+export default SubCategoryCharts;

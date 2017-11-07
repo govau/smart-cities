@@ -3,6 +3,7 @@
 .wrapper {
   @include shadow;
 
+  margin: 32px;
   border-radius: 8px;
   background: $color-white;
   border: 1px solid $color-grey--200;
