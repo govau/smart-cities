@@ -7,7 +7,6 @@ import csv from 'csv';
 import getStdin from 'get-stdin';
 import {
   INDICATORS,
-  DATA_TYPES,
   CITIES,
 } from '../src/constants';
 
@@ -15,7 +14,6 @@ import {
 const indicators = Object.entries(INDICATORS).map(([key, indicator]) => ({
   key,
   source: indicator.source,
-  dataType: indicator.dataType,
 }));
 
 getStdin().then((rawCsv) => {
@@ -33,19 +31,13 @@ getStdin().then((rawCsv) => {
         if (indicator.source in row) {
           const value = row[indicator.source];
 
-          // if the indicator should be a number, cast to number or throw an error
-          if (indicator.dataType === DATA_TYPES.NUMBER) {
-            if (Number.isNaN(Number(value))) {
-              // if a non-number is in a column that should be numbers, throw an error
-              throw new Error(`value of "${value}" for ${row.Cities} for ${indicator.source} is not a number`);
-            } else {
-              // note this will convert blank cells to 0
-              city.indices[indicator.key] = Number(value);
-            }
-          } else {
-            // otherwise just use the value as text
-            city.indices[indicator.key] = value;
+          // All data should be numeric
+          if (Number.isNaN(Number(value))) {
+            throw new Error(`value of "${value}" for ${row.Cities} for ${indicator.source} is not a number`);
           }
+
+          // note this will convert blank cells to 0
+          city.indices[indicator.key] = Number(value);
         } else {
           // if the indicator source (column name) doesn't exist in the csv, throw an error
           throw new Error(`Key not found! ${indicator.source}`);
