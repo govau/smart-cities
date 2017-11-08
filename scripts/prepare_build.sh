@@ -17,10 +17,3 @@ sudo dpkg -i cf-cli_amd64.deb
 curl -v -L -o ~/autopilot-linux https://github.com/contraband/autopilot/releases/download/0.0.3/autopilot-linux
 chmod a+x ~/autopilot-linux
 cf install-plugin -f ~/autopilot-linux
-
-# Log in to CF
-
-cf api $CF_STAGING_API #&> /dev/null
-cf auth $CF_STAGING_USER $CF_STAGING_PASSWORD #&> /dev/null
-cf target -o $CF_STAGING_ORG #&> /dev/null
-cf target -s $CF_STAGING_SPACE #&> /dev/null
