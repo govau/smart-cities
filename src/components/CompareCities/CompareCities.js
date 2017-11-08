@@ -25,14 +25,16 @@ const CompareCities = (props) => {
     ));
 
   return (
-    <div className={style.wrapper}>
-      <div className={style.header}>
-        <h2 className={style.title}>Compare {props.city.name}</h2>
+    <div className={style.container}>
+      <div className={style.wrapper}>
+        <div className={style.header}>
+          <h2 className={style.title}>Compare {props.city.name}</h2>
 
-        <span className={style.subTitle}> across {cityCheckboxes.length} other cities</span>
+          <span className={style.subTitle}> across {cityCheckboxes.length} other cities</span>
+        </div>
+
+        <div className={style.body}>{cityCheckboxes}</div>
       </div>
-
-      <div className={style.body}>{cityCheckboxes}</div>
     </div>
   );
 };

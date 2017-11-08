@@ -1,21 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<div className=\\"wrapper\\">
-  <div className=\\"header\\">
-    <h2 className=\\"title\\">
-      Compare 
-      Greater Perth
-    </h2>
-    <span className=\\"subTitle\\">
-       across 
-      2
-       other cities
-    </span>
-  </div>
-  <div className=\\"body\\">
-    <Checkbox checked={[undefined]} checkedBoxColor=\\"JOBS_500\\" className=\\"checkbox\\" id=\\"sydney\\" label=\\"Sydney\\" onChange={[Function]} />
-    <Checkbox checked={[undefined]} checkedBoxColor=\\"JOBS_500\\" className=\\"checkbox\\" id=\\"melbourne\\" label=\\"Melbourne\\" onChange={[Function]} />
+"<div className=\\"container\\">
+  <div className=\\"wrapper\\">
+    <div className=\\"header\\">
+      <h2 className=\\"title\\">
+        Compare 
+        Greater Perth
+      </h2>
+      <span className=\\"subTitle\\">
+         across 
+        2
+         other cities
+      </span>
+    </div>
+    <div className=\\"body\\">
+      <Checkbox checked={[undefined]} checkedBoxColor=\\"JOBS_500\\" className=\\"checkbox\\" id=\\"sydney\\" label=\\"Sydney\\" onChange={[Function]} />
+      <Checkbox checked={[undefined]} checkedBoxColor=\\"JOBS_500\\" className=\\"checkbox\\" id=\\"melbourne\\" label=\\"Melbourne\\" onChange={[Function]} />
+    </div>
   </div>
 </div>"
 `;

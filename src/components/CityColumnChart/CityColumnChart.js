@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { AbstractWidget } from '@gov.au/datavizkit';
+import Highcharts from 'highcharts';
+import kebabCase from 'lodash/kebabCase';
 import merge from 'lodash/merge';
 import numeral from 'numeral';
 import AboutTooltip from '../AboutTooltip/AboutTooltip';
@@ -48,6 +49,19 @@ function sortChartData(cities, indicator) {
   return sortedCities;
 }
 
+function getSeries(props) {
+  const colorMedium = getColorVariant(props.highlightColorDark);
+  const chartColors = getColorRange(colorMedium, props.indicatorIds.length);
+  const data = sortChartData(props.cities, props.indicatorIds[0]);
+
+  return props.indicatorIds.map((indicatorId, i) => ({
+    index: props.indicatorIds.length - i, // reverse sort series (to counteract Highcharts)
+    name: INDICATORS[indicatorId].shortDescription,
+    color: chartColors[i],
+    data: getSeriesDataForIndicator(data, indicatorId, props.city),
+  }));
+}
+
 function getPlotBands(cities, city, color) {
   if (city) {
     const idx = cities.findIndex(el => el.name === city.name);
@@ -62,42 +76,25 @@ function getPlotBands(cities, city, color) {
   return [];
 }
 
-const CityColumnChart = (props) => {
+function getChartConfig(props) {
   const isMultiple = props.indicatorIds.length > 1;
   const colorLight = getColorVariant(props.highlightColorLight);
-  const colorMedium = getColorVariant(props.highlightColorDark);
   const colorDark = getColorVariant(props.colorBase, '900');
-  const chartColors = getColorRange(colorMedium, props.indicatorIds.length);
 
   // The indicator data contains things like titles and descriptions. But these can
   // also be passed in explicitly (e.g. for charts where there are more than one indicator)
   // so here we take the passed in value, or the value from the first indicator otherwise.
   const firstIndicator = INDICATORS[props.indicatorIds[0]];
-  const title = props.title || firstIndicator.name;
   const shortDescription = props.shortDescription || firstIndicator.shortDescription;
-  const longDescription = props.longDescription || firstIndicator.longDescription;
-  const mainCity = props.city;
-
   const data = sortChartData(props.cities, props.indicatorIds[0]);
-
-  // series is an array even if there is only one indicator
-  // so this works for a normal or a stacked chart
-  const series = props.indicatorIds.map((indicatorId, i) => ({
-    index: props.indicatorIds.length - i, // reverse sort series (to counteract Highcharts)
-    name: INDICATORS[indicatorId].shortDescription,
-    color: chartColors[i],
-    data: getSeriesDataForIndicator(data, indicatorId, mainCity),
-  }));
+  const plotBands = getPlotBands(data, props.city, colorLight);
+  const series = getSeries(props);
 
   // We only want to show the short description as the chart title
   // if the chart is not stacked
   const yAxisTitle = isMultiple ? {} : { text: shortDescription };
   const ceiling = props.stacked ? 1 : null;
-  const plotBands = getPlotBands(data, mainCity, getColorVariant(props.colorBase, '060'));
 
-  // The below config will be merged with the base config.
-  // colors, sizes, etc. that are shared across all charts belong in the base config
-  // Anything specific to *column* charts belongs here.
   const columnChartConfig = {
     series,
     chart: {
@@ -134,7 +131,7 @@ const CityColumnChart = (props) => {
         },
         formatter() {
           // on the city page, show the current city name in bold
-          if (mainCity && this.value === mainCity.name) {
+          if (props.city && this.value === props.city.name) {
             return `<span style="font-weight: 700; font-size: 12px">${this.value}</span>`;
           }
 
@@ -161,6 +158,9 @@ const CityColumnChart = (props) => {
       gridZIndex: 4, // magic highcharts value to position grid lines in front of the bars: http://api.highcharts.com/highcharts/yAxis.gridZIndex
     },
     title: {
+      text: null,
+    },
+    credits: {
       enabled: false,
     },
     tooltip: {
@@ -178,14 +178,14 @@ const CityColumnChart = (props) => {
         const seriesName = isMultiple ? `<span>${this.series.name}</span>` : '';
 
         return `
-          <div class="cityColumnChartTooltipRow">
-            <span class="cityColumnChartTooltipDot" style="background: ${this.color}"></span>
-            
-            ${seriesName}
-            
-            <span class="cityColumnChartTooltipValue">${formattedValue}</span>
-          </div>
-        `;
+            <div class="cityColumnChartTooltipRow">
+              <span class="cityColumnChartTooltipDot" style="background: ${this.color}"></span>
+              
+              ${seriesName}
+              
+              <span class="cityColumnChartTooltipValue">${formattedValue}</span>
+            </div>
+          `;
       },
       style: {
         fontFamily: 'inherit',
@@ -225,56 +225,122 @@ const CityColumnChart = (props) => {
     },
   };
 
-  const config = merge({}, baseChartConfig, columnChartConfig);
-  const className = classnames(
-    style.wrapper,
-    props.className,
-    { [style.stacked]: isMultiple });
+  return merge({}, baseChartConfig, columnChartConfig);
+}
 
-  return (
-    <div className={className}>
-      <div className={style.titleWrapper}>
-        <h4 className={style.title}>
-          {title}
-        </h4>
+// If the timeout is too low, React won't update everything before rendering the charts
+// E.g. try setting it to 1 and navigating between cities,
+// the nav will only update once the charts are re-rendered
+const UPDATE_TIMEOUT = 100;
 
-        <AboutTooltip
-          text={longDescription}
-          color={colorMedium}
-          className={style.aboutChartIcon}
-        />
-      </div>
+class CityColumnChart extends Component {
+  constructor(props) {
+    super(props);
 
-      <div className={style.metaWrapper}>
-        <Icon
-          className={style.indicatorTypeMark}
-          color={colorDark}
-          icon={firstIndicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
-          size={14}
-        />
-        {firstIndicator.contextual ? 'Contextual' : 'Performance'} indicator
-      </div>
+    this.chartDivId = kebabCase(`${props.indicatorIds[0]}-chart`);
+    this.chart = null;
+    this.timer = null;
+  }
 
-      {isMultiple && (
-        <Legend
-          // Legend is our own HTML so we can style and position it with CSS
-          className={style.legendWrapper}
-          series={series}
-        />
-      )}
+  componentDidMount() {
+    // We let the component mount first, to allow React to finish its render cycle
+    // This means immediate transition between pages
+    this.timer = window.setTimeout(() => {
+      this.chart = Highcharts.chart(this.chartDivId, getChartConfig(this.props));
+    }, UPDATE_TIMEOUT);
+  }
 
-      {isMultiple || (
-        <div className={style.descriptionLabel}>
-          {shortDescription}
+  componentWillReceiveProps(nextProps) {
+    // The component may have mounted, but not rendered the chart yet
+    // when the user changes to a new city. So we want to cancel
+    // that timeout before setting a new one.
+    if (this.timer) window.clearTimeout(this.timer);
+
+    this.timer = window.setTimeout(() => {
+      // There is a bug in highcharts where the responsive rules are not applied
+      // after this.chart.update(getChartConfig(nextProps)); is called,
+      // so we destroy and re-create instead
+      // Let the record show that this is 30% slower than .update()
+      if (this.chart) this.chart.destroy();
+
+      this.chart = Highcharts.chart(this.chartDivId, getChartConfig(nextProps));
+    }, UPDATE_TIMEOUT);
+  }
+
+  componentWillUnmount() {
+    // If the chart is waiting to update/mount, we want to clear that timeout
+    if (this.timer) window.clearTimeout(this.timer);
+    // Make sure Highcharts cleans up listeners etc. before removing the DOM
+    // If navigating quickly (< UPDATE_TIMEOUT) from one tab to the next, this may
+    // fire before the chart is mounted, so test for this.chart first
+    if (this.chart) this.chart.destroy();
+  }
+
+  render() {
+    const { props } = this;
+    const isMultiple = props.indicatorIds.length > 1;
+    const colorMedium = getColorVariant(props.highlightColorDark);
+    const colorDark = getColorVariant(props.colorBase, '900');
+
+    // The indicator data contains things like titles and descriptions. But these can
+    // also be passed in explicitly (e.g. for charts where there are more than one indicator)
+    // so here we take the passed in value, or the value from the first indicator otherwise.
+    const firstIndicator = INDICATORS[props.indicatorIds[0]];
+    const title = props.title || firstIndicator.name;
+    const shortDescription = props.shortDescription || firstIndicator.shortDescription;
+    const longDescription = props.longDescription || firstIndicator.longDescription;
+
+    const className = classnames(
+      style.wrapper,
+      props.className,
+      { [style.stacked]: isMultiple },
+    );
+
+    return (
+      <div className={className}>
+        <div className={style.titleWrapper}>
+          <h4 className={style.title}>
+            {title}
+          </h4>
+
+          <AboutTooltip
+            text={longDescription}
+            color={colorMedium}
+            className={style.aboutChartIcon}
+          />
         </div>
-      )}
 
-      <div className={style.chartWrapper}>
-        <AbstractWidget config={config} />
+        <div className={style.metaWrapper}>
+          <Icon
+            className={style.indicatorTypeMark}
+            color={colorDark}
+            icon={firstIndicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
+            size={14}
+          />
+          {firstIndicator.contextual ? 'Contextual' : 'Performance'} indicator
+        </div>
+
+        {isMultiple && (
+          <Legend
+            // Legend is our own HTML so we can style and position it with CSS
+            className={style.legendWrapper}
+            series={getSeries(props)}
+          />
+        )}
+
+        {isMultiple || (
+          <div className={style.descriptionLabel}>
+            {shortDescription}
+          </div>
+        )}
+
+        <div className={style.chartWrapper}>
+          <div id={this.chartDivId} />
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 const cityType = PropTypes.shape({
   name: PropTypes.string.isRequired,

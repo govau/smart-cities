@@ -54,7 +54,10 @@
 }
 
 .chartWrapper {
+  min-height: 400px; // so when the charts are loading it doesn't collapse
+
   @include for-tablet-landscape-up {
+    min-height: 500px;
     margin-top: 24px;
   }
 }

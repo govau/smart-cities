@@ -17,7 +17,7 @@ exports[`should match Snapshot 1`] = `
     The population indicator short description
   </div>
   <div className=\\"chartWrapper\\">
-    <AbstractWidget config={{...}} />
+    <div id=\\"population-chart\\" />
   </div>
 </div>"
 `;
