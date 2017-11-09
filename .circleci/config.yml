@@ -20,29 +20,52 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+  test: 
+    docker: 
+      - image: circleci/node:8.1.2
+    working_directory: ~/repo
+    steps:
       - run: npm test
-      - deploy:
-          name: Deploy staging
-          filters: 
-            tags: 
-              ignore: 
-                /.*/
-            branches: 
-              only: /sc-112/ # Just to test, revert to /^master$/
-          command: |
-            ./scripts/prepare_build.sh && \
-              ./scripts/cf_staging.sh && \
-              cf zero-downtime-push smart-cities-staging -f manifest.yml -p build
-      - deploy: 
-          name: Deploy prod
-          filters: 
-            branches: 
-              ignore: 
-                /.*/
-            tags: 
-              only: 
-                /^release-.*/
-          command: |
-            ./scripts/prepare_build.sh && \
-              ./scripts/cf_production.sh && \
-              cf zero-downtime-push smart-cities -f manifest.yml -p build
+  deploy_staging: 
+    docker: 
+      - image: circleci/node:8.1.2      
+    working_directory: ~/repo
+    steps:
+      - run: ./scripts/prepare_build.sh
+      - run: ./scripts/cf_staging.sh
+      - run: cf zero-downtime-push smart-cities-staging -f manifest.yml -p build
+  deploy_production: 
+    docker: 
+      - image: circleci/node:8.1.2      
+    working_directory: ~/repo
+    steps:
+      - run: ./scripts/prepare_build.sh
+      - run: ./scripts/cf_production.sh
+      - run: cf zero-downtime-push smart-cities -f manifest.yml -p build
+workflows: 
+  version: 2
+  build_test_deploy:
+    jobs: 
+      - build
+      - test: 
+        requires: 
+          - build
+      - deploy_staging: 
+        requires: 
+          - test
+        filters: 
+          tags: 
+            ignore: 
+              /.*/
+          branches: 
+            only: /^master$/
+      - deploy_production:
+        requires: 
+          - test
+        filters: 
+          branches: 
+            ignore: 
+              /.*/
+          tags: 
+            only: 
+              /^release-.*/
