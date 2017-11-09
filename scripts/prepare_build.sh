@@ -4,6 +4,7 @@ set -euxo pipefail
 
 # Build the app
 
+npm install
 npm run build
 npm run generate-city-data
 
