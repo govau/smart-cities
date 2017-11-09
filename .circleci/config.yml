@@ -44,21 +44,21 @@ workflows:
     jobs: 
       - build
       - deploy_staging: 
-        requires: 
-          - build
-        filters: 
-          tags: 
-            ignore: 
-              /.*/
-          branches: 
-            only: /^master$/
+          requires: 
+            - build
+          filters: 
+            tags: 
+              ignore: 
+                /.*/
+            branches: 
+              only: /^master$/
       - deploy_production:
-        requires: 
-          - build
-        filters: 
-          branches: 
-            ignore: 
-              /.*/
-          tags: 
-            only: 
-              /^release-.*/
+          requires: 
+            - build
+          filters: 
+            branches: 
+              ignore: 
+                /.*/
+            tags: 
+              only: 
+                /^release-.*/
