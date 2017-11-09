@@ -5,16 +5,8 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:8.1.2
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
     working_directory: ~/repo
-
     steps:
       - checkout
       - restore_cache:
@@ -30,15 +22,27 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
       - deploy:
-          name: Deploy app
+          name: Deploy staging
+          filters: 
+            tags: 
+              ignore: 
+                /.*/
+            branches: 
+              only: /sc-112/ # Just to test, revert to /^master$/
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ./scripts/prepare_build.sh && \
-                ./scripts/cf_staging.sh && \
-                cf zero-downtime-push smart-cities-dev -f manifest.yml -p build
-            fi
-            if [ "${CIRCLE_BRANCH}" == "staging" ]; then
-              ./scripts/prepare_build.sh && \
-                ./scripts/cf_staging.sh && \
-                cf zero-downtime-push smart-cities-staging -f manifest.yml -p build
-            fi
+            ./scripts/prepare_build.sh && \
+              ./scripts/cf_staging.sh && \
+              cf zero-downtime-push smart-cities-staging -f manifest.yml -p build
+      - deploy: 
+          name: Deploy prod
+          filters: 
+            branches: 
+              ignore: 
+                /.*/
+            tags: 
+              only: 
+                /^release-.*/
+          command: |
+            ./scripts/prepare_build.sh && \
+              ./scripts/cf_production.sh && \
+              cf zero-downtime-push smart-cities -f manifest.yml -p build
