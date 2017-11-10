@@ -54,15 +54,15 @@ workflows:
   build_test_deploy:
     jobs: 
       - build
-      - deploy_staging: 
-          requires: 
-            - build
-          filters: 
-            tags: 
-              ignore: 
-                /.*/
-            branches: 
-              only: /^master$/
+      # - deploy_staging: 
+      #     requires: 
+      #       - build
+      #     filters: 
+      #       tags: 
+      #         ignore: 
+      #           /.*/
+      #       branches: 
+      #         only: /^master$/
       - deploy_production:
           requires: 
             - build
