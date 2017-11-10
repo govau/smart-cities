@@ -61,9 +61,6 @@ workflows:
           requires: 
             - build
           filters: 
-            tags: 
-              ignore: 
-                /.*/
             branches: 
               only: /^master$/
       - deploy_production:
