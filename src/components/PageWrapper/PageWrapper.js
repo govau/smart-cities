@@ -56,7 +56,6 @@ class PageWrapper extends Component {
             isOpen={this.state.navIsOpen}
             categoryId={this.props.categoryId}
             cityId={this.props.cityId}
-            categoryIconId={this.props.categoryIconId}
           />
         </div>
 
@@ -67,7 +66,6 @@ class PageWrapper extends Component {
             categoryId={this.props.categoryId}
             cityName={this.props.cityName}
             categoryColorName={this.props.categoryColorName}
-            categoryIconId={this.props.categoryIconId}
           />
 
           <main className={style.main}>
@@ -90,7 +88,6 @@ PageWrapper.propTypes = {
   cityId: PropTypes.string,
   cityName: PropTypes.string,
   categoryColorName: PropTypes.string,
-  categoryIconId: PropTypes.string,
 };
 
 PageWrapper.defaultProps = {

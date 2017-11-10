@@ -67,8 +67,6 @@ header {
   display: none;
 
   @include for-desktop-up {
-    @include shadow;
-
     position: relative;
     z-index: $z-index-header;
     display: flex;
