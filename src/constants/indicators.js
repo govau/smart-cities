@@ -110,8 +110,8 @@ export default {
   },
   participationRateGeneral: {
     name: 'General participation rate',
-    shortDescription: 'General',
-    longDescription: 'General participation rate',
+    shortDescription: 'All persons',
+    longDescription: 'This shows the share of the civilian population in the labour force. \n\nSource: ABS - Labour Force',
     format: '0[.]0%',
     contextual: false,
     source: 'Participation rate, all persons, % of population aged over 15 years',
@@ -119,7 +119,7 @@ export default {
   participationRateMale: {
     name: 'Male participation rate',
     shortDescription: 'Male',
-    longDescription: 'Male participation rate',
+    longDescription: 'This shows the share of the civilian population in the labour force that are male. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
     source: 'Participation rate, Male, % of population aged over 15 years',
@@ -127,7 +127,7 @@ export default {
   participationRateFemale: {
     name: 'Female participation rate',
     shortDescription: 'Female',
-    longDescription: 'Female participation rate',
+    longDescription: 'This shows the share of the civilian population in the labour force that are female. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
     source: 'Participation rate, Female, % of population aged over 15 years',
@@ -135,7 +135,7 @@ export default {
   educationalAttainmentYr12: {
     name: 'Educational attainment: year 12',
     shortDescription: 'Year 12',
-    longDescription: 'Educational attainment: year 12',
+    longDescription: 'This shows the proportion of a city’s population that have completed year 12. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Education attainment - Completed Year 12, % of population',
@@ -143,7 +143,7 @@ export default {
   educationalAttainmentCertificate: {
     name: 'Educational attainment: certificate',
     shortDescription: 'Certificate',
-    longDescription: 'Educational attainment: certificate',
+    longDescription: 'This shows the proportion of a city’s population that have completed certificate Level III qualifications or higher. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Education attainment - Completed Certificate III or IV, % of population',
@@ -151,7 +151,7 @@ export default {
   educationalAttainmentTertiary: {
     name: 'Educational attainment: tertiary',
     shortDescription: 'Tertiary',
-    longDescription: 'Educational attainment: tertiary',
+    longDescription: 'This shows the proportion of a city’s population that have completed a bachelor degree or higher. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Education attainment - Completed Bachelor Degree or Higher, % of population',
@@ -159,7 +159,7 @@ export default {
   dispersion: {
     name: 'Local government dispersion',
     shortDescription: 'LGAs per 100,000 persons',
-    longDescription: 'Number of Local Government Areas per 100 000 persons',
+    longDescription: 'This shows the number of Local Government Areas per 100 000 persons. \n\nSource: ABS - Regional Population Growth ',
     format: '0[.]0%',
     contextual: false,
     source: 'Government Dispersion, Number of Local Government Areas per 100 000 persons',
@@ -167,7 +167,7 @@ export default {
   dwellingHouse: {
     name: 'Dwelling type ratio: house',
     shortDescription: 'House',
-    longDescription: 'Dwelling type ratio: house',
+    longDescription: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Dwelling type ratio, Separate house, Percentage of Dwellings',
@@ -175,7 +175,7 @@ export default {
   dwellingSemi: {
     name: 'Dwelling type ratio: semi-detached',
     shortDescription: 'Semi-detached',
-    longDescription: 'Dwelling type ratio: semi-detached',
+    longDescription: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Dwelling type ratio, Semi-detached, Percentage of Dwellings',
@@ -183,7 +183,7 @@ export default {
   dwellingApartment: {
     name: 'Dwelling type ratio: flat or apartment',
     shortDescription: 'Flat / apartment',
-    longDescription: 'Dwelling type ratio: flat or apartment',
+    longDescription: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Dwelling type ratio, Flat or Apartment, Percentage of Dwellings',
@@ -191,7 +191,7 @@ export default {
   dwellingOther: {
     name: 'Dwelling type ratio: other',
     shortDescription: 'Other',
-    longDescription: 'Dwelling type ratio: other',
+    longDescription: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Dwelling type ratio, Other, Percentage of Dwellings',
@@ -199,7 +199,7 @@ export default {
   dwellingPriceToIncomeRatio: {
     name: 'Dwelling price to household income ratio',
     shortDescription: 'Dwelling price to household income ratio',
-    longDescription: 'Dwelling price to household income ratio',
+    longDescription: 'This shows the ratio of the median dwelling price to median annual household income. \n\nSource: Corelogic ',
     format: '0[.]0%',
     contextual: false,
     source: 'Dwelling price to income ratio, Ratio',
@@ -207,7 +207,7 @@ export default {
   jobsCar: {
     name: 'Jobs accessible within 30 minutes by car',
     shortDescription: 'Proportion of jobs accessible within 30 minutes by car',
-    longDescription: 'Proportion of jobs accessible within 30 minutes by car',
+    longDescription: 'This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. \n\nSource: SGS Economics and Planning ',
     format: '0[.]0%',
     contextual: false,
     source: 'Proportion of jobs accessible within 30 minutes, By Car, % of all jobs in city',
@@ -215,7 +215,7 @@ export default {
   activeJourneys: {
     name: 'Active transport use',
     shortDescription: 'Proprtion of journeys to work by active transport',
-    longDescription: 'Proprtion of journeys to work by active transport',
+    longDescription: 'This shows the proportion of journeys to work that are taken by active transport (walking or cycling). \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Active transport use, % of journeys to work',
@@ -223,7 +223,7 @@ export default {
   publicJourneys: {
     name: 'Public transport use',
     shortDescription: 'Proprtion of journeys to work by public transport',
-    longDescription: 'Proprtion of journeys to work by public transport',
+    longDescription: 'This shows the proportion of journeys to work that are taken by public transport. \n\nSource: ABS Census 2016 ',
     format: '0[.]0%',
     contextual: false,
     source: 'Public transport use, % of journeys to work',
@@ -231,7 +231,7 @@ export default {
   unemploymentRateGeneral: {
     name: 'General unemployment rate',
     shortDescription: 'Unemployment',
-    longDescription: 'General unemployment rate',
+    longDescription: 'This shows the average unemployment rate for 12 months for all persons. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
     source: 'Unemployment rate, All persons',
@@ -239,7 +239,7 @@ export default {
   unemploymentRateIndigenous: {
     name: 'Indigenous unemployment rate',
     shortDescription: 'Indigenous',
-    longDescription: 'Indigenous unemployment rate',
+    longDescription: 'This shows the average indigenous unemployment rate for 12 months. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
     source: 'Unemployment rate, Unemployed, % of indigenous population',
@@ -247,7 +247,7 @@ export default {
   unemploymentRateYouth: {
     name: 'Youth unemployment rate',
     shortDescription: 'Youth',
-    longDescription: 'Youth unemployment rate',
+    longDescription: 'This shows the average youth unemployment rate for 12 months',
     format: '0[.]0%',
     contextual: false,
     source: 'Unemployment rate, Unemployed, % of youth population',
@@ -255,7 +255,7 @@ export default {
   employmentGrowth: {
     name: 'Employment growth',
     shortDescription: 'Annual growth in number of jobs',
-    longDescription: 'Annual growth in number of jobs',
+    longDescription: 'This shows the percentage change in the level of employment in the current year compared to the previous year. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
     source: 'Full-time employment growth, Persons',
@@ -263,7 +263,7 @@ export default {
   publicHousingUnits: {
     name: 'Public housing units',
     shortDescription: 'Public housing units per 100,000 persons',
-    longDescription: 'Public housing units per 100,000 persons',
+    longDescription: 'This shows the number of public and community housing units per 100,000 people. \n\nSource: ABS Census 2016',
     format: '0,0a',
     contextual: false,
     source: 'Public housing, Dwelling units per 100 000 persons',
@@ -271,7 +271,7 @@ export default {
   homelessnessRate: {
     name: 'Homelessness rate',
     shortDescription: 'Homelessness per 100,000 persons',
-    longDescription: 'Homelessness per 100,000 persons',
+    longDescription: 'This shows the number of homeless people per 100,000 people. \n\nSource: ABS Census 2011',
     format: '0,0',
     contextual: false,
     source: 'Homelessness, number of homeless per 100 000',
@@ -279,7 +279,7 @@ export default {
   housingConstructionCosts: {
     name: 'Housing construction costs',
     shortDescription: 'Housing construction cost, $/m²',
-    longDescription: 'Housing construction cost, $/m²',
+    longDescription: 'This shows the average cost per square metre of constructing a new detached house in a city. \n\nSource: Rawlinsons Guide to Construction Costs',
     format: '$0,0a',
     contextual: false,
     source: 'Residential construction costs, AUD per square metre',
@@ -287,7 +287,7 @@ export default {
   rentStress: {
     name: 'Rent stress',
     shortDescription: 'Proportion of households under rent stress',
-    longDescription: 'Proportion of households under rent stress',
+    longDescription: 'This shows the proportion of occupied households for which rent payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Rent Stress, Proportion of households under rent stress, Dwellings',
@@ -295,7 +295,7 @@ export default {
   mortgageStress: {
     name: 'Mortgage stress',
     shortDescription: 'Proportion of households under mortgage stress',
-    longDescription: 'Proportion of households under mortgage stress',
+    longDescription: 'This shows the proportion of occupied households for which mortgage payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Mortgage stress, Proportion of households under mortgage stress, Dwellings',
@@ -311,7 +311,7 @@ export default {
   residentialBuildingApprovalsGrowth: {
     name: 'Residential building approvals and growth',
     shortDescription: 'Residential building approvals per annual population change',
-    longDescription: 'Residential building approvals per annual population change',
+    longDescription: 'This shows the ratio of annual population change to annual residential building approvals, calculated as a five-year average. \n\nSource: ABS Building Approvals 2017 ABS Regional Population Growth 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Annual Building Approvals, population change per Approvals annually, Ratio',
@@ -319,7 +319,7 @@ export default {
   peakDelay: {
     name: 'Peak travel delay',
     shortDescription: 'Percentage increase in car trip duration at peak time',
-    longDescription: 'Percentage increase in 30 minute car trip time at AM PM peak compared to no congestion',
+    longDescription: 'This shows the percentage increase in the duration of a car trip made during the busiest traffic periods (7am to 10am and 4pm to 7pm) compared with when there is no congestion. \n\nSource: TomTom Australia',
     format: '0[.]0%',
     contextual: false,
     source: 'Percentage increase in 30 minute car trip time at AM PM peak compared to no congestion, % ', // Final space in string is intentional and necessary
@@ -327,7 +327,7 @@ export default {
   accessToPublicTransport: {
     name: 'Access to public transport',
     shortDescription: 'Percentage dwellings within 400m of public transport',
-    longDescription: 'Percentage dwellings within 400m of a frequently serviced transport spot',
+    longDescription: 'This shows the proportion of dwellings within 400 metres of a frequently serviced public transport stop – one with a scheduled service every 30 minutes from 7am to 7pm on a normal weekday. \n\nSource: Royal Melbourne Institute of Technology',
     format: '0[.]0%',
     contextual: false,
     source: 'Access to public transport, dwellings within 400m of frequently serviced transport stop, % of dwellings',
@@ -335,7 +335,7 @@ export default {
   grossParklandArea: {
     name: 'Gross parkland area',
     shortDescription: 'Percentage of gross land area that is parkland',
-    longDescription: 'Percentage of gross land area that is parkland',
+    longDescription: 'This shows the proportion of land area in a city that is defined as green space. \n\nSource: ABS - Australian Statistical Geography Standard',
     format: '0[.]0%',
     contextual: false,
     source: 'Land area that is parkland, % of gross land area',
@@ -343,7 +343,7 @@ export default {
   greenhouseGasEmissions: {
     name: 'Greenhouse gas emissions',
     shortDescription: 'Kilograms of greenhouse gas emissions per capita per year',
-    longDescription: 'Kilograms of greenhouse gas emissions per capita per year',
+    longDescription: 'This shows the estimated per-capita amount of greenhouse gases emitted in a year, based on Scope 1 emissions. \n\nSource: ational Greenhouse Gas Inventory',
     format: '0[.]0a',
     contextual: false,
     source: 'Greenhouse gas emissions  per capita, kilograms per capita per year',
@@ -351,7 +351,7 @@ export default {
   accessToGreenSpace: {
     name: 'Access to green space',
     shortDescription: 'Percentage of dwellings with access to green space',
-    longDescription: 'Percentage of dwellings with access to green space',
+    longDescription: 'This shows the share of dwellings in a city that are located within 400 metres of green space. \n\nSource: ABS - Australian Statistical Geography Standard',
     format: '0[.]0%',
     contextual: false,
     source: 'Access to green space, % of dwellings',
@@ -359,7 +359,7 @@ export default {
   airPollutionPm10: {
     name: 'Air pollution, >PM10',
     shortDescription: 'Particle pollution greater than PM10',
-    longDescription: 'Air quality, annual mean: particle pollution greater than PM10',
+    longDescription: 'This shows the average amount of particulate matter in a city’s air per cubic metre, measured over the course of a year for particles that are less than 10 microns in diameter. \n\nSource: World Health Organisation',
     format: '0[.]0a',
     contextual: false,
     source: 'Air quality, Annual mean, >PM10, ug/m3',
@@ -367,7 +367,7 @@ export default {
   airPollutionPm2point5: {
     name: 'Air pollution, <PM2.5',
     shortDescription: 'Particle pollution less than PM2.5',
-    longDescription: 'Air quality, annual mean: particle pollution less than PM2.5',
+    longDescription: 'This shows the average amount of particulate matter in a city’s air per cubic metre, measured over the course of a year for particles that are less than 2.5 microns in diameter. \n\nSource: World Health Organisation',
     format: '0[.]0a',
     contextual: false,
     source: 'Air quality, Annual mean, <PM2.5, ug/m3',
@@ -375,7 +375,7 @@ export default {
   energyEfficiencyOfBuildings: {
     name: 'Energy efficiency of buildings',
     shortDescription: 'Average energy efficiency rating of commercial buildings',
-    longDescription: 'Average energy efficiency rating of commercial buildings',
+    longDescription: 'This shows the average National Australian Built Environment Rating System (NABERS) score for rated office buildings in the city, weighted by rated floor space. *Cities with fewer than 10 rated buildings are Albury Wodonga, Ballarat, Bendigo, Cairns, Geelong, Launceston, Mackay, Toowoomba, Townsville, Western Sydney and Sunshine Coast. \n\nSource: National Australian Built Environment Rating System',
     format: '0[.]0',
     contextual: false,
     source: 'Building energy efficiency, Average rating',
@@ -383,15 +383,15 @@ export default {
   volunteeringRate: {
     name: 'Volunteering rate',
     shortDescription: 'Percentage of population over 15 years who volunteer',
-    longDescription: 'Percentage of population over 15 years who volunteer',
+    longDescription: 'This shows the share of people aged 15 years and older who volunteered their time, services or skills to a club, organisation or association in the past twelve months. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Number of volunteers, All persons, % of Persons 15 or over',
   },
   // perceivedSafety: {
   //   name: 'Perceived safety',
-  //   shortDescription: 'TODO',
-  //   longDescription: 'TODO',
+  //   shortDescription: 'Feelings of safety walking alone in local area after dark',
+  //   longDescription: 'This shows the share of people aged 18 years and over who report that they feel safe or very safe walking alone in their local area after dark. \n\nSource: PHIDU – Social Health Atlas of Australia',
   //   format: '0[.]0%',
   //   contextual: false,
   //   source: 'TODO',
@@ -407,7 +407,7 @@ export default {
   adultObesity: {
     name: 'Adult obesity rate',
     shortDescription: 'Proportion of adults who are obese',
-    longDescription: 'Proportion of adults who are obese',
+    longDescription: 'This shows the share of people aged 18 and over with a body mass index (BMI) greater than 30. \n\nSource: PHIDU – Social Health Atlas of Australia',
     format: '0[.]0%',
     contextual: false,
     source: 'Percentage of the adult population who are obese, Estimated population, aged 18 years and over, who were obese, % of population',
@@ -415,7 +415,7 @@ export default {
   crisisSupport: {
     name: 'Support in times of crisis',
     shortDescription: 'Percentage of population able to get crisis support',
-    longDescription: 'Percentage of population able to get support in times of crisis',
+    longDescription: 'This shows the share of people that stated in a survey that they feel there is someone outside their household who could be asked for support in a time of crisis. \n\nSource: PHIDU – Social Health Atlas of Australia',
     format: '0[.]0%',
     contextual: false,
     source: 'Able to get support in times of crisis , % of population',
@@ -423,7 +423,7 @@ export default {
   suicideRate: {
     name: 'Suicide rate',
     shortDescription: 'Number of suicides per 100,000 persons',
-    longDescription: 'Number of suicides per 100,000 persons',
+    longDescription: 'This shows the number of suicides in a year per 100,000 people, calculated over the period 2010 to 2014. \n\nSource: PHIDU – Social Health Atlas of Australia',
     format: '0[.]0',
     contextual: false,
     source: 'Suicides, per 100 000',
@@ -431,7 +431,7 @@ export default {
   householdsWithBroadband: {
     name: 'Households with broadband',
     shortDescription: 'Percentage of households with broadband',
-    longDescription: 'Percentage of households with a broadband internet connection',
+    longDescription: 'This shows the share of households in a city with an active broadband connection, defined as an access speed of 256 kilobits per second or faster. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Percentage of households with a broadband connection, Internet accessed from dwelling, % of dwellings',
@@ -439,7 +439,7 @@ export default {
   patentApplications: {
     name: 'Patent applications',
     shortDescription: 'Patent applications per 100,000 persons',
-    longDescription: 'Patent applications per 100,000 persons',
+    longDescription: 'This shows the number of patent applications by people resident in a city per 100,000 people per year. \n\nSource: ABS Data by Region',
     format: '0[.]0',
     contextual: false,
     source: 'Patents applications, Patent applications per 100 000',
@@ -447,7 +447,7 @@ export default {
   newBusinessEntrants: {
     name: 'New business entrants',
     shortDescription: 'New business entrants',
-    longDescription: 'New business entrants',
+    longDescription: 'This shows the business entry and exit rates: the number of new businesses that started actively trading on the business register over the past year as a share of the total number of registered businesses at the start of the year. \n\nSource: ABS Data by Region',
     format: '0[.]0a',
     contextual: false,
     source: 'New business entrants and exits, New Businesses as a share of the stock',
@@ -455,7 +455,7 @@ export default {
   newBusinessExits: {
     name: 'New business exits',
     shortDescription: 'New business exits',
-    longDescription: 'New business exits',
+    longDescription: 'This shows the business entry and exit rates: the number of new businesses that started actively trading on the business register over the past year as a share of the total number of registered businesses at the start of the year. \n\nSource: ABS Data by Region',
     format: '0[.]0a',
     contextual: false,
     source: 'New business entrants and exits, Business exits as a share of the stock',
@@ -463,7 +463,7 @@ export default {
   knowledgeWorkersRatio: {
     name: 'Knowledge workers ratio',
     shortDescription: 'Percentage of employment as knowledge workers',
-    longDescription: 'Percentage of employment as knowledge workers',
+    longDescription: 'This shows the share of employed persons that work in the top three knowledge-intensive service industries. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
     source: 'Knowledge workers, All persons, % of total employment',
@@ -471,7 +471,7 @@ export default {
   linkedInConnectivityLocal: {
     name: 'LinkedIn connectivity: local',
     shortDescription: 'Local',
-    longDescription: 'LinkedIn connectivity, proportion of connections from local area',
+    longDescription: 'This shows the average share of LinkedIn account holder contacts that are located in the same city, other parts of Australia or overseas. \n\nSource: LinkedIn',
     format: '0[.]0%',
     contextual: false,
     source: 'LinkedIn connectivity, Average number of connections from local area, % of connections average',
@@ -479,7 +479,7 @@ export default {
   linkedInConnectivityRestOfNation: {
     name: 'LinkedIn connectivity: rest of Australia',
     shortDescription: 'National',
-    longDescription: 'LinkedIn connectivity, proportion of connections from rest of Australia',
+    longDescription: 'This shows the average share of LinkedIn account holder contacts that are located in the same city, other parts of Australia or overseas. \n\nSource: LinkedIn',
     format: '0[.]0%',
     contextual: false,
     source: 'LinkedIn connectivity, Average number of connections from the rest of Australia, % of connections average',
@@ -487,7 +487,7 @@ export default {
   linkedInConnectivityInternational: {
     name: 'LinkedIn connectivity: international',
     shortDescription: 'International',
-    longDescription: 'LinkedIn connectivity, proportion of connections from outside Australia',
+    longDescription: 'This shows the average share of LinkedIn account holder contacts that are located in the same city, other parts of Australia or overseas. \n\nSource: LinkedIn',
     format: '0[.]0%',
     contextual: false,
     source: 'LinkedIn connectivity, Average number of international connections, % of connections average',
@@ -503,7 +503,7 @@ export default {
   populationDensity: {
     name: 'Population density',
     shortDescription: 'Persons per square kilometre',
-    longDescription: 'Population density: persons per square kilometre',
+    longDescription: 'This shows the number of persons per square kilometre. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0',
     contextual: false,
     source: 'Population-weighted density, Persons per square kilometre',
@@ -511,7 +511,7 @@ export default {
   dependencyRatioNotWorkingAge: {
     name: 'Dependency ratio: not of working age',
     shortDescription: 'Not of working age',
-    longDescription: 'Dependency ratio: not of working age, percentage of population',
+    longDescription: 'This shows the number of persons of non-working age (0-14 and 65+) per person of working age (15-64)',
     format: '0[.]0%',
     contextual: false,
     source: 'Dependency ratio, Ratio not of working age to working age, % ', // intentional space at end
@@ -519,7 +519,7 @@ export default {
   dependencyRatio14OrYounger: {
     name: 'Dependency ratio: 14 or younger',
     shortDescription: '14 or younger',
-    longDescription: 'Dependency ratio: 14 or younger, percentage of population',
+    longDescription: 'This shows the share of population aged 0 to 14, 15 to 64, and 65 and over. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: false,
     source: 'Dependency ratio, All persons 0-14, % of population',
@@ -527,7 +527,7 @@ export default {
   dependencyRatio15To64: {
     name: 'Dependency ratio: 15-64',
     shortDescription: '15-64',
-    longDescription: 'Dependency ratio: 15-64, percentage of population',
+    longDescription: 'This shows the share of population aged 0 to 14, 15 to 64, and 65 and over. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: false,
     source: 'Dependency ratio, All persons 15-64, % of population',
@@ -535,7 +535,7 @@ export default {
   dependencyRatio65OrOlder: {
     name: 'Dependency ratio: 65 or older',
     shortDescription: '65 or older',
-    longDescription: 'Dependency ratio: 65 or older, percentage of population',
+    longDescription: 'This shows the share of population aged 0 to 14, 15 to 64, and 65 and over. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: false,
     source: 'Dependency ratio, All persons 65+, % of population',
@@ -543,7 +543,7 @@ export default {
   dependencyRatioMedianAge: {
     name: 'Dependency ratio: median age',
     shortDescription: 'Dependency ratio: median age',
-    longDescription: 'Dependency ratio: median age',
+    longDescription: 'This shows the median age. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0',
     contextual: false,
     source: 'Dependency ratio, median age, All persons, years',
@@ -551,7 +551,7 @@ export default {
   disabilityRate: {
     name: 'Disability rate',
     shortDescription: 'Population share with disability',
-    longDescription: 'Population share with disability',
+    longDescription: 'This shows the proportion of the population that self identifies as having disability. \n\nSource: ABS - Disability, Ageing and Carers',
     format: '0[.]0%',
     contextual: false,
     source: 'Disability, all persons, % of population',
@@ -559,7 +559,7 @@ export default {
   tenureRatioOwnedOutright: {
     name: 'Tenure ratio: owned outright',
     shortDescription: 'Owned outright',
-    longDescription: 'Tenure ratio: owned outright',
+    longDescription: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Tenure ratio, Owned outright, %',
@@ -567,7 +567,7 @@ export default {
   tenureRatioMortgage: {
     name: 'Tenure ratio: owned with mortgage',
     shortDescription: 'Mortgage',
-    longDescription: 'Tenure ratio: owned with mortgage',
+    longDescription: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Tenure ratio, Owned with a mortgage, %',
@@ -575,7 +575,7 @@ export default {
   tenureRatioRented: {
     name: 'Tenure ratio: rented',
     shortDescription: 'Rented',
-    longDescription: 'Tenure ratio: rented',
+    longDescription: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Tenure ratio, Rented, %',
@@ -583,7 +583,7 @@ export default {
   tenureRatioOther: {
     name: 'Tenure ratio: other',
     shortDescription: 'Other',
-    longDescription: 'Tenure ratio: other',
+    longDescription: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Tenure ratio, Other, %',
@@ -591,7 +591,7 @@ export default {
   languagesOtherThanEnglish: {
     name: 'Languages other than English',
     shortDescription: 'Language other than English spoken at home',
-    longDescription: 'Language other than English spoken at home, percentage of population',
+    longDescription: 'This shows the proportion of residents who speak a language other than English at home. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
     source: 'Language other than English spoken at home, All persons, % of population',
