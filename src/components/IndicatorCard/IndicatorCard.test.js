@@ -2,14 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import IndicatorCard from './IndicatorCard';
-import { CARD_SIZES } from '../../../constants';
+import { CARD_SIZES } from '../../constants';
 
-jest.mock('../../Icon/Icon', () => 'Icon');
-jest.mock('../../../constants', () => ({
-  INDICATOR_CARD_TYPES: {
-    CATEGORY: 'CATEGORY',
-    INDICATOR: 'INDICATOR',
-  },
+jest.mock('../Icon/Icon', () => 'Icon');
+jest.mock('../../constants', () => ({
   CARD_SIZES: {
     SMALL: 'small',
     LARGE: 'large',

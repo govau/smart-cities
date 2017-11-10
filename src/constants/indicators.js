@@ -10,7 +10,7 @@ export default {
     name: 'Population',
     shortDescription: 'Total population',
     longDescription: 'This shows the population size.\n\nSource: ABS - Regional Population Growth',
-    format: '0[.]0a',
+    format: '0[.]00a',
     contextual: true,
     lastUpdated: '2016',
     source: 'Population, All persons, People',

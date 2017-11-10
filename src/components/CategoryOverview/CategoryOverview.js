@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import Icon from '../Icon/Icon';
-import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
+import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import Pill from '../Pill/Pill';
 import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
 import getColorVariant from '../../helpers/getColorVariant';

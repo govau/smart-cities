@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
+import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import Icon from '../Icon/Icon';
 import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';

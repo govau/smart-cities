@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
+import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import PageLegend from '../PageLegend/PageLegend';
 import { INDICATORS } from '../../constants';
 import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';

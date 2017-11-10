@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import PageBanner from './PageBanner';
 
-jest.mock('../Card/IndicatorCard/IndicatorCard', () => 'IndicatorCard');
+jest.mock('../IndicatorCard/IndicatorCard', () => 'IndicatorCard');
 jest.mock('../PageLegend/PageLegend', () => 'PageLegend');
 
 const defaultProps = {
