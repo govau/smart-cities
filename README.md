@@ -115,5 +115,11 @@ only the `build` directory is deployed, so you should `npm build` before deployi
 ## CI/CD
 CircleCI will test all commits pushed to the repo. As soon as a branch is merged
 to the `master` branch, it will (assuming tests pass) additionally deploy to the
-`smart-cities-dev` instance. To deploy to the `smart-cities-staging` instance,
-simply push to the `staging` branch.
+`smart-cities-staging` instance.
+
+Production deploys are triggered when a tag is pushed with a name in the form `release-*`.
+To deploy, simply: 
+
+```
+git tag `date "+release-%Y%m%d%H%M%S"` && git push --tags
+```
