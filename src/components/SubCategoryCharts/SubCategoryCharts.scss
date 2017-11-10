@@ -25,13 +25,14 @@
 .chartGrid {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .chartWrapper {
   width: 100%;
 
   @include for-tablet-portrait-up {
-    width: 50%;
+    width: calc(50% - 16px);
   }
 }
 

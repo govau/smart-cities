@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 // Different length text is used like so:
 // name: shows in an indicator card and as the
 // title of a chart (or in the legend for stacked charts)
@@ -10,6 +12,7 @@ export default {
     longDescription: 'This shows the population size.\n\nSource: ABS - Regional Population Growth',
     format: '0[.]0a',
     contextual: true,
+    lastUpdated: '2016',
     source: 'Population, All persons, People',
   },
   growthRate: {
@@ -18,6 +21,7 @@ export default {
     longDescription: 'This shows the percentage change in the level of the population on the preceding year.\n\nSource: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: true,
+    lastUpdated: '2016',
     source: 'Population, persons, Annual Growth %',
   },
   indigenousPopulation: {
@@ -26,6 +30,7 @@ export default {
     longDescription: 'This shows the proportion of the population that identifies as Aboriginal or Torres Strait Islander.\n\nSource: ABS - Census 2016',
     format: '0[.]0%',
     contextual: true,
+    lastUpdated: '2016',
     source: 'Indigenous status, % of population',
   },
   population10yr: {
@@ -34,6 +39,7 @@ export default {
     longDescription: 'This shows the average annual percentage change in the size of the population over the past ten years.\n\nSource: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: true,
+    lastUpdated: '2016',
     source: 'Population, persons, 10-year Growth %',
   },
   householdSize: {
@@ -42,6 +48,7 @@ export default {
     longDescription: 'This shows the average number of people per occupied dwelling.Source: ABS - Census 2016',
     format: '0[.]0',
     contextual: true,
+    lastUpdated: '2016',
     source: 'Average Household Size, People per household',
   },
   medianHousePrice: {
@@ -50,6 +57,7 @@ export default {
     longDescription: 'This shows the median price over 12 months for detached dwellings.\n\nSource: CoreLogic ',
     format: '$0,0[.]00a',
     contextual: true,
+    lastUpdated: '2017',
     source: 'Median housing price, AUD',
   },
   householdIncome: {
@@ -58,6 +66,7 @@ export default {
     longDescription: 'THis shows the median annual household income.\n\nSource: ABS - Census 2016',
     format: '$0,0a',
     contextual: true,
+    lastUpdated: '2016',
     source: 'Median Household Income, AUD per year',
   },
   lifeExpectancy: {
@@ -66,6 +75,7 @@ export default {
     longDescription: 'This shows the number of years a person born today is expected to live.\n\nSource: ABS - Life Tables, States, Territories and Australia',
     format: '0,0a',
     contextual: true,
+    lastUpdated: '2016',
     source: 'Life expectancy, All persons, years',
   },
   shareInBottomIncomeQuintile: {
@@ -74,14 +84,16 @@ export default {
     longDescription: 'This shows the share of households in bottom 20% of the national household income distribution.\n\nSource: ABS - Census 2016',
     format: '0[.]0%',
     contextual: true,
+    lastUpdated: '2016',
     source: 'Share of households in lowest national income quintile, % of households',
   },
   socioEconomicIndex: {
-    name: 'Socio economic indexes for areas',
-    shortDescription: 'Socio economic indexes for areas',
+    name: 'Socio-economic indexes for areas',
+    shortDescription: 'Socio-economic indexes for areas',
     longDescription: 'This shows an index of relative socio-economic disadvantage. A low score indicates relatively greater disadvantage.\n\nSource: ABS - Census 2011',
     format: '$0,0[.]0a',
     contextual: true,
+    lastUpdated: '2011',
     source: 'Socio-Economic Indexes for Areas, Index of Relative Socio-economic Disadvantage, Index',
   },
   goodsProducingSector: {
@@ -90,6 +102,7 @@ export default {
     longDescription: 'This shows the proportion of employed persons that work in goods producing industries.\n\nSource: ABS - Labour Force',
     format: '0[.]%',
     contextual: true,
+    lastUpdated: '2017',
     source: 'Goods Producing Sector, % of jobs in city',
   },
   marketServices: {
@@ -98,6 +111,7 @@ export default {
     longDescription: 'This shows the proportion of employed persons that work in market services industries.\n\nSource: ABS - Labour Force',
     format: '0[.]%',
     contextual: true,
+    lastUpdated: '2017',
     source: 'Market Services, % of jobs in city',
   },
   nonMarketServices: {
@@ -106,6 +120,7 @@ export default {
     longDescription: 'This shows the proportion of employed persons that work in non-market service industries.\n\nSource: ABS: Labour Force ',
     format: '0[.]%',
     contextual: true,
+    lastUpdated: '2017',
     source: 'Non-market Services, % of jobs in city',
   },
   participationRateGeneral: {
@@ -114,6 +129,7 @@ export default {
     longDescription: 'This shows the share of the civilian population in the labour force. \n\nSource: ABS - Labour Force',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Participation rate, all persons, % of population aged over 15 years',
   },
   participationRateMale: {
@@ -122,6 +138,7 @@ export default {
     longDescription: 'This shows the share of the civilian population in the labour force that are male. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Participation rate, Male, % of population aged over 15 years',
   },
   participationRateFemale: {
@@ -130,6 +147,7 @@ export default {
     longDescription: 'This shows the share of the civilian population in the labour force that are female. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Participation rate, Female, % of population aged over 15 years',
   },
   educationalAttainmentYr12: {
@@ -138,6 +156,7 @@ export default {
     longDescription: 'This shows the proportion of a city’s population that have completed year 12. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Education attainment - Completed Year 12, % of population',
   },
   educationalAttainmentCertificate: {
@@ -146,6 +165,7 @@ export default {
     longDescription: 'This shows the proportion of a city’s population that have completed certificate Level III qualifications or higher. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Education attainment - Completed Certificate III or IV, % of population',
   },
   educationalAttainmentTertiary: {
@@ -154,6 +174,7 @@ export default {
     longDescription: 'This shows the proportion of a city’s population that have completed a bachelor degree or higher. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Education attainment - Completed Bachelor Degree or Higher, % of population',
   },
   dispersion: {
@@ -162,6 +183,7 @@ export default {
     longDescription: 'This shows the number of Local Government Areas per 100 000 persons. \n\nSource: ABS - Regional Population Growth ',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Government Dispersion, Number of Local Government Areas per 100 000 persons',
   },
   dwellingHouse: {
@@ -170,6 +192,7 @@ export default {
     longDescription: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dwelling type ratio, Separate house, Percentage of Dwellings',
   },
   dwellingSemi: {
@@ -178,6 +201,7 @@ export default {
     longDescription: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dwelling type ratio, Semi-detached, Percentage of Dwellings',
   },
   dwellingApartment: {
@@ -186,6 +210,7 @@ export default {
     longDescription: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dwelling type ratio, Flat or Apartment, Percentage of Dwellings',
   },
   dwellingOther: {
@@ -194,6 +219,7 @@ export default {
     longDescription: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dwelling type ratio, Other, Percentage of Dwellings',
   },
   dwellingPriceToIncomeRatio: {
@@ -202,6 +228,7 @@ export default {
     longDescription: 'This shows the ratio of the median dwelling price to median annual household income. \n\nSource: Corelogic ',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dwelling price to income ratio, Ratio',
   },
   jobsCar: {
@@ -210,6 +237,7 @@ export default {
     longDescription: 'This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. \n\nSource: SGS Economics and Planning ',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Proportion of jobs accessible within 30 minutes, By Car, % of all jobs in city',
   },
   activeJourneys: {
@@ -218,6 +246,7 @@ export default {
     longDescription: 'This shows the proportion of journeys to work that are taken by active transport (walking or cycling). \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Active transport use, % of journeys to work',
   },
   publicJourneys: {
@@ -226,6 +255,7 @@ export default {
     longDescription: 'This shows the proportion of journeys to work that are taken by public transport. \n\nSource: ABS Census 2016 ',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Public transport use, % of journeys to work',
   },
   unemploymentRateGeneral: {
@@ -234,6 +264,7 @@ export default {
     longDescription: 'This shows the average unemployment rate for 12 months for all persons. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Unemployment rate, All persons',
   },
   unemploymentRateIndigenous: {
@@ -242,6 +273,7 @@ export default {
     longDescription: 'This shows the average indigenous unemployment rate for 12 months. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Unemployment rate, Unemployed, % of indigenous population',
   },
   unemploymentRateYouth: {
@@ -250,6 +282,7 @@ export default {
     longDescription: 'This shows the average youth unemployment rate for 12 months',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Unemployment rate, Unemployed, % of youth population',
   },
   employmentGrowth: {
@@ -258,6 +291,7 @@ export default {
     longDescription: 'This shows the percentage change in the level of employment in the current year compared to the previous year. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Full-time employment growth, Persons',
   },
   publicHousingUnits: {
@@ -266,6 +300,7 @@ export default {
     longDescription: 'This shows the number of public and community housing units per 100,000 people. \n\nSource: ABS Census 2016',
     format: '0,0a',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Public housing, Dwelling units per 100 000 persons',
   },
   homelessnessRate: {
@@ -274,6 +309,7 @@ export default {
     longDescription: 'This shows the number of homeless people per 100,000 people. \n\nSource: ABS Census 2011',
     format: '0,0',
     contextual: false,
+    lastUpdated: '2011',
     source: 'Homelessness, number of homeless per 100 000',
   },
   housingConstructionCosts: {
@@ -282,6 +318,7 @@ export default {
     longDescription: 'This shows the average cost per square metre of constructing a new detached house in a city. \n\nSource: Rawlinsons Guide to Construction Costs',
     format: '$0,0a',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Residential construction costs, AUD per square metre',
   },
   rentStress: {
@@ -290,6 +327,7 @@ export default {
     longDescription: 'This shows the proportion of occupied households for which rent payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Rent Stress, Proportion of households under rent stress, Dwellings',
   },
   mortgageStress: {
@@ -298,6 +336,7 @@ export default {
     longDescription: 'This shows the proportion of occupied households for which mortgage payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Mortgage stress, Proportion of households under mortgage stress, Dwellings',
   },
   residentialBuildingApprovalsTotal: {
@@ -306,6 +345,7 @@ export default {
     longDescription: 'Total residential building approvals',
     format: '0,0a',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Annual Building Approvals, Dwellings',
   },
   residentialBuildingApprovalsGrowth: {
@@ -314,6 +354,7 @@ export default {
     longDescription: 'This shows the ratio of annual population change to annual residential building approvals, calculated as a five-year average. \n\nSource: ABS Building Approvals 2017 ABS Regional Population Growth 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Annual Building Approvals, population change per Approvals annually, Ratio',
   },
   peakDelay: {
@@ -322,6 +363,7 @@ export default {
     longDescription: 'This shows the percentage increase in the duration of a car trip made during the busiest traffic periods (7am to 10am and 4pm to 7pm) compared with when there is no congestion. \n\nSource: TomTom Australia',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Percentage increase in 30 minute car trip time at AM PM peak compared to no congestion, % ', // Final space in string is intentional and necessary
   },
   accessToPublicTransport: {
@@ -330,6 +372,7 @@ export default {
     longDescription: 'This shows the proportion of dwellings within 400 metres of a frequently serviced public transport stop – one with a scheduled service every 30 minutes from 7am to 7pm on a normal weekday. \n\nSource: Royal Melbourne Institute of Technology',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Access to public transport, dwellings within 400m of frequently serviced transport stop, % of dwellings',
   },
   grossParklandArea: {
@@ -338,6 +381,7 @@ export default {
     longDescription: 'This shows the proportion of land area in a city that is defined as green space. \n\nSource: ABS - Australian Statistical Geography Standard',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Land area that is parkland, % of gross land area',
   },
   greenhouseGasEmissions: {
@@ -346,6 +390,7 @@ export default {
     longDescription: 'This shows the estimated per-capita amount of greenhouse gases emitted in a year, based on Scope 1 emissions. \n\nSource: ational Greenhouse Gas Inventory',
     format: '0[.]0a',
     contextual: false,
+    lastUpdated: '2015',
     source: 'Greenhouse gas emissions  per capita, kilograms per capita per year',
   },
   accessToGreenSpace: {
@@ -354,6 +399,7 @@ export default {
     longDescription: 'This shows the share of dwellings in a city that are located within 400 metres of green space. \n\nSource: ABS - Australian Statistical Geography Standard',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Access to green space, % of dwellings',
   },
   airPollutionPm10: {
@@ -362,6 +408,7 @@ export default {
     longDescription: 'This shows the average amount of particulate matter in a city’s air per cubic metre, measured over the course of a year for particles that are less than 10 microns in diameter. \n\nSource: World Health Organisation',
     format: '0[.]0a',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Air quality, Annual mean, >PM10, ug/m3',
   },
   airPollutionPm2point5: {
@@ -370,6 +417,7 @@ export default {
     longDescription: 'This shows the average amount of particulate matter in a city’s air per cubic metre, measured over the course of a year for particles that are less than 2.5 microns in diameter. \n\nSource: World Health Organisation',
     format: '0[.]0a',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Air quality, Annual mean, <PM2.5, ug/m3',
   },
   energyEfficiencyOfBuildings: {
@@ -378,6 +426,7 @@ export default {
     longDescription: 'This shows the average National Australian Built Environment Rating System (NABERS) score for rated office buildings in the city, weighted by rated floor space. *Cities with fewer than 10 rated buildings are Albury Wodonga, Ballarat, Bendigo, Cairns, Geelong, Launceston, Mackay, Toowoomba, Townsville, Western Sydney and Sunshine Coast. \n\nSource: National Australian Built Environment Rating System',
     format: '0[.]0',
     contextual: false,
+    lastUpdated: '',
     source: 'Building energy efficiency, Average rating',
   },
   volunteeringRate: {
@@ -386,6 +435,7 @@ export default {
     longDescription: 'This shows the share of people aged 15 years and older who volunteered their time, services or skills to a club, organisation or association in the past twelve months. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Number of volunteers, All persons, % of Persons 15 or over',
   },
   // perceivedSafety: {
@@ -394,6 +444,7 @@ export default {
   //   longDescription: 'This shows the share of people aged 18 years and over who report that they feel safe or very safe walking alone in their local area after dark. \n\nSource: PHIDU – Social Health Atlas of Australia',
   //   format: '0[.]0%',
   //   contextual: false,
+  //   lastUpdated: '2014',
   //   source: 'TODO',
   // },
   homicideRate: {
@@ -402,6 +453,7 @@ export default {
     longDescription: 'Homicides per 100,000 persons',
     format: '0[.]0',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Violent crime rate, Homicides, Crimes against the person per 100,000',
   },
   adultObesity: {
@@ -410,6 +462,7 @@ export default {
     longDescription: 'This shows the share of people aged 18 and over with a body mass index (BMI) greater than 30. \n\nSource: PHIDU – Social Health Atlas of Australia',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2015',
     source: 'Percentage of the adult population who are obese, Estimated population, aged 18 years and over, who were obese, % of population',
   },
   crisisSupport: {
@@ -418,6 +471,7 @@ export default {
     longDescription: 'This shows the share of people that stated in a survey that they feel there is someone outside their household who could be asked for support in a time of crisis. \n\nSource: PHIDU – Social Health Atlas of Australia',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2014',
     source: 'Able to get support in times of crisis , % of population',
   },
   suicideRate: {
@@ -426,6 +480,7 @@ export default {
     longDescription: 'This shows the number of suicides in a year per 100,000 people, calculated over the period 2010 to 2014. \n\nSource: PHIDU – Social Health Atlas of Australia',
     format: '0[.]0',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Suicides, per 100 000',
   },
   householdsWithBroadband: {
@@ -434,6 +489,7 @@ export default {
     longDescription: 'This shows the share of households in a city with an active broadband connection, defined as an access speed of 256 kilobits per second or faster. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Percentage of households with a broadband connection, Internet accessed from dwelling, % of dwellings',
   },
   patentApplications: {
@@ -442,6 +498,7 @@ export default {
     longDescription: 'This shows the number of patent applications by people resident in a city per 100,000 people per year. \n\nSource: ABS Data by Region',
     format: '0[.]0',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Patents applications, Patent applications per 100 000',
   },
   newBusinessEntrants: {
@@ -450,6 +507,7 @@ export default {
     longDescription: 'This shows the business entry and exit rates: the number of new businesses that started actively trading on the business register over the past year as a share of the total number of registered businesses at the start of the year. \n\nSource: ABS Data by Region',
     format: '0[.]0a',
     contextual: false,
+    lastUpdated: '2016',
     source: 'New business entrants and exits, New Businesses as a share of the stock',
   },
   newBusinessExits: {
@@ -458,6 +516,7 @@ export default {
     longDescription: 'This shows the business entry and exit rates: the number of new businesses that started actively trading on the business register over the past year as a share of the total number of registered businesses at the start of the year. \n\nSource: ABS Data by Region',
     format: '0[.]0a',
     contextual: false,
+    lastUpdated: '2016',
     source: 'New business entrants and exits, Business exits as a share of the stock',
   },
   knowledgeWorkersRatio: {
@@ -466,6 +525,7 @@ export default {
     longDescription: 'This shows the share of employed persons that work in the top three knowledge-intensive service industries. \n\nSource: ABS Labour Force',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2017',
     source: 'Knowledge workers, All persons, % of total employment',
   },
   linkedInConnectivityLocal: {
@@ -474,6 +534,7 @@ export default {
     longDescription: 'This shows the average share of LinkedIn account holder contacts that are located in the same city, other parts of Australia or overseas. \n\nSource: LinkedIn',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '',
     source: 'LinkedIn connectivity, Average number of connections from local area, % of connections average',
   },
   linkedInConnectivityRestOfNation: {
@@ -482,6 +543,7 @@ export default {
     longDescription: 'This shows the average share of LinkedIn account holder contacts that are located in the same city, other parts of Australia or overseas. \n\nSource: LinkedIn',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '',
     source: 'LinkedIn connectivity, Average number of connections from the rest of Australia, % of connections average',
   },
   linkedInConnectivityInternational: {
@@ -490,6 +552,7 @@ export default {
     longDescription: 'This shows the average share of LinkedIn account holder contacts that are located in the same city, other parts of Australia or overseas. \n\nSource: LinkedIn',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '',
     source: 'LinkedIn connectivity, Average number of international connections, % of connections average',
   },
   localGovernmentDispersion: {
@@ -498,6 +561,7 @@ export default {
     longDescription: 'Number of Local Government Areas per 100,000 persons',
     format: '0[.]0',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Government Dispersion, Number of Local Government Areas per 100 000 persons',
   },
   populationDensity: {
@@ -506,6 +570,7 @@ export default {
     longDescription: 'This shows the number of persons per square kilometre. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Population-weighted density, Persons per square kilometre',
   },
   dependencyRatioNotWorkingAge: {
@@ -514,6 +579,7 @@ export default {
     longDescription: 'This shows the number of persons of non-working age (0-14 and 65+) per person of working age (15-64)',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dependency ratio, Ratio not of working age to working age, % ', // intentional space at end
   },
   dependencyRatio14OrYounger: {
@@ -522,6 +588,7 @@ export default {
     longDescription: 'This shows the share of population aged 0 to 14, 15 to 64, and 65 and over. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dependency ratio, All persons 0-14, % of population',
   },
   dependencyRatio15To64: {
@@ -530,6 +597,7 @@ export default {
     longDescription: 'This shows the share of population aged 0 to 14, 15 to 64, and 65 and over. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dependency ratio, All persons 15-64, % of population',
   },
   dependencyRatio65OrOlder: {
@@ -538,6 +606,7 @@ export default {
     longDescription: 'This shows the share of population aged 0 to 14, 15 to 64, and 65 and over. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dependency ratio, All persons 65+, % of population',
   },
   dependencyRatioMedianAge: {
@@ -546,6 +615,7 @@ export default {
     longDescription: 'This shows the median age. \n\nSource: ABS - Regional Population Growth',
     format: '0[.]0',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Dependency ratio, median age, All persons, years',
   },
   disabilityRate: {
@@ -554,6 +624,7 @@ export default {
     longDescription: 'This shows the proportion of the population that self identifies as having disability. \n\nSource: ABS - Disability, Ageing and Carers',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2015',
     source: 'Disability, all persons, % of population',
   },
   tenureRatioOwnedOutright: {
@@ -562,6 +633,7 @@ export default {
     longDescription: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Tenure ratio, Owned outright, %',
   },
   tenureRatioMortgage: {
@@ -570,6 +642,7 @@ export default {
     longDescription: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Tenure ratio, Owned with a mortgage, %',
   },
   tenureRatioRented: {
@@ -578,6 +651,7 @@ export default {
     longDescription: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Tenure ratio, Rented, %',
   },
   tenureRatioOther: {
@@ -586,6 +660,7 @@ export default {
     longDescription: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Tenure ratio, Other, %',
   },
   languagesOtherThanEnglish: {
@@ -594,6 +669,7 @@ export default {
     longDescription: 'This shows the proportion of residents who speak a language other than English at home. \n\nSource: ABS Census 2016',
     format: '0[.]0%',
     contextual: false,
+    lastUpdated: '2016',
     source: 'Language other than English spoken at home, All persons, % of population',
   },
 };

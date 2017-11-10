@@ -11,12 +11,16 @@ Highcharts.chart = jest.fn(() => chartMock);
 
 console.warn = jest.fn();
 
-jest.mock('../AboutTooltip/AboutTooltip', () => 'AboutTooltip');
 jest.mock('../Legend/Legend', () => 'Legend');
 jest.mock('../Icon/Icon', () => 'Icon');
 jest.mock('../../constants', () => ({
+  STRINGS: {
+    CONTEXTUAL_DEFINITION: 'CONTEXTUAL_DEFINITION',
+    PERFORMANCE_DEFINITION: 'PERFORMANCE_DEFINITION',
+  },
   COLOR_NAMES: {
     JOBS: 'jobs',
+    PLANNING: 'planning',
   },
   INDICATORS: {
     population: {
@@ -114,7 +118,7 @@ it('should call highcharts with the right config', () => {
 
   expect(config.series.length).toBe(1);
   expect(config.xAxis.categories.length).toBe(2); // the two mock cites
-  expect(config.yAxis.title.text).toBe('The population indicator short description');
+  expect(config.tooltip.borderColor).toBe('JOBS_900');
 });
 
 it('should call highcharts with the right config for multiple indicators', () => {
@@ -143,7 +147,7 @@ it('should update the chart when new props arrive', () => {
   expect(Highcharts.chart).toHaveBeenCalledTimes(1);
 
   component.setProps({
-    shortDescription: 'Some new title',
+    colorBase: 'planning',
   });
 
   // props changed, and a chart update is queued, but not run yet
@@ -157,7 +161,7 @@ it('should update the chart when new props arrive', () => {
 
   const config = Highcharts.chart.mock.calls[1][1];
 
-  expect(config.yAxis.title.text).toBe('Some new title');
+  expect(config.tooltip.borderColor).toBe('PLANNING_900');
 });
 
 it('should destroy the chart when dismounting', () => {
