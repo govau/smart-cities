@@ -1,0 +1,36 @@
+@import '~style/variables';
+
+.sectionWrapper {
+  padding: 48px 0;
+
+  &:nth-child(odd) {
+    background: $color-overview--020;
+  }
+}
+
+.sectionContainer {
+  @include container;
+}
+
+.title {
+  margin-bottom: 40px;
+  line-height: 1;
+  font-size: 44px;
+  font-weight: 300;
+}
+
+.subTitle {
+  padding-top: 16px;
+  margin-bottom: 16px;
+  line-height: 1;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.paragraph {
+  margin-bottom: 24px;
+}
+
+.listItem {
+  color: green;
+}

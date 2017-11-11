@@ -1,0 +1,15 @@
+@import '~style/variables';
+
+.link {
+  text-decoration: none;
+  border-bottom: 1px solid $color-highlight;
+  color: inherit;
+  transition: $animation-duration;
+
+  &:hover {
+    background: $color-primary--500;
+    border-bottom-color: transparent;
+    color: $color-white;
+    //text-decoration: none;
+  }
+}

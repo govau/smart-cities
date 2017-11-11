@@ -24,7 +24,8 @@ class CategoryNav extends Component {
 
   componentDidMount() {
     const activeEl = document.querySelector(`.${this.activeElementClassName}`);
-    scrollElementIntoView(activeEl);
+    // On some pages (e.g. /additional-info) there is no active category)
+    if (activeEl) scrollElementIntoView(activeEl);
   }
 
   render() {

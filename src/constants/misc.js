@@ -29,6 +29,11 @@ export const LINKS = {
   ORG: 'https://dta.gov.au/',
   CONTACT_US: 'mailto:performance-dashboard@digital.gov.au',
   CITIES_PERFORMANCE_NETWORK: 'https://cities.dpmc.gov.au/',
+  PROTECTING_PDF: 'https://www.ag.gov.au/RightsAndProtections/CyberSecurity/Documents/PDF%20-%20Protecting%20Yourself%20Online%20-%20Second%20Edition%20-%20Booklet.pdf',
+  PRIVACY_ACT: 'https://www.legislation.gov.au/Series/C2004A03712',
+  PRIVACY_PRINCIPLES: 'https://www.legislation.gov.au/Series/C2004A03712',
+  AGENCY_GUIDES: 'https://www.oaic.gov.au/agencies-and-organisations/guides/',
+  WCAG: 'https://www.w3.org/TR/WCAG20/',
 };
 
 export const STRINGS = {
