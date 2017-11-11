@@ -8,11 +8,6 @@ export const CARD_SIZES = {
   LARGE: 'large',
 };
 
-export const INDICATOR_CARD_TYPES = {
-  CATEGORY: 'CATEGORY',
-  INDICATOR: 'INDICATOR',
-};
-
 // note, the values are lowercase because they're used in CSS class names
 export const COLOR_NAMES = {
   OVERVIEW: 'overview',

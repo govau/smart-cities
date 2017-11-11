@@ -8,13 +8,30 @@
  */
 
 .wrapper {
+  @include shadow;
+
   display: flex;
   align-items: stretch;
   position: relative; // the P is absolute, relative to this
+  background: $color-white;
+  border-bottom-style: solid;
+  border-radius: 4px;
 
   &.largeCard {
     flex-direction: column;
   }
+}
+
+.smallCard {
+  height: 80px;
+  padding: 4px 8px 7px;
+  border-bottom-width: 6px;
+}
+
+.largeCard {
+  height: 160px;
+  padding: 4px 9px 13px;
+  border-bottom-width: 8px;
 }
 
 .header {

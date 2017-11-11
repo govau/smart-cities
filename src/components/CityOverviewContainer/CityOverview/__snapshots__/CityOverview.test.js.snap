@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<PageWrapper cityId=\\"perth\\" categoryId=\\"overview\\">
+"<PageWrapper cityId=\\"perth\\" cityName=\\"Perth\\" categoryColorName=\\"overview\\" categoryId=\\"overview\\">
   <PageBanner colorName=\\"overview\\" description=\\"Perth\\" indicator=\\"population\\" title=\\"Perth\\" city={{...}} />
   <CategoryOverviews city={{...}} />
 </PageWrapper>"

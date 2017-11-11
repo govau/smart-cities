@@ -8,18 +8,13 @@
   display: flex;
   align-items: center;
   line-height: 1.2;
-}
-
-.stacked {
-  .titleWrapper {
-    margin-bottom: 0;
-  }
+  margin-bottom: 11px;
 }
 
 .title {
   font-size: 22px;
   font-weight: 300;
-  margin: 0 7px 11px 0;
+  margin-right: 8px;
 
   @include for-tablet-landscape-up {
     font-size: 24px;
@@ -28,29 +23,23 @@
 
 .metaWrapper {
   font-size: 12px;
+  margin-bottom: 8px;
 }
 
 .indicatorTypeMark {
-  margin: -3px 8px 0 0;
+  margin: -3px 16px 0 0;
 }
 
 .legendWrapper {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: wrap;
   justify-content: flex-end;
-
-  @include for-tablet-landscape-up {
-    flex-direction: row;
-  }
+  margin-bottom: 8px;
 }
 
 .descriptionLabel {
-  display: none;
-
-  @include for-phone-only {
-    display: block;
-    font-size: 12px;
-  }
+  margin-bottom: 8px;
+  font-size: 12px;
 }
 
 .chartWrapper {

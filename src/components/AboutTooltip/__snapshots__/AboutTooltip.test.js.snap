@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`should match Snapshot 1`] = `
-"<Tooltip text=\\"This is the content of the tooltip\\" borderColor={[undefined]}>
-  <Icon icon=\\"questionMark\\" className={[undefined]} size={22} color={[undefined]} title=\\"about this indicator\\" />
-</Tooltip>"
-`;

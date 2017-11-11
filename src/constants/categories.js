@@ -21,7 +21,8 @@ export const CATEGORIES = [
     shortDescription: 'Contextual indicators can help to understand why a city performs the way it does and what policies may be effective for improving economic performance and quality of life.',
     heroIndicatorId: 'population',
     overviewIndicatorIds: [
-      'population',
+      'growthRate',
+      'population10yr',
     ],
     subCategories: [
       {

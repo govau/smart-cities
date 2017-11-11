@@ -2,7 +2,7 @@
 
 exports[`should match Snapshot 1`] = `
 <div
-  className="card card__small wrapper smallCard singleNumber"
+  className="wrapper smallCard singleNumber"
   style={
     Object {
       "borderBottomColor": "#fff",

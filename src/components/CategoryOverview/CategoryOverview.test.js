@@ -5,7 +5,7 @@ import CategoryOverview from './CategoryOverview';
 import { CATEGORY_IDS } from '../../constants';
 
 jest.mock('../Icon/Icon', () => 'Icon');
-jest.mock('../Card/IndicatorCard/IndicatorCard', () => 'IndicatorCard');
+jest.mock('../IndicatorCard/IndicatorCard', () => 'IndicatorCard');
 jest.mock('../Pill/Pill', () => 'Pill');
 
 const defaultProps = {

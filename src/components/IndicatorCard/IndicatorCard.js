@@ -2,15 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
 import classnames from 'classnames';
-import Card from '../Card';
-import Icon from '../../Icon/Icon';
+import Icon from '../Icon/Icon';
 import {
   CARD_SIZES,
   INDICATORS,
-  INDICATOR_CARD_TYPES,
-} from '../../../constants';
-import stripPrefixAndSuffix from '../../../helpers/stripPrefixAndSuffix';
-import getColorVariant from '../../../helpers/getColorVariant';
+} from '../../constants';
+import stripPrefixAndSuffix from '../../helpers/stripPrefixAndSuffix';
+import getColorVariant from '../../helpers/getColorVariant';
 import style from './IndicatorCard.scss';
 
 // we don't create a new component here because the number styles are
@@ -94,10 +92,9 @@ const IndicatorCard = (props) => {
   );
 
   return (
-    <Card
-      {...props}
-      type={INDICATOR_CARD_TYPES.INDICATOR}
+    <div
       className={className}
+      style={{ borderBottomColor: props.color }}
     >
       <p className={style.header}>{indicator.name}</p>
 
@@ -128,7 +125,7 @@ const IndicatorCard = (props) => {
           })
         )}
       </div>
-    </Card>
+    </div>
   );
 };
 

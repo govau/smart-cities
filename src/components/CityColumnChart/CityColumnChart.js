@@ -5,7 +5,7 @@ import Highcharts from 'highcharts';
 import kebabCase from 'lodash/kebabCase';
 import merge from 'lodash/merge';
 import numeral from 'numeral';
-import AboutTooltip from '../AboutTooltip/AboutTooltip';
+import Tooltip from '../Tooltip/Tooltip';
 import Legend from '../Legend/Legend';
 import Icon from '../Icon/Icon';
 import baseChartConfig from '../../helpers/baseChartConfig';
@@ -13,6 +13,7 @@ import getColorRange from '../../helpers/getColorRange';
 import getColorVariant from '../../helpers/getColorVariant';
 import {
   COLOR_NAMES,
+  STRINGS,
   INDICATORS,
 } from '../../constants';
 import style from './CityColumnChart.scss';
@@ -85,23 +86,16 @@ function getChartConfig(props) {
   // also be passed in explicitly (e.g. for charts where there are more than one indicator)
   // so here we take the passed in value, or the value from the first indicator otherwise.
   const firstIndicator = INDICATORS[props.indicatorIds[0]];
-  const shortDescription = props.shortDescription || firstIndicator.shortDescription;
   const data = sortChartData(props.cities, props.indicatorIds[0]);
   const plotBands = getPlotBands(data, props.city, colorLight);
   const series = getSeries(props);
-
-  // We only want to show the short description as the chart title
-  // if the chart is not stacked
-  const yAxisTitle = isMultiple ? {} : { text: shortDescription };
-  const ceiling = props.stacked ? 1 : null;
 
   const columnChartConfig = {
     series,
     chart: {
       type: 'column',
       height: 500,
-      marginLeft: 60,
-      marginRight: 0,
+      spacingLeft: 30, // allow room for angled text
       style: {
         fontFamily: 'inherit', // to pick up the body font
       },
@@ -144,7 +138,7 @@ function getChartConfig(props) {
       },
     },
     yAxis: {
-      ceiling,
+      ceiling: props.stacked ? 1 : null,
       labels: {
         padding: 0,
         x: 0,
@@ -154,7 +148,9 @@ function getChartConfig(props) {
           return numeral(this.value).format(firstIndicator.format);
         },
       },
-      title: yAxisTitle,
+      title: {
+        text: null,
+      },
       gridZIndex: 4, // magic highcharts value to position grid lines in front of the bars: http://api.highcharts.com/highcharts/yAxis.gridZIndex
     },
     title: {
@@ -203,7 +199,7 @@ function getChartConfig(props) {
         chartOptions: {
           chart: {
             height: 400,
-            marginLeft: 25,
+            spacingLeft: 10,
           },
           plotOptions: {
             series: {
@@ -303,21 +299,37 @@ class CityColumnChart extends Component {
             {title}
           </h4>
 
-          <AboutTooltip
+          <Tooltip
             text={longDescription}
-            color={colorMedium}
-            className={style.aboutChartIcon}
-          />
+            borderColor={colorMedium}
+          >
+            <Icon
+              icon="questionMark"
+              className={style.aboutChartIcon}
+              size={22}
+              color={colorMedium}
+              title="about this indicator"
+            />
+          </Tooltip>
         </div>
 
         <div className={style.metaWrapper}>
-          <Icon
-            className={style.indicatorTypeMark}
-            color={colorDark}
-            icon={firstIndicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
-            size={14}
-          />
-          {firstIndicator.contextual ? 'Contextual' : 'Performance'} indicator
+          <Tooltip
+            borderColor={colorMedium}
+            text={firstIndicator.contextual
+              ? STRINGS.CONTEXTUAL_DEFINITION
+              : STRINGS.PERFORMANCE_DEFINITION
+            }
+          >
+            <Icon
+              className={style.indicatorTypeMark}
+              color={colorDark}
+              icon={firstIndicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
+              size={14}
+            />
+          </Tooltip>
+
+          {firstIndicator.lastUpdated && `Last updated ${firstIndicator.lastUpdated}`}
         </div>
 
         {isMultiple && (
@@ -328,11 +340,9 @@ class CityColumnChart extends Component {
           />
         )}
 
-        {isMultiple || (
-          <div className={style.descriptionLabel}>
-            {shortDescription}
-          </div>
-        )}
+        <div className={style.descriptionLabel}>
+          {shortDescription}
+        </div>
 
         <div className={style.chartWrapper}>
           <div id={this.chartDivId} />

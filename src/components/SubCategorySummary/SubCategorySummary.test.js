@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import CategoryBanner from './SubCategorySummary';
 import { CATEGORY_IDS } from '../../constants';
 
-jest.mock('../Card/IndicatorCard/IndicatorCard', () => 'IndicatorCard');
+jest.mock('../IndicatorCard/IndicatorCard', () => 'IndicatorCard');
 jest.mock('../Icon/Icon', () => 'Icon');
 
 const defaultProps = {

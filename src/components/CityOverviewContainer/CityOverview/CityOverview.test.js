@@ -8,6 +8,7 @@ jest.mock('../../PageBanner/PageBanner', () => 'PageBanner');
 const defaultProps = {
   city: {
     shortName: 'Perth',
+    name: 'Perth',
     description: 'Perth',
     id: 'perth',
   },

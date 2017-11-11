@@ -10,6 +10,7 @@ module.exports = {
           'if',
           'include',
           'mixin',
+          'supports',
           'content',
         ],
       },

@@ -41,8 +41,8 @@ const Header = props => (
     {props.cityName && (
       <CityHeader
         cityName={props.cityName}
+        cityId={props.cityId}
         categoryColorName={props.categoryColorName}
-        categoryIconId={props.categoryIconId}
       />
     )}
 
@@ -58,7 +58,6 @@ Header.propTypes = {
   cityId: PropTypes.string.isRequired,
   cityName: PropTypes.string,
   categoryColorName: PropTypes.string,
-  categoryIconId: PropTypes.string,
   categoryId: PropTypes.string.isRequired,
   openNav: PropTypes.func.isRequired,
 };
