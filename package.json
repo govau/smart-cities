@@ -1,6 +1,6 @@
 {
   "name": "smart-cities",
-  "version": "1.0.0",
+  "version": "6.0.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -93,7 +93,8 @@
     "test": "node scripts/test.js --env=jsdom --colors",
     "test:coverage": "npm run test -- --coverage",
     "test:ci": "CI=true npm run test -- --coverage --runInBand --colors",
-    "generate-city-data": "node -r @std/esm scripts/convert.js < resources/cities.csv > public/data/smartCitiesData.json"
+    "generate-city-data": "node -r @std/esm scripts/convert.js < resources/cities.csv > public/data/smartCitiesData.json",
+    "deploy": "npm version major && git push --tags"
   },
   "jest": {
     "clearMocks": true,

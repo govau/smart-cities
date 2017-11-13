@@ -2,19 +2,12 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 
 version: 2
+
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:8.1.2
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
     working_directory: ~/repo
-
     steps:
       - checkout
       - restore_cache:
@@ -22,23 +15,60 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-      - run: rm -rf node_modules
       - run: npm install
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
-      - deploy:
-          name: Deploy app
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ./scripts/prepare_build.sh && \
-                ./scripts/cf_staging.sh && \
-                cf zero-downtime-push smart-cities-dev -f manifest.yml -p build
-            fi
-            if [ "${CIRCLE_BRANCH}" == "staging" ]; then
-              ./scripts/prepare_build.sh && \
-                ./scripts/cf_staging.sh && \
-                cf zero-downtime-push smart-cities-staging -f manifest.yml -p build
-            fi
+  deploy_staging: 
+    docker: 
+      - image: circleci/node:8.1.2
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: ./scripts/prepare_build.sh
+      - run: ./scripts/cf_staging.sh
+      - run: cf zero-downtime-push smart-cities-staging -f manifest.yml -p build
+  deploy_production: 
+    docker: 
+      - image: circleci/node:8.1.2
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: ./scripts/prepare_build.sh
+      - run: ./scripts/cf_production.sh
+      - run: cf zero-downtime-push smart-cities -f manifest.yml -p build
+workflows: 
+  version: 2
+  build_test_deploy:
+    jobs: 
+      - build:
+          filters:
+            tags:
+              only: /.*/ # i.e. always build for all tags & branches
+      - deploy_staging: 
+          requires: 
+            - build
+          filters: 
+            branches: 
+              only: /^master$/
+      - deploy_production:
+          requires: 
+            - build
+          filters: 
+            branches: 
+              ignore: 
+                /.*/
+            tags: 
+              only: /^v.*/

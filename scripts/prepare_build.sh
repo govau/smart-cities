@@ -4,16 +4,16 @@ set -euxo pipefail
 
 # Build the app
 
+npm install
 npm run build
 npm run generate-city-data
 
 # Install CF CLI 
 
-curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&version=6.17.0&source=github'
+curl -v -L -o cf-cli_amd64.deb 'https://cli.run.pivotal.io/stable?release=debian64&version=6.32.0&source=github-rel'
 sudo dpkg -i cf-cli_amd64.deb
 
 # Install Autopilot plugin
 
-curl -v -L -o ~/autopilot-linux https://github.com/contraband/autopilot/releases/download/0.0.3/autopilot-linux
-chmod a+x ~/autopilot-linux
-cf install-plugin -f ~/autopilot-linux
+cf install-plugin https://github.com/govau/autopilot/releases/download/0.0.5-venapp/autopilot-linux -f
+
