@@ -31,39 +31,3 @@ it('should render the href as the text if no children are supplied', () => {
 
   expect(component.text()).toBe('https://www.example.com');
 });
-
-describe('when the external flag is not set', () => {
-  it('should set no target', () => {
-    const component = shallow(
-      <Link  {...defaultProps} />
-    );
-
-    expect(component.prop('target')).toBe(null)
-  });
-
-  it('should add rel noopener noreferrer', () => {
-    const component = shallow(
-      <Link  {...defaultProps} />
-    );
-
-    expect(component.prop('rel')).toBe(null)
-  });
-});
-
-describe('when the external flag is true', () => {
-  it('should add target="_blank', () => {
-    const component = shallow(
-      <Link  {...defaultProps} external />
-    );
-
-    expect(component.prop('target')).toBe('_blank')
-  });
-
-  it('should add rel noopener noreferrer', () => {
-    const component = shallow(
-      <Link  {...defaultProps} external />
-    );
-
-    expect(component.prop('rel')).toBe('noopener noreferrer')
-  });
-});

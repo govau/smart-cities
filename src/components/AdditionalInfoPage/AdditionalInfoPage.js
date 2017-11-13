@@ -18,15 +18,15 @@ const AdditionalInfoPage = () => (
         <p className={style.paragraph}>
           Our website aims to meet the Australian Government’s web accessibility requirements,
           including meeting the World Wide Web
-          Consortium’s <Link href={LINKS.WCAG} external>
-          Web Content Accessibility Guidelines version 2.0 (WCAG 2.0)</Link> at level AA.
+          Consortium’s <Link href={LINKS.WCAG}>Web Content Accessibility
+          Guidelines version 2.0 (WCAG 2.0)</Link> at level AA.
         </p>
 
         <p className={style.paragraph}>
           Providing our information to all users, including those with a disability, is
           important to us. If anything on this site is inaccessible to you, or you are
           experiencing problems accessing content for any reason,
-          please <Link href={LINKS.CONTACT_US} external>contact us</Link>.
+          please <Link href={LINKS.CONTACT_US}>contact us</Link>.
         </p>
       </div>
     </section>
@@ -65,8 +65,7 @@ const AdditionalInfoPage = () => (
         <p className={style.paragraph}>
           You should take appropriate and adequate precautions to prevent damage to your
           computer system, software or data. See how by
-          reading <Link href={LINKS.PROTECTING_PDF} external>Protecting Yourself
-          Online (PDF 2.7MB)</Link>.
+          reading <Link href={LINKS.PROTECTING_PDF}>Protecting Yourself Online (PDF 2.7MB)</Link>.
         </p>
       </div>
     </section>
@@ -77,13 +76,12 @@ const AdditionalInfoPage = () => (
 
         <p className={style.paragraph}>
           This privacy statement is
-          about <Link href={LINKS.SMART_CITIES_LINK} external /> —
-          this is an online service managed by the Digital Transformation Agency (DTA).
-          The DTA is located in Canberra, Australia.
+          about <Link href={LINKS.SMART_CITIES_LINK} /> — this is an online service managed
+          by the Digital Transformation Agency (DTA). The DTA is located in Canberra, Australia.
         </p>
 
         <p className={style.paragraph}>
-          The <Link href={LINKS.DTA_PRIVACY_POLICY} external>Digital Transformation
+          The <Link href={LINKS.DTA_PRIVACY_POLICY}>Digital Transformation
           Agency privacy policy</Link> describes how we handle your personal information.
         </p>
 
@@ -97,7 +95,7 @@ const AdditionalInfoPage = () => (
         </p>
 
         <p className={style.paragraph}>
-          This DTA website is bound by the <Link href={LINKS.PRIVACY_ACT} external>Commonwealth
+          This DTA website is bound by the <Link href={LINKS.PRIVACY_ACT}>Commonwealth
           Privacy Act 1988</Link>, including the Australian Privacy Principles
           contained in the Privacy Act.
         </p>
@@ -111,13 +109,13 @@ const AdditionalInfoPage = () => (
         <p className={style.paragraph}>
           City photo - Albury<br />
           Tim J Keegan<br />
-          Link: <Link href={LINKS.ALBURY_PHOTO_CREDIT} external />
+          Link: <Link href={LINKS.ALBURY_PHOTO_CREDIT} />
         </p>
 
         <p className={style.paragraph}>
-          Site Icons<br />
+          Site icons<br />
           Creative Media<br />
-          Link: <Link href={LINKS.ICON_CREDIT} external />
+          Link: <Link href={LINKS.ICON_CREDIT} />
         </p>
       </div>
     </section>

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<a className=\\"link\\" href=\\"https://www.example.com\\" rel={{...}} target={{...}}>
+"<a className=\\"link\\" href=\\"https://www.example.com\\" rel=\\"noopener noreferrer\\" target=\\"_blank\\">
   https://www.example.com
 </a>"
 `;
