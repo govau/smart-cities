@@ -117,9 +117,9 @@ CircleCI will test all commits pushed to the repo. As soon as a branch is merged
 to the `master` branch, it will (assuming tests pass) additionally deploy to the
 `smart-cities-staging` instance.
 
-Production deploys are triggered when a tag is pushed with a name in the form `release-*`.
-To deploy, simply: 
+Production deploys are triggered when a tag is pushed with a version as tag name
+such as `v1.0.0`. To deploy, simply:
 
 ```
-git tag `date "+release-%Y%m%d%H%M%S"` && git push --tags
+npm deploy
 ```
