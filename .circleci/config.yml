@@ -72,4 +72,4 @@ workflows:
                 /.*/
             tags: 
               only: 
-                /^v\d/
+                /^v[0-9]/
