@@ -14,23 +14,12 @@
 
 .title {
   margin-bottom: 40px;
-  line-height: 1;
+  line-height: 1.2;
   font-size: 44px;
-  font-weight: 300;
-}
-
-.subTitle {
-  padding-top: 16px;
-  margin-bottom: 16px;
-  line-height: 1;
-  font-size: 30px;
   font-weight: 300;
 }
 
 .paragraph {
   margin-bottom: 24px;
-}
-
-.listItem {
-  color: green;
+  word-wrap: break-word; // the long links on mobile are wider than 300px
 }
