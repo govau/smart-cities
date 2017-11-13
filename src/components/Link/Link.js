@@ -14,13 +14,13 @@ const Link = (props) => {
       rel={rel}
       target={target}
     >
-      {props.children}
+      {props.children || props.href}
     </a>
   );
 };
 
 Link.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string,
   className: PropTypes.string,
   external: PropTypes.bool,
   href: PropTypes.string.isRequired,
