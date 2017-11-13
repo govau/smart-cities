@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: $top-nav-height-mobile;
-  background: $color-white;
+  background: $color-grey--800;
   z-index: $z-index-cat-nav;
 
   // Colors are all inverted on the overview page
@@ -61,7 +61,7 @@
     // the other links are different for hover and active
     .overview {
       border: 2px solid $color-grey--500;
-      color: $color-grey--700;
+      //color: $color-grey--700;
 
       .wrapper__overview & {
         color: $color-white;
@@ -138,7 +138,7 @@
 
   padding: 0 24px;
   border-radius: 100px;
-  color: $color-grey--700;
+  color: $color-grey--500;
   border: 2px solid transparent;
   font-size: 14px;
 

@@ -10,7 +10,7 @@ export default {
     labels: {
       style: {
         fontSize: 11,
-        color: COLORS.GREY_700,
+        color: COLORS.GREY_500,
       },
     },
   },
@@ -20,13 +20,13 @@ export default {
       y: 20,
       style: {
         fontSize: 11,
-        color: COLORS.GREY_700,
+        color: COLORS.GREY_500,
       },
     },
     title: {
       y: 15,
       style: {
-        color: COLORS.GREY_700,
+        color: COLORS.GREY_500,
         fontWeight: 700,
       },
     },
