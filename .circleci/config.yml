@@ -71,4 +71,4 @@ workflows:
               ignore: 
                 /.*/
             tags: 
-              only: /^v/
+              only: /^v.*/
