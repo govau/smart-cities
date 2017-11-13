@@ -5,7 +5,7 @@ exports[`should match Snapshot 1`] = `
   <div className=\\"legendItem\\">
     <span style={{...}} className=\\"legendItemMarker\\" />
     <span className=\\"legendItemText\\">
-      Other
+      House
     </span>
   </div>
   <div className=\\"legendItem\\">
@@ -17,7 +17,7 @@ exports[`should match Snapshot 1`] = `
   <div className=\\"legendItem\\">
     <span style={{...}} className=\\"legendItemMarker\\" />
     <span className=\\"legendItemText\\">
-      House
+      Other
     </span>
   </div>
 </div>"

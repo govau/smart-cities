@@ -25,15 +25,11 @@ jest.mock('../../constants', () => ({
   INDICATORS: {
     population: {
       name: 'The population indicator name',
-      shortDescription: 'The population indicator short description',
-      longDescription: 'The population indicator long description',
       format: '0[.]0a',
       contextual: true,
     },
     growthRate: {
       name: 'The growthRate indicator name',
-      shortDescription: 'The growthRate indicator short description',
-      longDescription: 'The growthRate indicator long description',
       format: '0[.]0a',
       contextual: false,
     },
@@ -47,6 +43,12 @@ jest.mock('../../helpers/getColorRange', () => () => [
 ]);
 
 const defaultProps = {
+  chart: {
+    indicatorIds: [
+      'population'
+    ],
+    description: 'the description of the task',
+  },
   colorBase: 'jobs',
   highlightColorLight: 'JOBS_040',
   highlightColorDark: 'JOBS_600',
@@ -66,9 +68,6 @@ const defaultProps = {
       }
     },
   ],
-  indicatorIds: [
-    'population'
-  ]
 };
 
 it('should match Snapshot', () => {
@@ -127,7 +126,13 @@ it('should call highcharts with the right config for multiple indicators', () =>
   shallow(
     <CityColumnChart
       {...defaultProps}
-      indicatorIds={['population', 'growthRate']}
+      chart={{
+        description: 'the description',
+        indicatorIds: [
+          'population',
+          'growthRate',
+        ]
+      }}
     />);
 
   jest.runAllTimers();
@@ -182,7 +187,13 @@ it('should render a legend when there is more than one indicator', () => {
   const component = shallow(
     <CityColumnChart
       {...defaultProps}
-      indicatorIds={['population', 'growthRate']}
+      chart={{
+        description: 'the description',
+        indicatorIds: [
+          'population',
+          'growthRate',
+        ]
+      }}
     />
   );
 
@@ -193,7 +204,6 @@ it('should not render a legend when there is only one indicator', () => {
   const component = shallow(
     <CityColumnChart
       {...defaultProps}
-      indicatorIds={['population']}
     />
   );
 

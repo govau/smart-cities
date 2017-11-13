@@ -40,15 +40,12 @@ const SubCategoryCharts = (props) => {
           {heroChart &&
             <div className={style.heroChartWrapper}>
               <CityColumnChart
-                title={heroChart.name}
-                longDescription={heroChart.longDescription}
+                chart={heroChart}
                 cities={props.cities}
                 city={props.city}
                 colorBase={props.colorName}
                 highlightColorLight={subCategory.highlightColorLight}
                 highlightColorDark={subCategory.highlightColorDark}
-                indicatorIds={heroChart.indicatorIds}
-                stacked={heroChart.stacked}
               />
             </div>
           }
@@ -59,15 +56,12 @@ const SubCategoryCharts = (props) => {
               key={chart.name}
             >
               <CityColumnChart
-                title={chart.name}
-                longDescription={chart.longDescription}
+                chart={chart}
                 cities={props.cities}
                 city={props.city}
                 colorBase={props.colorName}
                 highlightColorLight={subCategory.highlightColorLight}
                 highlightColorDark={subCategory.highlightColorDark}
-                indicatorIds={chart.indicatorIds}
-                stacked={chart.stacked}
               />
             </div>
           ))}

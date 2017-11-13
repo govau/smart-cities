@@ -13,6 +13,8 @@ const Icon = (props) => {
   );
 
   const size = props.size ? `${props.size}px` : null;
+  // allow an empty string to be passed in as the title
+  const title = 'title' in props ? props.title : icon.title;
 
   return (
     <svg
@@ -22,7 +24,7 @@ const Icon = (props) => {
       viewBox={icon.viewBox}
       style={{ color: props.color }}
     >
-      <title>{props.title || icon.title}</title>
+      <title>{title}</title>
 
       {icon.body}
     </svg>

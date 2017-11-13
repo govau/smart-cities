@@ -37,7 +37,8 @@
   margin-bottom: 8px;
 }
 
-.descriptionLabel {
+.axisTitle {
+  height: 20px; // we want it to take up space even with no text
   margin-bottom: 8px;
   font-size: 12px;
 }

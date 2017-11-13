@@ -52,12 +52,12 @@ function sortChartData(cities, indicator) {
 
 function getSeries(props) {
   const colorMedium = getColorVariant(props.highlightColorDark);
-  const chartColors = getColorRange(colorMedium, props.indicatorIds.length);
-  const data = sortChartData(props.cities, props.indicatorIds[0]);
+  const chartColors = getColorRange(colorMedium, props.chart.indicatorIds.length);
+  const data = sortChartData(props.cities, props.chart.indicatorIds[0]);
 
-  return props.indicatorIds.map((indicatorId, i) => ({
-    index: props.indicatorIds.length - i, // reverse sort series (to counteract Highcharts)
-    name: INDICATORS[indicatorId].shortDescription,
+  return props.chart.indicatorIds.map((indicatorId, i) => ({
+    index: props.chart.indicatorIds.length - i, // reverse sort series (to counteract Highcharts)
+    name: INDICATORS[indicatorId].legendText,
     color: chartColors[i],
     data: getSeriesDataForIndicator(data, indicatorId, props.city),
   }));
@@ -78,17 +78,23 @@ function getPlotBands(cities, city, color) {
 }
 
 function getChartConfig(props) {
-  const isMultiple = props.indicatorIds.length > 1;
+  const isMultiple = props.chart.indicatorIds.length > 1;
   const colorLight = getColorVariant(props.highlightColorLight);
   const colorDark = getColorVariant(props.colorBase, '900');
 
   // The indicator data contains things like titles and descriptions. But these can
   // also be passed in explicitly (e.g. for charts where there are more than one indicator)
   // so here we take the passed in value, or the value from the first indicator otherwise.
-  const firstIndicator = INDICATORS[props.indicatorIds[0]];
-  const data = sortChartData(props.cities, props.indicatorIds[0]);
+  const firstIndicator = INDICATORS[props.chart.indicatorIds[0]];
+  const data = sortChartData(props.cities, props.chart.indicatorIds[0]);
   const plotBands = getPlotBands(data, props.city, colorLight);
   const series = getSeries(props);
+
+  let ceiling = null;
+  if ('max' in props.chart) ceiling = props.chart.max;
+  if (props.chart.stacked) ceiling = 1;
+
+  const floor = 'min' in props.chart ? props.chart.min : null;
 
   const columnChartConfig = {
     series,
@@ -103,7 +109,7 @@ function getChartConfig(props) {
     plotOptions: {
       series: {
         animation: false,
-        stacking: props.stacked ? 'normal' : null,
+        stacking: props.chart.stacked ? 'normal' : null,
         pointWidth: 8,
         borderRadius: 4,
         borderWidth: 0,
@@ -138,7 +144,8 @@ function getChartConfig(props) {
       },
     },
     yAxis: {
-      ceiling: props.stacked ? 1 : null,
+      ceiling,
+      floor,
       labels: {
         padding: 0,
         x: 0,
@@ -233,7 +240,7 @@ class CityColumnChart extends Component {
   constructor(props) {
     super(props);
 
-    this.chartDivId = kebabCase(`${props.indicatorIds[0]}-chart`);
+    this.chartDivId = kebabCase(`${props.chart.indicatorIds[0]}-chart`);
     this.chart = null;
     this.timer = null;
   }
@@ -274,33 +281,29 @@ class CityColumnChart extends Component {
 
   render() {
     const { props } = this;
-    const isMultiple = props.indicatorIds.length > 1;
+    const isMultiple = props.chart.indicatorIds.length > 1;
     const colorMedium = getColorVariant(props.highlightColorDark);
     const colorDark = getColorVariant(props.colorBase, '900');
 
     // The indicator data contains things like titles and descriptions. But these can
     // also be passed in explicitly (e.g. for charts where there are more than one indicator)
     // so here we take the passed in value, or the value from the first indicator otherwise.
-    const firstIndicator = INDICATORS[props.indicatorIds[0]];
-    const title = props.title || firstIndicator.name;
-    const shortDescription = props.shortDescription || firstIndicator.shortDescription;
-    const longDescription = props.longDescription || firstIndicator.longDescription;
+    const firstIndicator = INDICATORS[props.chart.indicatorIds[0]];
 
     const className = classnames(
       style.wrapper,
       props.className,
-      { [style.stacked]: isMultiple },
     );
 
     return (
       <div className={className}>
         <div className={style.titleWrapper}>
           <h4 className={style.title}>
-            {title}
+            {props.chart.name}
           </h4>
 
           <Tooltip
-            text={longDescription}
+            text={props.chart.description}
             borderColor={colorMedium}
           >
             <Icon
@@ -308,7 +311,7 @@ class CityColumnChart extends Component {
               className={style.aboutChartIcon}
               size={22}
               color={colorMedium}
-              title="about this indicator"
+              title=""
             />
           </Tooltip>
         </div>
@@ -326,6 +329,7 @@ class CityColumnChart extends Component {
               color={colorDark}
               icon={firstIndicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
               size={14}
+              title=""
             />
           </Tooltip>
 
@@ -340,8 +344,8 @@ class CityColumnChart extends Component {
           />
         )}
 
-        <div className={style.descriptionLabel}>
-          {shortDescription}
+        <div className={style.axisTitle}>
+          {props.chart.axisTitle}
         </div>
 
         <div className={style.chartWrapper}>
@@ -358,19 +362,23 @@ const cityType = PropTypes.shape({
 });
 
 CityColumnChart.propTypes = {
+  chart: PropTypes.shape({
+    indicatorIds: PropTypes.arrayOf(
+      PropTypes.oneOf(Object.keys(INDICATORS)),
+    ).isRequired,
+    description: PropTypes.string,
+    axisTitle: PropTypes.string,
+    min: PropTypes.number,
+    max: PropTypes.number,
+    name: PropTypes.string,
+    stacked: PropTypes.bool,
+  }).isRequired,
   cities: PropTypes.arrayOf(cityType).isRequired,
   city: cityType,
   className: PropTypes.string,
   colorBase: PropTypes.oneOf(Object.values(COLOR_NAMES)).isRequired,
   highlightColorLight: PropTypes.string.isRequired,
   highlightColorDark: PropTypes.string.isRequired,
-  indicatorIds: PropTypes.arrayOf(
-    PropTypes.oneOf(Object.keys(INDICATORS)),
-  ).isRequired,
-  longDescription: PropTypes.string,
-  shortDescription: PropTypes.string,
-  title: PropTypes.string,
-  stacked: PropTypes.bool,
 };
 
 export default CityColumnChart;
