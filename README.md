@@ -107,7 +107,8 @@ being merged back into `master`. Branch names should contain the issues number
 and start with either `fix/` or `feature/`. E.g. a branch name for adding
 the navigation menu might be `feature/324-nav-menu`.
 
-# Deployment ## Manual deployment
+# Deployment
+## Manual deployment
 For deployment to a CloudFoundry server simply [install the CLI](https://github.com/cloudfoundry/cli), log in and then `cf push`. The `manifest.yml` file
 can be tweaked if needed. Currently we are using a 'static file' buildpack. Note that
 only the `build` directory is deployed, so you should `npm build` before deploying.
