@@ -118,8 +118,9 @@ to the `master` branch, it will (assuming tests pass) additionally deploy to the
 `smart-cities-staging` instance.
 
 Production deploys are triggered when a tag is pushed with a version as tag name
-such as `v1.0.0`. To deploy, simply:
+such as `v1.0.0`. To deploy, ensure the working directory is clean (i.e., all files 
+have been added and committed), then:
 
 ```
-npm deploy
+npm run deploy
 ```
