@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import classNames from 'classnames';
 import CityNavContainer from '../CityNavContainer/CityNavContainer';
 import style from './SideBar.scss';
-import coaWhite from './coa-white.svg';
+import coaWhite from '../../images/coa-white.svg';
 
 class SideBar extends Component {
   componentWillReceiveProps(nextProps) {
@@ -65,8 +65,8 @@ SideBar.defaultProps = {
 };
 
 
-// withRouter makes location available to we can test when to close the SideBar
-// but it breaks unit tests, so we also export the 'raw' sidebar just for testing
+// withRouter makes location available so we know when to close the SideBar
+// but it breaks unit tests, so we also export the 'raw' component just for testing
 export const UnwrappedSideBar = SideBar;
 
 export default withRouter(SideBar);

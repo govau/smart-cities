@@ -99,6 +99,7 @@ function getChartConfig(props) {
   const columnChartConfig = {
     series,
     chart: {
+      animation: false,
       type: 'column',
       height: 500,
       spacingLeft: 30, // allow room for angled text

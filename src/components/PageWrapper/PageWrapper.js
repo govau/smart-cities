@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import FooterContainer from '../FooterContainer/FooterContainer';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import SideBar from '../SideBar/SideBar';
 import style from './PageWrapper.scss';
 import blockScroll from '../../helpers/blockScroll';
@@ -72,7 +72,7 @@ class PageWrapper extends Component {
             {this.props.children}
           </main>
 
-          <Footer />
+          <FooterContainer categoryId={this.props.categoryId} />
         </div>
       </div>
     );

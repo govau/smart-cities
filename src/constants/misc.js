@@ -20,11 +20,20 @@ export const COLOR_NAMES = {
   PLANNING: 'planning',
 };
 
+export const ELEMENT_IDS = {
+  ACCESSIBILITY: 'accessibility',
+  PRIVACY_POLICY: 'privacy',
+  SECURITY: 'security',
+  CONTENT_CREDIT: 'content-credit',
+};
+
 export const LINKS = {
   ALBURY_PHOTO_CREDIT: 'https://www.flickr.com/photos/49333819@N00',
   CITIES_PERFORMANCE_NETWORK: 'https://cities.dpmc.gov.au/',
   CONTACT_US: 'mailto:performance-dashboard@digital.gov.au',
   DTA_PRIVACY_POLICY: 'https://www.dta.gov.au/privacy-statement/',
+  FEEDBACK: '/feedback',
+  ADDITIONAL_INFORMATION: '/additional-information',
   ICON_CREDIT: 'https://thenounproject.com/CreativeMania',
   ORG: 'https://dta.gov.au/',
   PRIVACY_ACT: 'https://www.legislation.gov.au/Series/C2004A03712',
@@ -37,4 +46,12 @@ export const STRINGS = {
   SUB_CATS_INCLUDE: 'Sub categories include:',
   CONTEXTUAL_DEFINITION: 'Contextual indicators highlight the characteristics of a city that are not amenable to or potentially appropriate for local policy intervention but they can help to explain why a city performs the way it does.',
   PERFORMANCE_DEFINITION: 'A performance indicator is a measurable value that demonstrates how effectively cities are performing against the Australian Government’s Smart Cities policy priorities.',
+  PRIVACY_LINK: 'Privacy policy',
+  TERMS_LINK: 'Terms and conditions',
+  HELP_LINK: 'Need help?',
+  ACCESSIBILITY_LINK: 'Accessibility',
+  SECURITY_LINK: 'Security',
+  CONTENT_CREDIT: 'Content credit',
+  FEEDBACK_LINK: 'Give feedback',
+  COPYRIGHT: '© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.',
 };

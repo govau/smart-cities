@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<footer className=\\"wrapper\\">
+  <div className=\\"container\\">
+    <div className=\\"logosWrapper\\">
+      <div className=\\"coaWrapper\\">
+        <img className=\\"coaLogo\\" src=\\"coa-white.svg\\" alt=\\"coat of arms\\" />
+      </div>
+      <div className=\\"logoDivider\\" />
+      <img className=\\"dtaLogo\\" src=\\"dtaLogo.svg\\" alt=\\"dta\\" />
+    </div>
+    <div className=\\"wordsWrapper\\">
+      <div className=\\"staticLinksWrapper\\">
+        <a href=\\"/feedback\\" className=\\"staticLink\\">
+          Give feedback
+        </a>
+        <a href=\\"/additional-information#privacy\\" className=\\"staticLink\\">
+          Privacy policy
+        </a>
+        <a href=\\"mailto:performance-dashboard@digital.gov.au\\" className=\\"staticLink\\">
+          Need help?
+        </a>
+        <a href=\\"/additional-information#accessibility\\" className=\\"staticLink\\">
+          Accessibility
+        </a>
+        <a href=\\"/additional-information#security\\" className=\\"staticLink\\">
+          Security
+        </a>
+        <a href=\\"/additional-information#content-credit\\" className=\\"staticLink\\">
+          Content credit
+        </a>
+      </div>
+      <div className=\\"copyright\\">
+        © Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.
+      </div>
+    </div>
+  </div>
+</footer>"
+`;

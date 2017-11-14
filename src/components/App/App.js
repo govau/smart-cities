@@ -11,6 +11,7 @@ import AllCitiesCategoryContainer from '../AllCitiesCategoryContainer/AllCitiesC
 import CityCategoryContainer from '../CityCategoryContainer/CityCategoryContainer';
 import StyleGuide from '../StyleGuide/StyleGuide';
 import AdditionalInfoPage from '../AdditionalInfoPage/AdditionalInfoPage';
+import ScrollToTopOnRouteChange from '../ScrollToTopOnRouteChange/ScrollToTopOnRouteChange';
 import './_normalize.scss';
 import './_globalStyles.scss';
 import {
@@ -20,19 +21,21 @@ import {
 
 const App = () => (
   <BrowserRouter>
-    <Switch>
-      <Route path={`/${NO_CITY}/${NO_CATEGORY}`} component={AllCitiesOverviewContainer} />
-      <Route path={`/:cityId/${NO_CATEGORY}`} component={CityOverviewContainer} />
-      <Route path={`/${NO_CITY}/:categoryId`} component={AllCitiesCategoryContainer} />
-      <Route path="/:cityId/:categoryId" component={CityCategoryContainer} />
+    <ScrollToTopOnRouteChange>
+      <Switch>
+        <Route path={`/${NO_CITY}/${NO_CATEGORY}`} component={AllCitiesOverviewContainer} />
+        <Route path={`/:cityId/${NO_CATEGORY}`} component={CityOverviewContainer} />
+        <Route path={`/${NO_CITY}/:categoryId`} component={AllCitiesCategoryContainer} />
+        <Route path="/:cityId/:categoryId" component={CityCategoryContainer} />
 
-      <Route path="/additional-information" component={AdditionalInfoPage} />
+        <Route path="/additional-information" component={AdditionalInfoPage} />
 
-      <Route path="/style-guide" component={StyleGuide} />
-      <Redirect from="/styleguide" to="/style-guide" />
+        <Route path="/style-guide" component={StyleGuide} />
+        <Redirect from="/styleguide" to="/style-guide" />
 
-      <Redirect to={`/${NO_CITY}/${NO_CATEGORY}`} />
-    </Switch>
+        <Redirect to={`/${NO_CITY}/${NO_CATEGORY}`} />
+      </Switch>
+    </ScrollToTopOnRouteChange>
   </BrowserRouter>
 );
 
