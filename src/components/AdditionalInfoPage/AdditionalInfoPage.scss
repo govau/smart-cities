@@ -1,0 +1,25 @@
+@import '~style/variables';
+
+.sectionWrapper {
+  padding: 48px 0;
+
+  &:nth-child(odd) {
+    background: $color-overview--020;
+  }
+}
+
+.sectionContainer {
+  @include container;
+}
+
+.title {
+  margin-bottom: 40px;
+  line-height: 1.2;
+  font-size: 44px;
+  font-weight: 300;
+}
+
+.paragraph {
+  margin-bottom: 24px;
+  word-wrap: break-word; // the long links on mobile are wider than 300px
+}
