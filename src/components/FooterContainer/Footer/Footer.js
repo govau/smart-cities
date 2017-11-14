@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import style from './Footer.scss';
 import getSubCategorySectionId from '../../../helpers/getSubCategorySectionId';
 import {
+  ELEMENT_IDS,
   LINKS,
   STRINGS,
 } from '../../../constants';
@@ -11,32 +12,28 @@ import dtaLogo from './dta-logo-placeholder.svg';
 
 const links = [
   {
-    text: STRINGS.GLOSSARY_LINK,
-    href: LINKS.GLOSSARY,
-  },
-  {
     text: STRINGS.FEEDBACK_LINK,
     href: LINKS.FEEDBACK,
   },
   {
     text: STRINGS.PRIVACY_LINK,
-    href: LINKS.PRIVACY,
-  },
-  {
-    text: STRINGS.TERMS_LINK,
-    href: LINKS.TERMS,
+    href: `${LINKS.ADDITIONAL_INFORMATION}#${ELEMENT_IDS.PRIVACY_POLICY}`,
   },
   {
     text: STRINGS.HELP_LINK,
-    href: LINKS.HELP,
+    href: LINKS.CONTACT_US,
   },
   {
     text: STRINGS.ACCESSIBILITY_LINK,
-    href: LINKS.ACCESSIBILITY,
+    href: `${LINKS.ADDITIONAL_INFORMATION}#${ELEMENT_IDS.ACCESSIBILITY}`,
   },
   {
     text: STRINGS.SECURITY_LINK,
-    href: LINKS.SECURITY,
+    href: `${LINKS.ADDITIONAL_INFORMATION}#${ELEMENT_IDS.SECURITY}`,
+  },
+  {
+    text: STRINGS.CONTENT_CREDIT,
+    href: `${LINKS.ADDITIONAL_INFORMATION}#${ELEMENT_IDS.CONTENT_CREDIT}`,
   },
 ];
 

@@ -100,12 +100,6 @@
   margin-right: 16px;
   font-size: 14px;
   text-decoration: underline;
-
-  @include for-desktop-up {
-    &:nth-of-type(2) {
-      margin-right: 46px;
-    }
-  }
 }
 
 .copyright {

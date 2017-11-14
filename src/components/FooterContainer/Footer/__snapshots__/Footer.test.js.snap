@@ -12,26 +12,23 @@ exports[`should match Snapshot 1`] = `
     </div>
     <div className=\\"wordsWrapper\\">
       <div className=\\"staticLinksWrapper\\">
-        <a href=\\"http://www.TODO.GLOSSARY.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
-          Glossary
-        </a>
-        <a href=\\"http://www.TODO.FEEDBACK.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"/feedback\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
           Give feedback
         </a>
-        <a href=\\"http://www.TODO.PRIVACY.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"/additional-information#privacy\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
           Privacy policy
         </a>
-        <a href=\\"http://www.TODO.TERMS.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
-          Terms and conditions
-        </a>
-        <a href=\\"http://www.TODO.HELP.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"mailto:performance-dashboard@digital.gov.au\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
           Need help?
         </a>
-        <a href=\\"http://www.TODO.ACCESSIBILITY.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"/additional-information#accessibility\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
           Accessibility
         </a>
-        <a href=\\"http://www.TODO.SECURITY.COM\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"/additional-information#security\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
           Security
+        </a>
+        <a href=\\"/additional-information#content-credit\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+          Content credit
         </a>
       </div>
       <div className=\\"copyright\\">

@@ -12,7 +12,7 @@ exports[`should match Snapshot 1`] = `
         render me
       </div>
     </main>
-    <FooterContainer categoryId=\\"jobs\\" cityId=\\"perth\\" />
+    <FooterContainer categoryId=\\"jobs\\" />
   </div>
 </div>"
 `;

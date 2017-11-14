@@ -1,14 +1,22 @@
 import React from 'react';
 import PageWrapper from '../PageWrapper/PageWrapper';
 import Link from '../Link/Link';
-import { LINKS } from '../../constants';
+import {
+  ELEMENT_IDS,
+  LINKS,
+} from '../../constants';
 import style from './AdditionalInfoPage.scss';
 
 const AdditionalInfoPage = () => (
   <PageWrapper>
     <section className={style.sectionWrapper}>
       <div className={style.sectionContainer}>
-        <h1 className={style.title}>Accessibility</h1>
+        <h1
+          id={ELEMENT_IDS.ACCESSIBILITY}
+          className={style.title}
+        >
+          Accessibility
+        </h1>
 
         <p className={style.paragraph}>
           The Digital Transformation Agency (DTA) website has been designed to
@@ -33,7 +41,12 @@ const AdditionalInfoPage = () => (
 
     <section className={style.sectionWrapper}>
       <div className={style.sectionContainer}>
-        <h1 className={style.title}>Security of our websites</h1>
+        <h1
+          id={ELEMENT_IDS.SECURITY}
+          className={style.title}
+        >
+          Security of our websites
+        </h1>
 
         <p className={style.paragraph}>
           We apply a range of security controls to protect our websites from unauthorised access.
@@ -72,7 +85,12 @@ const AdditionalInfoPage = () => (
 
     <section className={style.sectionWrapper}>
       <div className={style.sectionContainer}>
-        <h1 className={style.title}>Privacy statement</h1>
+        <h1
+          id={ELEMENT_IDS.PRIVACY_POLICY}
+          className={style.title}
+        >
+          Privacy statement
+        </h1>
 
         <p className={style.paragraph}>
           This privacy statement is
@@ -104,7 +122,12 @@ const AdditionalInfoPage = () => (
 
     <section className={style.sectionWrapper}>
       <div className={style.sectionContainer}>
-        <h1 className={style.title}>Content credit</h1>
+        <h1
+          id={ELEMENT_IDS.CONTENT_CREDIT}
+          className={style.title}
+        >
+          Content credit
+        </h1>
 
         <p className={style.paragraph}>
           City photo - Albury<br />
