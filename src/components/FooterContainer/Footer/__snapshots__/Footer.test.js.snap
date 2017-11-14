@@ -12,22 +12,22 @@ exports[`should match Snapshot 1`] = `
     </div>
     <div className=\\"wordsWrapper\\">
       <div className=\\"staticLinksWrapper\\">
-        <a href=\\"/feedback\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"/feedback\\" className=\\"staticLink\\">
           Give feedback
         </a>
-        <a href=\\"/additional-information#privacy\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"/additional-information#privacy\\" className=\\"staticLink\\">
           Privacy policy
         </a>
-        <a href=\\"mailto:performance-dashboard@digital.gov.au\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"mailto:performance-dashboard@digital.gov.au\\" className=\\"staticLink\\">
           Need help?
         </a>
-        <a href=\\"/additional-information#accessibility\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"/additional-information#accessibility\\" className=\\"staticLink\\">
           Accessibility
         </a>
-        <a href=\\"/additional-information#security\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"/additional-information#security\\" className=\\"staticLink\\">
           Security
         </a>
-        <a href=\\"/additional-information#content-credit\\" target=\\"_blank\\" rel=\\"noopener\\" className=\\"staticLink\\">
+        <a href=\\"/additional-information#content-credit\\" className=\\"staticLink\\">
           Content credit
         </a>
       </div>
