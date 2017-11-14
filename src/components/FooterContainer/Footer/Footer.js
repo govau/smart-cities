@@ -84,8 +84,6 @@ const Footer = props => (
             <a
               key={link.href}
               href={link.href}
-              target="_blank"
-              rel="noopener"
               className={style.staticLink}
             >{link.text}</a>
           ))}
