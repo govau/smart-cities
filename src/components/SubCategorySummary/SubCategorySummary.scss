@@ -1,5 +1,9 @@
 @import '~style/variables';
 
+.wrapper {
+  border-top: 4px solid $color-white;
+}
+
 .container {
   @include container;
 
@@ -28,18 +32,17 @@
 }
 
 .iconWrapper {
-  // TODO (davidg): implement real icons
-  border: 1px dashed $color-grey--500;
-  width: 80px;
-  height: 80px;
   flex: none;
   margin-right: 8px;
 }
 
 .title {
-  @include type-nav-horizontal;
-
   margin-left: 6px;
+  font-size: 12px;
+
+  @include for-desktop-up {
+    font-size: 16px;
+  }
 }
 
 .cardRow {
@@ -82,21 +85,13 @@
 // the vertical alignment of the cards
 // so we make it absolute
 .linkWrapper {
-  @include type-detail-text--bold;
-
   position: absolute;
   bottom: -27px;
   right: 0;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .linkText {
   margin-right: 8px;
-}
-
-.linkIcon {
-  // TODO (davidg): implement real icons
-  display: inline;
-  padding: 0 9px;
-  border: 1px dashed $color-grey--500;
-  height: 20px;
 }

@@ -20,9 +20,9 @@ exports[`should match Snapshot 1`] = `
   </div>
   <div className=\\"mainContainer\\">
     <div className=\\"titleContainer\\">
-      <div className=\\"projectStatus\\">
+      <Pill className=\\"projectStatus\\">
         ALPHA
-      </div>
+      </Pill>
       <h1 className=\\"title\\">
         Smart Cities Performance Dashboard
       </h1>
@@ -39,6 +39,6 @@ exports[`should match Snapshot 1`] = `
       </a>
     </div>
   </div>
-  <Connect(CategoryNav) categoryId=\\"jobs\\" cityId=\\"perth\\" />
+  <CategoryNavContainer categoryId=\\"jobs\\" cityId=\\"perth\\" />
 </header>"
 `;

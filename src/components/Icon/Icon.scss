@@ -1,0 +1,69 @@
+@import '~style/variables';
+
+.svg {
+  display: inline-block;
+  vertical-align: middle;
+
+  * {
+    fill: currentColor;
+  }
+}
+
+.contextualIndicator {
+  circle {
+    stroke: currentColor;
+    fill: none;
+  }
+}
+
+.performanceIndicator {
+  path { // the "P"
+    fill: $color-white;
+  }
+}
+
+.barsInCircle {
+  rect {
+    fill: $color-white;
+  }
+}
+
+.arrowInCircle {
+  path {
+    fill: none;
+    stroke: $color-white;
+  }
+}
+
+.arrowInCircleInverted {
+  circle {
+    fill: $color-white;
+  }
+
+  path {
+    fill: none;
+    stroke: currentColor;
+  }
+}
+
+.sunSparkles {
+  transform: rotate(0);
+  transform-origin: center;
+  transition: transform 500ms;
+
+  svg:hover & {
+    transform: rotate(90deg);
+  }
+}
+
+// This will be applied to the SVG element itself
+:global(.circleWithShadow) {
+  @include shadow(1);
+
+  border-radius: 50%;
+  transition: box-shadow $animation-duration;
+
+  &:hover {
+    @include shadow(2);
+  }
+}

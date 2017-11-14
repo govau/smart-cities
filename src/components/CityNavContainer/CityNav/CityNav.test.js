@@ -2,6 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import CityNav from './CityNav';
 
+jest.mock('../../Pill/Pill', () => 'Pill');
+
 const defaultProps = {
   categoryId: 'mock',
   cityId: 'perth',

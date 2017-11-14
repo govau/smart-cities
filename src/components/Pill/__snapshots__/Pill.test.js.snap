@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+<span
+  className="wrapper"
+  style={
+    Object {
+      "borderRadius": 15,
+      "lineHeight": "26px",
+      "minHeight": 30,
+    }
+  }
+/>
+`;

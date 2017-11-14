@@ -2,7 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import PageBanner from './PageBanner';
 
-jest.mock('../Card/IndicatorCard/IndicatorCard', () => 'IndicatorCard');
+jest.mock('../IndicatorCard/IndicatorCard', () => 'IndicatorCard');
+jest.mock('../PageLegend/PageLegend', () => 'PageLegend');
 
 const defaultProps = {
   colorName: 'jobs',
@@ -47,12 +48,12 @@ it('should set the background color', () => {
   expect(componentStyle.backgroundColor).toBe('JOBS_020');
 });
 
-it('should aggregate data for all cities', () => {
+it('should get the min and max values', () => {
   const component = shallow(
     <PageBanner {...defaultProps} />
   );
 
-  expect(component.find('IndicatorCard').prop('value')).toBe(100); // 77 + 23
+  expect(component.find('IndicatorCard').prop('value')).toEqual([23, 77]);
 });
 
 it('should show data for a single city', () => {

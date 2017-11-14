@@ -1,0 +1,11 @@
+@import '~style/variables';
+
+.wrapper {
+  display: inline-block;
+  padding: 0 20px;
+  border: 2px solid transparent;
+}
+
+.pill__shadow {
+  @include shadow;
+}

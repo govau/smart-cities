@@ -3,21 +3,21 @@
 exports[`should match Snapshot 1`] = `
 "<div className=\\"wrapper\\">
   <div className=\\"categoryNav\\">
-    <NavLink className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/mock/overview\\" ariaCurrent=\\"true\\">
-      <div className=\\"overview\\">
+    <mockConstructor className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/perth/overview\\">
+      <Pill className=\\"linkText overview\\" height={28}>
         Overview
-      </div>
-    </NavLink>
-    <NavLink className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/mock/perth\\" ariaCurrent=\\"true\\">
-      <div className=\\"undefined\\">
+      </Pill>
+    </mockConstructor>
+    <mockConstructor className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/perth/perth\\" onClick={[Function]}>
+      <Pill className=\\"linkText undefined\\" height={28}>
         Perth
-      </div>
-    </NavLink>
-    <NavLink className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/mock/sydney\\" ariaCurrent=\\"true\\">
-      <div className=\\"undefined\\">
+      </Pill>
+    </mockConstructor>
+    <mockConstructor className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/perth/sydney\\" onClick={[Function]}>
+      <Pill className=\\"linkText undefined\\" height={28}>
         Sydney
-      </div>
-    </NavLink>
+      </Pill>
+    </mockConstructor>
   </div>
 </div>"
 `;

@@ -2,7 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Header from './Header';
 
+jest.mock('../CategoryNavContainer/CategoryNavContainer', () => 'CategoryNavContainer');
+jest.mock('../CityHeader/CityHeader', () => 'CityHeader');
 jest.mock('../HamburgerButton/HamburgerButton', () => 'HamburgerButton');
+jest.mock('../Pill/Pill', () => 'Pill');
 
 const openNavMock = jest.fn();
 

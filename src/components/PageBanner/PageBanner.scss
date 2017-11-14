@@ -3,18 +3,21 @@
 .container {
   @include container;
 
-  display: flex;
-  flex-direction: column;
   padding-top: 16px;
-  padding-bottom: 16px;
-
-  @include for-tablet-portrait-up {
-    flex-direction: row;
-  }
 
   @include for-tablet-portrait-up {
     padding-top: 40px;
-    padding-bottom: 72px;
+  }
+}
+
+.textAndIndicator {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+    margin-bottom: 32px;
   }
 }
 
@@ -28,13 +31,29 @@
 }
 
 .title {
-  @include type-h1;
-
   margin-bottom: 16px;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2;
+
+  @include for-tablet-portrait-up {
+    font-size: 36px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 44px;
+  }
 }
 
 .description {
-  @include type-intro-text;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+
+  @include for-tablet-landscape-up {
+    font-size: 22px;
+    font-weight: 300;
+  }
 }
 
 .card {
@@ -42,7 +61,16 @@
 
   @include for-tablet-portrait-up {
     flex: none;
-    width: 300px; // TODO (davidg): should allow for the widest value
+    width: 256px;
     margin-left: auto; // push to the right
   }
+}
+
+.indicatorTypeMarkWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.indicatorTypeMark {
+  margin-right: 8px;
 }

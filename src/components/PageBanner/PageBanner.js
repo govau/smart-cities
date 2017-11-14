@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IndicatorCard from '../Card/IndicatorCard/IndicatorCard';
+import IndicatorCard from '../IndicatorCard/IndicatorCard';
+import PageLegend from '../PageLegend/PageLegend';
 import { INDICATORS } from '../../constants';
-import aggregateIndicatorForCities from '../../helpers/aggregateIndicatorForCities';
+import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
 import getColorVariant from '../../helpers/getColorVariant';
 import style from './PageBanner.scss';
 
@@ -11,7 +12,7 @@ const PageBanner = (props) => {
   const cardHighlightColor = getColorVariant(props.colorName, '500');
   const indicatorValue = props.city
     ? props.city.indices[props.indicator]
-    : aggregateIndicatorForCities(
+    : getMinAndMaxForIndicator(
       props.indicator,
       props.cities,
     );
@@ -19,20 +20,31 @@ const PageBanner = (props) => {
   return (
     <div style={{ backgroundColor }}>
       <div className={style.container}>
-        <div className={style.titleText}>
-          <h1 className={style.title}>{props.title}</h1>
+        <div className={style.textAndIndicator}>
+          <div className={style.titleText}>
+            <h1 className={style.title}>{props.title}</h1>
 
-          <p className={style.description}>{props.description}</p>
+            <p className={style.description}>{props.description}</p>
+          </div>
+
+          <IndicatorCard
+            size="large"
+            className={style.card}
+            color={cardHighlightColor}
+            colorName={props.colorName}
+            indicator={props.indicator}
+            value={indicatorValue}
+            isContextPage={props.isContextPage}
+          />
         </div>
-
-        <IndicatorCard
-          size="large"
-          className={style.card}
-          color={cardHighlightColor}
-          indicator={props.indicator}
-          value={indicatorValue}
-        />
       </div>
+
+      <PageLegend
+        isContextPage={props.isContextPage}
+        colorName={props.colorName}
+        isAllCitiesPage={!props.city}
+        cities={props.cities}
+      />
     </div>
   );
 };
@@ -50,6 +62,7 @@ PageBanner.propTypes = {
   description: PropTypes.string.isRequired,
   indicator: PropTypes.oneOf(Object.keys(INDICATORS)).isRequired,
   title: PropTypes.string.isRequired,
+  isContextPage: PropTypes.bool,
 };
 
 export default PageBanner;

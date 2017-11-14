@@ -4,16 +4,22 @@ import style from './TypographyRow.scss';
 
 const TypographyRow = props => (
   <div className={style.row}>
-    <p className={props.className}>{props.sampleText}</p>
+    <p style={props.style}>
+       The quick brown fox
+    </p>
 
-    <code className={style.code}>{props.variableName}</code>
+    <div className={style.css}>
+      <p>font-size: {props.style.fontSize}px</p>
+      <p>font-weight: {props.style.fontWeight}</p>
+    </div>
   </div>
 );
 
 TypographyRow.propTypes = {
-  className: PropTypes.string.isRequired,
-  variableName: PropTypes.string.isRequired,
-  sampleText: PropTypes.string.isRequired,
+  style: PropTypes.shape({
+    fontSize: PropTypes.string.isRequired,
+    fontWeight: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default TypographyRow;

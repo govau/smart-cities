@@ -3,37 +3,29 @@ import PropTypes from 'prop-types';
 import getColorVariant from '../../helpers/getColorVariant';
 import style from './CityHeader.scss';
 
-const shades = [
-  '500',
-  '600',
-  '700',
-  '800',
-  '900',
-];
-
 const CityHeader = (props) => {
-  const backgroundPanels = shades.map(shade => (
-    <div
-      key={shade}
-      className={style.backgroundPanel}
-      style={{
-        background: getColorVariant(props.categoryColorName, shade),
-      }}
-    />
-  ));
+  // as a fallback to the image we have a gradient in the color of the category
+  const fromColor = getColorVariant(props.categoryColorName, '500');
+  const toColor = getColorVariant(props.categoryColorName, '900');
+  const background = `linear-gradient(140deg, ${fromColor}, ${toColor})`;
 
   return (
-    <div className={style.wrapper}>
-      <div className={style.backgroundPanelWrapper}>
-        {backgroundPanels}
+    <div
+      className={style.wrapper}
+      style={{ background }}
+    >
+      <div className={style.photoWrapper}>
+        <img
+          className={style.photo}
+          src={`${process.env.PUBLIC_URL}/images/${props.cityId}.jpg`}
+          alt=""
+        />
       </div>
 
       <div className={style.container}>
         <h1 className={style.title}>
           {props.cityName}
         </h1>
-
-        <span className={style.iconWrapper} />
       </div>
     </div>
   );
@@ -41,6 +33,7 @@ const CityHeader = (props) => {
 
 CityHeader.propTypes = {
   cityName: PropTypes.string.isRequired,
+  cityId: PropTypes.string.isRequired,
   categoryColorName: PropTypes.string.isRequired,
 };
 

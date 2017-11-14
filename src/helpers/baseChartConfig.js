@@ -19,7 +19,7 @@ export default {
     labels: {
       y: 20,
       style: {
-        fontSize: 10,
+        fontSize: 11,
         color: COLORS.GREY_700,
       },
     },

@@ -4,7 +4,6 @@ import style from './Legend.scss';
 
 const Legend = props => (
   <div className={props.className}>
-    {props.title && <div className={style.title}>{props.title}</div>}
     {props.series.map(item => (
       <div
         key={item.name}
@@ -23,7 +22,6 @@ const Legend = props => (
 
 Legend.propTypes = {
   className: PropTypes.string,
-  title: PropTypes.string,
   series: PropTypes.arrayOf(PropTypes.shape({
     color: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

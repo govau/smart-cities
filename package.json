@@ -1,6 +1,6 @@
 {
   "name": "smart-cities",
-  "version": "1.0.0",
+  "version": "6.0.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -19,14 +19,13 @@
     "exportDist": "backend/public/"
   },
   "dependencies": {
-    "@atlaskit/tooltip": "^6.0.0",
-    "@gov.au/datavizkit": "^1.0.34",
     "@std/esm": "^0.11.0",
     "classnames": "^2.2.5",
     "color": "^2.0.0",
     "core-js": "^2.5.0",
     "csv": "^1.1.1",
     "get-stdin": "^5.0.1",
+    "highcharts": "^6.0.2",
     "html-entities": "^1.2.1",
     "identity-obj-proxy": "3.0.0",
     "lodash": "4.17.4",
@@ -94,7 +93,8 @@
     "test": "node scripts/test.js --env=jsdom --colors",
     "test:coverage": "npm run test -- --coverage",
     "test:ci": "CI=true npm run test -- --coverage --runInBand --colors",
-    "generate-city-data": "node -r @std/esm scripts/convert.js < resources/cities.csv > public/data/smartCitiesData.json"
+    "generate-city-data": "node -r @std/esm scripts/convert.js < resources/cities.csv > public/data/smartCitiesData.json",
+    "deploy": "npm version major && git push --tags"
   },
   "jest": {
     "clearMocks": true,
@@ -108,7 +108,8 @@
     "setupTestFrameworkScriptFile": "<rootDir>/scripts/setupTestFrameworkScriptFile.js",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
+      "<rootDir>/src/**/?(*.)(spec|test).js?(x)",
+      "<rootDir>/scripts/*.(spec|test).js?(x)"
     ],
     "testEnvironment": "node",
     "testURL": "http://localhost",

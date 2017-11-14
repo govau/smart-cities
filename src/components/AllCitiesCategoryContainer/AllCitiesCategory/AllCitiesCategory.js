@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import PageWrapper from '../../PageWrapper/PageWrapper';
 import PageBanner from '../../PageBanner/PageBanner';
 import SubCategorySummary from '../../SubCategorySummary/SubCategorySummary';
-import getSubCategorySectionId from '../../../helpers/getSubCategorySectionId';
-import { INDICATORS } from '../../../constants';
+import SubCategoryCharts from '../../SubCategoryCharts/SubCategoryCharts';
+import {
+  INDICATORS,
+  CATEGORY_IDS,
+} from '../../../constants';
 
 const AllCitiesCategory = props => (
   <PageWrapper categoryId={props.category.id}>
@@ -14,24 +17,27 @@ const AllCitiesCategory = props => (
       indicator={props.category.heroIndicatorId}
       title={props.category.name}
       cities={props.cities}
+      isContextPage={props.category.id === CATEGORY_IDS.CONTEXT}
     />
 
     {props.category.subCategories.map(subCategory => (
       <SubCategorySummary
         key={subCategory.name}
         {...subCategory}
-        colorName={props.category.colorName}
+        categoryId={props.category.id}
         cities={props.cities}
       />
     ))}
 
     {props.category.subCategories.map(subCategory => (
-      <div
+      <SubCategoryCharts
         key={subCategory.name}
-        id={getSubCategorySectionId(subCategory.name)}
-      >
-        {subCategory.name} chart section placeholder
-      </div>
+        subCategory={subCategory}
+        colorName={props.category.colorName}
+        cities={props.cities}
+        heroIndicatorId={props.category.heroIndicatorId}
+        highlightColorDark={subCategory.highlightColorDark}
+      />
     ))}
   </PageWrapper>
 );
@@ -45,7 +51,12 @@ AllCitiesCategory.propTypes = {
     name: PropTypes.string.isRequired,
     subCategories: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
-      indicatorIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+      charts: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        indicatorIds: PropTypes.arrayOf(
+          PropTypes.oneOf(Object.keys(INDICATORS)),
+        ).isRequired,
+      })),
     })).isRequired,
   }).isRequired,
   cities: PropTypes.arrayOf(PropTypes.shape({

@@ -1,0 +1,30 @@
+@import '~style/variables';
+
+.footerSpacerWrapper {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: $color-white;
+
+  @include for-tablet-portrait-up {
+    padding-top: 68px;
+    padding-bottom: 62px;
+  }
+}
+
+.footerSpacerContainer {
+  @include container;
+}
+
+.footerSpacerLine {
+  background: $color-grey--200;
+  height: 1px;
+}
+
+.footerSpacerShade {
+  height: 32px;
+  background: $color-overview--020;
+
+  @include for-tablet-portrait-up {
+    height: 64px;
+  }
+}

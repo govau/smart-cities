@@ -1,0 +1,45 @@
+@import '~style/variables';
+
+.wrapper {
+  background: $color-white;
+  padding-top: 24px;
+}
+
+.container {
+  @include container;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $color-grey--200;
+  padding-top: 24px;
+
+  .headingText {
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}
+
+.chartGrid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.chartWrapper {
+  width: 100%;
+
+  @include for-tablet-portrait-up {
+    width: calc(50% - 16px);
+  }
+}
+
+.heroChartWrapper {
+  width: 100%;
+}
+
+.iconWrapper {
+  margin-right: 20px;
+}

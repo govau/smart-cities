@@ -4,6 +4,7 @@ import AllCitiesCategory from './AllCitiesCategory';
 
 jest.mock('../../PageBanner/PageBanner', () => 'PageBanner');
 jest.mock('../../SubCategorySummary/SubCategorySummary', () => 'SubCategorySummary');
+jest.mock('../../CityColumnChart/CityColumnChart', () => 'CityColumnChart');
 
 const defaultProps = {
   category: {
@@ -15,14 +16,15 @@ const defaultProps = {
     subCategories: [
       {
         name: 'Buying houses',
-        colorVariation: '100',
-        indicatorIds: [],
+        highlightColorDark: 'JOBS_600',
+        summaryIndicatorIds: [],
+        charts: [],
       },
       {
         name: 'Living in houses',
-        colorVariation: '050',
-        indicatorIds: [
-        ],
+        highlightColorDark: 'JOBS_700',
+        summaryIndicatorIds: [],
+        charts: [],
       },
     ],
   },

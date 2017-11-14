@@ -15,7 +15,6 @@ body {
   line-height: 1.6;
   margin: 0;
   min-width: $app-min-width;
-  background: $color-primary--020;
   color: $color-grey--700;
 }
 
@@ -27,8 +26,11 @@ body {
 }
 
 p,
+figure,
 h1,
-h2 {
+h2,
+h3,
+h4 {
   margin: 0;
   font-size: inherit;
   font-weight: inherit;

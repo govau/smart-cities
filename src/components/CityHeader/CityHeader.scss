@@ -2,18 +2,18 @@
 
 .wrapper {
   position: relative;
-  height: 130px;
+  height: 120px;
 
   @include for-tablet-portrait-up {
-    height: 230px;
+    height: 160px;
   }
 
   @include for-tablet-landscape-up {
-    height: 250px;
+    height: 240px;
   }
 
   @include for-desktop-up {
-    height: 290px;
+    height: 288px;
   }
 }
 
@@ -23,7 +23,7 @@
   position: relative; // above the absolute background panels
   display: flex;
   align-items: flex-end;
-  padding: 24px 16px;
+  padding: 16px;
   height: 100%;
 
   @include for-tablet-portrait-up {
@@ -33,64 +33,44 @@
   @include for-tablet-landscape-up {
     padding: 32px;
   }
-
-  @include for-desktop-up {
-    padding: 46px 32px;
-  }
 }
 
-.backgroundPanelWrapper {
+.photoWrapper {
   position: absolute;
-  display: flex;
-  flex-basis: 0;
-  align-items: stretch;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  overflow: hidden;
 }
 
-.backgroundPanel {
-  flex: auto;
+.photo {
+  height: 100%;
+  width: auto;
+  display: block;
+  margin: 0 auto;
 
-  @include for-tablet-portrait-up {
-    &:last-child {
-      flex: 2;
-    }
+  // For browsers that support object-fit (and @supports)
+  // set the width to 100%
+  @supports (object-fit: cover) {
+    object-fit: cover;
+    width: 100%;
   }
 }
 
 .title {
-  position: relative;
-  font-size: 40px;
-  bottom: -8px; // to bottom-align the text
-  line-height: 1.2; // it wraps on small screens
+  line-height: 1; // it wraps on small screens
+  font-size: 36px;
+  font-weight: 300;
   letter-spacing: 0.7px;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 
   @include for-tablet-portrait-up {
-    margin-right: 32px;
-  }
-
-  @include for-tablet-landscape-up {
-    font-size: 50px;
-    bottom: -11px;
+    font-size: 44px;
+    font-weight: 300;
   }
 
   @include for-desktop-up {
-    font-size: 70px;
-    bottom: -14px;
-  }
-}
-
-.iconWrapper {
-  // TODO (davidg): implement real icons
-  margin-left: auto; // push right
-  border: 1px dashed $color-white;
-  width: 180px;
-  height: 180px;
-
-  @include for-phone-only {
-    display: none;
+    font-size: 72px;
+    font-weight: 300;
   }
 }

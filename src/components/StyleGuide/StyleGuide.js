@@ -1,6 +1,8 @@
 import React from 'react';
 import ColorRow from './ColorRow/ColorRow';
 import TypographyRow from './TypographyRow/TypographyRow';
+import Icon from '../Icon/Icon';
+import iconDefinitions from '../Icon/iconDefinitions';
 import style from './StyleGuide.scss';
 
 const COLOR_GROUPS = [
@@ -72,81 +74,26 @@ COLORS.push(SPECIAL_COLORS.map(special => ({
   variableName: special,
 })));
 
-const TYPE_DATA = [
-  {
-    variableName: 'type-detail-text',
-    sampleText: 'The quick brown fox The quick brown fox jumped over the lazy dog',
-  },
-  {
-    variableName: 'type-detail-text--bold',
-    sampleText: 'The quick brown fox The quick brown fox jumped over the lazy dog',
-  },
-  {
-    variableName: 'type-badge-text',
-    sampleText: 'Badge text',
-  },
-  {
-    variableName: 'type-h1',
-    sampleText: 'Heading one',
-  },
-  {
-    variableName: 'type-h3',
-    sampleText: 'Heading three',
-  },
-  {
-    variableName: 'type-nav-horizontal',
-    sampleText: 'Horizontal navigation',
-  },
-  {
-    variableName: 'type-nav-horizontal--selected',
-    sampleText: 'Selected horizontal navigation',
-  },
-  {
-    variableName: 'type-nav-vertical',
-    sampleText: 'Vertical navigation',
-  },
-  {
-    variableName: 'type-intro-text',
-    sampleText: 'An introduction',
-  },
-  {
-    variableName: 'type-indicator-card-title--large',
-    sampleText: 'Large indicator card title',
-  },
-  {
-    variableName: 'type-indicator-card-header--large',
-    sampleText: 'Large indicator card text',
-  },
-  {
-    variableName: 'type-indicator-card-header--small',
-    sampleText: 'Small indicator card text',
-  },
-  {
-    variableName: 'type-indicator-card-number--large',
-    sampleText: '77',
-  },
-  {
-    variableName: 'type-indicator-card-number--small',
-    sampleText: '77',
-  },
-  {
-    variableName: 'type-indicator-card-symbol--large',
-    sampleText: '$',
-  },
-  {
-    variableName: 'type-indicator-card-symbol--small',
-    sampleText: '$',
-  },
-  {
-    variableName: 'type-section-button',
-    sampleText: 'Click me',
-  },
+const TYPES = [
+  { fontSize: 90, fontWeight: 200 },
+  { fontSize: 72, fontWeight: 300 },
+  { fontSize: 48, fontWeight: 200 },
+  { fontSize: 44, fontWeight: 300 },
+  { fontSize: 44, fontWeight: 200 },
+  { fontSize: 36, fontWeight: 300 },
+  { fontSize: 30, fontWeight: 300 },
+  { fontSize: 24, fontWeight: 500 },
+  { fontSize: 24, fontWeight: 300 },
+  { fontSize: 22, fontWeight: 300 },
+  { fontSize: 20, fontWeight: 500 },
+  { fontSize: 16, fontWeight: 500 },
+  { fontSize: 16, fontWeight: 400 },
+  { fontSize: 14, fontWeight: 400 },
+  { fontSize: 12, fontWeight: 700 },
+  { fontSize: 12, fontWeight: 500 },
+  { fontSize: 12, fontWeight: 400 },
+  { fontSize: 11, fontWeight: 300 },
 ];
-
-const TYPES = TYPE_DATA.map(typeData => ({
-  ...typeData,
-  className: style[typeData.variableName],
-}));
 
 const StyleGuide = () => (
   <div className={style.pageWrapper}>
@@ -154,18 +101,30 @@ const StyleGuide = () => (
       <h1 className={style.sectionText}>Colours</h1>
 
       {COLORS.map(colorRow => (
-        <ColorRow colors={colorRow} />
+        <ColorRow key={colorRow[0].variableName} colors={colorRow} />
       ))}
     </div>
 
+    <h1 className={style.sectionText}>Icons</h1>
+
+    <div className={style.iconsWrapper}>
+      {Object.keys(iconDefinitions).map(iconKey => (
+        <div className={style.iconWrapper} key={iconKey}>
+          <Icon
+            icon={iconKey}
+            size={64}
+          />
+          <p className={style.code}>{iconKey}</p>
+        </div>
+      ))}
+    </div>
 
     <h1 className={style.sectionText}>Typography</h1>
 
-    {TYPES.map(typeRow => (
+    {TYPES.map(type => (
       <TypographyRow
-        className={typeRow.className}
-        variableName={typeRow.variableName}
-        sampleText={typeRow.sampleText}
+        key={type.fontSize + type.fontWeight}
+        style={type}
       />
     ))}
   </div>

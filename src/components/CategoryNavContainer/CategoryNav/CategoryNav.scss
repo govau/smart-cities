@@ -1,10 +1,16 @@
 @import '~style/variables';
 
 .wrapper {
-  padding-left: 20px;
+  position: relative;
   width: 100%;
   height: $top-nav-height-mobile;
   background: $color-white;
+  z-index: $z-index-cat-nav;
+
+  // Colors are all inverted on the overview page
+  &.wrapper__overview {
+    background: transparent;
+  }
 
   @include for-desktop-up {
     height: $top-nav-height-desktop;
@@ -13,6 +19,7 @@
 }
 
 .categoryNav {
+  padding-left: 16px;
   display: flex;
   white-space: nowrap;
   overflow-x: auto;
@@ -27,38 +34,49 @@
 .link {
   height: 100%;
   display: inline-block;
-  padding: 12px 0;
+  padding: 8px 0;
   margin-right: 10px;
   text-decoration: none;
 
   @include for-desktop-up {
-    padding: 24px 0;
+    margin-right: 1px;
+    padding: 20px 0;
   }
 
-  &:hover div {
-    color: $color-white;
+  @include for-big-desktop-up {
+    margin-right: 10px;
   }
 
-  div {
-    @include type-nav-horizontal;
-    @include shadow;
-
-    padding: 0 24px;
-    border-radius: 100px;
-    color: $color-grey--700;
-
-    @include for-desktop-up {
-      &:not(:hover) {
-        box-shadow: none;
-      }
-    }
+  &:last-child {
+    padding-right: 16px;
   }
 
   &:hover,
   &.link__active {
+    .linkText {
+      color: $color-white;
+    }
+
+    // overview and context have the same style for hover and active
+    // the other links are different for hover and active
     .overview {
-      border: 1px solid $color-grey--500;
+      border: 2px solid $color-grey--500;
       color: $color-grey--700;
+
+      .wrapper__overview & {
+        color: $color-white;
+        border-color: $color-overview--500;
+      }
+    }
+
+    .context {
+      border: 2px solid $color-primary--600;
+      color: $color-grey--700;
+
+      .wrapper__overview & {
+        color: $color-white;
+        border-color: $color-white;
+      }
     }
   }
 
@@ -115,10 +133,30 @@
   }
 }
 
-.overview {
-  border: 1px solid $color-white;
-}
+.linkText {
+  @include shadow;
 
-.link__active div {
-  color: $color-white;
+  padding: 0 24px;
+  border-radius: 100px;
+  color: $color-grey--700;
+  border: 2px solid transparent;
+  font-size: 14px;
+
+  .wrapper__overview & {
+    color: $color-white;
+    box-shadow: none;
+  }
+
+  @include for-desktop-up {
+    padding: 0 15px;
+    font-size: 16px;
+
+    &:not(:hover) {
+      box-shadow: none;
+    }
+  }
+
+  @include for-big-desktop-up {
+    padding: 0 24px;
+  }
 }
