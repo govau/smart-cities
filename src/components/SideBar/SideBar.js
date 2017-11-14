@@ -65,8 +65,8 @@ SideBar.defaultProps = {
 };
 
 
-// withRouter makes location available to we can test when to close the SideBar
-// but it breaks unit tests, so we also export the 'raw' sidebar just for testing
+// withRouter makes location available so we know when to close the SideBar
+// but it breaks unit tests, so we also export the 'raw' component just for testing
 export const UnwrappedSideBar = SideBar;
 
 export default withRouter(SideBar);

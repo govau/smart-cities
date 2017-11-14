@@ -8,7 +8,7 @@ exports[`should match Snapshot 1`] = `
         <img className=\\"coaLogo\\" src=\\"coa-white.svg\\" alt=\\"coat of arms\\" />
       </div>
       <div className=\\"logoDivider\\" />
-      <img className=\\"dtaLogo\\" src=\\"dta-logo-placeholder.svg\\" alt=\\"dta\\" />
+      <img className=\\"dtaLogo\\" src=\\"dtaLogo.svg\\" alt=\\"dta\\" />
     </div>
     <div className=\\"wordsWrapper\\">
       <div className=\\"staticLinksWrapper\\">

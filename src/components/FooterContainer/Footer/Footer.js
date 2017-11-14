@@ -8,7 +8,7 @@ import {
   STRINGS,
 } from '../../../constants';
 import coaWhite from '../../../images/coa-white.svg';
-import dtaLogo from './dta-logo-placeholder.svg';
+import dtaLogo from './dtaLogo.svg';
 
 const links = [
   {

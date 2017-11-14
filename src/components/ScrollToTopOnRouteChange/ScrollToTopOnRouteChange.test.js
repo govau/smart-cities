@@ -21,12 +21,13 @@ it('should scroll to top on mount when there is no hash', () => {
     </ScrollToTopOnRouteChange>
   );
 
+  expect(window.scrollTo).toHaveBeenCalledTimes(1);
   expect(window.scrollTo).toHaveBeenCalledWith(0, 0);
 });
 
 it('should scroll to an element on mount if there is a hash', () => {
   document.location.hash = 'an-element-id';
-  window.pageYOffset = 541;
+  window.pageYOffset = 541; // simulate the page being scrolled down already
 
   // we mock out querySelector being called and just return an object with
   // a getBoundingClientRect method
@@ -36,28 +37,23 @@ it('should scroll to an element on mount if there is a hash', () => {
     }),
   }));
 
-  const component = shallow(
+  shallow(
     <ScrollToTopOnRouteChange
-      location={{ path: '/location-1' }}
+      location={{ pathName: '/location-1' }}
     >
       The content
     </ScrollToTopOnRouteChange>
   );
 
-  component.setProps({
-    location: {
-      path: '/location-2',
-    }
-  });
-
   expect(document.querySelector).toHaveBeenCalledWith('#an-element-id');
+  expect(window.scrollTo).toHaveBeenCalledTimes(1);
   expect(window.scrollTo).toHaveBeenCalledWith(0, 137 + 541);
 });
 
 it('should scroll on route change', () => {
   const component = shallow(
     <ScrollToTopOnRouteChange
-      location={{ path: '/location-1' }}
+      location={{ pathName: '/location-1' }}
     >
       The content
     </ScrollToTopOnRouteChange>
@@ -74,10 +70,10 @@ it('should scroll on route change', () => {
   // but it doesn't try and scroll again since the location prop didn't change
   expect(window.scrollTo).toHaveBeenCalledTimes(1);
 
-  // now change the location
+  // now change the location prop
   component.setProps({
     location: {
-      path: '/location-2',
+      pathName: '/location-2',
     }
   });
 

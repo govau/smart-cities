@@ -42,8 +42,8 @@ ScrollToTopOnRouteChange.propTypes = {
   location: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
-// withRouter makes location available to we can test when to close the SideBar
-// but it breaks unit tests, so we also export the 'raw' sidebar just for testing
+// withRouter makes location available so we know when to scroll
+// but it breaks unit tests, so we also export the 'raw' component just for testing
 export const UnwrappedComponent = ScrollToTopOnRouteChange;
 
 export default withRouter(ScrollToTopOnRouteChange);

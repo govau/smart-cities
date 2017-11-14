@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Header from '../Header/Header';
 import FooterContainer from '../FooterContainer/FooterContainer';
+import Header from '../Header/Header';
 import SideBar from '../SideBar/SideBar';
 import style from './PageWrapper.scss';
 import blockScroll from '../../helpers/blockScroll';
