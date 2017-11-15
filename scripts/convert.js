@@ -36,8 +36,10 @@ getStdin().then((rawCsv) => {
             throw new Error(`value of "${value}" for ${row.Cities} for ${indicator.source} is not a number`);
           }
 
-          // note this will convert blank cells to 0
-          city.indices[indicator.key] = Number(value);
+          // Skip empty cells
+          if (value) {
+            city.indices[indicator.key] = Number(value);
+          }
         } else {
           // if the indicator source (column name) doesn't exist in the csv, throw an error
           throw new Error(`Key not found! ${indicator.source}`);

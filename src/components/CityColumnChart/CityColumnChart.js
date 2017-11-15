@@ -33,7 +33,6 @@ function getSeriesDataForIndicator(cities, indicator, mainCity) {
       return val;
     }
 
-    console.warn(`${indicator} is not a recognised indicator for ${city.name}`);
     return null;
   });
 }
@@ -43,9 +42,10 @@ function getSeriesDataForIndicator(cities, indicator, mainCity) {
 function sortChartData(cities, indicator) {
   const sortedCities = cities.slice(); // clone so we're not mutating state
 
-  sortedCities.sort((a, b) => (
-    Number(b.indices[indicator]) - Number(a.indices[indicator])
-  ));
+  // ensure nulls go last
+  const indicatorOrZero = city => Number(city.indices[indicator]) || 0;
+
+  sortedCities.sort((a, b) => indicatorOrZero(b) - indicatorOrZero(a));
 
   return sortedCities;
 }

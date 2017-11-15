@@ -267,11 +267,18 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Unemployment ratios',
-            axisTitle: 'Average unemployment rate',
-            description: 'This shows the average youth and indigenous unemployment rates for 12 months. \n\nSource: ABS Labour Force',
+            name: 'Youth unemployment rate',
+            axisTitle: 'Average youth unemployment rate',
+            description: 'This shows the average youth unemployment rate for 12 months. \n\nSource: ABS Labour Force',
             indicatorIds: [
               'unemploymentRateYouth',
+            ],
+          },
+          {
+            name: 'Indigenous unemployment rate',
+            axisTitle: 'Average indigenous unemployment rate',
+            description: 'This shows the average indigenous unemployment rate for 12 months. \n\nSource: ABS Labour Force',
+            indicatorIds: [
               'unemploymentRateIndigenous',
             ],
           },
@@ -445,7 +452,7 @@ export const CATEGORIES = [
         charts: [
           {
             name: 'Average household size',
-            axisTitle: '',
+            axisTitle: 'Number of people',
             description: 'This shows the average number of people per occupied dwelling. \n\nSource: ABS - Census 2016',
             indicatorIds: [
               'householdSize',
@@ -613,7 +620,7 @@ export const CATEGORIES = [
           },
           {
             name: 'Greenhouse gas emissions',
-            axisTitle: 'Kilograms of greenhouse gas emissions per capita per year',
+            axisTitle: 'Tonnes of greenhouse gas emissions per capita per year',
             description: 'This shows the estimated per-capita amount of greenhouse gases emitted in a year, based on Scope 1 and Scope 2 emissions. \n\nSource: National Greenhouse Gas Inventory',
             indicatorIds: [
               'greenhouseGasEmissions1',
@@ -651,7 +658,7 @@ export const CATEGORIES = [
         charts: [
           {
             name: 'Life expectancy at birth',
-            axisTitle: '',
+            axisTitle: 'Life expectancy in years',
             description: 'This shows the number of years a person born today is expected to live.\n\nSource: ABS - Life Tables, States, Territories and Australia',
             min: 70,
             max: 90,
@@ -919,7 +926,7 @@ export const CATEGORIES = [
           },
           {
             name: 'Dependency ratio: median age',
-            axisTitle: '',
+            axisTitle: 'Median age in years',
             description: 'This shows the median age. \n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
               'dependencyRatioMedianAge',
