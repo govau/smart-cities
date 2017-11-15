@@ -1,0 +1,30 @@
+@import '~style/variables';
+
+.feedbackWrapper {
+  padding: 48px 0;
+  background: $color-overview--020;
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 44px;
+  font-weight: 300;
+}
+
+.paragraph {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.surveyFrame {
+  width: 600px;
+  max-width: 100%;
+  min-height: 500px;
+  margin-top: 60px;
+  border: 1px solid $color-grey--500;
+  border-radius: 4px;
+}

@@ -33,6 +33,7 @@ export const LINKS = {
   CONTACT_US: 'mailto:performance-dashboard@digital.gov.au',
   DTA_PRIVACY_POLICY: 'https://www.dta.gov.au/privacy-statement/',
   FEEDBACK: '/feedback',
+  FEEDBACK_SURVEY_EMBED: 'https://surveymonkey.com/r/LS9RGKQ',
   ADDITIONAL_INFORMATION: '/additional-information',
   ICON_CREDIT: 'https://thenounproject.com/CreativeMania',
   ORG: 'https://dta.gov.au/',
