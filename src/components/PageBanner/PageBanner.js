@@ -43,7 +43,6 @@ const PageBanner = (props) => {
         isContextPage={props.isContextPage}
         colorName={props.colorName}
         isAllCitiesPage={!props.city}
-        cities={props.cities}
       />
     </div>
   );

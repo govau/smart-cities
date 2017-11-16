@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import style from './Footer.scss';
 import getSubCategorySectionId from '../../../helpers/getSubCategorySectionId';
 import {
@@ -81,11 +82,11 @@ const Footer = props => (
 
         <div className={style.staticLinksWrapper}>
           {links.map(link => (
-            <a
+            <NavLink
               key={link.href}
-              href={link.href}
+              to={link.href}
               className={style.staticLink}
-            >{link.text}</a>
+            >{link.text}</NavLink>
           ))}
         </div>
 

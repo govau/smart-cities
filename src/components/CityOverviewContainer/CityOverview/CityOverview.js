@@ -14,7 +14,7 @@ const CityOverview = props => (
       colorName="overview"
       description={props.city.description}
       indicator="population"
-      title={props.city.shortName}
+      title={props.city.name}
       city={props.city}
     />
 
@@ -24,7 +24,6 @@ const CityOverview = props => (
 
 CityOverview.propTypes = {
   city: PropTypes.shape({
-    shortName: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,

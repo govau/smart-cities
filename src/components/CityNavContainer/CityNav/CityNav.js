@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import Pill from '../../Pill/Pill';
 import { NO_CITY } from '../../../constants';
 import style from './CityNav.scss';
 
@@ -20,10 +19,6 @@ const CityNav = (props) => {
         to={`/${NO_CITY}/${props.categoryId}`}
       >
         All Cities
-
-        <Pill className={style.cityCount}>
-          {props.cities.length}
-        </Pill>
       </NavLink>
 
       {props.cities.map(city => (

@@ -39,7 +39,7 @@
   text-decoration: none;
 
   @include for-desktop-up {
-    margin-right: 1px;
+    margin-right: 8px;
     padding: 20px 0;
   }
 
@@ -81,6 +81,12 @@
   }
 
   &:hover {
+    .linkText {
+      @include shadow;
+
+      border-color: transparent;
+    }
+
     .jobs {
       background: $color-jobs--500;
     }
@@ -116,7 +122,8 @@
     }
 
     .housing {
-      background: $color-housing--600;
+      // 600 for housing doesn't pass WCAG AA, so we use 800
+      background: $color-housing--800;
     }
 
     .liveability {
@@ -141,19 +148,17 @@
   color: $color-grey--700;
   border: 2px solid transparent;
   font-size: 14px;
+  transition: $animation-duration; // box-shadow and color
 
   .wrapper__overview & {
     color: $color-white;
+    border-color: $color-white-20;
     box-shadow: none;
   }
 
   @include for-desktop-up {
-    padding: 0 15px;
+    padding: 0 12px;
     font-size: 16px;
-
-    &:not(:hover) {
-      box-shadow: none;
-    }
   }
 
   @include for-big-desktop-up {

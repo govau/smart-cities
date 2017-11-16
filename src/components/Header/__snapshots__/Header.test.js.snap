@@ -23,9 +23,11 @@ exports[`should match Snapshot 1`] = `
       <Pill className=\\"projectStatus\\">
         ALPHA
       </Pill>
-      <h1 className=\\"title\\">
-        Smart Cities Performance Dashboard
-      </h1>
+      <NavLink className=\\"titleLinkWrapper\\" to=\\"/all-cities/overview\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+        <h1 className=\\"title\\">
+          Smart Cities Performance Dashboard
+        </h1>
+      </NavLink>
       <div className=\\"subtitle\\">
         Smart Cities Performance Framework
       </div>

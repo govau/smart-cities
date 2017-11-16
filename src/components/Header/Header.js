@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import CategoryNavContainer from '../CategoryNavContainer/CategoryNavContainer';
 import CityHeader from '../CityHeader/CityHeader';
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
 import Pill from '../Pill/Pill';
-import { LINKS } from '../../constants';
+import {
+  LINKS,
+  NO_CATEGORY,
+  NO_CITY,
+} from '../../constants';
 import dtaLogo from './dta-logo.svg';
 import star from './star-white.svg';
 import style from './Header.scss';
@@ -27,7 +32,14 @@ const Header = props => (
     <div className={style.mainContainer}>
       <div className={style.titleContainer}>
         <Pill className={style.projectStatus}>ALPHA</Pill>
-        <h1 className={style.title}>Smart Cities Performance Dashboard</h1>
+
+        <NavLink
+          className={style.titleLinkWrapper}
+          to={`/${NO_CITY}/${NO_CATEGORY}`}
+        >
+          <h1 className={style.title}>Smart Cities Performance Dashboard</h1>
+        </NavLink>
+
         <div className={style.subtitle}>Smart Cities Performance Framework</div>
       </div>
       <div className={style.orgContainer}>

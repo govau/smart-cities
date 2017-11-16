@@ -83,6 +83,10 @@ header {
   flex-direction: column;
 }
 
+.orgContainer {
+  align-items: flex-end;
+}
+
 .star {
   height: 22px;
   width: 22px;
@@ -112,6 +116,10 @@ header {
   font-weight: 500;
 }
 
+.titleLinkWrapper {
+  text-decoration: none;
+}
+
 .title {
   font-size: 36px;
   font-weight: 300;
@@ -138,6 +146,8 @@ header {
 
 .orgLink {
   margin-top: 14px;
+  margin-bottom: 16px;
+  line-height: 1;
 }
 
 .orgLogo {
@@ -146,6 +156,8 @@ header {
 }
 
 .contactLink {
-  font-size: 22px;
+  border-bottom: 1px solid $color-highlight;
+  font-size: 16px;
   font-weight: 300;
+  text-decoration: none;
 }

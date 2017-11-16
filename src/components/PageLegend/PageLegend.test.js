@@ -44,7 +44,6 @@ it('should show the range icons on the all cities pages', () => {
     <PageLegend
       {...defaultProps}
       isAllCitiesPage={true}
-      cities={[]}
     />
   );
 

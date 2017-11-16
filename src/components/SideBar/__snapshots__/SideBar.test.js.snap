@@ -5,9 +5,9 @@ exports[`should match Snapshot 1`] = `
   <button className=\\"closeButton\\" onClick={[Function]} aria-label=\\"close navigation menu\\">
     ✕
   </button>
-  <div className=\\"coaWrapper\\">
+  <NavLink className=\\"coaWrapper\\" to=\\"/all-cities/overview\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
     <img className=\\"coa\\" src=\\"coa-white.svg\\" alt=\\"coat of arms\\" />
-  </div>
+  </NavLink>
   <Connect(CityNav) categoryId=\\"jobs\\" cityId=\\"perth\\" />
 </div>"
 `;

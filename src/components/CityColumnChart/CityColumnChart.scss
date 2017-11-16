@@ -2,13 +2,14 @@
 
 .wrapper {
   padding-top: 16px;
+  margin-bottom: 48px;
 }
 
 .titleWrapper {
   display: flex;
   align-items: center;
   line-height: 1.2;
-  margin-bottom: 11px;
+  margin-bottom: 3px;
 }
 
 .title {
@@ -23,7 +24,7 @@
 
 .metaWrapper {
   font-size: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .indicatorTypeMark {
@@ -39,7 +40,7 @@
 
 .axisTitle {
   height: 20px; // we want it to take up space even with no text
-  margin-bottom: 8px;
+  margin-top: 16px;
   font-size: 12px;
 }
 
@@ -48,7 +49,6 @@
 
   @include for-tablet-landscape-up {
     min-height: 500px;
-    margin-top: 24px;
   }
 }
 

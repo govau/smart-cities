@@ -4,28 +4,39 @@ import PageWrapper from '../../PageWrapper/PageWrapper';
 import PageLegend from '../../PageLegend/PageLegend';
 import CategoryOverviews from '../../CategoryOverviews/CategoryOverviews';
 import Icon from '../../Icon/Icon';
+import Link from '../../Link/Link';
 import { LINKS } from '../../../constants';
 import taylorAngus from './taylorAngus.png';
+import smartCitiesLogo from './smart-cities-logo-white.svg';
 import COLORS from '../../../style/_colors.scss';
 import style from './AllCitiesOverview.scss';
 
 const ncpLink = (
-  <a
-    className={style.cpnLink}
-    href={LINKS.CITIES_PERFORMANCE_NETWORK}
-    target="_blank"
-    rel="noopener"
-  >
+  <Link href={LINKS.CITIES_PERFORMANCE_NETWORK}>
     The National Cities Performance Framework
-  </a>
+  </Link>
+);
+
+const smartCitiesLink = (
+  <Link href={LINKS.SMART_CITIES_DPMC_LINK}>
+    Smart Cities
+  </Link>
 );
 
 const AllCitiesOverview = props => (
   <PageWrapper>
     <div className={style.heroWrapper}>
-      <p className={style.heroText}>
-        Measuring success and opportunities across Australia’s largest cities
-      </p>
+      <div className={style.heroContainer}>
+        <p className={style.heroText}>
+          Measuring success and opportunities across Australia’s largest cities
+        </p>
+
+        <img
+          className={style.smartCitiesLogo}
+          src={smartCitiesLogo}
+          alt=""
+        />
+      </div>
     </div>
 
     <div className={style.infoWrapper}>
@@ -34,18 +45,17 @@ const AllCitiesOverview = props => (
           <h1 className={style.infoTitle}>About</h1>
 
           <p className={style.infoBodyText}>
-            Australian cities have long been an important economic and social
-            asset and will be more important than ever in the 21st century.
-            Our cities provide great opportunities for innovation and productivity
-            in the global knowledge-based economy and are recognised as great places
-            to live, work and study.
+            Australian cities have long been an important economic and social asset and will be
+            more important than ever in the 21ˢᵗ st century. Our cities provide great opportunities
+            for innovation and productivity in the global knowledge-based economy and
+            are recognised as great places to live, work and study.
           </p>
 
           <p className={style.infoBodyText}>
             The Australian Government is committed to the continual improvement of our
-            cities. {ncpLink} will assist in this goal by providing data to help all
-            levels of government, industry and the community to make the best policy
-            and investment decisions for Australia’s future.
+            cities. {ncpLink} will assist in this goal by providing data
+            to help all levels of government, industry and the community to make the best
+            policy and investment decisions for Australia’s future.
           </p>
         </div>
 
@@ -72,9 +82,10 @@ const AllCitiesOverview = props => (
         <h1 className={style.infoTitle}>Policy priorities & context</h1>
 
         <p className={style.subInfoBodyText}>
-          The National Cities Performance Framework is designed to measure how well
-          our cities are performing against the Australian Government’s 6 Smart Cities
-          policy priorities areas:
+          The Australian Government has set out six {smartCitiesLink} policy priorities to help
+          achieve the objectives of the Smart Cities Plan. The National Cities Performance
+          Framework is designed to measure how well our cities are performing against
+          all six Smart Cities policy priorities.
         </p>
       </div>
 
@@ -88,7 +99,6 @@ const AllCitiesOverview = props => (
 
     <PageLegend
       colorName="overview"
-      cities={props.cities}
       isAllCitiesPage
     />
 

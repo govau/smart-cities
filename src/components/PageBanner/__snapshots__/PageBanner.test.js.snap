@@ -15,6 +15,6 @@ exports[`should match Snapshot 1`] = `
       <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"JOBS_500\\" colorName=\\"jobs\\" indicator=\\"population\\" value={{...}} isContextPage={[undefined]} />
     </div>
   </div>
-  <PageLegend isContextPage={[undefined]} colorName=\\"jobs\\" isAllCitiesPage={true} cities={{...}} />
+  <PageLegend isContextPage={[undefined]} colorName=\\"jobs\\" isAllCitiesPage={true} />
 </div>"
 `;

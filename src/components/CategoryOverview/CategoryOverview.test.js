@@ -83,7 +83,7 @@ describe('when rendering the "context" category', () => {
   it('should render the appropriate category link style', () => {
     expect(component.find('.categoryLinkPill').prop('style')).toEqual({
       background: 'WHITE',
-      border: '2px solid CONTEXT_500',
+      border: '2px solid CONTEXT_700',
       color: 'GREY_700',
     });
   });
@@ -115,8 +115,8 @@ describe('when rendering a category other than "context"', () => {
 
   it('should render the appropriate category link style', () => {
     expect(component.find('.categoryLinkPill').prop('style')).toEqual({
-      background: 'JOBS_500',
-      border: '2px solid JOBS_500',
+      background: 'JOBS_700',
+      border: '2px solid JOBS_700',
       color: 'WHITE',
     });
   });

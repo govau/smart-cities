@@ -461,7 +461,7 @@ export default {
   },
   populationDensity: {
     name: 'Population density',
-    format: '0[.]0',
+    format: '0[.]0a',
     contextual: true,
     lastUpdated: '2016',
     source: 'Population-weighted density, Persons per square kilometre',

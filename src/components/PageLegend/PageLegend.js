@@ -7,12 +7,6 @@ import { STRINGS } from '../../constants';
 import style from './PageLegend.scss';
 
 const PageLegend = (props) => {
-  if (props.isAllCitiesPage && !props.cities) {
-    console.warn('You said this is an all-cities page, but did not pass in any cities');
-
-    return null;
-  }
-
   const lightColor = getColorVariant(props.colorName, '020');
   const mediumColor = getColorVariant(props.colorName, '080');
   const darkColor = getColorVariant(props.colorName, '900');
@@ -69,7 +63,7 @@ const PageLegend = (props) => {
         {props.isAllCitiesPage && (
           <div className={style.rangeWrapper}>
             <div className={style.rangeText}>
-              Indicator range for {props.cities.length} Smart cities
+              Indicator range for all Smart cities
             </div>
 
             <div className={style.rangeIconsWrapper}>
@@ -103,7 +97,6 @@ const PageLegend = (props) => {
 };
 
 PageLegend.propTypes = {
-  cities: PropTypes.array, // eslint-disable-line react/forbid-prop-types
   colorName: PropTypes.string.isRequired,
   isAllCitiesPage: PropTypes.bool,
   isContextPage: PropTypes.bool,

@@ -46,6 +46,7 @@ const SubCategoryCharts = (props) => {
                 colorBase={props.colorName}
                 highlightColorLight={subCategory.highlightColorLight}
                 highlightColorDark={subCategory.highlightColorDark}
+                isHero
               />
             </div>
           }

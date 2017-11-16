@@ -3,9 +3,12 @@
 exports[`should match Snapshot 1`] = `
 "<PageWrapper categoryId=\\"overview\\" cityId=\\"all-cities\\">
   <div className=\\"heroWrapper\\">
-    <p className=\\"heroText\\">
-      Measuring success and opportunities across Australia’s largest cities
-    </p>
+    <div className=\\"heroContainer\\">
+      <p className=\\"heroText\\">
+        Measuring success and opportunities across Australia’s largest cities
+      </p>
+      <img className=\\"smartCitiesLogo\\" src=\\"smart-cities-logo-white.svg\\" alt=\\"\\" />
+    </div>
   </div>
   <div className=\\"infoWrapper\\">
     <div className=\\"infoContainer\\">
@@ -14,13 +17,13 @@ exports[`should match Snapshot 1`] = `
           About
         </h1>
         <p className=\\"infoBodyText\\">
-          Australian cities have long been an important economic and social asset and will be more important than ever in the 21st century. Our cities provide great opportunities for innovation and productivity in the global knowledge-based economy and are recognised as great places to live, work and study.
+          Australian cities have long been an important economic and social asset and will be more important than ever in the 21ˢᵗ st century. Our cities provide great opportunities for innovation and productivity in the global knowledge-based economy and are recognised as great places to live, work and study.
         </p>
         <p className=\\"infoBodyText\\">
           The Australian Government is committed to the continual improvement of our cities. 
-          <a className=\\"cpnLink\\" href=\\"https://cities.dpmc.gov.au/\\" target=\\"_blank\\" rel=\\"noopener\\">
+          <Link href=\\"https://cities.dpmc.gov.au/performance-framework\\">
             The National Cities Performance Framework
-          </a>
+          </Link>
            will assist in this goal by providing data to help all levels of government, industry and the community to make the best policy and investment decisions for Australia’s future.
         </p>
       </div>
@@ -45,12 +48,16 @@ exports[`should match Snapshot 1`] = `
         Policy priorities &amp; context
       </h1>
       <p className=\\"subInfoBodyText\\">
-        The National Cities Performance Framework is designed to measure how well our cities are performing against the Australian Government’s 6 Smart Cities policy priorities areas:
+        The Australian Government has set out six 
+        <Link href=\\"https://cities.dpmc.gov.au/\\">
+          Smart Cities
+        </Link>
+         policy priorities to help achieve the objectives of the Smart Cities Plan. The National Cities Performance Framework is designed to measure how well our cities are performing against all six Smart Cities policy priorities.
       </p>
     </div>
     <Icon className=\\"subInfoIcon\\" icon=\\"city\\" size={120} color=\\"PRIMARY_600\\" />
   </div>
-  <PageLegend colorName=\\"overview\\" cities={{...}} isAllCitiesPage={true} />
+  <PageLegend colorName=\\"overview\\" isAllCitiesPage={true} />
   <CategoryOverviews cities={{...}} />
 </PageWrapper>"
 `;

@@ -29,7 +29,7 @@ export const ELEMENT_IDS = {
 
 export const LINKS = {
   ALBURY_PHOTO_CREDIT: 'https://www.flickr.com/photos/49333819@N00',
-  CITIES_PERFORMANCE_NETWORK: 'https://cities.dpmc.gov.au/',
+  CITIES_PERFORMANCE_NETWORK: 'https://cities.dpmc.gov.au/performance-framework',
   CONTACT_US: 'mailto:performance-dashboard@digital.gov.au',
   DTA_PRIVACY_POLICY: 'https://www.dta.gov.au/privacy-statement/',
   FEEDBACK: '/feedback',
@@ -40,6 +40,7 @@ export const LINKS = {
   PRIVACY_ACT: 'https://www.legislation.gov.au/Series/C2004A03712',
   PROTECTING_PDF: 'https://www.ag.gov.au/RightsAndProtections/CyberSecurity/Documents/PDF%20-%20Protecting%20Yourself%20Online%20-%20Second%20Edition%20-%20Booklet.pdf',
   SMART_CITIES_LINK: 'https://smart-cities.dashboard.gov.au',
+  SMART_CITIES_DPMC_LINK: 'https://cities.dpmc.gov.au/',
   WCAG: 'https://www.w3.org/TR/WCAG20/',
 };
 

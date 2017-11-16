@@ -30,7 +30,7 @@ export const CATEGORIES = [
         name: 'Planning',
         highlightColorLight: 'PLANNING_040',
         highlightColorDark: 'PLANNING_500',
-        iconId: 'planningLocalGovernment',
+        iconId: 'planningPlanning',
         summaryIndicatorIds: [
           'indigenousPopulation',
           'growthRate',
@@ -423,7 +423,7 @@ export const CATEGORIES = [
           },
           {
             name: 'Dwelling price to income ratio',
-            axisTitle: '',
+            axisTitle: 'Ratio',
             description: 'This shows the ratio of the median dwelling price to median annual household income. \n\nSource: Corelogic ',
             indicatorIds: [
               'dwellingPriceToIncomeRatio',
@@ -854,7 +854,7 @@ export const CATEGORIES = [
   {
     id: CATEGORY_IDS.PLANNING,
     colorName: COLOR_NAMES.PLANNING,
-    iconId: 'planningLocalGovernment',
+    iconId: 'planningPlanning',
     name: 'Planning',
     description: 'Governance, Planning and Regulation encompasses land use planning in cities and its administration, as well as how effectively local governance and regulation support economic, social and environmental outcomes.',
     shortDescription: 'Aims to deliver coordinated and integrated policy, planning and investment across all levels of government.',
@@ -865,7 +865,7 @@ export const CATEGORIES = [
         name: 'Planning',
         highlightColorLight: 'PLANNING_040',
         highlightColorDark: 'PLANNING_500',
-        iconId: 'planningLocalGovernment',
+        iconId: 'planningPlanning',
         summaryIndicatorIds: [
           'indigenousPopulation',
           'growthRate',

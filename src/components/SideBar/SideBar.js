@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 import CityNavContainer from '../CityNavContainer/CityNavContainer';
+import {
+  NO_CATEGORY,
+  NO_CITY,
+} from '../../constants';
 import style from './SideBar.scss';
 import coaWhite from '../../images/coa-white.svg';
 
@@ -32,13 +37,16 @@ class SideBar extends Component {
           aria-label="close navigation menu"
         >✕</button>
 
-        <div className={style.coaWrapper}>
+        <NavLink
+          className={style.coaWrapper}
+          to={`/${NO_CITY}/${NO_CATEGORY}`}
+        >
           <img
             className={style.coa}
             src={coaWhite}
             alt="coat of arms"
           />
-        </div>
+        </NavLink>
 
         <CityNavContainer
           categoryId={props.categoryId}

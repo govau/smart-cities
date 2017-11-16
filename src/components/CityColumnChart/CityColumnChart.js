@@ -102,7 +102,7 @@ function getChartConfig(props) {
       animation: false,
       type: 'column',
       height: 500,
-      spacingLeft: 30, // allow room for angled text
+      spacingRight: 0,
       style: {
         fontFamily: 'inherit', // to pick up the body font
       },
@@ -111,9 +111,10 @@ function getChartConfig(props) {
       series: {
         animation: false,
         stacking: props.chart.stacked ? 'normal' : null,
-        pointWidth: 8,
-        borderRadius: 4,
-        borderWidth: 0,
+        pointWidth: props.isHero ? 11 : 7, // includes border
+        borderRadius: props.isHero ? 5 : 3,
+        borderWidth: 1,
+        groupPadding: 0.85,
         states: {
           hover: {
             color: null,
@@ -126,7 +127,7 @@ function getChartConfig(props) {
       type: 'category',
       categories: data.map(city => city.name),
       labels: {
-        rotation: -45,
+        rotation: -90,
         style: {
           fontSize: '11px',
         },
@@ -211,13 +212,14 @@ function getChartConfig(props) {
           },
           plotOptions: {
             series: {
-              pointWidth: 3,
+              pointWidth: 4,
               borderRadius: 2,
+              borderWidth: 1,
+              groupPadding: 0.85,
             },
           },
           xAxis: {
             labels: {
-              rotation: -90,
               padding: 0,
               style: {
                 fontSize: '9px',
@@ -380,6 +382,7 @@ CityColumnChart.propTypes = {
   colorBase: PropTypes.oneOf(Object.values(COLOR_NAMES)).isRequired,
   highlightColorLight: PropTypes.string.isRequired,
   highlightColorDark: PropTypes.string.isRequired,
+  isHero: PropTypes.bool,
 };
 
 export default CityColumnChart;

@@ -29,7 +29,7 @@ const CategoryOverview = (props) => {
     return { id: indicatorId, value };
   });
 
-  const categoryDarkColor = getColorVariant(props.category.colorName, '500');
+  const categoryDarkColor = getColorVariant(props.category.colorName, '700');
   const categoryLightColor = isContextCategory
     ? COLORS.WHITE
     : getColorVariant(props.category.colorName, '040');
@@ -71,28 +71,30 @@ const CategoryOverview = (props) => {
         )}
 
         <div className={style.textAndIndicatorWrapper}>
-          <div className={style.categoryTextWrapper}>
-            <h2 className={style.categoryTitle}>{props.category.name}</h2>
+          <div className={style.categoryTextWrapperWrapper}>
+            <div className={style.categoryTextWrapper}>
+              <h2 className={style.categoryTitle}>{props.category.name}</h2>
 
-            <p className={style.categoryDescription}>{props.category.shortDescription}</p>
+              <p className={style.categoryDescription}>{props.category.shortDescription}</p>
 
-            <p className={style.subCategoryWrapperText}>{STRINGS.SUB_CATS_INCLUDE}</p>
+              <p className={style.subCategoryWrapperText}>{STRINGS.SUB_CATS_INCLUDE}</p>
 
-            <div>
-              {props.category.subCategories.map((subCategory) => {
-                const url = `/${cityUrlPart}/${props.category.id}#${getSubCategorySectionId(subCategory.name)}`;
+              <div>
+                {props.category.subCategories.map((subCategory) => {
+                  const url = `/${cityUrlPart}/${props.category.id}#${getSubCategorySectionId(subCategory.name)}`;
 
-                return (
-                  <NavLink
-                    key={subCategory.name}
-                    to={url}
-                  >
-                    <Pill className={style.subCategoryLink} shadow>
-                      {subCategory.name}
-                    </Pill>
-                  </NavLink>
-                );
-              })}
+                  return (
+                    <NavLink
+                      key={subCategory.name}
+                      to={url}
+                    >
+                      <Pill className={style.subCategoryLink} shadow>
+                        {subCategory.name}
+                      </Pill>
+                    </NavLink>
+                  );
+                })}
+              </div>
             </div>
           </div>
 

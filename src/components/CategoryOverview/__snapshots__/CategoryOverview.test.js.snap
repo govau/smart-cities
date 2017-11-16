@@ -4,35 +4,37 @@ exports[`should match Snapshot 1`] = `
 "<div className=\\"categoryWrapper\\" style={{...}}>
   <div className=\\"category\\">
     <div className=\\"categoryIcon\\">
-      <Icon icon=\\"infrastructureGettingToWork\\" color=\\"JOBS_500\\" />
+      <Icon icon=\\"infrastructureGettingToWork\\" color=\\"JOBS_700\\" />
     </div>
     <div className=\\"textAndIndicatorWrapper\\">
-      <div className=\\"categoryTextWrapper\\">
-        <h2 className=\\"categoryTitle\\">
-          Jobs and Skills
-        </h2>
-        <p className=\\"categoryDescription\\">
-          The short description
-        </p>
-        <p className=\\"subCategoryWrapperText\\">
-          Sub categories include:
-        </p>
-        <div>
-          <NavLink to=\\"/perth/jobs#sc-employment\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-            <Pill className=\\"subCategoryLink\\" shadow={true}>
-              Employment
-            </Pill>
-          </NavLink>
-          <NavLink to=\\"/perth/jobs#sc-education\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-            <Pill className=\\"subCategoryLink\\" shadow={true}>
-              Education
-            </Pill>
-          </NavLink>
+      <div className=\\"categoryTextWrapperWrapper\\">
+        <div className=\\"categoryTextWrapper\\">
+          <h2 className=\\"categoryTitle\\">
+            Jobs and Skills
+          </h2>
+          <p className=\\"categoryDescription\\">
+            The short description
+          </p>
+          <p className=\\"subCategoryWrapperText\\">
+            Sub categories include:
+          </p>
+          <div>
+            <NavLink to=\\"/perth/jobs#sc-employment\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+              <Pill className=\\"subCategoryLink\\" shadow={true}>
+                Employment
+              </Pill>
+            </NavLink>
+            <NavLink to=\\"/perth/jobs#sc-education\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+              <Pill className=\\"subCategoryLink\\" shadow={true}>
+                Education
+              </Pill>
+            </NavLink>
+          </div>
         </div>
       </div>
       <div className=\\"indicatorCardAndLink\\">
         <div className=\\"indicatorCards\\">
-          <IndicatorCard className=\\"indicatorCard\\" color=\\"JOBS_500\\" colorName=\\"jobs\\" indicator=\\"population\\" value={77} />
+          <IndicatorCard className=\\"indicatorCard\\" color=\\"JOBS_700\\" colorName=\\"jobs\\" indicator=\\"population\\" value={77} />
         </div>
         <NavLink to=\\"/perth/jobs\\" className=\\"categoryLinkWrapper\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           <Pill className=\\"categoryLinkPill\\" style={{...}} height={30}>
@@ -40,7 +42,7 @@ exports[`should match Snapshot 1`] = `
               Jobs and Skills
                section
             </span>
-            <Icon icon=\\"rightArrowInCircleInverted\\" size={20} color=\\"JOBS_500\\" />
+            <Icon icon=\\"rightArrowInCircleInverted\\" size={20} color=\\"JOBS_700\\" />
           </Pill>
         </NavLink>
       </div>

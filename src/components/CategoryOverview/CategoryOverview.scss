@@ -44,10 +44,19 @@
   }
 }
 
+.categoryTextWrapperWrapper {
+  // To workaround fluxbug #2 in IE11
+  // https://github.com/philipwalton/flexbugs
+  width: 100%;
+}
+
 .categoryTextWrapper {
+  height: 100%;
   margin-bottom: 16px;
 
   @include for-tablet-portrait-up {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 32px;
   }
 
@@ -88,15 +97,21 @@
 .subCategoryWrapperText {
   font-size: 12px;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  margin-top: auto; // push buttons down to align with category button
 }
 
 .subCategoryLink {
   margin-right: 8px;
-  margin-bottom: 8px;
+  margin-top: 8px;
   padding: 0 16px;
   font-size: 14px;
   background: $color-white;
+  transition: $animation-duration;
+
+  .category__context & {
+    background: $color-primary--020;
+  }
 
   &:hover {
     @include shadow(2);
@@ -180,6 +195,7 @@
   width: 100%;
   padding: 1px 3px 1px 0;
   border-radius: 10px;
+  transition: $animation-duration;
 
   @include for-tablet-portrait-up {
     width: 100%;

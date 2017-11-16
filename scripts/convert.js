@@ -23,7 +23,6 @@ getStdin().then((rawCsv) => {
 
       if (!city) throw new Error(`${row.Cities} is not a known smart city`);
 
-      city.name = row.Cities;
       city.indices = {};
 
       // generate key/value pairs for each indicator
@@ -48,6 +47,8 @@ getStdin().then((rawCsv) => {
 
       return city;
     });
+
+    cities.sort((a, b) => a.name.localeCompare(b.name));
 
     process.stdout.write(JSON.stringify(cities, null, 2)); // pretty-print
   });

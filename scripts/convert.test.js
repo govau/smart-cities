@@ -4,23 +4,21 @@ Greater Perth,2040000,0.016`;
 
 const expectedOutputObject = [
   {
-    id: 'greater-sydney',
-    shortName: 'Sydney',
-    description: 'Description of Sydney',
-    name: 'Greater Sydney',
-    indices: {
-      population: 4920000,
-      growthRate: 0.021
-    },
-  },
-  {
     id: 'greater-perth',
-    shortName: 'Perth',
+    name: 'Perth',
     description: 'Description of Perth',
-    name: 'Greater Perth',
     indices: {
       population: 2040000,
       growthRate: 0.016
+    },
+  },
+  {
+    id: 'greater-sydney',
+    name: 'Sydney',
+    description: 'Description of Sydney',
+    indices: {
+      population: 4920000,
+      growthRate: 0.021
     },
   },
 ];
@@ -39,12 +37,12 @@ jest.mock('../src/constants', () => ({
   CITIES: {
     'Greater Sydney': {
       id: 'greater-sydney',
-      shortName: 'Sydney',
+      name: 'Sydney',
       description: 'Description of Sydney',
     },
     'Greater Perth': {
       id: 'greater-perth',
-      shortName: 'Perth',
+      name: 'Perth',
       description: 'Description of Perth',
     },
   },

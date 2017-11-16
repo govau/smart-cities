@@ -12,24 +12,24 @@ exports[`should match Snapshot 1`] = `
     </div>
     <div className=\\"wordsWrapper\\">
       <div className=\\"staticLinksWrapper\\">
-        <a href=\\"/feedback\\" className=\\"staticLink\\">
+        <NavLink to=\\"/feedback\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           Give feedback
-        </a>
-        <a href=\\"/additional-information#privacy\\" className=\\"staticLink\\">
+        </NavLink>
+        <NavLink to=\\"/additional-information#privacy\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           Privacy policy
-        </a>
-        <a href=\\"mailto:performance-dashboard@digital.gov.au\\" className=\\"staticLink\\">
+        </NavLink>
+        <NavLink to=\\"mailto:performance-dashboard@digital.gov.au\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           Need help?
-        </a>
-        <a href=\\"/additional-information#accessibility\\" className=\\"staticLink\\">
+        </NavLink>
+        <NavLink to=\\"/additional-information#accessibility\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           Accessibility
-        </a>
-        <a href=\\"/additional-information#security\\" className=\\"staticLink\\">
+        </NavLink>
+        <NavLink to=\\"/additional-information#security\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           Security
-        </a>
-        <a href=\\"/additional-information#content-credit\\" className=\\"staticLink\\">
+        </NavLink>
+        <NavLink to=\\"/additional-information#content-credit\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           Content credit
-        </a>
+        </NavLink>
       </div>
       <div className=\\"copyright\\">
         © Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.
