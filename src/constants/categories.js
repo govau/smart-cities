@@ -15,7 +15,7 @@ export const CATEGORY_IDS = {
 export const CATEGORIES = [
   {
     id: CATEGORY_IDS.CONTEXT,
-    colorName: COLOR_NAMES.CONTEXT,
+    colorName: COLOR_NAMES.PRIMARY,
     navName: 'Context',
     name: 'Cities Context',
     description: 'Contextual indicators can help to understand why a city performs the way it does and what policies may be effective for improving economic performance and quality of life.',
@@ -30,6 +30,7 @@ export const CATEGORIES = [
         name: 'Planning',
         highlightColorLight: 'PLANNING_040',
         highlightColorDark: 'PLANNING_500',
+        colorName: COLOR_NAMES.PLANNING,
         iconId: 'planningPlanning',
         summaryIndicatorIds: [
           'indigenousPopulation',
@@ -111,6 +112,7 @@ export const CATEGORIES = [
         name: 'Housing',
         highlightColorLight: 'HOUSING_040',
         highlightColorDark: 'HOUSING_500',
+        colorName: COLOR_NAMES.HOUSING,
         iconId: 'housingHousingAffordability',
         summaryIndicatorIds: [
           'tenureRatioOwnedOutright',
@@ -165,6 +167,7 @@ export const CATEGORIES = [
         name: 'Liveability',
         highlightColorLight: 'LIVEABILITY_040',
         highlightColorDark: 'LIVEABILITY_500',
+        colorName: COLOR_NAMES.LIVEABILITY,
         iconId: 'liveabilityLiveability',
         summaryIndicatorIds: [
           'lifeExpectancy',
@@ -212,6 +215,7 @@ export const CATEGORIES = [
         name: 'Jobs & Skills',
         highlightColorLight: 'JOBS_040',
         highlightColorDark: 'JOBS_500',
+        colorName: COLOR_NAMES.JOBS,
         iconId: 'jobsEmployment',
         summaryIndicatorIds: [
           'goodsProducingSector',

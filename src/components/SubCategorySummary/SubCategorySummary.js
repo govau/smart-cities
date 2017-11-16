@@ -38,7 +38,7 @@ const SubCategorySummary = (props) => {
           className={style.card}
           indicator={indicatorId}
           color={cardHighlightColor}
-          colorName={props.categoryId}
+          colorName={props.categoryColorName}
           value={indicatorValue}
           isContextPage={isContextPage}
         />
@@ -86,6 +86,7 @@ SubCategorySummary.propTypes = {
   city: PropTypes.shape(cityPropShape),
   cities: PropTypes.arrayOf(PropTypes.shape(cityPropShape)),
   categoryId: PropTypes.string.isRequired,
+  categoryColorName: PropTypes.string.isRequired,
   highlightColorLight: PropTypes.string.isRequired,
   highlightColorDark: PropTypes.string.isRequired,
   iconId: PropTypes.string.isRequired,

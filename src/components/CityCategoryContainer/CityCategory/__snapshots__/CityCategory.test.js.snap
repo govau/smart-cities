@@ -3,8 +3,8 @@
 exports[`should match Snapshot 1`] = `
 "<PageWrapper cityId=\\"perth\\" categoryId=\\"mock\\" cityName=\\"Perth\\" categoryColorName=\\"jobs\\">
   <PageBanner colorName=\\"jobs\\" description=\\"The description of the category\\" indicator=\\"population\\" title=\\"Mock category\\" cities={{...}} city={{...}} isContextPage={false} />
-  <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" highlightColorDark=\\"HOUSING_600\\" summaryIndicatorIds={{...}} categoryId=\\"mock\\" city={{...}} />
-  <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" highlightColorDark=\\"HOUSING_700\\" summaryIndicatorIds={{...}} categoryId=\\"mock\\" city={{...}} />
+  <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" highlightColorDark=\\"HOUSING_600\\" summaryIndicatorIds={{...}} categoryId=\\"mock\\" categoryColorName=\\"jobs\\" city={{...}} />
+  <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" highlightColorDark=\\"HOUSING_700\\" summaryIndicatorIds={{...}} categoryId=\\"mock\\" categoryColorName=\\"jobs\\" city={{...}} />
   <CompareCities category={{...}} city={{...}} cities={{...}} toggleCitySelected={[Function]} />
   <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} city={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"HOUSING_600\\" />
   <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} city={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"HOUSING_700\\" />

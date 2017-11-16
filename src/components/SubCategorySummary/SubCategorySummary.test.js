@@ -8,6 +8,7 @@ jest.mock('../Icon/Icon', () => 'Icon');
 
 const defaultProps = {
   categoryId: 'jobs',
+  categoryColorName: 'primary',
   highlightColorLight: 'JOBS_020',
   highlightColorDark: 'JOBS_600',
   name: 'Mock sub category',

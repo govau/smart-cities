@@ -98,7 +98,7 @@ const AllCitiesOverview = props => (
     </div>
 
     <PageLegend
-      colorName="overview"
+      colorName="primary"
       isAllCitiesPage
     />
 

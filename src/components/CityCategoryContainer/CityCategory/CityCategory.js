@@ -29,6 +29,7 @@ const CityCategory = props => (
         key={subCategory.name}
         {...subCategory}
         categoryId={props.category.id}
+        categoryColorName={subCategory.colorName || props.category.colorName}
         city={props.city}
       />
     ))}
@@ -44,7 +45,7 @@ const CityCategory = props => (
       <SubCategoryCharts
         key={subCategory.name}
         subCategory={subCategory}
-        colorName={props.category.colorName}
+        colorName={subCategory.colorName || props.category.colorName}
         cities={props.cities}
         city={props.city}
         heroIndicatorId={props.category.heroIndicatorId}
@@ -63,6 +64,7 @@ CityCategory.propTypes = {
     heroIndicatorId: PropTypes.string.isRequired,
     subCategories: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
+      colorName: PropTypes.string,
       summaryIndicatorIds: PropTypes.arrayOf(PropTypes.string).isRequired,
       charts: PropTypes.arrayOf(PropTypes.shape({
         name: PropTypes.string.isRequired,

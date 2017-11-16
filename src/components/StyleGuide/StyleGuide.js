@@ -6,6 +6,7 @@ import iconDefinitions from '../Icon/iconDefinitions';
 import style from './StyleGuide.scss';
 
 const COLOR_GROUPS = [
+  'primary',
   'jobs',
   'housing',
   'infrastructure',
@@ -19,12 +20,15 @@ const TINTS = [
   '040',
   '060',
   '080',
-  '100',
+  '200',
+  '300',
+  '400',
   '500',
   '600',
   '700',
   '800',
   '900',
+  '950',
 ];
 
 const COLORS = COLOR_GROUPS.map(group => (
@@ -38,35 +42,22 @@ const COLORS = COLOR_GROUPS.map(group => (
   })
 ));
 
-const PRIMARY_COLORS = [
-  'primary--020',
-  'primary--040',
-  'primary--060',
-  'primary--080',
-  'primary--500',
-  'primary--600',
-  'primary--700',
-  'primary--800',
-  'primary--900',
-];
-
-COLORS.push(PRIMARY_COLORS.map(primary => ({
-  className: style[`color-${primary}`],
-  variableName: primary,
-})));
-
 const SPECIAL_COLORS = [
   'white',
-  'grid',
-  'grey--100',
+  'grey--040',
+  'grey--060',
+  'grey--080',
   'grey--200',
+  'grey--300',
+  'grey--400',
   'grey--500',
   'grey--700',
   'grey--800',
+  'grey--900',
+  'grey--950',
   'black',
   'badge',
   'highlight',
-  'blue',
 ];
 
 COLORS.push(SPECIAL_COLORS.map(special => ({

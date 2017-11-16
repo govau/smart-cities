@@ -17,8 +17,8 @@ const TypographyRow = props => (
 
 TypographyRow.propTypes = {
   style: PropTypes.shape({
-    fontSize: PropTypes.string.isRequired,
-    fontWeight: PropTypes.string.isRequired,
+    fontSize: PropTypes.number.isRequired,
+    fontWeight: PropTypes.number.isRequired,
   }).isRequired,
 };
 

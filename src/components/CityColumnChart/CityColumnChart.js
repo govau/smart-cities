@@ -51,8 +51,10 @@ function sortChartData(cities, indicator) {
 }
 
 function getSeries(props) {
-  const colorMedium = getColorVariant(props.highlightColorDark);
-  const chartColors = getColorRange(colorMedium, props.chart.indicatorIds.length);
+  const chartColors = props.chart.indicatorIds.length === 1
+    ? [getColorVariant(props.colorBase, 300)]
+    : getColorRange(props.colorBase);
+
   const data = sortChartData(props.cities, props.chart.indicatorIds[0]);
 
   return props.chart.indicatorIds.map((indicatorId, i) => ({

@@ -11,7 +11,7 @@ exports[`should match Snapshot 1`] = `
     </div>
     <div className=\\"cardRow\\">
       <div className=\\"cardWrapper\\">
-        <IndicatorCard className=\\"card\\" indicator=\\"population\\" color=\\"JOBS_600\\" colorName=\\"jobs\\" value={{...}} isContextPage={false} />
+        <IndicatorCard className=\\"card\\" indicator=\\"population\\" color=\\"JOBS_600\\" colorName=\\"primary\\" value={{...}} isContextPage={false} />
         <a className=\\"linkWrapper\\" href=\\"#sc-mock-sub-category\\">
           <span className=\\"linkText\\">
             View all Mock sub category charts

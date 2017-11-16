@@ -1,12 +1,13 @@
 import getColorRange from './getColorRange';
+import COLORS from '../style/_colors.scss';
 
-it('should return three colours', () => {
-  const result = getColorRange('rgb(103, 103, 103)', 4);
+it('should return a range of colors', () => {
+  const result = getColorRange('planning');
 
   expect(result).toEqual([
-    'rgb(153, 153, 153)',
-    'rgb(92, 92, 92)',
-    'rgb(55, 55, 55)',
-    'rgb(33, 33, 33)',
+    COLORS.PLANNING_200,
+    COLORS.PLANNING_400,
+    COLORS.PLANNING_800,
+    COLORS.PLANNING_950,
   ]);
 });

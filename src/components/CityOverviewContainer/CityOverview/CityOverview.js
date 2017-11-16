@@ -8,10 +8,10 @@ const CityOverview = props => (
   <PageWrapper
     cityId={props.city.id}
     cityName={props.city.name}
-    categoryColorName="overview"
+    categoryColorName="primary"
   >
     <PageBanner
-      colorName="overview"
+      colorName="primary"
       description={props.city.description}
       indicator="population"
       title={props.city.name}

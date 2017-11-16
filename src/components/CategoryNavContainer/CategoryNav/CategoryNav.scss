@@ -65,11 +65,11 @@
 
       .wrapper__overview & {
         color: $color-white;
-        border-color: $color-overview--500;
+        border-color: $color-primary--500;
       }
     }
 
-    .context {
+    .primary {
       border: 2px solid $color-primary--600;
       color: $color-grey--700;
 

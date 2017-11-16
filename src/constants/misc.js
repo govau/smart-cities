@@ -10,8 +10,7 @@ export const CARD_SIZES = {
 
 // note, the values are lowercase because they're used in CSS class names
 export const COLOR_NAMES = {
-  OVERVIEW: 'overview',
-  CONTEXT: 'context',
+  PRIMARY: 'primary',
   JOBS: 'jobs',
   HOUSING: 'housing',
   INFRASTRUCTURE: 'infrastructure',
