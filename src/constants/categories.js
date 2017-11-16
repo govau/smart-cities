@@ -47,7 +47,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Population growth',
+            name: 'Annual population growth',
             axisTitle: 'Growth rate',
             description: 'This shows the percentage change in the level of the population on the preceding year, and the average annual percentage change over the past ten years.\n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
@@ -56,7 +56,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Indigenous population',
+            name: 'Proportion of population that is Indigenous',
             axisTitle: 'Indigenous status, percentage of total population',
             description: 'This shows the proportion of the population that identifies as Aboriginal or Torres Strait Islander.\n\nSource: ABS - Census 2016',
             indicatorIds: [
@@ -72,7 +72,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Age dependency ratio',
+            name: 'Population breakdown by age',
             axisTitle: 'Share of the population',
             description: 'This shows the share of population aged 0 to 14, 15 to 64, and 65 and over. \n\nSource: ABS - Regional Population Growth',
             stacked: true,
@@ -83,7 +83,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Dependency ratio: not of working age',
+            name: 'Population share not of working age',
             axisTitle: '',
             description: 'This shows the number of persons of non-working age (0-14 and 65+) per person of working age (15-64) \n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
@@ -91,7 +91,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Dependency ratio: median age',
+            name: 'Median age',
             axisTitle: '',
             description: 'This shows the median age. \n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
@@ -99,7 +99,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Disability rate',
+            name: 'Proportion of population with a disability',
             axisTitle: 'Population share with disability',
             description: 'This shows the proportion of the population that self identifies as having disability. \n\nSource: ABS - Disability, Ageing and Carers',
             indicatorIds: [
@@ -121,7 +121,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Dwelling type ratio',
+            name: 'Dwelling type breakdown',
             axisTitle: 'Share of dwellings',
             description: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
             stacked: true,
@@ -133,7 +133,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Average household size',
+            name: 'Persons per dwelling',
             axisTitle: '',
             description: 'This shows the average number of people per occupied dwelling.\n\nSource: ABS - Census 2016',
             indicatorIds: [
@@ -186,7 +186,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Households in bottom 20% income',
+            name: 'Households in lowest household income quintile',
             axisTitle: 'Share in bottom household income quintile',
             description: 'This shows the share of households in bottom 20% of the national household income distribution.\n\nSource: ABS - Census 2016',
             indicatorIds: [
@@ -194,7 +194,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Socio-economic indexes for areas',
+            name: 'Index of relative socio-economic disadvantage',
             axisTitle: 'Socio-economic indexes for areas',
             description: 'This shows an index of relative socio-economic disadvantage. A low score indicates relatively greater disadvantage.\n\nSource: ABS - Census 2011',
             indicatorIds: [
@@ -202,7 +202,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Languages other than English',
+            name: 'Languages spoken other than English',
             axisTitle: 'Language other than English spoken at home',
             description: 'This shows the proportion of residents who speak a language other than English at home. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -224,7 +224,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Industry share of employment',
+            name: 'Industry sector share of employment',
             axisTitle: 'Proportion of employed persons',
             description: 'This shows the proportion of employed persons that work in goods producing, market services, and non-market services industries.\n\nSource: ABS - Labour Force',
             stacked: true,
@@ -263,7 +263,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Unemployment',
+            name: 'Unemployment rate',
             axisTitle: '',
             description: 'This shows the average unemployment rate for 12 months for all persons. \n\nSource: ABS Labour Force',
             indicatorIds: [
@@ -295,7 +295,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Participation by gender',
+            name: 'Participation rate by gender',
             axisTitle: '',
             description: 'This shows the share of the male and female civilian populations in the labour force. \n\nSource: ABS Labour Force',
             indicatorIds: [
@@ -304,7 +304,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Employment growth',
+            name: 'Annual employment growth',
             axisTitle: 'Annual growth in number of jobs',
             description: 'This shows the percentage change in the level of employment in the current year compared to the previous year. \n\nSource: ABS Labour Force',
             indicatorIds: [
@@ -312,7 +312,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Industry share of employment',
+            name: 'Industry sector share of employment',
             axisTitle: 'Proportion of employed persons',
             description: 'This shows the proportion of employed persons that work in goods producing, market services, and non-market services industries.\n\nSource: ABS - Labour Force',
             stacked: true,
@@ -334,7 +334,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Educational attainment: year 12',
+            name: 'Completed year 12',
             axisTitle: '',
             description: 'This shows the proportion of a city’s population that have completed year 12. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -342,7 +342,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Educational attainment: certificate',
+            name: 'Completed Certificate 3,4 or Diploma',
             axisTitle: '',
             description: 'This shows the proportion of a city’s population that have completed certificate Level III qualifications or higher. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -350,7 +350,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Educational attainment: tertiary',
+            name: 'Completed bachelor degree or higher',
             axisTitle: '',
             description: 'This shows the proportion of a city’s population that have completed a bachelor degree or higher. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -385,7 +385,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Public housing units',
+            name: 'Public and community housing units',
             axisTitle: 'units per 100,000 persons',
             description: 'This shows the number of public and community housing units per 100,000 people. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -401,7 +401,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Housing construction costs',
+            name: 'Average housing construction costs',
             axisTitle: 'Housing construction cost, $/m²',
             description: 'This shows the average cost per square metre of constructing a new detached house in a city. \n\nSource: Rawlinsons Guide to Construction Costs',
             indicatorIds: [
@@ -409,7 +409,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Mortgage stress',
+            name: 'Households in mortgage stress',
             axisTitle: 'Proportion of households under mortgage stress',
             description: 'This shows the proportion of occupied households for which mortgage payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -426,7 +426,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Dwelling price to income ratio',
+            name: 'Dwelling price to household income ratio',
             axisTitle: 'Ratio',
             description: 'This shows the ratio of the median dwelling price to median annual household income. \n\nSource: Corelogic ',
             indicatorIds: [
@@ -455,7 +455,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Average household size',
+            name: 'Persons per dwelling',
             axisTitle: 'Number of people',
             description: 'This shows the average number of people per occupied dwelling. \n\nSource: ABS - Census 2016',
             indicatorIds: [
@@ -463,7 +463,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Homelessness rate',
+            name: 'Homeless per 100k people',
             axisTitle: 'Homelessness per 100,000 persons',
             description: 'This shows the number of homeless people per 100,000 people. \n\nSource: ABS Census 2011',
             indicatorIds: [
@@ -471,7 +471,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Rent stress',
+            name: 'Households in rent stress',
             axisTitle: 'Proportion of households under rent stress',
             description: 'This shows the proportion of occupied households for which rent payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -479,7 +479,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Dwelling type ratio',
+            name: 'Dwelling type breakdown',
             axisTitle: 'Share of dwellings',
             description: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
             stacked: true,
@@ -531,7 +531,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Jobs accessible within 30 minutes by car',
+            name: 'Jobs accessible by car within 30 minutes',
             axisTitle: 'Proportion of jobs accessible within 30 minutes by car',
             description: 'This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. \n\nSource: SGS Economics and Planning ',
             max: 1,
@@ -548,7 +548,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Active transport use',
+            name: 'Proportion of population that walk or cycle to work',
             axisTitle: 'Proportion of journeys to work by active transport',
             description: 'This shows the proportion of journeys to work that are taken by active transport (walking or cycling). \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -591,7 +591,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Access to green space',
+            name: 'Dwellings with access to parkland greenspace',
             axisTitle: 'Percentage of dwellings with access to green space',
             description: 'This shows the share of dwellings in a city that are located within 400 metres of green space. \n\nSource: ABS - Australian Statistical Geography Standard',
             indicatorIds: [
@@ -599,7 +599,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Gross parkland area',
+            name: 'Proportion of parkland',
             axisTitle: 'Percentage of gross land area that is parkland',
             description: 'This shows the proportion of land area in a city that is defined as green space. \n\nSource: ABS - Australian Statistical Geography Standard',
             indicatorIds: [
@@ -607,7 +607,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Air pollution, >PM10',
+            name: 'Air pollution greater than PM10',
             axisTitle: 'Particle pollution greater than PM10',
             description: 'This shows the average amount of particulate matter in a city’s air per cubic metre, measured over the course of a year for particles that are less than 10 microns in diameter. \n\nSource: World Health Organisation',
             indicatorIds: [
@@ -615,7 +615,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Air pollution, <PM2.5',
+            name: 'Air pollution less than PM2.5',
             axisTitle: 'Particle pollution less than PM2.5',
             description: 'This shows the average amount of particulate matter in a city’s air per cubic metre, measured over the course of a year for particles that are less than 2.5 microns in diameter. \n\nSource: World Health Organisation',
             indicatorIds: [
@@ -671,7 +671,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Volunteering',
+            name: 'Proportion of people that volunteer',
             axisTitle: 'Percentage of population over 15 years who volunteer',
             description: 'This shows the share of people aged 15 years and older who volunteered their time, services or skills to a club, organisation or association in the past twelve months. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -679,7 +679,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Languages other than English',
+            name: 'Languages spoken other than English',
             axisTitle: 'Language other than English spoken at home',
             description: 'This shows the proportion of residents who speak a language other than English at home. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -687,7 +687,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Socio-economic indexes for areas',
+            name: 'Index of relative socio-economic disadvantage',
             axisTitle: 'Socio-economic indexes for areas',
             description: 'This shows an index of relative socio-economic disadvantage. A low score indicates relatively greater disadvantage.\n\nSource: ABS - Census 2011',
             indicatorIds: [
@@ -695,7 +695,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Households in bottom 20% income',
+            name: 'Households in lowest household income quintile',
             axisTitle: 'Share in bottom household income quintile',
             description: 'This shows the share of households in bottom 20% of the national household income distribution.\n\nSource: ABS - Census 2016',
             indicatorIds: [
@@ -723,7 +723,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Support in times of crisis',
+            name: 'Percentage of population able to get crisis support',
             axisTitle: 'Percentage of population able to get crisis support',
             description: 'This shows the share of people that stated in a survey that they feel there is someone outside their household who could be asked for support in a time of crisis. \n\nSource: PHIDU – Social Health Atlas of Australia',
             indicatorIds: [
@@ -751,8 +751,8 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Suicide rate',
-            axisTitle: 'Number of suicides per 100,000 persons',
+            name: 'Suicides per 100k people',
+            axisTitle: 'Suicides per 100k people',
             description: 'This shows the number of suicides in a year per 100,000 people, calculated over the period 2010 to 2014. \n\nSource: PHIDU – Social Health Atlas of Australia',
             indicatorIds: [
               'suicideRate',
@@ -795,7 +795,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Patent applications',
+            name: 'Patent applications per 100k people',
             axisTitle: 'Patent applications per 100,000 persons',
             description: 'This shows the number of patent applications by people resident in a city per 100,000 people per year. \n\nSource: ABS Data by Region',
             indicatorIds: [
@@ -824,7 +824,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Knowledge workers ratio',
+            name: 'Workers in knowlesdge intensive services',
             axisTitle: 'Percentage of employment as knowledge workers',
             description: 'This shows the share of employed persons that work in the top three knowledge-intensive service industries. \n\nSource: ABS Labour Force',
             indicatorIds: [
@@ -832,7 +832,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'New business entrants and exits',
+            name: 'Business entry and exit rate',
             axisTitle: '',
             description: 'This shows the business entry and exit rates: the number of new businesses that started actively trading on the business register over the past year as a share of the total number of registered businesses at the start of the year. \n\nSource: ABS Data by Region',
             indicatorIds: [
@@ -841,7 +841,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'LinkedIn connectivity',
+            name: 'LinkedIn contacts by location',
             axisTitle: 'Average share',
             description: 'This shows the average share of LinkedIn account holder contacts that are located in the same city, other parts of Australia or overseas. \n\nSource: LinkedIn',
             stacked: true,
@@ -885,7 +885,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Population growth',
+            name: 'Annual population growth',
             axisTitle: 'Growth rate',
             description: 'This shows the percentage change in the level of the population on the preceding year, and the average annual percentage change over the past ten years.\n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
@@ -894,7 +894,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Indigenous population',
+            name: 'Proportion of population that is Indigenous',
             axisTitle: 'Indigenous status, percentage of total population',
             description: 'This shows the proportion of the population that identifies as Aboriginal or Torres Strait Islander.\n\nSource: ABS - Census 2016',
             indicatorIds: [
@@ -921,7 +921,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Dependency ratio: not of working age',
+            name: 'Population share not of working age',
             description: 'This shows the number of persons of non-working age (0-14 and 65+) per person of working age (15-64) \n\nSource: ABS - Regional Population Growth',
             axisTitle: '',
             indicatorIds: [
@@ -929,7 +929,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Dependency ratio: median age',
+            name: 'Median age',
             axisTitle: 'Median age in years',
             description: 'This shows the median age. \n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
@@ -937,8 +937,8 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Disability rate',
-            axisTitle: 'Population share with disability',
+            name: 'Proportion of population with a disability',
+            axisTitle: 'Proportion of population with a disability',
             description: 'This shows the proportion of the population that self identifies as having disability. \n\nSource: ABS - Disability, Ageing and Carers',
             indicatorIds: [
               'disabilityRate',
@@ -956,7 +956,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Local government dispersion',
+            name: 'Local governments per 100k people',
             axisTitle: 'LGAs per 100,000 persons',
             description: 'This shows the number of Local Government Areas per 100 000 persons. \n\nSource: ABS - Regional Population Growth ',
             indicatorIds: [
