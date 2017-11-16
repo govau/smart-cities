@@ -103,6 +103,7 @@ const IndicatorCard = (props) => {
             y={shapeHeight - val}
             width={barWidth}
             height={val}
+            opacity="0.5"
           />
         ))}
       </g>
