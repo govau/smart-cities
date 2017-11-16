@@ -5,7 +5,10 @@ import iconDefinitions from './iconDefinitions';
 import style from './Icon.scss';
 
 const Icon = (props) => {
-  const icon = iconDefinitions[props.icon];
+  const icon = typeof props.icon === 'string'
+    ? iconDefinitions[props.icon]
+    : props.icon;
+
   const className = classnames(
     props.className,
     icon.svgClassName,
@@ -32,7 +35,10 @@ const Icon = (props) => {
 };
 
 Icon.propTypes = {
-  icon: PropTypes.oneOf(Object.keys(iconDefinitions)).isRequired,
+  icon: PropTypes.oneOfType([
+    PropTypes.oneOf(Object.keys(iconDefinitions)),
+    PropTypes.object,
+  ]).isRequired,
   size: PropTypes.number,
   className: PropTypes.string,
   color: PropTypes.string,

@@ -70,12 +70,6 @@ function renderIndicatorNumber(numberProps) {
 const IndicatorCard = (props) => {
   const showDualNumbers = Array.isArray(props.value);
 
-  if (showDualNumbers && props.value.length !== 2) {
-    console.warn(`Exactly 2 numbers must be passed to an IndicatorCard, you passed ${props.value.length}`);
-
-    return null;
-  }
-
   const indicator = typeof props.indicator === 'string'
     ? INDICATORS[props.indicator]
     : props.indicator;
@@ -90,6 +84,30 @@ const IndicatorCard = (props) => {
     dualOrSingleClassName,
     props.className,
   );
+
+  const shapeHeight = Math.max(...props.value);
+  const shapeWidth = shapeHeight * 5; // arbitrary
+  const barWidth = shapeWidth / props.value.length;
+
+  console.warn('props value', props.value, shapeHeight, shapeWidth, barWidth);
+
+  const shapeDefinition = {
+    title: 'Shape',
+    viewBox: `0 0 ${shapeWidth} ${shapeHeight}`,
+    body: (
+      <g>
+        {props.value.map((val, idx) => (
+          <rect
+            key={val}
+            x={barWidth * idx}
+            y={shapeHeight - val}
+            width={barWidth}
+            height={val}
+          />
+        ))}
+      </g>
+    ),
+  };
 
   return (
     <div
@@ -110,7 +128,7 @@ const IndicatorCard = (props) => {
       <div className={style.indicatorNumbers}>
         {renderIndicatorNumber({
           indicator,
-          value: showDualNumbers ? props.value[1] : props.value,
+          value: showDualNumbers ? props.value[props.value.length - 1] : props.value,
           showDualNumbers,
           color: darkColor,
         })}
@@ -125,6 +143,12 @@ const IndicatorCard = (props) => {
           })
         )}
       </div>
+
+      <Icon
+        color={props.color}
+        icon={shapeDefinition}
+        className={style.dataShape}
+      />
     </div>
   );
 };

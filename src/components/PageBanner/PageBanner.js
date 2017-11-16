@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import PageLegend from '../PageLegend/PageLegend';
 import { INDICATORS } from '../../constants';
-import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
+// import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
+import getAllValuesForIndicator from '../../helpers/getAllValuesForIndicator';
 import getColorVariant from '../../helpers/getColorVariant';
 import style from './PageBanner.scss';
 
@@ -12,7 +13,7 @@ const PageBanner = (props) => {
   const cardHighlightColor = getColorVariant(props.colorName, '500');
   const indicatorValue = props.city
     ? props.city.indices[props.indicator]
-    : getMinAndMaxForIndicator(
+    : getAllValuesForIndicator(
       props.indicator,
       props.cities,
     );

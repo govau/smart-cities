@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import Icon from '../Icon/Icon';
-import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
+// import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
+import getAllValuesForIndicator from '../../helpers/getAllValuesForIndicator';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import getColorVariant from '../../helpers/getColorVariant';
 import {
@@ -20,7 +21,7 @@ const SubCategorySummary = (props) => {
     const lastOne = i === (props.summaryIndicatorIds.length - 1);
     const indicatorValue = props.city
       ? props.city.indices[indicatorId]
-      : getMinAndMaxForIndicator(
+      : getAllValuesForIndicator(
         indicatorId,
         props.cities,
       );

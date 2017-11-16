@@ -4,7 +4,8 @@ import { NavLink } from 'react-router-dom';
 import Icon from '../Icon/Icon';
 import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import Pill from '../Pill/Pill';
-import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
+// import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
+import getAllValuesForIndicator from '../../helpers/getAllValuesForIndicator';
 import getColorVariant from '../../helpers/getColorVariant';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import {
@@ -24,7 +25,7 @@ const CategoryOverview = (props) => {
   const indicators = props.category.overviewIndicatorIds.map((indicatorId) => {
     const value = props.city
       ? props.city.indices[indicatorId]
-      : getMinAndMaxForIndicator(indicatorId, props.cities);
+      : getAllValuesForIndicator(indicatorId, props.cities);
 
     return { id: indicatorId, value };
   });
