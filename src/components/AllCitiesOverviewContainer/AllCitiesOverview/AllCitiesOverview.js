@@ -46,7 +46,7 @@ const AllCitiesOverview = props => (
 
           <p className={style.infoBodyText}>
             Australian cities have long been an important economic and social asset and will be
-            more important than ever in the 21ˢᵗ st century. Our cities provide great opportunities
+            more important than ever in the 21st century. Our cities provide great opportunities
             for innovation and productivity in the global knowledge-based economy and
             are recognised as great places to live, work and study.
           </p>

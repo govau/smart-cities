@@ -17,7 +17,7 @@ exports[`should match Snapshot 1`] = `
           About
         </h1>
         <p className=\\"infoBodyText\\">
-          Australian cities have long been an important economic and social asset and will be more important than ever in the 21ˢᵗ st century. Our cities provide great opportunities for innovation and productivity in the global knowledge-based economy and are recognised as great places to live, work and study.
+          Australian cities have long been an important economic and social asset and will be more important than ever in the 21st century. Our cities provide great opportunities for innovation and productivity in the global knowledge-based economy and are recognised as great places to live, work and study.
         </p>
         <p className=\\"infoBodyText\\">
           The Australian Government is committed to the continual improvement of our cities. 
