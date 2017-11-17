@@ -34,7 +34,7 @@ jobs:
           - v1-dependencies-
       - run: ./scripts/prepare_build.sh
       - run: ./scripts/cf_staging.sh
-      - run: cf zero-downtime-push smart-cities-staging -f manifest.yml -p build
+      - run: cf zero-downtime-push smart-cities-staging -f manifest-staging.yml -p build --show-app-log
   deploy_production: 
     docker: 
       - image: circleci/node:8.1.2
@@ -48,7 +48,7 @@ jobs:
           - v1-dependencies-
       - run: ./scripts/prepare_build.sh
       - run: ./scripts/cf_production.sh
-      - run: cf zero-downtime-push smart-cities -f manifest.yml -p build
+      - run: cf zero-downtime-push smart-cities -f manifest-production.yml -p build --show-app-log
 workflows: 
   version: 2
   build_test_deploy:

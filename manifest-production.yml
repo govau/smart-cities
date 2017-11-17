@@ -1,0 +1,10 @@
+---
+inherit: manifest-base.yml
+
+# This is the parent domain that CloudFoundry will associate the application with.
+# e.g. smart-cities.dashboard.gov.au
+domain: dashboard.gov.au
+instances: 3
+
+applications:
+- smart-cities
