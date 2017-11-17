@@ -4,7 +4,7 @@ import { LINKS } from '../../constants';
 import style from './FeedbackPage.scss';
 
 const FeedbackPage = () => (
-  <PageWrapper>
+  <PageWrapper dimFeedback>
     <div className={style.feedbackWrapper}>
       <div className={style.container}>
         <h1 className={style.title}>Please give feedback</h1>

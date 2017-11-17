@@ -12,6 +12,7 @@ exports[`should match Snapshot 1`] = `
         render me
       </div>
     </main>
+    <FeedbackButton dimmed={[undefined]} />
     <FooterContainer categoryId=\\"jobs\\" />
   </div>
 </div>"

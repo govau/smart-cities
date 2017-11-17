@@ -3,7 +3,8 @@ $animation-duration: 250ms;
 $z-index-cat-nav: 1; // the top nav must be above the hero image on the overview page
 $z-index-header: 2; // so the shadow is above the panel below
 $z-index-left-nav: 3; // must be on top when it opens on mobile
-$z-index-tooltip: 4;
+$z-index-feedback-button: 4;
+$z-index-tooltip: 5;
 
 @mixin shadow($elevation: 1) {
   @if $elevation == 1 {
