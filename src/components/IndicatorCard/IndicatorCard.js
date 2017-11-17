@@ -96,10 +96,10 @@ const IndicatorCard = (props) => {
     viewBox: `0 0 ${shapeWidth} ${shapeHeight}`,
     body: (
       <g>
-        {props.value.map((val, idx) => (
+        {props.value.slice().reverse().map((val, idx) => (
           <rect
             key={val}
-            x={barWidth * idx}
+            x={barWidth * (idx + 1)}
             y={shapeHeight - val}
             width={barWidth}
             height={val}
