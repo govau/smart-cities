@@ -8,7 +8,7 @@ jest.mock('../CategoryOverview/CategoryOverview', () => 'CategoryOverview');
 const defaultProps = {
   city: {
     id: 'perth',
-    indices: {}
+    indicators: {}
   },
 };
 

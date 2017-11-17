@@ -27,7 +27,7 @@ const CategoryOverviews = props => (
 
 const cityPropShape = {
   id: PropTypes.string.isRequired,
-  indices: PropTypes.object.isRequired,
+  indicators: PropTypes.object.isRequired,
 };
 
 CategoryOverviews.propTypes = {

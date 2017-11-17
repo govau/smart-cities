@@ -14,14 +14,14 @@ const defaultProps = {
     {
       id: 'perth',
       name: 'Perth',
-      indices: {
+      indicators: {
         population: 77,
       }
     },
     {
       id: 'sydney',
       name: 'Sydney',
-      indices: {
+      indicators: {
         population: 23,
       }
     },
@@ -64,7 +64,7 @@ it('should show data for a single city', () => {
       city={{
         id: 'perth',
         name: 'Perth',
-        indices: {
+        indicators: {
           population: 77,
         },
       }}

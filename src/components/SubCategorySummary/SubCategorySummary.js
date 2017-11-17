@@ -19,7 +19,7 @@ const SubCategorySummary = (props) => {
   const indicatorCardWrappers = props.summaryIndicatorIds.map((indicatorId, i) => {
     const lastOne = i === (props.summaryIndicatorIds.length - 1);
     const indicatorValue = props.city
-      ? props.city.indices[indicatorId]
+      ? props.city.indicators[indicatorId]
       : getMinAndMaxForIndicator(
         indicatorId,
         props.cities,
@@ -79,7 +79,7 @@ const SubCategorySummary = (props) => {
 const cityPropShape = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  indices: PropTypes.object.isRequired,
+  indicators: PropTypes.object.isRequired,
 };
 
 SubCategorySummary.propTypes = {

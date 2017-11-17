@@ -31,11 +31,11 @@ const defaultProps = {
   cities: [
     {
       name: 'Perth',
-      indices: {}
+      indicators: {}
     },
     {
       name: 'Sydney',
-      indices: {}
+      indicators: {}
     },
   ],
 };

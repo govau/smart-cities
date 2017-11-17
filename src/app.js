@@ -19,7 +19,7 @@ fetch(DATA_URL)
   .then((cities) => {
     const store = configureStore({
       cities,
-      indices: INDICATORS,
+      indicators: INDICATORS,
       categories: CATEGORIES,
     });
 

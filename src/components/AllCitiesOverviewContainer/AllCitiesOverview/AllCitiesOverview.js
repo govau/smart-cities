@@ -109,7 +109,7 @@ const AllCitiesOverview = props => (
 AllCitiesOverview.propTypes = {
   cities: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
-    indices: PropTypes.object.isRequired,
+    indicators: PropTypes.object.isRequired,
   })).isRequired,
 };
 

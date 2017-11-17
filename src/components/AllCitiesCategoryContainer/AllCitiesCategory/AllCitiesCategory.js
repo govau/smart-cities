@@ -63,7 +63,7 @@ AllCitiesCategory.propTypes = {
   }).isRequired,
   cities: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    indices: PropTypes.object.isRequired,
+    indicators: PropTypes.object.isRequired,
   })).isRequired,
 };
 

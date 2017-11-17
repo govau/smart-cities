@@ -30,26 +30,26 @@ const defaultProps = {
   city: {
     name: 'Perth',
     id: 'perth',
-    indices: {},
+    indicators: {},
   },
   cities: [
     {
       id: 'perth',
       description: 'description of Perth',
       name: 'Perth',
-      indices: {}
+      indicators: {}
     },
     {
       id: 'sydney',
       description: 'description of Sydney',
       name: 'Sydney',
-      indices: {}
+      indicators: {}
     },
     {
       id: 'melbourne',
       description: 'description of Melbourne',
       name: 'Melbourne',
-      indices: {}
+      indicators: {}
     },
   ],
   toggleCitySelected: () => {},

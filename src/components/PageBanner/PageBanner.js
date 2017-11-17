@@ -11,7 +11,7 @@ const PageBanner = (props) => {
   const backgroundColor = getColorVariant(props.colorName, '020');
   const cardHighlightColor = getColorVariant(props.colorName, '500');
   const indicatorValue = props.city
-    ? props.city.indices[props.indicator]
+    ? props.city.indicators[props.indicator]
     : getMinAndMaxForIndicator(
       props.indicator,
       props.cities,
@@ -50,7 +50,7 @@ const PageBanner = (props) => {
 
 const cityPropShape = {
   id: PropTypes.string.isRequired,
-  indices: PropTypes.object.isRequired,
+  indicators: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
 };
 

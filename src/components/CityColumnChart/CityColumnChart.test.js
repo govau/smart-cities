@@ -55,14 +55,14 @@ const defaultProps = {
   cities: [
     {
       name: 'Perth',
-      indices: {
+      indicators: {
         population: 12,
         growthRate: 0.99,
       }
     },
     {
       name: 'Sydney',
-      indices: {
+      indicators: {
         population: 12,
         growthRate: 0.19,
       }

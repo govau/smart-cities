@@ -7,7 +7,7 @@ const expectedOutputObject = [
     id: 'greater-perth',
     name: 'Perth',
     description: 'Description of Perth',
-    indices: {
+    indicators: {
       population: 2040000,
       growthRate: 0.016
     },
@@ -16,7 +16,7 @@ const expectedOutputObject = [
     id: 'greater-sydney',
     name: 'Sydney',
     description: 'Description of Sydney',
-    indices: {
+    indicators: {
       population: 4920000,
       growthRate: 0.021
     },

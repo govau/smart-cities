@@ -20,12 +20,12 @@ const defaultProps = {
     {
       id: 'perth',
       name: 'Perth',
-      indices: {}
+      indicators: {}
     },
     {
       id: 'sydney',
       name: 'Sydney',
-      indices: {}
+      indicators: {}
     },
   ],
 };

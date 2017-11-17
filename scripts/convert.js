@@ -23,7 +23,7 @@ getStdin().then((rawCsv) => {
 
       if (!city) throw new Error(`${row.Cities} is not a known smart city`);
 
-      city.indices = {};
+      city.indicators = {};
 
       // generate key/value pairs for each indicator
       indicators.forEach((indicator) => {
@@ -37,7 +37,7 @@ getStdin().then((rawCsv) => {
 
           // Skip empty cells
           if (value) {
-            city.indices[indicator.key] = Number(value);
+            city.indicators[indicator.key] = Number(value);
           }
         } else {
           // if the indicator source (column name) doesn't exist in the csv, throw an error

@@ -74,7 +74,7 @@ const SubCategoryCharts = (props) => {
 
 const cityType = PropTypes.shape({
   name: PropTypes.string.isRequired,
-  indices: PropTypes.object.isRequired,
+  indicators: PropTypes.object.isRequired,
 });
 
 SubCategoryCharts.propTypes = {

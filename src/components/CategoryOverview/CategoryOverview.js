@@ -23,7 +23,7 @@ const CategoryOverview = (props) => {
 
   const indicators = props.category.overviewIndicatorIds.map((indicatorId) => {
     const value = props.city
-      ? props.city.indices[indicatorId]
+      ? props.city.indicators[indicatorId]
       : getMinAndMaxForIndicator(indicatorId, props.cities);
 
     return { id: indicatorId, value };
@@ -141,7 +141,7 @@ const CategoryOverview = (props) => {
 
 const cityPropShape = {
   id: PropTypes.string.isRequired,
-  indices: PropTypes.object.isRequired,
+  indicators: PropTypes.object.isRequired,
 };
 
 CategoryOverview.propTypes = {

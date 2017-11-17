@@ -26,7 +26,7 @@ const defaultProps = {
   city: {
     id: 'perth',
     name: 'Perth',
-    indices: {
+    indicators: {
       population: 77,
     }
   },
@@ -129,14 +129,14 @@ describe('when an array of cities is passed in', () => {
     {
       id: 'perth',
       name: 'Perth',
-      indices: {
+      indicators: {
         population: 77,
       }
     },
     {
       id: 'sydney',
       name: 'Sydney',
-      indices: {
+      indicators: {
         population: 23,
       }
     },

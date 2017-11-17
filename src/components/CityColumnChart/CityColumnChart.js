@@ -20,8 +20,8 @@ import style from './CityColumnChart.scss';
 
 function getSeriesDataForIndicator(cities, indicator, mainCity) {
   return cities.map((city) => {
-    if (indicator in city.indices) {
-      const val = city.indices[indicator];
+    if (indicator in city.indicators) {
+      const val = city.indicators[indicator];
 
       // If we are on a city page, and this is neither the main city
       // nor one of the cities selected by the user for comparison,
@@ -43,7 +43,7 @@ function sortChartData(cities, indicator) {
   const sortedCities = cities.slice(); // clone so we're not mutating state
 
   // ensure nulls go last
-  const indicatorOrZero = city => Number(city.indices[indicator]) || 0;
+  const indicatorOrZero = city => Number(city.indicators[indicator]) || 0;
 
   sortedCities.sort((a, b) => indicatorOrZero(b) - indicatorOrZero(a));
 
@@ -363,7 +363,7 @@ class CityColumnChart extends Component {
 
 const cityType = PropTypes.shape({
   name: PropTypes.string.isRequired,
-  indices: PropTypes.object.isRequired,
+  indicators: PropTypes.object.isRequired,
 });
 
 CityColumnChart.propTypes = {

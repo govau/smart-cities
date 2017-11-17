@@ -3,28 +3,28 @@ import getMinAndMaxForIndicator from './getMinAndMaxForIndicator';
 const citiesMock = [
   {
     name: 'Sydney',
-    indices: {
+    indicators: {
       population: 100,
       unemploymentGrowth: 0.05,
     },
   },
   {
     name: 'Perth',
-    indices: {
+    indicators: {
       population: 50,
       unemploymentGrowth: 0.06,
     },
   },
   {
     name: 'Melbourne',
-    indices: {
+    indicators: {
       population: 80,
       unemploymentGrowth: -0.08,
     },
   },
   {
     name: 'Brisbane',
-    indices: {
+    indicators: {
       population: 70,
       unemploymentGrowth: 0.07,
     },
