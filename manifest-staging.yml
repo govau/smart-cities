@@ -2,4 +2,4 @@
 inherit: manifest-base.yml
 
 applications:
-- smart-cities-staging
+- name: smart-cities-staging
