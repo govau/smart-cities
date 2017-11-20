@@ -24,7 +24,7 @@ export default {
     name: 'Cairns',
     description: 'Cairns is located in far North Queensland on a narrow strip of land in between the Great Dividing Range and the Coral Sea. It is located in close proximity to the Great Barrier Reef and Wet Tropics World Heritage Rainforest. Cairns is one of Australia’s younger cities, established in 1876, and one of the smallest by area.',
   },
-  'Australian Capital Territory': {
+  'Canberra': {
     id: 'act',
     name: 'Canberra',
     description: 'Canberra is Australia’s capital city and home to Parliament House, the High Court and numerous government departments and agencies. It is the largest inland city in Australia and is located in the Australian Capital Territory. Canberra is one of Australia’s youngest cities, established in 1913.',
