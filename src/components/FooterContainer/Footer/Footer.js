@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import style from './Footer.scss';
+import Styles from './FooterStyles';
 import getSubCategorySectionId from '../../../helpers/getSubCategorySectionId';
 import {
   ELEMENT_IDS,
@@ -38,9 +40,15 @@ const links = [
   },
 ];
 
+// const Wrapper = styled.footer`
+//   padding: 50px 0 55px;
+//   background: black;
+//   color: white;
+// `;
+
 const Footer = props => (
-  <footer className={style.wrapper}>
-    <div className={style.container}>
+  <Styles.Wrapper>
+    <Styles.Container>
       <div className={style.logosWrapper}>
         <div className={style.coaWrapper}>
           <img
@@ -94,8 +102,8 @@ const Footer = props => (
           {STRINGS.COPYRIGHT}
         </div>
       </div>
-    </div>
-  </footer>
+    </Styles.Container>
+  </Styles.Wrapper>
 );
 
 Footer.propTypes = {
