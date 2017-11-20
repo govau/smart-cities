@@ -20,6 +20,7 @@ export const COLOR_NAMES = {
 };
 
 export const ELEMENT_IDS = {
+  PAGE_BANNER: 'page-banner',
   ACCESSIBILITY: 'accessibility',
   PRIVACY_POLICY: 'privacy',
   SECURITY: 'security',

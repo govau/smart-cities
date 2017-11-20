@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
+import { ELEMENT_IDS } from '../../constants/misc';
 
 function scroll() {
   let targetScrollPos = 0;
@@ -26,6 +27,11 @@ class ScrollToTopOnRouteChange extends Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
+      console.log('  --  >  ScrollToTopOnRouteChange.js:29 > componentDidUpdate');
+      const pageBannerEl = document.getElementById(ELEMENT_IDS.PAGE_BANNER);
+      pageBannerEl.focus();
+      pageBannerEl.style.color = 'red';
+
       // when changing from one page to another
       // scroll to the top or the element in the hash
       scroll();

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import PageLegend from '../PageLegend/PageLegend';
-import { INDICATORS } from '../../constants';
+import { INDICATORS, ELEMENT_IDS } from '../../constants';
 import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
 import getColorVariant from '../../helpers/getColorVariant';
 import style from './PageBanner.scss';
@@ -22,7 +22,14 @@ const PageBanner = (props) => {
       <div className={style.container}>
         <div className={style.textAndIndicator}>
           <div className={style.titleText}>
-            <h1 className={style.title}>{props.title}</h1>
+            <h1
+              className={style.title}
+              id={ELEMENT_IDS.PAGE_BANNER}
+              tabIndex="0" // eslint-disable-line
+              style={{
+                outline: 'none',
+              }}
+            >{props.title}</h1>
 
             <p className={style.description}>{props.description}</p>
           </div>
