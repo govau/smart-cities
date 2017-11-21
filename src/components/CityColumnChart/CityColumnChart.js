@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import Highcharts from 'highcharts';
 import kebabCase from 'lodash/kebabCase';
-import classnames from 'classnames';
 import merge from 'lodash/merge';
 import numeral from 'numeral';
 import Tooltip from '../Tooltip/Tooltip';
@@ -292,15 +292,14 @@ class CityColumnChart extends Component {
 
   render() {
     const { props } = this;
+    const isMultiple = props.chart.indicatorIds.length > 1;
+    const colorMedium = getColorVariant(props.highlightColorDark);
+    const colorDark = getColorVariant(props.colorBase, '900');
 
     // The indicator data contains things like titles and descriptions. But these can
     // also be passed in explicitly (e.g. for charts where there are more than one indicator)
     // so here we take the passed in value, or the value from the first indicator otherwise.
     const firstIndicator = INDICATORS[props.chart.indicatorIds[0]];
-
-    const isMultiple = props.chart.indicatorIds.length > 1;
-    const colorMedium = getColorVariant(props.highlightColorDark);
-    const colorDark = getColorVariant(props.colorBase, '900');
 
     const className = classnames(
       style.wrapper,
@@ -361,10 +360,7 @@ class CityColumnChart extends Component {
         </div>
 
         <div className={style.chartWrapper}>
-          <div
-            ref={(el) => { this.chartDivEl = el; }}
-            id={this.chartDivId}
-          />
+          <div id={this.chartDivId} />
         </div>
       </div>
     );
@@ -387,7 +383,6 @@ CityColumnChart.propTypes = {
     max: PropTypes.number,
     name: PropTypes.string,
     stacked: PropTypes.bool,
-    hideCitiesWithNoData: PropTypes.bool,
   }).isRequired,
   cities: PropTypes.arrayOf(cityType).isRequired,
   city: cityType,

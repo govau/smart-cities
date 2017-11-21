@@ -38,12 +38,6 @@ const SubCategorySummary = (props) => {
       ? 'View contextual charts'
       : `View all ${props.name} charts`;
 
-    // TODO (davidg): rather than the "lastOne" logic, we should be setting the width
-    // of the indicator card wrapper based on the number of cards (25% * cardCount).
-    // then I can move the linkText out
-    // the width will still need to go to.... No, this doesn't work because the
-    // width should be (33% * cardCount) at other screen sizes.
-    // yeah, I think the existing logic is the only way to do it
     return (
       <div
         key={indicatorId}
