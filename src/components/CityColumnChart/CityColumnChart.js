@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 import Highcharts from 'highcharts';
 import kebabCase from 'lodash/kebabCase';
 import merge from 'lodash/merge';
@@ -17,6 +16,8 @@ import {
   INDICATORS,
 } from '../../constants';
 import style from './CityColumnChart.scss';
+
+const classnames = require('classnames/bind').bind(style);
 
 function getSeriesDataForIndicator(cities, indicator, mainCity) {
   return cities.map((city) => {
@@ -39,11 +40,16 @@ function getSeriesDataForIndicator(cities, indicator, mainCity) {
 
 // Column charts are always sorted by descending value
 // if there is more than one indicator the first is used
-function sortChartData(cities, indicator) {
-  const sortedCities = cities.slice(); // clone so we're not mutating state
+function sortAndFilterChartData(props) {
+  const firstIndicator = props.chart.indicatorIds[0];
+  let sortedCities = props.cities.slice(); // clone so we're not mutating state
+
+  if (INDICATORS[firstIndicator].hideForWesternSydney) {
+    sortedCities = sortedCities.filter(city => city.id !== 'western-sydney');
+  }
 
   // ensure nulls go last
-  const indicatorOrZero = city => Number(city.indicators[indicator]) || 0;
+  const indicatorOrZero = city => Number(city.indicators[firstIndicator]) || 0;
 
   sortedCities.sort((a, b) => indicatorOrZero(b) - indicatorOrZero(a));
 
@@ -55,13 +61,13 @@ function getSeries(props) {
     ? [getColorVariant(props.colorBase, 300)]
     : getColorRange(props.colorBase);
 
-  const data = sortChartData(props.cities, props.chart.indicatorIds[0]);
+  const sortedCities = sortAndFilterChartData(props);
 
   return props.chart.indicatorIds.map((indicatorId, i) => ({
     index: props.chart.indicatorIds.length - i, // reverse sort series (to counteract Highcharts)
     name: INDICATORS[indicatorId].legendText,
     color: chartColors[i],
-    data: getSeriesDataForIndicator(data, indicatorId, props.city),
+    data: getSeriesDataForIndicator(sortedCities, indicatorId, props.city),
   }));
 }
 
@@ -88,8 +94,8 @@ function getChartConfig(props) {
   // also be passed in explicitly (e.g. for charts where there are more than one indicator)
   // so here we take the passed in value, or the value from the first indicator otherwise.
   const firstIndicator = INDICATORS[props.chart.indicatorIds[0]];
-  const data = sortChartData(props.cities, props.chart.indicatorIds[0]);
-  const plotBands = getPlotBands(data, props.city, colorLight);
+  const sortedCities = sortAndFilterChartData(props);
+  const plotBands = getPlotBands(sortedCities, props.city, colorLight);
   const series = getSeries(props);
 
   let ceiling = null;
@@ -127,7 +133,7 @@ function getChartConfig(props) {
     },
     xAxis: {
       type: 'category',
-      categories: data.map(city => city.name),
+      categories: sortedCities.map(city => city.name),
       labels: {
         rotation: -90,
         style: {
@@ -286,18 +292,26 @@ class CityColumnChart extends Component {
 
   render() {
     const { props } = this;
-    const isMultiple = props.chart.indicatorIds.length > 1;
-    const colorMedium = getColorVariant(props.highlightColorDark);
-    const colorDark = getColorVariant(props.colorBase, '900');
 
     // The indicator data contains things like titles and descriptions. But these can
     // also be passed in explicitly (e.g. for charts where there are more than one indicator)
     // so here we take the passed in value, or the value from the first indicator otherwise.
     const firstIndicator = INDICATORS[props.chart.indicatorIds[0]];
 
+    const hideChart = (
+      firstIndicator.hideForWesternSydney &&
+      props.city &&
+      props.city.id === 'western-sydney'
+    );
+
+    const isMultiple = props.chart.indicatorIds.length > 1;
+    const colorMedium = getColorVariant(props.highlightColorDark);
+    const colorDark = getColorVariant(props.colorBase, '900');
+
     const className = classnames(
       style.wrapper,
       props.className,
+      { hideChart },
     );
 
     return (
@@ -354,7 +368,10 @@ class CityColumnChart extends Component {
         </div>
 
         <div className={style.chartWrapper}>
-          <div id={this.chartDivId} />
+          <div
+            ref={(el) => { this.chartDivEl = el; }}
+            id={this.chartDivId}
+          />
         </div>
       </div>
     );
@@ -377,6 +394,7 @@ CityColumnChart.propTypes = {
     max: PropTypes.number,
     name: PropTypes.string,
     stacked: PropTypes.bool,
+    hideCitiesWithNoData: PropTypes.bool,
   }).isRequired,
   cities: PropTypes.arrayOf(cityType).isRequired,
   city: cityType,

@@ -202,6 +202,7 @@ export default {
     name: 'Jobs accessible by car within 30 minutes',
     format: '0[.]0%',
     contextual: false,
+    hideForWesternSydney: true,
     lastUpdated: '2016',
     source: 'Proportion of jobs accessible within 30 minutes, By Car, % of all jobs in city',
   },
