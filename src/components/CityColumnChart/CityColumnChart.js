@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import kebabCase from 'lodash/kebabCase';
+import classnames from 'classnames';
 import merge from 'lodash/merge';
 import numeral from 'numeral';
 import Tooltip from '../Tooltip/Tooltip';
@@ -16,8 +17,6 @@ import {
   INDICATORS,
 } from '../../constants';
 import style from './CityColumnChart.scss';
-
-const classnames = require('classnames/bind').bind(style);
 
 function getSeriesDataForIndicator(cities, indicator, mainCity) {
   return cities.map((city) => {
@@ -44,6 +43,7 @@ function sortAndFilterChartData(props) {
   const firstIndicator = props.chart.indicatorIds[0];
   let sortedCities = props.cities.slice(); // clone so we're not mutating state
 
+  // SC-140 for one chart, we don't show Western Sydney
   if (INDICATORS[firstIndicator].hideForWesternSydney) {
     sortedCities = sortedCities.filter(city => city.id !== 'western-sydney');
   }
@@ -298,12 +298,6 @@ class CityColumnChart extends Component {
     // so here we take the passed in value, or the value from the first indicator otherwise.
     const firstIndicator = INDICATORS[props.chart.indicatorIds[0]];
 
-    const hideChart = (
-      firstIndicator.hideForWesternSydney &&
-      props.city &&
-      props.city.id === 'western-sydney'
-    );
-
     const isMultiple = props.chart.indicatorIds.length > 1;
     const colorMedium = getColorVariant(props.highlightColorDark);
     const colorDark = getColorVariant(props.colorBase, '900');
@@ -311,7 +305,6 @@ class CityColumnChart extends Component {
     const className = classnames(
       style.wrapper,
       props.className,
-      { hideChart },
     );
 
     return (
