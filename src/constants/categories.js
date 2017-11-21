@@ -594,6 +594,7 @@ export const CATEGORIES = [
             name: 'Dwellings with access to parkland greenspace',
             axisTitle: 'Percentage of dwellings with access to green space',
             description: 'This shows the share of dwellings in a city that are located within 400 metres of green space. \n\nSource: ABS - Australian Statistical Geography Standard',
+            max: 1,
             indicatorIds: [
               'accessToGreenSpace',
             ],
@@ -657,7 +658,6 @@ export const CATEGORIES = [
         summaryIndicatorIds: [
           'volunteeringRate',
           'perceivedSafety',
-          'adultObesity',
         ],
         charts: [
           {
@@ -725,6 +725,7 @@ export const CATEGORIES = [
           {
             name: 'Percentage of population able to get crisis support',
             axisTitle: 'Percentage of population able to get crisis support',
+            max: 1,
             description: 'This shows the share of people that stated in a survey that they feel there is someone outside their household who could be asked for support in a time of crisis. \n\nSource: PHIDU – Social Health Atlas of Australia',
             indicatorIds: [
               'crisisSupport',
@@ -824,7 +825,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Workers in knowlesdge intensive services',
+            name: 'Workers in knowledge intensive services',
             axisTitle: 'Percentage of employment as knowledge workers',
             description: 'This shows the share of employed persons that work in the top three knowledge-intensive service industries. \n\nSource: ABS Labour Force',
             indicatorIds: [
