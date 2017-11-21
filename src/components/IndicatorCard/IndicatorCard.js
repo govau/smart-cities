@@ -147,7 +147,7 @@ IndicatorCard.propTypes = {
   value: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.arrayOf(PropTypes.number),
-  ]).isRequired,
+  ]),
   size: PropTypes.oneOf(Object.values(CARD_SIZES)),
 };
 
