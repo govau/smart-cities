@@ -9,12 +9,27 @@ import style from './SubCategoryCharts.scss';
 
 const SubCategoryCharts = (props) => {
   const subCategory = props.subCategory;
+  let charts = subCategory.charts;
 
-  const heroChart = subCategory.charts.find(chart => (
+  // SC-140 for Western Sydney, we can hide some charts
+  if (props.city) {
+    charts = charts.filter((chart) => {
+      const firstIndicator = INDICATORS[chart.indicatorIds[0]];
+
+      const hideForThisCity = (
+        firstIndicator.hideForCities &&
+        firstIndicator.hideForCities.includes(props.city.id)
+      );
+
+      return !hideForThisCity;
+    });
+  }
+
+  const heroChart = charts.find(chart => (
     chart.indicatorIds.includes(props.heroIndicatorId)),
   );
 
-  const otherCharts = subCategory.charts.filter(chart => (
+  const otherCharts = charts.filter(chart => (
     !chart.indicatorIds.includes(props.heroIndicatorId)),
   );
 

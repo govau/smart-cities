@@ -16,8 +16,22 @@ const SubCategorySummary = (props) => {
   const backgroundColor = getColorVariant(props.highlightColorLight);
   const cardHighlightColor = getColorVariant(props.highlightColorDark);
 
-  const indicatorCardWrappers = props.summaryIndicatorIds.map((indicatorId, i) => {
-    const lastOne = i === (props.summaryIndicatorIds.length - 1);
+  let indicatorIds = props.summaryIndicatorIds;
+
+  // SC-140 for Western Sydney, we can hide some indicator cards
+  if (props.city) {
+    indicatorIds = indicatorIds.filter((indicatorId) => {
+      const hideForThisCity = (
+        INDICATORS[indicatorId].hideForCities &&
+        INDICATORS[indicatorId].hideForCities.includes(props.city.id)
+      );
+
+      return !hideForThisCity;
+    });
+  }
+
+  const indicatorCardWrappers = indicatorIds.map((indicatorId, i) => {
+    const lastOne = i === (indicatorIds.length - 1);
     const indicatorValue = props.city
       ? props.city.indicators[indicatorId]
       : getMinAndMaxForIndicator(
