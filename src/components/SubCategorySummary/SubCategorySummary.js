@@ -19,10 +19,15 @@ const SubCategorySummary = (props) => {
   let indicatorIds = props.summaryIndicatorIds;
 
   // SC-140 for Western Sydney, we can hide some indicator cards
-  if (props.city && props.city.id === 'western-sydney') {
-    indicatorIds = indicatorIds.filter(indicatorId => (
-      !INDICATORS[indicatorId].hideForWesternSydney
-    ));
+  if (props.city) {
+    indicatorIds = indicatorIds.filter((indicatorId) => {
+      const hideForThisCity = (
+        INDICATORS[indicatorId].hideForCities &&
+        INDICATORS[indicatorId].hideForCities.includes(props.city.id)
+      );
+
+      return !hideForThisCity;
+    });
   }
 
   const indicatorCardWrappers = indicatorIds.map((indicatorId, i) => {

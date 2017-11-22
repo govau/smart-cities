@@ -40,16 +40,19 @@ function getSeriesDataForIndicator(cities, indicator, mainCity) {
 // Column charts are always sorted by descending value
 // if there is more than one indicator the first is used
 function sortAndFilterChartData(props) {
-  const firstIndicator = props.chart.indicatorIds[0];
+  const firstIndicatorId = props.chart.indicatorIds[0];
+  const firstIndicator = INDICATORS[firstIndicatorId];
   let sortedCities = props.cities.slice(); // clone so we're not mutating state
 
   // SC-140 for one chart, we don't show Western Sydney
-  if (INDICATORS[firstIndicator].hideForWesternSydney) {
-    sortedCities = sortedCities.filter(city => city.id !== 'western-sydney');
+  if (firstIndicator.hideForCities) {
+    sortedCities = sortedCities.filter(city => (
+      !firstIndicator.hideForCities.includes(city.id)
+    ));
   }
 
   // ensure nulls go last
-  const indicatorOrZero = city => Number(city.indicators[firstIndicator]) || 0;
+  const indicatorOrZero = city => Number(city.indicators[firstIndicatorId]) || 0;
 
   sortedCities.sort((a, b) => indicatorOrZero(b) - indicatorOrZero(a));
 

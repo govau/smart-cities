@@ -12,11 +12,16 @@ const SubCategoryCharts = (props) => {
   let charts = subCategory.charts;
 
   // SC-140 for Western Sydney, we can hide some charts
-  if (props.city && props.city.id === 'western-sydney') {
+  if (props.city) {
     charts = charts.filter((chart) => {
-      const firstChartIndicator = INDICATORS[chart.indicatorIds[0]];
+      const firstIndicator = INDICATORS[chart.indicatorIds[0]];
 
-      return !firstChartIndicator.hideForWesternSydney;
+      const hideForThisCity = (
+        firstIndicator.hideForCities &&
+        firstIndicator.hideForCities.includes(props.city.id)
+      );
+
+      return !hideForThisCity;
     });
   }
 
