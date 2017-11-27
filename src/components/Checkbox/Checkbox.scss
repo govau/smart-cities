@@ -48,6 +48,7 @@ $box-size: 16px;
   height: 12px;
   border: 2px solid $color-white;
   transform: rotate(45deg);
+  backface-visibility: hidden; // required to handle a bug in Chrome
   border-left: transparent;
   border-top: transparent;
 }

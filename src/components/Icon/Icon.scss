@@ -48,7 +48,9 @@
 
 .sunSparkles {
   transform: rotate(0);
-  transform-origin: center;
+  // 'center' or 50% doesn't work in Chrome 64
+  // https://bugs.chromium.org/p/chromium/issues/detail?id=788585
+  transform-origin: 125px 22px;
   transition: transform 500ms;
 
   svg:hover & {
