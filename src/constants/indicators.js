@@ -246,7 +246,6 @@ export default {
   },
   unemploymentRateIndigenous: {
     name: 'Indigenous unemployment rate',
-    legendText: 'Indigenous',
     format: FORMATS.PERCENT_ZERO_TO_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
@@ -254,7 +253,6 @@ export default {
   },
   unemploymentRateYouth: {
     name: 'Youth unemployment rate',
-    legendText: 'Youth',
     format: FORMATS.PERCENT_ZERO_TO_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2017',

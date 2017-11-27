@@ -36,12 +36,12 @@ const SubCategoryCharts = (props) => {
   const cardHighlightColor = getColorVariant(props.highlightColorDark);
 
   return (
-    <div
-      className={style.wrapper}
-      id={getSubCategorySectionId(subCategory.name)}
-    >
-      <div className={style.container}>
-        <div className={style.heading}>
+    <div className={style.wrapper}>
+      <section
+        className={style.container}
+        id={getSubCategorySectionId(subCategory.name)}
+      >
+        <header className={style.heading}>
           <Icon
             className={style.iconWrapper}
             size={70}
@@ -49,8 +49,8 @@ const SubCategoryCharts = (props) => {
             color={cardHighlightColor}
           />
 
-          <h3 className={style.headingText}>{subCategory.name}</h3>
-        </div>
+          <h1 className={style.headingText}>{subCategory.name}</h1>
+        </header>
         <div className={style.chartGrid}>
           {heroChart &&
             <div className={style.heroChartWrapper}>
@@ -82,7 +82,7 @@ const SubCategoryCharts = (props) => {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 };

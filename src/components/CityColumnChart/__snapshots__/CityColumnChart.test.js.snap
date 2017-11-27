@@ -1,21 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<div className=\\"wrapper\\">
-  <div className=\\"titleWrapper\\">
-    <h4 className=\\"title\\" />
-    <Tooltip text=\\"the description of the task\\" borderColor=\\"JOBS_600\\">
-      <Icon icon=\\"questionMark\\" className=\\"aboutChartIcon\\" size={22} color=\\"JOBS_600\\" title=\\"\\" />
-    </Tooltip>
+"<article className=\\"wrapper\\">
+  <ChartTable className=\\"table\\" chart={{...}} cities={{...}} />
+  <div aria-hidden=\\"true\\">
+    <header className=\\"titleWrapper\\">
+      <h1 className=\\"title\\" />
+      <Tooltip text=\\"the description of the task\\" borderColor=\\"JOBS_600\\">
+        <Icon icon=\\"questionMark\\" className=\\"aboutChartIcon\\" size={22} color=\\"JOBS_600\\" title=\\"\\" />
+      </Tooltip>
+    </header>
+    <div className=\\"metaWrapper\\">
+      <Tooltip borderColor=\\"JOBS_600\\" text=\\"CONTEXTUAL_DEFINITION\\">
+        <Icon className=\\"indicatorTypeMark\\" color=\\"JOBS_900\\" icon=\\"contextualIndicator\\" size={14} title=\\"\\" />
+      </Tooltip>
+    </div>
+    <div className=\\"axisTitle\\" />
+    <div className=\\"chartWrapper\\">
+      <div id=\\"population-chart\\" />
+    </div>
   </div>
-  <div className=\\"metaWrapper\\">
-    <Tooltip borderColor=\\"JOBS_600\\" text=\\"CONTEXTUAL_DEFINITION\\">
-      <Icon className=\\"indicatorTypeMark\\" color=\\"JOBS_900\\" icon=\\"contextualIndicator\\" size={14} title=\\"\\" />
-    </Tooltip>
-  </div>
-  <div className=\\"axisTitle\\" />
-  <div className=\\"chartWrapper\\">
-    <div id=\\"population-chart\\" />
-  </div>
-</div>"
+</article>"
 `;

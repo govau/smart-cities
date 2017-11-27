@@ -1,13 +1,8 @@
 @import '~style/variables';
 
-header {
+.header {
   background: $color-primary--600;
   color: $color-white;
-
-  a {
-    text-decoration: underline;
-    text-decoration-color: $color-highlight;
-  }
 }
 
 // this is the minor header on desktop size

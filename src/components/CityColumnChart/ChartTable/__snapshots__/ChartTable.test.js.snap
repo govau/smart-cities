@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<table className={[undefined]}>
+  <caption>
+    Table showing 
+    The things
+     for each city. 
+    This shows one thing and the other thing.
+  </caption>
+  <thead>
+    <tr>
+      <th scope=\\"col\\">
+        City
+      </th>
+      <th scope=\\"col\\">
+        One thing
+      </th>
+      <th scope=\\"col\\">
+        Another thing
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope=\\"row\\">
+        Sydney
+      </th>
+      <td>
+        100.0%
+      </td>
+      <td>
+        62.0%
+      </td>
+    </tr>
+    <tr>
+      <th scope=\\"row\\">
+        Perth
+      </th>
+      <td>
+        80.0%
+      </td>
+      <td>
+        1000.0%
+      </td>
+    </tr>
+  </tbody>
+</table>"
+`;

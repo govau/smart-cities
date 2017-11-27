@@ -7,6 +7,6 @@ const defaultProps = {
 };
 
 it('should match Snapshot', () => {
-  const renderedValue =  renderer.create(<Icon {...defaultProps} />).toJSON();
+  const renderedValue = renderer.create(<Icon {...defaultProps} />).toJSON();
   expect(renderedValue).toMatchSnapshot();
 });

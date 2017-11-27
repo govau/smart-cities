@@ -8,6 +8,7 @@ import numeral from 'numeral';
 import Tooltip from '../Tooltip/Tooltip';
 import Legend from '../Legend/Legend';
 import Icon from '../Icon/Icon';
+import ChartTable from './ChartTable/ChartTable';
 import baseChartConfig from '../../helpers/baseChartConfig';
 import getColorRange from '../../helpers/getColorRange';
 import getColorVariant from '../../helpers/getColorVariant';
@@ -310,62 +311,71 @@ class CityColumnChart extends Component {
     );
 
     return (
-      <div className={className}>
-        <div className={style.titleWrapper}>
-          <h4 className={style.title}>
-            {props.chart.name}
-          </h4>
+      <article className={className}>
+        <ChartTable
+          // <ChartTable> is for screen readers
+          className={style.table}
+          chart={props.chart}
+          cities={props.cities}
+        />
 
-          <Tooltip
-            text={props.chart.description}
-            borderColor={colorMedium}
-          >
-            <Icon
-              icon="questionMark"
-              className={style.aboutChartIcon}
-              size={22}
-              color={colorMedium}
-              title=""
+        <div aria-hidden="true">
+          <header className={style.titleWrapper}>
+            <h1 className={style.title}>
+              {props.chart.name}
+            </h1>
+
+            <Tooltip
+              text={props.chart.description}
+              borderColor={colorMedium}
+            >
+              <Icon
+                icon="questionMark"
+                className={style.aboutChartIcon}
+                size={22}
+                color={colorMedium}
+                title=""
+              />
+            </Tooltip>
+          </header>
+
+          <div className={style.metaWrapper}>
+            <Tooltip
+              borderColor={colorMedium}
+              text={firstIndicator.contextual
+                ? STRINGS.CONTEXTUAL_DEFINITION
+                : STRINGS.PERFORMANCE_DEFINITION
+              }
+            >
+              <Icon
+                className={style.indicatorTypeMark}
+                color={colorDark}
+                icon={firstIndicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
+                size={14}
+                title=""
+              />
+            </Tooltip>
+
+            {firstIndicator.lastUpdated && `Last updated ${firstIndicator.lastUpdated}`}
+          </div>
+
+          {isMultiple && (
+            <Legend
+              // Legend is our own HTML so we can style and position it with CSS
+              className={style.legendWrapper}
+              series={getSeries(props)}
             />
-          </Tooltip>
+          )}
+
+          <div className={style.axisTitle}>
+            {props.chart.axisTitle}
+          </div>
+
+          <div className={style.chartWrapper}>
+            <div id={this.chartDivId} />
+          </div>
         </div>
-
-        <div className={style.metaWrapper}>
-          <Tooltip
-            borderColor={colorMedium}
-            text={firstIndicator.contextual
-              ? STRINGS.CONTEXTUAL_DEFINITION
-              : STRINGS.PERFORMANCE_DEFINITION
-            }
-          >
-            <Icon
-              className={style.indicatorTypeMark}
-              color={colorDark}
-              icon={firstIndicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
-              size={14}
-              title=""
-            />
-          </Tooltip>
-
-          {firstIndicator.lastUpdated && `Last updated ${firstIndicator.lastUpdated}`}
-        </div>
-
-        {isMultiple && (
-          <Legend
-            // Legend is our own HTML so we can style and position it with CSS
-            className={style.legendWrapper}
-            series={getSeries(props)}
-          />
-        )}
-
-        <div className={style.axisTitle}>
-          {props.chart.axisTitle}
-        </div>
-
-        <div className={style.chartWrapper}>
-          <div id={this.chartDivId} />
-        </div>
-      </div>
+      </article>
     );
   }
 }

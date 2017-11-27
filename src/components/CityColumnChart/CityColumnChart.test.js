@@ -12,6 +12,7 @@ Highcharts.chart = jest.fn(() => chartMock);
 console.warn = jest.fn();
 
 jest.mock('../Legend/Legend', () => 'Legend');
+jest.mock('./ChartTable/ChartTable', () => 'ChartTable');
 jest.mock('../Icon/Icon', () => 'Icon');
 jest.mock('../../constants', () => ({
   STRINGS: {

@@ -56,6 +56,10 @@
   margin-top: 3px;
 }
 
+.table {
+  @include hideText;
+}
+
 :global(.cityColumnChartTooltipHeader) {
   margin-left: 8px;
   margin-right: 8px;

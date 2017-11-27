@@ -15,7 +15,7 @@ import star from './star-white.svg';
 import style from './Header.scss';
 
 const Header = props => (
-  <header>
+  <header className={style.header}>
     <div className={style.govContainer}>
       <HamburgerButton
         className={style.hamburger}
