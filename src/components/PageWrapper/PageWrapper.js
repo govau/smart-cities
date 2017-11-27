@@ -55,7 +55,6 @@ class PageWrapper extends Component {
           <SideBar
             closeNav={() => this.setNavState(false)}
             isOpen={this.state.navIsOpen}
-            categoryId={this.props.categoryId}
             cityId={this.props.cityId}
           />
         </div>

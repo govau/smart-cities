@@ -48,11 +48,7 @@ class SideBar extends Component {
           />
         </NavLink>
 
-        <CityNavContainer
-          categoryId={props.categoryId}
-          // pass in cityId so the nav updates when the city changes
-          cityId={props.cityId}
-        />
+        <CityNavContainer cityId={props.cityId} />
       </div>
     );
   }
@@ -64,7 +60,6 @@ SideBar.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string,
   }),
-  categoryId: PropTypes.string.isRequired,
   cityId: PropTypes.string.isRequired,
 };
 

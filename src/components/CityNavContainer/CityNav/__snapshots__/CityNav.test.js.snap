@@ -2,13 +2,13 @@
 
 exports[`should match Snapshot 1`] = `
 "<div className=\\"citySelected\\">
-  <NavLink className=\\"link allCitiesLink\\" activeClassName=\\"link__active\\" to=\\"/all-cities/mock\\" ariaCurrent=\\"true\\">
+  <NavLink className=\\"link allCitiesLink\\" activeClassName=\\"link__active\\" isActive={[Function]} to=\\"/all-cities/overview\\" ariaCurrent=\\"true\\">
     All Cities
   </NavLink>
-  <NavLink className=\\"link cityLink\\" activeClassName=\\"link__active\\" to=\\"/perth/mock\\" ariaCurrent=\\"true\\">
+  <NavLink className=\\"link cityLink\\" activeClassName=\\"link__active\\" isActive={[Function]} to=\\"/perth/overview\\" ariaCurrent=\\"true\\">
     Perth
   </NavLink>
-  <NavLink className=\\"link cityLink\\" activeClassName=\\"link__active\\" to=\\"/sydney/mock\\" ariaCurrent=\\"true\\">
+  <NavLink className=\\"link cityLink\\" activeClassName=\\"link__active\\" isActive={[Function]} to=\\"/sydney/overview\\" ariaCurrent=\\"true\\">
     Sydney
   </NavLink>
 </div>"

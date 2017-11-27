@@ -7,7 +7,6 @@ const closeNavMock = jest.fn();
 const defaultProps = {
   closeNav: closeNavMock,
   isOpen: false,
-  categoryId: 'jobs',
   cityId: 'perth',
 };
 

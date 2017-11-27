@@ -8,6 +8,6 @@ exports[`should match Snapshot 1`] = `
   <NavLink className=\\"coaWrapper\\" to=\\"/all-cities/overview\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
     <img className=\\"coa\\" src=\\"coa-white.svg\\" alt=\\"coat of arms\\" />
   </NavLink>
-  <Connect(CityNav) categoryId=\\"jobs\\" cityId=\\"perth\\" />
+  <Connect(CityNav) cityId=\\"perth\\" />
 </div>"
 `;
