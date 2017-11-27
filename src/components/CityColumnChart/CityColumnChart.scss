@@ -57,7 +57,7 @@
 }
 
 .table {
-  @include hideText;
+  @include hidden;
 }
 
 :global(.cityColumnChartTooltipHeader) {
