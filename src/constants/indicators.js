@@ -434,7 +434,7 @@ export default {
     format: FORMATS.ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
-    source: 'New business entrants and exits, New Businesses as a percentage of the stock',
+    source: 'New business entrants and exits, New Businesses as a share of the stock',
   },
   newBusinessExits: {
     name: 'Share of ceased businesses',
@@ -442,7 +442,7 @@ export default {
     format: FORMATS.ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
-    source: 'New business entrants and exits, Business exits as a percentage of the stock',
+    source: 'New business entrants and exits, Business exits as a share of the stock',
   },
   knowledgeWorkersRatio: {
     name: 'Workers in knowledge intensive services',
