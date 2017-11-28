@@ -171,7 +171,7 @@ export default {
   },
   dispersion: {
     name: 'Local governments per 100k people',
-    format: FORMATS.PERCENT_ZERO_OR_ONE_DECIMAL,
+    format: FORMATS.ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
     source: 'Government Dispersion, Number of Local Government Areas per 100 000 persons',
@@ -431,18 +431,18 @@ export default {
   newBusinessEntrants: {
     name: 'New business entry rate',
     legendText: 'Entrants',
-    format: FORMATS.THREE_DECIMALS,
+    format: FORMATS.ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
-    source: 'New business entrants and exits, New Businesses as a share of the stock',
+    source: 'New business entrants and exits, New Businesses as a percentage of the stock',
   },
   newBusinessExits: {
     name: 'Share of ceased businesses',
     legendText: 'Exits',
-    format: FORMATS.THREE_DECIMALS,
+    format: FORMATS.ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
-    source: 'New business entrants and exits, Business exits as a share of the stock',
+    source: 'New business entrants and exits, Business exits as a percentage of the stock',
   },
   knowledgeWorkersRatio: {
     name: 'Workers in knowledge intensive services',

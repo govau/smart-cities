@@ -3,7 +3,7 @@
 exports[`should match Snapshot 1`] = `
 "<div className=\\"citySelected\\">
   <NavLink className=\\"link allCitiesLink\\" activeClassName=\\"link__active\\" isActive={[Function]} to=\\"/all-cities/overview\\" ariaCurrent=\\"true\\">
-    All Cities
+    All cities
   </NavLink>
   <NavLink className=\\"link cityLink\\" activeClassName=\\"link__active\\" isActive={[Function]} to=\\"/perth/overview\\" ariaCurrent=\\"true\\">
     Perth

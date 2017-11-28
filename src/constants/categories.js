@@ -17,7 +17,7 @@ export const CATEGORIES = [
     id: CATEGORY_IDS.CONTEXT,
     colorName: COLOR_NAMES.PRIMARY,
     navName: 'Context',
-    name: 'Cities Context',
+    name: 'Cities context',
     description: 'Contextual indicators can help to understand why a city performs the way it does and what policies may be effective for improving economic performance and quality of life.',
     shortDescription: 'Contextual indicators can help to understand why a city performs the way it does and what policies may be effective for improving economic performance and quality of life.',
     heroIndicatorId: 'population',
@@ -212,7 +212,7 @@ export const CATEGORIES = [
         ],
       },
       {
-        name: 'Jobs & Skills',
+        name: 'Jobs & skills',
         highlightColorLight: 'JOBS_040',
         highlightColorDark: 'JOBS_500',
         colorName: COLOR_NAMES.JOBS,
@@ -225,7 +225,7 @@ export const CATEGORIES = [
         charts: [
           {
             name: 'Industry sector share of employment',
-            axisTitle: 'Perecntage of employment',
+            axisTitle: 'Percentage of employment',
             description: 'This shows the proportion of employed persons that work in goods producing, market services, and non-market services industries.\n\nSource: ABS - Labour Force',
             stacked: true,
             indicatorIds: [
@@ -242,8 +242,8 @@ export const CATEGORIES = [
     id: CATEGORY_IDS.JOBS,
     colorName: COLOR_NAMES.JOBS,
     iconId: 'jobsEmployment',
-    name: 'Jobs & Skills',
-    description: 'The Jobs and Skills performance indicators seek to measure employment, education and training outcomes. The indicators will help all levels of government, industry and the community to boost employment through a better understanding of education, skills and industry development needs.',
+    name: 'Jobs & skills',
+    description: 'The jobs & skills performance indicators seek to measure employment, education and training outcomes. The indicators will help all levels of government, industry and the community to boost employment through a better understanding of education, skills and industry development needs.',
     shortDescription: 'Boost employment by supporting skills & industry development, & diverse economic growth.',
     heroIndicatorId: 'unemploymentRateYouth',
     overviewIndicatorIds: [
@@ -252,7 +252,7 @@ export const CATEGORIES = [
     ],
     subCategories: [
       {
-        name: 'Employment',
+        name: 'Labour force',
         highlightColorLight: 'JOBS_040',
         highlightColorDark: 'JOBS_600',
         iconId: 'jobsEmployment',
@@ -510,9 +510,9 @@ export const CATEGORIES = [
     id: CATEGORY_IDS.INFRASTRUCTURE,
     colorName: COLOR_NAMES.INFRASTRUCTURE,
     iconId: 'infrastructureGettingToWork',
-    name: 'Infrastructure and Investment',
+    name: 'Infrastructure & investment',
     navName: 'Infrastructure',
-    description: 'The Infrastructure and Investment performance indicators seek to measure infrastructure and investment needs in our cities. The indicators will help all levels of government, industry and the community to improve transport options, reduce travel times and increase economic growth.',
+    description: 'The Infrastructure & investment performance indicators seek to measure infrastructure and investment needs in our cities. The indicators will help all levels of government, industry and the community to improve transport options, reduce travel times and increase economic growth.',
     shortDescription: 'Improve accessibility & productivity in cities with high quality, efficient and effective infrastructure & transport solutions.',
     heroIndicatorId: 'jobsCar',
     overviewIndicatorIds: [
@@ -525,7 +525,7 @@ export const CATEGORIES = [
         highlightColorDark: 'INFRASTRUCTURE_600',
         iconId: 'infrastructureGettingToWork',
         summaryIndicatorIds: [
-          'jobsCar',
+          'publicJourneys',
           'activeJourneys',
           'peakDelay',
         ],
@@ -571,8 +571,8 @@ export const CATEGORIES = [
     id: CATEGORY_IDS.LIVEABILITY,
     colorName: COLOR_NAMES.LIVEABILITY,
     iconId: 'liveabilityLiveability',
-    name: 'Liveability',
-    description: 'The Liveability and Sustainability performance indicators can help all levels of government, industry and the community to better target policies aimed at promoting safety, social cohesion and human health and improving the quality of the local environment.',
+    name: 'Liveability & sustainability',
+    description: 'The liveability & sustainability performance indicators can help all levels of government, industry and the community to better target policies aimed at promoting safety, social cohesion and human health and improving the quality of the local environment.',
     shortDescription: 'Aims to improve safety, social cohesion and health in our cities. The Government also aims to improve air quality, access to green space and active transport, while acting to reduce carbon emissions.',
     heroIndicatorId: 'accessToGreenSpace',
     overviewIndicatorIds: [
@@ -580,7 +580,7 @@ export const CATEGORIES = [
     ],
     subCategories: [
       {
-        name: 'Environment',
+        name: 'Sustainability',
         highlightColorLight: 'LIVEABILITY_040',
         highlightColorDark: 'LIVEABILITY_600',
         iconId: 'liveabilityEnvironment',
@@ -626,7 +626,7 @@ export const CATEGORIES = [
           {
             name: 'Greenhouse gas emissions',
             axisTitle: 'Tonnes of greenhouse gas emissions per capita per year',
-            description: 'This shows the estimated per-capita amount of greenhouse gases emitted in a year, based on Scope 1 emissions, which are direcet greenhouse emissions, and Scope 2 emissions, which are indirect greenhouse gas emissions from the generation of electricity. \n\nSource: National Greenhouse Gas Inventory',
+            description: 'This shows the estimated per-capita amount of greenhouse gases emitted in a year, based on Scope 1 emissions, which are direct greenhouse emissions, and Scope 2 emissions, which are indirect greenhouse gas emissions from the generation of electricity. \n\nSource: National Greenhouse Gas Inventory',
             indicatorIds: [
               'greenhouseGasEmissions1',
               'greenhouseGasEmissions2',
@@ -705,7 +705,7 @@ export const CATEGORIES = [
         ],
       },
       {
-        name: 'Public safety',
+        name: 'Safety & crisis support',
         highlightColorLight: 'LIVEABILITY_080',
         highlightColorDark: 'LIVEABILITY_800',
         iconId: 'liveabilityPublicSafety',
@@ -767,9 +767,9 @@ export const CATEGORIES = [
     id: CATEGORY_IDS.INNOVATION,
     colorName: COLOR_NAMES.INNOVATION,
     iconId: 'innovationInnovation',
-    name: 'Innovation and Digital Opportunities',
+    name: 'Innovation & digital opportunities',
     navName: 'Innovation',
-    description: 'The Innovation and Digital Opportunities performance indicators seek to measure innovation and entrepreneurship. The indicators will help all levels of government, industry and the community to increase productivity growth and develop new knowledge industries and the digital economy.',
+    description: 'The innovation & digital opportunities performance indicators seek to measure innovation and entrepreneurship. The indicators will help all levels of government, industry and the community to increase productivity growth and develop new knowledge industries and the digital economy.',
     shortDescription: 'Aims to harness the productive potential of information and communications technologies & the digital economy, and to make data publicly available where practical.',
     heroIndicatorId: 'newBusinessEntrants',
     overviewIndicatorIds: [
@@ -787,6 +787,15 @@ export const CATEGORIES = [
           'trademarkApplications',
         ],
         charts: [
+          {
+            name: 'Business entry and exit rate',
+            axisTitle: '',
+            description: 'This shows the business entry and exit rates: the number of new businesses that started actively trading on the business register over the past year as a share of the total number of registered businesses at the start of the year. \n\nSource: ABS Data by Region',
+            indicatorIds: [
+              'newBusinessEntrants',
+              'newBusinessExits',
+            ],
+          },
           {
             name: 'Households with broadband',
             axisTitle: '',
@@ -814,12 +823,11 @@ export const CATEGORIES = [
         ],
       },
       {
-        name: 'Digital business',
+        name: 'Digital opportunities',
         highlightColorLight: 'INNOVATION_060',
         highlightColorDark: 'INNOVATION_700',
         iconId: 'innovationDigital',
         summaryIndicatorIds: [
-          'newBusinessEntrants',
           'knowledgeWorkersRatio',
           'linkedInConnectivityLocal',
         ],
@@ -830,15 +838,6 @@ export const CATEGORIES = [
             description: 'This shows the share of employed persons that work in the top three knowledge-intensive service industries. \n\nSource: ABS Labour Force',
             indicatorIds: [
               'knowledgeWorkersRatio',
-            ],
-          },
-          {
-            name: 'Business entry and exit rate',
-            axisTitle: '',
-            description: 'This shows the number of businesses that started or ceased actively trading on the business register over the past year as a share of the total number of registered businesses at the start of the year. \n\nSource: ABS Data by Region',
-            indicatorIds: [
-              'newBusinessEntrants',
-              'newBusinessExits',
             ],
           },
           {
@@ -861,7 +860,7 @@ export const CATEGORIES = [
     colorName: COLOR_NAMES.PLANNING,
     iconId: 'planningPlanning',
     name: 'Planning',
-    description: 'The Governance, Planning and Regulation performance indicators seek to measure  how effectively planning, governance and regulation support economic, social and environmental outcomes.',
+    description: 'The governance, planning and regulation performance indicators seek to measure how effectively planning, governance and regulation support economic, social and environmental outcomes.',
     shortDescription: 'Aims to deliver coordinated and integrated policy, planning and investment across all levels of government.',
     heroIndicatorId: 'population',
     overviewIndicatorIds: [],
@@ -959,7 +958,7 @@ export const CATEGORIES = [
           {
             name: 'Local governments per 100k people',
             axisTitle: 'LGAs per 100,000 persons',
-            description: 'This shows the number of Local Government Areas per 100 000 persons. \n\nSource: ABS - Regional Population Growth ',
+            description: 'This shows the number of local government areas per 100 000 persons. \n\nSource: ABS - Regional Population Growth ',
             indicatorIds: [
               'dispersion',
             ],

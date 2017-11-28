@@ -11,7 +11,7 @@ jest.mock('../Pill/Pill', () => 'Pill');
 const defaultProps = {
   category: {
     id: 'jobs',
-    name: 'Jobs and Skills',
+    name: 'Jobs & skills',
     shortDescription: 'The short description',
     colorName: 'jobs',
     overviewIndicatorIds: [

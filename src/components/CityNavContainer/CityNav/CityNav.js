@@ -23,9 +23,7 @@ const CityNav = (props) => {
         activeClassName={style.link__active}
         isActive={(match, location) => locationHasCity(location, NO_CITY)}
         to={`/${NO_CITY}/${NO_CATEGORY}`}
-      >
-        All Cities
-      </NavLink>
+      >All cities</NavLink>
 
       {props.cities.map(city => (
         <NavLink

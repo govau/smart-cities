@@ -10,7 +10,7 @@ exports[`should match Snapshot 1`] = `
       <div className=\\"categoryTextWrapperWrapper\\">
         <div className=\\"categoryTextWrapper\\">
           <h2 className=\\"categoryTitle\\">
-            Jobs and Skills
+            Jobs &amp; skills
           </h2>
           <p className=\\"categoryDescription\\">
             The short description
@@ -39,7 +39,7 @@ exports[`should match Snapshot 1`] = `
         <NavLink to=\\"/perth/jobs\\" className=\\"categoryLinkWrapper\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           <Pill className=\\"categoryLinkPill\\" style={{...}} height={30}>
             <span className=\\"categoryLinkText\\">
-              Jobs and Skills
+              Jobs &amp; skills
                section
             </span>
             <Icon icon=\\"rightArrowInCircleInverted\\" size={20} color=\\"JOBS_700\\" />
