@@ -243,7 +243,7 @@ export const CATEGORIES = [
     colorName: COLOR_NAMES.JOBS,
     iconId: 'jobsEmployment',
     name: 'Jobs & Skills',
-    description: 'Jobs and Skills encompasses all key elements of employment and training in our cities, including the performance of the employment market and the skill level of the workforce.',
+    description: 'The Jobs and Skills performance indicators seek to measure employment, education and training outcomes. The indicators will help all levels of government, industry and the community to boost employment through a better understanding of education, skills and industry development needs.',
     shortDescription: 'Boost employment by supporting skills & industry development, & diverse economic growth.',
     heroIndicatorId: 'unemploymentRateYouth',
     overviewIndicatorIds: [
@@ -366,7 +366,7 @@ export const CATEGORIES = [
     colorName: COLOR_NAMES.HOUSING,
     iconId: 'housingHousingAffordability',
     name: 'Housing',
-    description: 'Housing encompasses three broad dimensions: the affordability of housing in our cities; the supply and diversity of new housing stock; and where housing is located, including how accessible it is to jobs and services.',
+    description: 'The Housing performance indicators seek to measure housing supply and affordability. The indicators will help all levels of government, industry and the community to develop policies to deliver more affordable housing that is located near jobs, services and transport connections.',
     shortDescription: 'Improve housing supply and affordability, & encourage appropriate densities & diversity of housing options.',
     heroIndicatorId: 'dwellingPriceToIncomeRatio',
     overviewIndicatorIds: [
@@ -512,7 +512,7 @@ export const CATEGORIES = [
     iconId: 'infrastructureGettingToWork',
     name: 'Infrastructure and Investment',
     navName: 'Infrastructure',
-    description: 'Infrastructure and Investment encompasses all key dimensions of the city’s investment environment, with a particular focus on the quality, efficiency and effectiveness of infrastructure.',
+    description: 'The Infrastructure and Investment performance indicators seek to measure infrastructure and investment needs in our cities. The indicators will help all levels of government, industry and the community to improve transport options, reduce travel times and increase economic growth.',
     shortDescription: 'Improve accessibility & productivity in cities with high quality, efficient and effective infrastructure & transport solutions.',
     heroIndicatorId: 'jobsCar',
     overviewIndicatorIds: [
@@ -572,7 +572,7 @@ export const CATEGORIES = [
     colorName: COLOR_NAMES.LIVEABILITY,
     iconId: 'liveabilityLiveability',
     name: 'Liveability',
-    description: 'Liveability and Sustainability encompasses three broad dimensions: the health and wellbeing of residents; the attractiveness and amenity of the city; and the state of the environment and the local response to climate change.',
+    description: 'The Liveability and Sustainability performance indicators can help all levels of government, industry and the community to better target policies aimed at promoting safety, social cohesion and human health and improving the quality of the local environment.',
     shortDescription: 'Aims to improve safety, social cohesion and health in our cities. The Government also aims to improve air quality, access to green space and active transport, while acting to reduce carbon emissions.',
     heroIndicatorId: 'accessToGreenSpace',
     overviewIndicatorIds: [
@@ -769,7 +769,7 @@ export const CATEGORIES = [
     iconId: 'innovationInnovation',
     name: 'Innovation and Digital Opportunities',
     navName: 'Innovation',
-    description: 'Innovation and Digital Opportunities encompasses three broad dimensions: city productivity; innovation and entrepreneurship; and access to public data',
+    description: 'The Innovation and Digital Opportunities performance indicators seek to measure innovation and entrepreneurship. The indicators will help all levels of government, industry and the community to increase productivity growth and develop new knowledge industries and the digital economy.',
     shortDescription: 'Aims to harness the productive potential of information and communications technologies & the digital economy, and to make data publicly available where practical.',
     heroIndicatorId: 'newBusinessEntrants',
     overviewIndicatorIds: [
@@ -861,7 +861,7 @@ export const CATEGORIES = [
     colorName: COLOR_NAMES.PLANNING,
     iconId: 'planningPlanning',
     name: 'Planning',
-    description: 'Governance, Planning and Regulation encompasses land use planning in cities and its administration, as well as how effectively local governance and regulation support economic, social and environmental outcomes.',
+    description: 'The Governance, Planning and Regulation performance indicators seek to measure  how effectively planning, governance and regulation support economic, social and environmental outcomes.',
     shortDescription: 'Aims to deliver coordinated and integrated policy, planning and investment across all levels of government.',
     heroIndicatorId: 'population',
     overviewIndicatorIds: [],
