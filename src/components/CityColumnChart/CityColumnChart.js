@@ -17,6 +17,7 @@ import {
   STRINGS,
   INDICATORS,
 } from '../../constants';
+import COLORS from '../../style/_colors.scss';
 import style from './CityColumnChart.scss';
 
 function getSeriesDataForIndicator(cities, indicator, mainCity) {
@@ -75,18 +76,42 @@ function getSeries(props) {
   }));
 }
 
-function getPlotBands(cities, city, color) {
-  if (city) {
-    const idx = cities.findIndex(el => el.name === city.name);
+function getPlotBands(cities, pageCity, cityColor, indicatorIds) {
+  const bands = cities.map((city, idx) => {
+    // Need to check all indicators (to handle grouped/stacked charts)
+    if (!indicatorIds.some(indicatorId => city.indicators[indicatorId])) {
+      return {
+        color: COLORS.GREY_200,
+        from: idx - 0.45,
+        to: idx + 0.45,
+        label: {
+          text: 'No data',
+          rotation: 270,
+          verticalAlign: 'middle',
+          x: 4,
+          y: 5,
+          style: {
+            color: COLORS.GREY_700,
+            fontWeight: 600,
+          },
+        },
+      };
+    }
 
-    return [{
-      color,
+    return null; // sugar for eslint :/ 
+  }).filter(band => band);
+
+  if (pageCity) {
+    const idx = cities.findIndex(el => el.name === pageCity.name);
+
+    bands.push({
+      color: cityColor,
       from: idx - 0.5,
       to: idx + 0.5,
-    }];
+    });
   }
 
-  return [];
+  return bands;
 }
 
 function getChartConfig(props) {
@@ -99,8 +124,8 @@ function getChartConfig(props) {
   // so here we take the passed in value, or the value from the first indicator otherwise.
   const firstIndicator = INDICATORS[props.chart.indicatorIds[0]];
   const sortedCities = sortAndFilterChartData(props);
-  const plotBands = getPlotBands(sortedCities, props.city, colorLight);
   const series = getSeries(props);
+  const plotBands = getPlotBands(sortedCities, props.city, colorLight, props.chart.indicatorIds);
 
   let ceiling = null;
   if ('max' in props.chart) ceiling = props.chart.max;
