@@ -14,6 +14,7 @@ class Tooltip extends PureComponent {
 
     this.showTooltip = this.showTooltip.bind(this);
     this.hideTooltip = this.hideTooltip.bind(this);
+    this.toggleTooltip = this.toggleTooltip.bind(this);
   }
 
   showTooltip() {
@@ -56,13 +57,27 @@ class Tooltip extends PureComponent {
     window.removeEventListener('scroll', this.hideTooltip, false);
   }
 
+  toggleTooltip() {
+    if (this.state.visible) {
+      this.hideTooltip();
+    } else {
+      this.showTooltip();
+    }
+  }
+
   render() {
     const { props, state } = this;
 
     return (
-      <span // a span so it's valid HTML no matter where it's used
+      // a span so it's valid HTML no matter where it's used
+      // Note:
+      //   the onClick there for touch devices
+      //   but it doesn't seem right to apply role=button
+      //   hence the eslint disabling
+      <span // eslint-disable-line
         onMouseOver={this.showTooltip}
         onMouseOut={this.hideTooltip}
+        onTouchStart={this.toggleTooltip}
         className={classnames(props.className, styles.tooltipTarget)}
         ref={(el) => { this.el = el; }}
       >

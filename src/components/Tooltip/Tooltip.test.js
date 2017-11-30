@@ -136,3 +136,26 @@ it('should hide/show the tooltip on mouseOver/mouseOut', () => {
 
   expect(component.find('Portal').length).toBe(0);
 });
+
+it('should toggle the tooltip on click', () => {
+  const component = shallow(
+    <Tooltip {...defaultProps}>
+      Hover here for help
+    </Tooltip>
+  );
+
+  // enzyme.shallow doesn't do refs, so mock this out
+  component.instance().el = {
+    getBoundingClientRect: () => ({})
+  };
+
+  expect(component.find('Portal').length).toBe(0);
+
+  component.find('.tooltipTarget').simulate('touchStart');
+
+  expect(component.find('Portal').length).toBe(1);
+
+  component.find('.tooltipTarget').simulate('touchStart');
+
+  expect(component.find('Portal').length).toBe(0);
+});
