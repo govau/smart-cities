@@ -1,7 +1,8 @@
 import {
   CATEGORIES,
   CATEGORY_IDS,
-} from './categories.js';
+} from './categories';
+import { MAX_CATEGORY_NAV_TEXT_LENGTH } from './misc';
 import INDICATORS from './indicators.js';
 import iconDefinitions from '../components/Icon/iconDefinitions';
 
@@ -62,6 +63,11 @@ CATEGORIES.forEach((category) => {
 
   it(`The hero indicator '${category.heroIndicatorId}' should exist in a chart`, () => {
     expect(heroExistsInCharts(category.heroIndicatorId, category.subCategories)).toBe(true);
+  });
+
+  it(`${category.navName || category.name}: name (or navName) should be ${MAX_CATEGORY_NAV_TEXT_LENGTH} chars or shorter`, () => {
+    const name = category.navName || category.name;
+    expect(name.length).toBeLessThanOrEqual(MAX_CATEGORY_NAV_TEXT_LENGTH);
   });
 
   // test the sub-category indicator IDs

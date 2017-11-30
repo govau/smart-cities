@@ -62,6 +62,7 @@ const Header = props => (
       // pass in categoryId so the nav updates when the category changes
       categoryId={props.categoryId}
       cityId={props.cityId}
+      cityName={props.cityName}
     />
   </header>
 );

@@ -572,6 +572,7 @@ export const CATEGORIES = [
     colorName: COLOR_NAMES.LIVEABILITY,
     iconId: 'liveabilityLiveability',
     name: 'Liveability & sustainability',
+    navName: 'Liveability',
     description: 'The liveability & sustainability performance indicators can help all levels of government, industry and the community to better target policies aimed at promoting safety, social cohesion and human health and improving the quality of the local environment.',
     shortDescription: 'The liveability & sustainability performance indicators are aimed at promoting safety, social cohesion and human health and improving the quality of the local environment.',
     heroIndicatorId: 'accessToGreenSpace',

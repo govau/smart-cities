@@ -13,7 +13,7 @@ exports[`should match Snapshot 1`] = `
   <div className=\\"infoWrapper\\">
     <div className=\\"infoContainer\\">
       <div className=\\"infoTextWrapper\\">
-        <h1 className=\\"infoTitle\\">
+        <h1 id=\\"focus-point\\" className=\\"infoTitle\\">
           About
         </h1>
         <p className=\\"infoBodyText\\">

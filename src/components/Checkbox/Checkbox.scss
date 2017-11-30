@@ -7,8 +7,7 @@ $box-size: 16px;
 }
 
 .input {
-  position: absolute;
-  left: -9999px;
+  @include hidden;
 }
 
 .label {

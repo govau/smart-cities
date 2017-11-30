@@ -2,6 +2,7 @@ export const DATA_URL = '/data/smartCitiesData.json';
 
 export const NO_CATEGORY = 'overview';
 export const NO_CITY = 'all-cities';
+export const MAX_CATEGORY_NAV_TEXT_LENGTH = 14;
 
 export const CARD_SIZES = {
   SMALL: 'small',
@@ -24,6 +25,8 @@ export const ELEMENT_IDS = {
   PRIVACY_POLICY: 'privacy',
   SECURITY: 'security',
   CONTENT_CREDIT: 'content-credit',
+  INITIAL_FOCUS_POINT_ON_PAGE: 'focus-point',
+  OVERVIEW_LINK: 'overview-link',
 };
 
 export const LINKS = {
@@ -48,11 +51,11 @@ export const STRINGS = {
   CONTEXTUAL_DEFINITION: 'Contextual indicators highlight the characteristics of a city that are not amenable to or potentially appropriate for local policy intervention but they can help to explain why a city performs the way it does.',
   PERFORMANCE_DEFINITION: 'A performance indicator is a measurable value that demonstrates how effectively cities are performing against the Australian Government’s Smart Cities policy priorities.',
   PRIVACY_LINK: 'Privacy policy',
-  TERMS_LINK: 'Terms and conditions',
   HELP_LINK: 'Need help?',
   ACCESSIBILITY_LINK: 'Accessibility',
   SECURITY_LINK: 'Security',
   CONTENT_CREDIT: 'Content credit',
   FEEDBACK_LINK: 'Give feedback',
   COPYRIGHT: '© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.',
+  ALL_CITIES: 'All cities',
 };

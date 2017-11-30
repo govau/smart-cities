@@ -5,7 +5,10 @@ import PageLegend from '../../PageLegend/PageLegend';
 import CategoryOverviews from '../../CategoryOverviews/CategoryOverviews';
 import Icon from '../../Icon/Icon';
 import Link from '../../Link/Link';
-import { LINKS } from '../../../constants';
+import {
+  ELEMENT_IDS,
+  LINKS,
+} from '../../../constants';
 import taylorAngus from './taylorAngus.png';
 import smartCitiesLogo from './smart-cities-logo-white.svg';
 import COLORS from '../../../style/_colors.scss';
@@ -42,7 +45,10 @@ const AllCitiesOverview = props => (
     <div className={style.infoWrapper}>
       <div className={style.infoContainer}>
         <div className={style.infoTextWrapper}>
-          <h1 className={style.infoTitle}>About</h1>
+          <h1
+            id={ELEMENT_IDS.INITIAL_FOCUS_POINT_ON_PAGE}
+            className={style.infoTitle}
+          >About</h1>
 
           <p className={style.infoBodyText}>
             Australian cities have long been an important economic and social asset and will be

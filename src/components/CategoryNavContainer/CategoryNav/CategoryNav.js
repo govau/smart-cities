@@ -7,6 +7,8 @@ import {
   CATEGORY_IDS,
   NO_CATEGORY,
   NO_CITY,
+  ELEMENT_IDS,
+  STRINGS,
 } from '../../../constants';
 
 const classnames = require('classnames/bind').bind(style);
@@ -46,13 +48,13 @@ class CategoryNav extends Component {
             className={style.link}
             activeClassName={this.activeElementClassName}
             to={`/${this.props.cityId}/${NO_CATEGORY}`}
+            id={ELEMENT_IDS.OVERVIEW_LINK}
+            aria-label={`Overview of ${this.props.cityName}`}
           >
             <Pill
               className={classnames(style.linkText, style.overview)}
               height={28}
-            >
-              Overview
-            </Pill>
+            >Overview</Pill>
           </NavLink>
 
           {this.props.categories.map(category => (
@@ -64,6 +66,9 @@ class CategoryNav extends Component {
               onClick={(e) => {
                 scrollElementIntoView(e.target.parentElement);
               }}
+              aria-label={
+                `${category.navName || category.name} in ${this.props.cityName}`
+              }
             >
               <Pill
                 className={classnames(style.linkText, style[category.colorName])}
@@ -83,7 +88,12 @@ CategoryNav.propTypes = {
     id: PropTypes.string.isRequired,
   })).isRequired,
   cityId: PropTypes.string.isRequired,
+  cityName: PropTypes.string.isRequired,
   categoryId: PropTypes.string,
+};
+
+CategoryNav.defaultProps = {
+  cityName: STRINGS.ALL_CITIES,
 };
 
 export default CategoryNav;

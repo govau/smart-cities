@@ -1,13 +1,19 @@
 import React from 'react';
 import PageWrapper from '../PageWrapper/PageWrapper';
-import { LINKS } from '../../constants';
+import {
+  LINKS,
+  ELEMENT_IDS,
+} from '../../constants';
 import style from './FeedbackPage.scss';
 
 const FeedbackPage = () => (
   <PageWrapper dimFeedback>
     <div className={style.feedbackWrapper}>
       <div className={style.container}>
-        <h1 className={style.title}>Please give feedback</h1>
+        <h1
+          id={ELEMENT_IDS.INITIAL_FOCUS_POINT_ON_PAGE}
+          className={style.title}
+        >Please give feedback</h1>
 
         <p className={style.paragraph}>
           The Smart Cities Performance Dashboard is a working prototype, and we value your

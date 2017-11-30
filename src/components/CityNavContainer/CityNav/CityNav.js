@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { NO_CITY, NO_CATEGORY } from '../../../constants';
+import {
+  NO_CATEGORY,
+  NO_CITY,
+  STRINGS,
+} from '../../../constants';
 import style from './CityNav.scss';
 
 const classnames = require('classnames/bind').bind(style);
@@ -23,7 +27,7 @@ const CityNav = (props) => {
         activeClassName={style.link__active}
         isActive={(match, location) => locationHasCity(location, NO_CITY)}
         to={`/${NO_CITY}/${NO_CATEGORY}`}
-      >All cities</NavLink>
+      >{STRINGS.ALL_CITIES}</NavLink>
 
       {props.cities.map(city => (
         <NavLink

@@ -12,7 +12,7 @@ import CityCategoryContainer from '../CityCategoryContainer/CityCategoryContaine
 import StyleGuide from '../StyleGuide/StyleGuide';
 import AdditionalInfoPage from '../AdditionalInfoPage/AdditionalInfoPage';
 import FeedbackPage from '../FeedbackPage/FeedbackPage';
-import ScrollToTopOnRouteChange from '../ScrollToTopOnRouteChange/ScrollToTopOnRouteChange';
+import RouteChangeHandler from '../RouteChangeHandler/RouteChangeHandler';
 import './_normalize.scss';
 import './_globalStyles.scss';
 import {
@@ -22,7 +22,7 @@ import {
 
 const App = () => (
   <BrowserRouter>
-    <ScrollToTopOnRouteChange>
+    <RouteChangeHandler>
       <Switch>
         <Route path={`/${NO_CITY}/${NO_CATEGORY}`} component={AllCitiesOverviewContainer} />
         <Route path={`/:cityId/${NO_CATEGORY}`} component={CityOverviewContainer} />
@@ -37,7 +37,7 @@ const App = () => (
 
         <Redirect to={`/${NO_CITY}/${NO_CATEGORY}`} />
       </Switch>
-    </ScrollToTopOnRouteChange>
+    </RouteChangeHandler>
   </BrowserRouter>
 );
 

@@ -41,6 +41,6 @@ exports[`should match Snapshot 1`] = `
       </a>
     </div>
   </div>
-  <CategoryNavContainer categoryId=\\"jobs\\" cityId=\\"perth\\" />
+  <CategoryNavContainer categoryId=\\"jobs\\" cityId=\\"perth\\" cityName={[undefined]} />
 </header>"
 `;
