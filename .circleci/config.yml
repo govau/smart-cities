@@ -33,9 +33,10 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run: ./scripts/prepare_build.sh
+      - run: htpasswd -cb public/.htpasswd $BASICAUTH_STAGING_USER $BASICAUTH_STAGING_PASSWORD
       - run: ./scripts/cf_staging.sh
       - run: cf zero-downtime-push smart-cities-staging -f manifest-staging.yml -p build
-  deploy_production: 
+  deploy_production:
     docker: 
       - image: circleci/node:8.1.2
     working_directory: ~/repo

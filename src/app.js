@@ -13,7 +13,7 @@ import {
 
 import App from './components/App/App';
 
-fetch(DATA_URL)
+fetch(DATA_URL, { credentials: 'include' })
   .then(checkStatus)
   .then(parseBody)
   .then((cities) => {
