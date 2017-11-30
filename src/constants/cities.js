@@ -52,7 +52,7 @@ export default {
   'Greater Darwin': {
     id: 'greater-darwin',
     name: 'Darwin',
-    description: 'Darwin is a coastal city and the capital of the Northern Territory. Darwin has a tropical climate with a distinct wet and dry season and is the gateway to the World Heritage listed Kakadu National Park. It spans an area of around 3,100 square kilometres.',
+    description: 'Darwin is a coastal city and the capital of the Northern Territory. Darwin has a tropical climate with a distinct wet and dry season and is the gateway to the World Heritage listed Kakadu National Park. Darwin spans an area of around 3,100 square kilometres.The Commonwelath and Northern Territory Government have entered into an agreement to create a City Deal for Darwin',
   },
   'Greater Hobart': {
     id: 'greater-hobart',
@@ -107,7 +107,7 @@ export default {
   'Western Sydney': {
     id: 'western-sydney',
     name: 'Western Sydney',
-    description: 'Western Sydney includes the Local Government Areas of Blue Mountains, Camden, Campbelltown, Fairfield, Hawkesbury, Liverpool, Penrith and Wollondilly.',
+    description: 'For the purpose of the Performance Framework Western Sydney is defined as the Local Government Areas of Blue Mountains, Camden, Campbelltown, Fairfield, Hawkesbury, Liverpool, Penrith and Wollondilly. This aligns to the area of the Western Sydney City Deal, a collaborative partnership across all levels of government. This region has a fast growing and diverse population and significant natural assets, including the World Heritage listed Greater Blue Mountains World Heritage Area.',
   },
   'Wollongong': {
     id: 'wollongong',
