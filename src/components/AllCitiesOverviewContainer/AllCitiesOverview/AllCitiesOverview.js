@@ -22,7 +22,7 @@ const ncpLink = (
 
 const smartCitiesLink = (
   <Link href={LINKS.SMART_CITIES_DPMC_LINK}>
-    Smart Cities
+    Smart Cities Plan
   </Link>
 );
 
@@ -31,7 +31,7 @@ const AllCitiesOverview = props => (
     <div className={style.heroWrapper}>
       <div className={style.heroContainer}>
         <p className={style.heroText}>
-          Measuring success and opportunities across Australia’s largest cities
+          Tracking progress and performance across Australia’s largest cities
         </p>
 
         <img
@@ -88,10 +88,10 @@ const AllCitiesOverview = props => (
         <h1 className={style.infoTitle}>Policy priorities & context</h1>
 
         <p className={style.subInfoBodyText}>
-          The Australian Government has set out six {smartCitiesLink} policy priorities to help
-          achieve the objectives of the Smart Cities Plan. The National Cities Performance
-          Framework is designed to measure how well our cities are performing against
-          all six Smart Cities policy priorities.
+          There are 6 policy priorities to help achieve
+          the objectives of the {smartCitiesLink}. The National Cities Performance
+          Framework is designed to measure how well our cities are performing, using
+          two types of indicators:
         </p>
       </div>
 

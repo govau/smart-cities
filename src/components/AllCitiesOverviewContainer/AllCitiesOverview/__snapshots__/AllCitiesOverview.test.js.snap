@@ -5,7 +5,7 @@ exports[`should match Snapshot 1`] = `
   <div className=\\"heroWrapper\\">
     <div className=\\"heroContainer\\">
       <p className=\\"heroText\\">
-        Measuring success and opportunities across Australia’s largest cities
+        Tracking progress and performance across Australia’s largest cities
       </p>
       <img className=\\"smartCitiesLogo\\" src=\\"smart-cities-logo-white.svg\\" alt=\\"\\" />
     </div>
@@ -48,11 +48,11 @@ exports[`should match Snapshot 1`] = `
         Policy priorities &amp; context
       </h1>
       <p className=\\"subInfoBodyText\\">
-        The Australian Government has set out six 
-        <Link href=\\"https://cities.dpmc.gov.au/\\">
-          Smart Cities
+        There are 6 policy priorities to help achieve the objectives of the 
+        <Link href=\\"https://cities.dpmc.gov.au/smart-cities-plan\\">
+          Smart Cities Plan
         </Link>
-         policy priorities to help achieve the objectives of the Smart Cities Plan. The National Cities Performance Framework is designed to measure how well our cities are performing against all six Smart Cities policy priorities.
+        . The National Cities Performance Framework is designed to measure how well our cities are performing, using two types of indicators:
       </p>
     </div>
     <Icon className=\\"subInfoIcon\\" icon=\\"city\\" size={120} color=\\"PRIMARY_600\\" />

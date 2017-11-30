@@ -6,7 +6,7 @@
 export default {
   'Albury - Wodonga': {
     id: 'albury-wodonga',
-    name: 'Albury/Wodonga',
+    name: 'Albury-Wodonga',
     description: 'Albury-Wodonga encompasses the twin cities of Albury in New South Wales and Wodonga in Victoria. The cities are separated by the Murray River and a state border. In many senses the two cities operate as one community, although they are each serviced by their own local government.',
   },
   'Ballarat': {
@@ -86,7 +86,7 @@ export default {
   },
   'Newcastle - Maitland': {
     id: 'newcastle-maitland',
-    name: 'Newcastle/Maitland',
+    name: 'Newcastle-Maitland',
     description: 'The Newcastle-Maitland region encompasses the cities of both Newcastle and Maitland in New South Wales. Newcastle is located on the coast at the mouth of the Hunter River, while Maitland is located just over 30 kilometres further inland.',
   },
   'Sunshine Coast': {
