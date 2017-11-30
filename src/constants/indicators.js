@@ -431,7 +431,7 @@ export default {
   newBusinessEntrants: {
     name: 'New business entry rate',
     legendText: 'Entrants',
-    format: FORMATS.ONE_OR_TWO_DECIMALS,
+    format: FORMATS.PERCENT_ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
     source: 'New business entrants and exits, New Businesses as a share of the stock',
@@ -439,7 +439,7 @@ export default {
   newBusinessExits: {
     name: 'Share of ceased businesses',
     legendText: 'Exits',
-    format: FORMATS.ONE_OR_TWO_DECIMALS,
+    format: FORMATS.PERCENT_ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
     source: 'New business entrants and exits, Business exits as a share of the stock',

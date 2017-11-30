@@ -244,7 +244,7 @@ export const CATEGORIES = [
     iconId: 'jobsEmployment',
     name: 'Jobs & skills',
     description: 'The jobs & skills performance indicators seek to measure employment, education and training outcomes. The indicators will help all levels of government, industry and the community to boost employment through a better understanding of education, skills and industry development needs.',
-    shortDescription: 'Boost employment by supporting skills & industry development, & diverse economic growth.',
+    shortDescription: 'The jobs & skills performance indicators seek to measure employment, education and training outcomes.',
     heroIndicatorId: 'unemploymentRateYouth',
     overviewIndicatorIds: [
       'employmentGrowth',
@@ -366,8 +366,8 @@ export const CATEGORIES = [
     colorName: COLOR_NAMES.HOUSING,
     iconId: 'housingHousingAffordability',
     name: 'Housing',
-    description: 'The Housing performance indicators seek to measure housing supply and affordability. The indicators will help all levels of government, industry and the community to develop policies to deliver more affordable housing that is located near jobs, services and transport connections.',
-    shortDescription: 'Improve housing supply and affordability, & encourage appropriate densities & diversity of housing options.',
+    description: 'The housing performance indicators seek to measure housing supply and affordability. The indicators will help all levels of government, industry and the community to develop policies to deliver more affordable housing that is located near jobs, services and transport connections.',
+    shortDescription: 'The housing performance indicators seek to measure housing supply and affordability.',
     heroIndicatorId: 'dwellingPriceToIncomeRatio',
     overviewIndicatorIds: [
       'dwellingPriceToIncomeRatio',
@@ -512,8 +512,8 @@ export const CATEGORIES = [
     iconId: 'infrastructureGettingToWork',
     name: 'Infrastructure & investment',
     navName: 'Infrastructure',
-    description: 'The Infrastructure & investment performance indicators seek to measure infrastructure and investment needs in our cities. The indicators will help all levels of government, industry and the community to improve transport options, reduce travel times and increase economic growth.',
-    shortDescription: 'Improve accessibility & productivity in cities with high quality, efficient and effective infrastructure & transport solutions.',
+    description: 'The infrastructure & investment performance indicators seek to measure infrastructure and investment needs in our cities. The indicators will help all levels of government, industry and the community to improve transport options, reduce travel times and increase economic growth.',
+    shortDescription: 'The infrastructure & investment performance indicators seek to measure infrastructure and investment needs in our cities.',
     heroIndicatorId: 'jobsCar',
     overviewIndicatorIds: [
       'jobsCar',
@@ -573,7 +573,7 @@ export const CATEGORIES = [
     iconId: 'liveabilityLiveability',
     name: 'Liveability & sustainability',
     description: 'The liveability & sustainability performance indicators can help all levels of government, industry and the community to better target policies aimed at promoting safety, social cohesion and human health and improving the quality of the local environment.',
-    shortDescription: 'Aims to improve safety, social cohesion and health in our cities. The Government also aims to improve air quality, access to green space and active transport, while acting to reduce carbon emissions.',
+    shortDescription: 'The liveability & sustainability performance indicators are aimed at promoting safety, social cohesion and human health and improving the quality of the local environment.',
     heroIndicatorId: 'accessToGreenSpace',
     overviewIndicatorIds: [
       'accessToGreenSpace',
@@ -770,7 +770,7 @@ export const CATEGORIES = [
     name: 'Innovation & digital opportunities',
     navName: 'Innovation',
     description: 'The innovation & digital opportunities performance indicators seek to measure innovation and entrepreneurship. The indicators will help all levels of government, industry and the community to increase productivity growth and develop new knowledge industries and the digital economy.',
-    shortDescription: 'Aims to harness the productive potential of information and communications technologies & the digital economy, and to make data publicly available where practical.',
+    shortDescription: 'The innovation & digital opportunities performance indicators seek to measure innovation and entrepreneurship.',
     heroIndicatorId: 'newBusinessEntrants',
     overviewIndicatorIds: [
       'newBusinessEntrants',
@@ -861,7 +861,7 @@ export const CATEGORIES = [
     iconId: 'planningPlanning',
     name: 'Planning',
     description: 'The governance, planning and regulation performance indicators seek to measure how effectively planning, governance and regulation support economic, social and environmental outcomes.',
-    shortDescription: 'Aims to deliver coordinated and integrated policy, planning and investment across all levels of government.',
+    shortDescription: 'The governance, planning and regulation performance indicators seek to measure how effectively planning, governance and regulation support economic, social and environmental outcomes.',
     heroIndicatorId: 'population',
     overviewIndicatorIds: [],
     subCategories: [
