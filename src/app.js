@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-
 import configureStore from './redux/configureStore';
+import { parseCityData } from './redux/ducks/cities';
 import { checkStatus, parseBody } from './helpers/fetch';
-
 import {
   DATA_URL,
   INDICATORS,
@@ -18,7 +17,7 @@ fetch(DATA_URL, { credentials: 'include' })
   .then(parseBody)
   .then((cities) => {
     const store = configureStore({
-      cities,
+      cities: parseCityData(cities),
       indicators: INDICATORS,
       categories: CATEGORIES,
     });

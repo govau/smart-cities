@@ -1,4 +1,25 @@
 import initialState from './../initialState';
+import { CITIES } from '../../constants';
+
+export const parseCityData = (cities) => {
+  const citiesWithDetails = cities.map((rawCity) => {
+    const city = CITIES[rawCity.source];
+
+    if (!city) {
+      console.warn(`${rawCity.source} is not a recognized city.`);
+      return null;
+    }
+
+    return {
+      ...city,
+      indicators: rawCity.indicators,
+    };
+  }).filter(city => city);
+
+  citiesWithDetails.sort((a, b) => a.name.localeCompare(b.name));
+
+  return citiesWithDetails;
+};
 
 export const ACTION_TYPES = {
   TOGGLE_SELECT: 'TOGGLE_SELECT',

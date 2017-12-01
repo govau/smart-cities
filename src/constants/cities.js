@@ -1,8 +1,10 @@
 /* eslint-disable */
+import React from 'react';
+import Link from '../components/Link/Link';
+import { LINKS } from './index';
 
-// This data is used when converting the source data to a format for use in the front end
 // The key for each city must match exactly what appears in the source data
-// An error will be thrown during conversion if they don't match
+// If they don't match, the city will be ignored and a warning will be logged at run time
 export default {
   'Albury - Wodonga': {
     id: 'albury-wodonga',
@@ -77,7 +79,14 @@ export default {
   'Launceston': {
     id: 'launceston',
     name: 'Launceston',
-    description: 'Launceston is Tasmania’s second largest and only inland city and was established in 1806. The Launceston City Deal was signed by the Commonwealth Government, Tasmanian Government and the City of Launceston in April 2017. It is Tasmania’s first City Deal and the second for Australia',
+    description: (
+      <span>
+        Launceston is Tasmania’s second largest and only inland city and was established in 1806.
+        The Launceston <Link href={LINKS.LAUNCESTON_CITY_DEAL}>City Deal</Link> was signed by the Commonwealth Government,
+        Tasmanian Government and the City of Launceston in April 2017. It is Tasmania’s
+        first City Deal and the second for Australia.
+      </span>
+    ),
   },
   'Mackay': {
     id: 'mackay',
@@ -102,7 +111,13 @@ export default {
   'Townsville': {
     id: 'townsville',
     name: 'Townsville',
-    description: 'Townsville is a coastal city in North Queensland. Townsville is the location of Australia’s first City Deal, a 15 year commitment between the Commonwealth of Australia, the State of Queensland and the Townsville City Council to deliver transformative outcomes for Townsville and its residents.',
+    description: (
+      <span>
+        Townsville is a coastal city in North Queensland. Townsville is the location of Australia’s
+        first <Link href={LINKS.TOWNSVILLE_CITY_DEAL}>City Deal</Link>, a 15 year commitment between the Commonwealth of Australia, the State
+        of Queensland and the Townsville City Council to deliver transformative outcomes for Townsville and its residents.
+      </span>
+    ),
   },
   'Western Sydney': {
     id: 'western-sydney',

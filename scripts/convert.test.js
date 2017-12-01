@@ -4,47 +4,29 @@ Greater Perth,2040000,0.016`;
 
 const expectedOutputObject = [
   {
-    id: 'greater-perth',
-    name: 'Perth',
-    description: 'Description of Perth',
-    indicators: {
-      population: 2040000,
-      growthRate: 0.016
-    },
-  },
-  {
-    id: 'greater-sydney',
-    name: 'Sydney',
-    description: 'Description of Sydney',
+    source: 'Greater Sydney',
     indicators: {
       population: 4920000,
       growthRate: 0.021
     },
   },
-];
-
-jest.mock('../src/constants', () => ({
-  INDICATORS: {
-    population: {
-      name: 'The population indicator name',
-      source: 'Population, All persons, People',
-    },
-    growthRate: {
-      name: 'Annual population growth rate',
-      source: 'Population, persons, Annual Growth %',
+  {
+    source: 'Greater Perth',
+    indicators: {
+      population: 2040000,
+      growthRate: 0.016
     },
   },
-  CITIES: {
-    'Greater Sydney': {
-      id: 'greater-sydney',
-      name: 'Sydney',
-      description: 'Description of Sydney',
-    },
-    'Greater Perth': {
-      id: 'greater-perth',
-      name: 'Perth',
-      description: 'Description of Perth',
-    },
+];
+
+jest.mock('../src/constants/indicators', () => ({
+  population: {
+    name: 'The population indicator name',
+    source: 'Population, All persons, People',
+  },
+  growthRate: {
+    name: 'Annual population growth rate',
+    source: 'Population, persons, Annual Growth %',
   },
 }));
 

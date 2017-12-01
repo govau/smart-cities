@@ -1,8 +1,10 @@
 import {
   citiesReducer,
+  parseCityData,
   toggleCitySelected,
   ACTION_TYPES,
 } from './cities';
+import { CITIES } from '../../constants';
 
 const startingState = [
   {
@@ -70,5 +72,62 @@ it('toggleCitySelected should return the action with the city ID', () => {
   expect(action).toEqual({
     type: ACTION_TYPES.TOGGLE_SELECT,
     cityId: 'brisbane',
+  });
+});
+
+describe('parseCityData', () => {
+  console.warn = jest.fn();
+
+  const rawData = [
+    {
+      source: 'Wollongong',
+      indicators: {
+        population: 77000,
+        growthRate: 0.03,
+      },
+    },
+    {
+      source: 'Albury - Wodonga',
+      indicators: {
+        population: 88000,
+        growthRate: 0.05,
+      },
+    },
+    {
+      source: 'An unrecognized city',
+      indicators: {
+        population: 99000,
+        growthRate: 0.07,
+      },
+    },
+  ];
+
+  it('should merge source data with city details', () => {
+    const parsedCities = parseCityData(rawData);
+
+    const alburyWodonga = CITIES['Albury - Wodonga'];
+
+    // this should combine the indicators from the raw data
+    // with the id, name and description from CITIES
+    expect(parsedCities[0]).toEqual(expect.objectContaining({
+      id: alburyWodonga.id,
+      name: alburyWodonga.name,
+      description: alburyWodonga.description,
+      indicators: rawData[1].indicators,
+    }));
+  });
+
+  it('should sort the cities', () => {
+    const parsedCities = parseCityData(rawData);
+
+    expect(parsedCities[0].name).toBe('Albury-Wodonga');
+    expect(parsedCities[1].name).toBe('Wollongong');
+  });
+
+  it('should remove and warn about unknown cities', () => {
+    const parsedCities = parseCityData(rawData);
+
+    expect(parsedCities.length).toBe(2);
+    expect(console.warn).toHaveBeenCalledWith('An unrecognized city is not a recognized city.');
   });
 });

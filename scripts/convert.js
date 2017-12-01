@@ -5,10 +5,7 @@
 
 import csv from 'csv';
 import getStdin from 'get-stdin';
-import {
-  INDICATORS,
-  CITIES,
-} from '../src/constants';
+import INDICATORS from '../src/constants/indicators';
 
 // convert from an object to an array with a key for each indicator
 const indicators = Object.entries(INDICATORS).map(([key, indicator]) => ({
@@ -19,11 +16,10 @@ const indicators = Object.entries(INDICATORS).map(([key, indicator]) => ({
 getStdin().then((rawCsv) => {
   csv.parse(rawCsv, { columns: true }, (err, data) => {
     const cities = data.map((row) => {
-      const city = CITIES[row.Cities];
-
-      if (!city) throw new Error(`${row.Cities} is not a known smart city`);
-
-      city.indicators = {};
+      const city = {
+        source: row.Cities,
+        indicators: {},
+      };
 
       // generate key/value pairs for each indicator
       indicators.forEach((indicator) => {
@@ -47,8 +43,6 @@ getStdin().then((rawCsv) => {
 
       return city;
     });
-
-    cities.sort((a, b) => a.name.localeCompare(b.name));
 
     process.stdout.write(JSON.stringify(cities, null, 2)); // pretty-print
   });

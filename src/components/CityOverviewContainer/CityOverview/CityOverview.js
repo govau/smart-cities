@@ -25,7 +25,10 @@ const CityOverview = props => (
 CityOverview.propTypes = {
   city: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object, // descriptions can be JSX
+    ]).isRequired,
     id: PropTypes.string.isRequired,
   }).isRequired,
 };

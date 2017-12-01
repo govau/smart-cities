@@ -38,11 +38,13 @@ export const LINKS = {
   FEEDBACK_SURVEY_EMBED: 'https://surveymonkey.com/r/LS9RGKQ',
   ADDITIONAL_INFORMATION: '/additional-information',
   ICON_CREDIT: 'https://thenounproject.com/CreativeMania',
+  LAUNCESTON_CITY_DEAL: 'https://cities.dpmc.gov.au/launceston-city-deal',
   ORG: 'https://dta.gov.au/',
   PRIVACY_ACT: 'https://www.legislation.gov.au/Series/C2004A03712',
   PROTECTING_PDF: 'https://www.ag.gov.au/RightsAndProtections/CyberSecurity/Documents/PDF%20-%20Protecting%20Yourself%20Online%20-%20Second%20Edition%20-%20Booklet.pdf',
   SMART_CITIES_LINK: 'https://smart-cities.dashboard.gov.au',
   SMART_CITIES_DPMC_LINK: 'https://cities.dpmc.gov.au/smart-cities-plan',
+  TOWNSVILLE_CITY_DEAL: 'https://cities.dpmc.gov.au/townsville-city-deal',
   WCAG: 'https://www.w3.org/TR/WCAG20/',
 };
 

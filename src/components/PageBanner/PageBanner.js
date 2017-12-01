@@ -63,7 +63,10 @@ PageBanner.propTypes = {
   cities: PropTypes.arrayOf(PropTypes.shape(cityPropShape)),
   city: PropTypes.shape(cityPropShape),
   colorName: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object, // city descriptions can be JSX
+  ]).isRequired,
   indicator: PropTypes.oneOf(Object.keys(INDICATORS)).isRequired,
   title: PropTypes.string.isRequired,
   isContextPage: PropTypes.bool,
