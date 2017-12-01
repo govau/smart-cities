@@ -177,7 +177,7 @@ export const CATEGORIES = [
         charts: [
           {
             name: 'Life expectancy at birth',
-            axisTitle: '',
+            axisTitle: 'Life expectancy in years',
             description: 'This shows the number of years a person born today is expected to live.\n\nSource: ABS - Life Tables, States, Territories and Australia',
             min: 70,
             max: 90,
@@ -548,7 +548,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Proportion of population that walk or cycle to work',
+            name: 'Proportion of journeys to work by active transport',
             axisTitle: '',
             description: 'This shows the proportion of journeys to work that are taken by active transport (walking or cycling). \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -634,8 +634,8 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Energy efficiency of buildings',
-            axisTitle: 'Average energy efficiency rating of commercial buildings',
+            name: 'Office building energy and water efficiency rating',
+            axisTitle: '',
             description: 'This shows the average National Australian Built Environment Rating System (NABERS) score for rated office buildings in the city, weighted by rated floor space. \n\nCities with fewer than 10 rated buildings are Albury Wodonga, Ballarat, Bendigo, Cairns, Geelong, Launceston, Mackay, Toowoomba, Townsville, Western Sydney and Sunshine Coast. \n\nSource: National Australian Built Environment Rating System',
             indicatorIds: [
               'energyEfficiencyOfBuildings',
@@ -658,7 +658,7 @@ export const CATEGORIES = [
         iconId: 'liveabilityLiveability',
         summaryIndicatorIds: [
           'volunteeringRate',
-          'perceivedSafety',
+          'languagesOtherThanEnglish',
         ],
         charts: [
           {
@@ -725,7 +725,7 @@ export const CATEGORIES = [
           },
           {
             name: 'Percentage of population able to get crisis support',
-            axisTitle: 'Percentage of population able to get crisis support',
+            axisTitle: '',
             max: 1,
             description: 'This shows the share of people that stated in a survey that they feel there is someone outside their household who could be asked for support in a time of crisis. \n\nSource: PHIDU – Social Health Atlas of Australia',
             indicatorIds: [
@@ -879,7 +879,7 @@ export const CATEGORIES = [
         charts: [
           {
             name: 'Population',
-            axisTitle: 'Population',
+            axisTitle: '',
             description: 'This shows the population size.\n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
               'population',
@@ -931,7 +931,7 @@ export const CATEGORIES = [
           },
           {
             name: 'Median age',
-            axisTitle: 'Median age in years',
+            axisTitle: 'Years',
             description: 'This shows the median age. \n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
               'dependencyRatioMedianAge',
@@ -958,7 +958,7 @@ export const CATEGORIES = [
         charts: [
           {
             name: 'Local governments per 100k people',
-            axisTitle: 'LGAs per 100,000 persons',
+            axisTitle: '',
             description: 'This shows the number of local government areas per 100 000 persons. \n\nSource: ABS - Regional Population Growth ',
             indicatorIds: [
               'dispersion',

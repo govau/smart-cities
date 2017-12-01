@@ -52,7 +52,7 @@ export default {
   'Greater Darwin': {
     id: 'greater-darwin',
     name: 'Darwin',
-    description: 'Darwin is a coastal city and the capital of the Northern Territory. Darwin has a tropical climate with a distinct wet and dry season and is the gateway to the World Heritage listed Kakadu National Park. Darwin spans an area of around 3,100 square kilometres.The Commonwelath and Northern Territory Government have entered into an agreement to create a City Deal for Darwin',
+    description: 'Darwin is a coastal city and the capital of the Northern Territory. Darwin has a tropical climate with a distinct wet and dry season and is the gateway to the World Heritage listed Kakadu National Park. Darwin spans an area of around 3,100 square kilometres.The Commonwealth and Northern Territory Government have entered into an agreement to create a City Deal for Darwin.',
   },
   'Greater Hobart': {
     id: 'greater-hobart',

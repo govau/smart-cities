@@ -224,7 +224,7 @@ export default {
     source: 'Proportion of jobs accessible within 30 minutes, By Car, % of all jobs in city',
   },
   activeJourneys: {
-    name: 'Proportion of population that walk or cycle to work',
+    name: 'Proportion of journeys to work by active transport',
     format: FORMATS.PERCENT_ZERO_TO_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
@@ -366,7 +366,7 @@ export default {
     source: 'Air quality, Annual mean, <PM2.5, ug/m3',
   },
   energyEfficiencyOfBuildings: {
-    name: 'Energy efficiency of buildings',
+    name: 'Office building energy and water efficiency rating',
     format: FORMATS.ZERO_TO_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '',
