@@ -836,7 +836,7 @@ export const CATEGORIES = [
           {
             name: 'Workers in knowledge intensive services',
             axisTitle: 'Percentage of employment',
-            description: 'This shows the share of employed persons that work in the top three knowledge-intensive service industries. \n\nSource: ABS Labour Force',
+            description: 'This shows the share of employed persons that work in the top three knowledge-intensive service industries: professional, scientific and technical services; information, media and telecommunications; and financial and insurance services. \n\nSource: ABS Labour Force',
             indicatorIds: [
               'knowledgeWorkersRatio',
             ],
