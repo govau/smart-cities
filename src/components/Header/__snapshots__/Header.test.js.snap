@@ -12,33 +12,31 @@ exports[`should match Snapshot 1`] = `
       Official Australian Government Website
     </span>
     <div className=\\"compactTitle\\">
-      Smart Cities
+      National Cities Performance
     </div>
     <div className=\\"compactSubtitle\\">
-      Performance Dashboard
+      Framework Dashboard
     </div>
   </div>
   <div className=\\"mainContainer\\">
     <div className=\\"titleContainer\\">
-      <Pill className=\\"projectStatus\\">
+      <Pill height={16} className=\\"projectStatus\\">
         ALPHA
       </Pill>
       <NavLink className=\\"titleLinkWrapper\\" to=\\"/all-cities/overview\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
         <h1 className=\\"title\\">
-          Smart Cities Performance Dashboard
+          National Cities Performance
         </h1>
       </NavLink>
       <div className=\\"subtitle\\">
-        Smart Cities Performance Framework
+        Framework Dashboard
       </div>
     </div>
     <div className=\\"orgContainer\\">
       <a className=\\"orgLink\\" href=\\"https://dta.gov.au/\\">
         <img className=\\"orgLogo\\" src=\\"dta-logo.svg\\" alt=\\"DTA logo\\" />
       </a>
-      <a className=\\"contactLink\\" href=\\"mailto:performance-dashboard@digital.gov.au\\">
-        Contact us
-      </a>
+      <FeedbackButton />
     </div>
   </div>
   <CategoryNavContainer categoryId=\\"jobs\\" cityId=\\"perth\\" cityName={[undefined]} />

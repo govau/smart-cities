@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import CategoryNavContainer from '../CategoryNavContainer/CategoryNavContainer';
 import CityHeader from '../CityHeader/CityHeader';
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
+import FeedbackButton from '../FeedbackButton/FeedbackButton';
 import Pill from '../Pill/Pill';
 import {
   LINKS,
@@ -26,27 +27,27 @@ const Header = props => (
       <img className={style.star} src={star} alt="star icon" />
       <span className={style.govAu}>GOV.AU</span>
       <span className={style.govWebsite}>Official Australian Government Website</span>
-      <div className={style.compactTitle}>Smart Cities</div>
-      <div className={style.compactSubtitle}>Performance Dashboard</div>
+      <div className={style.compactTitle}>National Cities Performance</div>
+      <div className={style.compactSubtitle}>Framework Dashboard</div>
     </div>
     <div className={style.mainContainer}>
       <div className={style.titleContainer}>
-        <Pill className={style.projectStatus}>ALPHA</Pill>
+        <Pill height={16} className={style.projectStatus}>ALPHA</Pill>
 
         <NavLink
           className={style.titleLinkWrapper}
           to={`/${NO_CITY}/${NO_CATEGORY}`}
         >
-          <h1 className={style.title}>Smart Cities Performance Dashboard</h1>
+          <h1 className={style.title}>National Cities Performance</h1>
         </NavLink>
 
-        <div className={style.subtitle}>Smart Cities Performance Framework</div>
+        <div className={style.subtitle}>Framework Dashboard</div>
       </div>
       <div className={style.orgContainer}>
         <a className={style.orgLink} href={LINKS.ORG}>
           <img className={style.orgLogo} src={dtaLogo} alt="DTA logo" />
         </a>
-        <a className={style.contactLink} href={LINKS.CONTACT_US}>Contact us</a>
+        { props.onFeedbackPage || <FeedbackButton /> }
       </div>
     </div>
 
@@ -73,6 +74,7 @@ Header.propTypes = {
   categoryColorName: PropTypes.string,
   categoryId: PropTypes.string.isRequired,
   openNav: PropTypes.func.isRequired,
+  onFeedbackPage: PropTypes.bool,
 };
 
 export default Header;

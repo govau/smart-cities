@@ -2,6 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { ELEMENT_IDS, NO_CATEGORY } from '../../constants';
+import { incrementNavigationCount } from '../../helpers/userBehaviour';
 import { logPageView } from '../../helpers/analyticsManager';
 
 /**
@@ -99,6 +100,8 @@ class RouteChangeHandler extends Component {
       if (focusPoint) {
         setFocusAttributes(focusPoint);
       }
+
+      incrementNavigationCount();
 
       // scroll to the top or the element in the hash
       scroll();

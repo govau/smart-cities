@@ -6,13 +6,12 @@ exports[`should match Snapshot 1`] = `
     <SideBar closeNav={[Function]} isOpen={false} cityId=\\"perth\\" />
   </div>
   <div>
-    <Header openNav={[Function]} cityId=\\"perth\\" categoryId=\\"jobs\\" cityName={[undefined]} categoryColorName={[undefined]} />
+    <Header openNav={[Function]} cityId=\\"perth\\" categoryId=\\"jobs\\" cityName={[undefined]} categoryColorName={[undefined]} onFeedbackPage={[undefined]} />
     <main className=\\"main\\">
       <div>
         render me
       </div>
     </main>
-    <FeedbackButton dimmed={[undefined]} />
     <FooterContainer categoryId=\\"jobs\\" />
   </div>
 </div>"

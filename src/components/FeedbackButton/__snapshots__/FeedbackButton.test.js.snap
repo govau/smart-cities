@@ -1,12 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match snapshot 1`] = `
-"<div className=\\"buttonWrapper\\">
-  <NavLink to=\\"/feedback\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-    <div className=\\"button\\">
-      <Icon icon=\\"speechBubble\\" className=\\"speechBubbleIcon\\" size={25} />
-      Feedback
-    </div>
-  </NavLink>
-</div>"
+"<NavLink to=\\"/feedback\\" className=\\"button\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+  <span className=\\"buttonText\\">
+    Give feedback
+  </span>
+  <Icon icon=\\"speechBubble\\" className=\\"speechBubbleIcon\\" size={25} />
+</NavLink>"
 `;

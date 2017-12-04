@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import FooterContainer from '../FooterContainer/FooterContainer';
 import Header from '../Header/Header';
 import SideBar from '../SideBar/SideBar';
-import FeedbackButton from '../FeedbackButton/FeedbackButton';
 import style from './PageWrapper.scss';
 import blockScroll from '../../helpers/blockScroll';
 import {
@@ -66,13 +65,12 @@ class PageWrapper extends Component {
             categoryId={this.props.categoryId}
             cityName={this.props.cityName}
             categoryColorName={this.props.categoryColorName}
+            onFeedbackPage={this.props.onFeedbackPage}
           />
 
           <main className={style.main}>
             {this.props.children}
           </main>
-
-          <FeedbackButton dimmed={this.props.dimFeedback} />
 
           <FooterContainer categoryId={this.props.categoryId} />
         </div>
@@ -90,7 +88,7 @@ PageWrapper.propTypes = {
   cityId: PropTypes.string,
   cityName: PropTypes.string,
   categoryColorName: PropTypes.string,
-  dimFeedback: PropTypes.bool,
+  onFeedbackPage: PropTypes.bool,
 };
 
 PageWrapper.defaultProps = {

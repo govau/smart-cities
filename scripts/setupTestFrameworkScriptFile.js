@@ -18,3 +18,8 @@ window.gtag = () => {};
 Object.defineProperty(document.body, 'clientWidth', {
   writable: true,
 });
+
+window.localStorage = {
+  getItem: () => {},
+  setItem: () => {},
+};

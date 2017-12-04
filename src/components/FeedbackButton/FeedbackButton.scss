@@ -1,32 +1,50 @@
 @import '~style/variables';
 
-.buttonWrapper {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  margin-top: -30px;
-  margin-right: -50px;
-  z-index: $z-index-feedback-button;
-}
-
 .button {
-  transform: rotate(-90deg);
-  background: $color-primary--600;
-  width: 136px;
-  height: 47px;
-  border-radius: 4px 4px 0 0;
-  border: 1px solid white;
-  font-size: 16px;
-  text-align: center;
-  padding-top: 8px;
+  background: $color-primary--800;
+  height: 32px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: right;
   color: $color-white;
 
+  &.pulsing {
+    animation: emit 1s ease 1s 3;
+  }
+
   &.dimmed {
-    background: $color-grey--500;
+    background: $color-grey--700;
+  }
+
+  &:hover {
+    background: $color-primary--900;
+  }
+
+  @include for-desktop-up {
+    width: 176px;
+    padding-top: 5px;
+  }
+}
+
+.buttonText {
+  display: none;
+
+  @include for-desktop-up {
+    display: inline;
   }
 }
 
 .speechBubbleIcon {
-  margin-right: 6px;
-  margin-left: -4px;
+  margin: 4px 16px;
+
+  @include for-desktop-up {
+    margin-left: 18px;
+    margin-top: -2px;
+    margin-right: 8px;
+  }
+}
+
+@keyframes emit {
+  from { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
+  to { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
 }

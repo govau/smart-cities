@@ -8,11 +8,9 @@
 // this is the minor header on desktop size
 // and the only header on mobile/tablet
 .govContainer {
-  @include shadow;
-
+  display: inline-flex;
   position: relative;
   z-index: $z-index-header;
-  display: flex;
   height: $main-header-height-mobile;
   flex-flow: column wrap;
   align-items: flex-start;
@@ -20,7 +18,7 @@
   justify-content: center;
 
   @include for-desktop-up {
-    box-shadow: none;
+    display: flex;
     padding-left: 30px;
     height: $gov-header-height;
     align-items: center;
@@ -59,7 +57,9 @@
 }
 
 .mainContainer {
-  display: none;
+  position: absolute;
+  right: 4px;
+  top: 12px;
 
   @include for-desktop-up {
     position: relative;
@@ -73,23 +73,32 @@
 
 .titleContainer,
 .orgContainer {
-  padding: 0 32px;
   display: inline-flex;
   flex-direction: column;
+
+  @include for-desktop-up {
+    padding: 0 32px;
+  }
 }
 
 .orgContainer {
   align-items: flex-end;
 }
 
-.star {
-  height: 22px;
-  width: 22px;
-  max-width: 22px;
-  flex: 0 0 100%;
-  margin-right: 5px;
+.titleContainer,
+.orgLink {
+  display: none;
 
   @include for-desktop-up {
+    display: block;
+  }
+}
+
+.star {
+  display: none;
+
+  @include for-desktop-up {
+    display: block;
     height: 18px;
     width: 18px;
     flex: 0 1 auto;
@@ -97,7 +106,8 @@
 }
 
 .hamburger {
-  margin-right: 14px;
+  margin-right: 8px;
+  margin-left: 8px;
 
   @include for-desktop-up {
     display: none;
@@ -105,9 +115,12 @@
 }
 
 .projectStatus {
-  margin-top: 24px;
-  background: $color-badge;
+  margin-top: 12px;
+  background: $color-white;
   align-self: flex-start;
+  color: $color-primary--600;
+  padding: 0 10px;
+  font-size: 11px;
   font-weight: 500;
 }
 
@@ -115,26 +128,26 @@
   text-decoration: none;
 }
 
-.title {
+.title,
+.subtitle {
   font-size: 36px;
   font-weight: 300;
-  line-height: 46px;
-  margin-top: 10px;
+  line-height: 38px;
+}
+
+.title {
+  margin-top: 6px;
 }
 
 .compactTitle {
   font-size: 14px;
+  line-height: 14px;
   flex: 0 0 16px;
 }
 
-.subtitle {
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
 .compactSubtitle {
-  text-transform: uppercase;
-  font-size: 11px;
+  font-size: 14px;
+  line-height: 14px;
   font-weight: 300;
   flex: 0 0 14px;
 }
@@ -146,8 +159,8 @@
 }
 
 .orgLogo {
-  height: 65px;
-  width: 102px;
+  height: 45px;
+  width: 73px;
 }
 
 .contactLink {
