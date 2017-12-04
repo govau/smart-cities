@@ -14,6 +14,7 @@ console.warn = jest.fn();
 jest.mock('../Legend/Legend', () => 'Legend');
 jest.mock('./ChartTable/ChartTable', () => 'ChartTable');
 jest.mock('../Icon/Icon', () => 'Icon');
+jest.mock('../IndicatorIcon/IndicatorIcon', () => 'IndicatorIcon');
 jest.mock('../../constants', () => ({
   STRINGS: {
     CONTEXTUAL_DEFINITION: 'CONTEXTUAL_DEFINITION',

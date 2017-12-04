@@ -4,6 +4,7 @@ import CityCategory from './CityCategory';
 
 jest.mock('../../PageBanner/PageBanner', () => 'PageBanner');
 jest.mock('../../SubCategorySummary/SubCategorySummary', () => 'SubCategorySummary');
+jest.mock('../../../helpers/getSubCategoryOfHeroIndicator', () => () => 'mock sub category');
 
 const defaultProps = {
   category: {
@@ -61,4 +62,12 @@ it('should match Snapshot', () => {
   );
 
   expect(component.debug()).toMatchSnapshot();
+});
+
+it('should pass the sub category of the hero indicator to the banner', () => {
+  const component = shallow(
+    <CityCategory {...defaultProps} />
+  );
+
+  expect(component.find('PageBanner').prop('indicatorSubCategory')).toBe('mock sub category');
 });

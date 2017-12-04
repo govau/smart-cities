@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import PageWrapper from '../../PageWrapper/PageWrapper';
 import PageBanner from '../../PageBanner/PageBanner';
 import SubCategorySummary from '../../SubCategorySummary/SubCategorySummary';
-import { CATEGORY_IDS, INDICATORS } from '../../../constants';
 import SubCategoryCharts from '../../SubCategoryCharts/SubCategoryCharts';
 import CompareCities from '../../CompareCities/CompareCities';
+import { INDICATORS } from '../../../constants';
+import getSubCategoryOfHeroIndicator from '../../../helpers/getSubCategoryOfHeroIndicator';
 
 const CityCategory = props => (
   <PageWrapper
@@ -17,18 +18,17 @@ const CityCategory = props => (
     <PageBanner
       colorName={props.category.colorName}
       description={props.category.description}
-      indicator={props.category.heroIndicatorId}
+      indicatorId={props.category.heroIndicatorId}
       title={props.category.name}
       cities={props.cities}
       city={props.city}
-      isContextPage={props.category.id === CATEGORY_IDS.CONTEXT}
+      indicatorSubCategory={getSubCategoryOfHeroIndicator(props.category)}
     />
 
     {props.category.subCategories.map(subCategory => (
       <SubCategorySummary
         key={subCategory.name}
         {...subCategory}
-        categoryId={props.category.id}
         categoryColorName={subCategory.colorName || props.category.colorName}
         city={props.city}
       />

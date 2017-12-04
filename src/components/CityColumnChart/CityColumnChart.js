@@ -8,13 +8,13 @@ import numeral from 'numeral';
 import Tooltip from '../Tooltip/Tooltip';
 import Legend from '../Legend/Legend';
 import Icon from '../Icon/Icon';
+import IndicatorIcon from '../IndicatorIcon/IndicatorIcon';
 import ChartTable from './ChartTable/ChartTable';
 import baseChartConfig from '../../helpers/baseChartConfig';
 import getColorRange from '../../helpers/getColorRange';
 import getColorVariant from '../../helpers/getColorVariant';
 import {
   COLOR_NAMES,
-  STRINGS,
   INDICATORS,
 } from '../../constants';
 import COLORS from '../../style/_colors.scss';
@@ -98,7 +98,7 @@ function getPlotBands(cities, pageCity, cityColor, indicatorIds) {
       };
     }
 
-    return null; // sugar for eslint :/ 
+    return null; // sugar for eslint :/
   }).filter(band => band);
 
   if (pageCity) {
@@ -323,7 +323,6 @@ class CityColumnChart extends Component {
     const { props } = this;
     const isMultiple = props.chart.indicatorIds.length > 1;
     const colorMedium = getColorVariant(props.highlightColorDark);
-    const colorDark = getColorVariant(props.colorBase, '900');
 
     // The indicator data contains things like titles and descriptions. But these can
     // also be passed in explicitly (e.g. for charts where there are more than one indicator)
@@ -365,21 +364,11 @@ class CityColumnChart extends Component {
           </header>
 
           <div className={style.metaWrapper}>
-            <Tooltip
-              borderColor={colorMedium}
-              text={firstIndicator.contextual
-                ? STRINGS.CONTEXTUAL_DEFINITION
-                : STRINGS.PERFORMANCE_DEFINITION
-              }
-            >
-              <Icon
-                className={style.indicatorTypeMark}
-                color={colorDark}
-                icon={firstIndicator.contextual ? 'contextualIndicator' : 'performanceIndicator'}
-                size={14}
-                title=""
-              />
-            </Tooltip>
+            <IndicatorIcon
+              className={style.indicatorTypeMark}
+              color={getColorVariant(props.colorBase, '500')}
+              contextual={firstIndicator.contextual}
+            />
 
             {firstIndicator.lastUpdated && `Last updated ${firstIndicator.lastUpdated}`}
           </div>

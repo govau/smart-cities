@@ -12,9 +12,10 @@ exports[`should match Snapshot 1`] = `
           This is the mock category
         </p>
       </div>
-      <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"JOBS_500\\" colorName=\\"jobs\\" indicator=\\"population\\" value={{...}} isContextPage={[undefined]} />
+      <div>
+        <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"JOBS_500\\" colorName=\\"jobs\\" indicatorId=\\"population\\" cities={{...}} city={[undefined]} />
+      </div>
     </div>
   </div>
-  <PageLegend isContextPage={[undefined]} colorName=\\"jobs\\" isAllCitiesPage={true} />
 </div>"
 `;

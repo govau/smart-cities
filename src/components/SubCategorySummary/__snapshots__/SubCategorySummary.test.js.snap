@@ -11,12 +11,15 @@ exports[`should match Snapshot 1`] = `
     </div>
     <div className=\\"cardRow\\">
       <div className=\\"cardWrapper\\">
-        <IndicatorCard className=\\"card\\" indicator=\\"population\\" color=\\"JOBS_600\\" colorName=\\"primary\\" value={{...}} isContextPage={false} />
-        <a className=\\"linkWrapper\\" href=\\"#sc-mock-sub-category\\">
-          <span className=\\"linkText\\">
-            View all Mock sub category charts
-          </span>
-        </a>
+        <IndicatorCard className=\\"card\\" indicatorId=\\"population\\" color=\\"JOBS_600\\" colorName=\\"primary\\" cities={{...}} city={[undefined]} />
+        <Pill className=\\"linkWrapper\\" height={32}>
+          <a href=\\"#sc-mock-sub-category\\">
+            <span className=\\"linkText\\">
+              View all 3 charts
+            </span>
+            <Icon className=\\"linkIcon\\" icon=\\"rightArrowInCircle\\" size={20} color=\\"PRIMARY_900\\" />
+          </a>
+        </Pill>
       </div>
     </div>
   </div>

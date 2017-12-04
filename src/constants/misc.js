@@ -2,6 +2,8 @@ export const DATA_URL = '/data/smartCitiesData.json';
 
 export const NO_CATEGORY = 'overview';
 export const NO_CITY = 'all-cities';
+export const HERO_INDICATOR_ID = 'population';
+export const HERO_INDICATOR_CATEGORY = 'Planning';
 export const MAX_CATEGORY_NAV_TEXT_LENGTH = 14;
 
 export const CARD_SIZES = {

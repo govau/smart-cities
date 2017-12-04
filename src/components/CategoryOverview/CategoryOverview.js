@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import Icon from '../Icon/Icon';
 import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import Pill from '../Pill/Pill';
-import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
 import getColorVariant from '../../helpers/getColorVariant';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import {
@@ -20,14 +19,6 @@ const classnames = require('classnames/bind').bind(style);
 
 const CategoryOverview = (props) => {
   const isContextCategory = props.category.id === CATEGORY_IDS.CONTEXT;
-
-  const indicators = props.category.overviewIndicatorIds.map((indicatorId) => {
-    const value = props.city
-      ? props.city.indicators[indicatorId]
-      : getMinAndMaxForIndicator(indicatorId, props.cities);
-
-    return { id: indicatorId, value };
-  });
 
   const categoryDarkColor = getColorVariant(props.category.colorName, '700');
   const categoryLightColor = isContextCategory
@@ -48,7 +39,6 @@ const CategoryOverview = (props) => {
 
   const cityUrlPart = props.city ? props.city.id : NO_CITY;
   const categoryUrl = `/${cityUrlPart}/${props.category.id}`;
-
 
   const className = classnames(
     style.categoryWrapper,
@@ -100,14 +90,15 @@ const CategoryOverview = (props) => {
 
           <div className={style.indicatorCardAndLink}>
             <div className={style.indicatorCards}>
-              {indicators.map(indicator => (
+              {props.category.overviewIndicatorIds.map(indicatorId => (
                 <IndicatorCard
-                  key={indicator.id}
+                  key={indicatorId}
                   className={style.indicatorCard}
                   color={categoryDarkColor}
                   colorName={props.category.colorName}
-                  indicator={indicator.id}
-                  value={indicator.value}
+                  indicatorId={indicatorId}
+                  cities={props.cities}
+                  city={props.city}
                 />
               ))}
             </div>

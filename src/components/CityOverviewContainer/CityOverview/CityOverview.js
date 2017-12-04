@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import CategoryOverviews from '../../CategoryOverviews/CategoryOverviews';
 import PageBanner from '../../PageBanner/PageBanner';
 import PageWrapper from '../../PageWrapper/PageWrapper';
+import {
+  HERO_INDICATOR_ID,
+  HERO_INDICATOR_CATEGORY,
+} from '../../../constants';
 
 const CityOverview = props => (
   <PageWrapper
@@ -13,7 +17,8 @@ const CityOverview = props => (
     <PageBanner
       colorName="primary"
       description={props.city.description}
-      indicator="population"
+      indicatorId={HERO_INDICATOR_ID}
+      indicatorSubCategory={HERO_INDICATOR_CATEGORY}
       title={props.city.name}
       city={props.city}
     />

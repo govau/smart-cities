@@ -1,0 +1,112 @@
+@import '~style/variables';
+
+.wrapper {
+  @include shadow;
+
+  display: flex;
+  flex-direction: column;
+  position: relative; // .indicatorTypeMark is absolute, relative to this
+  background: $color-white;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden; // clip the footer with the border radius
+}
+
+.smallCard {
+  height: 112px;
+}
+
+.largeCard {
+  height: 168px;
+}
+
+.indicatorName {
+  flex: 1;
+  position: absolute;
+  right: 54px;
+  font-weight: 500;
+
+  .smallCard & {
+    left: 24px;
+    top: 3px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .largeCard & {
+    left: 29px;
+    top: 4px;
+    font-size: 16px;
+    line-height: 1.1;
+  }
+}
+
+.indicatorTypeMark {
+  position: absolute;
+
+  .smallCard & {
+    top: 2px;
+    left: 4px;
+  }
+
+  .largeCard & {
+    top: 4px;
+    left: 9px;
+  }
+}
+
+.chartWrapper {
+  margin: auto 3px 0;
+
+  .smallCard & {
+    height: 60px;
+  }
+
+  .largeCard & {
+    height: 110px;
+  }
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  stroke: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+
+  .smallCard & {
+    height: 36px;
+  }
+
+  .largeCard & {
+    height: 40px;
+  }
+}
+
+.maxValues {
+  text-align: right;
+}
+
+.footerCity,
+.footerValue {
+  .smallCard & {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .largeCard & {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.footerValue {
+  font-weight: 700;
+}

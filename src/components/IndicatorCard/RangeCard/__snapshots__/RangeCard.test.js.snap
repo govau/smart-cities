@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<div className=\\"wrapper largeCard\\">
+  <p className=\\"indicatorName\\">
+    The population growth
+  </p>
+  <IndicatorIcon className=\\"indicatorTypeMark\\" color=\\"JOBS_500\\" contextual={false} />
+  <div className=\\"chartWrapper\\">
+    <svg className=\\"svg\\">
+      <rect className=\\"bar\\" x=\\"0%\\" y=\\"90.9090909090909%\\" width=\\"33.33333333333333%\\" height=\\"200%\\" rx=\\"2\\" ry=\\"2\\" fill=\\"JOBS_500\\" />
+      <rect className=\\"bar\\" x=\\"33.33333333333333%\\" y=\\"72.72727272727272%\\" width=\\"33.33333333333333%\\" height=\\"200%\\" rx=\\"2\\" ry=\\"2\\" fill=\\"JOBS_060\\" />
+      <rect className=\\"bar\\" x=\\"66.66666666666666%\\" y=\\"0%\\" width=\\"33.33333333333333%\\" height=\\"200%\\" rx=\\"2\\" ry=\\"2\\" fill=\\"JOBS_500\\" />
+    </svg>
+  </div>
+  <div className=\\"footer\\" style={{...}}>
+    <div>
+      <div className=\\"footerCity\\">
+        Sydney
+      </div>
+      <div className=\\"footerValue\\">
+        22%
+      </div>
+    </div>
+    <div className=\\"maxValues\\">
+      <div className=\\"footerCity\\">
+        Perth
+      </div>
+      <div className=\\"footerValue\\">
+        77%
+      </div>
+    </div>
+  </div>
+</div>"
+`;

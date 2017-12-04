@@ -34,7 +34,7 @@ exports[`should match Snapshot 1`] = `
       </div>
       <div className=\\"indicatorCardAndLink\\">
         <div className=\\"indicatorCards\\">
-          <IndicatorCard className=\\"indicatorCard\\" color=\\"JOBS_700\\" colorName=\\"jobs\\" indicator=\\"population\\" value={77} />
+          <IndicatorCard className=\\"indicatorCard\\" color=\\"JOBS_700\\" colorName=\\"jobs\\" indicatorId=\\"population\\" cities={[undefined]} city={{...}} />
         </div>
         <NavLink to=\\"/perth/jobs\\" className=\\"categoryLinkWrapper\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           <Pill className=\\"categoryLinkPill\\" style={{...}} height={30}>

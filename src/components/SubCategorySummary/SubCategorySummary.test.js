@@ -1,13 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import CategoryBanner from './SubCategorySummary';
-import { CATEGORY_IDS } from '../../constants';
 
 jest.mock('../IndicatorCard/IndicatorCard', () => 'IndicatorCard');
 jest.mock('../Icon/Icon', () => 'Icon');
 
 const defaultProps = {
-  categoryId: 'jobs',
   categoryColorName: 'primary',
   highlightColorLight: 'JOBS_020',
   highlightColorDark: 'JOBS_600',
@@ -28,6 +26,7 @@ const defaultProps = {
       indicators: {}
     },
   ],
+  charts: [1, 2, 3], // the charts array is only used to get the number of charts
 };
 
 it('should match Snapshot', () => {
@@ -38,21 +37,21 @@ it('should match Snapshot', () => {
   expect(component.debug()).toMatchSnapshot();
 });
 
-it('should link to charts with category name in the text', () => {
+it('should show the correct number of charts in the link to charts', () => {
   const component = shallow(
     <CategoryBanner {...defaultProps} />
   );
 
-  expect(component.find('.linkWrapper').text()).toBe('View all Mock sub category charts');
+  expect(component.find('.linkText').text()).toBe('View all 3 charts');
 });
 
-it('should link to charts with generic text for the context page', () => {
+it('should show the non-plural text to charts when only one chart', () => {
   const component = shallow(
     <CategoryBanner
       {...defaultProps}
-      categoryId={CATEGORY_IDS.CONTEXT}
+      charts={[1]}
     />
   );
 
-  expect(component.find('.linkWrapper').text()).toBe('View contextual charts');
+  expect(component.find('.linkText').text()).toBe('View 1 chart');
 });

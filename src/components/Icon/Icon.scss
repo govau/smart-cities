@@ -9,21 +9,8 @@
   }
 }
 
-.contextualIndicator {
-  circle {
-    stroke: currentColor;
-    fill: none;
-  }
-}
-
-.performanceIndicator {
-  path { // the "P"
-    fill: $color-white;
-  }
-}
-
-.barsInCircle {
-  rect {
+.indicatorMark {
+  path { // the "C" or "P"
     fill: $color-white;
   }
 }

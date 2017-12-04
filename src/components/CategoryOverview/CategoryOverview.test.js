@@ -146,10 +146,6 @@ describe('when an array of cities is passed in', () => {
     <CategoryOverview {...propsWithCities} />
   );
 
-  it('should aggregate data for all cities', () => {
-    expect(component.find('IndicatorCard').prop('value')).toEqual([23, 77]);
-  });
-
   it('should create a link to the all cities category page', () => {
     expect(component.find('.categoryLinkWrapper').prop('to')).toBe('/all-cities/jobs');
   });
@@ -160,10 +156,6 @@ describe('when a single city is passed in', () => {
   const component = shallow(
     <CategoryOverview {...defaultProps} />
   );
-
-  it('should aggregate data for all cities', () => {
-    expect(component.find('IndicatorCard').prop('value')).toBe(77);
-  });
 
   it('should create a link to the all cities category page', () => {
     expect(component.find('.categoryLinkWrapper').prop('to')).toBe('/perth/jobs');

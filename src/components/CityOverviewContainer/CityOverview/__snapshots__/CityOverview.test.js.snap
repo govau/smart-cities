@@ -2,7 +2,7 @@
 
 exports[`should match Snapshot 1`] = `
 "<PageWrapper cityId=\\"perth\\" cityName=\\"Perth\\" categoryColorName=\\"primary\\" categoryId=\\"overview\\">
-  <PageBanner colorName=\\"primary\\" description=\\"Perth\\" indicator=\\"population\\" title=\\"Perth\\" city={{...}} />
+  <PageBanner colorName=\\"primary\\" description=\\"Perth\\" indicatorId=\\"population\\" indicatorSubCategory=\\"Planning\\" title=\\"Perth\\" city={{...}} />
   <CategoryOverviews city={{...}} />
 </PageWrapper>"
 `;

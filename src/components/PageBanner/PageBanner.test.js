@@ -3,12 +3,11 @@ import { shallow } from 'enzyme';
 import PageBanner from './PageBanner';
 
 jest.mock('../IndicatorCard/IndicatorCard', () => 'IndicatorCard');
-jest.mock('../PageLegend/PageLegend', () => 'PageLegend');
 
 const defaultProps = {
   colorName: 'jobs',
   description: 'This is the mock category',
-  indicator: 'population',
+  indicatorId: 'population',
   title: 'Banner title',
   cities: [
     {
@@ -46,30 +45,4 @@ it('should set the background color', () => {
   // styles are imported during tests, but in reality
   // this will be the hex color
   expect(componentStyle.backgroundColor).toBe('JOBS_020');
-});
-
-it('should get the min and max values', () => {
-  const component = shallow(
-    <PageBanner {...defaultProps} />
-  );
-
-  expect(component.find('IndicatorCard').prop('value')).toEqual([23, 77]);
-});
-
-it('should show data for a single city', () => {
-  const component = shallow(
-    <PageBanner
-      {...defaultProps}
-      cities={undefined}
-      city={{
-        id: 'perth',
-        name: 'Perth',
-        indicators: {
-          population: 77,
-        },
-      }}
-    />
-  );
-
-  expect(component.find('IndicatorCard').prop('value')).toBe(77);
 });

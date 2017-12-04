@@ -9,11 +9,10 @@
 
   display: flex;
   flex-direction: column;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 16px;
 
   @include for-tablet-landscape-up {
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
   }
 }
@@ -25,8 +24,9 @@
   margin-bottom: 16px;
 
   @include for-tablet-landscape-up {
-    margin-bottom: 0;
     width: 25%;
+    margin-bottom: 0;
+    padding-top: 16px;
     flex: none;
   }
 }
@@ -37,35 +37,37 @@
 }
 
 .title {
-  margin-left: 6px;
-  font-size: 12px;
+  margin: 0 16px 0 6px;
+  font-size: 16px;
+  line-height: 1.2;
 
   @include for-desktop-up {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
   }
 }
 
 .cardRow {
   display: flex;
   flex-direction: column;
-  margin: 0 0 8px;
 
   @include for-tablet-portrait-up {
     flex-direction: row;
-    margin: 0 -8px 8px;
+    margin: 0 -8px;
     align-items: flex-start;
   }
 
   @include for-tablet-landscape-up {
     width: 75%;
-    margin: 0 0 16px;
+    margin: 0;
   }
 }
 
 .cardWrapper {
   position: relative;
   width: 100%;
-  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
 
   @include for-tablet-portrait-up {
     width: calc(33.333% - 16px);
@@ -79,19 +81,32 @@
 
 .card {
   width: 100%;
+  margin-bottom: 16px;
 }
 
-// We don't want the link to affect
-// the vertical alignment of the cards
-// so we make it absolute
 .linkWrapper {
-  position: absolute;
-  bottom: -27px;
-  right: 0;
-  font-size: 12px;
-  font-weight: 500;
+  @include shadow;
+
+  display: inline-block;
+  align-self: flex-end;
+  font-size: 14px;
+  font-weight: 600;
+  background: $color-white;
+  padding: 0 5px 0 20px;
+  margin-bottom: 16px;
+  transition: box-shadow $animation-duration;
+
+  &:hover {
+    @include shadow(2);
+  }
 }
 
 .linkText {
-  margin-right: 8px;
+  margin-right: 12px;
+  letter-spacing: 0.6px;
+}
+
+.linkIcon {
+  transform: rotate(90deg);
+  margin-top: -4px;
 }

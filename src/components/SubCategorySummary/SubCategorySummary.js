@@ -2,17 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import Icon from '../Icon/Icon';
-import getMinAndMaxForIndicator from '../../helpers/getMinAndMaxForIndicator';
+import Pill from '../Pill/Pill';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
 import getColorVariant from '../../helpers/getColorVariant';
-import {
-  INDICATORS,
-  CATEGORY_IDS,
-} from '../../constants';
+import { INDICATORS } from '../../constants';
 import style from './SubCategorySummary.scss';
 
 const SubCategorySummary = (props) => {
-  const isContextPage = props.categoryId === CATEGORY_IDS.CONTEXT;
   const backgroundColor = getColorVariant(props.highlightColorLight);
   const cardHighlightColor = getColorVariant(props.highlightColorDark);
 
@@ -32,16 +28,9 @@ const SubCategorySummary = (props) => {
 
   const indicatorCardWrappers = indicatorIds.map((indicatorId, i) => {
     const lastOne = i === (indicatorIds.length - 1);
-    const indicatorValue = props.city
-      ? props.city.indicators[indicatorId]
-      : getMinAndMaxForIndicator(
-        indicatorId,
-        props.cities,
-      );
 
-    const linkText = isContextPage
-      ? 'View contextual charts'
-      : `View all ${props.name} charts`;
+    const plural = props.charts.length !== 1;
+    const linkText = `View ${plural ? 'all' : ''} ${props.charts.length} chart${plural ? 's' : ''}`;
 
     return (
       <div
@@ -50,19 +39,29 @@ const SubCategorySummary = (props) => {
       >
         <IndicatorCard
           className={style.card}
-          indicator={indicatorId}
+          indicatorId={indicatorId}
           color={cardHighlightColor}
           colorName={props.categoryColorName}
-          value={indicatorValue}
-          isContextPage={isContextPage}
+          cities={props.cities}
+          city={props.city}
         />
+
         {lastOne && (
-          <a
+          <Pill
             className={style.linkWrapper}
-            href={`#${getSubCategorySectionId(props.name)}`}
+            height={32}
           >
-            <span className={style.linkText}>{linkText}</span>
-          </a>
+            <a href={`#${getSubCategorySectionId(props.name)}`}>
+              <span className={style.linkText}>{linkText}</span>
+
+              <Icon
+                className={style.linkIcon}
+                icon="rightArrowInCircle"
+                size={20}
+                color={getColorVariant(props.categoryColorName, '900')}
+              />
+            </a>
+          </Pill>
         )}
       </div>
     );
@@ -99,8 +98,9 @@ const cityPropShape = {
 SubCategorySummary.propTypes = {
   city: PropTypes.shape(cityPropShape),
   cities: PropTypes.arrayOf(PropTypes.shape(cityPropShape)),
-  categoryId: PropTypes.string.isRequired,
   categoryColorName: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  charts: PropTypes.array.isRequired,
   highlightColorLight: PropTypes.string.isRequired,
   highlightColorDark: PropTypes.string.isRequired,
   iconId: PropTypes.string.isRequired,

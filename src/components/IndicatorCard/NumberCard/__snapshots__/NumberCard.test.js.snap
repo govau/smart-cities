@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+<div
+  className="wrapper largeCard"
+  style={
+    Object {
+      "borderBottomColor": "#fff",
+    }
+  }
+>
+  <p
+    className="indicatorName"
+  >
+    Population
+  </p>
+  <IndicatorIcon
+    className="indicatorTypeMark"
+    color="JOBS_500"
+    contextual={false}
+  />
+  <div
+    className="indicatorBody"
+  >
+    <div
+      className="numberWrapper"
+    >
+      <span
+        className="prefix symbol"
+      >
+        The
+      </span>
+      <span
+        className="number"
+      >
+        0
+      </span>
+      <span
+        className="suffix symbol"
+      >
+        %per annum
+      </span>
+    </div>
+  </div>
+</div>
+`;

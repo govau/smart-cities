@@ -1,0 +1,107 @@
+@import '~style/variables';
+
+.wrapper {
+  @include shadow;
+
+  display: flex;
+  align-items: stretch;
+  position: relative; // .indicatorTypeMark is absolute, relative to this
+  background: $color-white;
+  border-bottom-style: solid;
+  border-radius: 4px;
+
+  &.largeCard {
+    flex-direction: column;
+  }
+}
+
+.smallCard {
+  height: 80px;
+  padding: 4px 8px 7px;
+  border-bottom-width: 6px;
+}
+
+.largeCard {
+  height: 160px;
+  padding: 4px 9px 13px;
+  border-bottom-width: 8px;
+}
+
+.indicatorName {
+  flex: 1;
+  line-height: 1.4; // fit four lines on a card
+  font-weight: 500;
+
+  .smallCard & {
+    margin-right: 4px;
+    font-size: 12px;
+  }
+
+  .largeCard & {
+    padding-right: 16px;
+    font-size: 16px;
+    line-height: 1.1;
+  }
+}
+
+.indicatorTypeMark {
+  position: absolute;
+
+  .smallCard & {
+    top: 1px;
+    right: 4px;
+  }
+
+  .largeCard & {
+    top: 2px;
+    right: 4px;
+  }
+}
+
+// do I still need body and wrapper
+.indicatorBody {
+  margin-left: auto; // push right
+  align-self: flex-end; // push down
+  line-height: 1;
+}
+
+.numberWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.number {
+  font-weight: 300;
+
+  .smallCard & {
+    font-size: 44px;
+  }
+
+  .largeCard & {
+    font-size: 90px;
+    font-weight: 200;
+  }
+}
+
+.symbol {
+  font-weight: 300;
+
+  .smallCard & {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+
+  .largeCard & {
+    font-size: 44px;
+    margin-bottom: 4px;
+  }
+}
+
+.prefix {
+  margin-right: 1px;
+}
+
+.suffix {
+  margin-left: 1px;
+}

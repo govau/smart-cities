@@ -2,6 +2,7 @@
 
 .tooltipTarget {
   display: inline-block; // so that it inherits the height of child elements
+  line-height: 1;
 }
 
 .tooltipWrapper {

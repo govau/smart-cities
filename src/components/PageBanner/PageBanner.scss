@@ -6,7 +6,7 @@
   padding-top: 16px;
 
   @include for-tablet-portrait-up {
-    padding-top: 40px;
+    padding-top: 32px;
   }
 }
 
@@ -33,7 +33,7 @@
 .title {
   margin-bottom: 16px;
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.2;
 
   @include for-tablet-portrait-up {
@@ -45,6 +45,10 @@
   }
 }
 
+.subTitle {
+  font-weight: 300;
+}
+
 .description {
   font-size: 20px;
   font-weight: 500;
@@ -54,6 +58,28 @@
     font-size: 22px;
     font-weight: 300;
   }
+}
+
+.featuredTextWrapper {
+  padding-top: 32px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.1px;
+}
+
+.featuredText {
+  margin-right: 6px;
+  font-weight: 500;
+}
+
+.heroSubCategoryWrapper {
+  padding-top: 28px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.heroSubCategoryText {
+  font-weight: 500;
 }
 
 .card {
