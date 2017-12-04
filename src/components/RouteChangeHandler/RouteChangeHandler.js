@@ -2,6 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { ELEMENT_IDS, NO_CATEGORY } from '../../constants';
+import { logPageView } from '../../helpers/analyticsManager';
 
 /**
  * Add an event listener which only listens once
@@ -81,7 +82,17 @@ class RouteChangeHandler extends Component {
 
   componentDidUpdate(prevProps) {
     // when changing from one page to another
-    if (this.props.location !== prevProps.location) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      // don't capture the initial redirect from "/"
+      // since it will already have been captured via componentDidMount
+      if (prevProps.location.pathname !== '/') {
+        // Note that if a user navigates to "/", that will be
+        // logged to GA instead of "/all-cities/overview".
+        // But this isn't a problem because the "default site" setting in GA
+        // allows us to report on these two as being the same page
+        logPageView();
+      }
+
       // apply focus if necessary
       const focusPoint = findFocusPoint(prevProps.location.pathname, this.props.location.pathname);
 

@@ -12,6 +12,8 @@ window.matchMedia = () => ({
   addListener: () => {},
 });
 
+window.gtag = () => {};
+
 // document.body only has a getter so we add clientWidth as a settable property the hard way
 Object.defineProperty(document.body, 'clientWidth', {
   writable: true,

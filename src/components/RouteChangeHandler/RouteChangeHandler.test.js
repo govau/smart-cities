@@ -49,7 +49,7 @@ it('should scroll to an element on mount if there is a hash', () => {
 
   shallow(
     <RouteChangeHandler
-      location={{ pathName: '/location-1' }}
+      location={{ pathname: '/location-1' }}
     >
       The content
     </RouteChangeHandler>
@@ -65,7 +65,7 @@ it('should scroll to an element on mount if there is a hash', () => {
 it('should scroll on route change', () => {
   const component = shallow(
     <RouteChangeHandler
-      location={{ pathName: '/location-1' }}
+      location={{ pathname: '/location-1' }}
     >
       The content
     </RouteChangeHandler>
@@ -85,7 +85,7 @@ it('should scroll on route change', () => {
   // now change the location prop
   component.setProps({
     location: {
-      pathName: '/location-2',
+      pathname: '/location-2',
     }
   });
 

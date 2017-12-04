@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import App from './components/App/App';
 import configureStore from './redux/configureStore';
 import { parseCityData } from './redux/ducks/cities';
 import { checkStatus, parseBody } from './helpers/fetch';
+import * as analyticsManager from './helpers/analyticsManager';
 import {
   DATA_URL,
   INDICATORS,
   CATEGORIES,
 } from './constants';
-
-import App from './components/App/App';
 
 fetch(DATA_URL, { credentials: 'include' })
   .then(checkStatus)
@@ -28,6 +28,12 @@ fetch(DATA_URL, { credentials: 'include' })
       </Provider>,
       document.getElementById('root'),
     );
+
+    // currently [Dec 2017] we use client-side rendering, so FMP and TTI are the same
+    // If/when we serve generated HTML from the server, FMP should be logged from index.html
+    const timeSincePageLoad = Math.round(performance.now());
+    analyticsManager.logFirstMeaningfulPaint(timeSincePageLoad);
+    analyticsManager.logTimeToInteractive(timeSincePageLoad);
   })
   .catch((err) => {
     console.error(err);
