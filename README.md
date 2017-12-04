@@ -124,9 +124,10 @@ variables. *Do not* push manually to staging via CF CLI, as this will remove the
 basic auth.
 
 Production deploys are triggered when a tag is pushed with a version as tag name
-such as `v1.0.0`. To deploy, ensure the working directory is clean (i.e., all files 
+beginning with 'release-' followed by a timestmap, such as `release-20170714134437`.
+To deploy to production, ensure the working directory is clean (i.e., all files 
 have been added and committed), then:
 
 ```
-npm run deploy
+git tag `date "+release-%Y%m%d%H%M%S"` && git push --tags
 ```
