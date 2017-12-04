@@ -82,6 +82,11 @@
     font-size: 90px;
     font-weight: 200;
   }
+
+  .noData & {
+    font-size: 24px;
+    letter-spacing: -0.6px;
+  }
 }
 
 .symbol {

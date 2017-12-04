@@ -9,7 +9,9 @@ jest.mock('../../IndicatorIcon/IndicatorIcon', () => 'IndicatorIcon');
 const defaultProps = {
   city: {
     id: 'perth',
-    indicators: {},
+    indicators: {
+      population: 10,
+    },
     name: 'Perth',
   },
   colorName: 'jobs',
@@ -50,6 +52,24 @@ it('should apply the smallCard class', () => {
   );
 
   expect(component.hasClass('smallCard')).toBe(true);
+});
+
+it('should show "No data" if there is no data', () => {
+  const component = shallow(
+    <NumberCard
+      {...defaultProps}
+      indicator={{
+        id: 'activeJourneys', // the city in the test does not have data for this
+        name: 'The number of something',
+        cardPrefix: '',
+        cardSuffix: '',
+        format: '',
+        contextual: false,
+      }}
+    />
+  );
+
+  expect(component.find('.number').text()).toBe('No data');
 });
 
 it('should render no prefix or suffix when none are available', () => {

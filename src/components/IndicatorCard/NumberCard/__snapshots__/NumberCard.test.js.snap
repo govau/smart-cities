@@ -33,7 +33,7 @@ exports[`should match Snapshot 1`] = `
       <span
         className="number"
       >
-        0
+        1000
       </span>
       <span
         className="suffix symbol"

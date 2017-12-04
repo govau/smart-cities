@@ -13,23 +13,38 @@ import style from './NumberCard.scss';
 
 const NumberCard = (props) => {
   const indicatorValue = props.city.indicators[props.indicator.id];
+  const hasNoData = typeof indicatorValue === 'undefined';
+
+  let displayValue;
+  let displayPrefix;
+  let displaySuffix;
+
+  if (hasNoData) {
+    displayValue = 'No data';
+  } else {
+    const formattedNumber = numeral(indicatorValue).format(props.indicator.format);
+
+    // The prefix and suffix are rendered in different spans, so we split them out here
+    const [formatPrefix, value, formatSuffix] = stripPrefixAndSuffix(formattedNumber);
+
+    // In addition to the format prefix/suffix (e.g. "%")
+    // a card specific prefix/suffix can be added (e.g. "per year")
+    displayPrefix = `${props.indicator.cardPrefix || ''}${formatPrefix}`;
+    displaySuffix = `${formatSuffix}${props.indicator.cardSuffix || ''}`;
+
+    displayValue = value;
+  }
+
   const cardSizeClassName = props.size === CARD_SIZES.LARGE ? style.largeCard : style.smallCard;
 
   const className = classnames(
     style.wrapper,
     cardSizeClassName,
     props.className,
+    {
+      [style.noData]: hasNoData,
+    },
   );
-
-  const formattedNumber = numeral(indicatorValue).format(props.indicator.format);
-
-  // The prefix and suffix are rendered in different spans, so we split them out here
-  const [formatPrefix, value, formatSuffix] = stripPrefixAndSuffix(formattedNumber);
-
-  // In addition to the format prefix/suffix (e.g. "%")
-  // a card specific prefix/suffix can be added (e.g. "per year")
-  const displayPrefix = `${props.indicator.cardPrefix || ''}${formatPrefix}`;
-  const displaySuffix = `${formatSuffix}${props.indicator.cardSuffix || ''}`;
 
   return (
     <div
@@ -50,7 +65,7 @@ const NumberCard = (props) => {
             <span className={classnames(style.prefix, style.symbol)}>{displayPrefix}</span>
           )}
 
-          <span className={style.number}>{value}</span>
+          <span className={style.number}>{displayValue}</span>
 
           {!!displaySuffix && (
             <span className={classnames(style.suffix, style.symbol)}>{displaySuffix}</span>
