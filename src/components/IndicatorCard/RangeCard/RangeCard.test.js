@@ -204,3 +204,48 @@ it('should render the correct number of bars', () => {
 
   expect(component.find('.bar').length).toBe(5);
 });
+
+it('should exclude cities with no data', () => {
+  const component = shallow(
+    <RangeCard
+      {...defaultProps}
+      cities={[
+        {
+          id: 'perth',
+          name: 'Perth',
+          indicators: {}, // I have no data
+        },
+        {
+          id: 'act',
+          name: 'Canberra',
+          indicators: {
+            growthRate: 0.22,
+          },
+        },
+        {
+          id: 'geelong',
+          name: 'Geelong',
+          indicators: {
+            growthRate: 0.77,
+          },
+        },
+        {
+          id: 'sydney',
+          name: 'Sydney',
+          indicators: {
+            growthRate: 0.22,
+          },
+        },
+        {
+          id: 'melbourne',
+          name: 'Melbourne',
+          indicators: {
+            growthRate: 0.22,
+          },
+        },
+      ]}
+    />
+  );
+
+  expect(component.find('.bar').length).toBe(4); // only 4, perth was hidden
+});
