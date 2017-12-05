@@ -861,6 +861,7 @@ export const CATEGORIES = [
     colorName: COLOR_NAMES.PLANNING,
     iconId: 'planningPlanning',
     name: 'Governance, planning & regulation',
+    navName: 'Planning',
     description: 'The governance, planning and regulation performance indicators seek to measure how effectively planning, governance and regulation support economic, social and environmental outcomes.',
     shortDescription: 'The governance, planning and regulation performance indicators seek to measure how effectively planning, governance and regulation support economic, social and environmental outcomes.',
     heroIndicatorId: 'population',
