@@ -533,7 +533,7 @@ export const CATEGORIES = [
           {
             name: 'Jobs accessible by car within 30 minutes',
             axisTitle: '',
-            description: 'This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. \n\nSource: SGS Economics and Planning ',
+            description: 'This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less. \n\nSource: SGS Economics and Planning ',
             max: 1,
             indicatorIds: [
               'jobsCar',
