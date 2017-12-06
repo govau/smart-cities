@@ -698,7 +698,7 @@ export const CATEGORIES = [
           {
             name: 'Share of households in lowest income quintile',
             axisTitle: '',
-            description: 'This shows the share of households in bottom 20% of the national household income distribution.\n\nSource: ABS - Census 2016',
+            description: 'This shows the share of households in the bottom 20% of the national household income distribution.\n\nSource: ABS - Census 2016',
             indicatorIds: [
               'shareInBottomIncomeQuintile',
             ],
