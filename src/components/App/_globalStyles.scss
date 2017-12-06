@@ -1,4 +1,4 @@
-@import '~style/variables';
+@import '~style/main';
 
 html {
   box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
   line-height: 1.6;
   margin: 0;
   min-width: $app-min-width;
-  color: $color-grey--700;
+  color: $color-grey--800;
 }
 
 :global(.block-scroll) {

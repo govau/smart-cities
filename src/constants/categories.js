@@ -16,10 +16,12 @@ export const CATEGORIES = [
   {
     id: CATEGORY_IDS.CONTEXT,
     colorName: COLOR_NAMES.PRIMARY,
+    iconId: 'city',
     navName: 'Context',
-    name: 'Cities context',
-    description: 'Contextual indicators can help to understand why a city performs the way it does and what policies may be effective for improving economic performance and quality of life.',
-    shortDescription: 'Contextual indicators can help to understand why a city performs the way it does and what policies may be effective for improving economic performance and quality of life.',
+    name: 'Context',
+    description: 'Context indicators show the characteristics of a city that help us understand what it’s like & why it functions the way it does.',
+    shortDescription: 'Context indicators show the characteristics of a city that help us understand what it’s like & why it functions the way it does.',
+    allCitiesShortDescription: 'A view of all context indicators to demonstrate what the cities are like & how they function.',
     heroIndicatorId: 'population',
     overviewIndicatorIds: [
       'growthRate',

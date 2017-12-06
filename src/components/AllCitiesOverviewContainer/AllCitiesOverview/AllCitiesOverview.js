@@ -82,24 +82,51 @@ const AllCitiesOverview = props => (
       </div>
     </div>
 
-    <div className={style.subInfoContainer}>
-      <div className={style.subInfoTextWrapper}>
-        <h1 className={style.infoTitle}>Policy priorities & context</h1>
+    <div className={style.subInfoWrapper}>
+      <div className={style.subInfoContainer}>
+        <h1 className={style.infoTitle}>
+          <span className={style.infoTitleHeavy}>Policy priorities</span> & Context
+        </h1>
 
         <p className={style.subInfoBodyText}>
           There are 6 policy priorities to help achieve
           the objectives of the {smartCitiesLink}. The National Cities Performance
           Framework is designed to measure how well our cities are performing, using
-          two types of indicators:
+          two types of indicators.
         </p>
-      </div>
 
-      <Icon
-        className={style.subInfoIcon}
-        icon="city"
-        size={120}
-        color={COLORS.PRIMARY_600}
-      />
+        <dl className={style.legend}>
+          <div className={style.legendRow}>
+            <dt className={style.term}>
+              <Icon
+                className={style.icon}
+                color={COLORS.GREY_600}
+                icon="performanceIndicator"
+                size={32}
+              />
+              Performance
+            </dt>
+            <dd className={style.definition}>
+              Aspects of a city that can be measured and tracked against policy priorities.
+            </dd>
+          </div>
+          <div className={style.legendRow}>
+            <dt className={style.term}>
+              <Icon
+                className={style.icon}
+                color={COLORS.GREY_600}
+                icon="contextualIndicator"
+                size={32}
+              />
+              Context
+            </dt>
+            <dd className={style.definition}>
+              Characteristics of a city that help us understand what it’s
+              like & why it functions the way it does.
+            </dd>
+          </div>
+        </dl>
+      </div>
     </div>
 
     <CategoryOverviews cities={props.cities} />

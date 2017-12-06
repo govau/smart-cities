@@ -1,4 +1,4 @@
-@import '~style/variables';
+@import '~style/main';
 
 $round-image-width: 220px;
 
@@ -123,37 +123,57 @@ $round-image-width: 220px;
   font-weight: 500;
 }
 
+.subInfoWrapper {
+  @include shadow-inset-bottom;
+
+  background-color: $color-primary--020;
+}
+
 .subInfoContainer {
   @include container;
 
-  display: flex;
-  flex-direction: column;
   padding-top: 42px;
   padding-bottom: 42px;
-
-  @include for-tablet-portrait-up {
-    flex-direction: row;
-  }
 }
 
-.subInfoTextWrapper {
-  flex: auto;
+.legend {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.legendRow {
   margin-bottom: 32px;
 
-  @include for-tablet-portrait-up {
+  &:last-child {
     margin-bottom: 0;
-    margin-right: 64px;
+  }
+
+  @include for-tablet-landscape-up {
+    display: flex;
+    margin-bottom: 10px;
   }
 }
 
-.subInfoIcon {
-  margin: 0 auto;
+.term {
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     flex: none;
-    width: 140px;
-    margin: 14px 0 0; // visually align the top with the title text
+    margin: 0 10px 0 0;
   }
+}
+
+.icon {
+  margin-right: 14px;
+  height: 100%;
+}
+
+.definition {
+  margin: 0;
 }
 
 .infoTitle,
@@ -165,12 +185,20 @@ $round-image-width: 220px;
   letter-spacing: 0.5px;
 }
 
+.infoTitleHeavy {
+  font-weight: 500;
+}
+
 .subInfoBodyText,
 .infoBodyText {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
-  line-height: 37px;
+  line-height: 32px;
   letter-spacing: 1px;
+}
+
+.subInfoBodyText {
+  margin-bottom: 40px;
 }
 
 .infoBodyText:not(:first-of-type) {

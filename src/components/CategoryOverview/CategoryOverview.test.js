@@ -19,8 +19,14 @@ const defaultProps = {
     ],
     iconId: 'infrastructureGettingToWork',
     subCategories: [
-      { name: 'Employment' },
-      { name: 'Education' },
+      {
+        name: 'Employment',
+        highlightColorDark: 'PLANNING_500',
+      },
+      {
+        name: 'Education',
+        highlightColorDark: 'PLANNING_500',
+      },
     ],
   },
   city: {
@@ -64,14 +70,6 @@ describe('when rendering the "context" category', () => {
     />
   );
 
-  it('should apply a modifier class', () => {
-    expect(component.find('.categoryWrapper').hasClass('category__context')).toBe(true);
-  });
-
-  it('should not render a category icon', () => {
-    expect(component.find('.categoryIcon').length).toBe(0);
-  });
-
   it('should render a solid arrow icon in the category link', () => {
     expect(component.find('.categoryLinkPill Icon').prop('icon')).toBe('rightArrowInCircle');
   });
@@ -83,7 +81,7 @@ describe('when rendering the "context" category', () => {
   it('should render the appropriate category link style', () => {
     expect(component.find('.categoryLinkPill').prop('style')).toEqual({
       background: 'WHITE',
-      border: '2px solid CONTEXT_700',
+      border: '2px solid GREY_700',
       color: 'GREY_700',
     });
   });
@@ -95,10 +93,6 @@ describe('when rendering a category other than "context"', () => {
       {...defaultProps}
     />
   );
-
-  it('should not apply a modifier class', () => {
-    expect(component.find('.categoryWrapper').hasClass('category__context')).toBe(false);
-  });
 
   it('should render a category icon', () => {
     expect(component.find('.categoryIcon').length).toBe(1);

@@ -20,7 +20,12 @@ $z-index-tooltip: 5;
   }
 }
 
-// used primarily for hiding a11y text,
+// Applies a small inset shadow
+@mixin shadow-inset-bottom {
+  box-shadow: inset 0 -3px 7px rgba(0, 0, 0, 0.1);
+}
+
+// Used primarily for hiding a11y text,
 // which should still be read by screen readers
 @mixin hidden {
   position: absolute;

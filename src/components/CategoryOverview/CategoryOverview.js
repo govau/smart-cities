@@ -15,8 +15,6 @@ import {
 import COLORS from '../../style/_colors.scss';
 import style from './CategoryOverview.scss';
 
-const classnames = require('classnames/bind').bind(style);
-
 const CategoryOverview = (props) => {
   const isContextCategory = props.category.id === CATEGORY_IDS.CONTEXT;
 
@@ -28,7 +26,7 @@ const CategoryOverview = (props) => {
   const categoryLinkStyle = isContextCategory
     ? {
       background: COLORS.WHITE,
-      border: `2px solid ${categoryDarkColor}`,
+      border: `2px solid ${COLORS.GREY_700}`,
       color: COLORS.GREY_700,
     }
     : {
@@ -37,48 +35,56 @@ const CategoryOverview = (props) => {
       color: COLORS.WHITE,
     };
 
+  const categoryColor = isContextCategory ? COLORS.GREY_600 : categoryDarkColor;
   const cityUrlPart = props.city ? props.city.id : NO_CITY;
   const categoryUrl = `/${cityUrlPart}/${props.category.id}`;
 
-  const className = classnames(
-    style.categoryWrapper,
-    { category__context: isContextCategory },
-  );
-
   return (
     <div
-      className={className}
+      className={style.categoryWrapper}
       style={{ background: categoryLightColor }}
     >
       <div className={style.category}>
-        {!isContextCategory && (
-          <div className={style.categoryIcon}>
-            <Icon
-              icon={props.category.iconId}
-              color={categoryDarkColor}
-            />
-          </div>
-        )}
+        <div className={style.categoryIcon}>
+          <Icon
+            icon={props.category.iconId}
+            color={categoryColor}
+          />
+        </div>
 
         <div className={style.textAndIndicatorWrapper}>
           <div className={style.categoryTextWrapperWrapper}>
             <div className={style.categoryTextWrapper}>
               <h2 className={style.categoryTitle}>{props.category.name}</h2>
 
-              <p className={style.categoryDescription}>{props.category.shortDescription}</p>
+              <p className={style.categoryDescription}>
+                {isContextCategory && props.cities
+                  ? props.category.allCitiesShortDescription
+                  : props.category.shortDescription
+                }
+              </p>
 
-              <p className={style.subCategoryWrapperText}>{STRINGS.SUB_CATS_INCLUDE}</p>
+              <p className={style.subCategoryWrapperText}>{STRINGS.CATEGORIES_INCLUDE}</p>
 
               <div>
                 {props.category.subCategories.map((subCategory) => {
                   const url = `/${cityUrlPart}/${props.category.id}#${getSubCategorySectionId(subCategory.name)}`;
+
+                  const pillStyle = isContextCategory ? {
+                    background: COLORS[subCategory.highlightColorLight],
+                    borderColor: getColorVariant(subCategory.highlightColorDark),
+                  } : null;
 
                   return (
                     <NavLink
                       key={subCategory.name}
                       to={url}
                     >
-                      <Pill className={style.subCategoryLink} shadow>
+                      <Pill
+                        className={style.subCategoryLink}
+                        style={pillStyle}
+                        shadow={!isContextCategory}
+                      >
                         {subCategory.name}
                       </Pill>
                     </NavLink>
@@ -111,6 +117,7 @@ const CategoryOverview = (props) => {
                 className={style.categoryLinkPill}
                 style={categoryLinkStyle}
                 height={30}
+                shadow={isContextCategory}
               >
                 <span className={style.categoryLinkText}>
                   {props.category.navName || props.category.name} section
@@ -119,7 +126,7 @@ const CategoryOverview = (props) => {
                 <Icon
                   icon={isContextCategory ? 'rightArrowInCircle' : 'rightArrowInCircleInverted'}
                   size={20}
-                  color={categoryDarkColor}
+                  color={categoryColor}
                 />
               </Pill>
             </NavLink>
@@ -139,6 +146,7 @@ CategoryOverview.propTypes = {
   category: PropTypes.shape({
     colorName: PropTypes.string.isRequired,
     shortDescription: PropTypes.string.isRequired,
+    allCitiesShortDescription: PropTypes.string,
     overviewIndicatorIds: PropTypes.arrayOf(PropTypes.oneOf(Object.keys(INDICATORS))).isRequired,
     id: PropTypes.string.isRequired,
     iconId: PropTypes.string,

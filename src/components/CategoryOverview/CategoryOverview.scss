@@ -1,4 +1,4 @@
-@import '~style/variables';
+@import '~style/main';
 
 .categoryWrapper {
   border-top: 8px solid $color-white;
@@ -38,6 +38,7 @@
 .textAndIndicatorWrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   @include for-tablet-landscape-up {
     flex-direction: row;
@@ -72,12 +73,6 @@
   line-height: 1;
   margin-bottom: 16px;
 
-  .category__context & {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1.6px;
-  }
-
   @include for-tablet-landscape-up {
     font-size: 44px;
   }
@@ -109,10 +104,6 @@
   background: $color-white;
   transition: $animation-duration;
 
-  .category__context & {
-    background: $color-primary--020;
-  }
-
   &:hover {
     @include shadow(2);
   }
@@ -123,7 +114,7 @@
   }
 
   @include for-big-desktop-up {
-    padding: 0 40px;
+    padding: 0 36px;
   }
 }
 

@@ -42,20 +42,42 @@ exports[`should match Snapshot 1`] = `
       </figure>
     </div>
   </div>
-  <div className=\\"subInfoContainer\\">
-    <div className=\\"subInfoTextWrapper\\">
+  <div className=\\"subInfoWrapper\\">
+    <div className=\\"subInfoContainer\\">
       <h1 className=\\"infoTitle\\">
-        Policy priorities &amp; context
+        <span className=\\"infoTitleHeavy\\">
+          Policy priorities
+        </span>
+         &amp; Context
       </h1>
       <p className=\\"subInfoBodyText\\">
         There are 6 policy priorities to help achieve the objectives of the 
         <Link href=\\"https://cities.dpmc.gov.au/smart-cities-plan\\">
           Smart Cities Plan
         </Link>
-        . The National Cities Performance Framework is designed to measure how well our cities are performing, using two types of indicators:
+        . The National Cities Performance Framework is designed to measure how well our cities are performing, using two types of indicators.
       </p>
+      <dl className=\\"legend\\">
+        <div className=\\"legendRow\\">
+          <dt className=\\"term\\">
+            <Icon className=\\"icon\\" color=\\"GREY_600\\" icon=\\"performanceIndicator\\" size={32} />
+            Performance
+          </dt>
+          <dd className=\\"definition\\">
+            Aspects of a city that can be measured and tracked against policy priorities.
+          </dd>
+        </div>
+        <div className=\\"legendRow\\">
+          <dt className=\\"term\\">
+            <Icon className=\\"icon\\" color=\\"GREY_600\\" icon=\\"contextualIndicator\\" size={32} />
+            Context
+          </dt>
+          <dd className=\\"definition\\">
+            Characteristics of a city that help us understand what it’s like &amp; why it functions the way it does.
+          </dd>
+        </div>
+      </dl>
     </div>
-    <Icon className=\\"subInfoIcon\\" icon=\\"city\\" size={120} color=\\"PRIMARY_600\\" />
   </div>
   <CategoryOverviews cities={{...}} />
 </PageWrapper>"

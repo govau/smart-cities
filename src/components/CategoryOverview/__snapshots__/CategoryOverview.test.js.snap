@@ -16,16 +16,16 @@ exports[`should match Snapshot 1`] = `
             The short description
           </p>
           <p className=\\"subCategoryWrapperText\\">
-            Sub categories include:
+            Categories include:
           </p>
           <div>
             <NavLink to=\\"/perth/jobs#sc-employment\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-              <Pill className=\\"subCategoryLink\\" shadow={true}>
+              <Pill className=\\"subCategoryLink\\" style={{...}} shadow={true}>
                 Employment
               </Pill>
             </NavLink>
             <NavLink to=\\"/perth/jobs#sc-education\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-              <Pill className=\\"subCategoryLink\\" shadow={true}>
+              <Pill className=\\"subCategoryLink\\" style={{...}} shadow={true}>
                 Education
               </Pill>
             </NavLink>
@@ -37,7 +37,7 @@ exports[`should match Snapshot 1`] = `
           <IndicatorCard className=\\"indicatorCard\\" color=\\"JOBS_700\\" colorName=\\"jobs\\" indicatorId=\\"population\\" cities={[undefined]} city={{...}} />
         </div>
         <NavLink to=\\"/perth/jobs\\" className=\\"categoryLinkWrapper\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-          <Pill className=\\"categoryLinkPill\\" style={{...}} height={30}>
+          <Pill className=\\"categoryLinkPill\\" style={{...}} height={30} shadow={false}>
             <span className=\\"categoryLinkText\\">
               Jobs &amp; skills
                section
