@@ -31,6 +31,10 @@ export const ELEMENT_IDS = {
   OVERVIEW_LINK: 'overview-link',
 };
 
+export const EMAIL_ADDRESSES = {
+  CITY_PERFORMANCE: 'cityperformance@pmc.gov.au',
+};
+
 export const LINKS = {
   ALBURY_PHOTO_CREDIT: 'https://www.flickr.com/photos/49333819@N00',
   CITIES_PERFORMANCE_NETWORK: 'https://cities.dpmc.gov.au/performance-framework',
@@ -55,11 +59,12 @@ export const STRINGS = {
   CONTEXTUAL_DEFINITION: 'Contextual indicators highlight the characteristics of a city that are not amenable to or potentially appropriate for local policy intervention but they can help to explain why a city performs the way it does.',
   PERFORMANCE_DEFINITION: 'A performance indicator is a measurable value that demonstrates how effectively cities are performing against the Australian Government’s Smart Cities policy priorities.',
   PRIVACY_LINK: 'Privacy policy',
-  HELP_LINK: 'Need help?',
   ACCESSIBILITY_LINK: 'Accessibility',
   SECURITY_LINK: 'Security',
   CONTENT_CREDIT: 'Content credit',
   FEEDBACK_LINK: 'Give feedback',
   COPYRIGHT: '© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.',
   ALL_CITIES: 'All cities',
+  CONTACT: 'Got a question on the Performance Framework? Contact PM&C',
+  CONTACT_SUBJECT: 'Performance Framework',
 };

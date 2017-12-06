@@ -7,6 +7,7 @@ import {
   ELEMENT_IDS,
   LINKS,
   STRINGS,
+  EMAIL_ADDRESSES,
 } from '../../../constants';
 import coaWhite from '../../../images/coa-white.svg';
 import dtaLogo from './dtaLogo.svg';
@@ -19,10 +20,6 @@ const links = [
   {
     text: STRINGS.PRIVACY_LINK,
     href: `${LINKS.ADDITIONAL_INFORMATION}#${ELEMENT_IDS.PRIVACY_POLICY}`,
-  },
-  {
-    text: STRINGS.HELP_LINK,
-    href: LINKS.CONTACT_US,
   },
   {
     text: STRINGS.ACCESSIBILITY_LINK,
@@ -88,6 +85,15 @@ const Footer = props => (
               className={style.staticLink}
             >{link.text}</NavLink>
           ))}
+        </div>
+
+        <div className={style.contact}>
+          {STRINGS.CONTACT}
+          {': '}
+          <a
+            className={style.contactLink}
+            href={`mailto:${EMAIL_ADDRESSES.CITY_PERFORMANCE}?subject=${STRINGS.CONTACT_SUBJECT}`}
+          >{EMAIL_ADDRESSES.CITY_PERFORMANCE}</a>
         </div>
 
         <div className={style.copyright}>

@@ -18,9 +18,6 @@ exports[`should match Snapshot 1`] = `
         <NavLink to=\\"/additional-information#privacy\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           Privacy policy
         </NavLink>
-        <NavLink to=\\"mailto:performance-dashboard@digital.gov.au\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-          Need help?
-        </NavLink>
         <NavLink to=\\"/additional-information#accessibility\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           Accessibility
         </NavLink>
@@ -30,6 +27,13 @@ exports[`should match Snapshot 1`] = `
         <NavLink to=\\"/additional-information#content-credit\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
           Content credit
         </NavLink>
+      </div>
+      <div className=\\"contact\\">
+        Got a question on the Performance Framework? Contact PM&amp;C
+        : 
+        <a className=\\"contactLink\\" href=\\"mailto:cityperformance@pmc.gov.au?subject=Performance Framework\\">
+          cityperformance@pmc.gov.au
+        </a>
       </div>
       <div className=\\"copyright\\">
         © Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.
