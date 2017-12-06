@@ -17,6 +17,7 @@
   z-index: $z-index-left-nav;
 
   @include for-desktop-up {
+    position: absolute;
     box-shadow: none;
     padding-top: 0;
     transform: translate(0);

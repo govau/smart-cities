@@ -38,7 +38,7 @@ export default {
   },
   'Gold Coast - Tweed Heads': {
     id: 'gold-coast-tweed-heads',
-    name: 'Gold Coast-Tweed',
+    name: 'Gold Coast-Tweed Heads',
     description: 'Gold Coast-Tweed Heads includes the major centres of Surfers Paradise and the twin cities of Coolangatta in Queensland and Tweed Heads in New South Wales. Gold Coast-Tweed Heads stretches from the southern coast of Queensland just across the state border to the northern coast of New South Wales.',
   },
   'Greater Adelaide': {

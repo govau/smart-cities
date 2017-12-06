@@ -3,6 +3,7 @@
 .pageWrapper {
   @include for-desktop-up {
     padding-left: $sidebar-width;
+    position: relative;
   }
 }
 
