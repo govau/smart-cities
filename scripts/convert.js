@@ -16,6 +16,8 @@ const indicators = Object.entries(INDICATORS).map(([key, indicator]) => ({
 getStdin().then((rawCsv) => {
   csv.parse(rawCsv, { columns: true }, (err, data) => {
     const cities = data.map((row) => {
+      if (!row.Cities) return null;
+
       const city = {
         source: row.Cities,
         indicators: {},
@@ -42,7 +44,7 @@ getStdin().then((rawCsv) => {
       });
 
       return city;
-    });
+    }).filter(city => city);
 
     process.stdout.write(JSON.stringify(cities, null, 2)); // pretty-print
   });
