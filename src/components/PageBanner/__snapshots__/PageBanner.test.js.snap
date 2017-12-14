@@ -13,7 +13,16 @@ exports[`should match Snapshot 1`] = `
         </p>
       </div>
       <div>
-        <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"JOBS_500\\" colorName=\\"jobs\\" indicatorId=\\"population\\" cities={{...}} city={[undefined]} />
+        <div className=\\"heroSubCategoryWrapper\\">
+          <span className=\\"heroSubCategoryText\\">
+            Key indicator
+          </span>
+          <span>
+             
+            hi
+          </span>
+        </div>
+        <IndicatorCard size=\\"large\\" className=\\"card\\" color=\\"BYE_500\\" colorName=\\"bye\\" indicatorId=\\"population\\" cities={{...}} city={[undefined]} />
       </div>
     </div>
   </div>

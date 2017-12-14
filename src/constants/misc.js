@@ -4,6 +4,7 @@ export const NO_CATEGORY = 'overview';
 export const NO_CITY = 'all-cities';
 export const HERO_INDICATOR_ID = 'population';
 export const HERO_INDICATOR_CATEGORY = 'Planning';
+export const HERO_INDICATOR_COLOR_NAME = 'planning';
 export const MAX_CATEGORY_NAV_TEXT_LENGTH = 14;
 
 export const CARD_SIZES = {
@@ -56,7 +57,7 @@ export const LINKS = {
 
 export const STRINGS = {
   CATEGORIES_INCLUDE: 'Categories include:',
-  CONTEXTUAL_DEFINITION: 'Contextual indicators highlight the characteristics of a city that are not amenable to or potentially appropriate for local policy intervention but they can help to explain why a city performs the way it does.',
+  CONTEXTUAL_DEFINITION: 'Context indicators show the characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework.',
   PERFORMANCE_DEFINITION: 'A performance indicator is a measurable value that demonstrates how effectively cities are performing against the Australian Government’s Smart Cities policy priorities.',
   PRIVACY_LINK: 'Privacy policy',
   ACCESSIBILITY_LINK: 'Accessibility',

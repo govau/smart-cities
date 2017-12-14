@@ -25,6 +25,7 @@ const defaultProps = {
       }
     },
   ],
+  indicatorSubCategory: { name: 'hi', colorName: 'bye' },
 };
 
 it('should match Snapshot', () => {

@@ -24,7 +24,12 @@ const defaultProps = {
         name: 'Living in houses',
         highlightColorDark: 'JOBS_700',
         summaryIndicatorIds: [],
-        charts: [],
+        charts: [
+          {
+            name: 'Population',
+            indicatorIds: ['population'],
+          },
+        ],
       },
     ],
   },

@@ -7,6 +7,7 @@ import { CATEGORY_IDS } from '../../constants';
 jest.mock('../Icon/Icon', () => 'Icon');
 jest.mock('../IndicatorCard/IndicatorCard', () => 'IndicatorCard');
 jest.mock('../Pill/Pill', () => 'Pill');
+jest.mock('../../helpers/getSubCategoryOfHeroIndicator', () => () => ({ name: 'mock sub category', colorName: 'primary' }));
 
 const defaultProps = {
   category: {

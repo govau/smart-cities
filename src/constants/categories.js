@@ -1,4 +1,5 @@
 /* eslint-disable max-len */
+import React from 'react';
 import { COLOR_NAMES } from './misc';
 
 export const CATEGORY_IDS = {
@@ -19,9 +20,9 @@ export const CATEGORIES = [
     iconId: 'city',
     navName: 'Context',
     name: 'Context',
-    description: 'Context indicators show the characteristics of a city that help us understand what it’s like & why it functions the way it does.',
-    shortDescription: 'Context indicators show the characteristics of a city that help us understand what it’s like & why it functions the way it does.',
-    allCitiesShortDescription: 'A view of all context indicators to demonstrate what the cities are like & how they function.',
+    description: 'Context indicators show the characteristics of a city that help us understand what it’s like and why it functions the way it does.',
+    shortDescription: <span>Characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework. <br /><br />This section is a collection of context indicators.</span>,
+    allCitiesShortDescription: <span>Characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework. <br /><br />This section is a collection of context indicators.</span>,
     heroIndicatorId: 'population',
     overviewIndicatorIds: [
       'growthRate',
@@ -246,7 +247,7 @@ export const CATEGORIES = [
     iconId: 'jobsEmployment',
     name: 'Jobs & skills',
     description: 'The jobs & skills performance indicators seek to measure employment, education and training outcomes. The indicators will help all levels of government, industry and the community to boost employment through a better understanding of education, skills and industry development needs.',
-    shortDescription: 'The jobs & skills performance indicators seek to measure employment, education and training outcomes.',
+    shortDescription: 'The jobs & skills performance indicators seek to measure employment, education and training outcomes. The indicators will help all levels of government, industry and the community to boost employment through a better understanding of education, skills and industry development needs.',
     heroIndicatorId: 'unemploymentRateYouth',
     overviewIndicatorIds: [
       'employmentGrowth',

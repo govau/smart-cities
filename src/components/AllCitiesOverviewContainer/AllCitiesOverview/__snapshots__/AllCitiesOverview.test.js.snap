@@ -64,7 +64,7 @@ exports[`should match Snapshot 1`] = `
             Performance
           </dt>
           <dd className=\\"definition\\">
-            Aspects of a city that can be measured and tracked against policy priorities.
+            Aspects that can be measured and tracked against policy priorities.
           </dd>
         </div>
         <div className=\\"legendRow\\">
@@ -73,7 +73,7 @@ exports[`should match Snapshot 1`] = `
             Context
           </dt>
           <dd className=\\"definition\\">
-            Characteristics of a city that help us understand what it’s like &amp; why it functions the way it does.
+            Characteristics that help us understand what it’s like and why it functions the way it does.
           </dd>
         </div>
       </dl>

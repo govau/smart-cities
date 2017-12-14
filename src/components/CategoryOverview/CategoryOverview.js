@@ -6,6 +6,7 @@ import IndicatorCard from '../IndicatorCard/IndicatorCard';
 import Pill from '../Pill/Pill';
 import getColorVariant from '../../helpers/getColorVariant';
 import getSubCategorySectionId from '../../helpers/getSubCategorySectionId';
+import getSubCategoryOfHeroIndicator from '../../helpers/getSubCategoryOfHeroIndicator';
 import {
   CATEGORY_IDS,
   INDICATORS,
@@ -38,6 +39,14 @@ const CategoryOverview = (props) => {
   const categoryColor = isContextCategory ? COLORS.GREY_600 : categoryDarkColor;
   const cityUrlPart = props.city ? props.city.id : NO_CITY;
   const categoryUrl = `/${cityUrlPart}/${props.category.id}`;
+
+  const indicatorCardColorName = isContextCategory
+    ? getSubCategoryOfHeroIndicator(props.category).colorName
+    : props.category.colorName;
+
+  const indicatorCardColor = isContextCategory
+    ? getColorVariant(indicatorCardColorName, '500')
+    : categoryDarkColor;
 
   return (
     <div
@@ -100,8 +109,8 @@ const CategoryOverview = (props) => {
                 <IndicatorCard
                   key={indicatorId}
                   className={style.indicatorCard}
-                  color={categoryDarkColor}
-                  colorName={props.category.colorName}
+                  color={indicatorCardColor}
+                  colorName={indicatorCardColorName}
                   indicatorId={indicatorId}
                   cities={props.cities}
                   city={props.city}
@@ -145,8 +154,14 @@ const cityPropShape = {
 CategoryOverview.propTypes = {
   category: PropTypes.shape({
     colorName: PropTypes.string.isRequired,
-    shortDescription: PropTypes.string.isRequired,
-    allCitiesShortDescription: PropTypes.string,
+    shortDescription: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object, // descriptions can be JSX
+    ]).isRequired,
+    allCitiesShortDescription: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.object, // descriptions can be JSX
+    ]),
     overviewIndicatorIds: PropTypes.arrayOf(PropTypes.oneOf(Object.keys(INDICATORS))).isRequired,
     id: PropTypes.string.isRequired,
     iconId: PropTypes.string,

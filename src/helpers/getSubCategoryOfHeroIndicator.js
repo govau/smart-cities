@@ -1,13 +1,17 @@
 export default function getSubCategoryOfHeroIndicator(category) {
-  let subCategoryName = null;
+  let subCategory = null;
 
-  category.subCategories.forEach((subCategory) => {
-    subCategory.charts.forEach((chart) => {
+  category.subCategories.forEach((subCat) => {
+    subCat.charts.forEach((chart) => {
       if (chart.indicatorIds.includes(category.heroIndicatorId)) {
-        subCategoryName = subCategory.name;
+        subCategory = subCat;
       }
     });
   });
 
-  return subCategoryName;
+  if (!subCategory) {
+    throw new Error('Could not find subcategory of hero indicator');
+  }
+
+  return subCategory;
 }

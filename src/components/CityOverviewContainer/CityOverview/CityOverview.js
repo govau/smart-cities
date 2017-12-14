@@ -6,6 +6,7 @@ import PageWrapper from '../../PageWrapper/PageWrapper';
 import {
   HERO_INDICATOR_ID,
   HERO_INDICATOR_CATEGORY,
+  HERO_INDICATOR_COLOR_NAME,
 } from '../../../constants';
 
 const CityOverview = props => (
@@ -18,7 +19,10 @@ const CityOverview = props => (
       colorName="primary"
       description={props.city.description}
       indicatorId={HERO_INDICATOR_ID}
-      indicatorSubCategory={HERO_INDICATOR_CATEGORY}
+      indicatorSubCategory={{
+        name: HERO_INDICATOR_CATEGORY,
+        colorName: HERO_INDICATOR_COLOR_NAME,
+      }}
       title={props.city.name}
       city={props.city}
     />

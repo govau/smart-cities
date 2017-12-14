@@ -107,7 +107,7 @@ const AllCitiesOverview = props => (
               Performance
             </dt>
             <dd className={style.definition}>
-              Aspects of a city that can be measured and tracked against policy priorities.
+              Aspects that can be measured and tracked against policy priorities.
             </dd>
           </div>
           <div className={style.legendRow}>
@@ -121,8 +121,8 @@ const AllCitiesOverview = props => (
               Context
             </dt>
             <dd className={style.definition}>
-              Characteristics of a city that help us understand what it’s
-              like & why it functions the way it does.
+              Characteristics that help us understand what it’s
+              like and why it functions the way it does.
             </dd>
           </div>
         </dl>

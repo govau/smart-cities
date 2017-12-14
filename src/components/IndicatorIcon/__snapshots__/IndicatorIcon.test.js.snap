@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<Tooltip borderColor={[undefined]} text=\\"Contextual indicators highlight the characteristics of a city that are not amenable to or potentially appropriate for local policy intervention but they can help to explain why a city performs the way it does.\\" className={[undefined]} style={{...}}>
+"<Tooltip borderColor={[undefined]} text=\\"Context indicators show the characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework.\\" className={[undefined]} style={{...}}>
   <Icon color={[undefined]} icon=\\"contextualIndicator\\" size={14} title=\\"\\" />
 </Tooltip>"
 `;

@@ -4,7 +4,7 @@ import CityCategory from './CityCategory';
 
 jest.mock('../../PageBanner/PageBanner', () => 'PageBanner');
 jest.mock('../../SubCategorySummary/SubCategorySummary', () => 'SubCategorySummary');
-jest.mock('../../../helpers/getSubCategoryOfHeroIndicator', () => () => 'mock sub category');
+jest.mock('../../../helpers/getSubCategoryOfHeroIndicator', () => () => ({ name: 'mock sub category', colorName: 'primary' }));
 
 const defaultProps = {
   category: {
@@ -69,5 +69,5 @@ it('should pass the sub category of the hero indicator to the banner', () => {
     <CityCategory {...defaultProps} />
   );
 
-  expect(component.find('PageBanner').prop('indicatorSubCategory')).toBe('mock sub category');
+  expect(component.find('PageBanner').prop('indicatorSubCategory').name).toBe('mock sub category');
 });
