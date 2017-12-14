@@ -9,6 +9,7 @@ import {
   STRINGS,
   EMAIL_ADDRESSES,
 } from '../../../constants';
+import Link from '../../Link/Link';
 import coaWhite from '../../../images/coa-white.svg';
 import dtaLogo from './dtaLogo.svg';
 
@@ -77,23 +78,28 @@ const Footer = props => (
           </div>
         )}
 
-        <div className={style.staticLinksWrapper}>
-          {links.map(link => (
-            <NavLink
-              key={link.href}
-              to={link.href}
-              className={style.staticLink}
-            >{link.text}</NavLink>
-          ))}
-        </div>
+        <div className={style.footerLinks}>
+          <div className={style.footerLinksRow}>
+            {links.map(link => (
+              <NavLink
+                key={link.href}
+                to={link.href}
+                className={style.staticLink}
+              >{link.text}</NavLink>
+            ))}
+          </div>
 
-        <div className={style.contact}>
-          {STRINGS.CONTACT}
-          {': '}
-          <a
-            className={style.contactLink}
-            href={`mailto:${EMAIL_ADDRESSES.CITY_PERFORMANCE}?subject=${STRINGS.CONTACT_SUBJECT}`}
-          >{EMAIL_ADDRESSES.CITY_PERFORMANCE}</a>
+          <div className={style.footerLinksRow}>
+            {STRINGS.CONTACT}
+            {': '}
+            <a
+              href={`mailto:${EMAIL_ADDRESSES.CITY_PERFORMANCE}?subject=${STRINGS.CONTACT_SUBJECT}`}
+            >{EMAIL_ADDRESSES.CITY_PERFORMANCE}</a>
+          </div>
+
+          <div className={style.footerLinksRow}>
+            <Link href={LINKS.RAW_DATA} unstyled>{STRINGS.RAW_DATA}</Link>
+          </div>
         </div>
 
         <div className={style.copyright}>

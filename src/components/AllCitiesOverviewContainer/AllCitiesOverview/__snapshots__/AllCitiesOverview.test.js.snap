@@ -21,7 +21,7 @@ exports[`should match Snapshot 1`] = `
         </p>
         <p className=\\"infoBodyText\\">
           The Australian Government is committed to the continual improvement of our cities. 
-          <Link href=\\"https://cities.dpmc.gov.au/performance-framework\\">
+          <Link href=\\"https://cities.dpmc.gov.au/performance-framework\\" unstyled={false}>
             The National Cities Performance Framework
           </Link>
            will assist in this goal by providing data to help all levels of government, industry and the community to make the best policy and investment decisions for Australia’s future.
@@ -52,7 +52,7 @@ exports[`should match Snapshot 1`] = `
       </h1>
       <p className=\\"subInfoBodyText\\">
         There are 6 policy priorities to help achieve the objectives of the 
-        <Link href=\\"https://cities.dpmc.gov.au/smart-cities-plan\\">
+        <Link href=\\"https://cities.dpmc.gov.au/smart-cities-plan\\" unstyled={false}>
           Smart Cities Plan
         </Link>
         . The National Cities Performance Framework is designed to measure how well our cities are performing, using two types of indicators.

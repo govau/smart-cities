@@ -58,7 +58,8 @@
 
 .categoryDetailsWrapper {
   border-bottom: 1px solid $color-grey--700;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
 }
 
 .categoryTitle {
@@ -71,7 +72,6 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-bottom: 23px;
 
   @include for-tablet-portrait-up {
     flex-direction: row;
@@ -79,39 +79,47 @@
 }
 
 .subCategoryLink {
-  margin-right: 32px;
   text-decoration: none;
   padding-bottom: 1px;
   border-bottom: 1px solid $color-highlight;
   margin-bottom: 16px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include for-tablet-portrait-up {
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
+}
+
+.footerLinks {
+  border-bottom: 1px solid $color-grey--700;
+  font-size: 14px;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.footerLinksRow {
+  margin-bottom: 6px;
+
+  &:last-child {
     margin-bottom: 0;
   }
 }
 
-.staticLinksWrapper {
-  margin-bottom: 6px;
-}
-
 .staticLink {
+  display: inline-block; // To make it wrap nicely (privacy policy was separating to two lines)
   margin-right: 16px;
-  font-size: 14px;
-  text-decoration: underline;
-}
-
-.contact {
-  border-bottom: 1px solid $color-grey--700;
-  font-size: 14px;
-  padding-bottom: 24px;
-  margin-bottom: 24px;
-}
-
-.contactLink {
-  text-decoration: underline;
 }
 
 .copyright {
+  color: $color-grey--400;
   font-size: 14px;
   line-height: 1.2;
 }

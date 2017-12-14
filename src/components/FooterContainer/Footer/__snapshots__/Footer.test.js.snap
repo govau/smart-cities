@@ -11,29 +11,36 @@ exports[`should match Snapshot 1`] = `
       <img className=\\"dtaLogo\\" src=\\"dtaLogo.svg\\" alt=\\"dta\\" />
     </div>
     <div className=\\"wordsWrapper\\">
-      <div className=\\"staticLinksWrapper\\">
-        <NavLink to=\\"/feedback\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-          Give feedback
-        </NavLink>
-        <NavLink to=\\"/additional-information#privacy\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-          Privacy policy
-        </NavLink>
-        <NavLink to=\\"/additional-information#accessibility\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-          Accessibility
-        </NavLink>
-        <NavLink to=\\"/additional-information#security\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-          Security
-        </NavLink>
-        <NavLink to=\\"/additional-information#content-credit\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-          Content credit
-        </NavLink>
-      </div>
-      <div className=\\"contact\\">
-        Got a question on the Performance Framework? Contact PM&amp;C
-        : 
-        <a className=\\"contactLink\\" href=\\"mailto:cityperformance@pmc.gov.au?subject=Performance Framework\\">
-          cityperformance@pmc.gov.au
-        </a>
+      <div className=\\"footerLinks\\">
+        <div className=\\"footerLinksRow\\">
+          <NavLink to=\\"/feedback\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+            Give feedback
+          </NavLink>
+          <NavLink to=\\"/additional-information#privacy\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+            Privacy policy
+          </NavLink>
+          <NavLink to=\\"/additional-information#accessibility\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+            Accessibility
+          </NavLink>
+          <NavLink to=\\"/additional-information#security\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+            Security
+          </NavLink>
+          <NavLink to=\\"/additional-information#content-credit\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+            Content credit
+          </NavLink>
+        </div>
+        <div className=\\"footerLinksRow\\">
+          Got a question on the Performance Framework? Contact PM&amp;C
+          : 
+          <a href=\\"mailto:cityperformance@pmc.gov.au?subject=Performance Framework\\">
+            cityperformance@pmc.gov.au
+          </a>
+        </div>
+        <div className=\\"footerLinksRow\\">
+          <Link href=\\"https://data.gov.au/dataset/national-cities-performance-framework\\" unstyled={true}>
+            View all raw data at data.gov.au
+          </Link>
+        </div>
       </div>
       <div className=\\"copyright\\">
         © Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the CC BY 4.0 license.

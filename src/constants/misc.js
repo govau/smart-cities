@@ -53,6 +53,7 @@ export const LINKS = {
   SMART_CITIES_DPMC_LINK: 'https://cities.dpmc.gov.au/smart-cities-plan',
   TOWNSVILLE_CITY_DEAL: 'https://cities.dpmc.gov.au/townsville-city-deal',
   WCAG: 'https://www.w3.org/TR/WCAG20/',
+  RAW_DATA: 'https://data.gov.au/dataset/national-cities-performance-framework',
 };
 
 export const STRINGS = {
@@ -68,4 +69,5 @@ export const STRINGS = {
   ALL_CITIES: 'All cities',
   CONTACT: 'Got a question on the Performance Framework? Contact PM&C',
   CONTACT_SUBJECT: 'Performance Framework',
+  RAW_DATA: 'View all raw data at data.gov.au',
 };
