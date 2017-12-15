@@ -48,7 +48,6 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run: ./scripts/prepare_build.sh
-      - run: htpasswd -cb build/.htpasswd $BASICAUTH_PRODUCTION_USER $BASICAUTH_PRODUCTION_PASSWORD
       - run: ./scripts/cf_production.sh
       - run: cf zero-downtime-push smart-cities -f manifest-production.yml -p build
 workflows: 
