@@ -3,9 +3,11 @@
 .container {
   @include container;
 
+  padding-bottom: 10px;
   padding-top: 16px;
 
   @include for-tablet-portrait-up {
+    padding-bottom: 20px;
     padding-top: 32px;
   }
 }
@@ -13,11 +15,11 @@
 .textAndIndicator {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
 
   @include for-tablet-portrait-up {
     flex-direction: row;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
   }
 }
 
@@ -61,10 +63,14 @@
 }
 
 .featuredTextWrapper {
-  padding-top: 32px;
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1.1px;
+  padding-top: 24px;
+
+  @include for-tablet-portrait-up {
+    padding-top: 0;
+  }
 }
 
 .featuredText {

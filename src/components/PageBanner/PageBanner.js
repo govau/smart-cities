@@ -30,14 +30,6 @@ const PageBanner = (props) => {
             </h1>
 
             <p className={style.description}>{props.description}</p>
-
-            {props.isAllCitiesCategory && (
-              <div className={style.featuredTextWrapper}>
-                <span className={style.featuredText}>Featured indicators</span>
-
-                <span> Showing range</span>
-              </div>
-            )}
           </div>
 
           <div>
@@ -60,6 +52,13 @@ const PageBanner = (props) => {
             />
           </div>
         </div>
+        {props.isAllCitiesCategory && (
+          <div className={style.featuredTextWrapper}>
+            <span className={style.featuredText}>Featured indicators</span>
+
+            <span> Showing range</span>
+          </div>
+        )}
       </div>
     </div>
   );
