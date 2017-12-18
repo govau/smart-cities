@@ -54,6 +54,8 @@ const defaultProps = {
     },
   ],
   toggleCitySelected: () => {},
+  setShowChartPatterns: () => {},
+  showChartPatterns: true,
 };
 
 it('should match Snapshot', () => {

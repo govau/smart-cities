@@ -1,0 +1,141 @@
+@import '~style/main';
+
+$toggle-height: 32px;
+$toggle-width: 100px;
+
+.toggle {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.labelText {
+  margin-bottom: 16px;
+
+  @include for-tablet-landscape-up {
+    margin-right: 14px;
+    margin-bottom: 0;
+    text-align: right;
+  }
+}
+
+.ui {
+  position: relative;
+  display: inline-block;
+  width: $toggle-width;
+  height: $toggle-height;
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.onOff {
+  display: block;
+  height: 100%;
+  border-radius: $toggle-height / 2;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  transition: $animation-duration;
+
+  .jobs & {
+    background: $color-jobs--080;
+    border: 1px solid $color-jobs--200;
+  }
+
+  .housing & {
+    background: $color-housing--080;
+    border: 1px solid $color-housing--200;
+  }
+
+  .infrastructure & {
+    background: $color-infrastructure--080;
+    border: 1px solid $color-infrastructure--200;
+  }
+
+  .liveability & {
+    background: $color-liveability--080;
+    border: 1px solid $color-liveability--200;
+  }
+
+  .innovation & {
+    background: $color-innovation--080;
+    border: 1px solid $color-innovation--200;
+  }
+
+  .planning & {
+    background: $color-planning--080;
+    border: 1px solid $color-planning--200;
+  }
+
+  .input:checked ~ & {
+    background: $color-primary--600;
+
+    .jobs & { background: $color-jobs--500; }
+    .housing & { background: $color-housing--900; } // 900 for WCAG AA
+    .infrastructure & { background: $color-infrastructure--500; }
+    .liveability & { background: $color-liveability--500; }
+    .innovation & { background: $color-innovation--500; }
+    .planning & { background: $color-planning--500; }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.5em;
+    line-height: 1;
+    transition: $animation-duration;
+  }
+
+  &::before {
+    content: 'OFF';
+    left: 44px;
+    opacity: 1;
+    color: $color-grey--800;
+
+    .input:checked ~ & {
+      opacity: 0;
+    }
+  }
+
+  &::after {
+    content: 'ON';
+    left: 28px;
+    opacity: 0;
+    color: white;
+
+    .input:checked ~ & {
+      opacity: 1;
+    }
+  }
+}
+
+.handle {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: $toggle-height - 4px;
+  height: $toggle-height - 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform $animation-duration;
+
+  .input:checked ~ & {
+    transform: translateX($toggle-width - $toggle-height);
+  }
+}

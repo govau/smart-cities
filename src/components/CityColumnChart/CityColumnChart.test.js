@@ -11,6 +11,7 @@ Highcharts.chart = jest.fn(() => chartMock);
 
 console.warn = jest.fn();
 
+jest.mock('../Tooltip/Tooltip', () => 'Tooltip');
 jest.mock('../Legend/Legend', () => 'Legend');
 jest.mock('./ChartTable/ChartTable', () => 'ChartTable');
 jest.mock('../Icon/Icon', () => 'Icon');
@@ -70,6 +71,8 @@ const defaultProps = {
       }
     },
   ],
+  showChartPatterns: false,
+  svgPatternBase: 'svg-pattern-base',
 };
 
 it('should match Snapshot', () => {
@@ -142,6 +145,56 @@ it('should call highcharts with the right config for multiple indicators', () =>
   const config = Highcharts.chart.mock.calls[0][1];
 
   expect(config.series.length).toBe(2); // the two indicators
+});
+
+it('should call highcharts with the right config for showing patterns', () => {
+  jest.useFakeTimers();
+
+  // only show patterns when there's multiple indicators and showChartPatterns is true
+  shallow(
+    <CityColumnChart
+      {...defaultProps}
+      chart={{
+        description: 'the description',
+        indicatorIds: [
+          'population',
+          'growthRate',
+        ]
+      }}
+      showChartPatterns={true}
+    />);
+
+  jest.runAllTimers();
+
+  const config = Highcharts.chart.mock.calls[0][1];
+
+  expect(config.series[0].color).toBe('url(#svg-pattern-base-0)');
+  expect(config.series[1].color).toBe('url(#svg-pattern-base-1)');
+});
+
+it('should call highcharts with the right config for not showing patterns', () => {
+  jest.useFakeTimers();
+
+  // only show patterns when there's multiple indicators and showChartPatterns is true
+  shallow(
+    <CityColumnChart
+      {...defaultProps}
+      chart={{
+        description: 'the description',
+        indicatorIds: [
+          'population',
+          'growthRate',
+        ]
+      }}
+      showChartPatterns={false}
+    />);
+
+  jest.runAllTimers();
+
+  const config = Highcharts.chart.mock.calls[0][1];
+
+  expect(config.series[0].color).toBe('red');
+  expect(config.series[1].color).toBe('yellow');
 });
 
 it('should update the chart when new props arrive', () => {

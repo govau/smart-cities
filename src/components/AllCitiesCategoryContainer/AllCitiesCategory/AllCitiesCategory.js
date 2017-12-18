@@ -36,6 +36,8 @@ const AllCitiesCategory = props => (
         cities={props.cities}
         heroIndicatorId={props.category.heroIndicatorId}
         highlightColorDark={subCategory.highlightColorDark}
+        setShowChartPatterns={props.setShowChartPatterns}
+        showChartPatterns={props.showChartPatterns}
       />
     ))}
   </PageWrapper>
@@ -63,6 +65,8 @@ AllCitiesCategory.propTypes = {
     name: PropTypes.string.isRequired,
     indicators: PropTypes.object.isRequired,
   })).isRequired,
+  setShowChartPatterns: PropTypes.func.isRequired,
+  showChartPatterns: PropTypes.bool.isRequired,
 };
 
 export default AllCitiesCategory;

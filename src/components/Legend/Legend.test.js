@@ -34,13 +34,3 @@ it('should render the correct number of legend items', () => {
 
   expect(component.find('.legendItem').length).toBe(defaultProps.series.length);
 });
-
-it('applies the passed in color to the background', () => {
-  const component = shallow(
-    <Legend {...defaultProps} />
-  );
-
-  const secondItemStyle = component.find('.legendItemMarker').at(1).prop('style');
-
-  expect(secondItemStyle.background).toBe(defaultProps.series[1].color);
-});

@@ -11,14 +11,30 @@
 
 .heading {
   display: flex;
-  align-items: center;
-  border-top: 1px solid $color-grey--200;
-  padding-top: 24px;
+  flex-direction: column;
+  padding: 16px;
 
-  .headingText {
-    font-size: 44px;
-    font-weight: 300;
-    line-height: 1.2;
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 32px;
+  }
+}
+
+.headingText {
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 8px;
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 0;
+  }
+}
+
+.patternToggle {
+  @include for-tablet-landscape-up {
+    margin-left: auto;
   }
 }
 

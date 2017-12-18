@@ -61,17 +61,19 @@ function sortAndFilterChartData(props) {
   return sortedCities;
 }
 
-function getSeries(props) {
-  const chartColors = props.chart.indicatorIds.length === 1
-    ? [getColorVariant(props.colorBase, 300)]
-    : getColorRange(props.colorBase);
+function getFill(chartColors, pos, props) {
+  return props.showChartPatterns ? `url(#${props.svgPatternBase}-${pos})` : chartColors[pos];
+}
 
+function getSeries(props) {
+  const isMultiple = props.chart.indicatorIds.length > 1;
+  const chartColors = getColorRange(props.colorBase); // only used for multiple-series charts
   const sortedCities = sortAndFilterChartData(props);
 
   return props.chart.indicatorIds.map((indicatorId, i) => ({
     index: props.chart.indicatorIds.length - i, // reverse sort series (to counteract Highcharts)
     name: INDICATORS[indicatorId].legendText,
-    color: chartColors[i],
+    color: isMultiple ? getFill(chartColors, i, props) : getColorVariant(props.colorBase, 300),
     data: getSeriesDataForIndicator(sortedCities, indicatorId, props.city),
   }));
 }
@@ -133,6 +135,23 @@ function getChartConfig(props) {
 
   const floor = 'min' in props.chart ? props.chart.min : null;
 
+  let pointWidthLarge = 7;
+  let pointWidthSmall = 4;
+
+  // For readability, we fatten the bars when showing patterns
+  if (props.showChartPatterns) {
+    if (isMultiple && !props.chart.stacked) { // grouped charts
+      pointWidthLarge += 2;
+      pointWidthSmall += 1;
+    } else {
+      pointWidthLarge += 5;
+      pointWidthSmall += 5;
+    }
+  } else if (props.isHero) {
+    pointWidthLarge += 4;
+    pointWidthSmall += 0;
+  }
+
   const columnChartConfig = {
     series,
     chart: {
@@ -148,7 +167,7 @@ function getChartConfig(props) {
       series: {
         animation: false,
         stacking: props.chart.stacked ? 'normal' : null,
-        pointWidth: props.isHero ? 11 : 7, // includes border
+        pointWidth: pointWidthLarge,
         borderRadius: props.isHero ? 5 : 3,
         borderWidth: 1,
         groupPadding: 0.85,
@@ -221,8 +240,10 @@ function getChartConfig(props) {
 
         return `
             <div class="cityColumnChartTooltipRow">
-              <span class="cityColumnChartTooltipDot" style="background: ${this.color}"></span>
-              
+              <svg width="12" height="12" class="cityColumnChartTooltipDot">
+                <circle cx="6" cy="6" r="6" fill=${this.color} />
+              </svg>
+
               ${seriesName}
               
               <span class="cityColumnChartTooltipValue">${formattedValue}</span>
@@ -249,7 +270,7 @@ function getChartConfig(props) {
           },
           plotOptions: {
             series: {
-              pointWidth: 4,
+              pointWidth: pointWidthSmall,
               borderRadius: 2,
               borderWidth: 1,
               groupPadding: 0.85,
@@ -274,7 +295,7 @@ function getChartConfig(props) {
 // If the timeout is too low, React won't update everything before rendering the charts
 // E.g. try setting it to 1 and navigating between cities,
 // the nav will only update once the charts are re-rendered
-const UPDATE_TIMEOUT = 100;
+const UPDATE_TIMEOUT = 300;
 
 class CityColumnChart extends Component {
   constructor(props) {
@@ -418,6 +439,8 @@ CityColumnChart.propTypes = {
   highlightColorLight: PropTypes.string.isRequired,
   highlightColorDark: PropTypes.string.isRequired,
   isHero: PropTypes.bool,
+  showChartPatterns: PropTypes.bool.isRequired,
+  svgPatternBase: PropTypes.string.isRequired,
 };
 
 export default CityColumnChart;

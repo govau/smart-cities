@@ -1,18 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Checkbox from './Checkbox';
+import Toggle from './Toggle';
 
 const onChangeMock = jest.fn();
 
 const defaultProps = {
+  colorName: 'jobs',
   id: 'the-id',
-  label: 'The checkbox label',
+  label: 'The toggle label',
   onChange: onChangeMock,
 };
 
 it('should match Snapshot', () => {
   const component = shallow(
-    <Checkbox {...defaultProps} />
+    <Toggle {...defaultProps} />
   );
 
   expect(component.debug()).toMatchSnapshot();
@@ -20,27 +21,24 @@ it('should match Snapshot', () => {
 
 it('should apply the id to the input and the label', () => {
   const component = shallow(
-    <Checkbox {...defaultProps} />
+    <Toggle {...defaultProps} />
   );
 
-  expect(component.find('.input').prop('id')).toBe('the-id-checkbox');
-  expect(component.find('.label').prop('htmlFor')).toBe('the-id-checkbox');
+  expect(component.find('.toggle').prop('htmlFor')).toBe('the-id-toggle');
+  expect(component.find('.input').prop('id')).toBe('the-id-toggle');
 });
 
-it('applies the passed in color to the checkbox', () => {
+it('applies the passed in color as a class', () => {
   const component = shallow(
-    <Checkbox
-      {...defaultProps}
-      checkedBoxColor="hotpink"
-    />
+    <Toggle {...defaultProps} />
   );
 
-  expect(component.find('.label .checkbox').prop('style').color).toBe('hotpink');
+  expect(component.hasClass('jobs')).toBe(true);
 });
 
 it('calls onChange when changed', () => {
   const component = shallow(
-    <Checkbox {...defaultProps} />
+    <Toggle {...defaultProps} />
   );
 
   component.find('.input').simulate('change', {

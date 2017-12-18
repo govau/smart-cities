@@ -20,6 +20,6 @@ Object.defineProperty(document.body, 'clientWidth', {
 });
 
 window.localStorage = {
-  getItem: () => {},
+  getItem: () => null,
   setItem: () => {},
 };

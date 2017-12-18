@@ -13,7 +13,7 @@ const Checkbox = (props) => {
         type="checkbox"
         id={elementId}
         checked={props.checked}
-        onChange={props.onChange}
+        onChange={e => props.onChange(e.target.checked)}
       />
 
       <label

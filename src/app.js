@@ -5,6 +5,7 @@ import App from './components/App/App';
 import configureStore from './redux/configureStore';
 import { parseCityData } from './redux/ducks/cities';
 import { checkStatus, parseBody } from './helpers/fetch';
+import { getShowChartPatterns } from './helpers/userBehaviour';
 import * as analyticsManager from './helpers/analyticsManager';
 import {
   DATA_URL,
@@ -20,6 +21,9 @@ fetch(DATA_URL, { credentials: 'include' })
       cities: parseCityData(cities),
       indicators: INDICATORS,
       categories: CATEGORIES,
+      ui: {
+        showChartPatterns: getShowChartPatterns() || false,
+      },
     });
 
     ReactDOM.render(

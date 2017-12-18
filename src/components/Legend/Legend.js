@@ -9,10 +9,9 @@ const Legend = props => (
         key={item.name}
         className={style.legendItem}
       >
-        <span
-          style={{ background: item.color }}
-          className={style.legendItemMarker}
-        />
+        <svg width="20" height="20">
+          <circle cx="10" cy="10" r="10" fill={item.color} />
+        </svg>
 
         <span className={style.legendItemText}>{item.name}</span>
       </div>

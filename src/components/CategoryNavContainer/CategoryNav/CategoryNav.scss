@@ -122,8 +122,7 @@
     }
 
     .housing {
-      // 600 for housing doesn't pass WCAG AA, so we use 800
-      background: $color-housing--800;
+      background: $color-housing--900; // 900 to pass WCAG AA
     }
 
     .liveability {

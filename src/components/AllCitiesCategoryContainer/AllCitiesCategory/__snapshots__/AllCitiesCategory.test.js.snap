@@ -5,7 +5,7 @@ exports[`should match Snapshot 1`] = `
   <PageBanner colorName=\\"jobs\\" description=\\"This is the mock category\\" indicatorId=\\"population\\" indicatorSubCategory={{...}} title=\\"Mock category\\" cities={{...}} isAllCitiesCategory={true} />
   <SubCategorySummary name=\\"Buying houses\\" highlightColorDark=\\"JOBS_600\\" summaryIndicatorIds={{...}} charts={{...}} categoryColorName=\\"jobs\\" cities={{...}} />
   <SubCategorySummary name=\\"Living in houses\\" highlightColorDark=\\"JOBS_700\\" summaryIndicatorIds={{...}} charts={{...}} categoryColorName=\\"jobs\\" cities={{...}} />
-  <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"JOBS_600\\" />
-  <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"JOBS_700\\" />
+  <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"JOBS_600\\" setShowChartPatterns={[Function]} showChartPatterns={false} />
+  <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"JOBS_700\\" setShowChartPatterns={[Function]} showChartPatterns={false} />
 </PageWrapper>"
 `;

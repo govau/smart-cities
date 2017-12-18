@@ -43,6 +43,8 @@ const defaultProps = {
       indicators: {}
     },
   ],
+  setShowChartPatterns: () => {},
+  showChartPatterns: false,
 };
 
 it('should match Snapshot', () => {

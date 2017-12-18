@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<div className=\\"wrapper\\">
+  <section className=\\"container\\" id=\\"sc-buying-houses\\">
+    <header className=\\"heading\\" style={{...}}>
+      <Icon className=\\"iconWrapper\\" size={70} icon={[undefined]} color=\\"JOBS_600\\" />
+      <h1 className=\\"headingText\\">
+        Buying houses
+      </h1>
+      <Toggle className=\\"patternToggle\\" id=\\"chart-pattern-checkbox-buying-houses\\" label=\\"Make charts more accessible\\" onChange={[Function]} checked={false} colorName=\\"jobs\\" />
+    </header>
+    <div className=\\"chartGrid\\" />
+  </section>
+</div>"
+`;
