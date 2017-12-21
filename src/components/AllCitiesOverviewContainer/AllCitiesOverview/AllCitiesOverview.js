@@ -8,7 +8,6 @@ import {
   ELEMENT_IDS,
   LINKS,
 } from '../../../constants';
-import taylorAngus from './taylorAngus.png';
 import smartCitiesLogo from './smart-cities-logo-white.svg';
 import COLORS from '../../../style/_colors.scss';
 import style from './AllCitiesOverview.scss';
@@ -43,42 +42,26 @@ const AllCitiesOverview = props => (
 
     <div className={style.infoWrapper}>
       <div className={style.infoContainer}>
-        <div className={style.infoTextWrapper}>
-          <h1
-            id={ELEMENT_IDS.INITIAL_FOCUS_POINT_ON_PAGE}
-            className={style.infoTitle}
-          >About</h1>
+        <h1
+          id={ELEMENT_IDS.INITIAL_FOCUS_POINT_ON_PAGE}
+          className={style.infoTitle}
+        >
+          About
+        </h1>
 
-          <p className={style.infoBodyText}>
-            Australian cities have long been an important economic and social asset and will be
-            more important than ever in the 21st century. Our cities provide great opportunities
-            for innovation and productivity in the global knowledge-based economy and
-            are recognised as great places to live, work and study.
-          </p>
+        <p className={style.infoBodyText}>
+          Australian cities have long been an important economic and social asset and will be
+          more important than ever in the 21st century. Our cities provide great opportunities
+          for innovation and productivity in the global knowledge-based economy and
+          are recognised as great places to live, work and study.
+        </p>
 
-          <p className={style.infoBodyText}>
-            The Australian Government is committed to the continual improvement of our
-            cities. {ncpLink} will assist in this goal by providing data
-            to help all levels of government, industry and the community to make the best
-            policy and investment decisions for Australia’s future.
-          </p>
-        </div>
-
-        <figure className={style.ministerPhotoWrapper}>
-          <div className={style.ministerPhotoClip}>
-            <img
-              className={style.ministerPhoto}
-              src={taylorAngus}
-              alt="The Honorable Angus Taylor MP"
-            />
-          </div>
-
-          <figcaption>
-            <p className={style.ministerTitle}>The Hon Angus Taylor MP</p>
-
-            <p>Assistant Minister for Cities & Digital Transformation</p>
-          </figcaption>
-        </figure>
+        <p className={style.infoBodyText}>
+          The Australian Government is committed to the continual improvement of our
+          cities. {ncpLink} will assist in this goal by providing data
+          to help all levels of government, industry and the community to make the best
+          policy and investment decisions for Australia’s future.
+        </p>
       </div>
     </div>
 
