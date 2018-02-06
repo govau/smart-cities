@@ -284,7 +284,7 @@ export const CATEGORIES = [
           {
             name: 'Indigenous unemployment rate',
             axisTitle: '',
-            description: 'This shows the average indigenous unemployment rate for 12 months. \n\nSource: ABS Labour Force',
+            description: 'This shows the average indigenous unemployment rate for 12 months. \n\nSource: ABS Census 2016',
             indicatorIds: [
               'unemploymentRateIndigenous',
             ],
