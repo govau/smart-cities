@@ -8,12 +8,12 @@ exports[`should match Snapshot 1`] = `
         Overview
       </Pill>
     </mockConstructor>
-    <mockConstructor className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/perth/perth\\" onClick={[Function]} aria-label=\\"Perth in All cities\\">
+    <mockConstructor className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/perth/perth\\" onClick={[Function: onClick]} aria-label=\\"Perth in All cities\\">
       <Pill className=\\"linkText undefined\\" height={28}>
         Perth
       </Pill>
     </mockConstructor>
-    <mockConstructor className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/perth/sydney\\" onClick={[Function]} aria-label=\\"Sydney in All cities\\">
+    <mockConstructor className=\\"link\\" activeClassName=\\"link__active\\" to=\\"/perth/sydney\\" onClick={[Function: onClick]} aria-label=\\"Sydney in All cities\\">
       <Pill className=\\"linkText undefined\\" height={28}>
         Sydney
       </Pill>

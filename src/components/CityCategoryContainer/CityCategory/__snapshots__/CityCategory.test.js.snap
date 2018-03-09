@@ -5,8 +5,8 @@ exports[`should match Snapshot 1`] = `
   <PageBanner colorName=\\"jobs\\" description=\\"The description of the category\\" indicatorId=\\"population\\" title=\\"Mock category\\" cities={{...}} city={{...}} indicatorSubCategory={{...}} />
   <SubCategorySummary name=\\"Buying houses\\" colorVariation=\\"100\\" highlightColorDark=\\"HOUSING_600\\" summaryIndicatorIds={{...}} categoryColorName=\\"jobs\\" city={{...}} />
   <SubCategorySummary name=\\"Living in houses\\" colorVariation=\\"050\\" highlightColorDark=\\"HOUSING_700\\" summaryIndicatorIds={{...}} categoryColorName=\\"jobs\\" city={{...}} />
-  <CompareCities category={{...}} city={{...}} cities={{...}} toggleCitySelected={[Function]} />
-  <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} city={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"HOUSING_600\\" setShowChartPatterns={[Function]} showChartPatterns={true} />
-  <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} city={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"HOUSING_700\\" setShowChartPatterns={[Function]} showChartPatterns={true} />
+  <CompareCities category={{...}} city={{...}} cities={{...}} toggleCitySelected={[Function: toggleCitySelected]} />
+  <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} city={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"HOUSING_600\\" setShowChartPatterns={[Function: setShowChartPatterns]} showChartPatterns={true} />
+  <SubCategoryCharts subCategory={{...}} colorName=\\"jobs\\" cities={{...}} city={{...}} heroIndicatorId=\\"population\\" highlightColorDark=\\"HOUSING_700\\" setShowChartPatterns={[Function: setShowChartPatterns]} showChartPatterns={true} />
 </PageWrapper>"
 `;

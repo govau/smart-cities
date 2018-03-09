@@ -3,10 +3,10 @@
 exports[`should match Snapshot 1`] = `
 "<div className=\\"pageWrapper\\">
   <div>
-    <SideBar closeNav={[Function]} isOpen={false} cityId=\\"perth\\" />
+    <SideBar closeNav={[Function: closeNav]} isOpen={false} cityId=\\"perth\\" />
   </div>
   <div>
-    <Header openNav={[Function]} cityId=\\"perth\\" categoryId=\\"jobs\\" cityName={[undefined]} categoryColorName={[undefined]} onFeedbackPage={[undefined]} />
+    <Header openNav={[Function: openNav]} cityId=\\"perth\\" categoryId=\\"jobs\\" cityName={[undefined]} categoryColorName={[undefined]} onFeedbackPage={[undefined]} />
     <main className=\\"main\\">
       <div>
         render me
