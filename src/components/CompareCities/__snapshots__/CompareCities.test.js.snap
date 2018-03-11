@@ -15,8 +15,8 @@ exports[`should match Snapshot 1`] = `
       </span>
     </div>
     <div className=\\"body\\">
-      <Checkbox checked={[undefined]} checkedBoxColor=\\"JOBS_500\\" className=\\"checkbox\\" id=\\"sydney\\" label=\\"Sydney\\" onChange={[Function: onChange]} />
-      <Checkbox checked={[undefined]} checkedBoxColor=\\"JOBS_500\\" className=\\"checkbox\\" id=\\"melbourne\\" label=\\"Melbourne\\" onChange={[Function: onChange]} />
+      <Checkbox checked={[undefined]} checkedBoxColor=\\"JOBS_500\\" className=\\"checkbox\\" id=\\"sydney\\" label=\\"Sydney\\" onChange={[Function]} />
+      <Checkbox checked={[undefined]} checkedBoxColor=\\"JOBS_500\\" className=\\"checkbox\\" id=\\"melbourne\\" label=\\"Melbourne\\" onChange={[Function]} />
     </div>
   </div>
 </div>"

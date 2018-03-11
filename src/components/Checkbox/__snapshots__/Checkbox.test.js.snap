@@ -2,7 +2,7 @@
 
 exports[`should match Snapshot 1`] = `
 "<div className=\\"wrapper\\">
-  <input className=\\"input\\" type=\\"checkbox\\" id=\\"the-id-checkbox\\" checked={false} onChange={[Function: onChange]} />
+  <input className=\\"input\\" type=\\"checkbox\\" id=\\"the-id-checkbox\\" checked={false} onChange={[Function]} />
   <label className=\\"label\\" htmlFor=\\"the-id-checkbox\\">
     <span style={{...}} className=\\"checkbox\\" />
     The checkbox label

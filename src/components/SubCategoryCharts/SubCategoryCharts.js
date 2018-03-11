@@ -117,24 +117,13 @@ const SubCategoryCharts = (props) => {
         <svg width="0" height="0">
           <defs>
             <pattern
-              id={`${svgPatternBase}-3`}
-              width="4"
-              height="4"
-              patternUnits="userSpaceOnUse"
-            >
-              {/* not a pattern, just a solid colour */}
-              <rect width="4" height="4" fill={colorRange[3]} />
-            </pattern>
-
-            <pattern
               id={`${svgPatternBase}-0`}
               width="4"
               height="4"
               patternUnits="userSpaceOnUse"
             >
-              {/* horizontal lines */}
-              <rect width="4" height="3" fill={colorRange[0]} />
-              <rect width="4" height="1" y="3" fill={colorRange[3]} />
+              {/* not a pattern, just a solid colour */}
+              <rect width="4" height="4" fill={colorRange[0]} />
             </pattern>
 
             <pattern
@@ -143,9 +132,8 @@ const SubCategoryCharts = (props) => {
               height="4"
               patternUnits="userSpaceOnUse"
             >
-              {/* checkerboard pattern */}
-              <rect width="4" height="4" fill={colorRange[1]} />
-              <rect width="2" height="2" fill={colorRange[3]} />
+              {/* horizontal lines */}
+              <rect width="4" height="3" fill={colorRange[1]} />
             </pattern>
 
             <pattern
@@ -154,9 +142,19 @@ const SubCategoryCharts = (props) => {
               height="4"
               patternUnits="userSpaceOnUse"
             >
+              {/* checkerboard pattern */}
+              <rect width="4" height="4" fill={colorRange[2]} />
+              <rect width="2" height="2" fill="white" />
+            </pattern>
+
+            <pattern
+              id={`${svgPatternBase}-3`}
+              width="4"
+              height="4"
+              patternUnits="userSpaceOnUse"
+            >
               {/* vertical lines */}
-              <rect width="3" height="4" fill={colorRange[2]} />
-              <rect width="1" height="4" x="3" fill={colorRange[3]} />
+              <rect width="3" height="4" fill={colorRange[3]} />
             </pattern>
           </defs>
         </svg>

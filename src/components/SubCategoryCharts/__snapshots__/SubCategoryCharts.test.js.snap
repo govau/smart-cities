@@ -8,7 +8,7 @@ exports[`should match Snapshot 1`] = `
       <h1 className=\\"headingText\\">
         Buying houses
       </h1>
-      <Toggle className=\\"patternToggle\\" id=\\"chart-pattern-checkbox-buying-houses\\" label=\\"Make charts more accessible\\" onChange={[Function: mockConstructor]} checked={false} colorName=\\"jobs\\" />
+      <Toggle className=\\"patternToggle\\" id=\\"chart-pattern-checkbox-buying-houses\\" label=\\"Make charts more accessible\\" onChange={[Function]} checked={false} colorName=\\"jobs\\" />
     </header>
     <div className=\\"chartGrid\\" />
   </section>

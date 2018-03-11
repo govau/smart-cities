@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should match Snapshot 1`] = `
-"<span onMouseOver={[Function: bound showTooltip]} onMouseOut={[Function: bound hideTooltip]} onTouchStart={[Function: bound toggleTooltip]} className=\\"tooltipTarget\\">
+"<span onMouseOver={[Function]} onMouseOut={[Function]} onTouchStart={[Function]} className=\\"tooltipTarget\\">
   Hover here for help
 </span>"
 `;

@@ -2,7 +2,7 @@
 
 exports[`should match Snapshot 1`] = `
 "<div className=\\"wrapper\\">
-  <button className=\\"closeButton\\" onClick={[Function: mockConstructor]} aria-label=\\"close navigation menu\\">
+  <button className=\\"closeButton\\" onClick={[Function]} aria-label=\\"close navigation menu\\">
     ✕
   </button>
   <NavLink className=\\"coaWrapper\\" to=\\"/all-cities/overview\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">

@@ -53,5 +53,5 @@ it('should show the non-plural text to charts when only one chart', () => {
     />
   );
 
-  expect(component.find('.linkText').text()).toBe('View  1 chart');
+  expect(component.find('.linkText').text()).toBe('View 1 chart');
 });

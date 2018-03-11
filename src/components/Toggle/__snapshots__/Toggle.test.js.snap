@@ -6,7 +6,7 @@ exports[`should match Snapshot 1`] = `
     The toggle label
   </span>
   <span className=\\"ui\\">
-    <input type=\\"checkbox\\" className=\\"input\\" id=\\"the-id-toggle\\" checked={false} onChange={[Function: onChange]} />
+    <input type=\\"checkbox\\" className=\\"input\\" id=\\"the-id-toggle\\" checked={false} onChange={[Function]} />
     <span className=\\"onOff\\" />
     <span className=\\"handle\\" />
   </span>
