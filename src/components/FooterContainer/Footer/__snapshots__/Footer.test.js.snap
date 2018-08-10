@@ -4,9 +4,7 @@ exports[`should match Snapshot 1`] = `
 "<footer className=\\"wrapper\\">
   <div className=\\"container\\">
     <div className=\\"logosWrapper\\">
-      <div className=\\"coaWrapper\\">
-        <img className=\\"coaLogo\\" src=\\"coa-white.svg\\" alt=\\"coat of arms\\" />
-      </div>
+      <img className=\\"coaLogo\\" src=\\"australia-dta-logo.svg\\" alt=\\"coat of arms\\" />
       <div className=\\"logoDivider\\" />
       <img className=\\"dtaLogo\\" src=\\"dtaLogo.svg\\" alt=\\"dta\\" />
     </div>

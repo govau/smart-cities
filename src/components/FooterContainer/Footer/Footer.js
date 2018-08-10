@@ -10,7 +10,7 @@ import {
   EMAIL_ADDRESSES,
 } from '../../../constants';
 import Link from '../../Link/Link';
-import coaWhite from '../../../images/coa-white.svg';
+import logo from '../../../images/australia-dta-logo.svg';
 import dtaLogo from './dtaLogo.svg';
 
 const links = [
@@ -40,13 +40,11 @@ const Footer = props => (
   <footer className={style.wrapper}>
     <div className={style.container}>
       <div className={style.logosWrapper}>
-        <div className={style.coaWrapper}>
-          <img
-            className={style.coaLogo}
-            src={coaWhite}
-            alt="coat of arms"
-          />
-        </div>
+        <img
+          className={style.coaLogo}
+          src={logo}
+          alt="coat of arms"
+        />
 
         <div className={style.logoDivider} />
 

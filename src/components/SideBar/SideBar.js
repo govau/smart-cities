@@ -9,7 +9,7 @@ import {
   NO_CITY,
 } from '../../constants';
 import style from './SideBar.scss';
-import coaWhite from '../../images/coa-white.svg';
+import logo from '../../images/australia-dta-logo.svg';
 
 class SideBar extends Component {
   componentWillReceiveProps(nextProps) {
@@ -43,7 +43,7 @@ class SideBar extends Component {
         >
           <img
             className={style.coa}
-            src={coaWhite}
+            src={logo}
             alt="coat of arms"
           />
         </NavLink>

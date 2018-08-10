@@ -32,12 +32,15 @@
     align-items: center;
     justify-content: center;
     height: $main-header-height-desktop + $gov-header-height;
+    overflow: hidden;
   }
 }
 
 .coa {
-  width: 140px;
+  width: 120%;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .showOpen {
