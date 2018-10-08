@@ -38,7 +38,7 @@ export const EMAIL_ADDRESSES = {
 
 export const LINKS = {
   ALBURY_PHOTO_CREDIT: 'https://www.flickr.com/photos/49333819@N00',
-  CITIES_PERFORMANCE_NETWORK: 'https://cities.infrastructure.gov.au/performance-framework',
+  CITIES_PERFORMANCE_NETWORK: 'https://infrastructure.gov.au/cities/national-cities-performance-framework/',
   CONTACT_US: 'mailto:performance-dashboard@digital.gov.au',
   DTA_PRIVACY_POLICY: 'https://www.dta.gov.au/privacy-statement/',
   FEEDBACK: '/feedback',
@@ -50,7 +50,7 @@ export const LINKS = {
   PRIVACY_ACT: 'https://www.legislation.gov.au/Series/C2004A03712',
   PROTECTING_PDF: 'https://www.ag.gov.au/RightsAndProtections/CyberSecurity/Documents/PDF%20-%20Protecting%20Yourself%20Online%20-%20Second%20Edition%20-%20Booklet.pdf',
   SMART_CITIES_LINK: 'https://smart-cities.dashboard.gov.au',
-  SMART_CITIES_DPMC_LINK: 'https://cities.infrastructure.gov.au/smart-cities-plan',
+  SMART_CITIES_DPMC_LINK: 'https://infrastructure.gov.au/cities/',
   TOWNSVILLE_CITY_DEAL: 'https://cities.dpmc.gov.au/townsville-city-deal',
   WCAG: 'https://www.w3.org/TR/WCAG20/',
   RAW_DATA: 'https://data.gov.au/dataset/national-cities-performance-framework',
