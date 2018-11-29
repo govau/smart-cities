@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable */
 import React from 'react';
 import { COLOR_NAMES } from './misc';
 

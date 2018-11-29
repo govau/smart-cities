@@ -1,4 +1,4 @@
-import initialState from './../initialState';
+import initialState from '../initialState';
 import { CITIES } from '../../constants';
 
 export const parseCityData = (cities) => {

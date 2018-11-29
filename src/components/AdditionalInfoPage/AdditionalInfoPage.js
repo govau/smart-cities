@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import PageWrapper from '../PageWrapper/PageWrapper';
 import Link from '../Link/Link';

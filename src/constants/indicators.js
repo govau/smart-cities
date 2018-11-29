@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-
+/* eslint-disable */
 const FORMATS = {
   THOUSANDS: '0,0',
   ONE_DECIMAL: '0.0',

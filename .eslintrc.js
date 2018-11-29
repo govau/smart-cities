@@ -8,6 +8,7 @@ module.exports = {
   globals: {
     '__DEV__': true
   },
+  parser: 'babel-eslint',
   rules: {
     'react/jsx-filename-extension': 'off',
     'react/require-default-props': 'off',
