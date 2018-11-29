@@ -4,7 +4,7 @@ exports[`should render consistently 1`] = `
 <button
   aria-label="open menu"
   className="button"
-  onClick={[Function]}
+  onClick={[MockFunction]}
 >
   <div
     className="icon"
