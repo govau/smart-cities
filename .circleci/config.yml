@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.1.2
+      - image: circleci/node:8.5.0
     working_directory: ~/repo
     steps:
       - checkout
@@ -21,9 +21,9 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm test
-  deploy_staging: 
-    docker: 
-      - image: circleci/node:8.1.2
+  deploy_staging:
+    docker:
+      - image: circleci/node:8.5.0
     working_directory: ~/repo
     steps:
       - checkout
@@ -37,8 +37,8 @@ jobs:
       - run: ./scripts/cf_staging.sh
       - run: cf zero-downtime-push smart-cities-staging -f manifest-staging.yml -p build
   deploy_production:
-    docker: 
-      - image: circleci/node:8.1.2
+    docker:
+      - image: circleci/node:8.5.0
     working_directory: ~/repo
     steps:
       - checkout
@@ -50,26 +50,26 @@ jobs:
       - run: ./scripts/prepare_build.sh
       - run: ./scripts/cf_production.sh
       - run: cf zero-downtime-push smart-cities -f manifest-production.yml -p build
-workflows: 
+workflows:
   version: 2
   build_test_deploy:
-    jobs: 
+    jobs:
       - build:
           filters:
             tags:
               only: /.*/ # i.e. always build for all tags & branches
-      - deploy_staging: 
-          requires: 
+      - deploy_staging:
+          requires:
             - build
-          filters: 
-            branches: 
+          filters:
+            branches:
               only: /^master$/
       - deploy_production:
-          requires: 
+          requires:
             - build
-          filters: 
-            branches: 
-              ignore: 
+          filters:
+            branches:
+              ignore:
                 /.*/
-            tags: 
+            tags:
               only: /release-.*/
