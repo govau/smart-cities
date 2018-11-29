@@ -28,6 +28,7 @@
     "highcharts": "^6.0.2",
     "html-entities": "^1.2.1",
     "identity-obj-proxy": "3.0.0",
+    "json-stringify-safe": "^5.0.1",
     "lodash": "^4.17.5",
     "numeral": "^2.0.6",
     "prop-types": "^15.6.0",
