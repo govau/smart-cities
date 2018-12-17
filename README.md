@@ -118,14 +118,16 @@ CircleCI will test all commits pushed to the repo. As soon as a branch is merged
 to the `master` branch, it will (assuming tests pass) additionally deploy to the
 `smart-cities-staging` instance.
 
-Note that the staging instance is currently protected by basic auth, using the 
+Note that the staging instance is currently protected by basic auth, using the
 `BASICAUTH_STAGING_USER` and `BASICAUTH_STAGING_PASSWORD` CircleCI environment
-variables. *Do not* push manually to staging via CF CLI, as this will remove the 
+variables. *Do not* push manually to staging via CF CLI, as this will remove the
 basic auth.
+
+Staging URL: (http://smart-cities-staging.apps.y.cld.gov.au/)
 
 Production deploys are triggered when a tag is pushed with a version as tag name
 beginning with 'release-' followed by a timestmap, such as `release-20170714134437`.
-To deploy to production, ensure the working directory is clean (i.e., all files 
+To deploy to production, ensure the working directory is clean (i.e., all files
 have been added and committed), then:
 
 ```
