@@ -17,9 +17,7 @@ const FeedbackPage = () => {
           <h1
             id={ELEMENT_IDS.INITIAL_FOCUS_POINT_ON_PAGE}
             className={style.title}
-          >
-            Please give feedback
-          </h1>
+          >Please give feedback</h1>
 
           <p className={style.paragraph}>
             The National Cities Performance Framework Dashboard is a working prototype,

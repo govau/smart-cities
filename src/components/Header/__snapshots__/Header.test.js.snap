@@ -20,9 +20,6 @@ exports[`should match Snapshot 1`] = `
   </div>
   <div className=\\"mainContainer\\">
     <div className=\\"titleContainer\\">
-      <Pill height={16} className=\\"projectStatus\\">
-        ALPHA
-      </Pill>
       <NavLink className=\\"titleLinkWrapper\\" to=\\"/all-cities/overview\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
         <h1 className=\\"title\\">
           National Cities Performance
@@ -32,12 +29,7 @@ exports[`should match Snapshot 1`] = `
         Framework Dashboard
       </div>
     </div>
-    <div className=\\"orgContainer\\">
-      <a className=\\"orgLink\\" href=\\"https://dta.gov.au/\\">
-        <img className=\\"orgLogo\\" src=\\"dta-logo.svg\\" alt=\\"DTA logo\\" />
-      </a>
-      <FeedbackButton />
-    </div>
+    <div className=\\"orgContainer\\" />
   </div>
   <CategoryNavContainer categoryId=\\"jobs\\" cityId=\\"perth\\" cityName={[undefined]} />
 </header>"

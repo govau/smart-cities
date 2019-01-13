@@ -11,14 +11,9 @@ import {
   EMAIL_ADDRESSES,
 } from '../../../constants';
 import Link from '../../Link/Link';
-import logo from '../../../images/australia-dta-logo.svg';
-import dtaLogo from './dtaLogo.svg';
-
+{ /* import logo from '../../../images/crest1.png';  */ }
+{ /* import dtaLogo from '../../../images/crest1.png'; */ }
 const links = [
-  {
-    text: STRINGS.FEEDBACK_LINK,
-    href: LINKS.FEEDBACK,
-  },
   {
     text: STRINGS.PRIVACY_LINK,
     href: `${LINKS.ADDITIONAL_INFORMATION}#${ELEMENT_IDS.PRIVACY_POLICY}`,
@@ -40,22 +35,7 @@ const links = [
 const Footer = props => (
   <footer className={style.wrapper}>
     <div className={style.container}>
-      <div className={style.logosWrapper}>
-        <img
-          className={style.coaLogo}
-          src={logo}
-          alt="coat of arms"
-        />
-
-        <div className={style.logoDivider} />
-
-        <img
-          className={style.dtaLogo}
-          src={dtaLogo}
-          alt="dta"
-        />
-      </div>
-
+ 
       <div className={style.wordsWrapper}>
         {!!props.category && (
           <div className={style.categoryDetailsWrapper}>
@@ -79,6 +59,7 @@ const Footer = props => (
 
         <div className={style.footerLinks}>
           <div className={style.footerLinksRow}>
+		  <a href="https://infrastructure.gov.au/utilities/feedback.aspx">Give feedback</a>&#160; &#160; 
             {links.map(link => (
               <NavLink
                 key={link.href}

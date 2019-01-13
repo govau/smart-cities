@@ -6,13 +6,13 @@ import CategoryNavContainer from '../CategoryNavContainer/CategoryNavContainer';
 import CityHeader from '../CityHeader/CityHeader';
 import HamburgerButton from '../HamburgerButton/HamburgerButton';
 import FeedbackButton from '../FeedbackButton/FeedbackButton';
-import Pill from '../Pill/Pill';
+
 import {
   LINKS,
   NO_CATEGORY,
   NO_CITY,
 } from '../../constants';
-import dtaLogo from './dta-logo.svg';
+
 import star from './star-white.svg';
 import style from './Header.scss';
 
@@ -33,7 +33,7 @@ const Header = props => (
     </div>
     <div className={style.mainContainer}>
       <div className={style.titleContainer}>
-        <Pill height={16} className={style.projectStatus}>ALPHA</Pill>
+       
 
         <NavLink
           className={style.titleLinkWrapper}
@@ -45,10 +45,8 @@ const Header = props => (
         <div className={style.subtitle}>Framework Dashboard</div>
       </div>
       <div className={style.orgContainer}>
-        <a className={style.orgLink} href={LINKS.ORG}>
-          <img className={style.orgLogo} src={dtaLogo} alt="DTA logo" />
-        </a>
-        { props.onFeedbackPage || <FeedbackButton /> }
+      
+
       </div>
     </div>
 

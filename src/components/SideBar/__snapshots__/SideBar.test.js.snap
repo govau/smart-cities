@@ -6,7 +6,7 @@ exports[`should match Snapshot 1`] = `
     ✕
   </button>
   <NavLink className=\\"coaWrapper\\" to=\\"/all-cities/overview\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
-    <img className=\\"coa\\" src=\\"australia-dta-logo.svg\\" alt=\\"coat of arms\\" />
+    <img className=\\"coa\\" src=\\"DoIRDC_Stacked_reverse.svg\\" alt=\\"coat of arms\\" />
   </NavLink>
   <Connect(CityNav) cityId=\\"perth\\" />
 </div>"

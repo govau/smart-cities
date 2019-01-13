@@ -3,17 +3,13 @@
 exports[`should match Snapshot 1`] = `
 "<footer className=\\"wrapper\\">
   <div className=\\"container\\">
-    <div className=\\"logosWrapper\\">
-      <img className=\\"coaLogo\\" src=\\"australia-dta-logo.svg\\" alt=\\"coat of arms\\" />
-      <div className=\\"logoDivider\\" />
-      <img className=\\"dtaLogo\\" src=\\"dtaLogo.svg\\" alt=\\"dta\\" />
-    </div>
     <div className=\\"wordsWrapper\\">
       <div className=\\"footerLinks\\">
         <div className=\\"footerLinksRow\\">
-          <NavLink to=\\"/feedback\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          <a href=\\"https://infrastructure.gov.au/utilities/feedback.aspx\\">
             Give feedback
-          </NavLink>
+          </a>
+             
           <NavLink to=\\"/additional-information#privacy\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
             Privacy policy
           </NavLink>
@@ -28,10 +24,10 @@ exports[`should match Snapshot 1`] = `
           </NavLink>
         </div>
         <div className=\\"footerLinksRow\\">
-          Got a question on the Performance Framework? Contact PM&amp;C
+          Got a question on the Performance Framework? Contact the department
           : 
-          <a href=\\"mailto:cityperformance@pmc.gov.au?subject=Performance Framework\\">
-            cityperformance@pmc.gov.au
+          <a href=\\"mailto:cities@infrastructure.gov.au?subject=Performance Framework\\">
+            cities@infrastructure.gov.au
           </a>
         </div>
         <div className=\\"footerLinksRow\\">

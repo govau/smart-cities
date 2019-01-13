@@ -20,7 +20,7 @@ const AdditionalInfoPage = () => (
         </h1>
 
         <p className={style.paragraph}>
-          The Digital Transformation Agency (DTA) website has been designed to
+          The National Cities Performance Framework Dashboard has been designed to
           meet the Australian Government standard established for web accessibility.
         </p>
 
@@ -96,12 +96,11 @@ const AdditionalInfoPage = () => (
         <p className={style.paragraph}>
           This privacy statement is
           about <Link href={LINKS.SMART_CITIES_LINK} /> — this is an online service managed
-          by the Digital Transformation Agency (DTA). The DTA is located in Canberra, Australia.
+          by the Department of Infrastructure, Regional Development and Local Government. The department is located in Canberra, Australia.
         </p>
 
         <p className={style.paragraph}>
-          The <Link href={LINKS.DTA_PRIVACY_POLICY}>Digital Transformation
-          Agency privacy policy</Link> describes how we handle your personal information.
+          The <Link href={LINKS.DTA_PRIVACY_POLICY}>department privacy policy</Link> describes how we handle your personal information.
         </p>
 
         <p className={style.paragraph}>
@@ -114,7 +113,7 @@ const AdditionalInfoPage = () => (
         </p>
 
         <p className={style.paragraph}>
-          This DTA website is bound by the <Link href={LINKS.PRIVACY_ACT}>Commonwealth
+          This website is bound by the <Link href={LINKS.PRIVACY_ACT}>Commonwealth
           Privacy Act 1988</Link>, including the Australian Privacy Principles
           contained in the Privacy Act.
         </p>

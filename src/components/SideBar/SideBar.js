@@ -10,7 +10,8 @@ import {
   NO_CITY,
 } from '../../constants';
 import style from './SideBar.scss';
-import logo from '../../images/australia-dta-logo.svg';
+{ /* import logo from '../../images/australia-dta-logo.svg'; */}
+import logo from '../../images/DoIRDC_Stacked_reverse.svg';
 
 class SideBar extends Component {
   componentWillReceiveProps(nextProps) {
