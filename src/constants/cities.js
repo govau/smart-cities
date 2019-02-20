@@ -36,42 +36,42 @@ export default {
     name: 'Geelong',
     description: 'Geelong is a port city located on Corio Bay, approximately 75 kilometres to the south-west of Melbourne. Geelong was established in 1838, is Victoria’s second largest city, and is the gateway to the Great Ocean Road.',
   },
-  'Gold Coast - Tweed Heads': {
+  'Gold Coast - Tweed': {
     id: 'gold-coast-tweed-heads',
     name: 'Gold Coast-Tweed Heads',
     description: 'Gold Coast-Tweed Heads includes the major centres of Surfers Paradise and the twin cities of Coolangatta in Queensland and Tweed Heads in New South Wales. Gold Coast-Tweed Heads stretches from the southern coast of Queensland just across the state border to the northern coast of New South Wales.',
   },
-  'Greater Adelaide': {
+  'Adelaide': {
     id: 'greater-adelaide',
     name: 'Adelaide',
     description: 'Adelaide is the capital of South Australia and is located on the Gulf St Vincent. Adelaide was established in 1836 and is colloquially known as the City of Churches due to the high number of historically significant church buildings. Greater Adelaide spans an area of around 3,200 square kilometres.',
   },
-  'Greater Brisbane': {
+  'Brisbane': {
     id: 'greater-brisbane',
     name: 'Brisbane',
     description: 'Brisbane is the capital and most populous city in Queensland. It is located on the banks of the Brisbane River, was established in 1825, and is Australia’s second largest cities by area. Brisbane City Council is the largest local government by population in Australia.',
   },
-  'Greater Darwin': {
+  'Darwin': {
     id: 'greater-darwin',
     name: 'Darwin',
     description: 'Darwin is a coastal city and the capital of the Northern Territory. Darwin has a tropical climate with a distinct wet and dry season and is the gateway to the World Heritage listed Kakadu National Park. Darwin spans an area of around 3,100 square kilometres.The Commonwealth and Northern Territory Government have entered into an agreement to create a City Deal for Darwin.',
   },
-  'Greater Hobart': {
+  'Hobart': {
     id: 'greater-hobart',
     name: 'Hobart',
     description: 'Hobart is Australia’s southern-most capital city and the capital of Tasmania. Hobart sits at the base of Mount Wellington and is built on the banks of the Derwent River, whose deep port serves as a launching pad for Antarctic expeditions. Hobart is one of Australia’s oldest cities, established in 1804.',
   },
-  'Greater Melbourne': {
+  'Melbourne': {
     id: 'greater-melbourne',
     name: 'Melbourne',
     description: 'Melbourne is the capital of Victoria and the state’s most populous city. Greater Melbourne is located on Port Phillip Bay and spans an area of around 9,900 square kilometres. Melbourne is Australia’s fastest growing capital city.',
   },
-  'Greater Perth': {
+  'Perth': {
     id: 'greater-perth',
     name: 'Perth',
     description: 'Perth is a coastal city, located on the Swan River. It is Australia’s western-most capital city. It was established in 1829 and is the capital and most populous city in Western Australia. Greater Perth spans an area of around 6,400 square kilometres.',
   },
-  'Greater Sydney': {
+  'Sydney': {
     id: 'greater-sydney',
     name: 'Sydney',
     description: 'Sydney is Australia’s most populous city and the capital of New South Wales. Sydney is situated around its large natural harbour and is home to the Sydney Opera House and Sydney Harbour Bridge. Greater Sydney is Australia’s oldest city and one of the largest by area.',
@@ -93,7 +93,7 @@ export default {
     name: 'Mackay',
     description: 'Mackay is a coastal city in Queensland, located 970 kilometres north of Brisbane on the Pioneer River. Mackay has a humid subtropical climate and is one of the smallest of the 21 cities by area.',
   },
-  'Newcastle - Maitland': {
+  'Newcastle': {
     id: 'newcastle-maitland',
     name: 'Newcastle-Maitland',
     description: 'The Newcastle-Maitland region encompasses the cities of both Newcastle and Maitland in New South Wales. Newcastle is located on the coast at the mouth of the Hunter River, while Maitland is located just over 30 kilometres further inland.',

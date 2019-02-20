@@ -1,7 +1,5 @@
-import {
-  CATEGORIES,
-  CATEGORY_IDS,
-} from './categories';
+import { CATEGORY_IDS } from './categories';
+import { CATEGORIES } from './categories';
 import { MAX_CATEGORY_NAV_TEXT_LENGTH } from './misc';
 import INDICATORS from './indicators.js';
 import iconDefinitions from '../components/Icon/iconDefinitions';

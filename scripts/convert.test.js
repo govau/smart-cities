@@ -1,17 +1,17 @@
-const mockCsvData = `Cities,"Population, All persons, People","Population, persons, Annual Growth %"
-Greater Sydney,4920000,0.021
-Greater Perth,2040000,0.016`;
+const mockCsvData = `city,"total_population","population_growth"
+Sydney,4920000,0.021
+Perth,2040000,0.016`;
 
 const expectedOutputObject = [
   {
-    source: 'Greater Sydney',
+    source: 'Sydney',
     indicators: {
       population: 4920000,
       growthRate: 0.021
     },
   },
   {
-    source: 'Greater Perth',
+    source: 'Perth',
     indicators: {
       population: 2040000,
       growthRate: 0.016
@@ -22,11 +22,11 @@ const expectedOutputObject = [
 jest.mock('../src/constants/indicators', () => ({
   population: {
     name: 'The population indicator name',
-    source: 'Population, All persons, People',
+    source: 'total_population',
   },
   growthRate: {
     name: 'Annual population growth rate',
-    source: 'Population, persons, Annual Growth %',
+    source: 'population_growth',
   },
 }));
 

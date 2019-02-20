@@ -16,10 +16,10 @@ const indicators = Object.entries(INDICATORS).map(([key, indicator]) => ({
 getStdin().then((rawCsv) => {
   csv.parse(rawCsv, { columns: true }, (err, data) => {
     const cities = data.map((row) => {
-      if (!row.Cities) return null;
+      if (!row.city) return null;
 
       const city = {
-        source: row.Cities,
+        source: row.city,
         indicators: {},
       };
 
