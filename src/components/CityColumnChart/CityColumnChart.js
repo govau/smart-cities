@@ -391,7 +391,7 @@ class CityColumnChart extends Component {
               contextual={firstIndicator.contextual}
             />
 
-            {firstIndicator.lastUpdated && `Last updated ${firstIndicator.lastUpdated}`}
+            {firstIndicator.lastUpdated && `Reference period ${firstIndicator.lastUpdated}`}
           </div>
 
           {isMultiple && (
