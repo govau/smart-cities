@@ -10,19 +10,9 @@ exports[`should match Snapshot 1`] = `
       <img className=\\"smartCitiesLogo\\" src=\\"smart-cities-logo-white.svg\\" alt=\\"\\" />
     </div>
   </div>
-  <div className=\\"subInfoWrapper\\">
-    <div className=\\"subInfoContainer\\">
-      <h1 id=\\"focus-point\\" className=\\"infoTitle\\">
-        Indicator Revision
-      </h1>
-      <p className=\\"infoBodyText\\">
-        To keep the dashboard up-to-date, we&#39;ve added more recent data on Australian cities. We&#39;ve also changed the methods we use to calculate some of the indicators. So please be careful when interpreting any changes you notice.
-      </p>
-    </div>
-  </div>
   <div className=\\"infoWrapper\\">
     <div className=\\"infoContainer\\">
-      <h1 className=\\"infoTitle\\">
+      <h1 id=\\"focus-point\\" className=\\"infoTitle\\">
         About
       </h1>
       <p className=\\"infoBodyText\\">

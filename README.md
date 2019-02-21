@@ -1,4 +1,4 @@
-# Smart Cities 
+# Smart Cities
 
 # Developing locally
 ## First time

@@ -28,7 +28,6 @@
     "html-entities": "^1.2.1",
     "identity-obj-proxy": "3.0.0",
     "lodash": "^4.17.11",
-    "minimist": "^1.2.0",
     "numeral": "^2.0.6",
     "prop-types": "^15.6.0",
     "react": "^16.8.2",
@@ -43,6 +42,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
+    "acorn": "^6.0.4",
     "autoprefixer": "7.1.4",
     "babel-core": "6.26.0",
     "babel-eslint": "^9.0.0",
@@ -93,10 +93,7 @@
     "test": "node scripts/test.js --env=jsdom --colors",
     "test:coverage": "npm run test -- --coverage",
     "test:ci": "CI=true npm run test -- --coverage --runInBand --colors",
-    "generate-indicators-data": "node -r @std/esm scripts/convertIndicators.js -metaFile resources/metaData_file.csv -outFile src/constants/indicators.js",
-    "generate-categories-data": "node -r @std/esm scripts/convertCategories.js -metaFile resources/metaData_file.csv -outFile src/constants/categories.js",
-    "generate-city-data": "node -r @std/esm scripts/convert.js < resources/data_file.csv > public/data/smartCitiesData.json",
-    "rebuild-all-data": "npm run generate-indicators-data && npm run generate-categories-data && npm run generate-city-data",
+    "generate-city-data": "node -r @std/esm scripts/convert.js < resources/cities.csv > public/data/smartCitiesData.json",
     "deploy": "npm version major && git push --tags"
   },
   "jest": {
