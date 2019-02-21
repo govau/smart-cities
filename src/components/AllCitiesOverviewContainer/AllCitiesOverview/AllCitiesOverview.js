@@ -41,10 +41,23 @@ const AllCitiesOverview = props => (
       </div>
     </div>
 
-    <div className={style.infoWrapper}>
-      <div className={style.infoContainer}>
+    <div className={style.subInfoWrapper}>
+      <div className={style.subInfoContainer}>
         <h1
           id={ELEMENT_IDS.INITIAL_FOCUS_POINT_ON_PAGE}
+          className={style.infoTitle}
+        >
+          Indicator Revision
+        </h1>
+
+        <p className={style.infoBodyText}>
+          To keep the dashboard up-to-date, we've added more recent data on Australian cities. We've also changed the methods we use to calculate some of the indicators. So please be careful when interpreting any changes you notice.</p>
+      </div>
+    </div>
+
+	 <div className={style.infoWrapper}>
+      <div className={style.infoContainer}>
+        <h1
           className={style.infoTitle}
         >
           About
@@ -65,7 +78,7 @@ const AllCitiesOverview = props => (
         </p>
       </div>
     </div>
-
+	
     <div className={style.subInfoWrapper}>
       <div className={style.subInfoContainer}>
         <h1 className={style.infoTitle}>
