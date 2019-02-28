@@ -25,7 +25,7 @@ export default {
     source: 'Population, Persons, People',
   },
   growthRate: {
-    name: 'Annual population growth rate',
+    name: 'Average annual population growth rate',
     legendText: 'Annual growth',
     format: FORMATS.PERCENT_ZERO_TO_TWO_DECIMALS,
     contextual: true,
@@ -169,7 +169,7 @@ export default {
     source: 'Education attainment - Completed Bachelor Degree or Higher, % of population',
   },
   dispersion: {
-    name: 'Local governments per 100k people',
+    name: 'Local governments per city',
     format: FORMATS.ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
@@ -215,7 +215,7 @@ export default {
     source: 'Dwelling price to income ratio, Ratio',
   },
   jobsCar: {
-    name: 'Jobs accessible by car within 30 minutes',
+    name: 'Proportion of jobs accessible by car within 30 minutes',
     format: FORMATS.PERCENT_ZERO_OR_ONE_DECIMAL,
     contextual: false,
     hideForCities: ['western-sydney'],
@@ -258,7 +258,7 @@ export default {
     source: 'Proportion of population searching for work, Unemployed total, Persons, Percentage of Youth Population',
   },
   employmentGrowth: {
-    name: 'Annual employment growth',
+    name: 'Annual employment growth rate',
     format: FORMATS.PERCENT_ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2017',
@@ -286,21 +286,21 @@ export default {
     source: 'Residential construction costs, AUD per square metre',
   },
   rentStress: {
-    name: 'Proportion of households under rent stress',
+    name: 'Proportion of renters under rent stress',
     format: FORMATS.PERCENT_ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
     source: 'Rent Stress, Proportion of households under rent stress, Dwellings',
   },
   mortgageStress: {
-    name: 'Proportion of households under mortgage stress',
+    name: 'Proportion of mortgagees under mortgage stress',
     format: FORMATS.PERCENT_ZERO_TO_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
     source: 'Mortgage stress, Proportion of households under mortgage stress, Dwellings',
   },
   residentialBuildingApprovalsGrowth: {
-    name: 'Population change per residential building approval',
+    name: 'Building approvals per 100k people',
     format: FORMATS.ONE_OR_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2017',
@@ -344,7 +344,7 @@ export default {
     source: 'Scope 2 emissions',
   },
   accessToGreenSpace: {
-    name: 'Dwellings with access to greenspace',
+    name: 'Dwellings with access to public open space',
     format: FORMATS.PERCENT_ZERO_OR_ONE_DECIMAL,
     contextual: false,
     lastUpdated: '2016',

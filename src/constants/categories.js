@@ -156,7 +156,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Median dwelling price',
+            name: 'Average dwelling price',
             axisTitle: '',
             description: 'This shows the median price over 12 months for detached and non-detached dwellings.\n\nSource: CoreLogic ',
             indicatorIds: [
@@ -307,7 +307,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Annual employment growth',
+            name: 'Annual employment growth rate',
             axisTitle: '',
             description: 'This shows the percentage change in the level of employment in the current year compared to the previous year. \n\nSource: ABS Labour Force',
             indicatorIds: [
@@ -412,7 +412,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Proportion of households under mortgage stress',
+            name: 'Proportion of mortgagees under mortgage stress',
             axisTitle: '',
             description: 'This shows the proportion of occupied households for which mortgage payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -437,7 +437,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Population change per residential building approval',
+            name: 'Building approvals per 100k people',
             axisTitle: '',
             description: 'The ratio of annual population change to annual residential building approvals, calculated as a five-year average \n\nSource: ABS - Building Approvals 2017, ABS - Regional Population Growth 2016',
             indicatorIds: [
@@ -474,7 +474,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Proportion of households under rent stress',
+            name: 'Proportion of renters under rent stress',
             axisTitle: '',
             description: 'This shows the proportion of occupied households for which rent payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
             indicatorIds: [
@@ -534,7 +534,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Jobs accessible by car within 30 minutes',
+            name: 'Proportion of jobs accessible by car within 30 minutes',
             axisTitle: '',
             description: 'This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less. \n\nSource: SGS Economics and Planning ',
             max: 1,
@@ -595,7 +595,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Dwellings with access to greenspace',
+            name: 'Dwellings with access to public open space',
             axisTitle: '',
             description: 'This shows the share of dwellings in a city that are located within 400 metres of green space. \n\nSource: ABS - Australian Statistical Geography Standard',
             max: 1,
@@ -961,7 +961,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Local governments per 100k people',
+            name: 'Local governments per city',
             axisTitle: '',
             description: 'This shows the number of local government areas per 100 000 persons. \n\nSource: ABS - Regional Population Growth ',
             indicatorIds: [
