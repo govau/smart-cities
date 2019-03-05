@@ -93,7 +93,7 @@ export default {
     name: 'Mackay',
     description: 'Mackay is a coastal city in Queensland, located 970 kilometres north of Brisbane on the Pioneer River. Mackay has a humid subtropical climate and is one of the smallest of the 21 cities by area.',
   },
-  'Newcastle - Maitland': {
+  'Newcastle': {
     id: 'newcastle-maitland',
     name: 'Newcastle-Maitland',
     description: 'The Newcastle-Maitland region encompasses the cities of both Newcastle and Maitland in New South Wales. Newcastle is located on the coast at the mouth of the Hunter River, while Maitland is located just over 30 kilometres further inland.',
