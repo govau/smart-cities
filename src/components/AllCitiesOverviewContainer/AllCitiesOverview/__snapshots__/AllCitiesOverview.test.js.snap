@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match Snapshot 1`] = `
+"<PageWrapper categoryId=\\"overview\\" cityId=\\"all-cities\\">
+  <div className=\\"heroWrapper\\">
+    <div className=\\"heroContainer\\">
+      <p className=\\"heroText\\">
+        Tracking progress and performance across Australia’s largest cities
+      </p>
+      <img className=\\"smartCitiesLogo\\" src=\\"smart-cities-logo-white.svg\\" alt=\\"\\" />
+    </div>
+  </div>
+  <div className=\\"infoWrapper\\">
+    <div className=\\"infoContainer\\">
+      <h1 id=\\"focus-point\\" className=\\"infoTitle\\">
+        About
+      </h1>
+      <p className=\\"infoBodyText\\">
+        Australian cities have long been an important economic and social asset and will be more important than ever in the 21st century. Our cities provide great opportunities for innovation and productivity in the global knowledge-based economy and are recognised as great places to live, work and study.
+      </p>
+      <p className=\\"infoBodyText\\">
+        The Australian Government is committed to the continual improvement of our cities. 
+        <Link href=\\"https://infrastructure.gov.au/cities/national-cities-performance-framework/\\" unstyled={false}>
+          The National Cities Performance Framework
+        </Link>
+         will assist in this goal by providing data to help all levels of government, industry and the community to make the best policy and investment decisions for Australia’s future.
+      </p>
+    </div>
+  </div>
+  <div className=\\"subInfoWrapper\\">
+    <div className=\\"subInfoContainer\\">
+      <h1 className=\\"infoTitle\\">
+        <span className=\\"infoTitleHeavy\\">
+          Policy priorities
+        </span>
+         &amp; Context
+      </h1>
+      <p className=\\"subInfoBodyText\\">
+        There are 6 policy priorities to help achieve the objectives of the 
+        <Link href=\\"https://infrastructure.gov.au/cities/smart-cities/plan/index.aspx\\" unstyled={false}>
+          Smart Cities Plan
+        </Link>
+        . The National Cities Performance Framework is designed to measure how well our cities are performing, using two types of indicators.
+      </p>
+      <dl className=\\"legend\\">
+        <div className=\\"legendRow\\">
+          <dt className=\\"term\\">
+            <Icon className=\\"icon\\" color=\\"GREY_600\\" icon=\\"performanceIndicator\\" size={32} />
+            Performance
+          </dt>
+          <dd className=\\"definition\\">
+            Aspects that can be measured and tracked against policy priorities.
+          </dd>
+        </div>
+        <div className=\\"legendRow\\">
+          <dt className=\\"term\\">
+            <Icon className=\\"icon\\" color=\\"GREY_600\\" icon=\\"contextualIndicator\\" size={32} />
+            Context
+          </dt>
+          <dd className=\\"definition\\">
+            Characteristics that help us understand what it’s like and why it functions the way it does.
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+  <CategoryOverviews cities={{...}} />
+</PageWrapper>"
+`;
