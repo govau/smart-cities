@@ -17,7 +17,7 @@ const defaultProps = {
     },
   ],
 };
-
+ 
 it('should match Snapshot', () => {
   const component = shallow(
     <AllCitiesOverview {...defaultProps} />

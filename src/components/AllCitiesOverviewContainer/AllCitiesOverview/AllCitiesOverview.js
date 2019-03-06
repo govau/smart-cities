@@ -65,7 +65,7 @@ const AllCitiesOverview = props => (
         </p>
       </div>
     </div>
-
+ 
     <div className={style.subInfoWrapper}>
       <div className={style.subInfoContainer}>
         <h1 className={style.infoTitle}>
