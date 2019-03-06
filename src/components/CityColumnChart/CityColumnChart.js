@@ -38,7 +38,7 @@ function getSeriesDataForIndicator(cities, indicator, mainCity) {
     return null;
   });
 }
-
+ 
 // Column charts are always sorted by descending value
 // if there is more than one indicator the first is used
 function sortAndFilterChartData(props) {

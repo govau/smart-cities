@@ -1,5 +1,5 @@
 // don't ever change these, they must remain consistent over time for reporting
-const UA = 'UA-61222473-12';
+const UA = 'UA-10073491-32';
 const FMP = 'First meaningful paint (ms)';
 const TTI = 'Time to interactive (ms)';
 
