@@ -225,7 +225,7 @@ export default {
     format: FORMATS.PERCENT_ZERO_TO_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2017',
-    source: 'Proportion of population searching for work, Unemployed total, Persons, Percentage of Youth Population',
+    source: 'youth_unemployment',
   },
   employmentGrowth: {
     name: 'Annual employment growth rate',
@@ -304,13 +304,6 @@ export default {
     lastUpdated: '2017',
     source: 'public_transport_access',
   },
-  grossParklandArea: {
-    name: 'Percentage of area that is greenspace',
-    format: FORMATS.PERCENT_ZERO_OR_ONE_DECIMAL,
-    contextual: false,
-    lastUpdated: '2016',
-    source: 'Land area that is parkland, % of gross land area',
-  },
   greenhouseGasEmissions1: {
     name: 'Greenhouse gas emissions (scope 1) tonnes per person',
     legendText: 'Scope 1',
@@ -318,14 +311,6 @@ export default {
     contextual: false,
     lastUpdated: '2015',
     source: 'greenhouse_gas',
-  },
-  greenhouseGasEmissions2: {
-    name: 'Greenhouse gas emissions (scope 2) tonnes per person',
-    legendText: 'Scope 2',
-    format: FORMATS.ZERO_TO_TWO_DECIMALS,
-    contextual: false,
-    lastUpdated: '2015',
-    source: 'Scope 2 emissions',
   },
   accessToGreenSpace: {
     name: 'Dwellings with access to public open space',
@@ -346,7 +331,7 @@ export default {
     format: FORMATS.ZERO_TO_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '',
-    source: 'office_energy_effiiency',
+    source: 'office_energy_efficiency',
   },
   volunteeringRate: {
     name: 'Proportion of people that volunteer',
@@ -397,13 +382,6 @@ export default {
     lastUpdated: '2016',
     source: 'patent_application',
   },
-  trademarkApplications: {
-    name: 'Trademark applications per 100k people',
-    format: FORMATS.ZERO_OR_ONE_DECIMAL,
-    contextual: false,
-    lastUpdated: '2016',
-    source: 'Trademark applications, applications per 100 000 people',
-  },
   newBusinessEntrants: {
     name: 'New business entry rate',
     legendText: 'Entrants',
@@ -425,13 +403,6 @@ export default {
     contextual: true,
     lastUpdated: '2016',
     source: 'population_density',
-  },
-  dependencyRatioNotWorkingAge: {
-    name: 'Dependency ratio',
-    format: FORMATS.ONE_OR_TWO_DECIMALS,
-    contextual: true,
-    lastUpdated: '2016',
-    source: 'Dependency ratio, Number of persons of non-working age per person of working age',
   },
   dependencyRatio14OrYounger: {
     name: 'Dependency ratio: 14 or younger',

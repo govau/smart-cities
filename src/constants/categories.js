@@ -48,7 +48,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Annual population growth rate',
+            name: 'Average annual population growth rate',
             axisTitle: '',
             description: 'This shows the percentage change in the level of the population on the preceding year, and the average annual percentage change over the past ten years.\n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
@@ -287,6 +287,7 @@ export const CATEGORIES = [
               'goodsProducingSector',
               'marketServices',
               'nonMarketServices',
+			  'grossRegionalProduct',
             ],
           },
         ],
@@ -393,7 +394,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Median dwelling price',
+            name: 'Average house price',
             axisTitle: '',
             description: 'This shows the median price over 12 months for detached and non-detached dwellings.\n\nSource: CoreLogic ',
             indicatorIds: [
