@@ -21,12 +21,11 @@ export const CATEGORIES = [
     navName: 'Context',
     name: 'Context',
     description: 'Context indicators show the characteristics of a city that help us understand what it’s like and why it functions the way it does.',
-    shortDescription: <span>Characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework. <br /><br />This section is a collection of context indicators.</span>,
-    allCitiesShortDescription: <span>Characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework. <br /><br />This section is a collection of context indicators.</span>,
+    shortDescription: '<span>Characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework. <br /><br />This section is a collection of context indicators.</span>',
+    allCitiesShortDescription: '<span>Characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework. <br /><br />This section is a collection of context indicators.</span>',
     heroIndicatorId: 'population',
     overviewIndicatorIds: [
       'growthRate',
-      'population10yr',
     ],
     subCategories: [
       {
@@ -38,7 +37,6 @@ export const CATEGORIES = [
         summaryIndicatorIds: [
           'indigenousPopulation',
           'growthRate',
-          'population10yr',
         ],
         charts: [
           {
@@ -55,7 +53,6 @@ export const CATEGORIES = [
             description: 'This shows the percentage change in the level of the population on the preceding year, and the average annual percentage change over the past ten years.\n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
               'growthRate',
-              'population10yr',
             ],
           },
           {
@@ -83,14 +80,6 @@ export const CATEGORIES = [
               'dependencyRatio14OrYounger',
               'dependencyRatio15To64',
               'dependencyRatio65OrOlder',
-            ],
-          },
-          {
-            name: 'Dependency ratio',
-            axisTitle: '',
-            description: 'This shows the number of persons of non-working age (0-14 and 65+) per person of working age (15-64) \n\nSource: ABS - Regional Population Growth',
-            indicatorIds: [
-              'dependencyRatioNotWorkingAge',
             ],
           },
           {
@@ -175,7 +164,6 @@ export const CATEGORIES = [
         summaryIndicatorIds: [
           'lifeExpectancy',
           'shareInBottomIncomeQuintile',
-          'socioEconomicIndex',
         ],
         charts: [
           {
@@ -194,14 +182,6 @@ export const CATEGORIES = [
             description: 'This shows the share of households in bottom 20% of the national household income distribution.\n\nSource: ABS - Census 2016',
             indicatorIds: [
               'shareInBottomIncomeQuintile',
-            ],
-          },
-          {
-            name: 'Index of Relative Socio-economic Disadvantage',
-            axisTitle: '',
-            description: 'This shows an index of relative socio-economic disadvantage. A low score indicates relatively greater disadvantage.\n\nSource: ABS - Census 2011',
-            indicatorIds: [
-              'socioEconomicIndex',
             ],
           },
           {
@@ -224,6 +204,7 @@ export const CATEGORIES = [
           'goodsProducingSector',
           'marketServices',
           'nonMarketServices',
+		  'grossRegionalProduct',
         ],
         charts: [
           {
@@ -235,6 +216,7 @@ export const CATEGORIES = [
               'goodsProducingSector',
               'marketServices',
               'nonMarketServices',
+			  'grossRegionalProduct',
             ],
           },
         ],
@@ -364,7 +346,8 @@ export const CATEGORIES = [
         highlightColorDark: 'HOUSING_600',
         iconId: 'housingHousingAffordability',
         summaryIndicatorIds: [
-          'mortgageStress',
+          'housingStress',
+		  'mortgageStress',
           'medianHousePrice',
           'medianUnitPrice',
         ],
@@ -399,6 +382,14 @@ export const CATEGORIES = [
             description: 'This shows the proportion of occupied households for which mortgage payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
             indicatorIds: [
               'mortgageStress',
+            ],
+          },
+		  {
+            name: 'Proportion of households under housing stress',
+            axisTitle: '',
+            description: 'This shows the proportion of occupied households for which mortgage payments make up 30 per cent or more of household income. \n\nSource: ABS Census 2016',
+            indicatorIds: [
+              'housingStress',
             ],
           },
           {
@@ -502,6 +493,7 @@ export const CATEGORIES = [
     heroIndicatorId: 'jobsCar',
     overviewIndicatorIds: [
       'jobsCar',
+	  'jobsNumberCar',
     ],
     subCategories: [
       {
@@ -522,6 +514,15 @@ export const CATEGORIES = [
             max: 1,
             indicatorIds: [
               'jobsCar',
+            ],
+          },
+		  {
+            name: 'Number of jobs accessible by car within 30 minutes',
+            axisTitle: '',
+            description: u'This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less. \n\nSource: SGS Economics and Planning ',
+            max: 1,
+            indicatorIds: [
+              'jobsNumberCar',
             ],
           },
           {
@@ -572,7 +573,6 @@ export const CATEGORIES = [
         iconId: 'liveabilityEnvironment',
         summaryIndicatorIds: [
           'accessToPublicTransport',
-          'grossParklandArea',
           'greenhouseGasEmissions1',
         ],
         charts: [
@@ -583,22 +583,6 @@ export const CATEGORIES = [
             max: 1,
             indicatorIds: [
               'accessToGreenSpace',
-            ],
-          },
-          {
-            name: 'Percentage of area that is greenspace',
-            axisTitle: '',
-            description: 'This shows the proportion of land area in a city that is defined as green space. \n\nSource: ABS - Australian Statistical Geography Standard',
-            indicatorIds: [
-              'grossParklandArea',
-            ],
-          },
-          {
-            name: 'Air pollution particles smaller than PM10',
-            axisTitle: 'Per cubic metre',
-            description: 'This shows the average amount of particulate matter in a city’s air per cubic metre, measured over the course of a year for particles that are less than 10 microns in diameter. \n\nSource: World Health Organisation',
-            indicatorIds: [
-              'airPollutionPm10',
             ],
           },
           {
@@ -670,14 +654,6 @@ export const CATEGORIES = [
             description: 'This shows the proportion of residents who speak a language other than English at home. \n\nSource: ABS Census 2016',
             indicatorIds: [
               'languagesOtherThanEnglish',
-            ],
-          },
-          {
-            name: 'Index of Relative Socio-economic Disadvantage',
-            axisTitle: '',
-            description: 'This shows an index of relative socio-economic disadvantage. A low score indicates relatively greater disadvantage.\n\nSource: ABS - Census 2011',
-            indicatorIds: [
-              'socioEconomicIndex',
             ],
           },
           {
@@ -770,7 +746,6 @@ export const CATEGORIES = [
         summaryIndicatorIds: [
           'householdsWithBroadband',
           'patentApplications',
-          'trademarkApplications',
         ],
         charts: [
           {
@@ -779,7 +754,6 @@ export const CATEGORIES = [
             description: 'This shows the business entry and exit rates: the number of new businesses that started actively trading on the business register over the past year as a share of the total number of registered businesses at the start of the year. \n\nSource: ABS Data by Region',
             indicatorIds: [
               'newBusinessEntrants',
-              'newBusinessExits',
             ],
           },
           {
@@ -798,14 +772,6 @@ export const CATEGORIES = [
               'patentApplications',
             ],
           },
-          {
-            name: 'Trademark applications per 100k people',
-            axisTitle: '',
-            description: 'This shows the number of trademark applications by people resident in a city per 100,000 people per year. \n\nSource: ABS Data by Region',
-            indicatorIds: [
-              'trademarkApplications',
-            ],
-          },
         ],
       },
       {
@@ -815,7 +781,6 @@ export const CATEGORIES = [
         iconId: 'innovationDigital',
         summaryIndicatorIds: [
           'knowledgeWorkersRatio',
-          'linkedInConnectivityLocal',
         ],
         charts: [
           {
@@ -824,17 +789,6 @@ export const CATEGORIES = [
             description: 'This shows the share of employed persons that work in the top three knowledge-intensive service industries: professional, scientific and technical services; information, media and telecommunications; and financial and insurance services. \n\nSource: ABS Labour Force',
             indicatorIds: [
               'knowledgeWorkersRatio',
-            ],
-          },
-          {
-            name: 'LinkedIn contacts by location',
-            axisTitle: '',
-            description: 'This shows the average share of LinkedIn account holder contacts that are located in the same city, other parts of Australia or overseas. \n\nSource: LinkedIn',
-            stacked: true,
-            indicatorIds: [
-              'linkedInConnectivityLocal',
-              'linkedInConnectivityRestOfNation',
-              'linkedInConnectivityInternational',
             ],
           },
         ],
@@ -860,7 +814,6 @@ export const CATEGORIES = [
         summaryIndicatorIds: [
           'indigenousPopulation',
           'growthRate',
-          'population10yr',
         ],
         charts: [
           {
@@ -877,7 +830,6 @@ export const CATEGORIES = [
             description: 'This shows the percentage change in the level of the population on the preceding year, and the average annual percentage change over the past ten years.\n\nSource: ABS - Regional Population Growth',
             indicatorIds: [
               'growthRate',
-              'population10yr',
             ],
           },
           {
@@ -905,14 +857,6 @@ export const CATEGORIES = [
               'dependencyRatio14OrYounger',
               'dependencyRatio15To64',
               'dependencyRatio65OrOlder',
-            ],
-          },
-          {
-            name: 'Dependency ratio',
-            description: 'This shows the number of persons of non-working age (0-14 and 65+) per person of working age (15-64) \n\nSource: ABS - Regional Population Growth',
-            axisTitle: '',
-            indicatorIds: [
-              'dependencyRatioNotWorkingAge',
             ],
           },
           {

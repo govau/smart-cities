@@ -66,14 +66,8 @@ const CategoryOverview = (props) => {
           <div className={style.categoryTextWrapperWrapper}>
             <div className={style.categoryTextWrapper}>
               <h2 className={style.categoryTitle}>{props.category.name}</h2>
-
-              <p className={style.categoryDescription}>
-                {isContextCategory && props.cities
-                  ? props.category.allCitiesShortDescription
-                  : props.category.shortDescription
-                }
-              </p>
-
+              {// eslint-disable-next-line 
+                <p className={style.categoryDescription} dangerouslySetInnerHTML={{ __html: isContextCategory && props.cities ? props.category.allCitiesShortDescription : props.category.shortDescription }} />}
               <p className={style.subCategoryWrapperText}>{STRINGS.CATEGORIES_INCLUDE}</p>
 
               <div>
