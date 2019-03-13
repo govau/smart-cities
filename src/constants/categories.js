@@ -600,7 +600,6 @@ export const CATEGORIES = [
             description: 'This shows the estimated per-capita amount of greenhouse gases emitted in a year, based on Scope 1 emissions, which are direct greenhouse emissions, and Scope 2 emissions, which are indirect greenhouse gas emissions from the generation of electricity. \n\nSource: National Greenhouse Gas Inventory',
             indicatorIds: [
               'greenhouseGasEmissions1',
-              'greenhouseGasEmissions2',
             ],
           },
           {
@@ -750,7 +749,7 @@ export const CATEGORIES = [
         ],
         charts: [
           {
-            name: 'Business entry and exit rate',
+            name: 'Business entry',
             axisTitle: '',
             description: 'This shows the business entry and exit rates: the number of new businesses that started actively trading on the business register over the past year as a share of the total number of registered businesses at the start of the year. \n\nSource: ABS Data by Region',
             indicatorIds: [
@@ -826,7 +825,7 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Annual population growth rate',
+            name: 'Average annual population growth rate',
             axisTitle: '',
             description: 'This shows the percentage change in the level of the population on the preceding year, and the average annual percentage change over the past ten years.\n\nSource: ABS - Regional Population Growth',
             indicatorIds: [

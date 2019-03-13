@@ -277,7 +277,7 @@ export default {
     source: 'mortgage_stress',
   },
     housingStress: {
-    name: 'Proporation of households under housing stress',
+    name: 'Proportion of households under housing stress',
     format: FORMATS.PERCENT_ZERO_TO_TWO_DECIMALS,
     contextual: false,
     lastUpdated: '2016',
@@ -305,7 +305,7 @@ export default {
     source: 'public_transport_access',
   },
   greenhouseGasEmissions1: {
-    name: 'Greenhouse gas emissions (scope 1) tonnes per person',
+    name: 'Greenhouse gas emissions',
     legendText: 'Scope 1',
     format: FORMATS.ZERO_TO_TWO_DECIMALS,
     contextual: false,
@@ -383,7 +383,7 @@ export default {
     source: 'patent_application',
   },
   newBusinessEntrants: {
-    name: 'New business entry rate',
+    name: 'Business entry',
     legendText: 'Entrants',
     format: FORMATS.PERCENT_ONE_OR_TWO_DECIMALS,
     contextual: false,
