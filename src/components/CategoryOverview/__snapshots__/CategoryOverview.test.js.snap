@@ -12,9 +12,7 @@ exports[`should match Snapshot 1`] = `
           <h2 className=\\"categoryTitle\\">
             Jobs &amp; skills
           </h2>
-          <p className=\\"categoryDescription\\">
-            The short description
-          </p>
+          <p className=\\"categoryDescription\\" dangerouslySetInnerHTML={{...}} />
           <p className=\\"subCategoryWrapperText\\">
             Categories include:
           </p>
