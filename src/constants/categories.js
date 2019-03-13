@@ -261,7 +261,6 @@ export const CATEGORIES = [
         iconId: 'jobsEmployment',
         summaryIndicatorIds: [
           'unemploymentRateGeneral',
-          'unemploymentRateIndigenous',
           'employmentGrowth',
         ],
         charts: [
@@ -282,28 +281,11 @@ export const CATEGORIES = [
             ],
           },
           {
-            name: 'Indigenous unemployment rate',
-            axisTitle: '',
-            description: 'This shows the average indigenous unemployment rate for 12 months. \n\nSource: ABS Census 2016',
-            indicatorIds: [
-              'unemploymentRateIndigenous',
-            ],
-          },
-          {
             name: 'Participation rate',
             axisTitle: '',
             description: 'This shows the share of the civilian population in the labour force. \n\nSource: ABS - Labour Force',
             indicatorIds: [
               'participationRateGeneral',
-            ],
-          },
-          {
-            name: 'Participation rate by gender',
-            axisTitle: '',
-            description: 'This shows the share of the male and female civilian populations in the labour force. \n\nSource: ABS Labour Force',
-            indicatorIds: [
-              'participationRateFemale',
-              'participationRateMale',
             ],
           },
           {

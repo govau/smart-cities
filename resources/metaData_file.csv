@@ -1,106 +1,106 @@
-indicator,message,period
+indicator,message,period,
 total_population,"This shows the population size.
-Source: ABS - Regional Population Growth 2016-17",Jun-17
+Source: ABS - Regional Population Growth 2016-17",June 2017,
 population_growth,"This shows the average annual percentage change in the level of the population over the preceding five years.
-Source: ABS - Regional Population Growth 2016-17",June 2012 to 2017
+Source: ABS - Regional Population Growth 2016-17",June 2012 to 2017,
 indigenous_population,"This shows the proportion of the population that identifies as Aboriginal or Torres Strait Islander.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 population_density,"This is a population-weighted measure that measures the density at which the average city resident lives.
-Sources:  ABS - Regional Population Growth, 2016-17 and ABS - Meshblock Counts, 2016/BITRE",30-Jun-17
+Sources:  ABS - Regional Population Growth, 2016-17 and ABS - Meshblock Counts, 2016/BITRE",June 2017,
 dwelling_type,"This shows the share of dwellings that are detatched houses, semi detatched, apartments or other dwellings.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 household_size,"This shows the average number of people per occupied dwelling.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 housing_tenure,"This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other tenure types.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 life_expectancy,"This shows the number of years a person born today is expected to live.
-Source ABS - Life Tables, ABS - Deaths/BITRE",2014-16
+Source ABS - Life Tables, ABS - Deaths/BITRE",2014 to 2016,
 income_quintile,"This shows the share of households in the bottom 20 per cent of the national household income distribution.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 non_english_speaking,"This shows the proportion of residents who speak a language other than English at home.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 age_structure,"This shows the share of the population aged 0 to 14, 15 to 64 and 65 and over.
-Source: ABS - Regional Population Growth, 2016-17",Jun-17
+Source: ABS - Regional Population Growth, 2016-17",June 2017,
 median_age,"This shows the median age of the city population.
-Source: ABS - Regional Population by Age and Sex, Australia 2017",Jun-17
+Source: ABS - Regional Population by Age and Sex, Australia 2017",June 2017,
 housing_price,"This shows the average price over 12 months for detatched dwellings.
-Source: CoreLogic",2017
+Source: CoreLogic",2017,
 unit_price,"This shows the average price over 12 months for units.
-Source: CoreLogic",2017
+Source: CoreLogic",2017,
 sector_share,"This shows the proportion of employed persons that work in goods producing, market services, and non-market services industries.
-Source: ABS - Labour Force/BITRE",Jun-18
+Source: ABS - Labour Force/BITRE",June 2017,
 disability,"This shows the proportion of the population that self identifies as having a disability.
-Source: PHIDU - Social Health Atlas of Australia",2016
+Source: PHIDU - Social Health Atlas of Australia",2016,
 household_income,"This shows the median annual household income.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 lg_fragmentation,"This shows the number of local governments in the city.
-Source: ABS - Australian Statistical Geography Standard (2018)",2018
+Source: ABS - Australian Statistical Geography Standard (2018)",2018,
 house_price_to_income_ratio,"This shows the ratio of the median dwelling price to the median annual household income.
-Source: Australian Property Monitors and ANU",Jun-18
+Source: Australian Property Monitors and ANU",June 2018,
 housing_construction_costs,"This shows the average cost per square metre of constructing a new detached house in a city.
-Source: Rawlinson Guide to Construction Costs",2018
+Source: Rawlinson Guide to Construction Costs",2018,
 public_housing,"This shows the share of the housing stock that is public or community housing.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 homelessness,"This shows the number of homeless people per 100,000 people.
-Source ABS - Census 2016",Aug-16
+Source ABS - Census 2016",August 2016,
 mortgage_stress,"This shows the proportion of households with a mortgage for which mortgage payments make up 30 per cent or more of household income.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 rent_stress,"This shows the proportion of renting households for which rent makes up 30 per cent or more of household income.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 building_approvals,"This shows the number of new residential dwellings approved for construction per 100,000 persons in the city.
-Source: ABS - Dwelling Approvals & Regional Population",2017
+Source: ABS - Dwelling Approvals & Regional Population",2017,
 housing_stress,"This shows the proportion of occupied households within the city for which housing payments (mortgage or rent) make up 30 per cent or more of household income.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 jobs_accessible_proportion,"This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. This indicator represents a city-wide average – commute times in different parts of a city are weighted by population size.
-Source: BITRE",2016-2018
+Source: BITRE",2016-2018,
 jobs_accessible_number,"This shows the number of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. This indicator represents a city-wide average – commute times in different parts of a city are weighted by population size.
-Source: BITRE",2016-2018
+Source: BITRE",2016-2018,
 public_transport,"This shows the proportion of journeys to work that are taken by public transport.
-Source ABS - Census 2016",Aug-16
+Source ABS - Census 2016",August 2016,
 active_transport,"This shows the proportion of journeys to work that are taken by active transport (walking or cycling).
-Source ABS - Census 2016",Aug-16
+Source ABS - Census 2016",August 2016,
 peak_travel_delay,"This shows the percenatge increase in the duration of a car trip made during the busiest traffic periods (7am to 10am and 4pm to 7pm) compared with when there is no congestion.
-Source: TomTom Australia",2016
+Source: TomTom Australia",2016,
 knowledge_industries,"This shows the share of employed prsons that work in the top three knowledge-intensive service industries; professional, scientific and technical services; information media and telecommunications; and financial and insurance services.
-Source: ABS - Labour Force/BITRE",Jun-18
+Source: ABS - Labour Force/BITRE",June 2018,
 broadband_connections,"The share of households in a city with an active broadband connection, defined as an access speed of 256 kilobits per second or faster.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 new_business,"This shows the proportion of businesses that are new.
-Source: ABS - Data by region",2017
+Source: ABS - Data by region",2017,
 patent_application,"This shows the number of patent applications per 100,000 persons in the city.
-Source: Department of Industry and Innovation",2016
+Source: Department of Industry and Innovation",2016,
 obesity,"This shows the share of people aged 18 and over with a body mass index (BMI) greater than 30.
-Source: PHIDU - Social Health Atlas of Australia",2014-15
+Source: PHIDU - Social Health Atlas of Australia",2014 to 2015,
 safety,"The share of people aged 18 years and over who report that they feel safe or very safe walking alone in their local area after dark.
-Source: PHIDU - Social Health Atlas of Australia",2014
+Source: PHIDU - Social Health Atlas of Australia",2014,
 access_to_open_space,"This shows the share of dwellings in a city that are located within 400 metres of public open space. 
-Source: RMIT Centre for Urban Research",2018
+Source: RMIT Centre for Urban Research",2018,
 crisis_support,"This shows the share of people that stated in a survey that they feel there is someone outside their household who could be asked for support in a time of crisis.
-Source: PHIDU - Social Health Atlas of Australia",2014
+Source: PHIDU - Social Health Atlas of Australia",2014,
 suicide,"This shows the number of suicides in a year per 100,000 people, calculated over a five year period.
-Source: PHIDU - Social Health Atlas of Australia",2011-15
+Source: PHIDU - Social Health Atlas of Australia",2011 to 2015,
 air_quality,"The average amount of particulate matter in a city’s air per cubic metre, measured over the course of a year.
-Source: World Health Organisation",2016 and 2018
+Source: World Health Organisation",2016 and 2018,
 volunteering,"This shows the share of people aged 15 years and older who volunteered their time, services or skills to a club, organisation or association in the past twelve months.
-Source ABS - Census 2016",Aug-16
-greenhouse_gas,"This shows the estimated per-capita amount of greenhouse gases emitted in a year. It captures direct (scope 1) greenhouse emissions, excluding emissions from electricity generation, as well as indirect (scope 2) greenhouse gas emissions from the generation of electricity.                                                                                                                                    Source: BITRE/National Greenhouse Gas Inventory 2016",2016
+Source ABS - Census 2016",August 2016,
+greenhouse_gas,"This shows the estimated per-capita amount of greenhouse gases emitted in a year. It captures direct (scope 1) greenhouse emissions, excluding emissions from electricity generation, as well as indirect (scope 2) greenhouse gas emissions from the generation of electricity.                                                                                                                                    Source: BITRE/National Greenhouse Gas Inventory 2016",2016,
 office_energy_efficiency,"This shows the average National Australian Built Environment Rating System (NABERS) score for rated office buildings in the city, weighted by floor space.
-Source: National Australian Built Environment Rating System",2018
+Source: National Australian Built Environment Rating System",2018,
 public_transport_access,"This shows the share of dwellings in a city that are located within 400 metres of a regularly serviced public transport stop. 
-Source: RMIT Centre for Urban Research",2018
+Source: RMIT Centre for Urban Research",2018,
 employment_growth,"This shows the average annual percentage change in the level of employment over the preceding five years.
-Source: ABS - Labour Force/BITRE",June 2013 to June 2018
+Source: ABS - Labour Force/BITRE",June 2013 to June 2018,
 unemployment,"This shows the average unemployment rate for 12 months for all persons.
-Source: ABS - Labour Force and Department Jobs and Small Business",July 2017 to June 2018
+Source: ABS - Labour Force and Department Jobs and Small Business",July 2017 to June 2018,
 youth_unemployment,"This shows the average youth (15-24) unemployment rate for 24 months.
-Source: ABS - Labour Force/BITRE",July 2016 to June 2018
+Source: ABS - Labour Force/BITRE",July 2016 to June 2018,
 participation,"This shows the share of the civilian population in the labour force.
-Source: ABS - Labour Force/BITRE",July 2017 to June 2018
+Source: ABS - Labour Force/BITRE",July 2017 to June 2018,
 education_year_12,"This shows the share of the population that has completed year 12.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 education_certificate,"This shows the share of the population with a Certificate 3, 4 or diploma.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 education_bachelor,"This shows the share of the population with a bachelor degree or higher qualification.
-Source: ABS - Census 2016",Aug-16
+Source: ABS - Census 2016",August 2016,
 gross_regional_product,"This shows the estimated Gross Regional Product per capita.
-Source: Department of Industry, Innovation and Science, Office of the Chief Economist/BITRE",2016-17
+Source: Department of Industry, Innovation and Science, Office of the Chief Economist/BITRE",2016 to 2017,
