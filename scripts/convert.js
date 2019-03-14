@@ -26,7 +26,7 @@ getStdin().then((rawCsv) => {
       // generate key/value pairs for each indicator
       indicators.forEach((indicator) => {
         if (indicator.source in row) {
-          const value = row[indicator.source];
+          const value = (row[indicator.source] === '999.01' ? null : row[indicator.source]);
 
           // All data should be numeric
           if (Number.isNaN(Number(value))) {

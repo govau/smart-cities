@@ -48,7 +48,6 @@ export const LINKS = {
   LAUNCESTON_CITY_DEAL: 'https://citydeals.infrastructure.gov.au/launceston',
   ORG: 'https://dta.gov.au/',
   PRIVACY_ACT: 'https://www.legislation.gov.au/Series/C2004A03712',
-  PROTECTING_PDF: 'https://www.ag.gov.au/RightsAndProtections/CyberSecurity/Documents/PDF%20-%20Protecting%20Yourself%20Online%20-%20Second%20Edition%20-%20Booklet.pdf',
   SMART_CITIES_LINK: 'https://infrastructure.gov.au/cities/smart-cities/collaboration-platform/',
   SMART_CITIES_DPMC_LINK: 'https://infrastructure.gov.au/cities/smart-cities/plan/index.aspx',
   TOWNSVILLE_CITY_DEAL: 'https://citydeals.infrastructure.gov.au/townsville',

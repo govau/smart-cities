@@ -25,9 +25,9 @@ const AdditionalInfoPage = () => (
         </p>
 
         <p className={style.paragraph}>
-          Our website aims to meet the Australian Government’s web accessibility requirements,
+          Our website aims to meet the Australian Government's web accessibility requirements,
           including meeting the World Wide Web
-          Consortium’s <Link href={LINKS.WCAG}>Web Content Accessibility
+          Consortium's <Link href={LINKS.WCAG}>Web Content Accessibility
           Guidelines version 2.0 (WCAG 2.0)</Link> at level AA.
         </p>
 
@@ -78,8 +78,7 @@ const AdditionalInfoPage = () => (
 
         <p className={style.paragraph}>
           You should take appropriate and adequate precautions to prevent damage to your
-          computer system, software or data. See how by
-          reading <Link href={LINKS.PROTECTING_PDF}>Protecting Yourself Online (PDF 2.7MB)</Link>.
+          computer system, software or data.
         </p>
       </div>
     </section>
@@ -95,8 +94,8 @@ const AdditionalInfoPage = () => (
 
         <p className={style.paragraph}>
           This privacy statement is
-          about <Link href={LINKS.SMART_CITIES_LINK} /> — this is an online service managed
-          by the Department of Infrastructure, Regional Development and Local Government. The department is located in Canberra, Australia.
+          about the National Cities Performance Framework Dashboard — this is an online service managed
+          by the Department of Infrastructure, Regional Development and Cities. The department is located in Canberra, Australia.
         </p>
 
         <p className={style.paragraph}>
