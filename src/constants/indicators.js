@@ -76,7 +76,7 @@ export default {
         legendText: 'Goods',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: '2017',
+        lastUpdated: 'June 2017',
         source: 'sector_goods'
     },
     marketServices: {
@@ -125,7 +125,7 @@ export default {
     },
     dispersion: {
         name: 'Local governments per city',
-        format: '0.0[0]',
+        format: '0.[00]',
         contextual: false,
         lastUpdated: '2018',
         source: 'lg_fragmentation'
@@ -216,7 +216,7 @@ export default {
     },
     employmentGrowth: {
         name: 'Annual employment growth rate',
-        format: '0.0[0]%',
+        format: '0.[00]%',
         contextual: false,
         lastUpdated: 'June 2013 to June 2018',
         source: 'employment_growth'
@@ -231,7 +231,7 @@ export default {
     },
     publicHousingUnits: {
         name: 'Public and community housing units',
-        format: '0,0',
+        format: '0.[0]%',
         contextual: false,
         lastUpdated: 'August 2016',
         source: 'public_housing'
@@ -253,7 +253,7 @@ export default {
     },
     rentStress: {
         name: 'Proportion of renters under rent stress',
-        format: '0.0[0]%',
+        format: '0.[00]%',
         contextual: false,
         lastUpdated: 'August 2016',
         source: 'rent_stress'
@@ -267,14 +267,14 @@ export default {
     },
     housingStress: {
         name: 'Proportion of households under housing stress',
-        format: '0.0[0]%',
+        format: '0.[00]%',
         contextual: false,
         lastUpdated: 'August 2016',
         source: 'housing_stress'
     },
     residentialBuildingApprovalsGrowth: {
         name: 'Building approvals per 100k people',
-        format: '0.0[0]',
+        format: '0.[00]',
         contextual: false,
         lastUpdated: '2017',
         source: 'building_approvals'
@@ -300,7 +300,7 @@ export default {
         legendText: 'Scope 1',
         format: '0.[00]',
         contextual: false,
-        hideForCities: ['act', 'darwin'],
+        hideForCities: ['act', 'greater-darwin'],
         lastUpdated: '2016',
         source: 'greenhouse_gas'
     },
@@ -403,7 +403,7 @@ export default {
         legendText: '0-14',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: '2016',
+        lastUpdated: 'June 2017',
         source: 'age_0_14'
     },
     dependencyRatio15To64: {
@@ -442,7 +442,7 @@ export default {
         legendText: 'Owned outright',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: '2016',
+        lastUpdated: 'August 2016',
         source: 'tenure_owned'
     },
     tenureRatioMortgage: {

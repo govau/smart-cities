@@ -16,7 +16,10 @@ exports[`should match Snapshot 1`] = `
         Indicator Revision
       </h1>
       <p className=\\"infoBodyText\\">
-        To keep the dashboard up-to-date, we&#39;ve added more recent data on Australian cities. We&#39;ve also changed the methods we use to calculate some of the indicators. So please be careful when interpreting any changes you notice.
+        To keep the National Cities Performance Framework up-to-date, we&#39;ve added more recent data on Australian cities. We&#39;ve also changed the methods we use to calculate some of the indicators. So please be careful when interpreting any changes you notice. If you&#39;d like more information on any indicator please email us at 
+        <Link href=\\"mailto:nationalcitiesperformanceframework@infrastructure.gov.au\\" unstyled={false}>
+          nationalcitiesperformanceframework@infrastructure.gov.au
+        </Link>
       </p>
     </div>
   </div>

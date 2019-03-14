@@ -7,11 +7,11 @@ indigenous_population,"This shows the proportion of the population that identifi
 Source: ABS - Census 2016",August 2016,
 population_density,"This is a population-weighted measure that measures the density at which the average city resident lives.
 Sources:  ABS - Regional Population Growth, 2016-17 and ABS - Meshblock Counts, 2016/BITRE",June 2017,
-dwelling_type,"This shows the share of dwellings that are detatched houses, semi detatched, apartments or other dwellings.
+dwelling_type,"This shows the share of dwellings that are detached houses, semi detached, apartments or other dwellings.
 Source: ABS - Census 2016",August 2016,
 household_size,"This shows the average number of people per occupied dwelling.
 Source: ABS - Census 2016",August 2016,
-housing_tenure,"This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other tenure types.
+tenure_owned,"This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other tenure types.
 Source: ABS - Census 2016",August 2016,
 life_expectancy,"This shows the number of years a person born today is expected to live.
 Source ABS - Life Tables, ABS - Deaths/BITRE",2014 to 2016,
@@ -19,15 +19,15 @@ income_quintile,"This shows the share of households in the bottom 20 per cent of
 Source: ABS - Census 2016",August 2016,
 non_english_speaking,"This shows the proportion of residents who speak a language other than English at home.
 Source: ABS - Census 2016",August 2016,
-age_structure,"This shows the share of the population aged 0 to 14, 15 to 64 and 65 and over.
+age_0_14,"This shows the share of the population aged 0 to 14, 15 to 64 and 65 and over.
 Source: ABS - Regional Population Growth, 2016-17",June 2017,
 median_age,"This shows the median age of the city population.
 Source: ABS - Regional Population by Age and Sex, Australia 2017",June 2017,
-housing_price,"This shows the average price over 12 months for detatched dwellings.
+housing_price,"This shows the average price over 12 months for detached dwellings.
 Source: CoreLogic",2017,
 unit_price,"This shows the average price over 12 months for units.
 Source: CoreLogic",2017,
-sector_share,"This shows the proportion of employed persons that work in goods producing, market services, and non-market services industries.
+sector_goods,"This shows the proportion of employed persons that work in goods producing, market services, and non-market services industries.
 Source: ABS - Labour Force/BITRE",June 2017,
 disability,"This shows the proportion of the population that self identifies as having a disability.
 Source: PHIDU - Social Health Atlas of Australia",2016,

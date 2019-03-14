@@ -51,7 +51,7 @@ const AllCitiesOverview = props => (
         </h1>
 
         <p className={style.infoBodyText}>
-          To keep the dashboard up-to-date, we've added more recent data on Australian cities. We've also changed the methods we use to calculate some of the indicators. So please be careful when interpreting any changes you notice.</p>
+          To keep the National Cities Performance Framework up-to-date, we've added more recent data on Australian cities. We've also changed the methods we use to calculate some of the indicators. So please be careful when interpreting any changes you notice. If you'd like more information on any indicator please email us at <Link href={LINKS.CONTACT_US}>nationalcitiesperformanceframework@infrastructure.gov.au</Link></p>
       </div>
     </div>
 

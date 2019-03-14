@@ -23,14 +23,14 @@ export const CATEGORIES = [{
     shortDescription: '<span>Characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework. <br /><br />This section is a collection of context indicators.</span>',
     allCitiesShortDescription: '<span>Characteristics of a city that help us understand what it’s like and why it functions the way it does, based on the measurement framework. <br /><br />This section is a collection of context indicators.</span>',
     heroIndicatorId: 'population',
-    overviewIndicatorIds: ['growthRate'],
+    overviewIndicatorIds: ['growthRate', 'populationDensity'],
     subCategories: [{
         name: 'Planning',
         highlightColorLight: 'PLANNING_040',
         highlightColorDark: 'PLANNING_500',
         colorName: 'planning',
         iconId: 'planningPlanning',
-        summaryIndicatorIds: ['indigenousPopulation', 'growthRate'],
+        summaryIndicatorIds: ['indigenousPopulation', 'growthRate', 'populationDensity'],
         charts: [{
             name: 'Population',
             axisTitle: '',
@@ -54,7 +54,7 @@ export const CATEGORIES = [{
         }, {
             name: 'Population breakdown by age',
             axisTitle: 'Share of the population',
-            description: 'This shows the share of population aged 0 to 14, 15 to 64, and 65 and over. \n\nSource: ABS - Regional Population Growth',
+            description: 'This shows the share of the population aged 0 to 14, 15 to 64 and 65 and over.\r\nSource: ABS - Regional Population Growth, 2016-17',
             stacked: true,
             indicatorIds: ['dependencyRatio14OrYounger', 'dependencyRatio15To64', 'dependencyRatio65OrOlder']
         }, {
@@ -89,7 +89,7 @@ export const CATEGORIES = [{
         }, {
             name: 'Housing tenure',
             axisTitle: 'Share',
-            description: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
+            description: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other tenure types.\r\nSource: ABS - Census 2016',
             stacked: true,
             indicatorIds: ['tenureRatioOwnedOutright', 'tenureRatioMortgage', 'tenureRatioRented', 'tenureRatioOther']
         }, {
@@ -104,7 +104,7 @@ export const CATEGORIES = [{
         highlightColorDark: 'LIVEABILITY_500',
         colorName: 'liveability',
         iconId: 'liveabilityLiveability',
-        summaryIndicatorIds: ['lifeExpectancy', 'shareInBottomIncomeQuintile'],
+        summaryIndicatorIds: ['lifeExpectancy', 'shareInBottomIncomeQuintile', 'accessToGreenSpace'],
         charts: [{
             name: 'Life expectancy at birth',
             axisTitle: 'Life expectancy in years',
@@ -129,11 +129,11 @@ export const CATEGORIES = [{
         highlightColorDark: 'JOBS_500',
         colorName: 'jobs',
         iconId: 'jobsEmployment',
-        summaryIndicatorIds: ['goodsProducingSector', 'marketServices', 'nonMarketServices', 'grossRegionalProduct'],
+        summaryIndicatorIds: ['goodsProducingSector', 'marketServices', 'nonMarketServices'],
         charts: [{
             name: 'Industry sector share of employment',
             axisTitle: 'Percentage of employment',
-            description: 'This shows the estimated Gross Regional Product per capita.\r\nSource: Department of Industry, Innovation and Science, Office of the Chief Economist/BITRE',
+            description: 'This shows the proportion of employed persons that work in goods producing, market services, and non-market services industries.\r\nSource: ABS - Labour Force/BITRE',
             stacked: true,
             indicatorIds: ['goodsProducingSector', 'marketServices', 'nonMarketServices']
         }]
@@ -176,7 +176,7 @@ export const CATEGORIES = [{
         }, {
             name: 'Industry sector share of employment',
             axisTitle: 'Percentage of employment',
-            description: 'This shows the estimated Gross Regional Product per capita.\r\nSource: Department of Industry, Innovation and Science, Office of the Chief Economist/BITRE',
+            description: 'This shows the proportion of employed persons that work in goods producing, market services, and non-market services industries.\r\nSource: ABS - Labour Force/BITRE',
             stacked: true,
             indicatorIds: ['goodsProducingSector', 'marketServices', 'nonMarketServices']
         }, {
@@ -225,7 +225,7 @@ export const CATEGORIES = [{
         summaryIndicatorIds: ['housingStress', 'mortgageStress', 'medianHousePrice'],
         charts: [{
             name: 'Public and community housing units',
-            axisTitle: 'Units per 100k people',
+            axisTitle: '',
             description: 'This shows the share of the housing stock that is public or community housing.\r\nSource: ABS - Census 2016',
             indicatorIds: ['publicHousingUnits']
         }, {
@@ -265,7 +265,7 @@ export const CATEGORIES = [{
             indicatorIds: ['dwellingPriceToIncomeRatio']
         }, {
             name: 'Building approvals per 100k people',
-            axisTitle: '',
+            axisTitle: 'Approvals per 100k people',
             description: 'This shows the number of new residential dwellings approved for construction per 100,000 persons in the city.\r\nSource: ABS - Dwelling Approvals & Regional Population',
             indicatorIds: ['residentialBuildingApprovalsGrowth']
         }]
@@ -299,7 +299,7 @@ export const CATEGORIES = [{
         }, {
             name: 'Housing tenure',
             axisTitle: 'Share',
-            description: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other. \n\nSource: ABS Census 2016',
+            description: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other tenure types.\r\nSource: ABS - Census 2016',
             stacked: true,
             indicatorIds: ['tenureRatioOwnedOutright', 'tenureRatioMortgage', 'tenureRatioRented', 'tenureRatioOther']
         }]
@@ -540,7 +540,7 @@ export const CATEGORIES = [{
         }, {
             name: 'Population breakdown by age',
             axisTitle: 'Share of the population',
-            description: 'This shows the share of population aged 0 to 14, 15 to 64, and 65 and over. \n\nSource: ABS - Regional Population Growth',
+            description: 'This shows the share of the population aged 0 to 14, 15 to 64 and 65 and over.\r\nSource: ABS - Regional Population Growth, 2016-17',
             stacked: true,
             indicatorIds: ['dependencyRatio14OrYounger', 'dependencyRatio15To64', 'dependencyRatio65OrOlder']
         }, {

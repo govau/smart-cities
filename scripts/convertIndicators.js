@@ -41,7 +41,7 @@ function updateIndicatorsData(metadataFilename, outputFileName) {
         }
       }
     }
-    const stream = fs.createWriteStream(outputFileName);
+    const stream = fs.createWriteStream(outputFileName, {encoding: 'utf8' });
     stream.write('/* eslint linebreak-style: [\'error\', \'unix\'] */\n/* eslint-disable max-len */\n/* eslint-disable comma-dangle */\n/* eslint-disable array-bracket-spacing */\n');
     // stream.write('import { FORMATS } from \'./misc\';\n');
     stream.write('\nexport default ');

@@ -50,7 +50,7 @@ function updateCategoryData(metaFile, outputFile) {
         }
       }
     }
-    const stream = fs.createWriteStream(outputFile);
+    const stream = fs.createWriteStream(outputFile, { encoding: 'utf8' });
     stream.write('/* eslint linebreak-style: [\'error\', \'unix\'] */\n/* eslint-disable max-len */\n/* eslint-disable comma-dangle */\n/* eslint-disable array-bracket-spacing */\n');
     stream.write('export const CATEGORY_IDS = ');
     stream.write(util.inspect(CATEGORY_IDS, { showHidden: false, depth: null }));
