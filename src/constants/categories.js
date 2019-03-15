@@ -366,7 +366,7 @@ export const CATEGORIES = [{
         summaryIndicatorIds: ['accessToPublicTransport', 'greenhouseGasEmissions1'],
         charts: [{
             name: 'Dwellings with access to public open space',
-            axisTitle: 'share of dwellings',
+            axisTitle: 'Share of dwellings',
             description: 'This shows the share of dwellings in a city that are located within 400 metres of public open space. \r\nSource: RMIT Centre for Urban Research',
             max: 1,
             indicatorIds: ['accessToGreenSpace']
@@ -387,7 +387,7 @@ export const CATEGORIES = [{
             indicatorIds: ['energyEfficiencyOfBuildings']
         }, {
             name: 'Dwellings with access to public transport',
-            axisTitle: 'share of dwellings',
+            axisTitle: 'Share of dwellings',
             description: 'This shows the share of dwellings in a city that are located within 400 metres of a regularly serviced public transport stop. \r\nSource: RMIT Centre for Urban Research',
             indicatorIds: ['accessToPublicTransport']
         }]
