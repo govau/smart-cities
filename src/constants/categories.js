@@ -43,7 +43,7 @@ export const CATEGORIES = [{
             indicatorIds: ['growthRate']
         }, {
             name: 'Proportion of population that is Indigenous',
-            axisTitle: '',
+            axisTitle: 'Share of population',
             description: 'This shows the proportion of the population that identifies as Aboriginal or Torres Strait Islander.\r\nSource: ABS - Census 2016',
             indicatorIds: ['indigenousPopulation']
         }, {
@@ -64,7 +64,7 @@ export const CATEGORIES = [{
             indicatorIds: ['dependencyRatioMedianAge']
         }, {
             name: 'Proportion of population with disability',
-            axisTitle: '',
+            axisTitle: 'Share of population',
             description: 'This shows the proportion of the population that self identifies as having a disability.\r\nSource: PHIDU - Social Health Atlas of Australia',
             indicatorIds: ['disabilityRate']
         }]
@@ -88,14 +88,14 @@ export const CATEGORIES = [{
             indicatorIds: ['householdSize']
         }, {
             name: 'Housing tenure',
-            axisTitle: 'Share',
+            axisTitle: 'Share of dwellings',
             description: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other tenure types.\r\nSource: ABS - Census 2016',
             stacked: true,
             indicatorIds: ['tenureRatioOwnedOutright', 'tenureRatioMortgage', 'tenureRatioRented', 'tenureRatioOther']
         }, {
             name: 'Average dwelling price',
             axisTitle: '',
-            description: 'This shows the average price over 12 months for units.\r\nSource: CoreLogic',
+            description: 'This shows the average price over 12 months for dwellings.\r\nSource: CoreLogic',
             indicatorIds: ['medianHousePrice', 'medianUnitPrice']
         }]
     }, {
@@ -114,7 +114,7 @@ export const CATEGORIES = [{
             indicatorIds: ['lifeExpectancy']
         }, {
             name: 'Share of households in lowest income quintile',
-            axisTitle: '',
+            axisTitle: 'Share of households',
             description: 'This shows the share of households in the bottom 20 per cent of the national household income distribution.\r\nSource: ABS - Census 2016',
             indicatorIds: ['shareInBottomIncomeQuintile']
         }, {
@@ -193,17 +193,17 @@ export const CATEGORIES = [{
         summaryIndicatorIds: ['educationalAttainmentYr12'],
         charts: [{
             name: 'Completed year 12',
-            axisTitle: '',
+            axisTitle: 'Share of population',
             description: 'This shows the share of the population that has completed year 12.\r\nSource: ABS - Census 2016',
             indicatorIds: ['educationalAttainmentYr12']
         }, {
             name: 'Completed Certificate 3,4 or Diploma',
-            axisTitle: '',
+            axisTitle: 'Share of population',
             description: 'This shows the share of the population with a Certificate 3, 4 or diploma.\r\nSource: ABS - Census 2016',
             indicatorIds: ['educationalAttainmentCertificate']
         }, {
             name: 'Completed bachelor degree or higher',
-            axisTitle: '',
+            axisTitle: 'Share of population',
             description: 'This shows the share of the population with a bachelor degree or higher qualification.\r\nSource: ABS - Census 2016',
             indicatorIds: ['educationalAttainmentTertiary']
         }]
@@ -225,7 +225,7 @@ export const CATEGORIES = [{
         summaryIndicatorIds: ['housingStress', 'mortgageStress', 'medianHousePrice'],
         charts: [{
             name: 'Public and community housing units',
-            axisTitle: '',
+            axisTitle: 'Share of households',
             description: 'This shows the share of the housing stock that is public or community housing.\r\nSource: ABS - Census 2016',
             indicatorIds: ['publicHousingUnits']
         }, {
@@ -245,7 +245,7 @@ export const CATEGORIES = [{
             indicatorIds: ['mortgageStress']
         }, {
             name: 'Proportion of households under housing stress',
-            axisTitle: '',
+            axisTitle: 'Share of households',
             description: 'This shows the proportion of occupied households within the city for which housing payments (mortgage or rent) make up 30 per cent or more of household income.\r\nSource: ABS - Census 2016',
             indicatorIds: ['housingStress']
         }, {
@@ -282,7 +282,7 @@ export const CATEGORIES = [{
             indicatorIds: ['householdSize']
         }, {
             name: 'Homeless per 100k people',
-            axisTitle: '',
+            axisTitle: 'Per 100k people',
             description: 'This shows the number of homeless people per 100,000 people.\r\nSource ABS - Census 2016',
             indicatorIds: ['homelessnessRate']
         }, {
@@ -298,7 +298,7 @@ export const CATEGORIES = [{
             indicatorIds: ['dwellingApartment', 'dwellingSemi', 'dwellingHouse', 'dwellingOther']
         }, {
             name: 'Housing tenure',
-            axisTitle: 'Share',
+            axisTitle: 'Share of dwellings',
             description: 'This shows the share of occupied private residential dwellings that are owned outright by the occupier, owned with a mortgage, are rented, or other tenure types.\r\nSource: ABS - Census 2016',
             stacked: true,
             indicatorIds: ['tenureRatioOwnedOutright', 'tenureRatioMortgage', 'tenureRatioRented', 'tenureRatioOther']
@@ -366,7 +366,7 @@ export const CATEGORIES = [{
         summaryIndicatorIds: ['accessToPublicTransport', 'greenhouseGasEmissions1'],
         charts: [{
             name: 'Dwellings with access to public open space',
-            axisTitle: '',
+            axisTitle: 'share of dwellings',
             description: 'This shows the share of dwellings in a city that are located within 400 metres of public open space. \r\nSource: RMIT Centre for Urban Research',
             max: 1,
             indicatorIds: ['accessToGreenSpace']
@@ -387,7 +387,7 @@ export const CATEGORIES = [{
             indicatorIds: ['energyEfficiencyOfBuildings']
         }, {
             name: 'Dwellings with access to public transport',
-            axisTitle: '',
+            axisTitle: 'share of dwellings',
             description: 'This shows the share of dwellings in a city that are located within 400 metres of a regularly serviced public transport stop. \r\nSource: RMIT Centre for Urban Research',
             indicatorIds: ['accessToPublicTransport']
         }]
@@ -396,7 +396,7 @@ export const CATEGORIES = [{
         highlightColorLight: 'LIVEABILITY_060',
         highlightColorDark: 'LIVEABILITY_700',
         iconId: 'liveabilityLiveability',
-        summaryIndicatorIds: ['volunteeringRate', 'languagesOtherThanEnglish'],
+        summaryIndicatorIds: ['volunteeringRate', 'lifeExpectancy'],
         charts: [{
             name: 'Life expectancy at birth',
             axisTitle: 'Life expectancy in years',
@@ -406,7 +406,7 @@ export const CATEGORIES = [{
             indicatorIds: ['lifeExpectancy']
         }, {
             name: 'Proportion of people that volunteer',
-            axisTitle: '',
+            axisTitle: '% of population aged 15 and over',
             description: 'This shows the share of people aged 15 years and older who volunteered their time, services or skills to a club, organisation or association in the past twelve months.\r\nSource ABS - Census 2016',
             indicatorIds: ['volunteeringRate']
         }, {
@@ -416,7 +416,7 @@ export const CATEGORIES = [{
             indicatorIds: ['languagesOtherThanEnglish']
         }, {
             name: 'Share of households in lowest income quintile',
-            axisTitle: '',
+            axisTitle: 'Share of households',
             description: 'This shows the share of households in the bottom 20 per cent of the national household income distribution.\r\nSource: ABS - Census 2016',
             indicatorIds: ['shareInBottomIncomeQuintile']
         }]
@@ -433,7 +433,7 @@ export const CATEGORIES = [{
             indicatorIds: ['perceivedSafety']
         }, {
             name: 'Percentage of population able to get crisis support',
-            axisTitle: '',
+            axisTitle: 'Share of population',
             max: 1,
             description: 'This shows the share of people that stated in a survey that they feel there is someone outside their household who could be asked for support in a time of crisis.\r\nSource: PHIDU - Social Health Atlas of Australia',
             indicatorIds: ['crisisSupport']
@@ -446,12 +446,12 @@ export const CATEGORIES = [{
         summaryIndicatorIds: ['adultObesity', 'suicideRate'],
         charts: [{
             name: 'Proportion of adults who are obese',
-            axisTitle: '',
+            axisTitle: '% of population aged 18 and over',
             description: 'This shows the share of people aged 18 and over with a body mass index (BMI) greater than 30.\r\nSource: PHIDU - Social Health Atlas of Australia',
             indicatorIds: ['adultObesity']
         }, {
             name: 'Suicides per 100k people',
-            axisTitle: '',
+            axisTitle: 'Per 100k people',
             description: 'This shows the number of suicides in a year per 100,000 people, calculated over a five year period.\r\nSource: PHIDU - Social Health Atlas of Australia',
             indicatorIds: ['suicideRate']
         }]
@@ -479,12 +479,12 @@ export const CATEGORIES = [{
             indicatorIds: ['newBusinessEntrants']
         }, {
             name: 'Households with broadband',
-            axisTitle: '',
+            axisTitle: 'Share of households',
             description: 'The share of households in a city with an active broadband connection, defined as an access speed of 256 kilobits per second or faster.\r\nSource: ABS - Census 2016',
             indicatorIds: ['householdsWithBroadband']
         }, {
             name: 'Patent applications per 100k people',
-            axisTitle: '',
+            axisTitle: 'Per 100k people',
             description: 'This shows the number of patent applications per 100,000 persons in the city.\r\nSource: Department of Industry and Innovation',
             indicatorIds: ['patentApplications']
         }]
@@ -529,7 +529,7 @@ export const CATEGORIES = [{
             indicatorIds: ['growthRate']
         }, {
             name: 'Proportion of population that is Indigenous',
-            axisTitle: '',
+            axisTitle: 'Share of population',
             description: 'This shows the proportion of the population that identifies as Aboriginal or Torres Strait Islander.\r\nSource: ABS - Census 2016',
             indicatorIds: ['indigenousPopulation']
         }, {
@@ -550,7 +550,7 @@ export const CATEGORIES = [{
             indicatorIds: ['dependencyRatioMedianAge']
         }, {
             name: 'Proportion of population with disability',
-            axisTitle: '',
+            axisTitle: 'Share of population',
             description: 'This shows the proportion of the population that self identifies as having a disability.\r\nSource: PHIDU - Social Health Atlas of Australia',
             indicatorIds: ['disabilityRate']
         }]

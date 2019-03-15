@@ -135,7 +135,7 @@ export default {
         legendText: 'House',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: '2016',
+        lastUpdated: 'August 2016',
         source: 'dwelling_house'
     },
     dwellingSemi: {
@@ -143,7 +143,7 @@ export default {
         legendText: 'Semi-detached',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: '2016',
+        lastUpdated: 'August 2016',
         source: 'dwelling_attached'
     },
     dwellingApartment: {
@@ -151,7 +151,7 @@ export default {
         legendText: 'Flat / apartment',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: '2016',
+        lastUpdated: 'August 2016',
         source: 'dwelling_apartment'
     },
     dwellingOther: {
@@ -159,7 +159,7 @@ export default {
         legendText: 'Other',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: '2016',
+        lastUpdated: 'August 2016',
         source: 'dwelling_other'
     },
     dwellingPriceToIncomeRatio: {
