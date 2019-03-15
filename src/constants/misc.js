@@ -62,6 +62,7 @@ export const LINKS = {
   FEEDBACK: 'https://infrastructure.gov.au/utilities/feedback.aspx',
   FEEDBACK_SURVEY_EMBED: 'https://surveymonkey.com/r/LS9RGKQ',
   ADDITIONAL_INFORMATION: '/additional-information',
+  DATA_DICTIONARY: '/data-dictionary',
   ICON_CREDIT: 'https://thenounproject.com/CreativeMania',
   LAUNCESTON_CITY_DEAL: 'https://citydeals.infrastructure.gov.au/launceston',
   ORG: 'https://dta.gov.au/',
