@@ -6,22 +6,21 @@ exports[`should match Snapshot 1`] = `
     <div className=\\"wordsWrapper\\">
       <div className=\\"footerLinks\\">
         <div className=\\"footerLinksRow\\">
-          <a href=\\"https://infrastructure.gov.au/utilities/feedback.aspx\\">
+          <Link href=\\"https://infrastructure.gov.au/utilities/feedback.aspx\\" className=\\"staticLink\\" unstyled={false}>
             Give feedback
-          </a>
-             
-          <NavLink to=\\"/additional-information#privacy\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          </Link>
+          <Link href=\\"/additional-information#privacy\\" className=\\"staticLink\\" unstyled={false}>
             Privacy policy
-          </NavLink>
-          <NavLink to=\\"/additional-information#accessibility\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          </Link>
+          <Link href=\\"/additional-information#accessibility\\" className=\\"staticLink\\" unstyled={false}>
             Accessibility
-          </NavLink>
-          <NavLink to=\\"/additional-information#security\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          </Link>
+          <Link href=\\"/additional-information#security\\" className=\\"staticLink\\" unstyled={false}>
             Security
-          </NavLink>
-          <NavLink to=\\"/additional-information#content-credit\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          </Link>
+          <Link href=\\"/additional-information#content-credit\\" className=\\"staticLink\\" unstyled={false}>
             Content credit
-          </NavLink>
+          </Link>
         </div>
         <div className=\\"footerLinksRow\\">
           Got a question on the Performance Framework? Contact the department
