@@ -25,12 +25,12 @@ exports[`should match Snapshot 1`] = `
         <div className=\\"footerLinksRow\\">
           Got a question on the Performance Framework? Contact the department
           : 
-          <a href=\\"mailto:nationalcitiesperformanceframework@infrastructure.gov.au?subject=Performance Framework\\">
+          <Link href=\\"mailto:nationalcitiesperformanceframework@infrastructure.gov.au?subject=Performance framework\\" className=\\"staticLink\\" unstyled={false}>
             nationalcitiesperformanceframework@infrastructure.gov.au
-          </a>
+          </Link>
         </div>
         <div className=\\"footerLinksRow\\">
-          <Link href=\\"https://data.gov.au/dataset/national-cities-performance-framework\\" unstyled={true}>
+          <Link href=\\"https://data.gov.au/dataset/national-cities-performance-framework\\" className=\\"staticLink\\" unstyled={false}>
             View all raw data at data.gov.au
           </Link>
         </div>

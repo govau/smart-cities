@@ -57,7 +57,7 @@ export const EMAIL_ADDRESSES = {
 export const LINKS = {
   ALBURY_PHOTO_CREDIT: 'https://www.flickr.com/photos/49333819@N00',
   CITIES_PERFORMANCE_NETWORK: 'https://infrastructure.gov.au/cities/national-cities-performance-framework/',
-  CONTACT_US: 'mailto:nationalcitiesperformanceframework@infrastructure.gov.au',
+  CONTACT_US: 'mailto:nationalcitiesperformanceframework@infrastructure.gov.au?subject=Performance framework',
   DTA_PRIVACY_POLICY: 'https://infrastructure.gov.au/utilities/privacy.aspx',
   FEEDBACK: 'https://infrastructure.gov.au/utilities/feedback.aspx',
   FEEDBACK_SURVEY_EMBED: 'https://surveymonkey.com/r/LS9RGKQ',

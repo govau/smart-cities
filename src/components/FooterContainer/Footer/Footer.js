@@ -70,16 +70,14 @@ const Footer = props => (
 				<Link href="/additional-information#content-credit" className={style.staticLink}>Content credit</Link>  
           </div>        
 
-          <div className={style.footerLinksRow}>
-            {STRINGS.CONTACT}
+		  <div className={style.footerLinksRow}>
+		  {STRINGS.CONTACT}
             {': '}
-            <a
-              href={`mailto:${EMAIL_ADDRESSES.CITY_PERFORMANCE}?subject=${STRINGS.CONTACT_SUBJECT}`}
-            >{EMAIL_ADDRESSES.CITY_PERFORMANCE}</a>
+            <Link href={LINKS.CONTACT_US} className={style.staticLink}>{EMAIL_ADDRESSES.CITY_PERFORMANCE}</Link>
           </div>
 
           <div className={style.footerLinksRow}>
-            <Link href={LINKS.RAW_DATA} unstyled>{STRINGS.RAW_DATA}</Link>
+            <Link href={LINKS.RAW_DATA} className={style.staticLink}>{STRINGS.RAW_DATA}</Link>
           </div>
         </div>
 

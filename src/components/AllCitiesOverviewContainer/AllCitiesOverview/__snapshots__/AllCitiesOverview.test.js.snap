@@ -21,7 +21,7 @@ exports[`should match Snapshot 1`] = `
           data dictionary
         </Link>
          or email us at 
-        <Link href=\\"mailto:nationalcitiesperformanceframework@infrastructure.gov.au\\" unstyled={false}>
+        <Link href=\\"mailto:nationalcitiesperformanceframework@infrastructure.gov.au?subject=Performance framework\\" unstyled={false}>
           nationalcitiesperformanceframework@infrastructure.gov.au
         </Link>
       </p>
