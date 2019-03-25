@@ -41,10 +41,23 @@ const AllCitiesOverview = props => (
       </div>
     </div>
 
-    <div className={style.infoWrapper}>
-      <div className={style.infoContainer}>
+    <div className={style.subInfoWrapper}>
+      <div className={style.subInfoContainer}>
         <h1
           id={ELEMENT_IDS.INITIAL_FOCUS_POINT_ON_PAGE}
+          className={style.infoTitle}
+        >
+          Indicator Revision
+        </h1>
+
+        <p className={style.infoBodyText}>
+          To keep the National Cities Performance Framework up-to-date, we've added more recent data on Australian cities. We've also changed the methods we use to calculate some of the indicators. So please be careful when interpreting any changes you notice. If you'd like more information on any indicator, please read the <Link href={LINKS.DATA_DICTIONARY}>data dictionary</Link> or email us at <Link href={LINKS.CONTACT_US}>nationalcitiesperformanceframework@infrastructure.gov.au</Link></p>
+      </div>
+    </div>
+
+	 <div className={style.infoWrapper}>
+      <div className={style.infoContainer}>
+        <h1
           className={style.infoTitle}
         >
           About

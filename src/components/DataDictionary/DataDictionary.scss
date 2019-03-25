@@ -1,0 +1,48 @@
+@import '~style/main';
+
+.sectionWrapper {
+  padding: 48px 0;
+
+  &:nth-child(odd) {
+    background: $color-primary--020;
+  }
+}
+
+.sectionContainer {
+  @include container;
+}
+
+.title {
+  margin-bottom: 40px;
+  line-height: 1.2;
+  font-size: 44px;
+  font-weight: 300;
+}
+
+.heading2 {
+  margin-bottom: 24px;
+  line-height: 1.1;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.heading3 {
+  margin-bottom: 24px;
+  line-height: 1;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.cols2 {
+	@include for-tablet-portrait-up {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	}
+}
+
+.paragraph {
+  margin-bottom: 24px;
+  word-wrap: break-word; // the long links on mobile are wider than 300px
+}
+

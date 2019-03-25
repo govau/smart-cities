@@ -15,6 +15,10 @@ import Link from '../../Link/Link';
 { /* import dtaLogo from '../../../images/crest1.png'; */ }
 const links = [
   {
+    text: STRINGS.FEEDBACK_LINK,
+    href: `${LINKS.FEEDBACK}`,
+  },
+  {
     text: STRINGS.PRIVACY_LINK,
     href: `${LINKS.ADDITIONAL_INFORMATION}#${ELEMENT_IDS.PRIVACY_POLICY}`,
   },
@@ -59,26 +63,21 @@ const Footer = props => (
 
         <div className={style.footerLinks}>
           <div className={style.footerLinksRow}>
-		  <a href="https://infrastructure.gov.au/utilities/feedback.aspx">Give feedback</a>&#160; &#160; 
-            {links.map(link => (
-              <NavLink
-                key={link.href}
-                to={link.href}
-                className={style.staticLink}
-              >{link.text}</NavLink>
-            ))}
-          </div>
+				<Link href={LINKS.FEEDBACK} className={style.staticLink}>Give feedback</Link>  
+				<Link href="/additional-information#privacy" className={style.staticLink}>Privacy policy</Link>  
+				<Link href="/additional-information#accessibility" className={style.staticLink}>Accessibility</Link>  
+				<Link href="/additional-information#security" className={style.staticLink}>Security</Link>  
+				<Link href="/additional-information#content-credit" className={style.staticLink}>Content credit</Link>  
+          </div>        
 
-          <div className={style.footerLinksRow}>
-            {STRINGS.CONTACT}
+		  <div className={style.footerLinksRow}>
+		  {STRINGS.CONTACT}
             {': '}
-            <a
-              href={`mailto:${EMAIL_ADDRESSES.CITY_PERFORMANCE}?subject=${STRINGS.CONTACT_SUBJECT}`}
-            >{EMAIL_ADDRESSES.CITY_PERFORMANCE}</a>
+            <Link href={LINKS.CONTACT_US} className={style.staticLink}>{EMAIL_ADDRESSES.CITY_PERFORMANCE}</Link>
           </div>
 
           <div className={style.footerLinksRow}>
-            <Link href={LINKS.RAW_DATA} unstyled>{STRINGS.RAW_DATA}</Link>
+            <Link href={LINKS.RAW_DATA} className={style.staticLink}>{STRINGS.RAW_DATA}</Link>
           </div>
         </div>
 

@@ -6,32 +6,31 @@ exports[`should match Snapshot 1`] = `
     <div className=\\"wordsWrapper\\">
       <div className=\\"footerLinks\\">
         <div className=\\"footerLinksRow\\">
-          <a href=\\"https://infrastructure.gov.au/utilities/feedback.aspx\\">
+          <Link href=\\"https://infrastructure.gov.au/utilities/feedback.aspx\\" className=\\"staticLink\\" unstyled={false}>
             Give feedback
-          </a>
-             
-          <NavLink to=\\"/additional-information#privacy\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          </Link>
+          <Link href=\\"/additional-information#privacy\\" className=\\"staticLink\\" unstyled={false}>
             Privacy policy
-          </NavLink>
-          <NavLink to=\\"/additional-information#accessibility\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          </Link>
+          <Link href=\\"/additional-information#accessibility\\" className=\\"staticLink\\" unstyled={false}>
             Accessibility
-          </NavLink>
-          <NavLink to=\\"/additional-information#security\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          </Link>
+          <Link href=\\"/additional-information#security\\" className=\\"staticLink\\" unstyled={false}>
             Security
-          </NavLink>
-          <NavLink to=\\"/additional-information#content-credit\\" className=\\"staticLink\\" activeClassName=\\"active\\" ariaCurrent=\\"true\\">
+          </Link>
+          <Link href=\\"/additional-information#content-credit\\" className=\\"staticLink\\" unstyled={false}>
             Content credit
-          </NavLink>
+          </Link>
         </div>
         <div className=\\"footerLinksRow\\">
           Got a question on the Performance Framework? Contact the department
           : 
-          <a href=\\"mailto:cities@infrastructure.gov.au?subject=Performance Framework\\">
-            cities@infrastructure.gov.au
-          </a>
+          <Link href=\\"mailto:nationalcitiesperformanceframework@infrastructure.gov.au?subject=Performance framework\\" className=\\"staticLink\\" unstyled={false}>
+            nationalcitiesperformanceframework@infrastructure.gov.au
+          </Link>
         </div>
         <div className=\\"footerLinksRow\\">
-          <Link href=\\"https://data.gov.au/dataset/national-cities-performance-framework\\" unstyled={true}>
+          <Link href=\\"https://data.gov.au/dataset/national-cities-performance-framework\\" className=\\"staticLink\\" unstyled={false}>
             View all raw data at data.gov.au
           </Link>
         </div>

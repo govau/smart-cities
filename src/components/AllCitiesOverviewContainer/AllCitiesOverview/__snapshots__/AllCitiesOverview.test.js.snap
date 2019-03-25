@@ -10,9 +10,26 @@ exports[`should match Snapshot 1`] = `
       <img className=\\"smartCitiesLogo\\" src=\\"smart-cities-logo-white.svg\\" alt=\\"\\" />
     </div>
   </div>
+  <div className=\\"subInfoWrapper\\">
+    <div className=\\"subInfoContainer\\">
+      <h1 id=\\"focus-point\\" className=\\"infoTitle\\">
+        Indicator Revision
+      </h1>
+      <p className=\\"infoBodyText\\">
+        To keep the National Cities Performance Framework up-to-date, we&#39;ve added more recent data on Australian cities. We&#39;ve also changed the methods we use to calculate some of the indicators. So please be careful when interpreting any changes you notice. If you&#39;d like more information on any indicator, please read the 
+        <Link href=\\"/data-dictionary\\" unstyled={false}>
+          data dictionary
+        </Link>
+         or email us at 
+        <Link href=\\"mailto:nationalcitiesperformanceframework@infrastructure.gov.au?subject=Performance framework\\" unstyled={false}>
+          nationalcitiesperformanceframework@infrastructure.gov.au
+        </Link>
+      </p>
+    </div>
+  </div>
   <div className=\\"infoWrapper\\">
     <div className=\\"infoContainer\\">
-      <h1 id=\\"focus-point\\" className=\\"infoTitle\\">
+      <h1 className=\\"infoTitle\\">
         About
       </h1>
       <p className=\\"infoBodyText\\">

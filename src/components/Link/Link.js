@@ -17,7 +17,6 @@ const Link = (props) => {
       className={classes}
       href={props.href}
       rel="noopener noreferrer"
-      target="_blank"
     >
       {props.children || props.href}
     </a>

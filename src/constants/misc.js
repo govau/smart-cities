@@ -2,6 +2,7 @@ export const DATA_URL = '/data/smartCitiesData.json';
 
 export const NO_CATEGORY = 'overview';
 export const NO_CITY = 'all-cities';
+export const NO_INDICATOR_DATA = '999.01';
 export const HERO_INDICATOR_ID = 'population';
 export const HERO_INDICATOR_CATEGORY = 'Planning';
 export const HERO_INDICATOR_COLOR_NAME = 'planning';
@@ -23,6 +24,23 @@ export const COLOR_NAMES = {
   PLANNING: 'planning',
 };
 
+export const FORMATS = {
+  THOUSANDS: '0,0',
+  ONE_DECIMAL: '0.0',
+  ZERO_OR_ONE_DECIMAL: '0.[0]',
+  ONE_OR_TWO_DECIMALS: '0.0[0]',
+  ZERO_TO_TWO_DECIMALS: '0.[00]',
+  THREE_DECIMALS: '0.[000]',
+  PERCENT_ONE_OR_TWO_DECIMALS: '0.0[0]%',
+  PERCENT_ZERO_OR_ONE_DECIMAL: '0.[0]%',
+  PERCENT_ZERO_TO_TWO_DECIMALS: '0.[00]%',
+  DOLLAR_THOUSANDS: '$0,0',
+  DOLLAR_ABBREVIATION_ZERO_OR_ONE_DECIMAL: '$0,0.[0]a',
+  DOLLAR_ABBREVIATION_ZERO_TO_TWO_DECIMALS: '$0,0.[00]a',
+  ABBREVIATION_ZERO_TO_TWO_DECIMALS: '0.[00]a',
+  ABBREVIATION_ZERO_OR_ONE_DECIMAL: '0.[0]a',
+};
+
 export const ELEMENT_IDS = {
   ACCESSIBILITY: 'accessibility',
   PRIVACY_POLICY: 'privacy',
@@ -33,22 +51,22 @@ export const ELEMENT_IDS = {
 };
 
 export const EMAIL_ADDRESSES = {
-  CITY_PERFORMANCE: 'cities@infrastructure.gov.au',
+  CITY_PERFORMANCE: 'nationalcitiesperformanceframework@infrastructure.gov.au',
 };
 
 export const LINKS = {
   ALBURY_PHOTO_CREDIT: 'https://www.flickr.com/photos/49333819@N00',
   CITIES_PERFORMANCE_NETWORK: 'https://infrastructure.gov.au/cities/national-cities-performance-framework/',
-  CONTACT_US: 'mailto:cities@infrastructure.gov.au',
+  CONTACT_US: 'mailto:nationalcitiesperformanceframework@infrastructure.gov.au?subject=Performance framework',
   DTA_PRIVACY_POLICY: 'https://infrastructure.gov.au/utilities/privacy.aspx',
   FEEDBACK: 'https://infrastructure.gov.au/utilities/feedback.aspx',
   FEEDBACK_SURVEY_EMBED: 'https://surveymonkey.com/r/LS9RGKQ',
   ADDITIONAL_INFORMATION: '/additional-information',
+  DATA_DICTIONARY: '/data-dictionary',
   ICON_CREDIT: 'https://thenounproject.com/CreativeMania',
   LAUNCESTON_CITY_DEAL: 'https://citydeals.infrastructure.gov.au/launceston',
   ORG: 'https://dta.gov.au/',
   PRIVACY_ACT: 'https://www.legislation.gov.au/Series/C2004A03712',
-  PROTECTING_PDF: 'https://www.ag.gov.au/RightsAndProtections/CyberSecurity/Documents/PDF%20-%20Protecting%20Yourself%20Online%20-%20Second%20Edition%20-%20Booklet.pdf',
   SMART_CITIES_LINK: 'https://infrastructure.gov.au/cities/smart-cities/collaboration-platform/',
   SMART_CITIES_DPMC_LINK: 'https://infrastructure.gov.au/cities/smart-cities/plan/index.aspx',
   TOWNSVILLE_CITY_DEAL: 'https://citydeals.infrastructure.gov.au/townsville',

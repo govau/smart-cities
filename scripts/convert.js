@@ -5,6 +5,7 @@
 
 import csv from 'csv';
 import getStdin from 'get-stdin';
+import { NO_INDICATOR_DATA } from '../src/constants/misc';
 import INDICATORS from '../src/constants/indicators';
 
 // convert from an object to an array with a key for each indicator
@@ -16,17 +17,17 @@ const indicators = Object.entries(INDICATORS).map(([key, indicator]) => ({
 getStdin().then((rawCsv) => {
   csv.parse(rawCsv, { columns: true }, (err, data) => {
     const cities = data.map((row) => {
-      if (!row.Cities) return null;
+      if (!row.city) return null;
 
       const city = {
-        source: row.Cities,
+        source: row.city,
         indicators: {},
       };
 
       // generate key/value pairs for each indicator
       indicators.forEach((indicator) => {
         if (indicator.source in row) {
-          const value = row[indicator.source];
+          const value = (row[indicator.source] === NO_INDICATOR_DATA ? null : row[indicator.source]);
 
           // All data should be numeric
           if (Number.isNaN(Number(value))) {

@@ -11,6 +11,7 @@ import AllCitiesCategoryContainer from '../AllCitiesCategoryContainer/AllCitiesC
 import CityCategoryContainer from '../CityCategoryContainer/CityCategoryContainer';
 import StyleGuide from '../StyleGuide/StyleGuide';
 import AdditionalInfoPage from '../AdditionalInfoPage/AdditionalInfoPage';
+import DataDictionary from '../DataDictionary/DataDictionary';
 import RouteChangeHandler from '../RouteChangeHandler/RouteChangeHandler';
 import './_normalize.scss';
 import './_globalStyles.scss';
@@ -29,6 +30,7 @@ const App = () => (
         <Route path="/:cityId/:categoryId" component={CityCategoryContainer} />
 
         <Route path="/additional-information" component={AdditionalInfoPage} />
+		<Route path="/data-dictionary" component={DataDictionary} />
 
         <Route path="/style-guide" component={StyleGuide} />
         <Redirect from="/styleguide" to="/style-guide" />
