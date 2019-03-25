@@ -5,7 +5,7 @@
 export default {
     population: {
         name: 'Population',
-        format: '0.[00]a',
+        format: '0.[0]a',
         contextual: true,
         lastUpdated: 'June 2017',
         source: 'total_population'
