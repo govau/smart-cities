@@ -110,7 +110,7 @@ export default {
         source: 'education_year_12'
     },
     educationalAttainmentCertificate: {
-        name: 'Completed Certificate 3,4 or Diploma',
+        name: 'Completed Certificate 3, 4 or Diploma',
         format: '0.[0]%',
         contextual: false,
         lastUpdated: 'August 2016',
@@ -230,7 +230,7 @@ export default {
         source: 'gross_regional_product'
     },
     publicHousingUnits: {
-        name: 'Public and community housing units',
+        name: 'Public and community housing',
         format: '0.[0]%',
         contextual: false,
         lastUpdated: 'August 2016',
@@ -320,7 +320,7 @@ export default {
         source: 'air_quality'
     },
     energyEfficiencyOfBuildings: {
-        name: 'Office building energy and water efficiency rating',
+        name: 'Office building energy efficiency rating',
         format: '0.[00]',
         contextual: false,
         hideForCities: ['ballarat', 'bendigo', 'mackay', 'launceston'],

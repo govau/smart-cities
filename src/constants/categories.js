@@ -78,7 +78,7 @@ export const CATEGORIES = [{
         charts: [{
             name: 'Dwelling type breakdown',
             axisTitle: 'Share of dwellings',
-            description: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
+            description: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS - Census 2016',
             stacked: true,
             indicatorIds: ['dwellingApartment', 'dwellingSemi', 'dwellingHouse', 'dwellingOther']
         }, {
@@ -118,10 +118,11 @@ export const CATEGORIES = [{
             description: 'This shows the share of households in the bottom 20 per cent of the national household income distribution.\r\nSource: ABS - Census 2016',
             indicatorIds: ['shareInBottomIncomeQuintile']
         }, {
-            name: 'Languages other than English spoken at home',
-            axisTitle: 'Share of households',
-            description: 'This shows the proportion of residents who speak a language other than English at home.\r\nSource: ABS - Census 2016',
-            indicatorIds: ['languagesOtherThanEnglish']
+            name: 'Dwellings with access to public open space',
+			axisTitle: 'Share of dwellings',
+            description: 'This shows the share of dwellings in a city that are located within 400 metres of public open space. \r\nSource: RMIT Centre for Urban Research',
+			max: 1,
+            indicatorIds: ['accessToGreenSpace']
         }]
     }, {
         name: 'Jobs & skills',
@@ -197,7 +198,7 @@ export const CATEGORIES = [{
             description: 'This shows the share of the population that has completed year 12.\r\nSource: ABS - Census 2016',
             indicatorIds: ['educationalAttainmentYr12']
         }, {
-            name: 'Completed Certificate 3,4 or Diploma',
+            name: 'Completed Certificate 3, 4 or Diploma',
             axisTitle: 'Share of population',
             description: 'This shows the share of the population with a Certificate 3, 4 or diploma.\r\nSource: ABS - Census 2016',
             indicatorIds: ['educationalAttainmentCertificate']
@@ -224,7 +225,7 @@ export const CATEGORIES = [{
         iconId: 'housingHousingAffordability',
         summaryIndicatorIds: ['housingStress', 'mortgageStress', 'medianHousePrice'],
         charts: [{
-            name: 'Public and community housing units',
+            name: 'Public and community housing',
             axisTitle: 'Share of households',
             description: 'This shows the share of the housing stock that is public or community housing.\r\nSource: ABS - Census 2016',
             indicatorIds: ['publicHousingUnits']
@@ -293,7 +294,7 @@ export const CATEGORIES = [{
         }, {
             name: 'Dwelling type breakdown',
             axisTitle: 'Share of dwellings',
-            description: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS Census 2016',
+            description: 'This shows the share of dwellings that are detached houses, semi detached, apartments, or other dwellings. \n\nSource: ABS - Census 2016',
             stacked: true,
             indicatorIds: ['dwellingApartment', 'dwellingSemi', 'dwellingHouse', 'dwellingOther']
         }, {
@@ -381,7 +382,7 @@ export const CATEGORIES = [{
             description: 'This shows the estimated per-capita amount of greenhouse gases emitted in a year. It captures direct (scope 1) greenhouse emissions, excluding emissions from electricity generation, as well as indirect (scope 2) greenhouse gas emissions from the generation of electricity.                                                                                                                                    Source: BITRE/National Greenhouse Gas Inventory 2016',
             indicatorIds: ['greenhouseGasEmissions1']
         }, {
-            name: 'Office building energy and water efficiency rating',
+            name: 'Office building energy efficiency rating',
             axisTitle: '',
             description: 'This shows the average National Australian Built Environment Rating System (NABERS) score for rated office buildings in the city, weighted by floor space.\r\nSource: National Australian Built Environment Rating System',
             indicatorIds: ['energyEfficiencyOfBuildings']
@@ -563,7 +564,7 @@ export const CATEGORIES = [{
         charts: [{
             name: 'Local governments per city',
             axisTitle: '',
-            description: 'This shows the number of local governments in the city.\r\nSource: ABS - Australian Statistical Geography Standard (2018)',
+            description: 'This shows the number of local governments in the city.\r\nSource: ABS - Australian Statistical Geography Standard 2018',
             indicatorIds: ['dispersion']
         }]
     }]

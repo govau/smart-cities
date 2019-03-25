@@ -22,9 +22,6 @@ const DataDictionary = () => (
       <li><Link href="#average-household-size">Average household size</Link></li>
       <li><Link href="#housing-tenure">Housing tenure</Link></li>
       <li><Link href="#life-expectancy">Life expectancy</Link></li>
-      <li><Link href="#total-population">Total population</Link></li>
-      <li><Link href="#annual-population-growth-rate">Annual population growth rate</Link></li>
-      <li><Link href="#population-density">Population density</Link></li>
       <li><Link href="#share-in-bottom-household-income-quintile">Share in bottom household income quintile</Link></li>
       <li><Link href="#languages-other-than-english-spoken-at-home">Languages other than English spoken at home</Link></li>
       <li><Link href="#age-structure">Age structure</Link></li>
@@ -67,7 +64,7 @@ const DataDictionary = () => (
       <li><Link href="#youth-unemployment-rate">Youth unemployment rate</Link></li>
       <li><Link href="#participation-rate">Participation rate</Link></li>
       <li><Link href="#year-12-completion">Year 12 completion</Link></li>
-      <li><Link href="#certificate-iii-qualification-or-higher">Certificate level III qualification or higher</Link></li>
+      <li><Link href="#certificate-iii-qualification-or-higher">Certificate level III, IV or diploma</Link></li>
       <li><Link href="#bachelor-degree-or-higher">Bachelor degree or higher</Link></li>
       <li><Link href="#gross-regional-product">Gross regional product</Link></li>
     </ul>
@@ -291,89 +288,6 @@ const DataDictionary = () => (
     <p className={style.paragraph}>Capital cities have their estimates taken directly from the ABS publication. Life expectancy is estimated for non-capital cities using a model based on estimated age standardised death rates (ASDRs). The model uses the relationship between SA4 level life expectancy and ASDRs to estimate the life expectancy of SUAs and Western Sydney. ASDRs for the city definitions are calculated by using population weights to combine the SA2s that make up the city definitions. As non-capital cities are geographic subsets of SA4s, modelled estimates are calculated for the city and the balance of the SA4. These two estimates are then benchmarked to the original SA4 life expectancy estimate to ensure they align.</p>
     <h3 className={style.heading3}>Unit</h3>
     <p className={style.paragraph}>Years</p>
-    <h3 className={style.heading3}>Revision Schedule</h3>
-    <p className={style.paragraph}>Annual</p>
-    <p className={style.paragraph}><Link class="backtotop" href="#top">back to top</Link></p>
-  </div>
-</section>
-<section className={style.sectionWrapper}>
-  <div className={style.sectionContainer}>
-    <h2 className={style.heading2}  id="total-population">Total population</h2>
-    <h3 className={style.heading3}>Description</h3>
-    <p className={style.paragraph}>The number of people who live in a city.</p>
-    <h3 className={style.heading3}>Rationale</h3>
-    <p className={style.paragraph}>Information regarding population size can help users to understand likely pressures on housing, public infrastructure and services.</p>
-    <h3 className={style.heading3}>Limitations</h3>
-    <p className={style.paragraph}>None</p>
-    <h3 className={style.heading3}>Data Source</h3>
-    <p className={style.paragraph}>Australian Bureau of Statistics - Regional Population Growth, Australia, 2016-17 (Cat no. 3218.0)</p>
-    <h3 className={style.heading3}>Date Published</h3>
-    <p className={style.paragraph}>31-Aug-18</p>
-    <h3 className={style.heading3}>Data Source Link</h3>
-    <p className={style.paragraph}><Link href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0">http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0</Link></p>
-    <h3 className={style.heading3}>Data Source Geography</h3>
-    <p className={style.paragraph}>GCCSA (Capital cities), LGA (Western Sydney) and SUA (other cities) (ASGS 2016)</p>
-    <h3 className={style.heading3}>Method</h3>
-    <p className={style.paragraph}>Estimates are taken directly from the ABS.</p>
-    <h3 className={style.heading3}>Unit</h3>
-    <p className={style.paragraph}>Persons</p>
-    <h3 className={style.heading3}>Revision Schedule</h3>
-    <p className={style.paragraph}>Annual</p>
-    <p className={style.paragraph}><Link class="backtotop" href="#top">back to top</Link></p>
-  </div>
-</section>
-<section className={style.sectionWrapper}>
-  <div className={style.sectionContainer}>
-    <h2 className={style.heading2}  id="annual-population-growth-rate">Annual population growth rate</h2>
-    <h3 className={style.heading3}>Description</h3>
-    <p className={style.paragraph}>The annual population growth rate of a city.</p>
-    <h3 className={style.heading3}>Rationale</h3>
-    <p className={style.paragraph}>Information regarding population growth can help users to understand likely pressures on housing, public infrastructure and services.</p>
-    <h3 className={style.heading3}>Limitations</h3>
-    <p className={style.paragraph}>None</p>
-    <h3 className={style.heading3}>Data Source</h3>
-    <p className={style.paragraph}>Australian Bureau of Statistics - Regional Population Growth, Australia, 2016-17 (Cat no. 3218.0)</p>
-    <h3 className={style.heading3}>Date Published</h3>
-    <p className={style.paragraph}>31-Aug-18</p>
-    <h3 className={style.heading3}>Data Source Link</h3>
-    <p className={style.paragraph}><Link href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0">http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0</Link></p>
-    <h3 className={style.heading3}>Data Source Geography</h3>
-    <p className={style.paragraph}>GCCSA (Capital cities), LGA (Western Sydney) and SUA (other cities) (ASGS 2016)</p>
-    <h3 className={style.heading3}>Method</h3>
-    <p className={style.paragraph}>Population growth is calculated as a five year average annual rate. The calculation uses a compound annual growth rate formula. The most recent estimated resident population is divided by the population five years earlier, this is then brought to the power of one over five. The product of this is then multiplied by 100 and then 100 is subtracted.</p>
-    <h3 className={style.heading3}>Unit</h3>
-    <p className={style.paragraph}>Percentage</p>
-    <h3 className={style.heading3}>Revision Schedule</h3>
-    <p className={style.paragraph}>Annual</p>
-    <p className={style.paragraph}><Link class="backtotop" href="#top">back to top</Link></p>
-  </div>
-</section>
-<section className={style.sectionWrapper}>
-  <div className={style.sectionContainer}>
-    <h2 className={style.heading2}  id="population-density">Population density</h2>
-    <h3 className={style.heading3}>Description</h3>
-    <p className={style.paragraph}>Population-weighted density measures attempt to capture the density at which the average city resident lives. This measure was calculated as a weighted average of the population density of all of the census meshblocks within the city. This measure is more representative of the lived experience of a city's residents than a simple average density calculation (i.e. population divided by the land area of the city).</p>
-    <h3 className={style.heading3}>Rationale</h3>
-    <p className={style.paragraph}>Increasing density enables more people and businesses to access the benefits of being in a city, and can, for example, help spread the costs associated with building and maintaining infrastructure. However, increasing density also puts increased stress on the existing built and natural environment and can detract from a city's liveability.</p>
-    <h3 className={style.heading3}>Limitations</h3>
-    <p className={style.paragraph}>Population-weighted density measures are sensitive to the geographic scale of the underlying population data. This calculation is based on census meshblocks, which represent the most disaggregated scale at which population data is available for cities. Census meshblock population counts are only published for census years.</p>
-    <h3 className={style.heading3}>Data Source</h3>
-    <p className={style.paragraph}>BITRE analysis of: </p>
-    <ul>
-      <li> Australian Bureau of Statistics - Census of Population and Housing: Mesh Block Counts, Australia, 2016 (Cat. no. 2074.0) </li>
-      <li> Australian Bureau of Statistics - Regional Population Growth, Australia, 2016-17 (Cat. no. 3218.0)</li>
-    </ul>
-    <h3 className={style.heading3}>Date Published</h3>
-    <p className={style.paragraph}>4 July 2017 (Cat. no. 2074.0) and 31 August 2018 (Cat. no. 3218.0)</p>
-    <h3 className={style.heading3}>Data Source Link</h3>
-    <p className={style.paragraph}><Link href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0;%20http://www.abs.gov.au/ausstats/abs@.nsf/mf/2074.0">http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0; http://www.abs.gov.au/ausstats/abs@.nsf/mf/2074.0</Link></p>
-    <h3 className={style.heading3}>Data Source Geography</h3>
-    <p className={style.paragraph}>GCCSA (Capital cities), LGA (Western Sydney) and SUA (other cities) (ASGS 2016)</p>
-    <h3 className={style.heading3}>Method</h3>
-    <p className={style.paragraph}>Current year population estimates for each meshblock are derived by multiplying each 2016 census meshblock population count by an SA2-specific scaling factor. The scaling factor is calculated for each SA2 as the ratio of the Estimated Resident Population count for the current year to the latest census-based population count (i.e. the sum across all meshblocks in the SA2). This approach essentially scales up the census-year meshblock population counts so they align with the most recent available population counts.</p>
-    <p className={style.paragraph}>Density is then calculated for each meshblock by dividing this scaled population estimate by the land area of the meshblock. The final step involves weighting these meshblock density estimates using the scaled meshblock population estimates, and aggregating to the city scale using a standard population weighted formula.</p>
-    <h3 className={style.heading3}>Unit</h3>
-    <p className={style.paragraph}>Persons per square kilometre</p>
     <h3 className={style.heading3}>Revision Schedule</h3>
     <p className={style.paragraph}>Annual</p>
     <p className={style.paragraph}><Link class="backtotop" href="#top">back to top</Link></p>
@@ -775,7 +689,7 @@ const DataDictionary = () => (
     <h3 className={style.heading3}>Rationale</h3>
     <p className={style.paragraph}>Households that spend a large share of their income on mortgage payments have less money to spend on other things. These households are also typically more vulnerable to financial shocks associated with house price falls or interest rate rises, which can increase risks of default or further constrain consumer spending. Having a large number of households in mortgage stress presents broader risks to the local economy.</p>
     <h3 className={style.heading3}>Limitations</h3>
-    <p className={style.paragraph}>This indicator does not take into account the size of household income when calculating whether a household is under stress. High income households can afford to spend a high proportion of their income on housing and not affect their ability to afford other essentials.</p>
+    <p className={style.paragraph}>This indicator does not take into account the size of household income when calculating whether a household is under stress. High income households can afford to spend a high proportion of their income on housing and not affect their ability to afford other essentials. Mortgage stress is calculated using various methodologies by other providers. Please use caution when comparing different measures.</p>
     <h3 className={style.heading3}>Data Source</h3>
     <p className={style.paragraph}>Australian Bureau of Statistics - Census of Population and Housing 2016</p>
     <h3 className={style.heading3}>Date Published</h3>
@@ -802,7 +716,7 @@ const DataDictionary = () => (
     <h3 className={style.heading3}>Rationale</h3>
     <p className={style.paragraph}>Around one in three households rent. Households that cannot afford to pay rent can put pressure on public and community housing. Lack of access to affordable rental housing can exacerbate this problem.</p>
     <h3 className={style.heading3}>Limitations</h3>
-    <p className={style.paragraph}>This indicator does not take into account the size of household income when calculating whether a household is under stress. High income households can afford to spend a high proportion of their income on housing and not affect their ability to afford other essentials.</p>
+    <p className={style.paragraph}>This indicator does not take into account the size of household income when calculating whether a household is under stress. High income households can afford to spend a high proportion of their income on housing and not affect their ability to afford other essentials. Rent stress is calculated using various methodologies by other providers. Please use caution when comparing different measures.</p>
     <h3 className={style.heading3}>Data Source</h3>
     <p className={style.paragraph}>Australian Bureau of Statistics - Census of Population and Housing 2016</p>
     <h3 className={style.heading3}>Date Published</h3>
@@ -861,7 +775,7 @@ const DataDictionary = () => (
     <h3 className={style.heading3}>Rationale</h3>
     <p className={style.paragraph}>Households that spend a large share of their income on mortgage or rent payments have less money to spend on other things. Having a large number of households under stress presents broader risks to the local economy.</p>
     <h3 className={style.heading3}>Limitations</h3>
-    <p className={style.paragraph}>This indicator does not take into account the size of household income when calculating whether a household is under stress. High income households can afford to spend a high proportion of their income on housing and not affect their ability to afford other essentials.</p>
+    <p className={style.paragraph}>This indicator does not take into account the size of household income when calculating whether a household is under stress. High income households can afford to spend a high proportion of their income on housing and not affect their ability to afford other essentials. Housing stress is calculated using various methodologies by other providers. Please use caution when comparing different measures.</p>
     <h3 className={style.heading3}>Data Source</h3>
     <p className={style.paragraph}>Australian Bureau of Statistics - Census of Population and Housing 2016</p>
     <h3 className={style.heading3}>Date Published</h3>
@@ -889,7 +803,7 @@ const DataDictionary = () => (
     <p className={style.paragraph}>Better access to jobs makes it simpler to find work or change employers, and can improve the quality of job matches in a city - one of the determinants of labour productivity. Shorter commute times also give people more time for leisure outside work. </p>
     <p className={style.paragraph}>The share of jobs accessible within 30 minutes is a partial indicator of the efficiency of a city&rsquo;s transport infrastructure.</p>
     <h3 className={style.heading3}>Limitations</h3>
-    <p className={style.paragraph}>This indicator only includes travel by car and does not provide full information on the effectiveness of a city&rsquo;s transport network. Jobs outside the city definition are not included in the calculation, even if they are accessible in 30 minutes (for example jobs in Queanbeyan are exclude from the Canberra calculation despite being easily accessible). On roads where there is insufficient data for average road speeds (predominantly suburban roads) the signposted speed is used.</p>
+    <p className={style.paragraph}>This indicator only includes travel by car and does not provide full information on the effectiveness of a city&rsquo;s transport network. Jobs outside the city definition are not included in the calculation, even if they are accessible in 30 minutes (for example jobs in Queanbeyan are excluded from the Canberra calculation despite being easily accessible). On roads where there is insufficient data for average road speeds (predominantly suburban roads) the signposted speed is used.</p>
     <h3 className={style.heading3}>Data Source</h3>
     <p className={style.paragraph}>BITRE analysis of:</p>
     <ul>
@@ -932,7 +846,7 @@ const DataDictionary = () => (
     <p className={style.paragraph}>Better access to jobs makes it simpler to find work or change employers, and can improve the quality of job matches in a city - one of the determinants of labour productivity. Shorter commute times also give people more time for leisure outside work. </p>
     <p className={style.paragraph}>The number of jobs accessible within 30 minutes is a partial indicator of the efficiency of a city&rsquo;s transport infrastructure.</p>
     <h3 className={style.heading3}>Limitations</h3>
-    <p className={style.paragraph}>This indicator only includes travel by car and does not provide full information on the effectiveness of a city&rsquo;s transport network. Jobs outside the city definition are not included in the calculation, even if they are accessible in 30 minutes (for example jobs in Queanbeyan are exclude from the Canberra calculation despite being easily accessible). On roads where there is insufficient data for average road speeds (predominantly suburban roads) the signposted speed is used.</p>
+    <p className={style.paragraph}>This indicator only includes travel by car and does not provide full information on the effectiveness of a city&rsquo;s transport network. Jobs outside the city definition are not included in the calculation, even if they are accessible in 30 minutes (for example jobs in Queanbeyan are excluded from the Canberra calculation despite being easily accessible). On roads where there is insufficient data for average road speeds (predominantly suburban roads) the signposted speed is used.</p>
     <h3 className={style.heading3}>Data Source</h3>
     <p className={style.paragraph}>BITRE analysis of:</p>
     <ul>
@@ -1003,7 +917,7 @@ const DataDictionary = () => (
     <p className={style.paragraph}>Understanding commuting patterns is important for transport planning and identifying opportunities to promote healthy lifestyle choices.</p>
     <p className={style.paragraph}>The share of people that travel to work by walking, cycling or public transport is affected by commuter preferences, the location of jobs and workers, transport prices and infrastructure. For example, more people will commute by car if driving is a cheap and quick way to get to work. More people will walk to work if jobs are close to where people live.</p>
     <h3 className={style.heading3}>Limitations</h3>
-    <p className={style.paragraph}>This indicator does not include work trips that have substantial active transport component, for example somebody who walks to a train station. It also does not included non-work active trips.</p>
+    <p className={style.paragraph}>This indicator does not include work trips that have substantial active transport component, for example somebody who walks to a train station. It also does not include non-work active trips.</p>
     <h3 className={style.heading3}>Data Source</h3>
     <p className={style.paragraph}>Australian Bureau of Statistics - Census of Population and Housing 2016</p>
     <h3 className={style.heading3}>Date Published</h3>
@@ -1625,7 +1539,7 @@ const DataDictionary = () => (
 </section>
 <section className={style.sectionWrapper}>
   <div className={style.sectionContainer}>
-    <h2 className={style.heading2}  id="certificate-iii-qualification-or-higher">Certificate level III qualification or higher</h2>
+    <h2 className={style.heading2}  id="certificate-iii-qualification-or-higher">Certificate level III, IV or diploma</h2>
     <h3 className={style.heading3}>Description</h3>
     <p className={style.paragraph}>The proportion of a city's population who have completed a certificate III, IV or diploma as their highest level of educational attainment.</p>
     <h3 className={style.heading3}>Rationale</h3>
