@@ -80,9 +80,9 @@ const DataDictionary = () => (
     <h3 className={style.heading3}>Limitations</h3>
     <p className={style.paragraph}>None</p>
     <h3 className={style.heading3}>Data Source</h3>
-    <p className={style.paragraph}>Australian Bureau of Statistics - Regional Population Growth, Australia, 2016-17 (Cat no. 3218.0)</p>
+    <p className={style.paragraph}>Australian Bureau of Statistics - Regional Population Growth, Australia, 2017-18 (Cat no. 3218.0)</p>
     <h3 className={style.heading3}>Date Published</h3>
-    <p className={style.paragraph}>31-Aug-18</p>
+    <p className={style.paragraph}>27 March 2019</p>
     <h3 className={style.heading3}>Data Source Link</h3>
     <p className={style.paragraph}><Link href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0">http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0</Link></p>
     <h3 className={style.heading3}>Data Source Geography</h3>
@@ -106,9 +106,9 @@ const DataDictionary = () => (
     <h3 className={style.heading3}>Limitations</h3>
     <p className={style.paragraph}>None</p>
     <h3 className={style.heading3}>Data Source</h3>
-    <p className={style.paragraph}>Australian Bureau of Statistics - Regional Population Growth, Australia, 2016-17 (Cat no. 3218.0)</p>
+    <p className={style.paragraph}>Australian Bureau of Statistics - Regional Population Growth, Australia, 2017-18 (Cat no. 3218.0)</p>
     <h3 className={style.heading3}>Date Published</h3>
-    <p className={style.paragraph}>31-Aug-18</p>
+    <p className={style.paragraph}>27 March 2019</p>
     <h3 className={style.heading3}>Data Source Link</h3>
     <p className={style.paragraph}><Link href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0">http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0</Link></p>
     <h3 className={style.heading3}>Data Source Geography</h3>
@@ -161,10 +161,10 @@ const DataDictionary = () => (
     <p className={style.paragraph}>BITRE analysis of:</p>
     <ul>
       <li> Australian Bureau of Statistics - Census of Population and Housing: Mesh Block Counts, Australia, 2016 (Cat. no. 2074.0) </li>
-      <li> Australian Bureau of Statistics - Regional Population Growth, Australia, 2016-17 (Cat. no. 3218.0)</li>
+      <li> Australian Bureau of Statistics - Regional Population Growth, Australia, 2017-18 (Cat. no. 3218.0)</li>
     </ul>
     <h3 className={style.heading3}>Date Published</h3>
-    <p className={style.paragraph}>4 July 2017 (Cat. no. 2074.0) and 31 August 2018 (Cat. no. 3218.0)</p>
+    <p className={style.paragraph}>4 July 2017 (Cat. no. 2074.0) and 27 March 2019 (Cat. no. 3218.0)</p>
     <h3 className={style.heading3}>Data Source Link</h3>
     <p className={style.paragraph}><Link href="http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0;%20http://www.abs.gov.au/ausstats/abs@.nsf/mf/2074.0">http://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/3218.0; http://www.abs.gov.au/ausstats/abs@.nsf/mf/2074.0</Link></p>
     <h3 className={style.heading3}>Data Source Geography</h3>
@@ -746,11 +746,11 @@ const DataDictionary = () => (
     <p className={style.paragraph}>There is a lag between the approval of a new dwelling and that dwelling being constructed and entering the housing market.</p>
     <h3 className={style.heading3}>Data Source</h3>
     <ul>
-      <li>Australian Bureau of Statistics - Building approvals, Australia, Aug 2017 (Cat. no. 8731.0)</li>
+      <li>Australian Bureau of Statistics - Building approvals, Australia (Cat. no. 8731.0)</li>
       <li> Australian Bureau of Statistics - Regional Population Growth (Cat. no. 3218.0)</li>
     </ul>
     <h3 className={style.heading3}>Date Published</h3>
-    <p className={style.paragraph}>30 October 2018 (Building Approvals) and 24 April 2018 (Regional Population Growth)</p>
+    <p className={style.paragraph}>3 May 2019 (Building Approvals) and 27 March 2019 (Regional Population Growth)</p>
     <h3 className={style.heading3}>Data Source Link</h3>
     <p className={style.paragraph}><Link href="http://www.abs.gov.au/ausstats/abs@.nsf/mf/8731.0">http://www.abs.gov.au/ausstats/abs@.nsf/mf/8731.0</Link></p>
     <h3 className={style.heading3}>Data Source Geography</h3>
@@ -1602,7 +1602,7 @@ const DataDictionary = () => (
 <p className={style.paragraph}>A city's gross regional product per capita reflects the size, strength and productivity of the city's economy.</p>
 <h3 className={style.heading3}>Limitations</h3>
 <p className={style.paragraph}>Sub-national Gross Regional Product (GRP) estimates attempt to allocate economic activity to small regions. Partitioning GRP in this way may misallocate complex economic activity that spans regional boundaries. </p>
-<p className={style.paragraph}>In addition to this difficulty, GRP estimates from the Chief Economist at the Department of Industry, Innovation and Science, from which these estimates derive, are experimental and should be interpreted with caution. GRP estimates for non-capital cities are partitioned from the SA4 level using Census income data by place of work and should be viewed as indicative and not as definitive estimates of GRP for the city. Please see methodology section for further information.</p>
+<p className={style.paragraph}>In addition to this difficulty, GRP estimates from the Chief Economist at the Department of Industry, Innovation and Science, from which these estimates derive, are experimental and should be interpreted with caution. GRP estimates for non-capital cities are partitioned from the SA4 level using Census income data by place of work and should be viewed as indicative and not as definitive estimates of GRP for the city. Mackay's estimate has not been published due to industry specific issues which are not accounted for in this method. Please see methodology section for further information.</p>
 <h3 className={style.heading3}>Data Source</h3>
 <p className={style.paragraph}>BITRE analysis of: </p>
 <ul>
