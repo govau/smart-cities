@@ -1,6 +1,6 @@
 {
   "name": "smart-cities",
-  "version": "13.0.0",
+  "version": "13.0.1",
   "private": true,
   "repository": {
     "type": "git",
@@ -70,7 +70,7 @@
     "html-webpack-plugin": "2.30.1",
     "jest": "^23.6.0",
     "json-loader": "^0.5.4",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.12",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
     "react-dev-utils": "^3.1.2",
