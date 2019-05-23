@@ -51,9 +51,9 @@ Source: ABS - Census 2016","August 2016"
 Source: ABS - Dwelling Approvals & Regional Population","2018"
 "housing_stress","This shows the proportion of occupied households within the city for which housing payments (mortgage or rent) make up 30 per cent or more of household income.
 Source: ABS - Census 2016","August 2016"
-"jobs_accessible_proportion","This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. This indicator represents a city-wide average – commute times in different parts of a city are weighted by population size.
+"jobs_accessible_proportion","This shows the share of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. This indicator represents a city-wide average â€“ commute times in different parts of a city are weighted by population size.
 Source: BITRE","2016-2018"
-"jobs_accessible_number","This shows the number of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. This indicator represents a city-wide average – commute times in different parts of a city are weighted by population size.
+"jobs_accessible_number","This shows the number of jobs in a city that can be reached by car in a commute of 30 minutes or less during the morning peak. This indicator represents a city-wide average â€“ commute times in different parts of a city are weighted by population size.
 Source: BITRE","2016-2018"
 "public_transport","This shows the proportion of journeys to work that are taken by public transport.
 Source ABS - Census 2016","August 2016"
@@ -79,7 +79,7 @@ Source: RMIT Centre for Urban Research","2018"
 Source: PHIDU - Social Health Atlas of Australia","2014"
 "suicide","This shows the number of suicides in a year per 100,000 people, calculated over a five year period.
 Source: PHIDU - Social Health Atlas of Australia","2011-15"
-"air_quality","The average amount of particulate matter in a city’s air per cubic metre, measured over the course of a year.
+"air_quality","The average amount of particulate matter in a cityâ€™s air per cubic metre, measured over the course of a year.
 Source: World Health Organisation","2016 and 2018"
 "volunteering","This shows the share of people aged 15 years and older who volunteered their time, services or skills to a club, organisation or association in the past twelve months.
 Source ABS - Census 2016","August 2016"

@@ -2,7 +2,6 @@
 /* eslint-disable max-len */
 /* eslint-disable comma-dangle */
 /* eslint-disable array-bracket-spacing */
-
 export default { population: { name: 'Population', format: '0.[0]a', contextual: true, lastUpdated: 'June 2018', source: 'total_population' },
   growthRate: { name: 'Average annual population growth rate', legendText: 'Annual growth', format: '0.[00]%', contextual: true, lastUpdated: 'June 2013 to 2018', source: 'population_growth' },
   indigenousPopulation: { name: 'Proportion of population that is Indigenous', format: '0.[00]%', contextual: true, lastUpdated: 'August 2016', source: 'indigenous_population' },
