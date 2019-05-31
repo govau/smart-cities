@@ -6,7 +6,7 @@ exports[`should match Snapshot 1`] = `
     <div className=\\"wordsWrapper\\">
       <div className=\\"footerLinks\\">
         <div className=\\"footerLinksRow\\">
-          <Link href=\\"https://infrastructure.gov.au/utilities/feedback.aspx\\" className=\\"staticLink\\" unstyled={false}>
+          <Link href=\\"https://www.infrastructure.gov.au/utilities/feedback.aspx\\" className=\\"staticLink\\" unstyled={false}>
             Give feedback
           </Link>
           <Link href=\\"/additional-information#privacy\\" className=\\"staticLink\\" unstyled={false}>
