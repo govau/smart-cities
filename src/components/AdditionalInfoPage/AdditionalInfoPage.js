@@ -95,7 +95,7 @@ const AdditionalInfoPage = () => (
         <p className={style.paragraph}>
           This privacy statement is
           about the National Cities Performance Framework Dashboard — this is an online service managed
-          by the Department of Infrastructure, Regional Development and Cities. The department is located in Canberra, Australia.
+          by the Department of Infrastructure, Transport, Cities and Regional Development. The department is located in Canberra, Australia.
         </p>
 
         <p className={style.paragraph}>
