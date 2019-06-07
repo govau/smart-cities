@@ -74,6 +74,7 @@ const DataDictionary = () => (
   <div className={style.sectionContainer}>
     <h2 className={style.heading2}>Indicator  changes in the 2019 National Cities Performance Framework Dashboard update</h2>
 <h3 className={style.heading3} id="contextual">Contextual</h3>
+<div className={style.tableScroll}>
 <table className={style.table}>
   <tr>
     <th width="50%">Indicator</th>
@@ -236,7 +237,9 @@ const DataDictionary = () => (
     <td>&nbsp;</td>
   </tr>
 </table>
+</div>
 <h3 className={style.heading3} id="jobs">Jobs and Skills</h3>
+<div className={style.tableScroll}>
 <table className={style.table}>
   <tr>
     <th width="50%">Indicator</th>
@@ -335,7 +338,9 @@ const DataDictionary = () => (
     <td>&nbsp;</td>
   </tr>
 </table>
+</div>
 <h3 className={style.heading3} id="housing">Housing</h3>
+<div className={style.tableScroll}>
 <table className={style.table}>
   <tr>
     <th width="50%">Indicator</th>
@@ -466,7 +471,9 @@ const DataDictionary = () => (
     <td>&nbsp;</td>
   </tr>
 </table>
+</div>
 <h3 className={style.heading3} id="infrastructure">Infrastructure and Investment</h3>
+<div className={style.tableScroll}>
 <table className={style.table}>
   <tr>
     <th width="50%">Indicator</th>
@@ -517,7 +524,9 @@ const DataDictionary = () => (
     <td>&nbsp;</td>
   </tr>
 </table>
+</div>
 <h3 className={style.heading3} id="liveability">Liveability and Sustainability</h3>
+<div className={style.tableScroll}>
 <table className={style.table}>
   <tr>
     <th width="50%">Indicator</th>
@@ -664,7 +673,9 @@ const DataDictionary = () => (
     <td>&nbsp;</td>
   </tr>
 </table>
+</div>
 <h3 className={style.heading3} id="innovation">Innovation and Digital Opportunities</h3>
+<div className={style.tableScroll}>
 <table className={style.table}>
   <tr>
     <th width="50%">Indicator</th>
@@ -731,7 +742,9 @@ const DataDictionary = () => (
     <td className={style.tableCell}>X</td>
   </tr>
 </table>
+</div>
 <h3 className={style.heading3} id="governance">Governance, Planning and Regulation</h3>
+<div className={style.tableScroll}>
 <table className={style.table}>
   <tr>
     <th width="50%">Indicator</th>
@@ -822,6 +835,7 @@ const DataDictionary = () => (
     <td>&nbsp;</td>
   </tr>
 </table>
+</div>
 
     <p className={style.paragraph}><Link class="backtotop" href="#top">back to top</Link></p>
   </div>
