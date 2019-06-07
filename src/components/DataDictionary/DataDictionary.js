@@ -72,6 +72,765 @@ const DataDictionary = () => (
 </section>
 <section className={style.sectionWrapper}>
   <div className={style.sectionContainer}>
+    <h2 className={style.heading2}>Indicator  changes in the 2019 National Cities Performance Framework Dashboard update</h2>
+<h3 className={style.heading3} id="contextual">Contextual</h3>
+<table className={style.table}>
+  <tr>
+    <th width="50%">Indicator</th>
+    <th width="10%">No Change</th>
+    <th width="10%">Updated<br/>Data</th>
+    <th width="10%">Updated<br/>Methodology</th>
+    <th width="10%">Added</th>
+    <th width="10%">Removed</th>
+  </tr>
+  <tr>
+    <td>Population</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Average annual population growth rate</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of population that is Indigenous</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Population density</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Population breakdown by age</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Dependency ratio</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Median age</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of population with disability</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Dwelling type breakdown</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Average persons per dwelling</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Housing tenure</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Median dwelling price</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Average dwelling price</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Life expectancy at birth</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Share of households in lowest income quintile</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Index of Relative Socio-economic Disadvantage</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Languages other than English spoken at home</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Dwellings with access to public open space</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Industry sector share of employment</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<h3 className={style.heading3} id="jobs">Jobs and Skills</h3>
+<table className={style.table}>
+  <tr>
+    <th width="50%">Indicator</th>
+    <th width="10%">No Change</th>
+    <th width="10%">Updated<br/>Data</th>
+    <th width="10%">Updated<br/>Methodology</th>
+    <th width="10%">Added</th>
+    <th width="10%">Removed</th>
+  </tr>
+  <tr>
+    <td>Youth unemployment rate</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Unemployment rate</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Indigenous unemployment rate</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Participation rate</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Participation rate by gender</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Annual employment growth rate</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Industry sector share of employment</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Gross regional product</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Completed year 12</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Completed Certificate 3, 4 or Diploma</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Completed bachelor degree or higher</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<h3 className={style.heading3} id="housing">Housing</h3>
+<table className={style.table}>
+  <tr>
+    <th width="50%">Indicator</th>
+    <th width="10%">No Change</th>
+    <th width="10%">Updated<br/>Data</th>
+    <th width="10%">Updated<br/>Methodology</th>
+    <th width="10%">Added</th>
+    <th width="10%">Removed</th>
+  </tr>
+  <tr>
+    <td>Dwelling price to household income ratio</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Public and community housing units</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Median annual household income</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Average housing construction costs</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of households under mortgage stress</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Median dwelling price</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Average house price</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Average unit price</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Population change per residential building approval</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Building approvals per 100k people</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Average persons per dwelling</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Homeless per 100k people</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of households under rent stress</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Dwelling type breakdown</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Housing tenure</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<h3 className={style.heading3} id="infrastructure">Infrastructure and Investment</h3>
+<table className={style.table}>
+  <tr>
+    <th width="50%">Indicator</th>
+    <th width="10%">No Change</th>
+    <th width="10%">Updated<br/>Data</th>
+    <th width="10%">Updated<br/>Methodology</th>
+    <th width="10%">Added</th>
+    <th width="10%">Removed</th>
+  </tr>
+  <tr>
+    <td>Proportion of jobs accessible by car within 30 minutes</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Number of jobs accessible by car within 30 minutes</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Peak travel delay</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of journeys to work by public transport</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of journeys to work by active transport</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<h3 className={style.heading3} id="liveability">Liveability and Sustainability</h3>
+<table className={style.table}>
+  <tr>
+    <th width="50%">Indicator</th>
+    <th width="10%">No Change</th>
+    <th width="10%">Updated<br/>Data</th>
+    <th width="10%">Updated<br/>Methodology</th>
+    <th width="10%">Added</th>
+    <th width="10%">Removed</th>
+  </tr>
+  <tr>
+    <td>Dwellings with access to greenspace</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Dwellings with access to public open space</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Percentage of area that is greenspace</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Air pollution particles smaller than PM10</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Air pollution particles smaller than PM2.5</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Greenhouse gas emissions</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Office building energy and water efficiency rating</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Dwellings with access to public transport</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Life expectancy at birth</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of people that volunteer</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Languages other than English spoken at home</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Index of Relative Socio-economic Disadvantage</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Share of households in lowest income quintile</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Adults that feel safe after dark in their local area</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Percentage of population able to get crisis support</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of adults who are obese</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Suicides per 100k people</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<h3 className={style.heading3} id="innovation">Innovation and Digital Opportunities</h3>
+<table className={style.table}>
+  <tr>
+    <th width="50%">Indicator</th>
+    <th width="10%">No Change</th>
+    <th width="10%">Updated<br/>Data</th>
+    <th width="10%">Updated<br/>Methodology</th>
+    <th width="10%">Added</th>
+    <th width="10%">Removed</th>
+  </tr>
+  <tr>
+    <td>Business entry and exit rate</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Business entry</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Households with broadband</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Patent applications per 100k people</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Trademark applications per 100k people</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Workers in knowledge intensive services</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>LinkedIn contacts by location</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+</table>
+<h3 className={style.heading3} id="governance">Governance, Planning and Regulation</h3>
+<table className={style.table}>
+  <tr>
+    <th width="50%">Indicator</th>
+    <th width="10%">No Change</th>
+    <th width="10%">Updated<br/>Data</th>
+    <th width="10%">Updated<br/>Methodology</th>
+    <th width="10%">Added</th>
+    <th width="10%">Removed</th>
+  </tr>
+  <tr>
+    <td>Population</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Average annual population growth rate</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of population that is Indigenous</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Population density</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Population breakdown by age</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Dependency ratio</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Median age</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Proportion of population with disability</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Local governments per 100k people</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+  </tr>
+  <tr>
+    <td>Local governments per city</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td className={style.tableCell}>X</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+    <p className={style.paragraph}><Link class="backtotop" href="#top">back to top</Link></p>
+  </div>
+</section>
+
+
+
+<section className={style.sectionWrapper}>
+  <div className={style.sectionContainer}>
     <h2 className={style.heading2} id="total-population">Total population</h2>
     <h3 className={style.heading3}>Description</h3>
     <p className={style.paragraph}>The number of people who live in a city.</p>
