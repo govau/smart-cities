@@ -46,3 +46,26 @@
   word-wrap: break-word; // the long links on mobile are wider than 300px
 }
 
+.tableCell {
+  text-align:center;
+}
+
+table {
+	width: 100%;
+	border: 1px solid black;
+	margin-bottom: 24px;
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 15px;
+}
+
+th {
+	background-color: $color-primary--020;
+}
+
+tr:nth-child(odd) {
+	background-color: $color-primary--020;
+}
