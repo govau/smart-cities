@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
+set -euo pipefail
 
 # Log in to staging environment
 
-cf api $CF_STAGING_API #&> /dev/null
-cf auth $CF_STAGING_USER $CF_STAGING_PASSWORD #&> /dev/null
-cf target -o $CF_STAGING_ORG #&> /dev/null
-cf target -s $CF_STAGING_SPACE #&> /dev/null
+cf api $CF_API_STAGING
+cf auth $CF_USERNAME $CF_PASSWORD_STAGING
+cf target -o $CF_ORG
+cf target -s $CF_SPACE
