@@ -244,7 +244,7 @@ export const CATEGORIES = [{
             description: 'This shows the average cost per square metre of constructing a new detached house in a city.\r\nSource: Rawlinson Guide to Construction Costs',
             indicatorIds: ['housingConstructionCosts']
         }, {
-            name: 'Proportion of mortgagees under mortgage stress',
+            name: 'Proportion of households under mortgage stress',
             axisTitle: '',
             description: 'This shows the proportion of households for which mortgage payments makes up 30 per cent or more of household income.\r\nSource: ABS - Census 2016',
             indicatorIds: ['mortgageStress']
@@ -286,7 +286,7 @@ export const CATEGORIES = [{
             description: 'This shows the number of homeless people per 100,000 people.\r\nSource ABS - Census 2016',
             indicatorIds: ['homelessnessRate']
         }, {
-            name: 'Proportion of renters under rent stress',
+            name: 'Proportion of households under rent stress',
             axisTitle: '',
             description: 'This shows the proportion of households for which rent makes up 30 per cent or more of household income.\r\nSource: ABS - Census 2016',
             indicatorIds: ['rentStress']

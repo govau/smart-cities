@@ -30,7 +30,7 @@ const AllCitiesOverview = props => (
     <div className={style.heroWrapper}>
       <div className={style.heroContainer}>
         <p className={style.heroText}>
-          Tracking progress and performance across Australia’s largest cities
+          A snapshot of performance across Australia's largest cities
         </p>
 
         <img
@@ -51,7 +51,7 @@ const AllCitiesOverview = props => (
         </h1>
 
         <p className={style.infoBodyText}>
-          To keep the National Cities Performance Framework up-to-date, we've added more recent data on Australian cities. We've also changed the methods we use to calculate some of the indicators. So please be careful when interpreting any changes you notice. If you'd like more information on any indicator, please read the <Link href={LINKS.DATA_DICTIONARY}>data dictionary</Link> or email us at <Link href={LINKS.CONTACT_US}>nationalcitiesperformanceframework@infrastructure.gov.au</Link></p>
+          To keep the National Cities Performance Framework up-to-date, we've added more recent data on Australian cities. We've also changed the methods we use to calculate some of the indicators. If you'd like more information on any indicator, please read the <Link href={LINKS.DATA_DICTIONARY}>data dictionary</Link> or email us at <Link href={LINKS.CONTACT_US}>nationalcitiesperformanceframework@infrastructure.gov.au</Link></p>
       </div>
     </div>
 

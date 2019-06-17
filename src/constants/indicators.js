@@ -259,14 +259,14 @@ export default {
         source: 'housing_construction_costs'
     },
     rentStress: {
-        name: 'Proportion of renters under rent stress',
+        name: 'Proportion of households under rent stress',
         format: '0.[00]%',
         contextual: false,
         lastUpdated: 'August 2016',
         source: 'rent_stress'
     },
     mortgageStress: {
-        name: 'Proportion of mortgagees under mortgage stress',
+        name: 'Proportion of households under mortgage stress',
         format: '0.[00]%',
         contextual: false,
         lastUpdated: 'August 2016',
