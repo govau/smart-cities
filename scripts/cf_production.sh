@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
+set -euo pipefail
 
 # Log in to production environment
 
-cf api $CF_PRODUCTION_API #&> /dev/null
-cf auth $CF_PRODUCTION_USER $CF_PRODUCTION_PASSWORD #&> /dev/null
-cf target -o $CF_PRODUCTION_ORG #&> /dev/null
-cf target -s $CF_PRODUCTION_SPACE #&> /dev/null
+cf api $CF_API_PROD
+cf auth $CF_USERNAME $CF_PASSWORD_PROD
+cf target -o $CF_ORG
+cf target -s $CF_SPACE
