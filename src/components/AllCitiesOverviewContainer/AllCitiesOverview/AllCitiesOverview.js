@@ -47,7 +47,7 @@ const AllCitiesOverview = props => (
           id={ELEMENT_IDS.INITIAL_FOCUS_POINT_ON_PAGE}
           className={style.infoTitle}
         >
-          Indicator Revision
+          Indicator Update
         </h1>
 
         <p className={style.infoBodyText}>
