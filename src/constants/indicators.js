@@ -22,14 +22,14 @@ export default {
         name: 'Proportion of population that is Indigenous',
         format: '0.[00]%',
         contextual: true,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'indigenous_population'
     },
     householdSize: {
         name: 'Average persons per dwelling',
         format: '0.0[0]',
         contextual: true,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'household_size'
     },
     medianHousePrice: {
@@ -53,7 +53,7 @@ export default {
         longDescription: 'This shows the median annual household income.\n\nSource: ABS - Census 2016',
         format: '$0,0.[0]a',
         contextual: true,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'household_income'
     },
     lifeExpectancy: {
@@ -68,7 +68,7 @@ export default {
         name: 'Share of households in lowest income quintile',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'income_quintile'
     },
     goodsProducingSector: {
@@ -76,7 +76,7 @@ export default {
         legendText: 'Goods',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: 'June 2017',
+        lastUpdated: 'June 2018  -  NEW!',
         source: 'sector_goods'
     },
     marketServices: {
@@ -106,21 +106,21 @@ export default {
         name: 'Completed year 12',
         format: '0.[0]%',
         contextual: false,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'education_year_12'
     },
     educationalAttainmentCertificate: {
         name: 'Completed Certificate 3, 4 or Diploma',
         format: '0.[0]%',
         contextual: false,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'education_certificate'
     },
     educationalAttainmentTertiary: {
         name: 'Completed bachelor degree or higher',
         format: '0.[0]%',
         contextual: false,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'education_bachelor'
     },
     dispersion: {
@@ -190,14 +190,14 @@ export default {
         name: 'Proportion of journeys to work by active transport',
         format: '0.[00]%',
         contextual: false,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'active_transport'
     },
     publicJourneys: {
         name: 'Proportion of journeys to work by public transport',
         format: '0.[00]%',
         contextual: false,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'public_transport'
     },
     unemploymentRateGeneral: {
@@ -259,17 +259,17 @@ export default {
         source: 'housing_construction_costs'
     },
     rentStress: {
-        name: 'Proportion of renters under rent stress',
+        name: 'Proportion of households under rent stress',
         format: '0.[00]%',
         contextual: false,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'rent_stress'
     },
     mortgageStress: {
-        name: 'Proportion of mortgagees under mortgage stress',
+        name: 'Proportion of households under mortgage stress',
         format: '0.[00]%',
         contextual: false,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'mortgage_stress'
     },
     residentialBuildingApprovalsGrowth: {
@@ -333,7 +333,7 @@ export default {
         name: 'Proportion of people that volunteer',
         format: '0.[0]%',
         contextual: false,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'volunteering'
     },
     perceivedSafety: {
@@ -368,7 +368,7 @@ export default {
         name: 'Households with broadband',
         format: '0.[0]%',
         contextual: false,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'broadband_connections'
     },
     patentApplications: {
@@ -405,7 +405,7 @@ export default {
         legendText: '0-14',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: 'June 2017',
+        lastUpdated: 'June 2017  -  NEW!',
         source: 'age_0_14'
     },
     dependencyRatio15To64: {
@@ -475,7 +475,7 @@ export default {
         name: 'Languages other than English spoken at home',
         format: '0.[0]%',
         contextual: true,
-        lastUpdated: 'August 2016',
+        lastUpdated: 'Aug-16',
         source: 'non_english_speaking'
     }
 };
