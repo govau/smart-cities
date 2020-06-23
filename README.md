@@ -1,3 +1,5 @@
+This site has been archived.
+
 # Smart Cities
 
 # Developing locally
